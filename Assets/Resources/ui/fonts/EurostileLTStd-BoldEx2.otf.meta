@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 599b3a56f69f42a4e9d45cc7fd0ff826
+timeCreated: 1738660646
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Eurostile LT Std
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4ae4018537b411842971420d33e3afb3, type: 3}
+  - {fileID: 12800000, guid: 929b1bb3a765a2a4c812d54d822ce105, type: 3}
+  - {fileID: 12800000, guid: 582c89651cad6b74e8c2489fd64c7b41, type: 3}
+  - {fileID: 12800000, guid: 0f000776524680947a38dfbf29fb749d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

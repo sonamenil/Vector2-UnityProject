@@ -1,0 +1,213 @@
+MissionsPreProcess:
+  # Log: ' -------aaaaAAAAaaaaAAAAaaaa--------'
+  CounterActions: 
+    OnEnter:  
+    - {Namespace: ST_CurrentMissions, Type: Clear}
+    - {Namespace: UsefulCards, Type: Clear}
+    - {Namespace: AvailableCards, Type: Clear}
+    - {Name: Number, Namespace: MissionGen, Type: Assign, Value: 4}
+  ItemActions:
+    OnEnter:
+    - {Name: "?concat['Mission_1_%1', ?_getString[ProtocolName]]", Type: "Remove"}
+    - {Name: "?concat['Mission_2_%1', ?_getString[ProtocolName]]", Type: "Remove"}
+    - {Name: "?concat['Mission_3_%1', ?_getString[ProtocolName]]", Type: "Remove"}
+  BoxContent:
+    FindAvailableCards:
+      Select: {Type: Balance, Root: Slots}
+      StringActions: {OnEnter: [{Name: IName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        GoByCards:
+          Conditions: 
+          - {ConditionType: ValuesEqual, Values: ['?getString[IName]', 'Stunts'], Not: '1'}
+          - {ConditionType: ValuesEqual, Values: ['?getString[IName]', 'Notes'], Not: '1'}
+          Select: {Type: ItemGroups, Root: '?getString[IName]'}
+          CounterActions: 
+            OnEnter: 
+            - Name: '?getCardInfo[?getString[SelectKey],Stats,EffectID]'
+              Namespace: AvailableCards
+              Type: Assign
+              Value: '?max[?getCardInfo[?getString[SelectKey],Stats,Rarity], <AvailableCards.?getCardInfo[?getString[SelectKey],Stats,EffectID]>]'
+
+MissionsGenrator:
+  ItemsCount: 3
+  Target: {Type: NewItem, Destination: Stash}
+  StringActions: {OnEnter: [{Name: MNumber, Value: '?getString[SelectKey]'}]}
+  CounterActions: 
+    OnEnter: 
+    - {Name: Number, Namespace: MissionGen, Type: IncrementBy, Value: -1}
+    - {Name: Difficulty, Namespace: MissionGen, Type: Assign, Value: '<MissionGen.Number>'}
+  GroupContent: {ST_ItemMainData: {ST_ItemName: "?concat['Mission_%1_%2', <MissionGen.Number>, ?_getString[ProtocolName]]", ST_VisualItemName: "", ST_ItemType: ''}}
+  NoShuffle: 1
+  BoxContent:
+    ChooseMission:
+      Select: {Type: Balance, Root: 'Missions,MissionList', Random: 1}
+      NoShuffle: 1
+      StringActions: {OnEnter: [{Name: MName, Value: '?getString[SelectKey]'}]}
+      CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 0}]}
+      BoxContent:
+        ForcedReject:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Flags,Reject,$3]', '1']}]
+          CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 1}]}
+        Generated:
+          Conditions: 
+          - {ConditionType: CounterRange, Namespace: MissionGen, Name: Rejected, Equal: 0}
+          - {ConditionType: CounterRange, Namespace: ST_CurrentMissions, Name: '?getString[MName]', Min: 1}
+          CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 1}]}
+        CheckMinCoolness:
+          Conditions: 
+          - {ConditionType: CounterRange, Namespace: MissionGen, Name: Rejected, Equal: 0}
+          - {ConditionType: CounterRange, Name: StarterPackCoolness, Min: '?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Flags,CoolnessMin,$3]', Not: 1}
+          CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 1}]}
+        CheckMaxCoolness:
+          Conditions: 
+          - {ConditionType: CounterRange, Namespace: MissionGen, Name: Rejected, Equal: 0}
+          - {ConditionType: ValuesEqual, Values: ["?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Flags,CoolnessMax,$3]", '0'], Not: 1}
+          - {ConditionType: CounterRange, Name: StarterPackCoolness, Max: '?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Flags,CoolnessMax,$3]', Not: 1}
+          CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 1}]}
+        CheckType:
+          #Log: "?getString[MName]"
+          Select: {Type: Balance, Root: 'Missions,MissionList,?getString[MName],Default,Type'}
+          NoShuffle: 1
+          BoxContent:
+            TypeForbidden:
+              #Log: "?getString[SelectKey]"
+              Conditions: [{ConditionType: CounterRange, Namespace: MissionGen, Name: '?getString[SelectKey]', Equal: 1}]
+              CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 1}]}
+              BreakSelect: 1
+        CheckFloorRequirements:
+          Conditions: 
+          - {ConditionType: CounterRange, Namespace: MissionGen, Name: Rejected, Equal: 0}
+          - {ConditionType: ValuesEqual, Values: ["?greater[?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Flags,MinFloor,$3], <ST_Floor>]", '1']}
+          CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 1}]}
+        CheckCustomConditions:
+          Conditions: 
+          - {ConditionType: CounterRange, Namespace: MissionGen, Name: Rejected, Equal: 0}
+          - {ConditionType: ValuesEqual, Values: ["?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Flags,CustomConditions,$3]", '1']}
+          BoxContent:
+            RedCoinsCount:
+              Conditions: 
+              - {ConditionType: ValuesEqual, Values: ["?getString[MName]", 'RedCoinsCount']}
+              - {ConditionType: ValuesEqual, Values: ["?less[?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Objective,$3],1]", '1']}
+              CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 1}]}
+        CheckCounterConditions:
+          Conditions: 
+          - {ConditionType: CounterRange, Namespace: MissionGen, Name: Rejected, Equal: 0}
+          - {ConditionType: ValuesEqual, Values: ['?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Flags,CounterConditions,$3]', '1']}
+          Select: {Type: Balance, Root: 'Missions,MissionList,?getString[MName],CounterConditions'}
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            ConditionsTrue:
+              Conditions: [{ConditionType: CounterRange, Namespace: MissionGen, Name: '?getString[MName]', Equal: '?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,CounterConditions,?getString[SelectKey],$3]'}]
+            ConditionsFalse:
+              CounterActions: {OnEnter: [{Name: Rejected, Namespace: MissionGen, Type: Assign, Value: 1}]}
+              BreakSelect: 1
+        MissionAccepted:
+          # Log: "?concat['%1_%2', <MissionGen.Number>, ?_getString[MName]]"
+          Conditions: [{ConditionType: CounterRange, Namespace: MissionGen, Name: Rejected, Equal: 0}]
+          CounterActions: {OnEnter: [{Name: 'CardNumber', Namespace: MissionGen, Type: Assign, Value: 0}]}
+          Select: {Type: Balance, Root: 'Missions,MissionList,?getString[MName],Default,Type'}
+          BoxContent:
+            ForbidType:
+              #Log: "?getString[SelectKey]"
+              CounterActions: {OnEnter: [{Name: '?getString[SelectKey]', Namespace: MissionGen, Type: Assign, Value: 1}]}
+        MissionAcceptedPostProcess:
+          Conditions: [{ConditionType: CounterRange, Namespace: MissionGen, Name: Rejected, Equal: 0}]
+          BreakSelect: 1
+    SetMissionData:
+      GroupContent:
+        MissionData: 
+          MissionName: '?getString[MName]'
+          Difficulty: '<MissionGen.Difficulty>'
+          Obj: '?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Objective,$3]'
+          RewardAmount: '{?getBalance[StarterPacks,?getString[ProtocolName],Ranks,Points,?switch[<Rank>, 0: 1, <Rank>]]/?getBalance[Missions,PointsRewardPart,<MissionGen.Difficulty>]}'
+          CounterName: '?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,CounterName,$3]'
+          NoIterable: '1'
+      CounterActions: {OnEnter: [{Name: '?getString[MName]', Namespace: ST_CurrentMissions, Type: Assign, Value: <MissionGen.Difficulty>}]}
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        SetSpecificDescription:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Flags,SpecificDescription,$3]', '1']}]
+          GroupContent: {MissionData: {MissionDescription: '?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Description]'}}
+        SetBaseDescr:
+          GroupContent: {MissionData: {MissionDescription: '^Missions.?getString[MName].Description^'}}
+    SetUsefulCards:
+      CounterActions:
+        OnEnter:
+        - {Name: 'CardRarity_1', Namespace: MissionGen, Type: Assign, Value: 0}
+        - {Name: 'CardRarity_2', Namespace: MissionGen, Type: Assign, Value: 0}
+        - {Name: 'CardRarity_3', Namespace: MissionGen, Type: Assign, Value: 0}
+      BoxContent:
+        FindUsefulCard:
+          Select: {Type: Balance, Root: 'Missions,MissionList,?getString[MName],Default,Cards', Random: 1}
+          NoShuffle: 1
+          BoxContent:
+            SetString:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', ''], Not: 1}]
+              StringActions: {OnEnter: [{Name: EffectID, Value: '?getCardInfo[?getString[SelectKey],Stats,EffectID]'}]}
+            CreateCard:
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: MissionGen, Name: CardNumber, Max: 3}
+              - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', ''], Not: 1}
+              - {ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: '?getCardInfo[?getString[SelectKey],Balance,SetupMin]'}
+              CounterActions: 
+                OnEnter: 
+                - {Name: 'RarityValue', Namespace: MissionGen, Type: Assign, Value: '?getBalance[Missions,MissionList,?getString[MName],<MissionGen.Difficulty>,Cards,?getString[SelectKey],$3]'}
+                - {Name: 'CardNumber', Namespace: MissionGen, Type: IncrementBy, Value: 1}
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                AvailableCard:
+                  # Log: '?getString[EffectID]'
+                  Conditions: [{ConditionType: CounterRange, Namespace: AvailableCards, Name: '?getString[EffectID]', Min: '?max[?switch[<MissionGen.Difficulty>, 3: 2, 1], <MissionGen.RarityValue>]'}]
+                  CounterActions: 
+                    OnEnter: 
+                    - {Name: "?concat['CardRarity_%1', <AvailableCards.?_getString[EffectID]>]", Namespace: MissionGen, Type: IncrementBy, Value: 1}
+                    - {Name: '?getString[EffectID]', Namespace: UsefulCards, Type: Assign, Value: '?switch[<UsefulCards.?getString[EffectID]>, 0: <AvailableCards.?getString[EffectID]>, ?min[<UsefulCards.?getString[EffectID]>, <AvailableCards.?getString[EffectID]>]]'}
+                  GroupContent: {'?getString[EffectID]': {ShowAsOwned: 1, CardName: "?concat['%1_%2_%3', ?getString[EffectID],?getCounter[AvailableCards,?getString[EffectID]],?getBalance[Cards,Slots,?getString[EffectID]]]"}}
+                Const:
+                  # Log: '?getString[EffectID]'
+                  Conditions: [{ConditionType: ValuesEqual, Values: ['<MissionGen.RarityValue>', 0], Not: 1}]
+                  CounterActions: 
+                    OnEnter: 
+                    - {Name: "?concat['CardRarity_%1', <MissionGen.RarityValue>]", Namespace: MissionGen, Type: IncrementBy, Value: 1}
+                    - {Name: '?getString[EffectID]', Namespace: UsefulCards, Type: Assign, Value: '?switch[<UsefulCards.?getString[EffectID]>, 0: <MissionGen.RarityValue>, ?min[<UsefulCards.?getString[EffectID]>, <MissionGen.RarityValue>]]'}
+                  GroupContent: {'?getString[EffectID]': {ShowAsOwned: '0', CardName: "?concat['%1_%2_%3', ?getString[EffectID],?getCounter[MissionGen,RarityValue],?getBalance[Cards,Slots,?getString[EffectID]]]"}}
+                RandomRarity:
+                  Set: 1
+                  BoxContent:
+                    Blue:
+                      # Log: '?getString[EffectID]'
+                      Weight: '{?getBalance[Missions,RaritiesByDifficulty,<MissionGen.Difficulty>,Blue] - <MissionGen.CardRarity_1>}'
+                      Conditions: [{ConditionType: CounterRange, Namespace: MissionGen, Name: CardRarity_1, Max: '?getBalance[Missions,RaritiesByDifficulty,<MissionGen.Difficulty>,Blue]'}]
+                      CounterActions: 
+                        OnEnter: 
+                        - {Name: CardRarity_1, Namespace: MissionGen, Type: IncrementBy, Value: 1}
+                        - {Name: '?getString[EffectID]', Namespace: UsefulCards, Type: Assign, Value: '?switch[<UsefulCards.?getString[EffectID]>, 0: 1, ?min[<UsefulCards.?getString[EffectID]>, 1]]'}
+                      GroupContent: {'?getString[EffectID]': {ShowAsOwned: '0', CardName: "?concat['%1_1_%2', ?getString[EffectID],?getBalance[Cards,Slots,?getString[EffectID]]]"}}
+                    Yellow:
+                      # Log: '?getString[EffectID]'
+                      Weight: '{?getBalance[Missions,RaritiesByDifficulty,<MissionGen.Difficulty>,Yellow] - <MissionGen.CardRarity_2>}'
+                      Conditions: [{ConditionType: CounterRange, Namespace: MissionGen, Name: CardRarity_2, Max: '?getBalance[Missions,RaritiesByDifficulty,<MissionGen.Difficulty>,Yellow]'}]
+                      CounterActions: 
+                        OnEnter: 
+                        - {Name: CardRarity_2, Namespace: MissionGen, Type: IncrementBy, Value: 1}
+                        - {Name: '?getString[EffectID]', Namespace: UsefulCards, Type: Assign, Value: '?switch[<UsefulCards.?getString[EffectID]>, 0: 2, ?min[<UsefulCards.?getString[EffectID]>, 2]]'}
+                      GroupContent: {'?getString[EffectID]': {ShowAsOwned: '0', CardName: "?concat['%1_2_%2', ?getString[EffectID],?getBalance[Cards,Slots,?getString[EffectID]]]"}}
+                    Red:
+                      # Log: '?getString[EffectID]'
+                      Weight: '{?getBalance[Missions,RaritiesByDifficulty,<MissionGen.Difficulty>,Red] - <MissionGen.CardRarity_3>}'
+                      Conditions: [{ConditionType: CounterRange, Namespace: MissionGen, Name: CardRarity_3, Max: '?getBalance[Missions,RaritiesByDifficulty,<MissionGen.Difficulty>,Red]'}]
+                      CounterActions: 
+                        OnEnter: 
+                        - {Name: CardRarity_3, Namespace: MissionGen, Type: IncrementBy, Value: 1}
+                        - {Name: '?getString[EffectID]', Namespace: UsefulCards, Type: Assign, Value: '?switch[<UsefulCards.?getString[EffectID]>, 0: 3, ?min[<UsefulCards.?getString[EffectID]>, 3]]'}
+                      GroupContent: {'?getString[EffectID]': {ShowAsOwned: '0', CardName: "?concat['%1_3_%2', ?getString[EffectID],?getBalance[Cards,Slots,?getString[EffectID]]]"}}
+            
+
+MissionsPostProcess:
+  CounterActions:
+    OnEnter:  
+    - {Namespace: MissionGen, Type: Clear}
+    

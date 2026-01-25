@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Steps>
+  <LockButton IsLock="1">
+    <Module Name="ShopPanel">
+      <Button Name="RerollButton" />
+    </Module>
+    <Module Name="BottomPanel" LockAllButtons="1" />
+    <Module Name="TopPanel">
+      <Button Name="DonateBtn" />
+      <Button Name="FreeBtn" />
+      <Button Name="Timer" />
+      <Button Name="Energy" />
+    </Module>
+    <Dialog Name="OptionsDialog">
+      <Button Name="ButtonCredits"/>
+    </Dialog>
+  </LockButton>
+  <ClickButton Module="ShopPanel" Button="EquipButton" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="-400" Y="0" Z="0" />
+      <DeltaMove X="125" Y="0" />
+      <Angle Value="-90" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <Delay TimeInSeconds="1" />
+  <LockButton IsLock="0">
+    <Module Name="BottomPanel">
+      <Button Name="PlayNextFloorButton" />
+    </Module>
+    <Dialog Name="OptionsDialog">
+      <Button Name="ButtonCredits"/>
+    </Dialog>
+  </LockButton>
+  <ChangeCounter Counter="InsertUpgradeTutor" Namespace="ST_Tutorial" Value="0" />
+  <ChangeCounter Counter="UpgradeEffectTutor" Namespace="ST_Tutorial" Value="1" />
+  <CheckQuests />
+</Steps>

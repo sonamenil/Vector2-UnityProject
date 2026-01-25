@@ -1,0 +1,13 @@
+NewItems_SaveBoosterpackless:
+  Boosterpack:
+    Target: {Type: NewItem, Destination: Stash}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: BoosterpackTutorial_Part1, Namespace: ST_Tutorial, Equal: 1}]
+        GroupContent:
+          BaseBoosterpack: {Quantity: "1"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+      DontCreate:  
+        CancelGeneration: 1

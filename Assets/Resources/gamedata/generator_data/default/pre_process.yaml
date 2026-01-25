@@ -1,0 +1,623 @@
+ActualStartFloorAndStarterPack:
+  Set: 1
+  NoShuffle: 1
+  Select: {Type: Items, Root: Equipped}
+  BoxContent:
+    SetActualStartFloorAndStarterPack:
+      Conditions: [{ConditionType: ValuesEqual, Values: ['?isItemType[?getString[SelectKey], StarterPack]', 1]}]
+      CounterActions: 
+        OnEnter: 
+        - {Name: StartFloor, Namespace: ST_Default, Type: Assign, Value: '?getBalance[StarterPacks,?getString[SelectKey],FloorNumber]'}
+        - {Name: StarterPackCoolness, Namespace: ST_Default, Type: Assign, Value: '?getBalance[StarterPacks,?getString[SelectKey],Coolness]'}
+      StringActions: {OnEnter: [{Name: StarterPackName, Value: '?getString[SelectKey]'}]}
+    Continue: {}
+IncrementRunCounterOnStartRun:
+  Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: <ST_Default.StartFloor>}]
+  CounterActions: {OnEnter: [{Name: ST_run_counter, Namespace: ST_Statistics, Type: IncrementBy, Value: 1}]}
+BaseCounters:
+  NoShuffle: 1
+  BoxContent:
+    Base:
+      CounterActions:
+        OnEnter:
+        - {Namespace: ST_Generator, Type: Clear}
+        - {Namespace: GeneratedEffects, Type: Clear}
+        - {Namespace: Temp, Type: Clear}
+        - {Name: SubtitlesNumber, Namespace: GUI, Type: Clear}
+        - {Name: PassivesSubtitlesNumber, Namespace: GUI, Type: Clear}
+        - {Name: StuntsExecutable, Namespace: GUI, Type: Clear}
+        - {Name: StuntsExecuted, Namespace: GUI, Type: Clear}
+        - {Name: PointsForStunts, Namespace: GUI, Type: Clear}
+        - {Name: PointsForFloor, Namespace: GUI, Type: Clear}
+        - {Namespace: ST_Statistics_Per_Floor, Type: Clear}
+        - {Namespace: ST_Statistics_Stunts_Generated, Type: Clear}
+        - {Namespace: ST_Statistics_Stunts_Unlocked, Type: Clear}
+        - {Namespace: ST_Statistics_Stunts_Collected, Type: Clear}
+        - {Namespace: ST_Statistics_Items_Generated, Type: Clear}
+        - {Namespace: ST_Statistics_Items_Collected, Type: Clear}
+        - {Namespace: ST_Statistics_Traps, Type: Clear}
+        - {Name: MineDeath, Namespace: ST_Statistics_Temporary, Type: Clear}
+        - {Name: LaserDeath, Namespace: ST_Statistics_Temporary, Type: Clear}
+        - {Name: BlackballDeath, Namespace: ST_Statistics_Temporary, Type: Clear}
+        - {Name: TeslaDeath, Namespace: ST_Statistics_Temporary, Type: Clear}
+        - {Namespace: PassiveBonusExchangers, Type: Clear}
+        - {Namespace: AchievementsProgressByFloor, Type: Clear}
+        - {Namespace: UpgradesGenerator, Type: Clear}
+        - {Namespace: UpgradeReroller, Type: Clear}
+        - {Namespace: BoosterpackGenerator, Type: Clear}
+        - {Namespace: ST_CompletedMissions, Type: Clear}
+        - {Namespace: AvailableCards, Type: Clear}
+    OnStartRun:
+      Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: <ST_Default.StartFloor>}]
+      CounterActions:
+        OnEnter:
+        - {Namespace: Requirements, Type: Clear}
+        - {Name: '?getString[StarterPackName]', Namespace: StarterPacksWithAdditionalCharges, Type: Assign, Value: 0}
+        - {Name: 'PassedLevelsPassiveCounter', Namespace: ST_Default, Type: Assign, Value: 0}
+        - {Name: 'YellowKeysToGenerate', Namespace: ST_Default, Type: Assign, Value: "?getBalance[Quests, ServiceEntrance, KeysToGenerate]"}
+        - {Namespace: AchievementsProgressByRun, Type: Clear}
+        - {Namespace: InsertedCards, Type: Clear}
+        - {Name: Rank, Namespace: ST_Default, Type: Assign, Value: 0}
+        - {Name: ST_QuestProgressByRun, Type: Clear}
+        - {Name: RunInProgress, Type: Assign, Value: 1}
+        - {Name: MaxStars, Namespace: StarRewards, Type: Assign, Value: '?max[<StarRewards.MaxStars>, <StarRewards.CurrentStars>]'}
+        - {Name: CurrentStars, Namespace: StarRewards, Type: Assign, Value: 0}
+
+          
+AchievementCounters:
+  CounterActions:
+    OnEnter:
+    - {Name: SpendChargesByFloor, Namespace: AchievementsProgressByFloor, Type: Assign, Value: -1000}
+  BoxContent:
+    Level3ByBasicProtocol:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Default, Name: ST_Floor, Min: 3}
+      - {ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: Level3ByBasicProtocol, Namespace: AchievementsProgressByFloor, Type: IncrementBy, Value: 1}
+    Level6ByStandardProtocol:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Default, Name: ST_Floor, Min: 6}
+      - {ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: 2}
+      CounterActions:
+        OnEnter:
+        - {Name: Level6ByStandardProtocol, Namespace: AchievementsProgressByFloor, Type: IncrementBy, Value: 1}
+    Level11ByAdvancedProtocol:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Default, Name: ST_Floor, Min: 11}
+      - {ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: 3}
+      CounterActions:
+        OnEnter:
+        - {Name: Level11ByAdvancedProtocol, Namespace: AchievementsProgressByFloor, Type: IncrementBy, Value: 1}
+    Level20ByExperimentalProtocol:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Default, Name: ST_Floor, Min: 20}
+      - {ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: 4}
+      CounterActions:
+        OnEnter:
+        - {Name: Level20ByExperimentalProtocol, Namespace: AchievementsProgressByFloor, Type: IncrementBy, Value: 1}
+RequirementsProgress:
+  NoShuffle: 1
+  BoxContent:
+    FloorStarted:
+      CounterActions: {OnEnter: [{Name: "?concat['StartedFloor_%1', <ST_Floor>]", Namespace: Requirements, Type: Assign, Value: 1}]}
+    NoRequirements: 
+      #Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: <ST_Default.StartFloor>}]
+      CounterActions: {OnEnter: [{Name: NoRequirements, Namespace: Requirements, Type: Assign, Value: 1}]}     
+CommonRooms:
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    PlayCommand: #If the generator is called by 'Play' console command, number of rooms is already set automatically
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Min: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: ST_RoomNumberReversed, Namespace: ST_Generator, Type: Assign, Value: 3}
+    TutorialBasic:
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_Tutorial, Min: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: ST_RoomNumberReversed, Namespace: ST_Generator, Type: Assign, Value: 3}
+    TutorialLaserAndMine:
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Min: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: ST_RoomNumberReversed, Namespace: ST_Generator, Type: Assign, Value: 3}
+    QuestMine:
+      Conditions:
+      - {ConditionType: CounterRange, Name: UpgradeEffectTutor, Namespace: ST_Tutorial, Equal: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: ST_RoomNumberReversed, Namespace: ST_Generator, Type: Assign, Value: 6}
+    StandardProtocolQuest:
+      Conditions:
+      - {ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: 1}
+      - {ConditionType: CounterRange, Name: Floor3Reached, Namespace: ST_ProgressMarkers, Equal: 0}
+      CounterActions:
+        OnEnter:
+        - {Name: ST_RoomNumberReversed, Namespace: ST_Generator, Type: Assign, Value: 6}
+    Common:
+      CounterActions:
+        OnEnter:
+        - {Name: ST_RoomNumberReversed, Namespace: ST_Generator, Type: Assign, Value: "{2 + ?getBalance[Floor, CommonRooms, <ST_Floor>]}"}
+SpecialPlaces:
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    NoStandardProtocol:
+      Conditions:
+        - ConditionType: Or
+          Content:
+          - {ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: -1, Not: 1}
+          - {ConditionType: CounterRange, Name: Floor3Reached, Namespace: ST_ProgressMarkers, Equal: 1}
+        - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Min: 3}
+      CounterActions:
+        OnEnter:
+        - {Name: InterestingPlaces, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, SpecialPlaces, <ST_Floor>, Interesting]"}
+        - {Name: HardcorePlaces,    Namespace: ST_Generator, Type: Assign, Value: 2}
+        - {Name: ExcitingPlaces,    Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, SpecialPlaces, <ST_Floor>, Exciting]"}
+      #Log: "MOAR HARDCOAR"
+    Common:
+      CounterActions:
+        OnEnter:
+        - {Name: InterestingPlaces, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, SpecialPlaces, <ST_Floor>, Interesting]"}
+        - {Name: HardcorePlaces,    Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, SpecialPlaces, <ST_Floor>, Hardcore]"}
+        - {Name: ExcitingPlaces,    Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, SpecialPlaces, <ST_Floor>, Exciting]"}
+Forks:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Max: 0}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    TutorialBasic: {Conditions: [{ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_Tutorial, Min: 1}]}
+    TutorialLaserAndMine: {Conditions: [{ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Min: 1}]}
+    MineQuest: {Conditions: [{ConditionType: CounterRange, Name: UpgradeEffectTutor, Namespace: ST_Tutorial, Equal: 1}]}
+    StandardProtocolQuest:
+      Conditions: 
+        - {ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: 1}
+        - {ConditionType: CounterRange, Name: Floor3Reached, Namespace: ST_ProgressMarkers, Equal: 1}
+    CommonFloor:
+      CounterActions:
+        OnEnter:
+        - {Name: NoKeyEasyMinCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, NoKeyEasy, Min]"}
+        - {Name: NoKeyEasyMaxCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, NoKeyEasy, Max]"}
+        - {Name: NoKeyHardMinCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, NoKeyHard, Min]"}
+        - {Name: NoKeyHardMaxCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, NoKeyHard, Max]"}
+        - {Name: BlueLockMinCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, BlueLock, Min]"}
+        - {Name: BlueLockMaxCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, BlueLock, Max]"}
+        - {Name: YellowLockMinCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, YellowLock, Min]"}
+        - {Name: YellowLockMaxCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, YellowLock, Max]"}
+        - {Name: RedLockMinCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, RedLock, Min]"}
+        - {Name: RedLockMaxCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Forks, <ST_Floor>, RedLock, Max]"}
+        - {Name: ForkCounter, Namespace: ST_Generator, Type: Assign, Value: "?RangeRandom[?getBalance[Floor, Forks, <ST_Floor>, ForksOverall, Min], ?getBalance[Floor, Forks, <ST_Floor>, ForksOverall, Max]]" }
+AdditionalKey:
+  CounterActions:
+    OnEnter:
+    - {Name: AdditionalKeyCounter, Namespace: ST_Generator, Type: Assign, Value: 0}
+  NoShuffle: 1 
+  BoxContent:
+    CheckCards:
+      Select:
+        Type: "Items"
+        Root: "Equipped"
+      BoxContent:
+        AdditionalKeyCardsCount:
+          Conditions:
+          - {ConditionType: ValuesEqual, Values: ["?itemHasGroup[KeyAdditional, ?getString[SelectKey] ]", 1] } 
+          - {ConditionType: ValuesEqual, Values: ["?lessEqual[ ?RangeRandom[0, 100], ?getCardInfo[?getItemAttribute[?getString[SelectKey],KeyAdditional,CardName],Vars,Chance]]", 1]}
+          CounterActions:
+            OnEnter:
+            - {Name: AdditionalKeyCounter, Namespace: ST_Generator, Type: IncrementBy, Value: "?getCardInfo[?getItemAttribute[?getString[SelectKey],KeyAdditional,CardName],Vars,Charges]"}    
+Keys:
+  Set: 1
+  BoxContent:
+    Tutorial:
+      Conditions:
+      - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: 0}
+      CounterActions:
+        OnEnter:
+        - {Name: BlueKeyCounter,   Namespace: ST_Generator, Type: Assign, Value: "0"}
+        - {Name: YellowKeyCounter, Namespace: ST_Generator, Type: Assign, Value: "0"}
+        - {Name: RedKeyCounter,    Namespace: ST_Generator, Type: Assign, Value: "0"}   
+    ServiceEntrance:
+      Conditions:
+      - {ConditionType: CounterRange, Name: ServiceEntrance, Namespace: ST_Quests, Equal: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: BlueKeyCounter,   Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Keys, <ST_Floor>, Blue]"}
+        - {Name: RedKeyCounter,    Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Keys, <ST_Floor> ,Red]"}
+      Set: 1
+      BoxContent:
+        GenerateYellowKey:
+          Weight: "<YellowKeysToGenerate>"
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Min: "?getBalance[Quests, ServiceEntrance, MinimumKeyFloor]"}
+          CounterActions:
+            OnEnter:
+            - {Name: YellowKeyCounter, Namespace: ST_Generator, Type: Assign, Value: "1"}
+            - {Name: YellowKeysToGenerate, Namespace: ST_Default, Type: IncrementBy, Value: -1}
+          #Log: "?concat['%1   %2', <YellowKeysToGenerate>, {?getBalance[Quests, ServiceEntrance, EscapeRoomFloorMin] - <ST_Floor> - <YellowKeysToGenerate>}]"
+        NoYellowKey:
+          Weight: "{?getBalance[Quests, ServiceEntrance, EscapeRoomFloorMin] - <ST_Floor> - <YellowKeysToGenerate>}"
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Min: "?getBalance[Quests, ServiceEntrance, MinimumKeyFloor]"}
+          CounterActions:
+            OnEnter:
+            - {Name: YellowKeyCounter, Namespace: ST_Generator, Type: Assign, Value: "0"}
+          #Log: "?concat['%1   %2', <YellowKeysToGenerate>, {?getBalance[Quests, ServiceEntrance, EscapeRoomFloorMin] - <ST_Floor> - <YellowKeysToGenerate>}]"
+        WrongFloorToGenerate:
+          Weight: 1000
+          Conditions:
+            - ConditionType: Or
+              Content:
+                - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Max: "{?getBalance[Quests, ServiceEntrance, MinimumKeyFloor] - 1}"}
+                - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Min: "{?getBalance[Quests, ServiceEntrance, EscapeRoomFloorMin]}"}
+          CounterActions:
+            OnEnter:
+            - {Name: YellowKeyCounter, Namespace: ST_Generator, Type: Assign, Value: "0"}
+          #Log: "can't or won't?"
+    Common:
+      Conditions:
+      - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: 0, Not: 1}
+      - {ConditionType: CounterRange, Name: ServiceEntrance, Namespace: ST_Quests, Equal: 1, Not: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: BlueKeyCounter,   Namespace: ST_Generator, Type: Assign, Value: "{?getBalance[Floor, Keys, <ST_Floor>, Blue] + <ST_Generator.AdditionalKeyCounter>}"}
+        - {Name: YellowKeyCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Keys, <ST_Floor> ,Yellow]"}
+        - {Name: RedKeyCounter,    Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Keys, <ST_Floor> ,Red]"}
+
+Balls:
+  CounterActions:
+    OnEnter:
+    - {Name: BallOverallMin, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, Balls, Overall, <ST_Floor>, Min]"}
+  BoxContent:
+    GeneratorMax:
+      NoShuffle: 1
+      Set: 1
+      BoxContent:
+        Unlimited:
+          Conditions:
+          - {ConditionType: BalanceElementExists, Path: [Floor, Traps, Balls, GeneratorPerRoom, <ST_Floor>], Element: Unlimited}
+          CounterActions:
+            OnEnter:
+            - {Name: BallGeneratorUnlimited, Namespace: ST_Generator, Type: Assign, Value: 1}
+        Limited:
+          CounterActions:
+            OnEnter:
+            - {Name: BallGeneratorMax, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, Balls, GeneratorPerRoom, <ST_Floor>, Max]"}
+    Overall:
+      NoShuffle: 1
+      Set: 1
+      BoxContent:
+        Unlimited:
+          Conditions:
+          - {ConditionType: BalanceElementExists, Path: [Floor, Traps, Balls, Overall, <ST_Floor>], Element: Unlimited}
+          CounterActions:
+            OnEnter:
+            - {Name: BallOverallUnlimited, Namespace: ST_Generator, Type: Assign, Value: 1}
+        Limited:
+          CounterActions:
+            OnEnter:
+            - {Name: BallOverall, Namespace: ST_Generator, Type: Assign, Value: "?RangeRandom[?getBalance[Floor, Traps, Balls, Overall, <ST_Floor>, Min], ?getBalance[Floor, Traps, Balls, Overall, <ST_Floor>, Max]]"}
+Tesla:
+  CounterActions:
+    OnEnter:
+    - {Name: TeslaOverallMin, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, Tesla, Overall, <ST_Floor>, Min]"}
+  BoxContent:
+    GeneratorMax:
+      NoShuffle: 1
+      Set: 1
+      BoxContent:
+        Unlimited:
+          Conditions:
+          - {ConditionType: BalanceElementExists, Path: [Floor, Traps, Tesla, Generator, <ST_Floor>], Element: Unlimited}
+          CounterActions:
+            OnEnter:
+            - {Name: TeslaGeneratorUnlimited, Namespace: ST_Generator, Type: Assign, Value: 1}
+        Limited:
+          CounterActions:
+            OnEnter:
+            - {Name: TeslaGeneratorMax, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, Tesla, Generator, <ST_Floor>, Max]"}
+    Overall:
+      NoShuffle: 1
+      Set: 1
+      BoxContent:
+        Unlimited:
+          Conditions:
+          - {ConditionType: BalanceElementExists, Path: [Floor, Traps, Tesla, Overall, <ST_Floor>], Element: Unlimited}
+          CounterActions:
+            OnEnter:
+            - {Name: TeslaOverallUnlimited, Namespace: ST_Generator, Type: Assign, Value: 1}
+        Limited:
+          CounterActions:
+            OnEnter:
+            - {Name: TeslaOverall, Namespace: ST_Generator, Type: Assign, Value: "?RangeRandom[?getBalance[Floor, Traps, Tesla, Overall, <ST_Floor>, Min], ?getBalance[Floor, Traps, Tesla, Overall, <ST_Floor>, Max]]"}
+Laser:
+  CounterActions:
+    OnEnter:
+    - {Name: LaserOverallMin, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, Laser, <ST_Floor>, Min]"}
+  NoShuffle: 1
+  Set: 1
+  BoxContent:
+    Unlimited:
+      Conditions:
+      - ConditionType: Or
+        Content:
+        - {ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Min: 1}
+        - {ConditionType: BalanceElementExists, Path: [Floor, Traps, Laser, <ST_Floor>], Element: Unlimited}
+      CounterActions:
+        OnEnter:
+        - {Name: LaserOverallUnlimited, Namespace: ST_Generator, Type: Assign, Value: 1}
+    Limited:
+      CounterActions:
+        OnEnter:
+        - {Name: LaserOverall, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, Laser, <ST_Floor>, Max]"}
+MineShort:
+  CounterActions:
+    OnEnter:
+    - {Name: MineShortOverallMin, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, MineShort, <ST_Floor>, Min]"}
+  BoxContent:
+    GeneratorMax:
+      NoShuffle: 1
+      Set: 1
+      BoxContent:
+        Unlimited:
+          Conditions:
+          - {ConditionType: BalanceElementExists, Path: [Floor, Traps, MineShort, <ST_Floor>], Element: Unlimited}
+          CounterActions:
+            OnEnter:
+            - {Name: MineShortOverallUnlimited, Namespace: ST_Generator, Type: Assign, Value: 1}
+        Limited:
+          CounterActions:
+            OnEnter:
+            - {Name: MineShortOverall, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, MineShort, <ST_Floor>, Max]"}              
+MineHurdle:
+  CounterActions:
+    OnEnter:
+    - {Name: MineHurdleOverallMin, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, MineHurdle, <ST_Floor>, Min]"}
+  BoxContent:
+    GeneratorMax:
+      NoShuffle: 1
+      Set: 1
+      BoxContent:
+        Unlimited:
+          Conditions:
+          - {ConditionType: BalanceElementExists, Path: [Floor, Traps, MineHurdle, <ST_Floor>], Element: Unlimited}
+          CounterActions:
+            OnEnter:
+            - {Name: MineHurdleOverallUnlimited, Namespace: ST_Generator, Type: Assign, Value: 1}
+        Limited:
+          CounterActions:
+            OnEnter:
+            - {Name: MineHurdleOverall, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Traps, MineHurdle, <ST_Floor>, Max]"}              
+Obstacles:
+  CounterActions:
+    OnEnter:
+    - {Name: ObstaclesMin, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Obstacles, <ST_Floor>, Min]"}
+  BoxContent:
+    Overall:
+      NoShuffle: 1
+      Set: 1
+      BoxContent:
+        Unlimited:
+          Conditions:
+          - {ConditionType: BalanceElementExists, Path: [Floor, Obstacles, <ST_Floor>], Element: Unlimited}
+          CounterActions:
+            OnEnter:
+            - {Name: ObstaclesOverallUnlimited, Namespace: ST_Generator, Type: Assign, Value: 1}
+        Limited:
+          CounterActions:
+            OnEnter:
+            - {Name: ObstaclesOverall, Namespace: ST_Generator, Type: Assign, Value: "?RangeRandom[?getBalance[Floor, Obstacles, <ST_Floor>, Min], ?getBalance[Floor, Obstacles, <ST_Floor>, Max]]"}
+
+PassivesActivation:
+  Select: {Type: "Items", Root: "Equipped"}
+  NoShuffle: 1
+  BoxContent:
+    SuperCredits:
+      Conditions: [{ConditionType: ValuesEqual, Values: ["?itemHasGroup[SuperCredits, ?getString[SelectKey]]", 1]}]
+      CounterActions: 
+        OnEnter:
+        - {Name: SuperCreditsCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: "?getCardInfo[?getItemAttribute[?getString[SelectKey],SuperCredits,CardName], Vars,Number]"}    
+        - {Name: SuperCreditsChance, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.SuperCreditsChance>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],SuperCredits,CardName], Vars,Chance]]"}   
+        - {Name: SuperCreditsValue, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.SuperCreditsValue>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],SuperCredits,CardName], Vars,Value]]"}
+    CouponSaveMe:
+      Conditions: [{ConditionType: ValuesEqual, Values: ["?itemHasGroup[CouponSaveMePassive, ?getString[SelectKey]]", 1]}]
+      CounterActions: 
+        OnEnter:
+        - {Name: CouponSaveMeCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: "?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponSaveMePassive,CardName], Vars,Number]"}    
+        - {Name: CouponSaveMeCardChance, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.CouponSaveMeCardChance>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponSaveMePassive,CardName], Vars,Chance]]"}   
+        - {Name: CouponSaveMeCardValue, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.CouponSaveMeCardValue>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponSaveMePassive,CardName], Vars,Value]]"}   
+    CouponCardBoost:
+      Conditions: [{ConditionType: ValuesEqual, Values: ["?itemHasGroup[CouponCardBoostPassive, ?getString[SelectKey]]", 1]}]
+      CounterActions: 
+        OnEnter:
+        - {Name: CouponCardBoostCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: "?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponCardBoostPassive,CardName], Vars,Number]"}    
+        - {Name: CouponCardBoostCardChance, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.CouponCardBoostCardChance>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponCardBoostPassive,CardName], Vars,Chance]]"}   
+        - {Name: CouponCardBoostCardValue, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.CouponCardBoostCardValue>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponCardBoostPassive,CardName], Vars,Value]]"}   
+    CouponEnergyRecharge:
+      Conditions: [{ConditionType: ValuesEqual, Values: ["?itemHasGroup[CouponEnergyRechargePassive, ?getString[SelectKey]]", 1]}]
+      CounterActions: 
+        OnEnter:
+        - {Name: CouponEnergyRechargeCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: "?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponEnergyRechargePassive,CardName], Vars,Number]"}    
+        - {Name: CouponEnergyRechargeCardChance, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.CouponEnergyRechargeCardChance>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponEnergyRechargePassive,CardName], Vars,Chance]]"}   
+        - {Name: CouponEnergyRechargeCardValue, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.CouponEnergyRechargeCardValue>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponEnergyRechargePassive,CardName], Vars,Value]]"}   
+    CouponReroll:
+      Conditions: [{ConditionType: ValuesEqual, Values: ["?itemHasGroup[CouponRerollPassive, ?getString[SelectKey]]", 1]}]
+      CounterActions: 
+        OnEnter:
+        - {Name: CouponRerollCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: "?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponRerollPassive,CardName], Vars,Number]"}    
+        - {Name: CouponRerollCardChance, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.CouponRerollCardChance>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponRerollPassive,CardName], Vars,Chance]]"}   
+        - {Name: CouponRerollCardValue, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?max[ <PassiveBonusExchangers.CouponRerollCardValue>, ?getCardInfo[?getItemAttribute[?getString[SelectKey],CouponRerollPassive,CardName], Vars,Value]]"}
+    EMP:
+      Conditions: [{ConditionType: ValuesEqual, Values: ["?itemHasGroup[EMP, ?getString[SelectKey]]", 1]}]
+      CounterActions: 
+        OnEnter:
+        - {Name: EMPCounter, Namespace: PassiveBonusExchangers, Type: Assign, Value: '?getBalance[Floor,PrehardSpecialAbilities,<ST_Floor>,EMP]'}
+        - {Name: EMPEquipped, Namespace: PassiveEffects, Type: Assign, Value: "1"}
+    Teleportarium:
+      Conditions: [{ConditionType: ValuesEqual, Values: ["?itemHasGroup[Teleportarium, ?getString[SelectKey]]", 1]}]
+      CounterActions:
+        OnEnter:
+        - {Name: TeleportariumCounter, Namespace: PassiveBonusExchangers, Type: Assign, Value: '?getBalance[Floor,PrehardSpecialAbilities,<ST_Floor>,Teleport]'}
+    Magnetizer:
+      Conditions: [{ConditionType: ValuesEqual, Values: ["?itemHasGroup[Magnetizer, ?getString[SelectKey]]", 1]}]
+      CounterActions: 
+        OnEnter:
+        - {Name: MagnetizerRadius, Namespace: PassiveEffects, Type: Assign, Value: "?getCardInfo[?getItemAttribute[?getString[SelectKey],Magnetizer,CardName], Vars,Radius]"}
+        - {Name: MagnetizerFrames, Namespace: PassiveEffects, Type: Assign, Value: "?getCardInfo[?getItemAttribute[?getString[SelectKey],Magnetizer,CardName], Vars,Frames]"}
+Coins:
+  CounterActions:
+    OnEnter:
+    - {Name: CoinCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, Coins, <ST_Floor>]"}
+SuperCoins:
+  CounterActions:
+    OnEnter:
+    - {Name: SuperCoinCounter, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, SuperCoins, <ST_Floor>]"}
+EnableBonusTraps:
+  CounterActions:
+    OnEnter:
+    - {Name: EnableBonusBeforeTrap, Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, EnableBonusBeforeTrap, <ST_Floor>]"}
+    - {Name: EnableBonusAfterTrap,  Namespace: ST_Generator, Type: Assign, Value: "?getBalance[Floor, EnableBonusAfterTrap, <ST_Floor>]"}
+Stunts:
+  CounterActions: {OnEnter: {Name: StuntCounter, Namespace: ST_Generator, Type: Assign, Value: 0}}
+Backgrounds:
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    Tutorial:
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_Tutorial, Namespace: ST_ProgressMarkers, Min: 1, Max: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: BG_Blue_Crystal_Lab, Namespace: ST_Generator, Type: Assign, Value: 1}
+    Common:
+      CounterActions:
+        OnEnter:
+        - {Name: BG_Electric_Factory, Namespace: ST_Generator, Type: Assign, Value: 1}
+        - {Name: BG_Blue_Crystal_Lab, Namespace: ST_Generator, Type: Assign, Value: 1}
+        - {Name: BG_Metal_Pillars, Namespace: ST_Generator, Type: Assign, Value: 1}
+        - {Name: BG_Far_City, Namespace: ST_Generator, Type: Assign, Value: 1}
+HexField:
+  Set: 1
+  BoxContent:
+    Blue:
+      CounterActions:
+        OnEnter:
+        - {Name: HexFieldColor, Namespace: ST_Generator, Type: Assign, Value: 0}
+    Green:
+      Conditions:
+      - ConditionType: Or
+        Content:
+        - {ConditionType: CounterRange, Name: BG_Electric_Factory, Namespace: ST_Generator, Min: 1}
+        - {ConditionType: CounterRange, Name: BG_Metal_Pillars, Namespace: ST_Generator, Min: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: HexFieldColor, Namespace: ST_Generator, Type: Assign, Value: 1}
+    Orange:
+      Conditions:
+      - ConditionType: Or
+        Content:
+        - {ConditionType: CounterRange, Name: BG_Metal_Pillars, Namespace: ST_Generator, Min: 1}
+        - {ConditionType: CounterRange, Name: BG_Electric_Factory, Namespace: ST_Generator, Min: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: HexFieldColor, Namespace: ST_Generator, Type: Assign, Value: 2}
+Terminals:
+  CounterActions:
+    OnEnter:
+    - {Name: TerminalCounter, Namespace: ST_Generator, Type: Assign, Value: "1"}
+SetDifficultyFor3rdFloor:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: 3}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    Difficulty1:
+      Conditions:
+      - {ConditionType: CounterRange, Name: Difficulty3rdFloor, Namespace: ST_Default, Min: 1, Max: 2}
+      CounterActions:
+        OnEnter:
+        - {Name: MakeSafeRooms, Namespace: ST_Generator, Type: Assign, Value: 1}
+        - {Name: LaserOverall, Namespace: ST_Generator, Type: Assign, Value: "{?getBalance[Floor, Traps, Laser, <ST_Floor>, Max]-3}"}
+        - {Name: MineShortOverall, Namespace: ST_Generator, Type: Assign, Value: "{?getBalance[Floor, Traps, MineShort, <ST_Floor>, Max]-3}"}                 
+    Difficulty2:
+      Conditions:
+      - {ConditionType: CounterRange, Name: Difficulty3rdFloor, Namespace: ST_Default, Min: 3, Max: 4}
+      CounterActions:
+        OnEnter:
+        - {Name: MakeSafeRooms, Namespace: ST_Generator, Type: Assign, Value: 2}
+        - {Name: LaserOverall, Namespace: ST_Generator, Type: Assign, Value: "{?getBalance[Floor, Traps, Laser, <ST_Floor>, Max]-5}"}
+        - {Name: MineShortOverall, Namespace: ST_Generator, Type: Assign, Value: "{?getBalance[Floor, Traps, MineShort, <ST_Floor>, Max]-5}"}
+    Empty: {}
+Boosterpacks:
+  #Log: BOOSTARPACKSSTART
+  Conditions: [{ConditionType: ValuesEqual, Values: ["?isPaid[]", 1]}]
+  NoShuffle: 1
+  BoxContent:
+    SetMin:
+      #Log: '?getBalance[Floor,Boosterpacks,<ST_Floor>,Min]'
+      CounterActions: {OnEnter: [{Name: BoosterpacksCounter, Namespace: ST_Generator, Type: Assign, Value: '?getBalance[Floor,Boosterpacks,<ST_Floor>,Min]'}]}
+    TryAppend:
+      ItemsCount: '?getBalance[Floor,Boosterpacks,<ST_Floor>,Max]'
+      CounterActions: {OnEnter: [{Name: Random, Namespace: Temp, Type: Assign, Value: '?RangeRandom[1,100]'}]}
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        Append:
+          #Log: ' +1'
+          Conditions: [{ConditionType: ValuesEqual, Values: ["?less[<Temp.Random>,?getBalance[Floor,Boosterpacks,<ST_Floor>,Chance]]", 1]}]
+          CounterActions: {OnEnter: [{Name: BoosterpacksCounter, Namespace: ST_Generator, Type: IncrementBy, Value: 1}]}
+        Not: {}
+StarRewardsOnStartRun:
+  Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: <ST_Default.StartFloor>}]
+  NoShuffle: 1
+  BoxContent:
+    RandomCard:
+      Conditions: [{ConditionType: CounterRange, Name: RandomStartUpgrade, Namespace: StarBuffs, Equal: 1}]
+      StringActions: {OnEnter: [{Name: CardName, Value: ''}]}
+      Select: 
+        Type: Balance
+        Root: 'PassiveSpace'
+        Random: 1
+        Weight: "{?getCardInfo[?getString[SelectKey],Balance,WeightForUse]*(1+?getCounter[OverweightedUpgrades,?getString[SelectKey]]*?getBalance[Cards,BoostedWeightMultiplier])*(1+?getCounter[UsefulCards,?getCardInfo[?getString[SelectKey],Stats,EffectID]]*?getBalance[Missions,AddWeightForUsefulCards])}"
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        RerollTutorUsedCard:
+          Conditions:
+          - {ConditionType: CounterRange, Namespace: 'ST_Tutorial', Name: 'ST_RerollTutorial', Min: 1, Max: 3}
+          - ConditionType: Or
+            Content:
+            - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'BonusTokens_1_Torso']}
+            - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'StuntReward_1_Legs']}
+            - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'BonusTokensFromTraps_1_Torso']}
+            - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'StuntMultiReward_2_Legs']}
+        WrongSlot_FractionationColumn:
+          Conditions: [{ConditionType: GroupExists, Item: "?concat['Gadget%1', ?_getCardInfo[?getString[SelectKey],Stats,Slot]]", Not: 1}]
+        NotOwned_FractionationColumn:
+          Conditions: [{ConditionType: GroupExists, Item: '?getCardInfo[?getString[SelectKey],Stats,Slot]', Group: '?getString[SelectKey]', Not: 1}]
+        BadCoolness_FractionationColumn:
+          Conditions: [{ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: '?getCardInfo[?getString[SelectKey],Balance,SetupMin]', Not: 1}]
+        GoodUpgrade:
+          Log: '?getString[SelectKey]'
+          StringActions: {OnEnter: [{Name: CardName, Value: '?getString[SelectKey]'}]}
+          CounterActions: {OnEnter: [{Namespace: UpgradesGenerator, Name: '?getString[SelectKey]', Type: Assign, Value: 1}]}
+          BreakSelect: 1
+RandomCardStartRewardInsertion:
+  Target: "?concat['Gadget%1',?_getCardInfo[?getString[CardName],Stats,Slot]]"
+  Conditions: 
+  - {ConditionType: CounterRange, Name: RandomStartUpgrade, Namespace: StarBuffs, Equal: 1}
+  - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: <ST_Default.StartFloor>}
+  StringActions: {OnEnter: [{Name: ItemName, Value: "?concat['Gadget%1',?_getCardInfo[?getString[CardName],Stats,Slot]]"}]}
+  GroupContent:
+    '?getCardInfo[?getString[CardName],Stats,EffectID]': {CardName: '?getString[CardName]'}
+BlinkingFinishRoom:
+  Conditions:
+  - {ConditionType: CounterRange, Name: PowerFailures, Namespace: ST_Quests, Equal: 0}
+  - {ConditionType: CounterRange, Name: ServiceEntrance, Namespace: ST_Quests, Equal: -1}
+  CounterActions: {OnEnter: [{Name: BlinkingFinishRoom, Namespace: Temp, Type: Assign, Value: 1}]}

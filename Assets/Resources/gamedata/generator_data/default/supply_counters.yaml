@@ -1,0 +1,38 @@
+AchievementCounters:
+  BoxContent:
+# Прибавляем к каунтеру 1000, т.к. в начале забега задавали каунтеру значение -1000, чтобы ачивка "Потратить заряды и пройти этаж" не сработала посреди забега
+    SpendCharged:
+      CounterActions:
+        OnEnter:
+        - {Name: SpendChargesByFloor, Namespace: AchievementsProgressByFloor, Type: IncrementBy, Value: 1000}
+      # Log: "<AchievementsProgressByFloor.SpendChargesByFloor>"
+      
+ReactorMission:
+  Conditions: [{ConditionType: CounterRange, Name: Reactor, Namespace: ST_Quests, Equal: 1}]
+  BoxContent:
+    BeforeReactorFloor:
+      Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Equal: '{?getBalance[Quests,Reactor,Floor] - 1}'}]
+      CounterActions: {OnEnter: [{Name: MissionsBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}]}
+    AfterReactorFloor:
+      Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Equal: '?getBalance[Quests,Reactor,Floor]'}]
+      CounterActions: 
+        OnEnter: 
+        - {Name: MissionsBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+        - {Name: Success, Namespace: Reactor, Type: Assign, Value: 1}
+
+ClearMissions:
+  CounterActions: {OnEnter: [{Namespace: MissionProgress, Type: Clear}]}
+  
+UpgradesCounter:
+  Select: {Type: "Items", Root: "Equipped"}
+  StringActions: {OnEnter: [{Name: IName, Value: '?getString[SelectKey]'}]}
+  BoxContent:
+    FindUpgrades:
+      Select: {Type: ItemGroups, Root: "?getString[IName]"}
+      StringActions: {OnEnter: [{Name: GroupName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        ThisIsUpgrade:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[IName],?getString[GroupName],CardName]', '-1'], Not: 1}]
+          StringActions: {OnEnter: [{Name: CardName, Value: '?getItemAttribute[?getString[IName],?getString[GroupName],CardName]'}]}
+          CounterActions: {OnExit: [{Name: '?getString[GroupName]', Namespace: GeneratedEffects, Type: Assign, Value: '?getCardInfo[?getString[CardName],Stats,Rarity]'}]}
+        

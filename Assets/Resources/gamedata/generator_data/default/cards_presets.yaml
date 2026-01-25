@@ -1,0 +1,53 @@
+AddEffectToGadget:
+  Target: "?concat['Gadget%1',?_getCardInfo[?getString[CardName],Stats,Slot]]"
+  StringActions: {OnEnter: [{Name: ItemName, Value: "?concat['Gadget%1',?_getCardInfo[?getString[CardName],Stats,Slot]]"}]}
+  NoShuffle: 1
+  BoxContent:
+    SomethingWrong:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        EffectAlreadyInGadget:
+          Conditions: 
+          - {ConditionType: GroupExists, Item: "?getString[ItemName]", Group: "?getCardInfo[?getString[CardName],Stats,EffectID]"}
+          - {ConditionType: ValuesEqual, Values: ['?getString[DialogResult]', '']}
+          StringActions: {OnEnter: [{Name: DialogResult, Value: '?getItemAttribute[?getString[ItemName],?getCardInfo[?getString[CardName],Stats,EffectID],CardName]'}]}
+          RunPreset:  ['AddEffectToGadget', 'AddEffectToGadget_ReturnReplaced']
+        NotEnoughSockets:
+          Conditions: 
+          - {ConditionType: ValuesEqual, Values: ['?getGroupsCountByAttribute[?getString[ItemName],CardName]', '?getItemAttribute[?getString[ItemName],ST_GadgetBase,MaxSockets]']}
+          - {ConditionType: ValuesEqual, Values: ['?getString[DialogResult]', '']}
+          ShowDialog:
+            Type: SelectCard
+            Title: "^GUI.Labels.Shop.SelectUpgradeForReplacing^"
+            Gadget: "?concat['Gadget%1',?_getCardInfo[?getString[CardName],Stats,Slot]]"
+            ActiveCard: '?getString[CardName]'
+            RunNextPreset: "AddEffectToGadget|AddEffectToGadget_ReturnReplaced"
+        Not: {}
+    Writing:
+      NoShuffle: 1
+      BoxContent:
+        Replacement:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[DialogResult]', ''], Not: 1}]
+          CounterActions: {OnEnter: [{Namespace: InsertedCards, Name: '?getString[CardName]', Type: Assign, Value: 1}]}
+          ReplaceGroup:
+            '?getCardInfo[?getString[DialogResult],Stats,EffectID]': {NewName: '?getCardInfo[?getString[CardName],Stats,EffectID]', CardName: '?getString[CardName]'}
+        WriteCard:
+          CounterActions: {OnEnter: [{Namespace: InsertedCards, Name: '?getString[CardName]', Type: Assign, Value: 1}]}
+          GroupContent:
+            '?getCardInfo[?getString[CardName],Stats,EffectID]': {CardName: '?getString[CardName]'}
+    PostEffects:
+      BoxContent:
+        PassedLevelsBonusTokens:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CardName],Stats,EffectID]', 'PassedLevelsBonusTokens']}]
+          GroupContent:
+            '?getCardInfo[?getString[CardName],Stats,EffectID]': {Floor: '{<ST_Floor>+1}'}
+
+AddEffectToGadget_ReturnReplaced:
+  Target: {Type: NewItem, Destination: ShopBasket}
+  CounterActions: {OnEnter: [{Namespace: InsertedCards, Name: '?getString[DialogResult]', Type: Assign, Value: 0}]}
+  GroupContent:
+    ST_ItemMainData: {ST_ItemName: "ReplacedUpgrades", ST_VisualItemName: '', ST_ItemType: 'Supply'}
+    '?getString[DialogResult]': {}
+            
+  

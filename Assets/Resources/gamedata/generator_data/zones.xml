@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Zones>
+	<Default>
+		<RoomProperties Path="default/room_properties.xml" />
+		<ZoneBalance Path="default/zone_balance.yaml" />
+		<PreProcess Path="default/pre_process.yaml" />
+		<PostProcess Path="default/post_process.yaml" />
+		<Generator Path="default/generator.yaml" />
+		<Music Path="default/music.yaml" />
+		<StarterItems Path="default/starter_items.yaml" />
+	</Default>
+	<Zone1>
+		<RoomProperties Path="zone1/room_properties.xml" />
+	</Zone1>
+	<Zone2>
+		<RoomProperties Path="zone2/room_properties.xml" />
+		<ZoneBalance Path="zone2/zone_balance.yaml" />
+		<PreProcess Path="zone2/pre_process.yaml" />
+		<PostProcess Path="zone2/post_process.yaml" />
+		<Music Path="zone2/music.yaml" />
+		<StarterItems Path="zone2/starter_items.yaml" />
+	</Zone2>
+</Zones>

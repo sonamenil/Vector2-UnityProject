@@ -1,0 +1,1288 @@
+AboveCar_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+AboveCar_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+AboveCar_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+BarJump_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+BarJump_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+BarJump_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+BackFlip_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+BackFlip_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+BackFlip_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+DoubleSpinVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DoubleSpinVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DoubleSpinVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+KingKongToBend_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+KingKongToBend_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+KingKongToBend_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+DoubleJumpRoll_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DoubleJumpRoll_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DoubleJumpRoll_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+DashToFrontflip_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DashToFrontflip_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DashToFrontflip_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+Sidebomb_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+Sidebomb_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+Sidebomb_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+CoolSwing_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+CoolSwing_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+CoolSwing_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+TripleSwing_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+TripleSwing_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+TripleSwing_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+DoubleKong_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DoubleKong_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DoubleKong_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+TurnVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+TurnVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+TurnVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+BoomBoomSh_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+BoomBoomSh_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+BoomBoomSh_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+LongCircle_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+LongCircle_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+LongCircle_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+WallCling_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+WallCling_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+WallCling_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+Spin_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+Spin_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+Spin_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+Underbar_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+Underbar_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+Underbar_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+MonkeyToBomb_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+MonkeyToBomb_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+MonkeyToBomb_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+DiveRoll_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DiveRoll_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DiveRoll_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+DoubleSpinToRoll_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DoubleSpinToRoll_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DoubleSpinToRoll_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+LongJumpToBarrel_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+LongJumpToBarrel_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+LongJumpToBarrel_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+WebsterWithSalto_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+WebsterWithSalto_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+WebsterWithSalto_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+MonkeyToBackflip_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+MonkeyToBackflip_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+MonkeyToBackflip_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+BarJumpSaltoless_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+BarJumpSaltoless_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+BarJumpSaltoless_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+SlowSpin_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SlowSpin_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+SlowSpin_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+KingKongJumpoff_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+KingKongJumpoff_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+KingKongJumpoff_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+WallBackRoll_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+WallBackRoll_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+WallBackRoll_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+BonusTokensFromTokens_1_Belt:
+  BonusTokens: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+BonusTokensFromTokens_1_Hands:
+  BonusTokens: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+BonusTokensFromTokens_1_Head:
+  BonusTokens: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+BonusTokensFromTokens_1_Legs:
+  BonusTokens: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+BonusTokensFromTokens_1_Torso:
+  BonusTokens: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+BonusTokensFromTokens_2_Belt:
+  BonusTokens: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+BonusTokensFromTokens_2_Hands:
+  BonusTokens: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+BonusTokensFromTokens_2_Head:
+  BonusTokens: { 0: 2, 1: 3, 2: 4, 3: 5, 4: 6, 5: 7 }
+BonusTokensFromTokens_2_Legs:
+  BonusTokens: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+BonusTokensFromTokens_2_Torso:
+  BonusTokens: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+BonusTokensFromTokens_3_Belt:
+  BonusTokens: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+BonusTokensFromTokens_3_Hands:
+  BonusTokens: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+BonusTokensFromTokens_3_Head:
+  BonusTokens: { 0: 3, 1: 4, 2: 5, 3: 6, 4: 7, 5: 8 }
+BonusTokensFromTokens_3_Legs:
+  BonusTokens: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+BonusTokensFromTokens_3_Torso:
+  BonusTokens: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+BonusTokensFromTraps_1_Belt:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_1_Hands:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_1_Head:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_1_Legs:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_1_Torso:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_2_Belt:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_2_Hands:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_2_Head:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_2_Legs:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_2_Torso:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_3_Belt:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_3_Hands:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_3_Head:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_3_Legs:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTraps_3_Torso:
+  BonusTokens: { 0: 40, 1: 50, 2: 60, 3: 70, 4: 80, 5: 90 }
+BonusTokensFromTricks_1_Belt:
+  BonusTokens: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+BonusTokensFromTricks_1_Hands:
+  BonusTokens: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+BonusTokensFromTricks_1_Head:
+  BonusTokens: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+BonusTokensFromTricks_1_Legs:
+  BonusTokens: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+BonusTokensFromTricks_1_Torso:
+  BonusTokens: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+BonusTokensFromTricks_2_Belt:
+  BonusTokens: { 0: 12, 1: 15, 2: 18, 3: 21, 4: 24, 5: 27 }
+BonusTokensFromTricks_2_Hands:
+  BonusTokens: { 0: 12, 1: 15, 2: 18, 3: 21, 4: 24, 5: 27 }
+BonusTokensFromTricks_2_Head:
+  BonusTokens: { 0: 12, 1: 15, 2: 18, 3: 21, 4: 24, 5: 27 }
+BonusTokensFromTricks_2_Legs:
+  BonusTokens: { 0: 12, 1: 15, 2: 18, 3: 21, 4: 24, 5: 27 }
+BonusTokensFromTricks_2_Torso:
+  BonusTokens: { 0: 12, 1: 15, 2: 18, 3: 21, 4: 24, 5: 27 }
+BonusTokensFromTricks_3_Belt:
+  BonusTokens: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+BonusTokensFromTricks_3_Hands:
+  BonusTokens: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+BonusTokensFromTricks_3_Head:
+  BonusTokens: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+BonusTokensFromTricks_3_Legs:
+  BonusTokens: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+BonusTokensFromTricks_3_Torso:
+  BonusTokens: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+BonusTokens_1_Belt:
+  BonusTokens: { 0: 7, 1: 8, 2: 9, 3: 10, 4: 11, 5: 12 }
+BonusTokens_1_Hands:
+  BonusTokens: { 0: 7, 1: 8, 2: 9, 3: 10, 4: 11, 5: 12 }
+BonusTokens_1_Head:
+  BonusTokens: { 0: 7, 1: 8, 2: 9, 3: 10, 4: 11, 5: 12 }
+BonusTokens_1_Legs:
+  BonusTokens: { 0: 7, 1: 8, 2: 9, 3: 10, 4: 11, 5: 12 }
+BonusTokens_1_Torso:
+  BonusTokens: { 0: 7, 1: 8, 2: 9, 3: 10, 4: 11, 5: 12 }
+BonusTokens_2_Belt:
+  BonusTokens: { 0: 9, 1: 10, 2: 11, 3: 12, 4: 13, 5: 14 }
+BonusTokens_2_Hands:
+  BonusTokens: { 0: 9, 1: 10, 2: 11, 3: 12, 4: 13, 5: 14 }
+BonusTokens_2_Head:
+  BonusTokens: { 0: 9, 1: 10, 2: 11, 3: 12, 4: 13, 5: 14 }
+BonusTokens_2_Legs:
+  BonusTokens: { 0: 9, 1: 10, 2: 11, 3: 12, 4: 13, 5: 14 }
+BonusTokens_2_Torso:
+  BonusTokens: { 0: 9, 1: 10, 2: 11, 3: 12, 4: 13, 5: 14 }
+BonusTokens_3_Belt:
+  BonusTokens: { 0: 11, 1: 12, 2: 13, 3: 14, 4: 15, 5: 16 }
+BonusTokens_3_Hands:
+  BonusTokens: { 0: 11, 1: 12, 2: 13, 3: 14, 4: 15, 5: 16 }
+BonusTokens_3_Head:
+  BonusTokens: { 0: 11, 1: 12, 2: 13, 3: 14, 4: 15, 5: 16 }
+BonusTokens_3_Legs:
+  BonusTokens: { 0: 11, 1: 12, 2: 13, 3: 14, 4: 15, 5: 16 }
+BonusTokens_3_Torso:
+  BonusTokens: { 0: 11, 1: 12, 2: 13, 3: 14, 4: 15, 5: 16 }
+CheatGainer_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+CheatGainer_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+CheatGainer_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+CouponCardBoostPassive_1_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponCardBoostPassive_1_Hands:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_1_Head:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_1_Legs:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_1_Torso:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_2_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponCardBoostPassive_2_Hands:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_2_Head:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_2_Legs:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_2_Torso:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_3_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponCardBoostPassive_3_Hands:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_3_Head:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_3_Legs:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponCardBoostPassive_3_Torso:
+  Chance: { 0: 3, 1: 6, 2: 9, 3: 12, 4: 15, 5: 18 }
+CouponEnergyRechargePassive_1_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_1_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_1_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_1_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_1_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_2_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_2_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_2_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_2_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_2_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_3_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_3_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_3_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_3_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponEnergyRechargePassive_3_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_1_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_1_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_1_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_1_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_1_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_2_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_2_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_2_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_2_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_2_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_3_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_3_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_3_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_3_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponRerollPassive_3_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_1_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_1_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_1_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_1_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_1_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_2_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_2_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_2_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_2_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_2_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_3_Belt:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_3_Hands:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_3_Head:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_3_Legs:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+CouponSaveMePassive_3_Torso:
+  Chance: { 0: 5, 1: 10, 2: 15, 3: 20, 4: 25, 5: 30 }
+DarknessAdditionalCharges_1_Belt:
+  Charges: { 0: 1, 1: 1, 2: 1, 3: 1, 4: 2, 5: 2 }
+DarknessAdditionalCharges_1_Hands:
+  Charges: { 0: 1, 1: 1, 2: 1, 3: 1, 4: 2, 5: 2 }
+DarknessAdditionalCharges_1_Head:
+  Charges: { 0: 1, 1: 1, 2: 1, 3: 1, 4: 2, 5: 2 }
+DarknessAdditionalCharges_1_Legs:
+  Charges: { 0: 1, 1: 1, 2: 1, 3: 1, 4: 2, 5: 2 }
+DarknessAdditionalCharges_1_Torso:
+  Charges: { 0: 1, 1: 1, 2: 1, 3: 1, 4: 2, 5: 2 }
+DarknessAdditionalCharges_2_Belt:
+  Charges: { 0: 2, 1: 2, 2: 2, 3: 2, 4: 3, 5: 3 }
+DarknessAdditionalCharges_2_Hands:
+  Charges: { 0: 2, 1: 2, 2: 2, 3: 2, 4: 3, 5: 3 }
+DarknessAdditionalCharges_2_Head:
+  Charges: { 0: 2, 1: 2, 2: 2, 3: 2, 4: 3, 5: 3 }
+DarknessAdditionalCharges_2_Legs:
+  Charges: { 0: 2, 1: 2, 2: 2, 3: 2, 4: 3, 5: 3 }
+DarknessAdditionalCharges_2_Torso:
+  Charges: { 0: 2, 1: 2, 2: 2, 3: 2, 4: 3, 5: 3 }
+DarknessAdditionalCharges_3_Belt:
+  Charges: { 0: 3, 1: 3, 2: 3, 3: 3, 4: 4, 5: 4 }
+DarknessAdditionalCharges_3_Hands:
+  Charges: { 0: 3, 1: 3, 2: 3, 3: 3, 4: 4, 5: 4 }
+DarknessAdditionalCharges_3_Head:
+  Charges: { 0: 3, 1: 3, 2: 3, 3: 3, 4: 4, 5: 4 }
+DarknessAdditionalCharges_3_Legs:
+  Charges: { 0: 3, 1: 3, 2: 3, 3: 3, 4: 4, 5: 4 }
+DarknessAdditionalCharges_3_Torso:
+  Charges: { 0: 3, 1: 3, 2: 3, 3: 3, 4: 4, 5: 4 }
+DarknessRadius_1_Head:
+  RadiusDelta: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+DarknessRadius_2_Head:
+  RadiusDelta: { 0: 12, 1: 14, 2: 16, 3: 18, 4: 20, 5: 22 }
+DarknessRadius_3_Head:
+  RadiusDelta: { 0: 16, 1: 18, 2: 20, 3: 22, 4: 24, 5: 28 }
+DarknessTime_1_Belt:
+  TimeDelta: { 0: 20, 1: 30, 2: 40, 3: 50, 4: 70, 5: 80 }
+DarknessTime_2_Belt:
+  TimeDelta: { 0: 50, 1: 60, 2: 70, 3: 80, 4: 90, 5: 100 }
+DarknessTime_3_Belt:
+  TimeDelta: { 0: 100, 1: 110, 2: 120, 3: 130, 4: 140, 5: 150 }
+DashVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DashVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DashVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+DoubleBack_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DoubleBack_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DoubleBack_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+EMP_3_Legs:
+  Cooldown: { 0: 1800, 1: 1500, 2: 1200, 3: 900, 4: 600, 5: 300 }
+EndFloorChargePointsFactor_1_Belt:
+  AddPercentage: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+EndFloorChargePointsFactor_1_Hands:
+  AddPercentage: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+EndFloorChargePointsFactor_1_Head:
+  AddPercentage: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+EndFloorChargePointsFactor_1_Legs:
+  AddPercentage: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+EndFloorChargePointsFactor_1_Torso:
+  AddPercentage: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+EndFloorChargePointsFactor_2_Belt:
+  AddPercentage: { 0: 50, 1: 57, 2: 64, 3: 71, 4: 78, 5: 85 }
+EndFloorChargePointsFactor_2_Hands:
+  AddPercentage: { 0: 50, 1: 57, 2: 64, 3: 71, 4: 78, 5: 85 }
+EndFloorChargePointsFactor_2_Head:
+  AddPercentage: { 0: 50, 1: 57, 2: 64, 3: 71, 4: 78, 5: 85 }
+EndFloorChargePointsFactor_2_Legs:
+  AddPercentage: { 0: 50, 1: 57, 2: 64, 3: 71, 4: 78, 5: 85 }
+EndFloorChargePointsFactor_2_Torso:
+  AddPercentage: { 0: 50, 1: 57, 2: 64, 3: 71, 4: 78, 5: 85 }
+EndFloorChargePointsFactor_3_Belt:
+  AddPercentage: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+EndFloorChargePointsFactor_3_Hands:
+  AddPercentage: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+EndFloorChargePointsFactor_3_Head:
+  AddPercentage: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+EndFloorChargePointsFactor_3_Legs:
+  AddPercentage: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+EndFloorChargePointsFactor_3_Torso:
+  AddPercentage: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+EndFloorChargePoints_1_Belt:
+  PointsForCharge: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+EndFloorChargePoints_1_Hands:
+  PointsForCharge: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+EndFloorChargePoints_1_Head:
+  PointsForCharge: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+EndFloorChargePoints_1_Legs:
+  PointsForCharge: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+EndFloorChargePoints_1_Torso:
+  PointsForCharge: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+EndFloorChargePoints_2_Belt:
+  PointsForCharge: { 0: 30, 1: 40, 2: 50, 3: 60, 4: 70, 5: 80 }
+EndFloorChargePoints_2_Hands:
+  PointsForCharge: { 0: 30, 1: 40, 2: 50, 3: 60, 4: 70, 5: 80 }
+EndFloorChargePoints_2_Head:
+  PointsForCharge: { 0: 30, 1: 40, 2: 50, 3: 60, 4: 70, 5: 80 }
+EndFloorChargePoints_2_Legs:
+  PointsForCharge: { 0: 30, 1: 40, 2: 50, 3: 60, 4: 70, 5: 80 }
+EndFloorChargePoints_2_Torso:
+  PointsForCharge: { 0: 30, 1: 40, 2: 50, 3: 60, 4: 70, 5: 80 }
+EndFloorChargePoints_3_Belt:
+  PointsForCharge: { 0: 40, 1: 55, 2: 70, 3: 85, 4: 100, 5: 115 }
+EndFloorChargePoints_3_Hands:
+  PointsForCharge: { 0: 40, 1: 55, 2: 70, 3: 85, 4: 100, 5: 115 }
+EndFloorChargePoints_3_Head:
+  PointsForCharge: { 0: 40, 1: 55, 2: 70, 3: 85, 4: 100, 5: 115 }
+EndFloorChargePoints_3_Legs:
+  PointsForCharge: { 0: 40, 1: 55, 2: 70, 3: 85, 4: 100, 5: 115 }
+EndFloorChargePoints_3_Torso:
+  PointsForCharge: { 0: 40, 1: 55, 2: 70, 3: 85, 4: 100, 5: 115 }
+EndFloorPointsFactorFromContextAnim_1_Belt:
+  AddPercentage: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+EndFloorPointsFactorFromContextAnim_1_Hands:
+  AddPercentage: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+EndFloorPointsFactorFromContextAnim_1_Head:
+  AddPercentage: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+EndFloorPointsFactorFromContextAnim_1_Legs:
+  AddPercentage: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+EndFloorPointsFactorFromContextAnim_1_Torso:
+  AddPercentage: { 0: 8, 1: 10, 2: 12, 3: 14, 4: 16, 5: 18 }
+EndFloorPointsFactorFromContextAnim_2_Belt:
+  AddPercentage: { 0: 12, 1: 14, 2: 16, 3: 18, 4: 20, 5: 22 }
+EndFloorPointsFactorFromContextAnim_2_Hands:
+  AddPercentage: { 0: 12, 1: 14, 2: 16, 3: 18, 4: 20, 5: 22 }
+EndFloorPointsFactorFromContextAnim_2_Head:
+  AddPercentage: { 0: 12, 1: 14, 2: 16, 3: 18, 4: 20, 5: 22 }
+EndFloorPointsFactorFromContextAnim_2_Legs:
+  AddPercentage: { 0: 12, 1: 14, 2: 16, 3: 18, 4: 20, 5: 22 }
+EndFloorPointsFactorFromContextAnim_2_Torso:
+  AddPercentage: { 0: 12, 1: 14, 2: 16, 3: 18, 4: 20, 5: 22 }
+EndFloorPointsFactorFromContextAnim_3_Belt:
+  AddPercentage: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+EndFloorPointsFactorFromContextAnim_3_Hands:
+  AddPercentage: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+EndFloorPointsFactorFromContextAnim_3_Head:
+  AddPercentage: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+EndFloorPointsFactorFromContextAnim_3_Legs:
+  AddPercentage: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+EndFloorPointsFactorFromContextAnim_3_Torso:
+  AddPercentage: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+EndFloorPointsFactor_1_Belt:
+  AddPercentage: { 0: 100, 1: 125, 2: 150, 3: 175, 4: 200, 5: 225 }
+EndFloorPointsFactor_1_Hands:
+  AddPercentage: { 0: 100, 1: 125, 2: 150, 3: 175, 4: 200, 5: 225 }
+EndFloorPointsFactor_1_Head:
+  AddPercentage: { 0: 100, 1: 125, 2: 150, 3: 175, 4: 200, 5: 225 }
+EndFloorPointsFactor_1_Legs:
+  AddPercentage: { 0: 100, 1: 125, 2: 150, 3: 175, 4: 200, 5: 225 }
+EndFloorPointsFactor_1_Torso:
+  AddPercentage: { 0: 100, 1: 125, 2: 150, 3: 175, 4: 200, 5: 225 }
+EndFloorPointsFactor_2_Belt:
+  AddPercentage: { 0: 125, 1: 150, 2: 175, 3: 200, 4: 225, 5: 250 }
+EndFloorPointsFactor_2_Hands:
+  AddPercentage: { 0: 125, 1: 150, 2: 175, 3: 200, 4: 225, 5: 250 }
+EndFloorPointsFactor_2_Head:
+  AddPercentage: { 0: 125, 1: 150, 2: 175, 3: 200, 4: 225, 5: 250 }
+EndFloorPointsFactor_2_Legs:
+  AddPercentage: { 0: 125, 1: 150, 2: 175, 3: 200, 4: 225, 5: 250 }
+EndFloorPointsFactor_2_Torso:
+  AddPercentage: { 0: 125, 1: 150, 2: 175, 3: 200, 4: 225, 5: 250 }
+EndFloorPointsFactor_3_Belt:
+  AddPercentage: { 0: 150, 1: 175, 2: 200, 3: 225, 4: 250, 5: 275 }
+EndFloorPointsFactor_3_Hands:
+  AddPercentage: { 0: 150, 1: 175, 2: 200, 3: 225, 4: 250, 5: 275 }
+EndFloorPointsFactor_3_Head:
+  AddPercentage: { 0: 150, 1: 175, 2: 200, 3: 225, 4: 250, 5: 275 }
+EndFloorPointsFactor_3_Legs:
+  AddPercentage: { 0: 150, 1: 175, 2: 200, 3: 225, 4: 250, 5: 275 }
+EndFloorPointsFactor_3_Torso:
+  AddPercentage: { 0: 150, 1: 175, 2: 200, 3: 225, 4: 250, 5: 275 }
+EndFloorPointsFromContextAnim_1_Belt:
+  Points: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+EndFloorPointsFromContextAnim_1_Hands:
+  Points: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+EndFloorPointsFromContextAnim_1_Head:
+  Points: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+EndFloorPointsFromContextAnim_1_Legs:
+  Points: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+EndFloorPointsFromContextAnim_1_Torso:
+  Points: { 0: 4, 1: 5, 2: 6, 3: 7, 4: 8, 5: 9 }
+EndFloorPointsFromContextAnim_2_Belt:
+  Points: { 0: 6, 1: 7, 2: 8, 3: 9, 4: 10, 5: 11 }
+EndFloorPointsFromContextAnim_2_Hands:
+  Points: { 0: 6, 1: 7, 2: 8, 3: 9, 4: 10, 5: 11 }
+EndFloorPointsFromContextAnim_2_Head:
+  Points: { 0: 6, 1: 7, 2: 8, 3: 9, 4: 10, 5: 11 }
+EndFloorPointsFromContextAnim_2_Legs:
+  Points: { 0: 6, 1: 7, 2: 8, 3: 9, 4: 10, 5: 11 }
+EndFloorPointsFromContextAnim_2_Torso:
+  Points: { 0: 6, 1: 7, 2: 8, 3: 9, 4: 10, 5: 11 }
+EndFloorPointsFromContextAnim_3_Belt:
+  Points: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+EndFloorPointsFromContextAnim_3_Hands:
+  Points: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+EndFloorPointsFromContextAnim_3_Head:
+  Points: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+EndFloorPointsFromContextAnim_3_Legs:
+  Points: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+EndFloorPointsFromContextAnim_3_Torso:
+  Points: { 0: 8, 1: 9, 2: 10, 3: 11, 4: 12, 5: 13 }
+EndFloorPoints_1_Belt:
+  Points: { 0: 60, 1: 65, 2: 70, 3: 75, 4: 80, 5: 85 }
+EndFloorPoints_1_Hands:
+  Points: { 0: 60, 1: 65, 2: 70, 3: 75, 4: 80, 5: 85 }
+EndFloorPoints_1_Head:
+  Points: { 0: 60, 1: 65, 2: 70, 3: 75, 4: 80, 5: 85 }
+EndFloorPoints_1_Legs:
+  Points: { 0: 60, 1: 65, 2: 70, 3: 75, 4: 80, 5: 85 }
+EndFloorPoints_1_Torso:
+  Points: { 0: 60, 1: 65, 2: 70, 3: 75, 4: 80, 5: 85 }
+EndFloorPoints_2_Belt:
+  Points: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+EndFloorPoints_2_Hands:
+  Points: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+EndFloorPoints_2_Head:
+  Points: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+EndFloorPoints_2_Legs:
+  Points: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+EndFloorPoints_2_Torso:
+  Points: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+EndFloorPoints_3_Belt:
+  Points: { 0: 80, 1: 85, 2: 90, 3: 95, 4: 100, 5: 105 }
+EndFloorPoints_3_Hands:
+  Points: { 0: 80, 1: 85, 2: 90, 3: 95, 4: 100, 5: 105 }
+EndFloorPoints_3_Head:
+  Points: { 0: 80, 1: 85, 2: 90, 3: 95, 4: 100, 5: 105 }
+EndFloorPoints_3_Legs:
+  Points: { 0: 80, 1: 85, 2: 90, 3: 95, 4: 100, 5: 105 }
+EndFloorPoints_3_Torso:
+  Points: { 0: 80, 1: 85, 2: 90, 3: 95, 4: 100, 5: 105 }
+EndFloorRecoverCharges_1_Belt:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+EndFloorRecoverCharges_1_Hands:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+EndFloorRecoverCharges_1_Head:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+EndFloorRecoverCharges_1_Legs:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+EndFloorRecoverCharges_1_Torso:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+EndFloorRecoverCharges_2_Belt:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+EndFloorRecoverCharges_2_Hands:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+EndFloorRecoverCharges_2_Head:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+EndFloorRecoverCharges_2_Legs:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+EndFloorRecoverCharges_2_Torso:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+EndFloorRecoverCharges_3_Belt:
+  Chance: { 0: 55, 1: 60, 2: 65, 3: 70, 4: 75, 5: 80 }
+EndFloorRecoverCharges_3_Hands:
+  Chance: { 0: 55, 1: 60, 2: 65, 3: 70, 4: 75, 5: 80 }
+EndFloorRecoverCharges_3_Head:
+  Chance: { 0: 55, 1: 60, 2: 65, 3: 70, 4: 75, 5: 80 }
+EndFloorRecoverCharges_3_Legs:
+  Chance: { 0: 55, 1: 60, 2: 65, 3: 70, 4: 75, 5: 80 }
+EndFloorRecoverCharges_3_Torso:
+  Chance: { 0: 55, 1: 60, 2: 65, 3: 70, 4: 75, 5: 80 }
+FrontFlipTwoLegs_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+FrontFlipTwoLegs_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+FrontFlipTwoLegs_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+FrontflipLegsUp_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+FrontflipLegsUp_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+FrontflipLegsUp_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+JumpTumble_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+JumpTumble_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+JumpTumble_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+AirSpin_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+AirSpin_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+AirSpin_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+AirBomb_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+AirBomb_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+AirBomb_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+JumpWheel_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+JumpWheel_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+JumpWheel_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+HandspringToRoll_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+HandspringToRoll_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+HandspringToRoll_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+RollForward_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+RollForward_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+RollForward_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+BarrelVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+BarrelVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+BarrelVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+FlyingArrow_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+FlyingArrow_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+FlyingArrow_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+JumpSpinVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+JumpSpinVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+JumpSpinVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+VertVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+VertVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+VertVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+SpinVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SpinVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+SpinVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+DiveDown_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+DiveDown_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+DiveDown_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+JumpDownRoll_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+JumpDownRoll_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+JumpDownRoll_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+GateVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+GateVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+GateVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+HandSpring_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+HandSpring_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+HandSpring_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+JumpObstacle_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+JumpObstacle_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+JumpObstacle_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+KeyAdditional_1_Belt:
+  Chance: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+KeyAdditional_1_Hands:
+  Chance: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+KeyAdditional_1_Head:
+  Chance: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+KeyAdditional_1_Legs:
+  Chance: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+KeyAdditional_1_Torso:
+  Chance: { 0: 16, 1: 20, 2: 24, 3: 28, 4: 32, 5: 36 }
+KeyAdditional_2_Belt:
+  Chance: { 0: 26, 1: 30, 2: 34, 3: 38, 4: 42, 5: 46 }
+KeyAdditional_2_Hands:
+  Chance: { 0: 26, 1: 30, 2: 34, 3: 38, 4: 42, 5: 46 }
+KeyAdditional_2_Head:
+  Chance: { 0: 26, 1: 30, 2: 34, 3: 38, 4: 42, 5: 46 }
+KeyAdditional_2_Legs:
+  Chance: { 0: 26, 1: 30, 2: 34, 3: 38, 4: 42, 5: 46 }
+KeyAdditional_2_Torso:
+  Chance: { 0: 26, 1: 30, 2: 34, 3: 38, 4: 42, 5: 46 }
+KeyAdditional_3_Belt:
+  Chance: { 0: 46, 1: 50, 2: 54, 3: 58, 4: 62, 5: 66 }
+KeyAdditional_3_Hands:
+  Chance: { 0: 46, 1: 50, 2: 54, 3: 58, 4: 62, 5: 66 }
+KeyAdditional_3_Head:
+  Chance: { 0: 46, 1: 50, 2: 54, 3: 58, 4: 62, 5: 66 }
+KeyAdditional_3_Legs:
+  Chance: { 0: 46, 1: 50, 2: 54, 3: 58, 4: 62, 5: 66 }
+KeyAdditional_3_Torso:
+  Chance: { 0: 46, 1: 50, 2: 54, 3: 58, 4: 62, 5: 66 }
+KeyDouble_1_Belt:
+  Chance: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+KeyDouble_1_Hands:
+  Chance: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+KeyDouble_1_Head:
+  Chance: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+KeyDouble_1_Legs:
+  Chance: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+KeyDouble_1_Torso:
+  Chance: { 0: 15, 1: 17, 2: 19, 3: 21, 4: 23, 5: 25 }
+KeyDouble_2_Belt:
+  Chance: { 0: 20, 1: 23, 2: 26, 3: 29, 4: 32, 5: 35 }
+KeyDouble_2_Hands:
+  Chance: { 0: 20, 1: 23, 2: 26, 3: 29, 4: 32, 5: 35 }
+KeyDouble_2_Head:
+  Chance: { 0: 20, 1: 23, 2: 26, 3: 29, 4: 32, 5: 35 }
+KeyDouble_2_Legs:
+  Chance: { 0: 20, 1: 23, 2: 26, 3: 29, 4: 32, 5: 35 }
+KeyDouble_2_Torso:
+  Chance: { 0: 20, 1: 23, 2: 26, 3: 29, 4: 32, 5: 35 }
+KeyDouble_3_Belt:
+  Chance: { 0: 25, 1: 29, 2: 33, 3: 37, 4: 41, 5: 45 }
+KeyDouble_3_Hands:
+  Chance: { 0: 25, 1: 29, 2: 33, 3: 37, 4: 41, 5: 45 }
+KeyDouble_3_Head:
+  Chance: { 0: 25, 1: 29, 2: 33, 3: 37, 4: 41, 5: 45 }
+KeyDouble_3_Legs:
+  Chance: { 0: 25, 1: 29, 2: 33, 3: 37, 4: 41, 5: 45 }
+KeyDouble_3_Torso:
+  Chance: { 0: 25, 1: 29, 2: 33, 3: 37, 4: 41, 5: 45 }
+Magnetizer_3_Torso:
+  Frames: { 0: 30, 1: 35, 2: 40, 3: 45, 4: 50, 5: 60 }
+  Radius: { 0: 600, 1: 800, 2: 1000, 3: 1600, 4: 1800, 5: 2000 }
+MonkeyVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+MonkeyVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+MonkeyVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+ObstacleFrontflip_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+ObstacleFrontflip_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+ObstacleFrontflip_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+PassedLevelsBonusTokens_1_Belt:
+  BonusTokensPerFloor: { 0: 65, 1: 75, 2: 85, 3: 95, 4: 105, 5: 105 }
+PassedLevelsBonusTokens_1_Hands:
+  BonusTokensPerFloor: { 0: 65, 1: 75, 2: 85, 3: 95, 4: 105, 5: 105 }
+PassedLevelsBonusTokens_1_Head:
+  BonusTokensPerFloor: { 0: 65, 1: 75, 2: 85, 3: 95, 4: 105, 5: 105 }
+PassedLevelsBonusTokens_1_Legs:
+  BonusTokensPerFloor: { 0: 65, 1: 75, 2: 85, 3: 95, 4: 105, 5: 105 }
+PassedLevelsBonusTokens_1_Torso:
+  BonusTokensPerFloor: { 0: 65, 1: 75, 2: 85, 3: 95, 4: 105, 5: 105 }
+PassedLevelsBonusTokens_2_Belt:
+  BonusTokensPerFloor: { 0: 80, 1: 95, 2: 110, 3: 125, 4: 140, 5: 140 }
+PassedLevelsBonusTokens_2_Hands:
+  BonusTokensPerFloor: { 0: 80, 1: 95, 2: 110, 3: 125, 4: 140, 5: 140 }
+PassedLevelsBonusTokens_2_Head:
+  BonusTokensPerFloor: { 0: 80, 1: 95, 2: 110, 3: 125, 4: 140, 5: 140 }
+PassedLevelsBonusTokens_2_Legs:
+  BonusTokensPerFloor: { 0: 80, 1: 95, 2: 110, 3: 125, 4: 140, 5: 140 }
+PassedLevelsBonusTokens_2_Torso:
+  BonusTokensPerFloor: { 0: 80, 1: 95, 2: 110, 3: 125, 4: 140, 5: 140 }
+PassedLevelsBonusTokens_3_Belt:
+  BonusTokensPerFloor: { 0: 100, 1: 120, 2: 140, 3: 160, 4: 180, 5: 180 }
+PassedLevelsBonusTokens_3_Hands:
+  BonusTokensPerFloor: { 0: 100, 1: 120, 2: 140, 3: 160, 4: 180, 5: 180 }
+PassedLevelsBonusTokens_3_Head:
+  BonusTokensPerFloor: { 0: 100, 1: 120, 2: 140, 3: 160, 4: 180, 5: 180 }
+PassedLevelsBonusTokens_3_Legs:
+  BonusTokensPerFloor: { 0: 100, 1: 120, 2: 140, 3: 160, 4: 180, 5: 180 }
+PassedLevelsBonusTokens_3_Torso:
+  BonusTokensPerFloor: { 0: 100, 1: 120, 2: 140, 3: 160, 4: 180, 5: 180 }
+RailFlipVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+RailFlipVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+RailFlipVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+RestoreCharges_1_Belt:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+RestoreCharges_1_Hands:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+RestoreCharges_1_Head:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+RestoreCharges_1_Legs:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+RestoreCharges_1_Torso:
+  Chance: { 0: 20, 1: 25, 2: 30, 3: 35, 4: 40, 5: 45 }
+RestoreCharges_2_Belt:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_2_Hands:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_2_Head:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_2_Legs:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_2_Torso:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_3_Belt:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_3_Hands:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_3_Head:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_3_Legs:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+RestoreCharges_3_Torso:
+  Chance: { 0: 35, 1: 40, 2: 45, 3: 50, 4: 55, 5: 60 }
+ReverseVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+ReverseVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+ReverseVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+RocketVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+RocketVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+RocketVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+RollToStraightLegsFlip_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+RollToStraightLegsFlip_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+RollToStraightLegsFlip_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+ScrewDriver_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+ScrewDriver_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+ScrewDriver_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+SideFlip_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SideFlip_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+SideFlip_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+SpinBicycle_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SpinBicycle_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+SpinBicycle_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+SpinningVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SpinningVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+SpinningVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+SplitOne_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SplitOne_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+SplitOne_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+StuntMultiReward_1_Belt:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_1_Hands:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_1_Head:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_1_Legs:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_1_Torso:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_2_Belt:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_2_Hands:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_2_Head:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_2_Legs:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_2_Torso:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_3_Belt:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_3_Hands:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_3_Head:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_3_Legs:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntMultiReward_3_Torso:
+  RewardFactor: { 0: 300, 1: 320, 2: 340, 3: 360, 4: 380, 5: 400 }
+StuntReward_1_Belt:
+  BonusPoints: { 0: 30, 1: 35, 2: 40, 3: 45, 4: 50, 5: 55 }
+StuntReward_1_Hands:
+  BonusPoints: { 0: 30, 1: 35, 2: 40, 3: 45, 4: 50, 5: 55 }
+StuntReward_1_Head:
+  BonusPoints: { 0: 30, 1: 35, 2: 40, 3: 45, 4: 50, 5: 55 }
+StuntReward_1_Legs:
+  BonusPoints: { 0: 30, 1: 35, 2: 40, 3: 45, 4: 50, 5: 55 }
+StuntReward_1_Torso:
+  BonusPoints: { 0: 30, 1: 35, 2: 40, 3: 45, 4: 50, 5: 55 }
+StuntReward_2_Belt:
+  BonusPoints: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+StuntReward_2_Hands:
+  BonusPoints: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+StuntReward_2_Head:
+  BonusPoints: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+StuntReward_2_Legs:
+  BonusPoints: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+StuntReward_2_Torso:
+  BonusPoints: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+StuntReward_3_Belt:
+  BonusPoints: { 0: 75, 1: 80, 2: 85, 3: 90, 4: 95, 5: 100 }
+StuntReward_3_Hands:
+  BonusPoints: { 0: 75, 1: 80, 2: 85, 3: 90, 4: 95, 5: 100 }
+StuntReward_3_Head:
+  BonusPoints: { 0: 75, 1: 80, 2: 85, 3: 90, 4: 95, 5: 100 }
+StuntReward_3_Legs:
+  BonusPoints: { 0: 75, 1: 80, 2: 85, 3: 90, 4: 95, 5: 100 }
+StuntReward_3_Torso:
+  BonusPoints: { 0: 75, 1: 80, 2: 85, 3: 90, 4: 95, 5: 100 }
+SuperCredits_1_Belt:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_1_Hands:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_1_Head:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_1_Legs:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_1_Torso:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_2_Belt:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_2_Hands:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_2_Head:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_2_Legs:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_2_Torso:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_3_Belt:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_3_Hands:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_3_Head:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_3_Legs:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+SuperCredits_3_Torso:
+  Number: { 0: 1, 1: 1, 2: 2, 3: 2, 4: 3, 5: 3 }
+  Value: { 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 }
+Swallow_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+Swallow_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+Swallow_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+SwarmBlindnessByDarkness_1_Torso:
+  Chance: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+SwarmBlindnessByDarkness_2_Torso:
+  Chance: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+SwarmBlindnessByDarkness_3_Torso:
+  Chance: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+SwarmDestroyByRedCoin_1_Hands:
+  Chance: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+SwarmDestroyByRedCoin_2_Hands:
+  Chance: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+SwarmDestroyByRedCoin_3_Hands:
+  Chance: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+SwarmPointsFactor_1_Belt:
+  BonusPoints: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmPointsFactor_1_Hands:
+  BonusPoints: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmPointsFactor_1_Head:
+  BonusPoints: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmPointsFactor_1_Legs:
+  BonusPoints: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmPointsFactor_1_Torso:
+  BonusPoints: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmPointsFactor_2_Belt:
+  BonusPoints: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmPointsFactor_2_Hands:
+  BonusPoints: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmPointsFactor_2_Head:
+  BonusPoints: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmPointsFactor_2_Legs:
+  BonusPoints: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmPointsFactor_2_Torso:
+  BonusPoints: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmPointsFactor_3_Belt:
+  BonusPoints: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmPointsFactor_3_Hands:
+  BonusPoints: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmPointsFactor_3_Head:
+  BonusPoints: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmPointsFactor_3_Legs:
+  BonusPoints: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmPointsFactor_3_Torso:
+  BonusPoints: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmSpawnDestroyer_1_Belt:
+  Chance: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+SwarmSpawnDestroyer_1_Hands:
+  Chance: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+SwarmSpawnDestroyer_1_Head:
+  Chance: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+SwarmSpawnDestroyer_1_Legs:
+  Chance: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+SwarmSpawnDestroyer_1_Torso:
+  Chance: { 0: 25, 1: 30, 2: 35, 3: 40, 4: 45, 5: 50 }
+SwarmSpawnDestroyer_2_Belt:
+  Chance: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+SwarmSpawnDestroyer_2_Hands:
+  Chance: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+SwarmSpawnDestroyer_2_Head:
+  Chance: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+SwarmSpawnDestroyer_2_Legs:
+  Chance: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+SwarmSpawnDestroyer_2_Torso:
+  Chance: { 0: 50, 1: 55, 2: 60, 3: 65, 4: 70, 5: 75 }
+SwarmSpawnDestroyer_3_Belt:
+  Chance: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+SwarmSpawnDestroyer_3_Hands:
+  Chance: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+SwarmSpawnDestroyer_3_Head:
+  Chance: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+SwarmSpawnDestroyer_3_Legs:
+  Chance: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+SwarmSpawnDestroyer_3_Torso:
+  Chance: { 0: 70, 1: 75, 2: 80, 3: 85, 4: 90, 5: 95 }
+SwarmTokensFactor_1_Belt:
+  BonusTokens: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmTokensFactor_1_Hands:
+  BonusTokens: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmTokensFactor_1_Head:
+  BonusTokens: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmTokensFactor_1_Legs:
+  BonusTokens: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmTokensFactor_1_Torso:
+  BonusTokens: { 0: 10, 1: 12, 2: 14, 3: 16, 4: 18, 5: 20 }
+SwarmTokensFactor_2_Belt:
+  BonusTokens: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmTokensFactor_2_Hands:
+  BonusTokens: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmTokensFactor_2_Head:
+  BonusTokens: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmTokensFactor_2_Legs:
+  BonusTokens: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmTokensFactor_2_Torso:
+  BonusTokens: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+SwarmTokensFactor_3_Belt:
+  BonusTokens: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmTokensFactor_3_Hands:
+  BonusTokens: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmTokensFactor_3_Head:
+  BonusTokens: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmTokensFactor_3_Legs:
+  BonusTokens: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+SwarmTokensFactor_3_Torso:
+  BonusTokens: { 0: 30, 1: 32, 2: 34, 3: 36, 4: 38, 5: 40 }
+Teleportarium_3_Head:
+  Cooldown: { 0: 1800, 1: 1500, 2: 1200, 3: 900, 4: 600, 5: 300 }
+ThiefVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+ThiefVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+ThiefVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+TokenFactorTimerAfterCharge_1_Belt:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_1_Hands:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_1_Head:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_1_Legs:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_1_Torso:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_2_Belt:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_2_Hands:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_2_Head:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_2_Legs:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_2_Torso:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_3_Belt:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_3_Hands:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_3_Head:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_3_Legs:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokenFactorTimerAfterCharge_3_Torso:
+  AddPercentage: { 0: 200, 1: 225, 2: 250, 3: 275, 4: 300, 5: 325 }
+TokensMultiplier_1_Belt:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_1_Hands:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_1_Head:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_1_Legs:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_1_Torso:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_2_Belt:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_2_Hands:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_2_Head:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_2_Legs:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_2_Torso:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_3_Belt:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_3_Hands:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_3_Head:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_3_Legs:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TokensMultiplier_3_Torso:
+  AddPercentage: { 0: 125, 1: 140, 2: 155, 3: 170, 4: 185, 5: 200 }
+TripleHit_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+TripleHit_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+TripleHit_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+TripleTrickToSwallow_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+TripleTrickToSwallow_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+TripleTrickToSwallow_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+WallHop360_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+WallHop360_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+WallHop360_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+WallHop_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+WallHop_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+WallHop_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+WallSpeedVault_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+WallSpeedVault_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+WallSpeedVault_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }
+Webster_1:
+  Points: { 0: 20, 1: 22, 2: 24, 3: 26, 4: 28, 5: 30 }
+Webster_2:
+  Points: { 0: 40, 1: 45, 2: 50, 3: 55, 4: 60, 5: 65 }
+Webster_3:
+  Points: { 0: 60, 1: 70, 2: 80, 3: 90, 4: 100, 5: 110 }

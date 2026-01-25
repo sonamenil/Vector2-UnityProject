@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Steps>
+  <LockButton IsLock="1">
+    <Module Name="MainScreen">
+      <Button Name="PlayButton" />
+      <Button Name="DetailsButton" />
+    </Module>
+    <Module Name="TopPanel">
+      <Button Name="Timer" />
+      <Button Name="FreeBtn" />
+      <Button Name="DonateBtn" />
+    </Module>
+    <Module Name="BottomPanel">
+      <Button Name="AchievementsBtn" />
+      <Button Name="ArchiveBtn" />
+      <Button Name="BackBtn" />
+      <Button Name="QuestLogBtn" />
+      <Button Name="ArchivePic" />
+      <Button Name="QuestPic" />
+      <Button Name="BoosterBtn" />
+      <Button Name="BoosterPic" />
+    </Module>
+    <Dialog Name="OptionsDialog">
+      <Button Name="ButtonCredits"/>
+    </Dialog>
+  </LockButton>
+  <Dialog Title="^Tutorial.BoosterPack.Dialog.Title^" Text="^Tutorial.BoosterPack.Dialog.Message^" ButtonText="^Tutorial.BoosterPack.Dialog.Button^" DialogType="Portrait" Image="AI_portrait" />
+  <LockButton IsLock="0">
+    <Module Name="BottomPanel">
+      <Button Name="BoosterBtn" />
+      <Button Name="BoosterPic" />
+    </Module>
+  </LockButton>
+  <ClickButton Module="BottomPanel" Button="BoosterBtn" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="0" Y="130" Z="0" />
+      <DeltaMove X="0" Y="60" />
+      <Angle Value="180" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <WaitForModuleActivated ModuleName="BoosterpackPanel" />
+  <LockButton IsLock="1">
+    <Module Name="BoosterpackPanel">
+      <Button Name="BoosterpacksButton" />
+      <Button Name="UpgradeButton1" />
+      <Button Name="UpgradeButton2" />
+      <Button Name="UpgradeButton3" />
+    </Module>
+    <Module Name="BottomPanel">
+      <Button Name="BackBtn" />
+    </Module>
+  </LockButton>
+  <ClickButton Module="BoosterpackPanel" Button="OpenKitButton" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="400" Y="10" Z="0" />
+      <DeltaMove X="100" Y="0" />
+      <Angle Value="90" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <Delay TimeInSeconds="1.8" />
+  <ChangeCounter Counter="BoosterPackTutor" Namespace="ST_Tutorial" Value="0" />
+  <ChangeCounter Counter="ST_BoosterpacksBlock" Namespace="ST_ProgressMarkers" Value="0" />
+  <LockButton IsLock="1">
+    <Module Name="BoosterpackPanel">
+      <Button Name="UpgradeButton2" />
+      <Button Name="UpgradeButton3" />
+      <Button Name="UpgradeButton1" />
+    </Module>
+  </LockButton>
+  <Delay TimeInSeconds="1" />
+  <LockButton IsLock="0">
+    <Module Name="BoosterpackPanel">
+      <Button Name="UpgradeButton1" />
+    </Module>
+  </LockButton>
+  <ClickButton Module="BoosterpackPanel" Button="UpgradeButton1" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="-70" Y="0" Z="0" />
+      <DeltaMove X="-60" Y="0" />
+      <Angle Value="270" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <LockButton IsLock="0">
+    <Module Name="BoosterpackPanel">
+      <Button Name="UpgradeButton2" />
+    </Module>
+  </LockButton>
+  <ClickButton Module="BoosterpackPanel" Button="UpgradeButton2" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="-70" Y="0" Z="0" />
+      <DeltaMove X="-60" Y="0" />
+      <Angle Value="270" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <LockButton IsLock="0">
+    <Module Name="BoosterpackPanel">
+      <Button Name="UpgradeButton3" />
+    </Module>
+  </LockButton>
+  <ClickButton Module="BoosterpackPanel" Button="UpgradeButton3" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="-70" Y="0" Z="0" />
+      <DeltaMove X="-60" Y="0" />
+      <Angle Value="270" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <LockButton IsLock="0">
+    <Module Name="BottomPanel">
+      <Button Name="BackBtn" />
+    </Module>
+  </LockButton>
+  <Delay TimeInSeconds="0.8" />
+  <CheckQuests />
+  <LockButton IsLock="0">
+    <Module Name="MainScreen" LockAllButtons="1" />
+    <Module Name="TopPanel" LockAllButtons="1" />
+    <Module Name="BottomPanel" LockAllButtons="1" />
+    <Module Name="BoosterpackPanel" LockAllButtons="1" />
+    <Dialog Name="OptionsDialog">
+      <Button Name="ButtonCredits"/>
+    </Dialog>
+  </LockButton>
+</Steps>

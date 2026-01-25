@@ -1,0 +1,22 @@
+SpecificUpgradesGeneration:
+  Select: {Type: "Balance", Root: "SpecificUpgradesGeneration"}
+  BoxContent:
+    Activate:
+      Conditions: [{ConditionType: CounterRange, Name: '?getString[SelectKey]', Namespace: SpecificUpgradesGeneration, Min: 1}]
+      StringActions: {OnEnter: [{Name: Card, Value: '?getBalance[SpecificUpgradesGeneration,?getString[SelectKey],CardName]'}]}
+      NoShuffle: 1
+      BoxContent:
+        DecrementByRun:
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: <ST_Default.StartFloor>}
+          - {ConditionType: ValuesEqual, Values: ['?getBalance[SpecificUpgradesGeneration,?getString[SelectKey],DecrementByRun]', 1]}
+          CounterActions: {OnEnter: [{Name: '?getString[SelectKey]', Namespace: SpecificUpgradesGeneration, Type: IncrementBy, Value: -1}]}
+        OverweightedLikeBoosted:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getBalance[SpecificUpgradesGeneration,?getString[SelectKey],Overweighted]', 1]}]
+          CounterActions: {OnEnter: [{Name: '?getString[Card]', Namespace: OverweightedUpgrades, Type: Assign, Value: 1}]}
+        GuaranteedGeneration:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getBalance[SpecificUpgradesGeneration,?getString[SelectKey],Guaranteed]', 1]}]
+          CounterActions: 
+            OnEnter: 
+            - {Name: '?getString[SelectKey]', Namespace: GuaranteedUpgrades, Type: Assign, Value: 1}
+            - {Name: GuaranteedUpgrades, Namespace: UpgradesGenerator, Type: IncrementBy, Value: 1}

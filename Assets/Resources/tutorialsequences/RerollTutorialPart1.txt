@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Steps>
+  <ChangeCounter Counter="RerollShopBlock" Namespace="ST_ProgressMarkers" Value="0" />
+  <Dialog Title="^Tutorial.Reroll.Dialog1.Title^" Text="^Tutorial.Reroll.Dialog1.Message^" ButtonText="^Tutorial.Reroll.Dialog1.Button^" DialogType="Portrait" Image="AI_portrait" />
+  <HideButton IsHide="0">
+    <Module Name="ShopPanel">
+      <Button Name="RerollButton" />
+    </Module>
+  </HideButton>
+  <ChangeCounter Counter="ST_RerollTutorial" Namespace="ST_Tutorial" Value="3" />
+  <StartSequence Sequence="TutorialSequences/RerollTutorialPart2" />
+</Steps>

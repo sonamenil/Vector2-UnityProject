@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ReagentCrystal
+  m_Shader: {fileID: 4800000, guid: 1b62b12fc5190a64d9319674d9b24c2b, type: 3}
+  m_ShaderKeywords: GLOW11_GLOW_VERTEXCOLOR GLOW11_MULTIPLY_GLOWCOLOR _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _Cube
+      second:
+        m_Texture: {fileID: 8900000, guid: 8076a1302baac9f439bf836798bcfdf0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    - first:
+        name: _Alpha
+      second: 1
+    - first:
+        name: _BumpAmt
+      second: 1
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _CenterGradientMin
+      second: 0.5
+    - first:
+        name: _ColorMask
+      second: 15
+    - first:
+        name: _ColorStrength
+      second: 1.16
+    - first:
+        name: _CoreStrength
+      second: 0.82142854
+    - first:
+        name: _CutOutLightCore
+      second: 0.875
+    - first:
+        name: _Cutoff
+      second: 0.5
+    - first:
+        name: _DetailNormalMapScale
+      second: 1
+    - first:
+        name: _DstBlend
+      second: 0
+    - first:
+        name: _EmissionLM
+      second: 0
+    - first:
+        name: _Focus
+      second: -100
+    - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
+        name: _Glossiness
+      second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1
+    - first:
+        name: _GlowStrength
+      second: 324.53
+    - first:
+        name: _HoleRadius
+      second: 0.5
+    - first:
+        name: _Intensive
+      second: 0.5
+    - first:
+        name: _InvFade
+      second: 1
+    - first:
+        name: _JitterMultiplier
+      second: 0
+    - first:
+        name: _LeftBorder
+      second: 0
+    - first:
+        name: _LineWidth
+      second: 0.1
+    - first:
+        name: _MKGlowPower
+      second: 1.67
+    - first:
+        name: _Metallic
+      second: 0
+    - first:
+        name: _Mode
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 1
+    - first:
+        name: _Outline
+      second: 0.05
+    - first:
+        name: _Parallax
+      second: 0.02
+    - first:
+        name: _Param
+      second: 0.5
+    - first:
+        name: _RightBorder
+      second: 1
+    - first:
+        name: _Shininess
+      second: 0.12757282
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
+    - first:
+        name: _SrcBlend
+      second: 1
+    - first:
+        name: _Stencil
+      second: 0
+    - first:
+        name: _StencilComp
+      second: 8
+    - first:
+        name: _StencilOp
+      second: 0
+    - first:
+        name: _StencilReadMask
+      second: 255
+    - first:
+        name: _StencilWriteMask
+      second: 255
+    - first:
+        name: _TintStrength
+      second: 1.0892857
+    - first:
+        name: _Treshold
+      second: 0.2
+    - first:
+        name: _Turbulence
+      second: 0
+    - first:
+        name: _UVSec
+      second: 0
+    - first:
+        name: _UseUIAlphaClip
+      second: 0
+    - first:
+        name: _ZWrite
+      second: 1
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0.5137931, g: 0.29211983, b: 0.117114596, a: 0.885}
+    - first:
+        name: _ColorA
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _ColorB
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _CoreColor
+      second: {r: 0.5921569, g: 0.88235295, b: 0.07450981, a: 0.5}
+    - first:
+        name: _EmissionColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _GlowColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _GlowColorMult
+      second: {r: 0.1691657, g: 0.5735528, b: 0.78431374, a: 0.78431374}
+    - first:
+        name: _GlowTintColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _GridColor
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _LineColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _MKGlowColor
+      second: {r: 0.96896553, g: 0.7356301, b: 0.03562371, a: 0.722}
+    - first:
+        name: _OutlineColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _ReflectColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _SpecColor
+      second: {r: 0.5997693, g: 0.9558824, b: 0, a: 0.54509807}
+    - first:
+        name: _Specular
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _TintColor
+      second: {r: 0.75686276, g: 0.9882353, b: 0.003921569, a: 0.50980395}
+    - first:
+        name: _TurbulenceVelocity
+      second: {r: 0, g: 0, b: 0, a: 0}

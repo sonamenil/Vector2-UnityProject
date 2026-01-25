@@ -1,0 +1,309 @@
+ReplaceRegularExpression:
+  NoShuffle: 1
+  BoxContent:
+    RegularExpression1:
+      Regular: 'ST_DisplayItem'
+      Replace: 'ST_VisualData'
+    RegularExpression2:
+      Regular: ''
+      Replace: ''
+      
+CountersUpdater_CardsRefactoring:
+  Select: {Type: Items, Root: Stash}
+  Set: 1
+  NoShuffle: 1
+  BoxContent: 
+    ThisIsCardsItem:
+      Conditions:
+      - ConditionType: Or
+        Content:
+        - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'Torso']}
+        - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'Head']}
+        - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'Hands']}
+        - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'Legs']}
+        - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'Belt']}
+        - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'Stunts']}
+      StringActions: {OnEnter: [{Name: SlotKey, Value: '?getString[SelectKey]'}]}
+      CounterActions: {OnEnter: [{Name: '?getString[SelectKey]', Namespace: "uupdate_CardsItems", Type: Assign, Value: 1}]}
+      NoShuffle: 1
+      BoxContent:
+        MakeCounters:
+          Select: {Type: ItemGroups, Root: '?getString[SlotKey]'}
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            GenerateCounters:
+              Conditions:  [{ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[SlotKey],?getString[SelectKey],Existing]', '1']}]
+              CounterActions: {OnEnter: [{Name: '?getString[SelectKey]', Namespace: "?concat['uupdate_%1', ?_getString[SlotKey]]", Type: Assign, Value: 1}]}
+            Continue: {}
+        RemoveItems:
+          ItemActions: {OnExit: [{Name: '?getString[SlotKey]', Type: 'Remove'}]}
+    Continue: {}
+
+NewItems_CardsRefactoring:
+  NewTorso:
+    Target: {Type: NewItem, Destination: Stash}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: Torso, Namespace: uupdate_CardsItems, Equal: 1}]
+        GroupContent: {ST_ItemMainData: {ST_ItemName: 'Torso', ST_VisualItemName: "^Gadgets.SlotsVisualNames.Torso^"}, ST_VisualData: {ST_ItemImage: '?_getBalance[Slots,Torso,Image]', NoIterable: 1}}
+        Select: {Type: Cards}
+        Set: 1
+        NoShuffle: 1
+        BoxContent: 
+          OwnedCard:
+            Conditions: [{ConditionType: CounterRange, Name: '?getString[SelectKey]', Namespace: uupdate_Torso, Equal: 1}]
+            GroupContent: {'?getString[SelectKey]': {IsNew: 0}}
+          Continue: {}
+      DontCreate:  
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1}
+          ItemType: {Type: Trash}
+  NewHead:
+    Target: {Type: NewItem, Destination: Stash}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: Head, Namespace: uupdate_CardsItems, Equal: 1}]
+        GroupContent: {ST_ItemMainData: {ST_ItemName: 'Head', ST_VisualItemName: "^Gadgets.SlotsVisualNames.Head^"}, ST_VisualData: {ST_ItemImage: '?_getBalance[Slots,Head,Image]', NoIterable: 1}}
+        Select: {Type: Cards}
+        Set: 1
+        NoShuffle: 1
+        BoxContent: 
+          OwnedCard:
+            Conditions: [{ConditionType: CounterRange, Name: '?getString[SelectKey]', Namespace: uupdate_Head, Equal: 1}]
+            GroupContent: {'?getString[SelectKey]': {IsNew: 0}}
+          Continue: {}
+      DontCreate:  
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1}
+          ItemType: {Type: Trash}
+  NewLegs:
+    Target: {Type: NewItem, Destination: Stash}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:  
+        Conditions: [{ConditionType: CounterRange, Name: Legs, Namespace: uupdate_CardsItems, Equal: 1}]
+        GroupContent: {ST_ItemMainData: {ST_ItemName: 'Legs', ST_VisualItemName: "^Gadgets.SlotsVisualNames.Legs^"}, ST_VisualData: {ST_ItemImage: '?_getBalance[Slots,Legs,Image]', NoIterable: 1}}
+        Select: {Type: Cards}
+        Set: 1
+        NoShuffle: 1
+        BoxContent: 
+          OwnedCard:
+            Conditions: [{ConditionType: CounterRange, Name: '?getString[SelectKey]', Namespace: uupdate_Legs, Equal: 1}]
+            GroupContent: {'?getString[SelectKey]': {IsNew: 0}}
+          Continue: {}
+      DontCreate:  
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1}
+          ItemType: {Type: Trash}
+  NewHands:
+    Target: {Type: NewItem, Destination: Stash}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: Hands, Namespace: uupdate_CardsItems, Equal: 1}]
+        GroupContent: {ST_ItemMainData: {ST_ItemName: 'Hands', ST_VisualItemName: "^Gadgets.SlotsVisualNames.Hands^"}, ST_VisualData: {ST_ItemImage: '?_getBalance[Slots,Hands,Image]', NoIterable: 1}}
+        Select: {Type: Cards}
+        Set: 1
+        NoShuffle: 1
+        BoxContent: 
+          OwnedCard:
+            Conditions: [{ConditionType: CounterRange, Name: '?getString[SelectKey]', Namespace: uupdate_Hands, Equal: 1}]
+            GroupContent: {'?getString[SelectKey]': {IsNew: 0}}
+          Continue: {}
+      DontCreate:  
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1}
+          ItemType: {Type: Trash}
+  NewBelt:
+    Target: {Type: NewItem, Destination: Stash}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: Belt, Namespace: uupdate_CardsItems, Equal: 1}]
+        GroupContent: {ST_ItemMainData: {ST_ItemName: 'Belt', ST_VisualItemName: "^Gadgets.SlotsVisualNames.Belt^"}, ST_VisualData: {ST_ItemImage: '?_getBalance[Slots,Belt,Image]', NoIterable: 1}}
+        Select: {Type: Cards}
+        Set: 1
+        NoShuffle: 1
+        BoxContent: 
+          OwnedCard:
+            Conditions: [{ConditionType: CounterRange, Name: '?getString[SelectKey]', Namespace: uupdate_Belt, Equal: 1}]
+            GroupContent: {'?getString[SelectKey]': {IsNew: 0}}
+          Continue: {}
+      DontCreate:  
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1}
+          ItemType: {Type: Trash}
+  NewStunts:
+    Target: {Type: NewItem, Destination: Stash}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: Stunts, Namespace: uupdate_CardsItems, Equal: 1}]
+        GroupContent: {ST_ItemMainData: {ST_ItemName: 'Stunts', ST_VisualItemName: "^Gadgets.SlotsVisualNames.Stunts^"}, ST_VisualData: {ST_ItemImage: '?_getBalance[Slots,Stunts,Image]', NoIterable: 1}}
+        Select: {Type: Cards}
+        Set: 1
+        NoShuffle: 1
+        BoxContent: 
+          OwnedCard:
+            Conditions: [{ConditionType: CounterRange, Name: '?getString[SelectKey]', Namespace: uupdate_Stunts, Equal: 1}]
+            GroupContent: {'?getString[SelectKey]': {IsNew: 0}}
+          Continue: {}
+      DontCreate:  
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1} 
+          ItemType: {Type: Trash}
+
+ItemsUpdater_CardsRefactoring:
+  NoShuffle: 1
+  BoxContent:
+    Update:
+      Conditions: [{ConditionType: GroupExists, Item: "?getString[Upd_ItemName]", Group: "ST_DefaultItemImage"}]
+      GroupContent: {ST_VisualData: {ST_ItemImage: '?getItemAttribute[?getString[Upd_ItemName],ST_DefaultItemImage,ST_ItemImage]'}}
+    StarterPackBuff:
+      Conditions: [{ConditionType: GroupExists, Item: "?getString[Upd_ItemName]", Group: "StarterPackBuff"}]
+      GroupContent: {StarterPackBuff: {NoIterable: 1}}
+    NoUpdate: {}
+
+CountersUpdater_CardsRefactoringClear:
+  CounterActions:
+    OnEnter:
+    - {Namespace: uupdate_CardsItems, Type: Clear}
+    - {Namespace: uupdate_Torso, Type: Clear}
+    - {Namespace: uupdate_Head, Type: Clear}
+    - {Namespace: uupdate_Legs, Type: Clear}
+    - {Namespace: uupdate_Hands, Type: Clear}
+    - {Namespace: uupdate_Belt, Type: Clear}
+    - {Namespace: uupdate_Stunts, Type: Clear}
+
+NewItems_BlockedStarterPacks:
+  StandardProtocol:
+    Target: NewStashItem
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: -1, Not: 1}]
+        GroupContent:
+          ItemType:  {Type: StarterPack}
+          ST_Item_1: {Preset: "?_getBalance[StarterPacks,StandardProtocol,ItemPreset1]"}
+          ST_Item_2: {Preset: "?_getBalance[StarterPacks,StandardProtocol,ItemPreset2]"}
+          Charges:
+            MaxCharges: "?getBalance[StarterPacks, StandardProtocol, MaxCharges]"
+            CurrentCharges: "?getGroupAttribute[Charges,MaxCharges]"
+            RechargeTime: "?_getBalance[StarterPacks, StandardProtocol, RechargeTime]"
+            ChargePrice: "?_getBalance[StarterPacks, StandardProtocol, ChargePrice]"
+          StartFloor:
+            FloorNumber: "?_getBalance[StarterPacks, StandardProtocol, FloorNumber]"
+            FloorIcon: "?_getBalance[StarterPacks, FloorIcon]"
+          Description: {Text: "^StarterPacks. StandardProtocol. Description^"}
+          ST_VisualData: {ST_Coolness: "?_getBalance[StarterPacks, StandardProtocol, Coolness]", ST_Equipment: 1, ST_Shop: 0, ST_ItemImage: "?_getBalance[StarterPacks, StandardProtocol, DefaultItemImage]"}
+          ST_ItemMainData: {ST_ItemName: "StandardProtocol", ST_VisualItemName: "^StarterPacks. StandardProtocol. PackName^", ST_ItemType: ''}  
+          BlockedStarterPack: {Text: "^Quests.Quest2.BlockedStarterPack^"}
+      DontCreate:
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1} 
+          ItemType: {Type: Trash}
+  AdvancedProtocol:
+    Target: NewStashItem
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: ThirdProtocol, Namespace: ST_Quests, Equal: 1}]
+        GroupContent:
+          ItemType:  {Type: StarterPack}
+          ST_Item_1: {Preset: "?_getBalance[StarterPacks,AdvancedProtocol,ItemPreset1]"}
+          ST_Item_2: {Preset: "?_getBalance[StarterPacks,AdvancedProtocol,ItemPreset2]"}
+          ST_Item_3: {Preset: "?_getBalance[StarterPacks,AdvancedProtocol,ItemPreset3]"}
+          ST_Item_4: {Preset: "?_getBalance[StarterPacks,AdvancedProtocol,ItemPreset4]"}
+          Charges:
+            MaxCharges: "?getBalance[StarterPacks, AdvancedProtocol, MaxCharges]"
+            CurrentCharges: "?getGroupAttribute[Charges,MaxCharges]"
+            RechargeTime: "?_getBalance[StarterPacks, AdvancedProtocol, RechargeTime]"
+            ChargePrice: "?_getBalance[StarterPacks, AdvancedProtocol, ChargePrice]"
+          StartFloor:
+            FloorNumber: "?_getBalance[StarterPacks, AdvancedProtocol, FloorNumber]"
+            FloorIcon: "?_getBalance[StarterPacks, FloorIcon]"
+          Description: {Text: "^StarterPacks. AdvancedProtocol. Description^"}
+          ST_VisualData: {ST_Coolness: "?_getBalance[StarterPacks, AdvancedProtocol, Coolness]", ST_Equipment: 1, ST_Shop: 0, ST_ItemImage: "?_getBalance[StarterPacks, AdvancedProtocol, DefaultItemImage]"} 
+          ST_ItemMainData: {ST_ItemName: "AdvancedProtocol", ST_VisualItemName: "^StarterPacks. AdvancedProtocol. PackName^", ST_ItemType: ''}
+          BlockedStarterPack: {Text: "^Quests.Quest6.BlockedStarterPack^"}
+      DontCreate:
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1} 
+          ItemType: {Type: Trash}
+  ExperimentalProtocol:
+    Target: NewStashItem
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      Create:
+        Conditions: [{ConditionType: CounterRange, Name: FourthProtocol, Namespace: ST_Quests, Equal: 1}]
+        GroupContent:
+          ItemType: {Type: StarterPack}
+          ST_Item_1: {Preset: "?_getBalance[StarterPacks,ExperimentalProtocol,ItemPreset1]"}
+          ST_Item_2: {Preset: "?_getBalance[StarterPacks,ExperimentalProtocol,ItemPreset2]"}
+          ST_Item_3: {Preset: "?_getBalance[StarterPacks,ExperimentalProtocol,ItemPreset3]"}
+          ST_Item_4: {Preset: "?_getBalance[StarterPacks,ExperimentalProtocol,ItemPreset4]"}
+          ST_Item_5: {Preset: "?_getBalance[StarterPacks,ExperimentalProtocol,ItemPreset5]"}
+          Charges:
+            MaxCharges: "?getBalance[StarterPacks, ExperimentalProtocol, MaxCharges]"
+            CurrentCharges: "?getGroupAttribute[Charges,MaxCharges]"
+            RechargeTime: "?_getBalance[StarterPacks, ExperimentalProtocol, RechargeTime]"
+            ChargePrice: "?_getBalance[StarterPacks, ExperimentalProtocol, ChargePrice]"
+          StartFloor:
+            FloorNumber: "?_getBalance[StarterPacks, ExperimentalProtocol, FloorNumber]"
+            FloorIcon: "?_getBalance[StarterPacks, FloorIcon]"
+          Description: {Text: "^StarterPacks. ExperimentalProtocol. Description^"}
+          ST_VisualData: {ST_Coolness: "?_getBalance[StarterPacks, ExperimentalProtocol, Coolness]", ST_Equipment: 1, ST_Shop: 0, ST_ItemImage: "?_getBalance[StarterPacks, ExperimentalProtocol, DefaultItemImage]"} 
+          ST_ItemMainData: {ST_ItemName: "ExperimentalProtocol", ST_VisualItemName: "^StarterPacks. ExperimentalProtocol. PackName^", ST_ItemType: ''}
+          BlockedStarterPack: {Text: "^Quests.Quest7.BlockedStarterPack^"}
+      DontCreate:
+        GroupContent:
+          ST_Expiration: {ST_ExpirationType: Frames, ST_ExpirationTime: 1} 
+          ItemType: {Type: Trash}
+
+NewItems_ZeroCoupons:
+  StandardProtocol:
+    Target: NewStashItem
+    GroupContent:
+      CardsBoost: {Quantity: 0}
+      GenerateGadget: {Quantity: 0}
+      Saveme: {Quantity: 0}
+      StarterPackRecharge: {Quantity: 0}
+      Universal: {Quantity: 0}
+      ST_ItemMainData: {ST_ItemName: "Coupons", ST_VisualItemName: Coupons}
+
+NewItems_BoosterPack:
+  GiveBoosterPack:
+    Target: NewEquipItem
+    Conditions:
+      - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1}
+    CounterActions:
+      OnEnter:
+      - {Name: ST_NotifyNewBoosterPackOnUpdate, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}
+    BoxContent:
+      CreateItem:
+        GroupContent:
+          BaseBoosterpack: {Quantity: "1"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+
+
+
+CountersUpdater_SavemeAndBoosterpacksAndCardBoostBlock:
+  Conditions: [{ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1, Not: 1}]
+  CounterActions:
+    OnEnter:
+    - {Name: ST_SavemeBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}
+    - {Name: ST_BoosterpacksBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}
+    - {Name: ST_CardBoostBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}
+    

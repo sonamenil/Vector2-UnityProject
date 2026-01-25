@@ -1,0 +1,82 @@
+CountersUpdater_LikeOurGameWindow:
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    AlreadyRated: {Conditions: [{ConditionType: CounterRange, Name: ST_ShowSetStarDialog, Namespace: ST_ProgressMarkers, Max: "<ST_Statistics.ST_run_counter>"}]}
+    Otherwise: {CounterActions: {OnEnter: [{Name: ST_ShowDoYouLikeGameDialog, Namespace: ST_ProgressMarkers, Type: Assign, Value: "<ST_ProgressMarkers.ST_ShowSetStarDialog>"}]}}
+
+NewItems_BoosterPackKeysIntro:
+  GiveBoosterPack:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions:
+      - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      AppendValue:
+        Conditions:
+        - {ConditionType: GroupExists, Item: "Boosterpacks", Group: "BaseBoosterpack"}
+        GroupContent:
+          BaseBoosterpack: {Quantity: "{?getItemAttribute[Boosterpacks, BaseBoosterpack, Quantity] + 1}"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+      CreateItem:
+        GroupContent:
+          BaseBoosterpack: {Quantity: "1"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+
+NewItems_BoosterPackTheContact:
+  GiveBoosterPack:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions:
+      - {ConditionType: CounterRange, Name: TheContact, Namespace: ST_Quests, Equal: -1}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      AppendValue:
+        Conditions:
+        - {ConditionType: GroupExists, Item: "Boosterpacks", Group: "BaseBoosterpack"}
+        GroupContent:
+          BaseBoosterpack: {Quantity: "{?getItemAttribute[Boosterpacks, BaseBoosterpack, Quantity] + 1}"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+      CreateItem:
+        GroupContent:
+          BaseBoosterpack: {Quantity: "1"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+
+NewItems_BoosterPackSecureConnection:
+  GiveBoosterPack:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions:
+      - {ConditionType: CounterRange, Name: SecureConnection, Namespace: ST_Quests, Equal: -1}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      AppendValue:
+        Conditions:
+        - {ConditionType: GroupExists, Item: "Boosterpacks", Group: "BaseBoosterpack"}
+        GroupContent:
+          BaseBoosterpack: {Quantity: "{?getItemAttribute[Boosterpacks, BaseBoosterpack, Quantity] + 1}"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+      CreateItem:
+        GroupContent:
+          BaseBoosterpack: {Quantity: "1"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+
+NewItems_BoosterPackServiceEntrance:
+  GiveBoosterPack:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions:
+      - {ConditionType: CounterRange, Name: ServiceEntrance, Namespace: ST_Quests, Equal: -1}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      AppendValue:
+        Conditions:
+        - {ConditionType: GroupExists, Item: "Boosterpacks", Group: "BaseBoosterpack"}
+        GroupContent:
+          BaseBoosterpack: {Quantity: "{?getItemAttribute[Boosterpacks, BaseBoosterpack, Quantity] + 1}"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+      CreateItem:
+        GroupContent:
+          BaseBoosterpack: {Quantity: "1"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}

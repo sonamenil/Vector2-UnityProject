@@ -1,0 +1,90 @@
+MissionsChecker:
+  ItemsCount: 4
+  CounterActions: {OnEnter: [{Name: Number, Namespace: MissionGen, Type: IncrementBy, Value: 1}]}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    ClearCounters:
+      Conditions: [{ConditionType: CounterRange, Namespace: 'MissionGen', Name: 'Number', Equal: 4}]
+      CounterActions:
+       OnEnter:  
+       - {Namespace: MissionGen, Type: Clear}
+       - {Namespace: MissionProgress, Type: Clear}
+      BoxContent:
+        JustBox:
+          CancelGeneration: 1
+    CheckMissions:   
+      StringActions:
+        OnEnter: 
+        - {Name: MNumber, Value: "?concat['Mission_%1', <MissionGen.Number>]"}
+        - {Name: MNameWProtocol, Value: "?concat['Mission_%1_%2', <MissionGen.Number>, ?_getString[ProtocolName]]"}
+        - {Name: MName, Value: "?getItemAttribute[?getString[MNameWProtocol],MissionData,MissionName]"}
+        - {Name: Difficulty, Value: "?getItemAttribute[?getString[MNameWProtocol],MissionData,Difficulty]"}
+      BoxContent:
+        MissionCompleted:
+          #Log: "?concat['Objective:%1_Progress:%2_completed?=%3', ?_getBalance[Missions,MissionList,?getString[MName],Default,CurrentObjective], ?_getBalance[Missions,MissionList,?getString[MName],Default,ObjectiveProgress], ?_lessEqual[?getBalance[Missions,MissionList,?getString[MName],Default,CurrentObjective], ?getBalance[Missions,MissionList,?getString[MName],Default,ObjectiveProgress]]]"
+          Conditions:
+          - ConditionType: Or
+            Content:
+            - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[MNameWProtocol],MissionData,Completed]', 1]}
+            - {ConditionType: ValuesEqual, Values: ['?getCounter[Debug,?getString[MNumber]]', 1]}
+            - {ConditionType: CounterRange, Namespace: Debug, Name: Missions, Equal: 1}
+          #CounterActions for test!
+          #CounterActions: {OnEnter: [{Name: "?getString[MName]", Namespace: "?getString[MNameWProtocol]", Type: Assign, Value: 1}]} 
+          CounterActions: [{Name: '?getString[MName]', Namespace: 'ST_CompletedMissions', Type: Assign, Value: <MissionGen.Number>}]
+            
+CounterRestore:
+  NoShuffle: 1
+  BoxContent:
+    Clear:
+      CounterActions:
+        OnEnter:
+        - {Namespace: MissionObjectives, Type: Clear}
+    Restore:
+      ItemsCount: 3
+      CounterActions: 
+        OnEnter: 
+        - {Name: MNumber, Namespace: Temp, Type: IncrementBy, Value: 1}
+      StringActions:
+        OnEnter: 
+        - {Name: MNameWProtocol, Value: "?concat['Mission_%1_%2', <Temp.MNumber>, ?_getString[ProtocolName]]"}
+        - {Name: MName, Value: "?getItemAttribute[?getString[MNameWProtocol],MissionData,MissionName]"}
+      NoShuffle: 1  
+      BoxContent:
+        Restore:
+          #Log: "?getString[MNameWProtocol]"
+          CounterActions: {OnEnter: [{Name: '?getBalance[Missions,MissionList,?getString[MName],<Temp.MNumber>,CounterName,$3]', Namespace: MissionObjectives, Type: Assign, Value: '?getItemAttribute[?getString[MNameWProtocol],MissionData,Obj]'}]}
+
+MissionCardsRefresher:
+  ItemsCount: 3
+  Target: {Type: NewItem, Destination: Stash}
+  CounterActions: 
+    OnEnter: 
+    - {Name: RefresherIterNumber, Namespace: MissionGen, Type: IncrementBy, Value: 1}
+    - {Name: Flag, Namespace: MissionGen, Type: Assign, Value: 0}
+  StringActions: {OnEnter: [{Name: MNameWProtocol, Value: "?concat['Mission_%1_%2', <MissionGen.RefresherIterNumber>, ?_getString[ProtocolName]]"}]}
+  NoShuffle: 1
+  BoxContent:
+    ResetCounter:
+      Conditions: [{ConditionType: CounterRange, Name: RefresherIterNumber, Namespace: MissionGen, Equal: 3}]
+      CounterActions: {OnEnter: [{Name: RefresherIterNumber, Namespace: MissionGen, Type: Assign, Value: 0}]}
+    GoByCards:
+      Select: {Type: ItemGroups, Root: '?getString[MNameWProtocol]'}
+      StringActions: {OnEnter: [{Name: CardName, Value: '?getItemAttribute[?getString[MNameWProtocol],?getString[SelectKey],CardName]'}]}
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        ShowedAsOwned:
+          Conditions: 
+          - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', ''], Not: 1}
+          - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[MNameWProtocol],?getString[SelectKey],ShowAsOwned]', 1]}
+        Else:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', ''], Not: 1}]
+          CounterActions: {OnEnter: [{Name: Flag, Namespace: MissionGen, Type: Assign, Value: 1}]}
+          GroupContent:
+            ST_ItemMainData: {ST_ItemName: "?getString[MNameWProtocol]", ST_VisualItemName: "", ST_ItemType: ''}
+            '?getString[SelectKey]': {ShowAsOwned: '?greaterEqual[<AvailableCards.?getString[SelectKey]>, ?getCardInfo[?getString[CardName],Stats,Rarity]]'}
+    Cancel:
+      Conditions: [{ConditionType: CounterRange, Name: Flag, Namespace: MissionGen, Equal: 0}]
+      CancelGeneration: 1
+  

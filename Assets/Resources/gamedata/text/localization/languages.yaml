@@ -1,0 +1,11 @@
+# Список языков (язык который указан первым в списке ставится по умолчанию, если нет локализации родного языка системы)
+Languages:
+- {Name: English, VisualName: English, File: lan_en_us, ContentFont: EurostileLTStd, TitleFont: EurostileLTStd-BoldEx2, ButtonFont: EurostileLTStd-Bold}
+- {Name: Russian, VisualName: Russian, File: lan_ru_ru, ContentFont: EuropeNormal, TitleFont: EuropeBold, ButtonFont: EuropeBold}
+- {Name: German, VisualName: German, File: lan_de_de, ContentFont: EurostileLTStd, TitleFont: EurostileLTStd-BoldEx2, ButtonFont: EurostileLTStd-Bold}
+- {Name: Spanish, VisualName: Spanish, File: lan_es_es, ContentFont: EurostileLTStd, TitleFont: EurostileLTStd-BoldEx2, ButtonFont: EurostileLTStd-Bold}
+- {Name: Portuguese, VisualName: Portuguese, File: lan_pt_pt, ContentFont: EurostileLTStd, TitleFont: EurostileLTStd-BoldEx2, ButtonFont: EurostileLTStd-Bold}
+- {Name: Italian, VisualName: Italian, File: lan_it_it, ContentFont: EurostileLTStd, TitleFont: EurostileLTStd-BoldEx2, ButtonFont: EurostileLTStd-Bold}
+- {Name: French, VisualName: French, File: lan_fr_fr, ContentFont: EurostileLTStd, TitleFont: EurostileLTStd-BoldEx2, ButtonFont: EurostileLTStd-Bold}
+- {Name: Japanese, VisualName: Japanese, File: lan_ja_ja, ContentFont: EurostileLTStd, TitleFont: EurostileLTStd-BoldEx2, ButtonFont: EurostileLTStd-Bold}
+- {Name: Korean, VisualName: Korean, File: lan_ko_ko, ContentFont: EurostileLTStd, TitleFont: EurostileLTStd-BoldEx2, ButtonFont: EurostileLTStd-Bold}

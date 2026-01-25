@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: c7e5028481540eb42a9b2f5a9e7b58dd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6597895068903248535
+    second: zone2.scratch1_0
+  - first:
+      213: -1154383453032703687
+    second: zone2.scratch1_1
+  - first:
+      213: 2963851069890592627
+    second: zone2.scratch1_2
+  - first:
+      213: 207823805550885938
+    second: zone2.scratch1_3
+  - first:
+      213: -5004156976451932614
+    second: zone2.scratch1_4
+  - first:
+      213: -4640150973464562582
+    second: zone2.scratch1_5
+  - first:
+      213: 8779655733839033688
+    second: zone2.scratch1_6
+  - first:
+      213: 6763743921571037641
+    second: zone2.scratch1_7
+  - first:
+      213: -7184412483339129164
+    second: zone2.scratch1_8
+  - first:
+      213: 8986937728608362550
+    second: zone2.scratch1_9
+  - first:
+      213: -185486142554768086
+    second: zone2.scratch1_10
+  - first:
+      213: 1869320836460412042
+    second: zone2.scratch1_11
+  - first:
+      213: -7526373794921710844
+    second: zone2.scratch1_12
+  - first:
+      213: -8744307115732233540
+    second: zone2.scratch1_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zone2.scratch1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 21
+        width: 94
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7929747ab9e609b50800000000000000
+      internalID: 6597895068903248535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 77
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939956b9d5ecaffe0800000000000000
+      internalID: -1154383453032703687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_2
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 72
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f7dfb48d6b12920800000000000000
+      internalID: 2963851069890592627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 63
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23cfab966a652e200800000000000000
+      internalID: 207823805550885938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 37
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e2a4a3eb9ad8ab0800000000000000
+      internalID: -5004156976451932614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 43
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a643672364fda9fb0800000000000000
+      internalID: -4640150973464562582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 42
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85572b19f5a97d970800000000000000
+      internalID: 8779655733839033688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 22
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c103f4c245addd50800000000000000
+      internalID: 6763743921571037641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 45
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be60ba39e6db4c90800000000000000
+      internalID: -7184412483339129164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 27
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630e144df3408bc70800000000000000
+      internalID: 8986937728608362550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_10
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 6
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2df34a06550d6df0800000000000000
+      internalID: -185486142554768086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c757c856921f910800000000000000
+      internalID: 1869320836460412042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_12
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 19
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40bf1e2f8e2fc8790800000000000000
+      internalID: -7526373794921710844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.scratch1_13
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb21cdfe10bf5a680800000000000000
+      internalID: -8744307115732233540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      zone2.scratch1_0: 6597895068903248535
+      zone2.scratch1_1: -1154383453032703687
+      zone2.scratch1_10: -185486142554768086
+      zone2.scratch1_11: 1869320836460412042
+      zone2.scratch1_12: -7526373794921710844
+      zone2.scratch1_13: -8744307115732233540
+      zone2.scratch1_2: 2963851069890592627
+      zone2.scratch1_3: 207823805550885938
+      zone2.scratch1_4: -5004156976451932614
+      zone2.scratch1_5: -4640150973464562582
+      zone2.scratch1_6: 8779655733839033688
+      zone2.scratch1_7: 6763743921571037641
+      zone2.scratch1_8: -7184412483339129164
+      zone2.scratch1_9: 8986937728608362550
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,11 @@
+UserVersion: 10
+CountersUpdater_NO_QUEST_PROGRESS_DIALOG:
+  NoShuffle: 1
+  BoxContent:
+    SetShowNoQuestProgressDialogCounter:
+      Conditions: 
+      - {ConditionType: CounterRange, Name: ThirdProtocol, Namespace: ST_Quests, Equal: 1, Not: 1}
+      - {ConditionType: CounterRange, Name: Bruteforce, Namespace: ST_Quests, Equal:  1, Not: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: ST_ShowNoQuestProgressDialog, Namespace: ST_ProgressMarkers, Type: Assign, Value: -1}

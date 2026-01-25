@@ -1,0 +1,409 @@
+AlphaProtocolHead:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,AlphaProtocol,Head,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,AlphaProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,AlphaProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeHead>,Image,Head]', EffectIcon: 'cards.effect_antiball', Description: ^Labels.Details.HeadDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Head}
+    ST_ItemMainData: {ST_ItemName: GadgetHead, ST_VisualItemName: "^StarterPacks.AlphaProtocol.Head.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeHead>,Model,Head]'}
+    Antiball: {}
+
+AlphaProtocolTorso:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,AlphaProtocol,Torso,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,AlphaProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,AlphaProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeTorso>,Image,Torso]', EffectIcon: 'cards.effect_antilaser', Description: ^Labels.Details.TorsoDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Torso}
+    ST_ItemMainData: {ST_ItemName: GadgetTorso, ST_VisualItemName: "^StarterPacks.AlphaProtocol.Torso.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeTorso>,Model,Torso]'}
+    Antilaser: {}
+
+AlphaProtocolHands:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,AlphaProtocol,Hands,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,AlphaProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,AlphaProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeHands_z2>,Image,Hands]', EffectIcon: 'cards.effect_lockpick', Description: ^Labels.Details.HandsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Hands}
+    ST_ItemMainData: {ST_ItemName: GadgetHands, ST_VisualItemName: "^StarterPacks.AlphaProtocol.Hands.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Lockpick: {Level: 1}
+
+AlphaProtocolBelt:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,AlphaProtocol,Belt,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,AlphaProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,AlphaProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeBelt>,Image,Belt]', EffectIcon: 'cards.effect_antitesla', Description: ^Labels.Details.BeltDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Belt}
+    ST_ItemMainData: {ST_ItemName: GadgetBelt, ST_VisualItemName: "^StarterPacks.AlphaProtocol.Belt.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antitesla: {}
+
+AlphaProtocolLegs:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,AlphaProtocol,Legs,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,AlphaProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,AlphaProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.AlphaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeLegs>,Image,Legs]', EffectIcon: 'cards.effect_antimine', Description: ^Labels.Details.LegsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Legs}
+    ST_ItemMainData: {ST_ItemName: GadgetLegs, ST_VisualItemName: "^StarterPacks.AlphaProtocol.Legs.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antimine: {}
+
+BetaProtocolHead:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,BetaProtocol,Head,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,BetaProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,BetaProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeHead>,Image,Head]', EffectIcon: 'cards.effect_antiball', Description: ^Labels.Details.HeadDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Head}
+    ST_ItemMainData: {ST_ItemName: GadgetHead, ST_VisualItemName: "^StarterPacks.BetaProtocol.Head.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeHead>,Model,Head]'}
+    Antiball: {}
+
+BetaProtocolTorso:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,BetaProtocol,Torso,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,BetaProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,BetaProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeTorso_z2>,Image,Torso]', EffectIcon: 'cards.effect_antiswarm', Description: ^Labels.Details_z2.TorsoDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Torso}
+    ST_ItemMainData: {ST_ItemName: GadgetTorso, ST_VisualItemName: "^StarterPacks.BetaProtocol.Torso.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeTorso_z2>,Model,Torso]'}
+    Antiswarm: {}
+
+BetaProtocolHands:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,BetaProtocol,Hands,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,BetaProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,BetaProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeHands_z2>,Image,Hands]', EffectIcon: 'cards.effect_lockpick', Description: ^Labels.Details.HandsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Hands}
+    ST_ItemMainData: {ST_ItemName: GadgetHands, ST_VisualItemName: "^StarterPacks.BetaProtocol.Hands.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Lockpick: {Level: 1}
+
+BetaProtocolBelt:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,BetaProtocol,Belt,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,BetaProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,BetaProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeBelt>,Image,Belt]', EffectIcon: 'cards.effect_antitesla', Description: ^Labels.Details.BeltDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Belt}
+    ST_ItemMainData: {ST_ItemName: GadgetBelt, ST_VisualItemName: "^StarterPacks.BetaProtocol.Belt.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antitesla: {}
+
+BetaProtocolLegs:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,BetaProtocol,Legs,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,BetaProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,BetaProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.BetaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeLegs>,Image,Legs]', EffectIcon: 'cards.effect_antimine', Description: ^Labels.Details.LegsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Legs}
+    ST_ItemMainData: {ST_ItemName: GadgetLegs, ST_VisualItemName: "^StarterPacks.BetaProtocol.Legs.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antimine: {}
+
+GammaProtocolHead:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,GammaProtocol,Head,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,GammaProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,GammaProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeHead>,Image,Head]', EffectIcon: 'cards.effect_antiball', Description: ^Labels.Details.HeadDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Head}
+    ST_ItemMainData: {ST_ItemName: GadgetHead, ST_VisualItemName: "^StarterPacks.GammaProtocol.Head.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeHead>,Model,Head]'}
+    Antiball: {}
+
+GammaProtocolTorso:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,GammaProtocol,Torso,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,GammaProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,GammaProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeTorso_z2>,Image,Torso]', EffectIcon: 'cards.effect_antiswarm', Description: ^Labels.Details_z2.TorsoDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Torso}
+    ST_ItemMainData: {ST_ItemName: GadgetTorso, ST_VisualItemName: "^StarterPacks.GammaProtocol.Torso.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeTorso_z2>,Model,Torso]'}
+    Antiswarm: {}
+
+GammaProtocolHands:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,GammaProtocol,Hands,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,GammaProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,GammaProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeHands_z2>,Image,Hands]', EffectIcon: 'cards.effect_lockpick', Description: ^Labels.Details.HandsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Hands}
+    ST_ItemMainData: {ST_ItemName: GadgetHands, ST_VisualItemName: "^StarterPacks.GammaProtocol.Hands.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Lockpick: {Level: 1}
+
+GammaProtocolBelt:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,GammaProtocol,Belt,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,GammaProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,GammaProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeBelt>,Image,Belt]', EffectIcon: 'cards.effect_antitesla', Description: ^Labels.Details.BeltDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Belt}
+    ST_ItemMainData: {ST_ItemName: GadgetBelt, ST_VisualItemName: "^StarterPacks.GammaProtocol.Belt.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antitesla: {}
+
+GammaProtocolLegs:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,GammaProtocol,Legs,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,GammaProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,GammaProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.GammaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeLegs_z2>,Image,Legs]', EffectIcon: 'cards.effect_antiflame', Description: ^Labels.Details_z2.LegsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Legs}
+    ST_ItemMainData: {ST_ItemName: GadgetLegs, ST_VisualItemName: "^StarterPacks.GammaProtocol.Legs.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antiflame: {}
+
+OmegaProtocolHead:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,OmegaProtocol,Head,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,OmegaProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,OmegaProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeHead>,Image,Head]', EffectIcon: 'cards.effect_antiball', Description: ^Labels.Details.HeadDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Head}
+    ST_ItemMainData: {ST_ItemName: GadgetHead, ST_VisualItemName: "^StarterPacks.OmegaProtocol.Head.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone1,<StarRewards.UpgradeHead>,Model,Head]'}
+    Antiball: {}
+
+OmegaProtocolTorso:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,OmegaProtocol,Torso,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,OmegaProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,OmegaProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeTorso_z2>,Image,Torso]', EffectIcon: 'cards.effect_antiswarm', Description: ^Labels.Details_z2.TorsoDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Torso}
+    ST_ItemMainData: {ST_ItemName: GadgetTorso, ST_VisualItemName: "^StarterPacks.OmegaProtocol.Torso.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeTorso_z2>,Model,Torso]'}
+    Antiswarm: {}
+
+OmegaProtocolHands:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,OmegaProtocol,Hands,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,OmegaProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,OmegaProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeHands_z2>,Image,Hands]', EffectIcon: 'cards.effect_lockpick', Description: ^Labels.Details.HandsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Hands}
+    ST_ItemMainData: {ST_ItemName: GadgetHands, ST_VisualItemName: "^StarterPacks.OmegaProtocol.Hands.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Lockpick: {Level: 1}
+
+OmegaProtocolBelt:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,OmegaProtocol,Belt,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,OmegaProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,OmegaProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeBelt_z2>,Image,Belt]', EffectIcon: 'cards.effect_antisound', Description: ^Labels.Details_z2.BeltDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Belt}
+    ST_ItemMainData: {ST_ItemName: GadgetBelt, ST_VisualItemName: "^StarterPacks.OmegaProtocol.Belt.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antiecho: {}
+
+OmegaProtocolLegs:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,OmegaProtocol,Legs,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,OmegaProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,OmegaProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.OmegaProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeLegs_z2>,Image,Legs]', EffectIcon: 'cards.effect_antiflame', Description: ^Labels.Details_z2.LegsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Legs}
+    ST_ItemMainData: {ST_ItemName: GadgetLegs, ST_VisualItemName: "^StarterPacks.OmegaProtocol.Legs.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antiflame: {}
+
+LastProtocolHead:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,LastProtocol,Head,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,LastProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,LastProtocol,Head,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeHead_z2>,Image,Head]', EffectIcon: 'cards.effect_antitriple', Description: ^Labels.Details_z2.HeadDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Head}
+    ST_ItemMainData: {ST_ItemName: GadgetHead, ST_VisualItemName: "^StarterPacks.LastProtocol.Head.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeHead_z2>,Model,Head]'}
+    Antitriple: {}
+
+LastProtocolTorso:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,LastProtocol,Torso,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,LastProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,LastProtocol,Torso,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeTorso_z2>,Image,Torso]', EffectIcon: 'cards.effect_antiswarm', Description: ^Labels.Details_z2.TorsoDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Torso}
+    ST_ItemMainData: {ST_ItemName: GadgetTorso, ST_VisualItemName: "^StarterPacks.LastProtocol.Torso.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    ST_Model: {ST_File: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeTorso_z2>,Model,Torso]'}
+    Antiswarm: {}
+
+LastProtocolHands:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,LastProtocol,Hands,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,LastProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,LastProtocol,Hands,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeHands_z2>,Image,Hands]', EffectIcon: 'cards.effect_lockpick', Description: ^Labels.Details.HandsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Hands}
+    ST_ItemMainData: {ST_ItemName: GadgetHands, ST_VisualItemName: "^StarterPacks.LastProtocol.Hands.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Lockpick: {Level: 1}
+
+LastProtocolBelt:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,LastProtocol,Belt,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,LastProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,LastProtocol,Belt,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeBelt_z2>,Image,Belt]', EffectIcon: 'cards.effect_antisound', Description: ^Labels.Details_z2.BeltDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Belt}
+    ST_ItemMainData: {ST_ItemName: GadgetBelt, ST_VisualItemName: "^StarterPacks.LastProtocol.Belt.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antiecho: {}
+
+LastProtocolLegs:
+  Target: NewItem
+  GroupContent:
+    ST_GadgetBase:
+      MaxSockets: '?getBalance[StarterPacks,LastProtocol,Legs,MaxSockets]'
+      ChargePerAction: 1
+      ST_ChargesTotal: "{?getBalance[StarterPacks,LastProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesCurrent: "{?getBalance[StarterPacks,LastProtocol,Legs,Charges] + <StarterPacksWithAdditionalCharges.LastProtocol>}"
+      ST_ChargesBonus: 0
+    ST_VisualData: {ST_Equipment: 1, ST_Shop: 1, ST_ItemImage: '?getBalance[Gadgets,Zone2,<StarRewards.UpgradeLegs_z2>,Image,Legs]', EffectIcon: 'cards.effect_antiflame', Description: ^Labels.Details_z2.LegsDescription^}
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    ST_MyGadgets: {ST_Slot: Legs}
+    ST_ItemMainData: {ST_ItemName: GadgetLegs, ST_VisualItemName: "^StarterPacks.LastProtocol.Legs.VisualName^", ST_ItemType: ''}
+    ST_ShopItems: {ST_Price: 1, ST_PriceType: Points}
+    Antiflame: {}

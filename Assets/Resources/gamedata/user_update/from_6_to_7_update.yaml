@@ -1,0 +1,20 @@
+UserVersion: 7
+ReplaceRegularExpression:
+  NoShuffle: 1
+  BoxContent:
+    RegularExpression1:
+      Regular: '<Group Name="Description" Text="\^StarterPacks\.AdvancedProtocol\.Description\^" />'
+      Replace: ''
+    RegularExpression2:
+      Regular: '<Group Name="Description" Text="\^StarterPacks\.StandardProtocol\.Description\^" />'
+      Replace: ''
+    RegularExpression3:
+      Regular: '<Group Name="Description" Text="\^StarterPacks\.BasicProtocol\.Description\^" />'
+      Replace: ''
+    RegularExpression4:
+      Regular: '<Group Name="Description" Text="\^StarterPacks\.ExperimentalProtocol\.Description\^" />'
+      Replace: ''
+CountersUpdater_remove_trash:
+  ItemActions:
+    OnEnter:
+      - {Name: "GiveBoosterPack_", Type: "Remove", IsPartOfName: 1}

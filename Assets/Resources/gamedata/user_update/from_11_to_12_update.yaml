@@ -1,0 +1,29 @@
+UserVersion: 12
+CountersUpdater_RerollTutorTurnOn:
+  NoShuffle: 1
+  BoxContent:
+    BeforeKeysEnd:
+      Conditions: 
+      - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1, Not: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: ST_ForcedOpenBoosterpacks, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}
+        - {Name: RerollShopBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}
+        - {Name: ST_RerollTutorial, Namespace: ST_Tutorial, Type: Assign, Value: -1}
+CountersUpdater_TutorEndCounterInit:
+  Conditions: 
+  - {ConditionType: CounterRange, Name: TutorialInProgress, Namespace: ST_ProgressMarkers, Equal: 0}
+  CounterActions:
+    OnEnter:
+    - {Name: TutorialEndRun, Namespace: ST_Statistics, Type: Assign, Value: "?getCounter[ST_Statistics, ST_run_counter]"}
+NewItems_REROLLTUTORCARD:
+  BonusTokensFromTraps_1_Torso:
+    Conditions:
+    - {ConditionType: CounterRange, Name: UpgradeEffect, Namespace: ST_Quests, Equal: -1}
+    - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1, Not: 1}
+    - {ConditionType: GroupExists, Item: Torso, Group: BonusTokensFromTraps_1_Torso, Not: 1}
+    Target: Torso
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "Torso", ST_VisualItemName: '^Gadgets.SlotsVisualNames.Stunts^'}
+      BonusTokensFromTraps_1_Torso: {IsNew: 0, Level: 0, Count: 1}
+      

@@ -1,0 +1,21 @@
+UserVersion: 11
+CountersUpdater_KILLITEMS:
+  ItemActions:
+    OnEnter:
+    - {Name: Terminal_BasicProtocol, Type: "Remove"}
+    - {Name: Terminal_StandardProtocol, Type: "Remove"}
+    - {Name: Terminal_AdvancedProtocol, Type: "Remove"}
+    - {Name: Terminal_ExperimentalProtocol, Type: "Remove"}
+CountersUpdater_Payments:
+  Conditions:
+  - {ConditionType: CounterRange, Name: PaymentPromo, Namespace: ST_Events, Equal: 1}
+  CounterActions: 
+    OnEnter:
+    - {Name: com.nekki.vector2.promo_ios, Namespace: PromoProduct, Type: Assign, Value: 1}
+    - {Name: com.nekki.vector2.promo, Namespace: PromoProduct, Type: Assign, Value: 1}
+CountersUpdater_Promo2Activation:
+  Conditions: 
+  - {ConditionType: CounterRange, Name: PaymentPromo, Namespace: ST_Events, Equal: 0}
+  CounterActions: 
+    OnEnter:
+    - {Name: Promo2CanRun, Namespace: ST_Events, Type: Assign, Value: 1}

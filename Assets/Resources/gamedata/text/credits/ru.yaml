@@ -1,0 +1,123 @@
+Credits:
+- BlockType: Fade
+  Content:
+  - Title: "ПРОДЮСЕРЫ"
+  - Space: 1
+  - Data:
+    - 'О<size=48>ЛЕГ</size> Е<size=48>ГОРОВ</size>'
+    - 'Е<size=48>ВГЕНИЙ</size> Д<size=48>ЯБИН</size>'
+  - Title: "РУКОВОДИТЕЛИ ПРОЕКТА"
+  - Space: 1
+  - Data:
+    - 'В<size=48>АЛЕНТИН</size> В<size=48>ОЗНЕСЕНСКИЙ</size>'
+    - 'А<size=48>НДРЕЙ</size> Р<size=48>ЕВЕНКО</size>'
+- BlockType: Fade
+  Content:
+  - Title: "ВЕДУЩИЙ ПРОГРАММИСТ"
+  - Space: 1
+  - Data:
+    - 'А<size=48>ЛЕКСЕЙ</size> М<size=48>ОИСЕЕВ</size>'
+  - Title: "ПРОГРАММИСТЫ"
+  - Space: 1
+  - Data:
+    - 'О<size=48>ЛЕГ</size> Д<size=48>УРОВ</size>'
+    - 'А<size=48>РТЁМ</size> К<size=48>РАСНОЖЕН</size>'
+    - 'Я<size=48>РОСЛАВ</size> П<size=48>АРШУТИН</size>'
+    - 'П<size=48>АВЕЛ</size> Щ<size=48>ЕЛКУН</size>'
+  - Title: "ВЕДУЩИЙ ТЕСТИРОВЩИК"
+  - Space: 1
+  - Data:
+    - 'А<size=48>ЛЁНА</size> Н<size=48>АТАЛУХА</size>'
+- BlockType: Fade
+  Content:
+  - Title: "ВЕДУЩИЙ ХУДОЖНИК"
+  - Space: 1
+  - Data:
+    - 'В<size=48>ИЛЬЯМ</size> Г<size=48>ОЗАК</size>'
+  - Title: "АРТ ОТДЕЛ"
+  - Space: 1
+  - Data:
+    - 'Д<size=48>ЕНИС</size> Р<size=48>ОМАНКО</size>'
+    - 'А<size=48>ЛЕКСЕЙ</size> К<size=48>РАПИВИН</size>'
+    - 'Р<size=48>ИНАТ</size> Т<size=48>ИМЕРКАЕВ</size>'
+  - Title: "АНИМАТОРЫ"
+  - Space: 1
+  - Data:
+    - 'Р<size=48>УСЛАН</size> Х<size=48>УДАЙБЕРГЕНОВ</size>'
+    - 'Д<size=48>МИТРИЙ</size> Т<size=48>ЕРЕЩЕНКО</size>'
+- BlockType: Fade
+  Content:
+  - Title: "ГЕЙМДИЗАЙН, ПРОГРАММИРОВАНИЕ"
+  - Space: 1
+  - Data:
+    - 'А<size=48>ЛЕКСАНДР</size> П<size=48>ЛЕСКАНОВСКИЙ</size>'
+  - Title: "ГЕЙМДИЗАЙН, 3Д ХУДОЖНИК"
+  - Space: 1
+  - Data:
+    - 'И<size=48>ГОРЬ</size> С<size=48>АМОЙЛЕНКО</size>'
+- BlockType: Fade
+  Content:
+  - Title: "ГЕЙМДИЗАЙН"
+  - Space: 1
+  - Data:
+    - 'П<size=48>АВЕЛ</size> П<size=48>ОПОВ</size>'
+    - 'Г<size=48>РИГОРИЙ</size> Д<size=48>ЯДИЧЕНКО</size>'
+    - 'А<size=48>РТУР</size> М<size=48>УРТАЗИН</size>'
+    - 'Д<size=48>АРЬЯ</size> М<size=48>ОРГУНОВА</size>'
+- BlockType: Fade
+  Content:
+  - Title: "ЛЕВЕЛДИЗАЙН"
+  - Space: 1
+  - Data:
+    - 'К<size=48>ОНСТАНТИН</size> К<size=48>ОМАРОВ</size>'
+    - 'В<size=48>АСИЛИЙ</size> С<size=48>КОБЕЛЕВ</size>'
+    - 'К<size=48>ОНСТАНТИН</size> Ж<size=48>АВОРОНКОВ</size>'
+    - 'А<size=48>РКАДИЙ</size> П<size=48>РЯДКО</size>'
+    - 'Р<size=48>ОМАН</size> П<size=48>АВЛОВ</size>'
+    - 'М<size=48>АКСИМ</size> Ч<size=48>УЛЮЧКИН</size>'
+- BlockType: Fade
+  Content:
+  - Title: "ЗВУК"
+  - Space: 1
+  - Data:
+    - 'Е<size=48>ВГЕНИЙ</size> Я<size=48>РМОШ</size>'
+  - Title: "МУЗЫКА"
+  - Space: 1
+  - Data:
+    - 'Е<size=48>ВГЕНИЙ</size> Я<size=48>РМОШ</size>'
+    - 'М<size=48>ИХАИЛ</size> К<size=48>ОСТЫЛЁВ</size>'
+  - Title: "ПИСАТЕЛИ"
+  - Space: 1
+  - Data:
+    - 'О<size=48>ЛЕГ</size> М<size=48>АРТЫНОВ</size>'
+    - 'В<size=48>ИТАЛИЙ</size> А<size=48>ЛЕКСАШИН</size>'
+    - 'Ч<size=48>ЕРИТИ</size> Б<size=48>ЕККЕР</size>'
+- BlockType: Scroll
+  Content:
+  - Title: "ОСОБАЯ БЛАГОДАРНОСТЬ"
+  - Space: 1
+  - Data:
+    - 'Д<size=48>МИТРИЙ</size> Ж<size=48>ЕБЫНЁВ</size>'
+    - 'Г<size=48>ЛЕБ</size> М<size=48>ИНАЕВ</size>'
+    - 'М<size=48>АКСИМ</size> Б<size=48>ОТВИНЬЕВ</size>'
+    - 'Т<size=48>АТЬЯНА</size> М<size=48>УРОМЦЕВА</size>'
+    - 'Е<size=48>КАТЕРИНА</size> Я<size=48>КОВЛЕВА</size>'
+    - 'А<size=48>ЛЕКСАНДР</size> Н<size=48>ЕМОВ</size>'
+    - 'С<size=48>ЕРГЕЙ</size> Б<size=48>АБАЕВ</size>'
+    - 'В<size=48>ЯЧЕСЛАВ</size> Н<size=48>ИКУЛИН</size>'
+    - 'А<size=48>ЛЕКСАНДР</size> К<size=48>ВИТКА</size>'
+    - 'Т<size=48>ОМ</size> Б<size=48>ОРОВСКИС</size>'
+    - 'О<size=48>ЙГЕН</size> К<size=48>ВИРИНГ</size>'
+    - 'Н<size=48>АТАЛЬЯ</size> К<size=48>АЛИНИНА</size>'
+    - 'А<size=48>НДРЕЙ</size> Т<size=48>РУБЕЦКОЙ</size>'
+    - 'П<size=48>ЁТР</size> Г<size=48>ЕРНЕТ</size>'
+    - 'Е<size=48>ЛЕНА</size> С<size=48>ОЛОВЬЁВА</size>'
+    - 'Е<size=48>ЛЕНА</size> П<size=48>ЕТРИЧЕНКО</size>'
+    - 'Э<size=48>ЛЛА</size> Л<size=48>АВРОВА</size>'
+    - 'М<size=48>АРИЯ</size> Г<size=48>АВРИЧЕНКОВА</size>'
+    - 'А<size=48>ЛЕКСАНДР</size> П<size=48>АНОВ</size>'
+    - 'К<size=48>ОНСТАНТИН</size> С<size=48>АХАРОВ</size>'
+- BlockType: Scroll
+  Content:
+  - Space: 1
+  - Title: "<size=80>СПАСИБО ЗА ИГРУ</size>"

@@ -1,0 +1,1899 @@
+Root: 
+  NoShuffle: 1
+  BoxContent:
+    Bonus:
+      Conditions:
+      - {ConditionType: CounterRange, Name: Bonus, Namespace: Placeholder, Min: 1}
+      - {ConditionType: CounterRange, Name: BonusCheckpoint, Namespace: Placeholder, Max: 0}
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        PlayCommand:
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Min: 1}
+          PostProcessData:
+            Replacement: {Name: Item_Exchange_Coin, Filename: objects_items.xml}
+            OverrideVariable:
+              Money: Base
+        CommonTrack:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            Nothing_LockNoKey: 
+              Conditions:
+              - {ConditionType: CounterRange, Name: BonusLockNoKey, Namespace: Placeholder, Min: 1}
+              PostProcessData:
+                Replacement: {Name: Item_Empty, Filename: objects_items.xml}
+            LimitBonusTrap:
+              Conditions:
+              - ConditionType: Or
+                Content:
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: EnableBonusBeforeTrap, Namespace: ST_Generator, Max: 0}
+                  - {ConditionType: CounterRange, Name: BonusBeforeTrap, Namespace: Placeholder, Min: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: EnableBonusAfterTrap, Namespace: ST_Generator, Max: 0}
+                  - {ConditionType: CounterRange, Name: BonusAfterTrap, Namespace: Placeholder, Min: 1}
+              PostProcessData:
+                Replacement: {Name: Item_Empty, Filename: objects_items.xml}       
+          
+            LockRewardBonus:
+              Conditions:
+              - {ConditionType: CounterRange, Name: BonusLockWithKey, Namespace: Placeholder, Min: 1}
+              - {ConditionType: CounterRange, Name: LockBonusCount, Namespace: ST_CurrentRoom, Min: 1}
+              CounterActions:
+                OnEnter:
+                - {Name: LockBonusCount, Namespace: ST_CurrentRoom, Type: IncrementBy, Value: -1}
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                Boosterpack:
+                  Conditions: [{ConditionType: CounterRange, Name: BoosterpacksCounter, Namespace: ST_Generator, Min: 1}]
+                  CounterActions: 
+                    OnEnter:
+                    - {Name: BoosterpacksCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Boosterpack, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData: {Replacement: {Name: Item_Exchange_Boosterpack, Filename: objects_items.xml}}
+                FileKey:
+                  Conditions: [{ConditionType: CounterRange, Name: FileKeysGenCounter, Namespace: ST_Generator, Min: 1}]
+                  CounterActions: 
+                    OnEnter:
+                    - {Name: FileKeysGenCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: FileKey, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData: {Replacement: {Name: Item_Exchange_FileKey, Filename: objects_items.xml}}
+                Fuze:
+                  Conditions: [{ConditionType: CounterRange, Name: FuzeGenCounter, Namespace: ST_Generator, Min: 1}]
+                  CounterActions: 
+                    OnEnter:
+                    - {Name: FuzeGenCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Fuze, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData: {Replacement: {Name: Item_Exchange_Fuze, Filename: objects_items.xml}}
+                Reagents:
+                  Conditions: [{ConditionType: CounterRange, Name: ReagentsToGenerate, Namespace: ST_Generator, Min: 1}]
+                  CounterActions: 
+                    OnEnter:
+                    - {Name: ReagentsToGenerate, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Reagent, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData: {Replacement: {Name: Item_Exchange_Reagent, Filename: objects_items.xml}}
+                MemoryUnit:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: MemoryUnitsGenCounter, Namespace: ST_Generator, Min: 1}
+                  - {ConditionType: ValuesEqual, Values: ["?getBalance[Quests,MaintenanceOperations,MemoryUnits]", "?getCounter[MaintenanceOperations, MemoryUnitsCount]"], Not: 1}
+                  - ConditionType: ValuesEqual
+                    Values: 
+                    - "?less[{?getCounter[MaintenanceOperations, MemoryUnitsCount]+?getCounter[ST_Generator, MemoryUnitsToGenerate]},?getBalance[Quests,MaintenanceOperations,MemoryUnits]]"
+                    - 1
+                  CounterActions: 
+                    OnEnter:
+                    - {Name: MemoryUnitsGenCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: MemoryUnitsToGenerate, Namespace: ST_Generator, Type: IncrementBy, Value: 1}
+                    - {Name: MemoryUnit, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData: {Replacement: {Name: Item_Exchange_MemoryUnit, Filename: objects_items.xml}}
+                Note:
+                  Conditions: [{ConditionType: CounterRange, Name: NotesGenCounter, Namespace: ST_Generator, Min: 1}]
+                  CounterActions: 
+                    OnEnter:
+                    - {Name: NotesGenCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Note, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData: {Replacement: {Name: Item_Exchange_Note, Filename: objects_items.xml}}
+                SuperCoin:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: SuperCoinCounter, Namespace: ST_Generator, Min: 1}
+                  - {ConditionType: CounterRange, Name: SuperCoinAfterLockCounter, Namespace: ST_CurrentRoom, Max: "{?getBalance[Floor,SuperCoinsAfterLockMax] - 1}"}
+                  CounterActions: 
+                    OnEnter:
+                    - {Name: SuperCoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: SuperCoinAfterLockCounter, Namespace: ST_CurrentRoom, Type: IncrementBy, Value: 1}
+                    - {Name: SuperCoin, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData:
+                    Replacement: {Name: Item_Exchange_Coin, Filename: objects_items.xml}
+                    OverrideVariable:
+                      CoinType: SuperCoin
+                      CoinSize: 18
+                      CoinValueEV: "?getBalance[Floor, SuperCoinEV, <ST_Floor>]"
+                RedKey:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: RedKeyCounter, Namespace: ST_Generator, Min: 1}
+                  - {ConditionType: CounterRange, Name: LockIsRed, Namespace: ST_CurrentRoom, Equal: 0}
+                  CounterActions:
+                    OnEnter:
+                    - {Name: RedKeyCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Key_red, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData:
+                    Replacement: {Name: Item_Exchange_Key, Filename: objects_items.xml}
+                    OverrideVariable:
+                      KeyColor: "#FF0000FF"
+                      KeyLevel: Red
+                      KeyType: Key_red
+                YellowKey:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: YellowKeyCounter, Namespace: ST_Generator, Min: 1}
+                  - {ConditionType: CounterRange, Name: LockIsRed, Namespace: ST_CurrentRoom, Equal: 0}
+                  - {ConditionType: CounterRange, Name: LockIsYellow, Namespace: ST_CurrentRoom, Equal: 0}
+                  CounterActions:
+                    OnEnter:
+                    - {Name: YellowKeyCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Key_yellow, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData:
+                    Replacement: {Name: Item_Exchange_Key, Filename: objects_items.xml}
+                    OverrideVariable:
+                      KeyColor: "#FFFF00FF"
+                      KeyLevel: Yellow
+                      KeyType: Key_yellow
+                Empty:
+                  Weight: 0
+                  PostProcessData:
+                  Replacement: {Name: Item_Empty, Filename: objects_items.xml}
+            SuperCoin:
+              Conditions:
+              - {ConditionType: CounterRange, Name: SuperCoinCounter, Namespace: ST_Generator, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: BonusAfterTrap, Namespace: Placeholder, Min: 1}
+                - {ConditionType: CounterRange, Name: BonusBeforeTrap, Namespace: Placeholder, Min: 1}
+                - {ConditionType: CounterRange, Name: BonusHardOrAfterTrap, Namespace: Placeholder, Min: 1}
+                - {ConditionType: CounterRange, Name: BonusHardOrBeforeTrap, Namespace: Placeholder, Min: 1}
+                - {ConditionType: CounterRange, Name: BonusHard, Namespace: Placeholder, Min: 1} 
+                - {ConditionType: CounterRange, Name: BonusGuess, Namespace: Placeholder, Min: 1}
+                - {ConditionType: CounterRange, Name: BonusSwarm, Namespace: Placeholder, Min: 1}
+              CounterActions:
+                OnEnter:
+                - {Name: SuperCoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                - {Name: SuperCoin, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+              PostProcessData:
+                Replacement: {Name: Item_Exchange_Coin, Filename: objects_items.xml}
+                OverrideVariable:
+                  CoinType: SuperCoin
+                  CoinSize: 18
+                  CoinValueEV: "?getBalance[Floor, SuperCoinEV, <ST_Floor>]"
+            KeyRed_Hard:
+              Conditions:
+              - {ConditionType: CounterRange, Name: RedKeyCounter, Namespace: ST_Generator, Min: 1}
+              - {ConditionType: CounterRange, Name: BonusHard, Namespace: Placeholder, Min: 1}
+              CounterActions:
+                OnEnter:
+                - {Name: RedKeyCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                - {Name: Key_red, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+              PostProcessData:
+                Replacement: {Name: Item_Exchange_Key, Filename: objects_items.xml}
+                OverrideVariable:
+                  KeyColor: "#FF0000FF"
+                  KeyLevel: Red
+                  KeyType: Key_red
+            KeyYellow:
+              Conditions:
+              - {ConditionType: CounterRange, Name: YellowKeyCounter, Namespace: ST_Generator, Min: 1}
+              CounterActions:
+                OnEnter:
+                - {Name: YellowKeyCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                - {Name: Key_yellow, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+              PostProcessData:
+                Replacement: {Name: Item_Exchange_Key, Filename: objects_items.xml}
+                OverrideVariable:
+                  KeyColor: "#FFFF00FF"
+                  KeyLevel: Yellow
+                  KeyType: Key_yellow
+            KeyBlueFirst:
+              Conditions:
+              - {ConditionType: CounterRange, Name: BlueKeyCounter, Namespace: ST_Generator, Min: 1}
+              - {ConditionType: CounterRange, Name: BonusHard, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusAfterTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusBeforeTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusHardOrAfterTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusHardOrBeforeTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusGuess, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusSwarm, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusLockWithKey, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: 3}
+              - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: "{?getCounter[ST_Generator, FirstForkPosition]+1}"}
+              #Log: '<ST_Generator.ST_RoomNumberReversed>'
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                CommonOrTutorBlueKey:
+                  Conditions:
+                    - ConditionType: Or
+                      Content:
+                      - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1}
+                      - ConditionType: And
+                        Content:
+                        - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: 1}
+                        - {ConditionType: CounterRange, Name: BonusLockNoKey, Namespace: Placeholder, Max: 0}
+                        - {ConditionType: CounterRange, Name: BonusLockWithKey, Namespace: Placeholder, Max: 0}
+                        - {ConditionType: CounterRange, Name: BonusLocklessFork, Namespace: Placeholder, Max: 0}
+                  CounterActions:
+                    OnEnter:
+                    - {Name: BlueKeyCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Key_blue, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                    - {Name: Key_blue_first, Namespace: ST_Generator, Type: Assign, Value: 1}
+                  PostProcessData:
+                    Replacement: {Name: Item_Exchange_Key, Filename: objects_items.xml}
+                    OverrideVariable:
+                      KeyColor: "#0000FFFF"
+                      KeyLevel: Blue
+                      KeyType: Key_blue                
+                Nothing:
+                  PostProcessData:
+                    Replacement: {Name: Item_Empty, Filename: objects_items.xml}
+            
+            KeyBlue:
+              Conditions:
+              - {ConditionType: CounterRange, Name: BlueKeyCounter, Namespace: ST_Generator, Min: 1}
+              - {ConditionType: CounterRange, Name: BonusHard, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusAfterTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusBeforeTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusHardOrAfterTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusHardOrBeforeTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusGuess, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusSwarm, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusLockWithKey, Namespace: Placeholder, Max: 0}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: Item_Exchange_Key, Namespace: ST_Generator, Equal: 1}
+                - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: 3, Not: 1}
+              #Log: "IMMA MADE A COMMON `KEY"
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                CommonOrTutorBlueKey:
+                  Conditions:
+                    - ConditionType: Or
+                      Content:
+                      - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1}
+                      - ConditionType: And
+                        Content:
+                        - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: 1}
+                        - {ConditionType: CounterRange, Name: BonusLockNoKey, Namespace: Placeholder, Max: 0}
+                        - {ConditionType: CounterRange, Name: BonusLockWithKey, Namespace: Placeholder, Max: 0}
+                        - {ConditionType: CounterRange, Name: BonusLocklessFork, Namespace: Placeholder, Max: 0}
+                  CounterActions:
+                    OnEnter:
+                    - {Name: BlueKeyCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Key_blue, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData:
+                    Replacement: {Name: Item_Exchange_Key, Filename: objects_items.xml}
+                    OverrideVariable:
+                      KeyColor: "#0000FFFF"
+                      KeyLevel: Blue
+                      KeyType: Key_blue                
+                Nothing:
+                  PostProcessData:
+                    Replacement: {Name: Item_Empty, Filename: objects_items.xml}
+            CoinOrCoupon:
+              Conditions:
+              - {ConditionType: CounterRange, Name: CoinCounter, Namespace: ST_Generator, Min: 1}
+              - {ConditionType: CounterRange, Name: BonusHard, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusAfterTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusBeforeTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusHardOrAfterTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusHardOrBeforeTrap, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusGuess, Namespace: Placeholder, Max: 0}
+              - {ConditionType: CounterRange, Name: BonusWarm, Namespace: Placeholder, Max: 0}
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                CoinOrCouponOrSuperCreditsRandomizer:
+                  Conditions:
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: CouponSaveMeCounter, Namespace: PassiveBonusExchangers, Min: 1} 
+                    - {ConditionType: CounterRange, Name: CouponCardBoostCounter, Namespace: PassiveBonusExchangers, Min: 1} 
+                    - {ConditionType: CounterRange, Name: CouponRerollCounter, Namespace: PassiveBonusExchangers, Min: 1} 
+                    - {ConditionType: CounterRange, Name: CouponEnergyRechargeCounter, Namespace: PassiveBonusExchangers, Min: 1} 
+                    - {ConditionType: CounterRange, Name: EMPCounter, Namespace: PassiveBonusExchangers, Min: 1} 
+                    - {ConditionType: CounterRange, Name: SuperCreditsCounter, Namespace: PassiveBonusExchangers, Min: 1}  
+                  CounterActions: {OnEnter: [{Name: Random, Namespace: PassiveBonusExchangers, Type: Assign, Value: "?RangeRandom[0,100]"}]}
+                  Set: 1
+                  BoxContent:
+                    Coin:  
+                      #Log: '<PassiveBonusExchangers.Random>'
+                      Weight: 0
+                      CounterActions:
+                        OnEnter:
+                        - {Name: CoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                        - {Name: Coin, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                      PostProcessData:
+                        Replacement: {Name: Item_Exchange_Coin, Filename: objects_items.xml}
+                        OverrideVariable:
+                          Money: Base
+                          CoinValueEV: "?getBalance[Floor, CoinEV, <ST_Floor>] "              
+                    CouponSaveMe:
+                      #Log: '<PassiveBonusExchangers.Random>'
+                      Conditions:
+                      - {ConditionType: CounterRange, Name: CouponSaveMeCounter, Namespace: PassiveBonusExchangers, Min: 1} 
+                      - {ConditionType: ValuesEqual, Values: ["?greaterEqual[ <PassiveBonusExchangers.CouponSaveMeCardChance>, <PassiveBonusExchangers.Random> ]", 1] } 
+                      CounterActions:
+                        OnEnter:
+                        - {Name: CouponSaveMeCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: -1}
+                        - {Name: CouponSaveMe, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                        - {Name: CoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                      PostProcessData:
+                        Replacement: {Name: Item_Exchange_Coupon, Filename: objects_items.xml}
+                        OverrideVariable:  
+                          ValueEV: "<PassiveBonusExchangers.CouponSaveMeCardValue>"
+                          CouponType: Saveme
+                          CouponImage: "coupons.save_me"
+                          IconImageColor: orange
+                    CouponCardBoost:
+                      #Log: '<PassiveBonusExchangers.Random>'
+                      Conditions:
+                      - {ConditionType: CounterRange, Name: CouponCardBoostCounter, Namespace: PassiveBonusExchangers, Min: 1}  
+                      - {ConditionType: ValuesEqual, Values: ["?greaterEqual[ <PassiveBonusExchangers.CouponCardBoostCardChance>, <PassiveBonusExchangers.Random> ]", 1] } 
+                      CounterActions:
+                        OnEnter:
+                        - {Name: CouponCardBoostCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: -1}
+                        - {Name: CouponCardBoost, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                        - {Name: CoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                      PostProcessData:
+                        Replacement: {Name: Item_Exchange_Coupon, Filename: objects_items.xml}
+                        OverrideVariable:  
+                          ValueEV: "<PassiveBonusExchangers.CouponCardBoostCardValue>"
+                          CouponType: CardsBoost
+                          CouponImage: "coupons.cards_boost"
+                          IconImageColor: blue
+                    CouponReroll:
+                      #Log: '<PassiveBonusExchangers.Random>'
+                      Conditions:
+                      - {ConditionType: CounterRange, Name: CouponRerollCounter, Namespace: PassiveBonusExchangers, Min: 1}  
+                      - {ConditionType: ValuesEqual, Values: ["?greaterEqual[<PassiveBonusExchangers.CouponRerollCardChance>, <PassiveBonusExchangers.Random> ]", 1] } 
+                      CounterActions:
+                        OnEnter:
+                        - {Name: CouponRerollCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: -1}
+                        - {Name: CouponReroll, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                        - {Name: CoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                      PostProcessData:
+                        Replacement: {Name: Item_Exchange_Coupon, Filename: objects_items.xml}
+                        OverrideVariable:  
+                          ValueEV: "<PassiveBonusExchangers.CouponRerollCardValue>"
+                          CouponType: Reroll
+                          CouponImage: "coupons.reroll"
+                          IconImageColor: blue              
+                    CouponEnergyRecharge:
+                      #Log: '<PassiveBonusExchangers.Random>'
+                      Conditions:
+                      - {ConditionType: CounterRange, Name: CouponEnergyRechargeCounter, Namespace: PassiveBonusExchangers, Min: 1}  
+                      - {ConditionType: ValuesEqual, Values: ["?greaterEqual[ <PassiveBonusExchangers.CouponEnergyRechargeCardChance>, <PassiveBonusExchangers.Random> ]", 1] } 
+                      CounterActions:
+                        OnEnter:
+                        - {Name: CouponEnergyRechargeCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: -1}
+                        - {Name: CouponEnergyRecharge, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                        - {Name: CoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                      PostProcessData:
+                        Replacement: {Name: Item_Exchange_Coupon, Filename: objects_items.xml}
+                        OverrideVariable:  
+                          ValueEV: "<PassiveBonusExchangers.CouponEnergyRechargeCardValue>"
+                          CouponType: EnergyRecharge
+                          CouponImage: "coupons.starterpack_recharge"
+                          IconImageColor: blue
+                    SuperCredits:
+                      Conditions:
+                      - {ConditionType: CounterRange, Name: SuperCreditsCounter, Namespace: PassiveBonusExchangers, Min: 1}  
+                      - {ConditionType: ValuesEqual, Values: ["?greaterEqual[ <PassiveBonusExchangers.SuperCreditsChance>, <PassiveBonusExchangers.Random> ]", 1] } 
+                      CounterActions:
+                        OnEnter:
+                        - {Name: CoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                        - {Name: SuperCreditsCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: -1}
+                        - {Name: SuperCredits, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                      PostProcessData:
+                        Replacement: {Name: Item_Exchange_Coin, Filename: objects_items.xml}
+                        OverrideVariable:
+                          CoinType: SuperCredits
+                          CurrencyIcon: common.money3_icon
+                          CurrencyColor: red
+                          CoinValueDeviation: 0
+                          CurrencyType: MoneyPremium
+                          CoinSize: 70
+                          CoinValueEV: "<PassiveBonusExchangers.SuperCreditsValue>"
+                JustCoin:
+                  CounterActions:
+                    OnEnter:
+                    - {Name: CoinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: Coin, Namespace: ST_Statistics_Items_Generated, Type: IncrementBy, Value: 1}
+                  PostProcessData:
+                    Replacement: {Name: Item_Exchange_Coin, Filename: objects_items.xml}
+                    OverrideVariable:
+                      Money: Base
+                      CoinValueEV: "?getBalance[Floor, CoinEV, <ST_Floor>] "              
+            Nothing:
+              PostProcessData:
+                Replacement: {Name: Item_Empty, Filename: objects_items.xml}
+          
+    Exchange_Background:
+      Conditions:
+      - {ConditionType: CounterRange, Name: Background, Namespace: Placeholder, Min: 1, Max: 1}
+      - {ConditionType: CounterRange, Name: Shiny, Namespace: Placeholder, Min: 1, Max: 1}
+      Set: 1
+      BoxContent:
+        bg_barrel:
+          Conditions:
+          - {ConditionType: CounterRange, Name: bg_barrel, Namespace: ST_Generator, Min: 1}
+          PostProcessData:
+            Replacement: {Name: bg_barrel, Filename: background.xml}
+        bg_red_crane:
+          Conditions:
+          - {ConditionType: CounterRange, Name: bg_red_crane, Namespace: ST_Generator, Min: 1}
+          PostProcessData:
+            Replacement: {Name: bg_red_crane, Filename: background.xml}
+        bg_communication:
+          Conditions:
+          - {ConditionType: CounterRange, Name: bg_communication, Namespace: ST_Generator, Min: 1}
+          PostProcessData:
+            Replacement: {Name: bg_communication, Filename: background.xml}
+    Lock_const:
+      Conditions:
+      - {ConditionType: CounterRange, Name: HereBeLock, Namespace: Placeholder, Min: 1, Max: 1}
+      - {ConditionType: CounterRange, Name: DoorConst, Namespace: Placeholder, Min: 1, Max: 1}
+      #Log: "<Placeholder.EscapeLock>"
+      BoxContent:
+        ST_TrackItems:
+          PostProcessData:
+            Replacement: {Name: LockReplacement, Filename: doors_service.xml}
+        LockColor:
+          Set: 1
+          #Log: "<ST_CurrentRoom.NoLock>"
+          BoxContent:
+            BlueLock:
+              Conditions:
+              - {ConditionType: CounterRange, Name: LockIsBlue, Namespace: ST_CurrentRoom, Min: 1}
+              PostProcessData:
+                OverrideVariable:
+                  LockColor: "#0000FFFF"
+                  DoorLevel: 1
+                  LockType: Lock_blue
+                  KeyType: InsertedKey_blue
+              CounterActions: 
+                OnEnter:
+                - {Name: ST_BlueLocks, Namespace: ST_Statistics_Per_Floor, Type: IncrementBy, Value: 1}
+            YellowLock:
+              Conditions:
+              - {ConditionType: CounterRange, Name: LockIsYellow, Namespace: ST_CurrentRoom, Min: 1}
+              PostProcessData:
+                OverrideVariable:
+                  DoorLevel: 2
+                  LockColor: "#FFFF00FF"
+                  LockType: Lock_yellow
+                  KeyType: InsertedKey_yellow
+              CounterActions: 
+                OnEnter:
+                - {Name: ST_YellowLocks, Namespace: ST_Statistics_Per_Floor, Type: IncrementBy, Value: 1}
+            RedLock:
+              Conditions:
+              - {ConditionType: CounterRange, Name: LockIsRed, Namespace: ST_CurrentRoom, Min: 1}
+              PostProcessData:
+                OverrideVariable:
+                  LockColor: "#FF0000FF"
+                  DoorLevel: 3
+                  LockType: Lock_red
+                  KeyType: InsertedKey_red
+              CounterActions: 
+                OnEnter:
+                - {Name: ST_RedLocks, Namespace: ST_Statistics_Per_Floor, Type: IncrementBy, Value: 1}
+            NoLock:
+              Conditions:
+              - {ConditionType: CounterRange, Name: NoLock, Namespace: ST_CurrentRoom, Min: 1}
+              PostProcessData:
+                Replacement: {Name: NoLock, Filename: doors_service.xml}
+            Undefined:
+              Weight: 0
+              PostProcessData:
+                OverrideVariable:
+                  LockColor: "#0000FFFF"
+                  DoorLevel: 1
+                  LockType: Lock_blue
+                  KeyType: InsertedKey_blue
+              CounterActions: 
+                OnEnter:
+                - {Name: ST_BlueLocks, Namespace: ST_Statistics_Per_Floor, Type: IncrementBy, Value: 1}
+        EscapeRoomLock:
+          Conditions:
+            - {ConditionType: CounterRange, Name: EscapeLock, Namespace: Placeholder, Min: 1, Max: 1}
+          CounterActions:
+            OnEnter:
+            - {Name: EscapeLock, Namespace: ST_LocalSpace, Type: Assign, Value: 1}
+    Stunt:
+      Conditions:
+      - {ConditionType: CounterRange, Name: Stunt, Namespace: Placeholder, Min: 1, Max: 1}
+      NoShuffle: 1
+      BoxContent:
+        ChooseStunt:
+          NoShuffle: 1
+          Set: 1
+          BoxContent:
+            FirstPass:
+              Conditions: [{ConditionType: CounterRange, Name: ST_IterationCount, Namespace: ST_Postprocess, Max: 1}]
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                BlockedGroup:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ["?getBalance[Stunts,Groups,?getString[StuntGroup],Blocked]", 1]}]
+                  CancelGeneration: 1
+                NoPreferedStunts:
+                  Conditions: 
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: ValuesEqual, Values: ["?getString[PreferedStunt]", "None"]}
+                    - {ConditionType: ValuesEqual, Values: ["?getString[PreferedStunt]", ""]}
+                  PostponeGeneration: 1
+                PreferedStunt:
+                  Set: 1
+                  NoShuffle: 1
+                  BoxContent:
+                    BadPreffered:
+                      Conditions: [{ConditionType: ValuesEqual, Values: ['?getBalance[Stunts,StuntGroups,?getString[PreferedStunt],Group]', "GroupNone"]}]
+                      CancelGeneration: 1
+                    CheatPreferred:
+                      #Log: '?getString[PreferedStunt]'
+                      Conditions: [{ConditionType: CounterRange, Name: AllStunts, Namespace: Debug, Min: 1}]
+                      StringActions: {OnEnter: [{Name: CardName, Value: "?concat['%1_3', ?_getString[PreferedStunt]]"}, {Name: Stunt, Value: '?getString[PreferedStunt]'}]}
+                    TutorFound:
+                      Conditions: [{ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_Tutorial, Min: 1}]
+                      Select: {Type: ItemGroups, Root: "Stunts", Random: 1, Weight: '?getCardInfo[?getString[SelectKey],Balance,WeightForUse]'}
+                      Set: 1
+                      NoShuffle: 1
+                      BoxContent:
+                        Found:
+                          Conditions:
+                          - {ConditionType: ValuesEqual, Values: ["?getCardInfo[?getString[SelectKey],StuntName]", "?getString[PreferedStunt]"]}
+                          StringActions: {OnEnter: [{Name: CardName, Value: "?getString[SelectKey]"}, {Name: Stunt, Value: '?getCardInfo[?getString[SelectKey],StuntName]'}]}
+                          BreakSelect: 1
+                        Skip: {StringActions: {OnEnter: [{Name: Stunt, Value: ''}]}}
+                    RealPreferedCard:
+                      StringActions:
+                        OnEnter:
+                        - {Name: Card_1, Value: "?concat['%1_1', ?_getString[PreferedStunt]]"}
+                        - {Name: Card_2, Value: "?concat['%1_2', ?_getString[PreferedStunt]]"}
+                        - {Name: Card_3, Value: "?concat['%1_3', ?_getString[PreferedStunt]]"}
+                        - {Name: Stunt, Value: '?getCardInfo[?getString[Card_1],StuntName]'}
+                      NoShuffle: 1
+                      BoxContent:
+                        ChooseRarity:
+                          Set: 1
+                          BoxContent:
+                            Rarity_1:
+                              Weight: '?getCardInfo[?getString[Card_1],Balance,WeightForUse]'
+                              Conditions: [{ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: "?getCardInfo[?getString[Card_1],Balance,SetupMin]", Max: "?getCardInfo[?getString[Card_1],Balance,SetupMax]"}]
+                              StringActions: {OnEnter: [{Name: CardName, Value: '?getString[Card_1]'}]}
+                            Rarity_2:
+                              Weight: '?getCardInfo[?getString[Card_2],Balance,WeightForUse]'
+                              Conditions: [{ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: "?getCardInfo[?getString[Card_2],Balance,SetupMin]", Max: "?getCardInfo[?getString[Card_2],Balance,SetupMax]"}]
+                              StringActions: {OnEnter: [{Name: CardName, Value: '?getString[Card_2]'}]}
+                            Rarity_3:
+                              Weight: '?getCardInfo[?getString[Card_3],Balance,WeightForUse]'
+                              Conditions: [{ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: "?getCardInfo[?getString[Card_3],Balance,SetupMin]", Max: "?getCardInfo[?getString[Card_3],Balance,SetupMax]"}]
+                              StringActions: {OnEnter: [{Name: CardName, Value: '?getString[Card_3]'}]}
+                            TooCoolless:
+                              Weight: '0'
+                              StringActions: {OnEnter: [{Name: Stunt, Value: ''}, {Name: CardName, Value: '?getString[Card_1]'}]}
+                        OwnedOrNot:
+                          Set: 1
+                          NoShuffle: 1
+                          BoxContent:
+                            Owned:
+                              Conditions:
+                              - {ConditionType: GroupExists, Item: 'Stunts', Group: "?getString[CardName]"}
+                            NotOwned: {StringActions: {OnEnter: [{Name: Stunt, Value: ''}]}}
+            SecondPass:
+              StringActions: {OnEnter: [{Name: Stunt, Value: ""}]}
+              NoShuffle: 1
+              BoxContent:
+                OwnedStunt:
+                  Conditions: [{ConditionType: CounterRange, Name: StuntCounter, Namespace: ST_Generator, Min: 0, Max: "{?getBalance[Floor,Stunts,<ST_Floor>], Min] -1}"}]
+                  Set: 1
+                  NoShuffle: 1
+                  Select: {Type: ItemGroups, Root: "Stunts", Random: 1, Weight: '?getCardInfo[?getString[SelectKey],Balance,WeightForUse]'}
+                  BoxContent:
+                    SelectStunt:
+                      Conditions: [{ConditionType: ValuesEqual, Values: ["?getCardInfo[?getString[SelectKey],Balance,Group]", "?getString[StuntGroup]"]}]
+                      StringActions: {OnEnter: [{Name: CardName, Value: "?getString[SelectKey]"}, {Name: Stunt, Value: '?getCardInfo[?getString[SelectKey],StuntName]'}]}
+                      BreakSelect: 1
+                    Skip: {StringActions: {OnEnter: [{Name: Stunt, Value: ''}]}}
+                Cheat:
+                  #Log: '?getString[SelectKey]'
+                  Conditions: [{ConditionType: CounterRange, Name: AllStunts, Namespace: Debug, Min: 1}]
+                  Select: {Type: Balance, Root: "Stunts,Groups,?getString[StuntGroup],Stunts", Random: 1, Weight: '?getCardInfo[?getString[SelectKey],Balance,WeightForUse]'}
+                  StringActions: {OnEnter: [{Name: CardName, Value: '?getString[SelectKey]'}]}
+                  Set: 1
+                  NoShuffle: 1
+                  BoxContent:
+                    IsLegalStunt:
+                      StringActions: {OnEnter: [{Name: Stunt, Value: '?getCardInfo[?getString[CardName],StuntName]'}]}
+                      BreakSelect: 1
+                    Skip: {StringActions: {OnEnter: [{Name: Stunt, Value: ''}]}}
+                RandomStunt:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ["", "?getString[Stunt]"]}]
+                  Set: 1
+                  NoShuffle: 1
+                  Select: {Type: Balance, Root: "Stunts,Groups,?getString[StuntGroup],Stunts", Random: 1, Weight: '?getCardInfo[?getString[SelectKey],Balance,WeightForUse]'}
+                  StringActions: {OnEnter: [{Name: CardName, Value: '?getString[SelectKey]'}]}
+                  BoxContent:
+                    Stunt:
+                      Set: 1
+                      NoShuffle: 1
+                      Conditions: [{ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: "?getCardInfo[?getString[CardName],Balance,SetupMin]", Max: "?getCardInfo[?getString[CardName],Balance,SetupMax]"}]
+                      BoxContent:
+                        Owned:
+                          Conditions:
+                          - {ConditionType: GroupExists, Item: 'Stunts', Group: "?getString[CardName]"}
+                          StringActions: {OnEnter: [{Name: Stunt, Value: '?getCardInfo[?getString[CardName],StuntName]'}]}
+                          BreakSelect: 1
+                        NotOwned:
+                          #Log: "?getString[CardName]"
+                          StringActions: {OnEnter: [{Name: Stunt, Value: ''}]}
+                          BreakSelect: 1
+                    Skip: {StringActions: {OnEnter: [{Name: Stunt, Value: ''}]}}
+        Place:
+          NoShuffle: 1
+          BoxContent:
+            # Пишем в ?getString[RarityName] лейбл для статистики по рарности трюков  
+            SelectStatisticaLabel:
+              Conditions: 
+              - {ConditionType: ValuesEqual, Values: ["?getString[Stunt]", ""], Not: 1}
+              - {ConditionType: CounterRange, Name: AllStunts, Namespace: Debug, Equal: 0}
+              NoShuffle: 1
+              BoxContent:
+                BlueStunts:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ["?getCardInfo[?getString[CardName], Stats, Rarity]", "1"]}]
+                  StringActions: {OnEnter: [{Name: RarityName, Value: 'blue'}]}
+                YellowStunts:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ["?getCardInfo[?getString[CardName], Stats, Rarity]", "2"]}]
+                  StringActions: {OnEnter: [{Name: RarityName, Value: 'yellow'}]}
+                RedStunts:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ["?getCardInfo[?getString[CardName], Stats, Rarity]", "3"]}]
+                  StringActions: {OnEnter: [{Name: RarityName, Value: 'red'}]}
+            Placement:
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                CheatNoneGroupedStunt:
+                  Log: '?getString[Stunt]'
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllStunts, Namespace: Debug, Equal: 1}
+                  - {ConditionType: ValuesEqual, Values: ["?getString[StuntGroup]", "GroupNone"]}
+                  PostProcessData:
+                    Replacement: {Name: StuntReal, Filename: triggers.xml}
+                    OverrideVariable: {StuntName: "?getString[Stunt]", CardName: "TripleHit_3", RarityName: "debug"}
+                Stunt:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ["?getString[Stunt]", ""], Not: 1}]
+                  PostProcessData:
+                    Replacement: {Name: StuntReal, Filename: triggers.xml}
+                    OverrideVariable: {StuntName: "?getString[Stunt]", CardName: "?getString[CardName]", RarityName: "?getString[RarityName]"}
+                  CounterActions:
+                    OnEnter:
+                    - {Name: "?getString[CardName]", Namespace: ST_Statistics_Stunts_Generated, Type: IncrementBy, Value: 1}
+                    - {Name: "?getString[CardName]", Namespace: ST_Statistics_Stunts_Unlocked, Type: IncrementBy, Value: 1}
+                    - {Name: "?getString[RarityName]", Namespace: ST_Statistics_Stunts_Generated, Type: IncrementBy, Value: 1}
+                    - {Name: "?getString[RarityName]", Namespace: ST_Statistics_Stunts_Unlocked, Type: IncrementBy, Value: 1}
+                    - {Name: "StuntCounter", Namespace: "ST_Generator", Type: IncrementBy, Value: 1}
+                Lock:
+                  PostProcessData:
+                    Replacement: {Name: StuntLock, Filename: triggers.xml}
+                    OverrideVariable: 
+                      Rarity: "?getCardInfo[?getString[CardName],Stats,Rarity]"
+                  CounterActions:
+                    OnEnter: 
+                    - {Name: "?getString[CardName]", Namespace: ST_Statistics_Stunts_Generated, Type: IncrementBy, Value: 1}
+                    - {Name: "?getString[RarityName]", Namespace: ST_Statistics_Stunts_Generated, Type: IncrementBy, Value: 1}
+
+    TrapsUniversal:
+      NoShuffle: 1
+      Conditions: [{ConditionType: CounterRange, Name: UniversalTrap, Namespace: Placeholder, Min: 1}]
+      CounterActions: {OnEnter: [{Namespace: TrapGeneration, Type: Clear}]}
+      BoxContent:
+        IsDeadly:
+          Conditions: [{ConditionType: CounterRange, Name: isDeadly, Namespace: Placeholder, Min: 1}]
+          CounterActions: {OnEnter: [{Name: isDeadly, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+        DamageType:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            Obligatory:
+              Set: 1
+              Conditions: 
+              - {ConditionType: CounterRange, Name: isObligatory, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: LaserOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                    - {ConditionType: CounterRange, Name: LaserOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: FlameOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                    - {ConditionType: CounterRange, Name: FlameOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: TeslaOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                    - {ConditionType: CounterRange, Name: TeslaOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: HaloPosition, Namespace: Placeholder, Max: 0}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: EchoOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                    - {ConditionType: CounterRange, Name: EchoOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              BoxContent:
+                Laser:
+                  Conditions: 
+                    - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                    - ConditionType: Or
+                      Content:
+                      - {ConditionType: CounterRange, Name: LaserOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: LaserOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Laser_universal_replacement"}]}
+                Flame:
+                  Conditions: 
+                    - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                    - ConditionType: Or
+                      Content:
+                      - {ConditionType: CounterRange, Name: FlameOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: FlameOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Flame_universal_replacement"}]}
+                Tesla:
+                  Conditions: 
+                    - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                    - ConditionType: Or
+                      Content:
+                      - {ConditionType: CounterRange, Name: TeslaOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: TeslaOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Tesla_universal_replacement"}]}
+                Echo:
+                  Conditions: 
+                    - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                    - {ConditionType: CounterRange, Name: HaloPosition, Namespace: Placeholder, Max: 0}
+                    - ConditionType: Or
+                      Content:
+                      - {ConditionType: CounterRange, Name: EchoOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: EchoOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Echo_universal_replacement"}]}
+            Prioritized:
+              Set: 1
+              Conditions:
+              - ConditionType: Or
+                Content:
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,FlameOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator,FlamePerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,TeslaOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator,TeslaPerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: HaloPosition, Namespace: Placeholder, Max: 0}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,EchoOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator,EchoPerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,LaserOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator,LaserPerRoomMin]", Not: 1}
+              BoxContent:
+                Flame:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,FlameOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator,FlamePerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Flame_universal_replacement"}]}
+                Tesla:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,TeslaOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator,TeslaPerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Tesla_universal_replacement"}]}
+                Echo:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: HaloPosition, Namespace: Placeholder, Max: 0}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,EchoOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator,EchoPerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Echo_universal_replacement"}]}
+                Laser:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,LaserOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator,LaserPerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Laser_universal_replacement"}]}
+            Fillers:
+              Set: 1
+              BoxContent:
+                Laser:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: LaserOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,LaserPerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator, LaserOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,LaserPerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Laser_universal_replacement"}]}
+                Tesla:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: TeslaOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,TeslaPerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator, TeslaOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,TeslaPerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Tesla_universal_replacement"}]}
+                Echo:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: HaloPosition, Namespace: Placeholder, Max: 0}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: EchoOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,EchoPerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator, EchoOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,EchoPerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Echo_universal_replacement"}]}
+                Flame:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: FlameOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,FlamePerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator, FlameOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,FlamePerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Flame_universal_replacement"}]}
+                Empty:
+                  Weight: 0
+                  NoShuffle: 1
+                  BoxContent:
+                    CommonFlags:
+                      Conditions: [{ConditionType: CounterRange, Name: isDeadly, Namespace: Placeholder, Min: 1}]
+                      CounterActions: {OnEnter: [{Name: isUnDeadly, Namespace: ST_LocalSpace, Type: Assign, Value: 0}]}
+                    Stop: {CancelGeneration: 1}
+        PostChoiceActions:
+          Set: 1
+          BoxContent:
+            Laser:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[BeamTrapName]', 'Laser_universal_replacement']}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Laser, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Laser, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: laser, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+            Tesla:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[BeamTrapName]', 'Tesla_universal_replacement']}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Tesla, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Tesla, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: tesla, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+            Echo:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[BeamTrapName]', 'Echo_universal_replacement']}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Echo, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Echo, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: echo, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+            Flame:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[BeamTrapName]', 'Flame_universal_replacement']}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Flame, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Flame, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: flame, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+        Replacement:
+          PostProcessData:
+            Replacement: {Name: "?getString[BeamTrapName]", Filename: traps.xml}
+            OverrideVariable:
+              GlobalTimer: "<Placeholder.GlobalTimer>"
+              TriggerActivatorX: "<Placeholder.TriggerActivatorX>"
+              TriggerActivatorY: "<Placeholder.TriggerActivatorY>"
+              LaserReachDistance: "<Placeholder.LaserReachDistance>"
+              RayTimer: "<Placeholder.RayTimer>"
+              isFloating: "<Placeholder.isFloating>"
+              Direction: "?getString[BeamDirection]"
+              HaloPosition: "<Placeholder.HaloPosition>"
+    TrapsJump:
+      Conditions: [{ConditionType: CounterRange, Name: JumpTrap, Namespace: Placeholder, Min: 1, Max: 1}]
+      CounterActions: {OnEnter: [{Namespace: TrapGeneration, Type: Clear}]}
+      NoShuffle: 1
+      BoxContent:
+        CommonFlags:
+          Conditions: [{ConditionType: CounterRange, Name: TrapDeadly, Namespace: Placeholder, Min: 1}]
+          CounterActions: {OnEnter: [{Name: isDeadly, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+        AnimationType:
+          Set: 1
+          BoxContent:
+            HurdleJump:
+              Conditions: [{ConditionType: CounterRange, Name: AllowHurdleJump, Namespace: Placeholder, Min: 1}]
+              CounterActions: {OnEnter: [{Name: HurdleJump, Namespace: TrapGeneration, Type: Assign, Value: 1}]}
+            ShortJump:
+              Conditions: [{ConditionType: CounterRange, Name: AllowShortJump, Namespace: Placeholder, Min: 1}]
+              CounterActions: {OnEnter: [{Name: ShortJump, Namespace: TrapGeneration, Type: Assign, Value: 1}]}
+        ObjectType:
+          Set: 1
+          Conditions:
+            - ConditionType: Or
+              Content:
+              - {ConditionType: CounterRange, Name: AllowSV, Namespace: Placeholder, Min: 1}
+              - {ConditionType: CounterRange, Name: AllowPV, Namespace: Placeholder, Min: 1}
+              - {ConditionType: CounterRange, Name: AllowDK, Namespace: Placeholder, Min: 1}
+              - {ConditionType: CounterRange, Name: AllowHJ, Namespace: Placeholder, Min: 1}
+          CounterActions: {OnEnter: [{Name: Obstacle, Namespace: TrapGeneration, Type: Assign, Value: 1}]}
+        DamageType:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            Obligatory:
+              Conditions:
+              - {ConditionType: CounterRange, Name: isObligatory, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: LaserOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: LaserOverallUnlimited, Namespace: Placeholder, Min: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: FlameOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: FlameOverallUnlimited, Namespace: Placeholder, Min: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: TeslaOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: TeslaOverallUnlimited, Namespace: Placeholder, Min: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: HaloPosition, Namespace: Placeholder, Max: 0}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: EchoOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: EchoOverallUnlimited, Namespace: Placeholder, Min: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowBall, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: BallOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: BallOverallUnlimited, Namespace: Placeholder, Min: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: ShortJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: MineShortOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: MineShortOverallUnlimited, Namespace: Placeholder, Min: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: HurdleJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: MineHurdleOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: MineHurdleOverallUnlimited, Namespace: Placeholder, Min: 1}
+              Set: 1
+              BoxContent:
+                Laser:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: LaserOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: LaserOverallUnlimited, Namespace: Placeholder, Min: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Laser_Jump_Replacement"}]}
+                Flame:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: FlameOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: FlameOverallUnlimited, Namespace: Placeholder, Min: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Flame_Jump_Replacement"}]}
+                Tesla:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: TeslaOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: TeslaOverallUnlimited, Namespace: Placeholder, Min: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Tesla_Jump_Replacement"}]}
+                Echo:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: EchoOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: EchoOverallUnlimited, Namespace: Placeholder, Min: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Echo_Jump_Replacement"}]}
+                Ball:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowBall, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: BallOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: BallOverallUnlimited, Namespace: Placeholder, Min: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Ball"}]}
+                MineShort:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: ShortJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: MineShortOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: MineShortOverallUnlimited, Namespace: Placeholder, Min: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Mine_Jump_Replacement"}]}
+                MineHurdle:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: HurdleJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:  
+                    - {ConditionType: CounterRange, Name: MineHurdleOverall, Namespace: Placeholder, Max: 0, Not: 1}
+                    - {ConditionType: CounterRange, Name: MineHurdleOverallUnlimited, Namespace: Placeholder, Min: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Mine_Jump_Replacement"}]}
+            Prioritized:
+              Conditions:
+              - ConditionType: Or
+                Content:
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowBall, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Ball, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, BallOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Ball, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, BallPerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, FlameOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, FlamePerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, TeslaOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, TeslaPerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, EchoOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, EchoPerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, LaserOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, LaserPerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: ShortJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_MineShort, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, MineShortOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_MineShort, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, MineShortPerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: HurdleJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_MineHurdle, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, MineHurdleOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_MineHurdle, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, MineHurdlePerRoomMin]", Not: 1}
+                - ConditionType: And
+                  Content:
+                  - {ConditionType: CounterRange, Name: Obstacle, Namespace: TrapGeneration, Min: 1}
+                  - {ConditionType: CounterRange, Name: Obstacles, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, ObstaclesOverallMin]", Not: 1}
+              Set: 1
+              BoxContent:
+                Ball:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowBall, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Ball, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, BallOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Ball, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, BallPerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Ball"}]}
+                Flame:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, FlameOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, FlamePerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Flame_Jump_Replacement"}]}
+                Tesla:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, TeslaOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, TeslaPerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Tesla_Jump_Replacement"}]}
+                Echo:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: HaloPosition, Namespace: Placeholder, Max: 0}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, EchoOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, EchoPerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Echo_Jump_Replacement"}]}
+                Laser:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, LaserOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, LaserPerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Laser_Jump_Replacement"}]}
+                MineShort:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: ShortJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_MineShort, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, MineShortOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_MineShort, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, MineShortPerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Mine_Jump_Replacement"}]}
+                MineHurdle:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: HurdleJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: Trap_MineHurdle, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, MineHurdleOverallMin]", Not: 1}
+                    - {ConditionType: CounterRange, Name: Trap_MineHurdle, Namespace: ST_LocalSpace, Min: "?getCounter[ST_Generator, MineHurdlePerRoomMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Mine_Jump_Replacement"}]}
+                Obstacle:
+                  Conditions:
+                    - {ConditionType: CounterRange, Name: Obstacle, Namespace: TrapGeneration, Min: 1}
+                    - {ConditionType: CounterRange, Name: Obstacles, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, ObstaclesOverallMin]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Obstacle"}]}
+            Fillers:
+              Set: 1
+              BoxContent:
+                Obstacle:
+                  Conditions:
+                    - {ConditionType: CounterRange, Name: Obstacle, Namespace: TrapGeneration, Min: 1}
+                    - ConditionType: Or
+                      Content:
+                      - {ConditionType: CounterRange, Name: ObstaclesOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Obstacles, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator, ObstaclesOverall] - 1}"}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Obstacle"}]}
+                Laser:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: LaserOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,LaserPerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator,LaserOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,LaserPerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Laser_Jump_Replacement"}]}
+                MineShort:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: ShortJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: MineShortOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_MineShort, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,MineShortPerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_MineShort, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator,MineShortOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_MineShort, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,MineShortPerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Mine_Jump_Replacement"}]}
+                MineHurdle:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: HurdleJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+                  - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: MineHurdleOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_MineHurdle, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,MineHurdlePerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_MineHurdle, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator,MineHurdleOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_MineHurdle, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,MineHurdlePerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Mine_Jump_Replacement"}]}
+                Ball:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowBall, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: BallOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                    - {ConditionType: CounterRange, Name: Trap_Ball, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator,BallOverall]", Not: 1}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Ball"}]}
+                Tesla:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: TeslaOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,TeslaPerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator,TeslaOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,TeslaPerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Tesla_Jump_Replacement"}]}
+                Echo:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+                  - {ConditionType: CounterRange, Name: HaloPosition, Namespace: Placeholder, Max: 0}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: EchoOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,TeslaPerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator,EchoOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,EchoPerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Echo_Jump_Replacement"}]}
+                Flame:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+                  - ConditionType: Or
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: FlameOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                      - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,FlamePerRoom] - 1}"}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_SelectedGeneratorLabels, Max: "{?getCounter[ST_Generator,FlameOverall] - 1}"}
+                      - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Max: "{?getCounter[ST_Generator,FlamePerRoom] - 1}"}
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Flame_Jump_Replacement"}]}
+                Empty:
+                  Weight: 0
+                  NoShuffle: 1
+                  BoxContent:
+                    CommonFlags:
+                      Conditions: [{ConditionType: CounterRange, Name: TrapDeadly, Namespace: Placeholder, Min: 1}]
+                      CounterActions: {OnEnter: [{Name: isUnDeadly, Namespace: ST_LocalSpace, Type: Assign, Value: 0}]}
+                    Stop: {CancelGeneration: 1}
+        PostChoiceActions:
+          Set: 1
+          BoxContent:
+            Laser:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[TrapObjectName]', 'Laser_Jump_Replacement']}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Laser, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Laser, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: laser, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+              StringActions: {OnEnter: [{Name: TrapLibraryName, Value: "traps.xml"}]}
+            Flame:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[TrapObjectName]', 'Flame_Jump_Replacement']}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Flame, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Flame, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: flame, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+              StringActions: {OnEnter: [{Name: TrapLibraryName, Value: "traps.xml"}]}
+            Tesla:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[TrapObjectName]', 'Tesla_Jump_Replacement']}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Tesla, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Tesla, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: tesla, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+              StringActions: {OnEnter: [{Name: TrapLibraryName, Value: "traps.xml"}]}
+            Echo:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[TrapObjectName]', 'Echo_Jump_Replacement']}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Echo, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Echo, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: echo, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+              StringActions: {OnEnter: [{Name: TrapLibraryName, Value: "traps.xml"}]}
+            MineShort:
+              Conditions: 
+              - {ConditionType: ValuesEqual, Values: ['?getString[TrapObjectName]', 'Mine_Jump_Replacement']}
+              - {ConditionType: CounterRange, Name: ShortJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_MineShort, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: Trap_MineShort, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: mine, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+              StringActions: {OnEnter: [{Name: TrapLibraryName, Value: "traps.xml"}]}
+            MineHurdle:
+              Conditions: 
+              - {ConditionType: ValuesEqual, Values: ['?getString[TrapObjectName]', 'Mine_Jump_Replacement']}
+              - {ConditionType: CounterRange, Name: HurdleJump, Namespace: TrapGeneration, Max: 1, Min: 1} 
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_MineHurdle, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+                - {Name: Trap_MineHurdle, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: mine, Namespace: ST_Statistics_Traps, Type: IncrementBy, Value: 1}
+              StringActions: {OnEnter: [{Name: TrapLibraryName, Value: "traps.xml"}]}
+            Ball:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[TrapObjectName]', 'Ball']}]
+              CounterActions: 
+                OnEnter: 
+                - {Name: Trap_Ball, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}
+                - {Name: Trap_Ball, Namespace: ST_LocalSpace, Type: IncrementBy, Value: 1}
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                TripleBomb:
+                  Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Min: '?getBalance[Floor,Traps,Balls,TripleBombsFirstFloor]'}]
+                  CounterActions:
+                    OnEnter:
+                    - {Name: Trap_TripleBomb, Namespace: ST_LocalSpace, Type: Assign, Value: 1}
+                    - {Name: triplebomb, Namespace: ST_Statistics_Traps, Type: Assign, Value: "?getCounter[ST_SelectedGeneratorLabels, Trap_Ball]"}
+                  StringActions:
+                    OnEnter:
+                    - {Name: TrapObjectName, Value: "TripleBomb_Jump_Replacement"}
+                    - {Name: TrapLibraryName, Value: "traps.xml"}
+                Blackball:
+                  CounterActions:
+                    OnEnter:
+                    - {Name: Trap_BlackBall, Namespace: ST_LocalSpace, Type: Assign, Value: 1}
+                    - {Name: blackball, Namespace: ST_Statistics_Traps, Type: Assign, Value: "?getCounter[ST_SelectedGeneratorLabels, Trap_Ball]"}
+                  StringActions:
+                    OnEnter:
+                    - {Name: TrapObjectName, Value: "Blackball_Jump_Replacement"}
+                    - {Name: TrapLibraryName, Value: "traps.xml"}
+            Obstacle:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[TrapObjectName]', 'Obstacle']}]
+              CounterActions: {OnEnter: [{Name: Obstacles, Namespace: ST_SelectedGeneratorLabels, Type: IncrementBy, Value: 1}]}
+              StringActions: {OnEnter: [{Name: TrapLibraryName, Value: "obstacles.xml"}]}
+              Set: 1
+              BoxContent:
+                SpeedVault:
+                  Conditions: [{ConditionType: CounterRange, Name: AllowSV, Namespace: Placeholder, Min: 1}]
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "SVforTrapJump"}]}
+                PopVault:
+                  Conditions: [{ConditionType: CounterRange, Name: AllowPV, Namespace: Placeholder, Min: 1}]
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "PVforTrapJump"}]}
+                DivingKong:
+                  Conditions: [{ConditionType: CounterRange, Name: AllowDK, Namespace: Placeholder, Min: 1}]
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "DKforTrapJump"}]}
+                HurdleJump:
+                  Conditions: [{ConditionType: CounterRange, Name: AllowHJ, Namespace: Placeholder, Min: 1}]
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "HJforTrapJump"}]}
+        PlaceReplacement:
+          PostProcessData:
+            Replacement: {Name: "?getString[TrapObjectName]", Filename: "?getString[TrapLibraryName]"}
+            OverrideVariable:
+              GlobalTimer: "?getCounter[Placeholder, GlobalTimer]"
+              TriggerActivatorX: "?getCounter[Placeholder, TriggerActivatorX]"
+              TriggerActivatorY: "?getCounter[Placeholder, TriggerActivatorY]"
+              TriggerActivatorH: "?getCounter[Placeholder, TriggerActivatorH]"
+              EnableArea: "?getCounter[Placeholder, EnableArea]"
+              ToFly: "?getCounter[Placeholder, ToFly]"
+              EnableHurdle: "?getCounter[TrapGeneration, HurdleJump]"
+              EnableShort: "?getCounter[TrapGeneration, ShortJump]"
+    TrapBallUniversal:
+      Conditions: [{ConditionType: CounterRange, Name: BallTrap, Namespace: Placeholder, Min: 1, Max: 1}]
+      NoShuffle: 1
+      BoxContent:
+        SetDeadly:
+          Conditions: [{ConditionType: CounterRange, Name: isDeadly, Namespace: Placeholder, Min: 1}]
+          CounterActions: {OnEnter: [{Name: isDeadly, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+        ChooseType:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            Triple:
+              Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Min: '?getBalance[Floor,Traps,Balls,TripleBombsFirstFloor]'}]
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_TripleBomb, Namespace: ST_LocalSpace, Type: Assign, Value: 1}
+                - {Name: triplebomb, Namespace: ST_Statistics_Traps, Type: Assign, Value: "?getCounter[ST_SelectedGeneratorLabels, Trap_Ball]"}
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "TripleBomb"}]}
+            Ball:
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_BlackBall, Namespace: ST_LocalSpace, Type: Assign, Value: 1}
+                - {Name: blackball, Namespace: ST_Statistics_Traps, Type: Assign, Value: "?getCounter[ST_SelectedGeneratorLabels, Trap_Ball]"}
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Blackball"}]}
+        Place:
+          PostProcessData:
+            Replacement: {Name: "?getString[TrapObjectName]", Filename: "traps.xml"}
+            OverrideVariable:
+              GlobalTimer: "?getCounter[Placeholder, GlobalTimer]"
+              TriggerActivatorX: "?getCounter[Placeholder, TriggerActivatorX]"
+              TriggerActivatorY: "?getCounter[Placeholder, TriggerActivatorY]"
+              TriggerActivatorH: "?getCounter[Placeholder, TriggerActivatorH]"
+              EnableArea: "?getCounter[Placeholder, EnableArea]"
+              AreaWidth: "?getCounter[Placeholder, AreaWidth]"
+              ToFly: "?getCounter[Placeholder, ToFly]"
+              Type: '?getString[Type]'
+              AnimationName: '?getString[AnimationName]'
+    Arrows:
+      Set: 1
+      NoShuffle: 1
+      Conditions:
+      - {ConditionType: CounterRange, Name: ArrowsIcons, Namespace: Placeholder, Min: 1, Max: 1}
+      BoxContent:
+        FirstPass:
+          PostponeGeneration: 1
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_IterationCount, Namespace: ST_Postprocess, Max: 1}
+        SecondPass:
+          Set: 1
+          NoShuffle: 1
+          #Log: "<ST_LocalSpace.EscapeLock>"
+          BoxContent:
+            Skull:
+              Conditions:
+              - {ConditionType: CounterRange, Name: isDeadly, Namespace: ST_LocalSpace, Min: 1}
+              - {ConditionType: CounterRange, Name: isUnDeadly, Namespace: ST_LocalSpace, Max: 0}
+              CounterActions: {OnEnter: [{Name: isDeadly, Namespace: ST_LocalSpace, Type: Assign, Value: 0}]}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.skull_holography"}
+                - {Name: IconWall, Value: "walls.ws_skull"}
+            Laser:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Trap_Laser, Namespace: ST_LocalSpace, Min: 1}
+              - {ConditionType: CounterRange, Name: Sign_Laser, Namespace: ST_LocalSpace, Max: 0}
+              CounterActions: {OnEnter: [{Name: Sign_Laser, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.laser_holography_orange"}
+                - {Name: IconWall, Value: "walls.ws_laser"}
+            Tesla:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Trap_Tesla, Namespace: ST_LocalSpace, Min: 1}
+              - {ConditionType: CounterRange, Name: Sign_Tesla, Namespace: ST_LocalSpace, Max: 0}
+              CounterActions: {OnEnter: [{Name: Sign_Tesla, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.electroball_holography_orange"}
+                - {Name: IconWall, Value: "walls.ws_electroball"}
+            Echo:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Trap_Echo, Namespace: ST_LocalSpace, Min: 1}
+              - {ConditionType: CounterRange, Name: Sign_Echo, Namespace: ST_LocalSpace, Max: 0}
+              CounterActions: {OnEnter: [{Name: Sign_Echo, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.antisound"}
+                - {Name: IconWall, Value: "warning_signs.antisound"}
+            Flame:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Trap_Flame, Namespace: ST_LocalSpace, Min: 1}
+              - {ConditionType: CounterRange, Name: Sign_Flame, Namespace: ST_LocalSpace, Max: 0}
+              CounterActions: {OnEnter: [{Name: Sign_Flame, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.flamer"}
+                - {Name: IconWall, Value: "warning_signs.flamer"}
+            Swarm:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Trap_Swarm, Namespace: ST_LocalSpace, Min: 1}
+              CounterActions:
+                OnEnter:
+                - {Name: Trap_Swarm, Namespace: ST_LocalSpace, Type: Assign, Value: 0}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.swarm"}
+                - {Name: IconWall, Value: "warning_signs.swarm"}
+            Mine:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Sign_Mine, Namespace: ST_LocalSpace, Max: 0}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: Trap_MineHurdle, Namespace: ST_LocalSpace, Min: 1}
+                - {ConditionType: CounterRange, Name: Trap_MineShort, Namespace: ST_LocalSpace, Min: 1}
+              CounterActions: {OnEnter: [{Name: Sign_Mine, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.landmine_holography_orange"}
+                - {Name: IconWall, Value: "walls.ws_landmine"}
+            BlackBall:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Trap_BlackBall, Namespace: ST_LocalSpace, Min: 1}
+              - {ConditionType: CounterRange, Name: Sign_BlackBall, Namespace: ST_LocalSpace, Max: 0}
+              CounterActions: {OnEnter: [{Name: Sign_BlackBall, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.blackball_holography_orange"}
+                - {Name: IconWall, Value: "walls.ws_blackball"}
+            TripleBomb:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Trap_TripleBomb, Namespace: ST_LocalSpace, Min: 1}
+              - {ConditionType: CounterRange, Name: Sign_TripleBomb, Namespace: ST_LocalSpace, Max: 0}
+              CounterActions: {OnEnter: [{Name: Sign_TripleBomb, Namespace: ST_LocalSpace, Type: Assign, Value: 1}]}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "warning_signs.triplebomb"}
+                - {Name: IconWall, Value: "warning_signs.triplebomb"}
+            EscapeRoom:
+              Conditions:
+              - {ConditionType: CounterRange, Name: EscapeLock, Namespace: ST_LocalSpace, Min: 1}
+              CounterActions:
+                OnEnter:
+                - {Name: EscapeLock, Namespace: ST_LocalSpace, Type: Assign, Value: 0}
+              StringActions:
+                OnEnter:
+                - {Name: IconHolo, Value: "walls.ws_exit"}
+                - {Name: IconWall, Value: "walls.ws_exit"}
+              #Log: "escape_icon"
+            Empty:
+              CancelGeneration: 1
+          PostProcessData:
+            Replacement: {Name: "Arrow_icon", Filename: traps.xml}
+            OverrideVariable:
+              Layer: "?switch[?getCounter[Placeholder, isOnWall], 1:'CDecalsAdd', 'HoloWarningSigns']"
+              ArrowIconName: "?switch[?getCounter[Placeholder, isOnWall], 1:?getString[IconWall], ?getString[IconHolo]]"
+              ArrowIconWidth: "?switch[?getCounter[Placeholder, isOnWall], 1:91, 109]"
+              ArrowIconHeight: "?switch[?getCounter[Placeholder, isOnWall], 1:80, 99]"
+    TubeSwitch:
+      Conditions: [{ConditionType: CounterRange, Name: isDarkness, Namespace: Placeholder, Min: 1}]
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        FuzeSocket:
+          Conditions:
+          - {ConditionType: CounterRange, Name: InsertFuze, Namespace: ST_Quests, Min: 1}
+          - {ConditionType: CounterRange, Name: FuzeSocketGenerated, Namespace: Temp, Max: 0}
+          - {ConditionType: CounterRange, Name: ST_Floor, Equal: '?getBalance[Quests,InsertFuze,Floor]'}
+          PostProcessData:
+            Replacement: {Name: FuzeSocket, Filename: z2_wall_props.xml}
+            OverrideVariable: 
+              isActive: "1"
+              Height: '<Placeholder.Height>'
+              TubeX: '<Placeholder.TubeX>'
+              TubeY: '<Placeholder.TubeY>'
+              TriggerX: '<Placeholder.TriggerX>'
+              TriggerY: '<Placeholder.TriggerY>'
+          CounterActions: {OnEnter: [{Name: FuzeSocketGenerated, Namespace: Temp, Type: IncrementBy, Value: 1}]}
+        PowerNode:
+          Conditions:
+          - {ConditionType: CounterRange, Name: PowerNodesCounter, Namespace: ST_Generator, Min: 1}
+          - {ConditionType: CounterRange, Name: SmallRing, Namespace: Placeholder, Max: 0}
+          PostProcessData:
+            Replacement: {Name: PowerNode, Filename: z2_wall_props.xml}
+            OverrideVariable: 
+              isActive: "1"
+              Height: '<Placeholder.Height>'
+              TubeX: '<Placeholder.TubeX>'
+              TubeY: '<Placeholder.TubeY>'
+              TriggerX: '<Placeholder.TriggerX>'
+              TriggerY: '<Placeholder.TriggerY>'
+          CounterActions: {OnEnter: [{Name: PowerNodesCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}]}
+        DarknessActive:
+          CounterActions: {OnEnter: [{Name: DarknessCounter, Namespace: ST_Generator, Type: IncrementBy, Value: '{-1 * ?greater[<ST_Generator.DarknessCounter>,0]}'}]}
+          PostProcessData:
+            Replacement: {Name: DarknessObject, Filename: triggers.xml}
+            OverrideVariable: 
+              isActive: "?min[<Placeholder.isActiveForced>,?greater[<ST_Generator.DarknessCounter>,0]]"
+              Frames: '<Placeholder.Frames>'
+              Alpha: '<Placeholder.Alpha>'
+              Height: '<Placeholder.Height>'
+              TubeX: '<Placeholder.TubeX>'
+              TubeY: '<Placeholder.TubeY>'
+              TriggerX: '<Placeholder.TriggerX>'
+              TriggerY: '<Placeholder.TriggerY>'
+              SmallRing: '<Placeholder.SmallRing>'
+    Server:
+      Conditions: [{ConditionType: CounterRange, Name: isServer, Namespace: Placeholder, Min: 1}]
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        Server:
+          Conditions: [{ConditionType: CounterRange, Name: ServerError, Namespace: ST_Quests, Min: 1}]
+          PostProcessData:
+            Replacement: {Name: ServerObject, Filename: z2_wall_props.xml}
+            OverrideVariable: 
+              Height: '<Placeholder.Height>'
+              Background: '<Placeholder.Background>'
+        ScannerTerminal:
+          Conditions: [{ConditionType: CounterRange, Name: ReadjustScanner, Namespace: ST_Quests, Min: 1}]
+          PostProcessData:
+            Replacement: {Name: ScannerTerminalObject, Filename: z2_wall_props.xml}
+            OverrideVariable: 
+              Height: '<Placeholder.Height>'
+              Background: '<Placeholder.Background>'
+    PrehardSpecability:
+      Conditions: [{ConditionType: CounterRange, Name: PrehardSpecability, Namespace: Placeholder, Min: 1}]
+      Set: 1
+      BoxContent:
+        EMP:
+          Conditions: 
+          - {ConditionType: CounterRange, Name: EMP, Namespace: Placeholder, Min: 1}
+          - ConditionType: Or
+            Content:
+            - {ConditionType: CounterRange, Name: EMPCounter, Namespace: PassiveBonusExchangers, Min: 1}
+            - {ConditionType: CounterRange, Name: EMP, Namespace: Debug, Min: 1}
+          CounterActions: {OnEnter: [{Name: EMPCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: -1}]}
+          PostProcessData:
+            Replacement: {Name: EMPActivator, Filename: triggers.xml}
+            OverrideVariable: 
+              deltaX: '<Placeholder.deltaX_EMP>'
+              deltaY: '<Placeholder.deltaY_EMP>'
+              height: '<Placeholder.height_EMP>'
+              head:   '<Placeholder.head_EMP>'
+              additional_Y_EMP:   '<Placeholder.additional_Y_EMP>'
+        Teleport:
+          Conditions: 
+          - {ConditionType: CounterRange, Name: TP, Namespace: Placeholder, Min: 1}
+          - ConditionType: Or
+            Content:
+            - {ConditionType: CounterRange, Name: TeleportariumCounter, Namespace: PassiveBonusExchangers, Min: 1}
+            - {ConditionType: CounterRange, Name: TP, Namespace: Debug, Min: 1}
+          CounterActions: {OnEnter: [{Name: TeleportariumCounter, Namespace: PassiveBonusExchangers, Type: IncrementBy, Value: -1}]}
+          PostProcessData:
+            Replacement: {Name: TeleportActivator, Filename: triggers.xml}
+            OverrideVariable: 
+              deltaX: '<Placeholder.deltaX_TP>'
+              deltaY: '<Placeholder.deltaY_TP>'
+              height: '<Placeholder.height_TP>'
+              head:   '<Placeholder.head_TP>'
+              additional_Y_TP:   '<Placeholder.additional_Y_TP>'
+        None: {Weight: 0, PostProcessData: {Replacement: {Name: Item_Empty, Filename: objects_items.xml}}}
+    NoObject:
+      Conditions: [{ConditionType: CounterRange, Name: NoObject, Namespace: Placeholder, Min: 1, Max: 1}]
+      PostProcessData: {Replacement: {Name: "Item_Empty", Filename: objects_items.xml}}
+    CosmeticBeam:
+      NoShuffle: 1
+      Conditions: [{ConditionType: CounterRange, Name: CosmeticBeam, Namespace: Placeholder, Min: 1}]
+      BoxContent:
+        DamageType:
+          Set: 1
+          BoxContent:
+            Laser:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: LaserOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: LaserOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Laser_universal_replacement"}]}
+            Flame:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: FlameOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: FlameOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Flame_universal_replacement"}]}
+            Tesla:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: TeslaOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: TeslaOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Tesla_universal_replacement"}]}
+            Echo:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: EchoOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: EchoOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: BeamTrapName, Value: "Echo_universal_replacement"}]}
+            Empty:
+              Weight: 0
+              CancelGeneration: 1
+        Replacement:
+          PostProcessData:
+            Replacement: {Name: "?getString[BeamTrapName]", Filename: traps.xml}
+            OverrideVariable:
+              GlobalTimer: "<Placeholder.GlobalTimer>"
+              TriggerActivatorX: "<Placeholder.TriggerActivatorX>"
+              TriggerActivatorY: "<Placeholder.TriggerActivatorY>"
+              LaserReachDistance: "<Placeholder.LaserReachDistance>"
+              RayTimer: "<Placeholder.RayTimer>"
+              isFloating: "<Placeholder.isFloating>"
+              Direction: "?getString[BeamDirection]"
+              HaloPosition: "<Placeholder.HaloPosition>"
+    CosmeticJump:
+      Conditions: [{ConditionType: CounterRange, Name: CosmeticJump, Namespace: Placeholder, Min: 1, Max: 1}]
+      CounterActions: {OnEnter: [{Namespace: TrapGeneration, Type: Clear}]}
+      NoShuffle: 1
+      BoxContent:
+        AnimationType:
+          Set: 1
+          BoxContent:
+            HurdleJump:
+              Conditions: [{ConditionType: CounterRange, Name: AllowHurdleJump, Namespace: Placeholder, Min: 1}]
+              CounterActions: {OnEnter: [{Name: HurdleJump, Namespace: TrapGeneration, Type: Assign, Value: 1}]}
+            ShortJump:
+              Conditions: [{ConditionType: CounterRange, Name: AllowShortJump, Namespace: Placeholder, Min: 1}]
+              CounterActions: {OnEnter: [{Name: ShortJump, Namespace: TrapGeneration, Type: Assign, Value: 1}]}
+        DamageType:
+          Set: 1
+          BoxContent:
+            Laser:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowLaser, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: LaserOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: LaserOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Laser_Jump_Replacement"}]}
+            MineShort:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+              - {ConditionType: CounterRange, Name: ShortJump, Namespace: TrapGeneration, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: MineShortOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: MineShortOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Mine_Jump_Replacement"}]}
+            MineHurdle:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowMine, Namespace: Placeholder, Min: 1}
+              - {ConditionType: CounterRange, Name: HurdleJump, Namespace: TrapGeneration, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: MineHurdleOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: MineHurdleOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Mine_Jump_Replacement"}]}
+            Ball:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowBall, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: BallOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: BallOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                TripleBomb:
+                  Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Min: '?getBalance[Floor,Traps,Balls,TripleBombsFirstFloor]'}]
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "TripleBomb_Jump_Replacement"}]}
+                BlackBall:
+                  StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Blackball_Jump_Replacement"}]}
+            Tesla:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowTesla, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: TeslaOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: TeslaOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Tesla_Jump_Replacement"}]}
+            Echo:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowEcho, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: EchoOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: EchoOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Echo_Jump_Replacement"}]}
+            Flame:
+              Conditions:
+              - {ConditionType: CounterRange, Name: AllowFlame, Namespace: Placeholder, Min: 1}
+              - ConditionType: Or
+                Content:
+                - {ConditionType: CounterRange, Name: FlameOverallUnlimited, Namespace: ST_Generator, Min: 1}
+                - {ConditionType: CounterRange, Name: FlameOverall, Namespace: ST_Generator, Max: 0, Not: 1}
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Flame_Jump_Replacement"}]}
+            Empty:
+              Weight: 0
+              CancelGeneration: 1
+        PlaceReplacement:
+          PostProcessData:
+            Replacement: {Name: "?getString[TrapObjectName]", Filename: "traps.xml"}
+            OverrideVariable:
+              GlobalTimer: "?getCounter[Placeholder, GlobalTimer]"
+              TriggerActivatorX: "?getCounter[Placeholder, TriggerActivatorX]"
+              TriggerActivatorY: "?getCounter[Placeholder, TriggerActivatorY]"
+              TriggerActivatorH: "?getCounter[Placeholder, TriggerActivatorH]"
+              EnableArea: "?getCounter[Placeholder, EnableArea]"
+              ToFly: "?getCounter[Placeholder, ToFly]"
+              EnableHurdle: "?getCounter[TrapGeneration, HurdleJump]"
+              EnableShort: "?getCounter[TrapGeneration, ShortJump]"
+    CosmeticBall:
+      Conditions: [{ConditionType: CounterRange, Name: CosmeticBall, Namespace: Placeholder, Min: 1, Max: 1}]
+      NoShuffle: 1
+      BoxContent:
+        ChooseType:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            Triple:
+              Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Min: '?getBalance[Floor,Traps,Balls,TripleBombsFirstFloor]'}]
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "TripleBomb"}]}
+            Ball:
+              CounterActions:
+              StringActions: {OnEnter: [{Name: TrapObjectName, Value: "Blackball"}]}
+        Place:
+          PostProcessData:
+            Replacement: {Name: "?getString[TrapObjectName]", Filename: "traps.xml"}
+            OverrideVariable:
+              GlobalTimer: "?getCounter[Placeholder, GlobalTimer]"
+              TriggerActivatorX: "?getCounter[Placeholder, TriggerActivatorX]"
+              TriggerActivatorY: "?getCounter[Placeholder, TriggerActivatorY]"
+              TriggerActivatorH: "?getCounter[Placeholder, TriggerActivatorH]"
+              EnableArea: "?getCounter[Placeholder, EnableArea]"
+              AreaWidth: "?getCounter[Placeholder, AreaWidth]"
+              ToFly: "?getCounter[Placeholder, ToFly]"
+              Type: '?getString[Type]'

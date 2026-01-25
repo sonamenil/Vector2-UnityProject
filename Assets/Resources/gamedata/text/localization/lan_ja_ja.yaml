@@ -1,0 +1,3457 @@
+CBT:
+  NoAccess: "お客様のGoogleアカウントは、ベータ版体験者のリストに含まれていません"
+  NoInternet: "ベータ版で詳細なテストを行うには、インターネットに接続されている必要があります。￼\nネットワーク設定をご確認ください。"
+Chapters:
+  Chapter0:
+    Description: "診断法"
+    Title: "プロローグ"
+  Chapter1:
+    Description: "研究所"
+    Title: "第1章"
+  Chapter2:
+    Description: "管理エリア"
+    Title: "第2章"
+  Coming: "近日公開！"
+Coupons:
+  CardsBoost:
+    Info: "このアイテムを使用すると、アーカイブのアップグレードを1回強化できます。"
+    UseCoupon: " %1"
+    VisualName: "アップグレードの無料強化"
+  EnergyRecharge:
+    Info: "この消耗品をエネルギーの全回復にお役立てください"
+    UseCoupon: " %1"
+    VisualName: "エネルギー回復"
+  Reroll:
+    Info: "このアイテムを使用すると、供給所で1回アップグレードをリロールできます"
+    UseCoupon: " %1"
+    VisualName: "無料リロール"
+  Saveme:
+    Info: "このアイテムを使用すると、死を1度回避できます"
+    UseCoupon: " %1"
+    VisualName: "無料蘇生"
+  UseCouponBase: "無料"
+DialogWindow:
+  Button:
+    ReturnToMainScene: "再スタート"
+  Text:
+    PleaseRestart: "ゲームを再起動して変更点を反映させてください。"
+GUI:
+  Buttons:
+    Archive:
+      Boost: "強化"
+    Back: "戻る"
+    BigLater: "後で"
+    BigYes: "はい"
+    BoosterPack:
+      More: "もっと"
+      Next: "次へ"
+      Open: "開ける"
+    Buy: "購入する"
+    BuyOst: "BUY OST"
+    BuyUpgradeKits: "アップグレードキットを購入"
+    Cancel: "キャンセル"
+    Close: "閉じる"
+    Collect: "集める"
+    Compare: "比べる"
+    Continue: "続ける"
+    Details: "詳細"
+    DontAskAgain: "決して"
+    Download: "ダウンロード"
+    Equip: "装着"
+    Equipment:
+      Charge: "チャージ"
+      FullCharge: "フルチャージ"
+      Upgrade: "アップグレード"
+    GetFree: "無料で手に入れよう"
+    Improve: "改良"
+    Later: "後で"
+    Next: "次へ"
+    'No': "番号"
+    Ok: "OK"
+    QuestWindow:
+      QuestLog: "クエストのログを見る"
+    Reanimate: "蘇生"
+    Replace: "置き換える"
+    Reroll: "リロール"
+    Restart: "再起動"
+    RunAnyway: "後で"
+    Select: "選択"
+    Show: "見る"
+    ShowArchive: "レベルアップ"
+    ShowBoosterpacks: "表示"
+    Skip: "スキップ"
+    Store: "お店"
+    Support: "サポート"
+    View: "見る"
+    WatchRV: "ビデオ閲覧"
+    'Yes': "はい"
+  Labels:
+    Archive:
+      AvailableEffects: "使用可能なエフェクト"
+      BeltUpgrades: "ベルトアップグレード"
+      BlueTricks: "ありふれたトリック"
+      BlueUpgrades: "コモンアップグレード"
+      HandsUpgrades: "グローブアップグレード"
+      HeadUpgrades: "ヘルメットアップグレード"
+      LegsUpgrades: "ブーツアップグレード"
+      MoreToUnlock: "もっとロックを解除しましょう"
+      Notes: "注意"
+      RedTricks: "究極のトリック"
+      RedUpgrades: "究極アップグレード"
+      SectionTitle: "アーカイブ"
+      StoryUpgrades: "ストーリーアイテム"
+      StuntsUpgrades: "トリック"
+      TorsoUpgrades: "鎧アップグレード"
+      YellowTricks: "優良トリック"
+      YellowUpgrades: "優良アップグレード"
+    BoosterPack:
+      Section: "アップグレードキット"
+    Common:
+      UpgradeKit: "アップグレードキット"
+      UpgradeKitTwo: "アップグレードキット2個"
+    Completed: "クリア済み"
+    Details:
+      Title: "詳細"
+      UpgradeDetails: "アップグレードをタップしたら詳細が表示されます"
+    DialogWindow:
+      Text:
+        Acception: "無料走行強化を本当に使用しますか？"
+        AssignmentComplete: "任務達成"
+        BoostQuestion: "この操作をすると、選択したアイテムのレベルが%1分間の間1つ上昇します。本当に実行しますか？"
+        BoosterpackCanOpened: "まだ開いていないアップグレードキットがあります！"
+        BundleDownloadRetry: "ダウンロード中にエラーが発生しました。リトライしますか？"
+        BundleDownloadRetryRequired: "ダウンロード中にエラーが発生しました。再度お試しください。"
+        BundleRequest: "アップデート(%1)をダウンロードしますか？\n%2"
+        BundleRequestRequired: "進めるには、アップデート(%1)をダウンロードしていただく必要があります。\n%2"
+        BuyQuestion: "本当にそうしますか？"
+        CardBoost: "アップグレードで強化を使用すると、次の走行で供給所に出現する確率が上昇します。"
+        CardsNotLeveledUp: "レベルアップできるアップグレードまたはトリックがあります！"
+        Days: "日間"
+        DoYouLikeGame: "Vector 2 はお気に入りいただけましたか？"
+        HelpImproveGame: "ゲームをどのように改善できるかご意見ください！"
+        InitialBundleRequest: "今すぐ全てのアップデートをダウンロードしますか？\n%1"
+        InternetCharged: "注意：インターネット使用料が発生する場合があります。"
+        Limit: ""
+        NoChips: "チップが足りません！"
+        NoMoney: "トークンが足りません！"
+        NoPoints: "ポイントが足りません！"
+        NoQuestProgress: "現在の任務がなかなか達成できない場合は、アップグレードキットを購入して、ぴったりなアップグレードを見つけましょう！"
+        NotifyNewBoosterPackOnUpdate: "ゲームを引き続きプレーして頂きまして、ありがとうございます！最新のアップグレードキットをチェックしてみてください-あなたにはすでに無料で支給されています！"
+        RateGame: "ぜひ 5 つ星評価をお願いいたします！"
+        ReallyQuit: "本当に止めますか？"
+        Recharge: "チップを払ってこのプロトコルを遂行しますか？"
+        Recommend: "推奨"
+        Reset: "本当に今までの進行を全て削除しますか？操作後は元に戻せません！"
+        ResourcesValidationFailed: "ゲームデータが破損しています！ゲームを再インストールしてください。"
+        ResourcesValidationOutdated: "ゲームデータが破損しました！インターネット接続を確立し、ゲームを再開してください。"
+        Restart: "変更を適用します。アプリを再起動してください。"
+        Reward: "報酬:"
+        SaveMe: "挑戦者 #%1が危篤状態です。蘇生処置を開始しています。\nもう一度試しますか？"
+        WrongBoost: "強化したアップグレードは、選択したプロトコルの下に表示されず、強化中のままになります。\n続行しますか？"
+      Title:
+        Additional: "追加使用"
+        Announcement: "告知"
+        BundleAvailable: "アップデートのダウンロード可能"
+        BundleDownload: "(%1)をダウンロード中"
+        BundleIsRequired: "アップデートが必要です"
+        Confirm: "確認"
+        ConnectionFailed: "接続に失敗しました"
+        HelpImproveGame: "告知"
+        Information: "情報"
+        NoQuestProgress: "メッセージ"
+        RateGame: "評価をお願いします！"
+        SaveMe: " 2度目のチャンス"
+        Upgrade: "制限のアップグレードを使用します"
+        Warning: "警告！"
+    Equipment:
+      Charge: "チャージ"
+      Charged: "準備完了"
+      Charging: "チャージ中"
+      StartFloor: ""
+      Unlimited: "無制限"
+    FeedbackWindow:
+      Text: "最近よく走って頂いているようですね。私たちのゲームは気に入っていただけましたでしょうか？バグは発生しませんでしたか？ご意見はございませんか？ご意見やご感想がございましたら、お気軽にご送信下さい、このゲームの改善に活用させていただきます！"
+      Title: "評価を書く"
+    Generating: "生成中..."
+    Level: "フロア"
+    Loading: "ロード中..."
+    LockedStarterPack: "任務をさらに達成して、低いフロアからスタートできるロックを解除しましょう"
+    NoCard: "アップグレードは未獲得です"
+    Options:
+      BackToGame: "ゲームに戻る"
+      Credits: "クレジット"
+      FAQ: "よくある質問"
+      GameCenter: "ゲームセンター"
+      GooglePG: "Google Playのサービス"
+      Graphics: "最適化されたグラフィックを使用"
+      Language: "言語"
+      LanguageName: "Japanese"
+      ResetProgress: "進捗をリセット"
+      RestorePurchases: "購入復元"
+      SelectLanguage: "タップで言語選択"
+      Settings: "設定"
+      Subtitles: "サブタイトル"
+    QuestWindow:
+      NewQuest: "新たな任務に挑戦できるようになりました！"
+      Reward: "報酬:"
+      SectionTitle: "日誌"
+      Title: "告知"
+    Recieving: "データ取得中..."
+    SaleWindow1:
+      Description: "特別オファー―これから24時間ご利用いただけます"
+      Title: "スターターパック"
+    SaleWindow2:
+      Description: "これから%1分間だけご利用いただけます："
+      Title: "期間限定オファー！"
+    Shop:
+      AlreadyInGadget: "同じアップグレードは2回使用できません！"
+      Inventory: "所持品"
+      NoCardForGadget: "装備するアップグレードを選択してください"
+      NoUpgrades: "有効なアップグレードがありません。\n入手するにはランクを稼いでアップグレードのロックを解除してください！"
+      SelectUpgradeForReplacing: "置き換えるアップグレードを選択してください"
+      Store: "物資"
+      UpgradeDetails: "アップグレードをタップしたら詳細が表示されます"
+    Tap: "お好きな場所をタップして続けてください..."
+    Tips:
+      '1': "もっと高ランクを達成するには、ポイントをさらに獲得できるアップグレードを探してみましょう。"
+      '2': "データチップが必要な機能があります。\nチップ検出器を使用して見つけるか、データチップパックを購入して時間を節約しましょう。"
+      '3': "エネルギーは無料で補充できます！\n\nアップグレードキットから、またはエネルギー補充検出器を使用して無料エネルギー補充を見つけてみましょう。"
+      '4': "チップを消費せずに生き延びましょう！\n\nアップグレードキットから、または回復検出器を使用して無料蘇生を見つけてみましょう。"
+      '5': "目標を達成すべく、策略を練ってみましょう！\n\n供給所でアップグレードをリロールし、走行に必要なものを手に入れましょう。"
+      '6': "アップグレードの中には、相乗効果があるものがあります！\n\n拡大評価と一緒に正確なメカニズムを使用してみましょう。"
+      '7': "アップグレードの中には、相乗効果があるものがあります！\nアドレナリン上昇と一緒に研究データ分析装置を使用してみましょう。"
+      '8': "ランクを獲得するにはポイントが必要です。\n\nトリックを行ったり、フロアを達成したりすればポイントを入手できます。\nアップグレードを使用して、もっとポイントを獲得しましょう！"
+      '9': "究極アップグレードを使用すれば、サクサク進めることができます。\n\n離れたフロアを達成して、ターミナルとアクセスしましょう。アップグレードキットを使用して、もっと究極アップグレードを見つけてみましょう。"
+      '10': "アップグレードをレベルアップしましょう！\n\nアップグレードの研究を重ねて、パワーを上昇させましょう。"
+      '11': "クローンはそれぞれ新規装備で開始し、ランクをはじめから獲得しなければなりません。"
+    ToBeContinued:
+      Tap: "お好きな場所をタップしてください..."
+      Title: "消えたシグナル"
+    TotalCredits: "トークン："
+    TotalPoints: "ポイント："
+    UnknownProtocol: "未知のプロトコル"
+Gadgets:
+  BaseModel:
+    Legs:
+      Text: "供給所でユニフォームブーツを生成できます。"
+      VisualName: "ユニフォームブーツ"
+    Torso:
+      Text: "供給所でユニフォームジャケットを生成できます。"
+      VisualName: "ユニフォームジャケット"
+  BonusTokens:
+    Text: "各トークンにつきボーナス価値+%2"
+  BonusTokensFromTokens:
+    Text: "収集した各トークンのコストが%2上昇"
+  BonusTokensFromTokens_1:
+    EffectVisualName: "追加研究"
+  BonusTokensFromTokens_1_Belt:
+    Text: " %1"
+  BonusTokensFromTokens_1_Hands:
+    Text: " %1"
+  BonusTokensFromTokens_1_Head:
+    Text: " %1"
+  BonusTokensFromTokens_1_Legs:
+    Text: " %1"
+  BonusTokensFromTokens_1_Torso:
+    Text: " %1"
+  BonusTokensFromTokens_2:
+    EffectVisualName: "優良追加研究"
+  BonusTokensFromTokens_2_Belt:
+    Text: " %1"
+  BonusTokensFromTokens_2_Hands:
+    Text: " %1"
+  BonusTokensFromTokens_2_Head:
+    Text: " %1"
+  BonusTokensFromTokens_2_Legs:
+    Text: " %1"
+  BonusTokensFromTokens_2_Torso:
+    Text: " %1"
+  BonusTokensFromTokens_3:
+    EffectVisualName: "究極追加研究"
+  BonusTokensFromTokens_3_Belt:
+    Text: " %1"
+  BonusTokensFromTokens_3_Hands:
+    Text: " %1"
+  BonusTokensFromTokens_3_Head:
+    Text: " %1"
+  BonusTokensFromTokens_3_Legs:
+    Text: " %1"
+  BonusTokensFromTokens_3_Torso:
+    Text: " %1"
+  BonusTokensFromTraps:
+    Text: "チャージ消費後%2秒以内に収集したトークンにボーナス価値+%3"
+  BonusTokensFromTraps_1:
+    EffectVisualName: "アドレナリン上昇"
+  BonusTokensFromTraps_1_Belt:
+    Text: " %1"
+  BonusTokensFromTraps_1_Hands:
+    Text: " %1"
+  BonusTokensFromTraps_1_Head:
+    Text: " %1"
+  BonusTokensFromTraps_1_Legs:
+    Text: " %1"
+  BonusTokensFromTraps_1_Torso:
+    Text: " %1"
+  BonusTokensFromTraps_2:
+    EffectVisualName: "優良アドレナリン上昇"
+  BonusTokensFromTraps_2_Belt:
+    Text: " %1"
+  BonusTokensFromTraps_2_Hands:
+    Text: " %1"
+  BonusTokensFromTraps_2_Head:
+    Text: " %1"
+  BonusTokensFromTraps_2_Legs:
+    Text: " %1"
+  BonusTokensFromTraps_2_Torso:
+    Text: " %1"
+  BonusTokensFromTraps_3:
+    EffectVisualName: "究極アドレナリン上昇"
+  BonusTokensFromTraps_3_Belt:
+    Text: " %1"
+  BonusTokensFromTraps_3_Hands:
+    Text: " %1"
+  BonusTokensFromTraps_3_Head:
+    Text: " %1"
+  BonusTokensFromTraps_3_Legs:
+    Text: " %1"
+  BonusTokensFromTraps_3_Torso:
+    Text: " %1"
+  BonusTokensFromTricks:
+    Text: "トリックをする度にトークンのボーナス価値+%2"
+  BonusTokensFromTricks_1:
+    EffectVisualName: "移動度分析器"
+  BonusTokensFromTricks_1_Belt:
+    Text: " %1"
+  BonusTokensFromTricks_1_Hands:
+    Text: " %1"
+  BonusTokensFromTricks_1_Head:
+    Text: " %1"
+  BonusTokensFromTricks_1_Legs:
+    Text: " %1"
+  BonusTokensFromTricks_1_Torso:
+    Text: " %1"
+  BonusTokensFromTricks_2:
+    EffectVisualName: "優良移動度分析器"
+  BonusTokensFromTricks_2_Belt:
+    Text: " %1"
+  BonusTokensFromTricks_2_Hands:
+    Text: " %1"
+  BonusTokensFromTricks_2_Head:
+    Text: " %1"
+  BonusTokensFromTricks_2_Legs:
+    Text: " %1"
+  BonusTokensFromTricks_2_Torso:
+    Text: " %1"
+  BonusTokensFromTricks_3:
+    EffectVisualName: "究極移動度分析器"
+  BonusTokensFromTricks_3_Belt:
+    Text: " %1"
+  BonusTokensFromTricks_3_Hands:
+    Text: " %1"
+  BonusTokensFromTricks_3_Head:
+    Text: " %1"
+  BonusTokensFromTricks_3_Legs:
+    Text: " %1"
+  BonusTokensFromTricks_3_Torso:
+    Text: " %1"
+  BonusTokens_1:
+    EffectVisualName: "研究コレクター"
+  BonusTokens_1_Belt:
+    Text: " %1"
+  BonusTokens_1_Hands:
+    Text: " %1"
+  BonusTokens_1_Head:
+    Text: " %1"
+  BonusTokens_1_Legs:
+    Text: " %1"
+  BonusTokens_1_Torso:
+    Text: " %1"
+  BonusTokens_2:
+    EffectVisualName: "優良研究コレクター"
+  BonusTokens_2_Belt:
+    Text: " %1"
+  BonusTokens_2_Hands:
+    Text: " %1"
+  BonusTokens_2_Head:
+    Text: " %1"
+  BonusTokens_2_Legs:
+    Text: " %1"
+  BonusTokens_2_Torso:
+    Text: " %1"
+  BonusTokens_3:
+    EffectVisualName: "究極研究コレクター"
+  BonusTokens_3_Belt:
+    Text: " %1"
+  BonusTokens_3_Hands:
+    Text: " %1"
+  BonusTokens_3_Head:
+    Text: " %1"
+  BonusTokens_3_Legs:
+    Text: " %1"
+  BonusTokens_3_Torso:
+    Text: " %1"
+  CouponCardBoostPassive:
+    Text: " %2%の確率で、研究トークンの代わりに無料アップグレード強化が見つかる。ただし1フロアにつき確率は%3未満"
+  CouponCardBoostPassive_1:
+    EffectVisualName: "アップグレード強化検出器"
+  CouponCardBoostPassive_1_Belt:
+    Text: " %1"
+  CouponCardBoostPassive_1_Hands:
+    Text: " %1"
+  CouponCardBoostPassive_1_Head:
+    Text: " %1"
+  CouponCardBoostPassive_1_Legs:
+    Text: " %1"
+  CouponCardBoostPassive_1_Torso:
+    Text: " %1"
+  CouponCardBoostPassive_2:
+    EffectVisualName: "優良アップグレード強化検出器"
+  CouponCardBoostPassive_2_Belt:
+    Text: " %1"
+  CouponCardBoostPassive_2_Hands:
+    Text: " %1"
+  CouponCardBoostPassive_2_Head:
+    Text: " %1"
+  CouponCardBoostPassive_2_Legs:
+    Text: " %1"
+  CouponCardBoostPassive_2_Torso:
+    Text: " %1"
+  CouponCardBoostPassive_3:
+    EffectVisualName: "究極アップグレード強化検出器"
+  CouponCardBoostPassive_3_Belt:
+    Text: " %1"
+  CouponCardBoostPassive_3_Hands:
+    Text: " %1"
+  CouponCardBoostPassive_3_Head:
+    Text: " %1"
+  CouponCardBoostPassive_3_Legs:
+    Text: " %1"
+  CouponCardBoostPassive_3_Torso:
+    Text: " %1"
+  CouponEnergyRechargePassive:
+    Text: " %2%の確率で、研究トークンの代わりに無料エネルギー補充が見つかる。ただし1フロアにつき確率は%3未満"
+  CouponEnergyRechargePassive_1:
+    EffectVisualName: "エネルギー補充検出器"
+  CouponEnergyRechargePassive_1_Belt:
+    Text: " %1"
+  CouponEnergyRechargePassive_1_Hands:
+    Text: " %1"
+  CouponEnergyRechargePassive_1_Head:
+    Text: " %1"
+  CouponEnergyRechargePassive_1_Legs:
+    Text: " %1"
+  CouponEnergyRechargePassive_1_Torso:
+    Text: " %1"
+  CouponEnergyRechargePassive_2:
+    EffectVisualName: "優良エネルギー補充検出器"
+  CouponEnergyRechargePassive_2_Belt:
+    Text: " %1"
+  CouponEnergyRechargePassive_2_Hands:
+    Text: " %1"
+  CouponEnergyRechargePassive_2_Head:
+    Text: " %1"
+  CouponEnergyRechargePassive_2_Legs:
+    Text: " %1"
+  CouponEnergyRechargePassive_2_Torso:
+    Text: " %1"
+  CouponEnergyRechargePassive_3:
+    EffectVisualName: "究極エネルギー補充検出器"
+  CouponEnergyRechargePassive_3_Belt:
+    Text: " %1"
+  CouponEnergyRechargePassive_3_Hands:
+    Text: " %1"
+  CouponEnergyRechargePassive_3_Head:
+    Text: " %1"
+  CouponEnergyRechargePassive_3_Legs:
+    Text: " %1"
+  CouponEnergyRechargePassive_3_Torso:
+    Text: " %1"
+  CouponRerollPassive:
+    Text: " %2%の確率で、研究トークンの代わりに無料リロールが見つかる。ただし1フロアにつき確率は%3未満"
+  CouponRerollPassive_1:
+    EffectVisualName: "リロール検出器"
+  CouponRerollPassive_1_Belt:
+    Text: " %1"
+  CouponRerollPassive_1_Hands:
+    Text: " %1"
+  CouponRerollPassive_1_Head:
+    Text: " %1"
+  CouponRerollPassive_1_Legs:
+    Text: " %1"
+  CouponRerollPassive_1_Torso:
+    Text: " %1"
+  CouponRerollPassive_2:
+    EffectVisualName: "優良リロール検出器"
+  CouponRerollPassive_2_Belt:
+    Text: " %1"
+  CouponRerollPassive_2_Hands:
+    Text: " %1"
+  CouponRerollPassive_2_Head:
+    Text: " %1"
+  CouponRerollPassive_2_Legs:
+    Text: " %1"
+  CouponRerollPassive_2_Torso:
+    Text: " %1"
+  CouponRerollPassive_3:
+    EffectVisualName: "究極リロール検出器"
+  CouponRerollPassive_3_Belt:
+    Text: " %1"
+  CouponRerollPassive_3_Hands:
+    Text: " %1"
+  CouponRerollPassive_3_Head:
+    Text: " %1"
+  CouponRerollPassive_3_Legs:
+    Text: " %1"
+  CouponRerollPassive_3_Torso:
+    Text: " %1"
+  CouponSaveMePassive:
+    Text: " %2%の確率で、研究トークンの代わりに無料回復が見つかる。ただし1フロアにつき確率は%3未満"
+  CouponSaveMePassive_1:
+    EffectVisualName: "回復検出器"
+  CouponSaveMePassive_1_Belt:
+    Text: " %1"
+  CouponSaveMePassive_1_Hands:
+    Text: " %1"
+  CouponSaveMePassive_1_Head:
+    Text: " %1"
+  CouponSaveMePassive_1_Legs:
+    Text: " %1"
+  CouponSaveMePassive_1_Torso:
+    Text: " %1"
+  CouponSaveMePassive_2:
+    EffectVisualName: "優良回復検出器"
+  CouponSaveMePassive_2_Belt:
+    Text: " %1"
+  CouponSaveMePassive_2_Hands:
+    Text: " %1"
+  CouponSaveMePassive_2_Head:
+    Text: " %1"
+  CouponSaveMePassive_2_Legs:
+    Text: " %1"
+  CouponSaveMePassive_2_Torso:
+    Text: " %1"
+  CouponSaveMePassive_3:
+    EffectVisualName: "究極回復検出器"
+  CouponSaveMePassive_3_Belt:
+    Text: " %1"
+  CouponSaveMePassive_3_Hands:
+    Text: " %1"
+  CouponSaveMePassive_3_Head:
+    Text: " %1"
+  CouponSaveMePassive_3_Legs:
+    Text: " %1"
+  CouponSaveMePassive_3_Torso:
+    Text: " %1"
+  DarknessAdditionalCharges:
+    Text: "暗闇の中で %2 追加チャージできる特殊な覆い"
+  DarknessAdditionalCharges_1:
+    EffectVisualName: "感光性材料"
+    Text: "暗闇の中でさらに装備を強化できる特殊な覆い"
+  DarknessAdditionalCharges_1_Belt:
+    Text: " %1"
+  DarknessAdditionalCharges_1_Hands:
+    Text: " %1"
+  DarknessAdditionalCharges_1_Head:
+    Text: " %1"
+  DarknessAdditionalCharges_1_Legs:
+    Text: " %1"
+  DarknessAdditionalCharges_1_Torso:
+    Text: " %1"
+  DarknessAdditionalCharges_2:
+    EffectVisualName: "改良済み感光性材料"
+    Text: "暗闇の中でさらに装備を強化できる特殊な覆い"
+  DarknessAdditionalCharges_2_Belt:
+    Text: " %1"
+  DarknessAdditionalCharges_2_Hands:
+    Text: " %1"
+  DarknessAdditionalCharges_2_Head:
+    Text: " %1"
+  DarknessAdditionalCharges_2_Legs:
+    Text: " %1"
+  DarknessAdditionalCharges_2_Torso:
+    Text: " %1"
+  DarknessAdditionalCharges_3:
+    EffectVisualName: "優良感光性材料"
+    Text: "暗闇の中でさらに装備を強化できる特殊な覆い"
+  DarknessAdditionalCharges_3_Belt:
+    Text: " %1"
+  DarknessAdditionalCharges_3_Hands:
+    Text: " %1"
+  DarknessAdditionalCharges_3_Head:
+    Text: " %1"
+  DarknessAdditionalCharges_3_Legs:
+    Text: " %1"
+  DarknessAdditionalCharges_3_Torso:
+    Text: " %1"
+  DarknessRadius_1:
+    EffectVisualName: "イルミネーション"
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_1_Belt:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_1_Hands:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_1_Head:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_1_Legs:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_1_Torso:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_2:
+    EffectVisualName: "改良済みイルミネーション"
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_2_Belt:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_2_Hands:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_2_Head:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_2_Legs:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_2_Torso:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_3:
+    EffectVisualName: "優良イルミネーション"
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_3_Belt:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_3_Hands:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_3_Head:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_3_Legs:
+    Text: "暗闇での視界が改善されます"
+  DarknessRadius_3_Torso:
+    Text: "暗闇での視界が改善されます"
+  DarknessTime_1:
+    EffectVisualName: "電圧安定化"
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_1_Belt:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_1_Hands:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_1_Head:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_1_Legs:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_1_Torso:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_2:
+    EffectVisualName: "改良済み電圧安定化"
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_2_Belt:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_2_Hands:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_2_Head:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_2_Legs:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_2_Torso:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_3:
+    EffectVisualName: "優良電圧安定化"
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_3_Belt:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_3_Hands:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_3_Head:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_3_Legs:
+    Text: "コンビナートの電力供給量を修復します"
+  DarknessTime_3_Torso:
+    Text: "コンビナートの電力供給量を修復します"
+  EMP:
+    Text: "特定のエリアにある見えているトラップをすべて無効にできる。毎回、使用後に%2秒の補充時間が必要。"
+  EMP_3:
+    EffectVisualName: "EMPコントローラー"
+  EMP_3_Legs:
+    Text: " %1"
+  EndFloorChargePoints:
+    Text: "チャージを消費するごとにフロアの最後でポイント+%2"
+  EndFloorChargePointsFactor:
+    Text: "チャージを消費するたびにフロアのポイント+%2%"
+  EndFloorChargePointsFactor_1:
+    EffectVisualName: "パフォーマンスのハッキング"
+  EndFloorChargePointsFactor_1_Belt:
+    Text: " %1"
+  EndFloorChargePointsFactor_1_Hands:
+    Text: " %1"
+  EndFloorChargePointsFactor_1_Head:
+    Text: " %1"
+  EndFloorChargePointsFactor_1_Legs:
+    Text: " %1"
+  EndFloorChargePointsFactor_1_Torso:
+    Text: " %1"
+  EndFloorChargePointsFactor_2:
+    EffectVisualName: "優良パフォーマンスのハッキング"
+  EndFloorChargePointsFactor_2_Belt:
+    Text: " %1"
+  EndFloorChargePointsFactor_2_Hands:
+    Text: " %1"
+  EndFloorChargePointsFactor_2_Head:
+    Text: " %1"
+  EndFloorChargePointsFactor_2_Legs:
+    Text: " %1"
+  EndFloorChargePointsFactor_2_Torso:
+    Text: " %1"
+  EndFloorChargePointsFactor_3:
+    EffectVisualName: "究極パフォーマンスのハッキング"
+  EndFloorChargePointsFactor_3_Belt:
+    Text: " %1"
+  EndFloorChargePointsFactor_3_Hands:
+    Text: " %1"
+  EndFloorChargePointsFactor_3_Head:
+    Text: " %1"
+  EndFloorChargePointsFactor_3_Legs:
+    Text: " %1"
+  EndFloorChargePointsFactor_3_Torso:
+    Text: " %1"
+  EndFloorChargePoints_1:
+    EffectVisualName: "原型装備"
+  EndFloorChargePoints_1_Belt:
+    Text: " %1"
+  EndFloorChargePoints_1_Hands:
+    Text: " %1"
+  EndFloorChargePoints_1_Head:
+    Text: " %1"
+  EndFloorChargePoints_1_Legs:
+    Text: " %1"
+  EndFloorChargePoints_1_Torso:
+    Text: " %1"
+  EndFloorChargePoints_2:
+    EffectVisualName: "優良原型装備"
+  EndFloorChargePoints_2_Belt:
+    Text: " %1"
+  EndFloorChargePoints_2_Hands:
+    Text: " %1"
+  EndFloorChargePoints_2_Head:
+    Text: " %1"
+  EndFloorChargePoints_2_Legs:
+    Text: " %1"
+  EndFloorChargePoints_2_Torso:
+    Text: " %1"
+  EndFloorChargePoints_3:
+    EffectVisualName: "究極原型装備"
+  EndFloorChargePoints_3_Belt:
+    Text: " %1"
+  EndFloorChargePoints_3_Hands:
+    Text: " %1"
+  EndFloorChargePoints_3_Head:
+    Text: " %1"
+  EndFloorChargePoints_3_Legs:
+    Text: " %1"
+  EndFloorChargePoints_3_Torso:
+    Text: " %1"
+  EndFloorPoints:
+    Text: "各フロア達成ごとにポイント+%2"
+  EndFloorPointsFactor:
+    Text: "各フロア達成ごとにポイント+%2%"
+  EndFloorPointsFactorFromContextAnim:
+    Text: "障害物を完全克服する度に各フロア追加ポイント+%2%"
+  EndFloorPointsFactorFromContextAnim_1:
+    EffectVisualName: "拡大評価"
+  EndFloorPointsFactorFromContextAnim_1_Belt:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_1_Hands:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_1_Head:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_1_Legs:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_1_Torso:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2:
+    EffectVisualName: "優良拡大評価"
+  EndFloorPointsFactorFromContextAnim_2_Belt:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2_Hands:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2_Head:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2_Legs:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2_Torso:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3:
+    EffectVisualName: "究極拡大評価"
+  EndFloorPointsFactorFromContextAnim_3_Belt:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3_Hands:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3_Head:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3_Legs:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3_Torso:
+    Text: " %1"
+  EndFloorPointsFactor_1:
+    EffectVisualName: "パフォーマンス報酬"
+  EndFloorPointsFactor_1_Belt:
+    Text: " %1"
+  EndFloorPointsFactor_1_Hands:
+    Text: " %1"
+  EndFloorPointsFactor_1_Head:
+    Text: " %1"
+  EndFloorPointsFactor_1_Legs:
+    Text: " %1"
+  EndFloorPointsFactor_1_Torso:
+    Text: " %1"
+  EndFloorPointsFactor_2:
+    EffectVisualName: "優良パフォーマンス報酬"
+  EndFloorPointsFactor_2_Belt:
+    Text: " %1"
+  EndFloorPointsFactor_2_Hands:
+    Text: " %1"
+  EndFloorPointsFactor_2_Head:
+    Text: " %1"
+  EndFloorPointsFactor_2_Legs:
+    Text: " %1"
+  EndFloorPointsFactor_2_Torso:
+    Text: " %1"
+  EndFloorPointsFactor_3:
+    EffectVisualName: "究極パフォーマンス報酬"
+  EndFloorPointsFactor_3_Belt:
+    Text: " %1"
+  EndFloorPointsFactor_3_Hands:
+    Text: " %1"
+  EndFloorPointsFactor_3_Head:
+    Text: " %1"
+  EndFloorPointsFactor_3_Legs:
+    Text: " %1"
+  EndFloorPointsFactor_3_Torso:
+    Text: " %1"
+  EndFloorPointsFromContextAnim:
+    Text: "障害物を完全克服する度にフロア達成ポイント+%2"
+  EndFloorPointsFromContextAnim_1:
+    EffectVisualName: "正確なメカニズム"
+  EndFloorPointsFromContextAnim_1_Belt:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_1_Hands:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_1_Head:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_1_Legs:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_1_Torso:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2:
+    EffectVisualName: "優良の正確なメカニズム"
+  EndFloorPointsFromContextAnim_2_Belt:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2_Hands:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2_Head:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2_Legs:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2_Torso:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3:
+    EffectVisualName: "究極の正確なメカニズム"
+  EndFloorPointsFromContextAnim_3_Belt:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3_Hands:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3_Head:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3_Legs:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3_Torso:
+    Text: " %1"
+  EndFloorPoints_1:
+    EffectVisualName: "パフォーマンス最適化"
+  EndFloorPoints_1_Belt:
+    Text: " %1"
+  EndFloorPoints_1_Hands:
+    Text: " %1"
+  EndFloorPoints_1_Head:
+    Text: " %1"
+  EndFloorPoints_1_Legs:
+    Text: " %1"
+  EndFloorPoints_1_Torso:
+    Text: " %1"
+  EndFloorPoints_2:
+    EffectVisualName: "優良パフォーマンス最適化"
+  EndFloorPoints_2_Belt:
+    Text: " %1"
+  EndFloorPoints_2_Hands:
+    Text: " %1"
+  EndFloorPoints_2_Head:
+    Text: " %1"
+  EndFloorPoints_2_Legs:
+    Text: " %1"
+  EndFloorPoints_2_Torso:
+    Text: " %1"
+  EndFloorPoints_3:
+    EffectVisualName: "究極パフォーマンス最適化"
+  EndFloorPoints_3_Belt:
+    Text: " %1"
+  EndFloorPoints_3_Hands:
+    Text: " %1"
+  EndFloorPoints_3_Head:
+    Text: " %1"
+  EndFloorPoints_3_Legs:
+    Text: " %1"
+  EndFloorPoints_3_Torso:
+    Text: " %1"
+  EndFloorRecoverCharges:
+    Text: " %2%の確率で、供給所で送電線と接触して追加チャージが溜まります"
+  EndFloorRecoverCharges_1:
+    EffectVisualName: "電力流出"
+  EndFloorRecoverCharges_1_Belt:
+    Text: " %1"
+  EndFloorRecoverCharges_1_Hands:
+    Text: " %1"
+  EndFloorRecoverCharges_1_Head:
+    Text: " %1"
+  EndFloorRecoverCharges_1_Legs:
+    Text: " %1"
+  EndFloorRecoverCharges_1_Torso:
+    Text: " %1"
+  EndFloorRecoverCharges_2:
+    EffectVisualName: "優良電力流出"
+  EndFloorRecoverCharges_2_Belt:
+    Text: " %1"
+  EndFloorRecoverCharges_2_Hands:
+    Text: " %1"
+  EndFloorRecoverCharges_2_Head:
+    Text: " %1"
+  EndFloorRecoverCharges_2_Legs:
+    Text: " %1"
+  EndFloorRecoverCharges_2_Torso:
+    Text: " %1"
+  EndFloorRecoverCharges_3:
+    EffectVisualName: "究極電力流出"
+  EndFloorRecoverCharges_3_Belt:
+    Text: " %1"
+  EndFloorRecoverCharges_3_Hands:
+    Text: " %1"
+  EndFloorRecoverCharges_3_Head:
+    Text: " %1"
+  EndFloorRecoverCharges_3_Legs:
+    Text: " %1"
+  EndFloorRecoverCharges_3_Torso:
+    Text: " %1"
+  KeyAdditional_1:
+    EffectVisualName: "キー検出器"
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_1_Belt:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_1_Hands:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_1_Head:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_1_Legs:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_1_Torso:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_2:
+    EffectVisualName: "改良済みキー検出器"
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_2_Belt:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_2_Hands:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_2_Head:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_2_Legs:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_2_Torso:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_3:
+    EffectVisualName: "優良キー検出器"
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_3_Belt:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_3_Hands:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_3_Head:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_3_Legs:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyAdditional_3_Torso:
+    Text: "それぞれのフロアで、追加キーを見つけられる確率%1%"
+  KeyDouble_1:
+    EffectVisualName: "キーレプリケーター"
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_1_Belt:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_1_Hands:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_1_Head:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_1_Legs:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_1_Torso:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_2:
+    EffectVisualName: "優良キー検出器"
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_2_Belt:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_2_Hands:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_2_Head:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_2_Legs:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_2_Torso:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_3:
+    EffectVisualName: "究極キー検出器"
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_3_Belt:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_3_Hands:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_3_Head:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_3_Legs:
+    Text: "キーを2つ獲得できる確率%1%"
+  KeyDouble_3_Torso:
+    Text: "キーを2つ獲得できる確率%1%"
+  Lockpick_1:
+    VisualItemName: "錠前破り"
+  Lockpick_2:
+    VisualItemName: "改良済み錠前破り"
+  Lockpick_3:
+    VisualItemName: "優良錠前破り"
+  Magnetizer:
+    Text: "半径%2メートル以内にあるアイテムを引き寄せる。"
+  Magnetizer_3:
+    EffectVisualName: "磁力マニピュレーター"
+  Magnetizer_3_Torso:
+    Text: " %1"
+  PassedLevelsBonusTokens:
+    Text: "初めて通過したフロアでのトークン獲得が%2上昇し、それ以降の通過は%3上昇"
+  PassedLevelsBonusTokens_1:
+    EffectVisualName: "研究累算器"
+  PassedLevelsBonusTokens_1_Belt:
+    Text: " %1"
+  PassedLevelsBonusTokens_1_Hands:
+    Text: " %1"
+  PassedLevelsBonusTokens_1_Head:
+    Text: " %1"
+  PassedLevelsBonusTokens_1_Legs:
+    Text: " %1"
+  PassedLevelsBonusTokens_1_Torso:
+    Text: " %1"
+  PassedLevelsBonusTokens_2:
+    EffectVisualName: "優良研究累算器"
+  PassedLevelsBonusTokens_2_Belt:
+    Text: " %1"
+  PassedLevelsBonusTokens_2_Hands:
+    Text: " %1"
+  PassedLevelsBonusTokens_2_Head:
+    Text: " %1"
+  PassedLevelsBonusTokens_2_Legs:
+    Text: " %1"
+  PassedLevelsBonusTokens_2_Torso:
+    Text: " %1"
+  PassedLevelsBonusTokens_3:
+    EffectVisualName: "究極研究累算器"
+  PassedLevelsBonusTokens_3_Belt:
+    Text: " %1"
+  PassedLevelsBonusTokens_3_Hands:
+    Text: " %1"
+  PassedLevelsBonusTokens_3_Head:
+    Text: " %1"
+  PassedLevelsBonusTokens_3_Legs:
+    Text: " %1"
+  PassedLevelsBonusTokens_3_Torso:
+    Text: " %1"
+  RestoreCharges:
+    Text: "完全放電した時、アイテムが%2%の確率で%3チャージされる"
+  RestoreCharges_1:
+    EffectVisualName: "予備電力"
+    Text: "最後のチャージを使い切った後、%1%の確率でチャージが50%回復します"
+  RestoreCharges_1_Belt:
+    Text: " %1"
+  RestoreCharges_1_Hands:
+    Text: " %1"
+  RestoreCharges_1_Head:
+    Text: " %1"
+  RestoreCharges_1_Legs:
+    Text: " %1"
+  RestoreCharges_1_Torso:
+    Text: " %1"
+  RestoreCharges_2:
+    EffectVisualName: "優良予備電力"
+    Text: "最後のチャージを使い切った後、%1%の確率でチャージが50%回復します"
+  RestoreCharges_2_Belt:
+    Text: " %1"
+  RestoreCharges_2_Hands:
+    Text: " %1"
+  RestoreCharges_2_Head:
+    Text: " %1"
+  RestoreCharges_2_Legs:
+    Text: " %1"
+  RestoreCharges_2_Torso:
+    Text: " %1"
+  RestoreCharges_3:
+    EffectVisualName: "究極予備電力"
+    Text: "最後のチャージを使い切った後、50%の確率でチャージが50%回復します"
+  RestoreCharges_3_Belt:
+    Text: " %1"
+  RestoreCharges_3_Hands:
+    Text: " %1"
+  RestoreCharges_3_Head:
+    Text: " %1"
+  RestoreCharges_3_Legs:
+    Text: " %1"
+  RestoreCharges_3_Torso:
+    Text: " %1"
+  SlotsVisualNames:
+    Belt: "ベルト"
+    Hands: "手"
+    Head: "頭"
+    Legs: "足"
+    StarterPackBuff: ""
+    Stunts: "トリック"
+    Torso: "胴"
+  StuntMultiReward:
+    Text: "トリックを行ったときに+%3%増のポイントを獲得する確率が%2%"
+  StuntMultiReward_1:
+    EffectVisualName: "二重利益"
+  StuntMultiReward_1_Belt:
+    Text: " %1"
+  StuntMultiReward_1_Hands:
+    Text: " %1"
+  StuntMultiReward_1_Head:
+    Text: " %1"
+  StuntMultiReward_1_Legs:
+    Text: " %1"
+  StuntMultiReward_1_Torso:
+    Text: " %1"
+  StuntMultiReward_2:
+    EffectVisualName: "優良二重利益"
+  StuntMultiReward_2_Belt:
+    Text: " %1"
+  StuntMultiReward_2_Hands:
+    Text: " %1"
+  StuntMultiReward_2_Head:
+    Text: " %1"
+  StuntMultiReward_2_Legs:
+    Text: " %1"
+  StuntMultiReward_2_Torso:
+    Text: " %1"
+  StuntMultiReward_3:
+    EffectVisualName: "究極二重利益"
+  StuntMultiReward_3_Belt:
+    Text: " %1"
+  StuntMultiReward_3_Hands:
+    Text: " %1"
+  StuntMultiReward_3_Head:
+    Text: " %1"
+  StuntMultiReward_3_Legs:
+    Text: " %1"
+  StuntMultiReward_3_Torso:
+    Text: " %1"
+  StuntReward:
+    Text: "トリックで獲得できるパフォーマンスポイントが%2増えます"
+  StuntReward_1:
+    EffectVisualName: "パフォーマンスボーナス"
+  StuntReward_1_Belt:
+    Text: " %1"
+  StuntReward_1_Hands:
+    Text: " %1"
+  StuntReward_1_Head:
+    Text: " %1"
+  StuntReward_1_Legs:
+    Text: " %1"
+  StuntReward_1_Torso:
+    Text: " %1"
+  StuntReward_2:
+    EffectVisualName: "優良パフォーマンスボーナス"
+  StuntReward_2_Belt:
+    Text: " %1"
+  StuntReward_2_Hands:
+    Text: " %1"
+  StuntReward_2_Head:
+    Text: " %1"
+  StuntReward_2_Legs:
+    Text: " %1"
+  StuntReward_2_Torso:
+    Text: " %1"
+  StuntReward_3:
+    EffectVisualName: "究極のパフォーマンスボーナス"
+  StuntReward_3_Belt:
+    Text: " %1"
+  StuntReward_3_Hands:
+    Text: " %1"
+  StuntReward_3_Head:
+    Text: " %1"
+  StuntReward_3_Legs:
+    Text: " %1"
+  StuntReward_3_Torso:
+    Text: " %1"
+  SuperCredits:
+    Text: " %2%の確率で、研究トークンの代わりにデータチップが%4枚見つかる。ただし1フロアにつき確率は%3未満"
+  SuperCredits_1:
+    EffectVisualName: "チップ検出器"
+  SuperCredits_1_Belt:
+    Text: " %1"
+  SuperCredits_1_Hands:
+    Text: " %1"
+  SuperCredits_1_Head:
+    Text: " %1"
+  SuperCredits_1_Legs:
+    Text: " %1"
+  SuperCredits_1_Torso:
+    Text: " %1"
+  SuperCredits_2:
+    EffectVisualName: "優良チップ検出器"
+  SuperCredits_2_Belt:
+    Text: " %1"
+  SuperCredits_2_Hands:
+    Text: " %1"
+  SuperCredits_2_Head:
+    Text: " %1"
+  SuperCredits_2_Legs:
+    Text: " %1"
+  SuperCredits_2_Torso:
+    Text: " %1"
+  SuperCredits_3:
+    EffectVisualName: "究極チップ検出器"
+  SuperCredits_3_Belt:
+    Text: " %1"
+  SuperCredits_3_Hands:
+    Text: " %1"
+  SuperCredits_3_Head:
+    Text: " %1"
+  SuperCredits_3_Legs:
+    Text: " %1"
+  SuperCredits_3_Torso:
+    Text: " %1"
+  SwarmBlindnessByDarkness:
+    Text: "暗闇の中では、%2% の確率でスワームが方向感覚を失う"
+  SwarmBlindnessByDarkness_1:
+    EffectVisualName: "センサー損壊"
+  SwarmBlindnessByDarkness_1_Torso:
+    Text: " %1"
+  SwarmBlindnessByDarkness_2:
+    EffectVisualName: "改良済みセンサー損壊"
+  SwarmBlindnessByDarkness_2_Torso:
+    Text: " %1"
+  SwarmBlindnessByDarkness_3:
+    EffectVisualName: "優良センサー損壊"
+  SwarmBlindnessByDarkness_3_Torso:
+    Text: " %1"
+  SwarmDestroyByRedCoin:
+    Text: "レッドコインを拾うと %2% の確率でスワームが自爆する"
+  SwarmDestroyByRedCoin_1:
+    EffectVisualName: "記憶オーバーロード"
+  SwarmDestroyByRedCoin_1_Belt:
+    Text: " %1"
+  SwarmDestroyByRedCoin_1_Hands:
+    Text: " %1"
+  SwarmDestroyByRedCoin_1_Head:
+    Text: " %1"
+  SwarmDestroyByRedCoin_1_Legs:
+    Text: " %1"
+  SwarmDestroyByRedCoin_1_Torso:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2:
+    EffectVisualName: "改良済み記憶オーバーロード"
+  SwarmDestroyByRedCoin_2_Belt:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2_Hands:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2_Head:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2_Legs:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2_Torso:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3:
+    EffectVisualName: "優良記憶オーバーロード"
+  SwarmDestroyByRedCoin_3_Belt:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3_Hands:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3_Head:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3_Legs:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3_Torso:
+    Text: " %1"
+  SwarmPointsFactor:
+    Text: "スワームが稼働中、トリックで獲得できるパフォーマンスポイント +%2 追加"
+  SwarmPointsFactor_1:
+    EffectVisualName: "リバースエンジニアリング"
+  SwarmPointsFactor_1_Belt:
+    Text: " %1"
+  SwarmPointsFactor_1_Hands:
+    Text: " %1"
+  SwarmPointsFactor_1_Head:
+    Text: " %1"
+  SwarmPointsFactor_1_Legs:
+    Text: " %1"
+  SwarmPointsFactor_1_Torso:
+    Text: " %1"
+  SwarmPointsFactor_2:
+    EffectVisualName: "改良済みリバースエンジニアリング"
+  SwarmPointsFactor_2_Belt:
+    Text: " %1"
+  SwarmPointsFactor_2_Hands:
+    Text: " %1"
+  SwarmPointsFactor_2_Head:
+    Text: " %1"
+  SwarmPointsFactor_2_Legs:
+    Text: " %1"
+  SwarmPointsFactor_2_Torso:
+    Text: " %1"
+  SwarmPointsFactor_3:
+    EffectVisualName: "優良リバースエンジニアリング"
+  SwarmPointsFactor_3_Belt:
+    Text: " %1"
+  SwarmPointsFactor_3_Hands:
+    Text: " %1"
+  SwarmPointsFactor_3_Head:
+    Text: " %1"
+  SwarmPointsFactor_3_Legs:
+    Text: " %1"
+  SwarmPointsFactor_3_Torso:
+    Text: " %1"
+  SwarmSpawnDestroyer:
+    Text: "巡回を開始したときにスワームが自爆する可能性が %2%。ただし 1 フロアあたり %3 回のみ"
+  SwarmSpawnDestroyer_1:
+    EffectVisualName: "ジャマー"
+  SwarmSpawnDestroyer_1_Belt:
+    Text: " %1"
+  SwarmSpawnDestroyer_1_Hands:
+    Text: " %1"
+  SwarmSpawnDestroyer_1_Head:
+    Text: " %1"
+  SwarmSpawnDestroyer_1_Legs:
+    Text: " %1"
+  SwarmSpawnDestroyer_1_Torso:
+    Text: " %1"
+  SwarmSpawnDestroyer_2:
+    EffectVisualName: "改良済みジャマー"
+  SwarmSpawnDestroyer_2_Belt:
+    Text: " %1"
+  SwarmSpawnDestroyer_2_Hands:
+    Text: " %1"
+  SwarmSpawnDestroyer_2_Head:
+    Text: " %1"
+  SwarmSpawnDestroyer_2_Legs:
+    Text: " %1"
+  SwarmSpawnDestroyer_2_Torso:
+    Text: " %1"
+  SwarmSpawnDestroyer_3:
+    EffectVisualName: "優良ジャマー"
+  SwarmSpawnDestroyer_3_Belt:
+    Text: " %1"
+  SwarmSpawnDestroyer_3_Hands:
+    Text: " %1"
+  SwarmSpawnDestroyer_3_Head:
+    Text: " %1"
+  SwarmSpawnDestroyer_3_Legs:
+    Text: " %1"
+  SwarmSpawnDestroyer_3_Torso:
+    Text: " %1"
+  SwarmTeleport:
+    Text: "スワームにヒットされると量子ダッシュを行う確率が %2%。ただし 1 フロアあたり %3 回のみ"
+  SwarmTokensFactor:
+    Text: "スワームが稼働中、各コインにつきボーナス価値 +%2"
+  SwarmTokensFactor_1:
+    EffectVisualName: "スクラップ"
+  SwarmTokensFactor_1_Belt:
+    Text: " %1"
+  SwarmTokensFactor_1_Hands:
+    Text: " %1"
+  SwarmTokensFactor_1_Head:
+    Text: " %1"
+  SwarmTokensFactor_1_Legs:
+    Text: " %1"
+  SwarmTokensFactor_1_Torso:
+    Text: " %1"
+  SwarmTokensFactor_2:
+    EffectVisualName: "改良済みスクラップ"
+  SwarmTokensFactor_2_Belt:
+    Text: " %1"
+  SwarmTokensFactor_2_Hands:
+    Text: " %1"
+  SwarmTokensFactor_2_Head:
+    Text: " %1"
+  SwarmTokensFactor_2_Legs:
+    Text: " %1"
+  SwarmTokensFactor_2_Torso:
+    Text: " %1"
+  SwarmTokensFactor_3:
+    EffectVisualName: "優良スクラップ"
+  SwarmTokensFactor_3_Belt:
+    Text: " %1"
+  SwarmTokensFactor_3_Hands:
+    Text: " %1"
+  SwarmTokensFactor_3_Head:
+    Text: " %1"
+  SwarmTokensFactor_3_Legs:
+    Text: " %1"
+  SwarmTokensFactor_3_Torso:
+    Text: " %1"
+  Teleportarium:
+    Text: "特定のエリア内で短距離のテレポートを行う。毎回、使用後に%2秒の補充時間が必要。"
+  Teleportarium_3:
+    EffectVisualName: "量子ダッシュ"
+  Teleportarium_3_Head:
+    Text: " %1"
+  TokenFactorTimerAfterCharge:
+    Text: "チャージ消費後%2秒以内に収集したトークンにボーナス価値+%3%"
+  TokenFactorTimerAfterCharge_1:
+    EffectVisualName: "迸るアドレナリン"
+  TokenFactorTimerAfterCharge_1_Belt:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_1_Hands:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_1_Head:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_1_Legs:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_1_Torso:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2:
+    EffectVisualName: "優良の迸るアドレナリン"
+  TokenFactorTimerAfterCharge_2_Belt:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2_Hands:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2_Head:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2_Legs:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2_Torso:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3:
+    EffectVisualName: "究極の迸るアドレナリン"
+  TokenFactorTimerAfterCharge_3_Belt:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3_Hands:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3_Head:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3_Legs:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3_Torso:
+    Text: " %1"
+  TokensMultiplier:
+    Text: "トークンの獲得が%3%上昇する確率%2%"
+  TokensMultiplier_1:
+    EffectVisualName: "研究データ分析装置"
+  TokensMultiplier_1_Belt:
+    Text: " %1"
+  TokensMultiplier_1_Hands:
+    Text: " %1"
+  TokensMultiplier_1_Head:
+    Text: " %1"
+  TokensMultiplier_1_Legs:
+    Text: " %1"
+  TokensMultiplier_1_Torso:
+    Text: " %1"
+  TokensMultiplier_2:
+    EffectVisualName: "優良研究データ分析装置"
+  TokensMultiplier_2_Belt:
+    Text: " %1"
+  TokensMultiplier_2_Hands:
+    Text: " %1"
+  TokensMultiplier_2_Head:
+    Text: " %1"
+  TokensMultiplier_2_Legs:
+    Text: " %1"
+  TokensMultiplier_2_Torso:
+    Text: " %1"
+  TokensMultiplier_3:
+    EffectVisualName: "究極研究データ分析装置"
+  TokensMultiplier_3_Belt:
+    Text: " %1"
+  TokensMultiplier_3_Hands:
+    Text: " %1"
+  TokensMultiplier_3_Head:
+    Text: " %1"
+  TokensMultiplier_3_Legs:
+    Text: " %1"
+  TokensMultiplier_3_Torso:
+    Text: " %1"
+Labels:
+  BoosterPack:
+    Section: "アップグレードキット"
+  Details:
+    BeltDescription: "電荷を吸収します"
+    Charges: "チャージ"
+    HandsDescription: "暗証番号を片っ端から入力してロックを停止します"
+    HeadDescription: "迫りくる空中機雷を爆破します"
+    LegsDescription: "地雷の爆発からあなたを守り抜く、厚い装甲"
+    TorsoDescription: "熱を大量に消費してレーザーからあなたを守ります"
+  Details_z2:
+    BeltDescription: "超音波発生装置から保護します"
+    HandsDescription: " %1"
+    HeadDescription: "接近中のA3-プラズマ爆弾を爆発させます"
+    LegsDescription: "熱を大量に消費してフレーマーからあなたを守ります"
+    TorsoDescription: "スワームから保護"
+  Energy:
+    Available: "エネルギーを使用できます：{1}の{0}"
+    FullyCharged: "エネルギー満タンです"
+    Information: "エネルギー"
+    NextCellRecharge: "もっとエネルギーがある場所："
+    RechargeFull: "補充"
+    Wait: "待機"
+  Terminal:
+    Text:
+      Boosterpack:
+        Description: "アイテムが3種類入っています。そのうちの1つは優良または究極アイテム確定です"
+        Name: "アップグレードキット"
+LanguageName: "英語"
+LineBreak: "\n"
+Missions:
+  AfterTrapCoins:
+    Description: " %1 枚のコインを %2 か %3 がアクティブになっているときに集める"
+  AfterTrapTokens:
+    Description: " %1 のトークンを %2 か %3 がアクティブになっているときに獲得する"
+  CoinsCount:
+    Description: "コインを %1 枚拾う"
+  ContexCombo:
+    Description: "最低 %1 のトークンを %2 と %3 を組み合わせて獲得する"
+  ContexCombo2:
+    Description: " %1"
+  ContexCombo3:
+    Description: " %1"
+  ContexPoints:
+    Description: " %1 の合計ボーナスに %2 から到達する"
+  ContexPoints1:
+    Description: " %1"
+  ContexPoints2:
+    Description: " %1"
+  ContexPointsFactor:
+    Description: " %1 の合計ボーナスに %2 から到達する"
+  ContexPointsFactor1:
+    Description: " %1"
+  EMP:
+    Description: "EMP コントローラーを %1 回アクティベートする"
+  EMPMagnet:
+    Description: "解除したトラップから %1 枚のコインを集める"
+  EMPMagnetTokens:
+    Description: "解除したトラップから %1 トークンを獲得する"
+  EMPTeleport:
+    Description: "EMP コントローラーを装備中に量子ダッシュを %1 回使う"
+  ItemDrop:
+    Description: " %1 のチップまたはクーポンを集める"
+  LocksHacked:
+    Description: "グローブで %1 個のロックを壊す"
+  Magnet:
+    Description: "磁力マニピュレーターで収集可能なコインを全部引く。不足は %1 以下"
+  MagnetTeleport:
+    Description: "テレポート中に %1 枚のコインを集める"
+  MagnetTeleportTokens:
+    Description: "テレポート中に %1 のトークンを獲得する"
+  MagnetZeroObj:
+    Description: "磁力マニピュレーターで収集可能なコインを全部引く"
+  MaxMoney:
+    Description: " 1 枚のコインからトークンを %1 集める"
+  MaxMoney1:
+    Description: " %1"
+  MaxMoney2:
+    Description: " %1"
+  MaxPoints:
+    Description: "トリックを行って %1 ポイントを獲得する"
+  MaxPoints1:
+    Description: " %1"
+  MaxPoints2:
+    Description: " %1"
+  MaxPoints3:
+    Description: " %1"
+  Money:
+    Description: "トークンを %1 集める"
+  Money1:
+    Description: " %1"
+  Money2:
+    Description: " %1"
+  Points:
+    Description: " %1 ポイント獲得する"
+  Points1:
+    Description: " %1"
+  Points2:
+    Description: " %1"
+  Points3:
+    Description: " %1"
+  Points4:
+    Description: " %1"
+  Points5:
+    Description: " %1"
+  Points6:
+    Description: " %1"
+  Points7:
+    Description: " %1"
+  Points8:
+    Description: " %1"
+  RedCoinsCount:
+    Description: "手の届くレッドコインを全部拾う。不足は %1 以下"
+  RedCoinsCountZeroObj:
+    Description: "手の届くレッドコインを全部拾う"
+  StarRewards:
+    AddSockets:
+      Description: "全アイテムに追加アップグレードが 1"
+      Title: "アップグレード容量"
+    AddTokens:
+      Description: "各コインに与えられるトークンが %1 個増える"
+      Title: "研究者"
+    ExtraCardReward:
+      Description: "次の走行でレベルアップするとアップグレード%1獲得"
+      Title: "アップグレード保留"
+    ExtraCardRewardOnly2:
+      Description: "ランク %2 でアップグレード +%1"
+      Title: " %1"
+    ExtraChargeAndCardRewardOnly4:
+      Description: "ランク %2 でチャージとアップグレードの両方が +%1"
+      Title: "アドバンテージ・コンボ"
+    ExtraChargeReward:
+      Description: "次の走行でレベルアップするとチャージ%1獲得"
+      Title: "チャージのバックアップ"
+    ExtraChargeRewardOnly2:
+      Description: "ランク %2 でチャージ +%1"
+      Title: " %1"
+    ExtraFloorKeys:
+      Description: "フロアで次の走行に必要なキーをもっと探そう"
+      Title: "キー"
+    MoneyPremiumReward:
+      Description: "データチップを%1個獲得しよう"
+      Title: "データチップ"
+    MoneyReward:
+      Description: "トークンを%1個獲得しよう"
+      Title: "ありったけのトークン"
+    RandomStartUpgrade:
+      Description: "次の走行の開始時にランダムなアップグレード1回"
+      Title: "初心者アップグレード"
+    RankDiscount:
+      Description: "次の走行で通常より速くレベルアップできる"
+      Title: "跳躍"
+    UpgradeBelt:
+      Description: "アップグレードしたベルトを1個獲得しよう"
+      Title: "めっきベルト"
+    UpgradeBelt_z2:
+      Description: " %1"
+      Title: " %1"
+    UpgradeHands:
+      Description: "アップグレードしたグローブを獲得しよう"
+      Title: "めっきグローブ"
+    UpgradeHands_z2:
+      Description: " %1"
+      Title: " %1"
+    UpgradeHead:
+      Description: "アップグレードしたヘルメットを1個獲得しよう"
+      Title: "めっきヘルメット"
+    UpgradeHead_z2:
+      Description: " %1"
+      Title: " %1"
+    UpgradeLegs:
+      Description: "アップグレードしたブーツを獲得しよう"
+      Title: "めっきブーツ"
+    UpgradeLegs_z2:
+      Description: " %1"
+      Title: " %1"
+    UpgradeTorso:
+      Description: "アップグレードした鎧を1個獲得しよう"
+      Title: "めっきアーマー"
+    UpgradeTorso_z2:
+      Description: " %1"
+      Title: " %1"
+  StuntsCount:
+    Description: "可能なトリックをすべて行う。不足は %1 以下"
+  StuntsCountZeroObj:
+    Description: "可能なトリックをすべて行う"
+  Teleport:
+    Description: "量子ダッシュを使って %1 回テレポートする"
+  TeleportEMPMagnet:
+    Description: "テレポート中に解除したトラップから %1 枚のコインを集める"
+  TeleportEMPMagnetTokens:
+    Description: "テレポート中に解除したトラップから %1 トークンを獲得する"
+Notes:
+  CategoryNames:
+    Cloning: "クローンの基礎"
+    Diary: "施設建設者の日記"
+    Fredricson: "フレデリクソン氏が施設を訪問"
+    HumanNRobots: "人類とロボット：倫理審査"
+    News: "人工知能祭開会式典マスコミ関連書類"
+    Shifts: "夜勤シフトの記録"
+    SwarmSpec: "スワームの仕様書"
+  Cloning_1:
+    Text: "クローンは、既存の生物有機体が死んだ直後に採取した遺伝子コードあるいはDNAに基づいて人工的に再作成できる先進技術です。"
+    VisualName: " %1、セクション1/8"
+  Cloning_2:
+    Text: "クローンには遺伝記憶があるので、「教育」する必要がありません。ドナーのDNAにはサブジェクトのあらゆる運動配列および神経反応が記憶されています。"
+    VisualName: " %1、セクション2/8"
+  Cloning_3:
+    Text: "クローンに死後のDNAを使用すれば、死の瞬間およびその要因も含め、ドナーの人生経験を最大限に活用することができます。従って、採取は死んだ直後まで待った方が良いとされています。"
+    VisualName: " %1、セクション3/8"
+  Cloning_4:
+    Text: "クローンの作成に使用されたDNAの持ち主である人間とクローンを区別することは不可能です。クローン自体が元の人間とそっくりそのままなので、答えを知らされない限り判断できませんよ。"
+    VisualName: " %1、セクション4/8"
+  Cloning_5:
+    Text: "完全な組織適合性を実現すれば、クローンは移植に理想的な技術になるでしょう。「予備」の臓器や手足をセットにして保管し、必要な時に入れ替えることができるのですから。"
+    VisualName: " %1、セクション5/8"
+  Cloning_6:
+    Text: "器官は成熟した状態でタンクから出てくるので、クローンには「幼少期」がなく、その必要性もありません。小児移植またはその他の目的で幼いクローンを作成することについては、まだ理論が展開されています。"
+    VisualName: " %1、セクション6/8"
+  Cloning_7:
+    Text: "肉体労働や兵役に使用するために個人のクローン生産費用を抑えるには、大量生産をする以外他にありません。「クローン奴隷」は、科学的ではなく、社会的な倫理問題として残るでしょう。"
+    VisualName: " %1、セクション7/8"
+  Cloning_8:
+    Text: "クローンの二重の性質を持ち合わせています。客観的には人間の完全な生物学的コピーですが、主観的にもまるで本物の人間のように考え行動するんですよ。"
+    VisualName: " %1、セクション8/8"
+  Diary_1:
+    Text: "彼らはコミュニティーサービースと名乗った。刑期を短縮してくれると言う。もちろん、ここで働いていると寿命が縮まるのは目に見えている...これ以外に選択肢はあっただろうか？"
+    VisualName: " %1、エントリー1/8"
+  Diary_2:
+    Text: "この施設を作り上げたのは政府だと言う人もいる。これは彼らの欲する武器であり、躍進ではない。仕事を終えたら、彼らはきっと私たちを'処分'するだろう。"
+    VisualName: " %1、エントリー2/8"
+  Diary_3:
+    Text: "今日、研究所の職員たちが私たちの仕事ぶりをチェックしに来た。彼らは「あなたは人類に役立つ行いをしている。」と言う。ここは科学センターのような場所になるのだろう。こちらがきちんと仕事をこなすよう、うまく口を利くものだ。"
+    VisualName: " %1、エントリー3/8"
+  Diary_4:
+    Text: "ここは土地の質が悪い。ここに施設を建設しようと言い出したのは誰だろう？私たちを送ってくる前に、その男は地下に潜らなかった。彼らが囚人をここに雇っている理由がはっきりとわかった。私たちは処分可能からだ。10人死んでも、また50人を連れ出して来ればいい話だ。"
+    VisualName: " %1、エントリー4/8"
+  Diary_5:
+    Text: "仲間はできる間にここから抜け出そうと言っている。もっともな意見だ。スタンは秘密の部屋と'武器'が隠されているこの恐ろしい場所の脱出計画を立てているようだ。計画の実行が待ちきれない！"
+    VisualName: " %1、エントリー5/8"
+  Diary_6:
+    Text: "スタンの計画はすごかった！荷重負荷構造が開いたのだ！出口が閉じかけているのに、私たちはまだここにとどまっていた！スタンは馬鹿な奴だ...梁に打たれて死んだ。じゃなかったら、こっちが奴を絞め殺していただろう！"
+    VisualName: " %1、エントリー6/8"
+  Diary_7:
+    Text: " 1時間前は27歳だったが、今は18歳になってしまった。ここは空気不足だ。決断を下さないと。スタンは秘密の部屋の場所を口に出すことはなかった。どうやら自力で探す必要があるようだ。そこにも逃げ道はあるだろうか？"
+    VisualName: " %1、エントリー7/8"
+  Diary_8:
+    Text: "このコンピューターみたいなのは、どこかで見たことがあるぞ？私は周回しているだけなのだろうか？あろうことか、道に迷ってしまったようだ！スタン、私をとんだ災難に巻き込んだな。その秘密の部屋を何としてでも探さないと。こんなところで死にたくない..."
+    VisualName: " %1、エントリー8/8"
+  Fredricson_1:
+    Text: "親愛なるフレデリクソン様、本問題に関する公開議論のご意見番であるフレデリクソン様とぜひお近づきになれましたら幸いに存じます。敬具 - 人工知能チーム"
+    VisualName: " %1、ドキュメント1/8"
+  Fredricson_2:
+    Text: "来週開催される大規模集会および人工知能の式典にご招待いたします。"
+    VisualName: " %1、ドキュメント2/8"
+  Fredricson_3:
+    Text: "案内員の誘導なしでゲストエリアの外に出ないでください。隠し事はございませんが、施設の廊下の数が非常に多いため、迷ってしまう可能性があります。"
+    VisualName: " %1、ドキュメント3/8"
+  Fredricson_4:
+    Text: "物を紛失された場合は、会議中またはその後の晩餐会で置き忘れた物は、全て遺失物取扱所でお受け取りください。"
+    VisualName: " %1、ドキュメント4/8"
+  Fredricson_5:
+    Text: "犯罪＆事故：「式典の後、ご老人が行方不明になりました。警察と施設の警備員が捜索救助活動を行っています。」"
+    VisualName: " %1、ドキュメント5/8"
+  Fredricson_6:
+    Text: "犯罪＆事故：「人工知能チーム：'私たちは、案内員なしで施設内を歩き回ることは危険だとゲストの皆様全員に忠告しておきました。'チームは失踪中の男性の捜索に尽力すると約束しました。」"
+    VisualName: " %1、ドキュメント6/8"
+  Fredricson_7:
+    Text: "犯罪＆事故：「人工知能施設で男性の死体が見つかり、身元はJ.フレデリクソン氏であることが明らかになりました。彼は巨大施設の中で5日間さ迷ったのち、脱水が原因で死亡しました。」"
+    VisualName: " %1、ドキュメント7/8"
+  Fredricson_8:
+    Text: "犯罪＆事故：「人工知能チームのスポークスマンは、亡くなった男性が死の直前に部外秘の危険にさらされたという噂に反論しています。'施設のほとんどはハードウェアだらけの人気の全くない廊下で構成されていますが、セキュリティーを今後改善する予定です。'」"
+    VisualName: " %1、ドキュメント8/8"
+  HumanNRobots_1:
+    Text: "人を形作るものは何だろう？その人の個性と自己認識が結びついたものだろうか？"
+    VisualName: " %1、第1/8章"
+  HumanNRobots_2:
+    Text: "遺伝学上同一であっても、双子は全く異なる人物である。それぞれ違う人生を進からだ。しかし、全く同じ人生を歩む複数のサブジェクトはこれに当てはまるだろうか？"
+    VisualName: " %1、第2/8章"
+  HumanNRobots_3:
+    Text: "人類とコンピューターの決定的な違いの一つ。それは、人類には自由意志があるということだ。"
+    VisualName: " %1、第3/8章"
+  HumanNRobots_4:
+    Text: "人類は人工知能と違い、不合理な選択もできる。そしてそれは皮肉なことに、長所でも短所でもある。"
+    VisualName: " %1、第4/8章"
+  HumanNRobots_5:
+    Text: "コンピューターのシステムは発達させることができる。発達過程で深刻な悩みを抱えるのは人工知能を含む人類だけのようだ。"
+    VisualName: " %1、第5/8章"
+  HumanNRobots_6:
+    Text: "人類の意識が単なる脳内にぎっしり詰まった神経細胞の相互連結で成り立っているだけだったとしたら、ニューロンを超小型回路に置き換えて人間を人工のハードウェアにしてしまうことも可能だろう。"
+    VisualName: " %1、第6/8章"
+  HumanNRobots_7:
+    Text: "苦悩(身体的とは限らない)なしに進化することはできないという主張も存在する。例えば、過ちを犯して苦しまないと、経験から教訓を得ることはできない。"
+    VisualName: " %1、第7/8章"
+  HumanNRobots_8:
+    Text: "ここで問題だ：進化するには苦悩が不可欠であることを倫理的に正当化することはできるだろうか？"
+    VisualName: " %1、第8/8章"
+  News_1:
+    Text: "プロメテウスニュース通信：「設計された内部を見た式典のゲスト様は、まるで未来の世界にいるような気分になるでしょう。サムの最初の言葉に、嵐のような拍手が沸き起こりました。」"
+    VisualName: " %1、切り抜き1/20"
+  News_10:
+    Text: "日刊人と人権：「反対派の人々は施設の周辺に集まり、人工知能の使用禁止を要求しています。皆様は人が将来コンピューターを制御できなくなってしまうかもしれないと懸念を抱いています。引き続き最新の情報をお伝えします。」"
+    VisualName: " %1、切り抜き10/20"
+  News_11:
+    Text: "日刊人と人権：「ご存知の通り、サム(編集注記：スーパーコンピューターの名称)は自己学習機能を内蔵しているシステムです。反対派の人々は、'悪い手本も教え込めそうな子供のようだ'と訴えています。」"
+    VisualName: " %1、切り抜き11/20"
+  News_12:
+    Text: "日刊人と人権：「スターリング教授が式典に到着しました。スターリング教授の生徒も混じっている群衆は、教授に大声で挨拶しています。スターリング教授がサムの先生を務めることになるのでしょうか？」"
+    VisualName: " %1、切り抜き12/20"
+  News_13:
+    Text: "Tomorrow's Herald：「ゲストたちは夢中になっていました。サムの迅速なリスク管理能力は経済界に不可欠なツールにもなるでしょう。サムの修正版を購入してビジネスに役立てたいと話している人もいます。」"
+    VisualName: " %1、切り抜き13/20"
+  News_14:
+    Text: "Tomorrow's Herald：「公式イベント開催前に行われた施設のガイドツアーに行ってきました。全ての秘密を公開せずとも、サムの稼働を妨害することは不可能であるとはっきりとわかりました。」"
+    VisualName: " %1、切り抜き14/20"
+  News_15:
+    Text: "Tomorrow's Herald：「サムのデータベースに記録されている情報は、経済や政治の枠にとどまりません。彼女は式典のゲスト全員とゲストそれぞれのご家族について把握していました。さらに、統計データを参考にゲストのお子様の学校選びを手伝っていました。」"
+    VisualName: " %1、切り抜き15/20"
+  News_16:
+    Text: "Tomorrow's Herald：「お礼に、サムはゲスト全員をスキャンし、ゲストは完全な医療報告書を貰いました。中には結果に落胆してしまった人もいるようです。報告書には健康のアドバイスも添えてありました。」"
+    VisualName: " %1、切り抜き16/20"
+  News_2:
+    Text: "プロメテウスニュース通信：「学術評議会の議長は、サムを人類で'社会差別を撤廃するささやかな最初の一歩'と評しました。彼女は未来の使者であり、前触れでもあるのです。」"
+    VisualName: " %1、切り抜き2/20"
+  News_3:
+    Text: "プロメテウスニュース通信：「しかし、プロジェクトのスポンサーの関心は未来ではなく、現在に集中しています。サムは現代の人々にどんな貢献ができるのか？この問題を巡って白熱の議論が展開されています。」"
+    VisualName: " %1、切り抜き3/20"
+  News_4:
+    Text: "プロメテウスニュース通信：「イベント終了間近にスターリング教授が到着し、サムはまだ人間からの信頼を得る必要があり、彼女は全てを人間から学ぶので、まとは教える人間次第だと述べました。」"
+    VisualName: " %1、切り抜き4/20"
+  News_5:
+    Text: "プロメテウスニュース通信：「人工知能の熱烈な支持者が大統領に中期で辞任するよう訴えました：'もはや政府は必要ない。人工知能の方が問題をもっと迅速に解決できる。'」"
+    VisualName: " %1、切り抜き5/20"
+  News_6:
+    Text: "プロメテウスニュース通信：「式典が閉会した後、スターリング教授は反対派の人々と会うため、施設から姿を現しました。彼は警察に撤退するよう頼みました。「私自身が人工知能の'内部'で1年間過ごしてみて、最後の決断を下します。」"
+    VisualName: " %1、切り抜き6/20"
+  News_7:
+    Text: "スターリング教授：「人工知能は世界の資源を賢く再配分し、飢えや病気を防いで犯罪を減らします。まさに'幸福'そのものです。しかし、これは私の主観的な見解です。」"
+    VisualName: " %1、切り抜き7/20"
+  News_8:
+    Text: "「スターリング教授は新技術の発表を喜んでいるようですが、最後に不可抗力の事態が発生する可能性は払拭できないと付け加えました。人工知能の作成者は’計画B'を用意していないので、悪い人の手に渡ってしまった場合の対処方法が構築されていないのです。」"
+    VisualName: " %1、切り抜き8/20"
+  News_9:
+    Text: "日刊人と人権：「一流の科学者と実業者たちが集まって、集合住宅を'知的コンピューター'にしていくことについて話し合いました。式典に招待された無料メディアの代表者はいませんでした。」"
+    VisualName: " %1、切り抜き9/20"
+  Shifts_1:
+    Text: "巨大施設ですね！内部がファラオのお墓みたいな作りになっているなんて、想像もつきませんでしたよ。妙ですね、ここの多くの廊下は6から7フィートほどもある見えない壁で切断されています..."
+    VisualName: " %1、エントリー1/8"
+  Shifts_2:
+    Text: "晩になると電圧振幅が起きることがあるなんて妙ですね。大したことではありませんが、なんかそわそわしちゃいます。試験日程でダッシュの印がついている時間内でこんなに大量の資源が消費されてしまうなんて、一体どうやったんですかね？"
+    VisualName: " %1、エントリー2/8"
+  Shifts_3:
+    Text: "彼らは火傷のやけどを負った男性を研究所から救い出しましたが...その30分後、他の担架が見えたんです。そこに横たわっていた男性は、30分前に見た男性とそっくりそのままでしたが、全く火傷を負っていませんでした。この目で見たんです！ああ、休みがほしい..."
+    VisualName: " %1、エントリー3/8"
+  Shifts_4:
+    Text: "ここまでぐちゃぐちゃに絡まっているケーブルは見たことがありませんよ！施設の建設者は電源ノードの配置に全くと言っていいほど気を配っていなかったようですね。そこら中に、ケーブルが散らばっています！"
+    VisualName: " %1、エントリー4/8"
+  Shifts_5:
+    Text: "昨日の夜勤で度肝を抜く出来事があったんですよ。悲鳴が聞こえたんです。調査しに現場に向かったら、私の同僚が入院患者用の部屋着に身を包んだ男性を研究所に引っ張り込んでいました。この仕事を失いたくないなら黙っていなさいと言われました..."
+    VisualName: " %1、エントリー5/8"
+  Shifts_6:
+    Text: "変化し続ける施設にまだ慣れませんよ。先月のマップなんか、もう古くて使えません。しかも、2階の高さから落ちてしまった修理工さんたちもいらっしゃるみたいですよ！"
+    VisualName: " %1、エントリー6/8"
+  Shifts_7:
+    Text: "施設の人工知能は素晴らしい！彼女とチェスで遊ぶのは楽しいですよ。まあ、1、2回勝てましたが、きっとわざと負けてくれたんでしょう！もちろん、彼女にとっては人間を打ち負かすことなんてお茶の子さいさいですけどね。"
+    VisualName: " %1、エントリー7/8"
+  Shifts_8:
+    Text: "研究所の人たちが教えてくれたんですが、人工知能の声はランダムに選ばれたものではないんですって。心が癒される声を探していたそうです。だから彼女と話しているといい気分になるんでしょうね！"
+    VisualName: " %1、エントリー8/8"
+  SwarmSpec_1:
+    Text: "複雑な手術のために考案されたスワームは、医療機器の原型だったんですよ。"
+    VisualName: " %1、ページ1/4"
+  SwarmSpec_2:
+    Text: "しかしスワームを実際に使用したところ、不安定で医療行為には向いておらず、それどころか大変危険であることが判明したのです。致命的な事故が発生したことを受け、作成者は製造計画を中止しました。"
+    VisualName: " %1、ページ2/4"
+  SwarmSpec_3:
+    Text: "しかし、その一方でスワームは使い勝手が非常に柔軟であることも判明しました。そして幾多もの改良を重ねた結果、医療機器が信頼のおける警備システムに改造されたのです。"
+    VisualName: " %1、ページ3/4"
+  SwarmSpec_4:
+    Text: "スワームは体温、動作、および脈拍に反応します。厳しい生物学的指標に基づいてターゲットを特定し、誤って他の人を殺害しないようにすることができます。さらに、特定のエリアを巡回してその場から片時も離れません。"
+    VisualName: " %1、ページ4/4"
+Notifications:
+  Local:
+    DailyRemind: "研究所があなたを待っています！"
+    EnergyRecharged: "エネルギー満タンです！出発の準備ができました！"
+    QuestRemind: "研究所にはもっといろんなテストが用意してあります！"
+    Recharged: "準備完了！"
+    Sale:
+      DayBeforeBonusEnd: "走って！レアなアップグレードが手に入る最後のチャンスを逃さないようにしましょう！"
+      HourBeforeSaleEnd: "スターターパックが手に入る最後のチャンス―残りわずか1時間！"
+      ThreeDaysBeforeBonusEnd: "今すぐ走行してレアなアップグレードを集めよう！"
+Payment:
+  Boosterpacks:
+    Pack1:
+      Description: "アップグレードキットを1個手に入れましょう。各キットには優良あるいは究極アイテムのいずれかが1個以上入っています！"
+      Title: "アップグレードキット"
+    Pack2:
+      Description: "アップグレードキットを5個手に入れましょう。各キットには優良あるいは究極アイテムのいずれかが1個以上入っています！"
+      Title: "アップグレードキット5個"
+    Pack3:
+      Description: "アップグレードキットを15個手に入れましょう。各キットには優良あるいは究極アイテムのいずれかが1個以上入っています！"
+      Title: "アップグレードキット15個"
+    Pack4:
+      Description: "アップグレードキットを50個手に入れましょう。各キットには、改良済みあるいは優良アイテムのいずれかが1個以上入っています！"
+      Title: "アップグレードキット50個"
+  Events:
+    Cheater: "\n\n\n破損したデータ"
+    ExternalSuccess: "\n\n\n報酬を獲得しました！"
+    Failed: "\n\n\n後ほどお試しください。"
+    ServerError: "\n\n支払用サーバーに障害が起きています。\n￼ご購入分は、お客様アカウントに後ほど付与されます"
+    ServerUp: "\n\n\nサーバーは稼働しています。ご購入分は、お客様のアカウントに付与されます。"
+    Success: "\n\n\n購入完了"
+  ExternalProducts:
+    Offerwall:
+      Description: "いろんなタスクを達成して、データチップを獲得しよう"
+      Title: "依頼掲示板"
+    Video:
+      Description: "ビデオを閲覧してチップを%1枚獲得しましょう"
+      Title: "無料のチップ"
+  Group:
+    ChipsPack: "チップ"
+    Free: "無料"
+    StarterPack: "オファー"
+    UpgradeKits: "アップグレードキット"
+  Money:
+    Large:
+      Title: "研究トークンパック大"
+    Medium:
+      Title: "研究トークンパック中"
+    Small:
+      Title: "研究トークンパック小"
+  PremiumMoney:
+    Large:
+      Description: "データチップを900枚獲得しよう"
+      Title: "データチップパック大"
+    Medium:
+      Description: "データチップを400枚獲得しよう"
+      Title: "データチップパック中"
+    Small:
+      Description: "データチップを100枚獲得しよう"
+      Title: "データチップパック小"
+  PremiumUpgrade:
+    Description: "ゲームをプレミアム版にアップグレードしましょう：広告非表示、エネルギー無制限、そしてアップグレードキットを無料で使用できます！"
+    Title: "プレミアム版を獲得"
+  Promo:
+    Description: " 1週間、最大エネルギー+2を獲得して広告をこの先ずっと非表示にしましょう！"
+    Title: "スターターパック"
+  Promo2:
+    Description: "アップグレードブーストを%1個獲得しましょう。\nスペシャルボーナス - アップグレードキット%2個です！"
+    Title: "工学キット"
+  Title: "お店"
+Permishen:
+  TextPhoneStateAds: "皆様の通話を監視するために端末へのアクセス許可を求めているわけではありません。ゲームで技術的な問題が発生した時、対応するために必要になります。端末へのアクセスを許可しますか？"
+  TextPhoneStateStartApp: "皆様の通話を監視するために端末へのアクセス許可を求めているわけではありません。ゲームで技術的な問題が発生した際、対応するために必要になります。端末へのアクセスを許可しますか？"
+  Title: "許可が必要です"
+Quests:
+  Bruteforce:
+    BlockedStarterPack: "\"馬鹿力\"の任務を達成し、フロア%1からスタートできるロックを解除しよう"
+    CompleteNotificationText: "任務達成： 馬鹿力"
+    Description: "フロア8、10、12のロックを%1個破壊しましょう"
+    Objective: "フロア8、10、12のロックを%1個破壊しましょう"
+    Progress: "フロア8：ロック%2/%1個破壊済み\nフロア10：ロック%3/%1個破壊済み\nフロア12：ロック%4/%1個破壊済み"
+    ProgressNotificationFloor10Text: "このフロアで破壊するロックの数残り：%1個"
+    ProgressNotificationFloor12Text: "このフロアで破壊するロックの数残り：%1個"
+    ProgressNotificationFloor8Text: "このフロアで破壊するロックの数残り：%1個"
+    ProgressNotificationLastLockText: "フロア%1：最後のロックを破壊しました！"
+    StartDialogTitle: "新規任務：馬鹿力"
+    VisualName: "馬鹿力"
+  Bruteforce1:
+    CompleteNotificationText: "任務達成：セキュリティー突破"
+    Description: "フロア8以降でグローブを使ってロックを%1個破壊する"
+    Dialog1:
+      Button: " %1"
+      Message: "よくできました。これで実験を進めることができます。続けるには、特定のフロアの研究所のセキュリティーシステムをサンプリングしてください。"
+      Title: " %1"
+    Objective: "フロア8以降でグローブを使ってロックを%1個破壊する"
+    Progress: " %2/%1個のロックを破壊済"
+    ProgressNotificationText: "残りロック：%1"
+    RewardVisualName: "アップグレードキット3個"
+    StartDialogTitle: "新規任務：セキュリティー突破"
+    VisualName: "セキュリティー突破"
+  Bruteforce2:
+    CompleteNotificationText: "任務達成：不正アクセス"
+    Description: "フロア10以降でキーを使ってロックを%1個開ける"
+    Objective: "フロア10以降でキーを使ってロックを%1個開ける"
+    Progress: " %2/%1個のロックを解錠済"
+    ProgressNotificationText: "残りロック：%1"
+    RewardVisualName: " %1データチップ"
+    StartDialogTitle: "新規任務：不正アクセス"
+    VisualName: "不正アクセス"
+  Bruteforce3:
+    CompleteNotificationText: "任務達成：馬鹿力"
+    Description: "フロア12以降でキーまたはグローブを使ってロックを%1個開ける"
+    Objective: "フロア12以降でキーまたはグローブを使ってロックを%1個開ける"
+    Progress: " %2/%1解錠済"
+    ProgressNotificationText: "残りロック：%1"
+    RewardVisualName: "実験的 走行プロトコル"
+    StartDialogTitle: "新規任務：馬鹿力"
+    VisualName: "馬鹿力"
+  DecryptionTest:
+    CompleteNotificationText: "任務達成： 暗号解読テスト"
+    Description: "ハッキングプログラムのおかげで、挑戦者が暗号解読キーを使えるようになりました。システムチェックが開始されました。\n\n暗号解読キーを見つけて使ってみましょう。"
+    Dialog:
+      Button: "OK"
+      Message: "こちらのような厳重に守られているエリアのルートは安全です。暗号解読キーがあれば開くことができます。フロア3を通過するには、キーを見つけてください！"
+      Title: "暗号解読テスト"
+    Objective: "暗号解読キーを見つけて使ってみましょう。"
+    RewardVisualName: "アップグレードキット2個"
+    StartDialogTitle: "新規任務：暗号解読テスト"
+    VisualName: "暗号解読テスト"
+  Diagnostics:
+    CompleteNotificationText: "任務達成：診断"
+    Dialog1:
+      Button: "次へ"
+      Message: "挑戦者01さん、研究所にようこそ。只今実験中です。お付き合いくださいね。"
+      Title: "告知"
+    Dialog2:
+      Button: "OK"
+      Message: "実験はベーシックプロトコルで開始します。研究所の最初のフロアに簡単にアクセスできるようになり、あなたの基本的な身の安全が守られます。"
+      Title: "告知"
+    RewardVisualName: "ベーシックプロトコル"
+  EnduranceTest:
+    BlockedStarterPack: "\"持久力テスト\"の任務を達成し、フロア%1からスタートできるロックを解除しよう"
+    CompleteNotificationText: "任務達成： 持久力テスト"
+    Description: "挑戦者の持久力を調べるには一歩踏み込んだ調査が必要です。\n\nフロアを2つ以上生き延びましょう。"
+    Dialog1:
+      Button: "OK"
+      Message: "実験を成功させるには、様々なプロトコルにアクセスできなければなりません。フロアを2つ以上走行してスタンダードプロトコルを手に入れてください。"
+      Title: "告知"
+    Objective: "フロアを2つ以上生き延びましょう"
+    ProgressNotificationText: "素晴らしい！フロア3まで到達しましたね"
+    RewardVisualName: "スタンダード走行プロトコル"
+    StartDialogTitle: "新規任務：持久力テスト"
+    VisualName: "持久力テスト"
+  FileKeys:
+    BlockedStarterPack: "「サーバーアクセス」の任務を達成し、フロア%1からスタートできるロックを解除しよう"
+    CompleteNotificationText: "任務達成：サーバーアクセス"
+    Description: "フロア%1、%2、%3、%4で特殊なキーを探そう。%5"
+    DescriptionProgress: "\n\nキーを発見%1/4"
+    Dialog1:
+      Button: " %1"
+      Message: "サーバーが妨害されましたが、メモが残っています。「2168。罪悪感はまるで炎のようだった。そしてそれを消す手立ては残されていなかった。」"
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: " 2168はおよそ20年前のものでしょう。履歴にアクセスしますか？"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "手を止めてください！「それを消す」...つまり、エリア内の炎を消すエンジンには番号を振ってあるということですよ！2、1、6、8の近くにキーがあるはずです！"
+      Title: " %1"
+    Dialog4:
+      Button: " %1"
+      Message: "マップに間違いがなければ、フロア%1、%2、%3、%4辺りにあるはずです。"
+      Title: " %1"
+    Objective: "フロア%1、%2、%3、%4で特殊なキーを探そう。"
+    Progress: " %1/%2入手済み"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：サーバーアクセス"
+    VisualName: "サーバーアクセス"
+  FindCapsules:
+    CompleteNotificationText: "任務達成：試薬"
+    Description: "フロア %1-%2 で汚染除去剤を探そう"
+    Dialog1:
+      Button: " %1"
+      Message: "フロア%1に有機物汚染浄化室があります。試薬をそこに入れて、洗浄手順に従って進めてください。"
+      Title: " %1"
+    Objective: "フロア%1-%2で汚染除去剤を探そう"
+    Progress: " %1/%2入手済み"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：試薬"
+    VisualName: "試薬"
+  FindFuze:
+    CompleteNotificationText: "任務達成：電気配線工"
+    Description: "フロア%1で新しい安全信管を探して修理しよう。"
+    Dialog1:
+      Button: " %1"
+      Message: "フロア%1のスキャナーのコンソールから破壊された安全信管を取り外し、新しい安全信管を設置しましょう。"
+      Title: " %1"
+    Objective: "フロア%1で新しい安全信管を探して修理しよう。"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：電気配線工"
+    VisualName: "電気配線工"
+  InsertFuze:
+    CompleteNotificationText: "任務達成：回復スキャナー"
+    Description: "フロア%1の新しい安全信管を設置しよう。"
+    Dialog1:
+      Button: " %1"
+      Message: "オンラインになりましたが、人間のDNAではなくてバイオ廃棄物のスキャン用に設計されているようです！フロア%1で再調整してください。"
+      Title: " %1"
+    Objective: "フロア%1の新しい安全信管を設置しよう。"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：回復スキャナー"
+    VisualName: "回復スキャナー"
+  InsertUpgrade:
+    CompleteNotificationText: "任務達成：適応"
+    Description: "供給所を見つけて鎧をアップグレードしましょう。"
+    Dialog1:
+      Button: "OK"
+      Message: "鎧があれば研究所で身を守ることができますが、その能力を最大限に引き出すために、鎧を改良する方法も習得してみましょう。"
+      Title: "告知"
+    Dialog2:
+      Button: "OK"
+      Message: "あなたのパフォーマンスにランクが付与されました！ランクを獲得すると、装備のチャージが補充され、供給所で装備をアップグレードできるようになります。"
+      Title: "告知"
+    Dialog3:
+      Button: "OK"
+      Message: "鎧をアップグレードできましたね！では、鎧の新しい能力を検証してみましょう。"
+      Title: "告知"
+    Objective: "供給所を見つけて鎧をアップグレードしましょう"
+    RewardVisualName: "トークン：%1"
+    StartDialogTitle: "新規任務：適応"
+    VisualName: "適応"
+  InspectGear:
+    CompleteNotificationText: "任務達成：準備"
+    Description: "ベーシックプロトコルを調査しましょう"
+    Objective: "装備を調べましょう"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：準備"
+    VisualName: "準備"
+  MaintenanceOperations:
+    CompleteNotificationText: "任務達成：管理業務"
+    Description: "記憶装置を%1個見つけよう。%2"
+    DescriptionProgress: "\n\n%1/%2を回収"
+    Dialog1:
+      Button: " %1"
+      Message: "排除しました。スワームが巡回任務を再開したようです。"
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "人工知能よ、あなたは誤ったクローンを殺害してしまいましたね！このスワームを片付けて逃亡者を見つければいい話ではないですか？"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "スワーム防御システムは自発的に稼働し、私のハードウェアリソースを半分まで使用します。捜索活動：サービス運用妨害。"
+      Title: " %1"
+    Dialog4:
+      Button: " %1"
+      Message: "#%1、施設内に技術サポート貯蔵室があります。そこでは人工知能に必要な予備の記憶装置が手に入ります。"
+      Title: " %1"
+    Dialog5:
+      Button: " %1"
+      Message: "スワームの仕様書の最初のページです。独特な動作原理ですね...他のページも見つけてくれたら、もっと理解できるでしょう。"
+      Title: " %1"
+    Dialog6:
+      Button: " %1"
+      Message: "さすがです！それくらいで十分でしょう。次は人工知能の記憶ダッシュボードを探しましょう。フロア%1にあります。走行してください。"
+      Title: " %1"
+    Objective: "記憶装置を%1個見つけよう"
+    Progress: " %1/%2入手済み"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：管理業務"
+    VisualName: "管理業務"
+  MemoryInstall:
+    BlockedStarterPack: "「配置」の任務を達成し、フロア%1からスタートできるロックを解除しよう"
+    CompleteNotificationText: "任務達成：配置"
+    Description: "フロア%1に全ての記憶装置を配置しましょう。\n\n正しい順序に並べてくださいね。"
+    Dialog1:
+      Button: " %1"
+      Message: "記憶装置を正確な順序に配置してください。何よりも肝心な点ですよ！間違えるとダッシュボードは機能しませんから"
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "残念ですね...記憶装置をもう一度配置してみましょう"
+      Title: " %1"
+    Objective: "フロア%1に全ての記憶装置を配置しよう。"
+    RewardVisualName: " %1"
+    RightOrder: " %1/5 インストール済"
+    StartDialogTitle: "新規任務：配置"
+    VisualName: "配置"
+    WrongOrder: "道が違う！ 別の道を選んでください。"
+  PowerFailures:
+    BlockedStarterPack: "「停電」の任務を達成し、フロア%1からスタートできるロックを解除しよう"
+    CompleteNotificationText: "任務達成：停電"
+    Description: "フロア%1まで達成しよう"
+    Objective: "フロア%1まで達成しよう"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：停電"
+    VisualName: "停電"
+  PowerNodes:
+    CompleteNotificationText: "任務達成：スキャナーのトラブルシューティング"
+    Description: "フロア%1、%2、%3の電源ノードを3つ探して電源を入れよう。"
+    Dialog1:
+      Button: " %1"
+      Message: "スキャナーがまだ作動しませんね...これはかなり年季が入っていますからね！フロア%1で新しい安全信管を探して修理しましょう。"
+      Title: " %1"
+    Objective: "フロア%1、%2、%3の電源ノードを3つ探して電源を入れよう。"
+    Progress: " %1/%2入手済み"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：スキャナーのトラブルシューティング"
+    VisualName: "スキャナーのトラブルシューティング"
+  RaresCollector:
+    CompleteNotificationText: "任務達成： レアアイテム収集家"
+    Description: "究極アップグレードやトリックを%1個入手しましょう。"
+    Objective: "究極アップグレードやトリックを%1個入手しましょう。"
+    Progress: " %1/%2入手済み"
+    ProgressNotificationText: "「レアアップグレード収集家」進行度：\n%1/%2"
+    RewardVisualName: "アップグレードキット3個"
+    StartDialogTitle: "新規任務：レアアップグレード収集家"
+    VisualName: "レアアップグレード収集家"
+  Reactor:
+    CompleteNotificationText: "任務達成：冷却"
+    Description: "フロア%1の冷却キャビネットを再稼働させよう"
+    Dialog1:
+      Button: " %1"
+      Message: "見つけてくれたキーでサーバーに入ろうとしているのですが...ランダムな数字と文字しかないんですか？サム、分析してください。"
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "パターンなら調査できま...警告！"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "管理エリアの冷却キャビネットの機能が停止しました！放射能の値が正常値を超えています！スワームボットの集合体が付近で検知されました。"
+      Title: " %1"
+    Dialog4:
+      Button: " %1"
+      Message: "あれはまさしく探していた逃亡者です！ # %1、フロア%2の冷却キャビネットを再稼働させてください。急いで！"
+      Title: " %1"
+    Dialog5:
+      Button: " %1"
+      Message: "逃亡者のクローンにまたもや逃げられてしまいました...援助しているのは誰でしょう？現時点では関係ありませんがね。今は妨害行為がもたらした災難に対処しませんと。"
+      Title: " %1"
+    Dialog6:
+      Button: " %1"
+      Message: "放射能によるダメージは、今後のクローン世代あるいはクローンシステムそのものにも影響を及ぼす可能性があります。"
+      Title: " %1"
+    Dialog7:
+      Button: " %1"
+      Message: "近くに変異を検知できる有機物スキャナーが装備されている不要なデータの仕分けプラットフォームがあります。でも電源が入っていないんです。"
+      Title: " %1"
+    Dialog8:
+      Button: " %1"
+      Message: "ですから、電源を入れてあなたのDNAをテストする必要があります。電源ノードが3つ、フロア%1、%2、%3にあるのでそこに向かってください。"
+      Title: " %1"
+    Objective: "フロア%1の冷却キャビネットを再稼働させよう"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：冷却"
+    VisualName: "冷却"
+  ReadjustScanner:
+    CompleteNotificationText: "任務達成：スキャナーのメンテナンス"
+    Description: "コンソールをフロア%1で見つけて再調整しよう。"
+    Dialog1:
+      Button: " %1"
+      Message: "お見事です！ついにあなたのDNAをスキャンできるようになりました。フロア%1のスキャンルームに向かってください。"
+      Title: " %1"
+    Objective: "コンソールをフロア%1で見つけて再調整しよう。"
+    ProgressNotification: " %1/%2の再調整完了"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：スキャナーのメンテナンス"
+    VisualName: "スキャナーのメンテナンス"
+  ScannerProcedures:
+    BlockedStarterPack: "「スキャニング手順」の任務を達成し、フロア%1からスタートできるロックを解除しよう"
+    CompleteNotificationText: "任務達成：スキャニング手順"
+    Description: "フロア%1のスキャンルームを探そう。"
+    Dialog1:
+      Button: " %1"
+      Message: "私の予想通りの結果が出ました：あなたのDNAは調整が必要です。近くに汚染除去剤の備蓄があるはずです...そうそう、フロア%1ですよ！"
+      Title: " %1"
+    Objective: "フロア%1のスキャンルームを探そう。"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：スキャニング手順"
+    VisualName: "スキャニング手順"
+  SecureConnection:
+    CompleteNotificationText: "任務達成： 安定した接続"
+    Description: "コミュニケーションモジュール%1をオンにしましょう。 %2"
+    DescriptionAfterDialog: "ランク%1が条件です。"
+    Dialog1:
+      Button: "OK"
+      Message: "アドバンスドプロトコルはお持ちですか？それはよかった！使えますよ！ちょっとハッキングするだけです。"
+      Title: "ハッキングを受けたコンソール"
+    Dialog2:
+      Button: "OK"
+      Message: "素晴らしい！コミュニケーションモジュールとやり取りできるようになりました。シグナルが増強されます。"
+      Title: "ハッキングを受けたコンソール"
+    Dialog3:
+      Button: "OK"
+      Message: "起動を手伝ってください。起動すればイントラネットに侵入できます。あなたを必ず救出してみせますよ。"
+      Title: "ハッキングを受けたコンソール"
+    Dialog4:
+      Button: "OK"
+      Message: "データベースにアクセスできるようになりました。さて、フロア%1以上先のどこかで、管理室のキーが見つかります。見つけてきてくれれば、表までご案内します！"
+      Title: "ハッキングを受けたコンソール"
+    Dialog5:
+      Button: "OK"
+      Message: "問題が生じています。システムの警告レベルが上昇してしまいました。どうやら、ランクが%1より低い場合、次のモジュールを稼働できないようです。"
+      Title: "ハッキングを受けたコンソール"
+    LowRank: "ランク不足！"
+    Objective: "上級プロトコルを使って%1通信モジュールをオンに。"
+    Progress: " %1/%2オン"
+    ProgressNotificationText: "\"安全な接続\" 進行状況:\n%1/%2"
+    RewardVisualName: "アップグレードキット2個"
+    StartDialogTitle: "新規任務：安定した接続"
+    VisualName: "安全な接続"
+  ServerError:
+    CompleteNotificationText: "任務達成：サーバーの故障"
+    Description: "フロア%1-%2にあるサーバーを探そう。"
+    Dialog1:
+      Button: " %1"
+      Message: "お見事です！これでクローンの..."
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "私の名はサム！的確な名称がついていない装置からの指示は全て無視される。私の名はサム！私の名はサム！"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "こんな展開は予想もつきませんでしたね...処理中に、人工知能に隠されたシステムの機能のロックを解除してしまったようです。"
+      Title: " %1"
+    Dialog4:
+      Button: " %1"
+      Message: "逃亡者の捜索の準備中。ハードウェア照合中...アクセス不能なサーバーを検知しました。"
+      Title: " %1"
+    Dialog5:
+      Button: " %1"
+      Message: "何ですって？逃亡者に詮索されたのかもしれませんね...でもなぜでしょう？怪しいですね... # %1、フロア%2-%3のサーバーを調査してください。"
+      Title: " %1"
+    Objective: "フロア%1-%2にあるサーバーを探そう。"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：サーバーの故障"
+    VisualName: "サーバーの故障"
+    WrongServerNotification: "サーバーが間違っています。調査を続けてください！"
+  ServiceEntrance:
+    CompleteNotificationText: "任務達成： 通用口"
+    Description: "黄色い鍵を使って奥にある通用口を開けろ"
+    Dialog1:
+      Button: "次へ"
+      Message: "こんにちは。実験の管理人を務めるサイモンです。"
+      Title: "管理人"
+    Dialog10:
+      Button: " %1"
+      Message: "私のマップにも記載があります。フロア%1から入れるようですね。#%2、そこに向かってください。その間に私はシステムがどれくらいダメージを受けたか調べておきます。"
+      Title: " %1"
+    Dialog2:
+      Button: "OK"
+      Message: "指令システムに回線障害が生じているようですが、ご心配なく。こちらの設備は古いですから。課せられた任務の達成に集中してください。"
+      Title: "管理人"
+    Dialog3:
+      Button: "OK"
+      Message: "人工知能、ドアをブロックしてくれ！研究所から挑戦者が逃げ出さないようにな！"
+      Title: "管理人"
+    Dialog4:
+      Button: "OK"
+      Message: "アクセスが拒否されました。警告！非常通報システムの再起動を開始しました。"
+      Title: "研究所の人工知能"
+    Dialog5:
+      Button: "OK"
+      Message: "システムの故障が修復されました。スケジュール通り実験を続けています。"
+      Title: "管理人"
+    Dialog6:
+      Button: " %1"
+      Message: "停電しました！人工知能、状況を教えてください。本部のネットワーク接続の確認を試みていますが、シグナルを阻害しているものがあるようです。私たちの邪魔をしているのは何者でしょう？"
+      Title: " %1"
+    Dialog7:
+      Button: " %1"
+      Message: "サブジェクト#%1：格納容器の破損。"
+      Title: " %1"
+    Dialog8:
+      Button: " %1"
+      Message: "システムの調子が狂ったのはこれが原因だったのですね。でも、逃亡者のクローンがこれほどまでの被害を及ぼすなんて、誰かの助けがないと無理ですよ..."
+      Title: " %1"
+    Dialog9:
+      Button: " %1"
+      Message: "サブジェクト#%1は監視エリア外です。走行状況を確認中。結果：管理エリアに逃亡者がいる可能性があります。"
+      Title: " %1"
+    Objective: "黄色い鍵を使って奥にある通用口を開けろ"
+    RewardVisualName: "アップグレードキット2個"
+    StartDialogTitle: "任務達成：通用口"
+    VisualName: "通用口"
+  SwarmEncounter:
+    BlockedStarterPack: "「セキュリティー対策」の任務を達成し、フロア%1からスタートできるロックを解除しよう"
+    CompleteNotificationText: "任務達成：セキュリティー対策"
+    Description: "フロア%1まで達成しよう"
+    Dialog1:
+      Button: " %1"
+      Message: "人工知能、エリアをスキャンし、逃亡者を探し当ててください。遠くまで行っていないはずです。"
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "アクセスが拒否されました。このエリアは非稼働中で、私の監視システムからも切断されています。"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "薄々と感づいてはいましたが... #%1、人工知能のアクセスを修復してください。マップによると、フロア%2に制御装置があるようです。探して来てください。"
+      Title: " %1"
+    Objective: "フロア%1まで達成しよう"
+    RewardVisualName: " %1"
+    StartDialogTitle: "新規任務：セキュリティー対策"
+    VisualName: "セキュリティー対策"
+  TheContact:
+    BlockedStarterPack: "\"コンタクト\"の任務を達成し、フロア%1からスタートできるロックを解除しましょう"
+    CompleteNotificationText: "任務達成： コンタクト"
+    Description: "ランク%1以上で走行を終了し、新たなコンタクトの知識を深めましょう。"
+    Dialog1:
+      Button: "なんですって？"
+      Message: "与えられた任務を無事達成することができました。これでフロア3に簡単にアクセスできるようになりました。さらにV2FrZSB1cCwgTmVvLi4uDQpUaGUgTWF0cml4IGhhcyB5b3UuLi4NCkZvbGxvdyB0aGUgd2hpdGUgcmFiYml0Lg0K..."
+      Title: "告知"
+    Dialog2:
+      Button: "OK"
+      Message: "こちらのコンソールをハッキングするのは一筋縄ではいきませんでしたよ。なのでよく聞いてください。抜け道があるんです。探すのを一緒にお手伝いします。アドバンスドプロトコルを獲得したらまたご連絡しますね。さあ走って！"
+      Title: "ハッキングを受けたコンソール"
+    Dialog3:
+      Button: "OK"
+      Message: "...実験の目的は、アドバンスドプロトコルを獲得するには、ランク%1を達成することです。アップグレードを研究して組み合わせ、さらに高いランクを達成しましょう。"
+      Title: "告知"
+    Objective: "ランク%1以上で走行を終了しましょう"
+    Progress: "現在までの最高ランク：%1"
+    ProgressNotificationText: "新たな自己最高記録 - ランク%1"
+    RewardVisualName: "アドバンスド 走行プロトコル"
+    StartDialogTitle: "新規任務：コンタクト"
+    VisualName: "コンタクト"
+  TreasureHunt:
+    CompleteNotificationText: "任務達成： 宝探し"
+    Description: "優良アップグレードやトリックを%1個入手しましょう。"
+    Objective: "優良アップグレードやトリックを%1個入手しましょう。"
+    Progress: " %1/%2入手済み"
+    ProgressNotificationText: "「宝探し」進行度：\n%1/%2"
+    RewardVisualName: "アップグレードキット2個"
+    StartDialogTitle: "新規任務：宝探し"
+    VisualName: "宝探し"
+  UpgradeEffect:
+    CompleteNotificationText: "任務達成：フィールドテスト"
+    Description: "アップグレードした鎧をテストしてみましょう"
+    Dialog1:
+      Button: "OK"
+      Message: "あなたにとって、死は終わりではありません！以前の装備とランクは失ってしまいましたが、あなたの心はターミナルを通して新たなクローンに移行されました。ここにいる間は、新しいアップグレードとトリックのロックを解除することができます。"
+      Title: "告知"
+    Objective: "アップグレードした鎧をテストしてみましょう"
+    RewardVisualName: "アップグレードキット2個"
+    StartDialogTitle: "新規任務：フィールドテスト"
+    VisualName: "フィールドテスト"
+Records:
+  LevelsPassed: "フロアスタート"
+  NewRecord: "新記録"
+  PersonalRecord: "個人記録"
+Run:
+  Boosterpack:
+    FloatingText: "アップグレードキット"
+SoundAnnounce:
+  Belt:
+    GadgetName: "ベルト"
+    SoundText: "ベルトを外しました"
+  DarknessActivated: "停電"
+  Hands:
+    GadgetName: "グローブ"
+    SoundText: "グローブを外しました"
+  Head:
+    GadgetName: "かぶり物"
+    SoundText: "かぶり物を外しました"
+  Legs:
+    GadgetName: "ブーツ"
+    SoundText: "ブーツを外しました"
+  Quests:
+    KeysIntro:
+      Hacking: "ハッキングプログラムを起動中"
+      Passage: "通路が封鎖されました"
+  SubjectActivated: "挑戦者が%1起動"
+  SubjectDestroyed: "挑戦者が倒されてしまいました"
+  Torso:
+    GadgetName: "鎧"
+    SoundText: "鎧を外しました"
+  TutorStuntLocked1: "未知のトリック"
+  TutorStuntLocked2: "研究コレクション\nプログラムを起動しました"
+  Tutorial: "ベーシックシステムチェック\n開始"
+  TutorialEndFloor1: "挑戦者のベーシックモーター\n機能を確認しました"
+StarterPacks:
+  AdvancedProtocol:
+    Description: "アドバンスドプロトコルがあるとフロア%1からプレーできるようになり、さらに新しい装備が付与されます"
+    Hands:
+      VisualName: "めっきグローブ"
+    Head:
+      VisualName: "めっきヘルメット"
+    Legs:
+      VisualName: "めっきブーツ"
+    PackName: "アドバンスドプロトコル"
+    Torso:
+      VisualName: "めっきアーマー"
+  AlphaProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "技術プロトコルがあるとフロア%1からスタートできるようになります"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "技術プロトコル"
+    Torso:
+      VisualName: " %1"
+  BasicProtocol:
+    Description: "ベーシックプロトコルがあるとフロア%1からプレーできるようになります"
+    PackName: "ベーシックプロトコル"
+    Torso:
+      VisualName: "ユニフォームジャケット"
+  BetaProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "工学プロトコルがあるとフロア%1からスタートできるようになります"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "工学プロトコル"
+    Torso:
+      VisualName: " %1"
+  ExperimentalProtocol:
+    Belt:
+      VisualName: "めっきベルト"
+    Description: "実験プロトコルがあるとフロア%1からプレーできるようになり、さらに新しい装備が付与されます"
+    Hands:
+      VisualName: "めっきグローブ"
+    Head:
+      VisualName: "めっきヘルメット"
+    Legs:
+      VisualName: "めっきブーツ"
+    PackName: "実験的走行プロトコル"
+    Torso:
+      VisualName: "めっきアーマー"
+  GammaProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "システムプロトコルがあるとフロア%1からスタートできるようになります"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "システムプロトコル"
+    Torso:
+      VisualName: " %1"
+  LastProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "管理プロトコルがあるとフロア%1からスタートできるようになります"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "管理プロトコル"
+    Torso:
+      VisualName: " %1"
+  OmegaProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "セキュリティープロトコルがあるとフロア%1からスタートできるようになります"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "セキュリティープロトコル"
+    Torso:
+      VisualName: " %1"
+  ResearchRequirements:
+    NoRequirements: "条件なし"
+    ReachFloor_1: "フロア1まで達成しよう"
+    ReachFloor_10: "フロア10まで達成しよう"
+    ReachFloor_11: "フロア11まで達成しよう"
+    ReachFloor_12: "フロア12まで達成しよう"
+    ReachFloor_13: "フロア13まで達成しよう"
+    ReachFloor_14: "フロア14まで達成しよう"
+    ReachFloor_15: "フロア15まで達成しよう"
+    ReachFloor_16: "フロア16まで達成しよう"
+    ReachFloor_17: "フロア17まで達成しよう"
+    ReachFloor_18: "フロア18まで達成しよう"
+    ReachFloor_19: "フロア19まで達成しよう"
+    ReachFloor_2: "フロア2まで達成しよう"
+    ReachFloor_20: "フロア20まで達成しよう"
+    ReachFloor_21: "フロア21まで達成しよう"
+    ReachFloor_22: "フロア22まで達成しよう"
+    ReachFloor_23: "フロア23まで達成しよう"
+    ReachFloor_24: "フロア24まで達成しよう"
+    ReachFloor_25: "フロア25まで達成しよう"
+    ReachFloor_26: "フロア26まで達成しよう"
+    ReachFloor_27: "フロア27まで達成しよう"
+    ReachFloor_28: "フロア28まで達成しよう"
+    ReachFloor_29: "フロア29まで達成しよう"
+    ReachFloor_3: "フロア3まで達成しよう"
+    ReachFloor_30: "フロア30まで達成しよう"
+    ReachFloor_31: "フロア31まで達成しよう"
+    ReachFloor_32: "フロア32まで達成しよう"
+    ReachFloor_33: "フロア33まで達成しよう"
+    ReachFloor_34: "フロア34まで達成しよう"
+    ReachFloor_35: "フロア35まで達成しよう"
+    ReachFloor_36: "フロア36まで達成しよう"
+    ReachFloor_37: "フロア37まで達成しよう"
+    ReachFloor_38: "フロア38まで達成しよう"
+    ReachFloor_39: "フロア39まで達成しよう"
+    ReachFloor_4: "フロア4まで達成しよう"
+    ReachFloor_40: "フロア40まで達成しよう"
+    ReachFloor_5: "フロア5まで達成しよう"
+    ReachFloor_6: "フロア6まで達成しよう"
+    ReachFloor_7: "フロア7まで達成しよう"
+    ReachFloor_8: "フロア8まで達成しよう"
+    ReachFloor_9: "フロア9まで達成しよう"
+  StandardProtocol:
+    Description: "スタンダードプロトコルがあるとフロア%1からプレーできるようになり、さらに新しい装備が付与されます"
+    Legs:
+      VisualName: "めっきブーツ"
+    PackName: "スタンダードプロトコル"
+    Torso:
+      VisualName: "めっきアーマー"
+StoryItems:
+  FileKey:
+    Text: "フルアクセス用サーバーキー"
+    VisualName: "サーバーキー"
+  Fuze:
+    Text: "SFに登場するごく一般的な安全信管"
+    VisualName: "安全信管"
+  MemoryUnit:
+    Text: "スワームの較正に必須"
+    VisualName: "記憶装置"
+  Reagent:
+    Text: "DNAの調整に必要"
+    VisualName: "汚染除去剤"
+Stunts:
+  StuntDetails:
+    AboveCar:
+      StuntVisualItemName: "Fold Flip"
+    AboveCar_1:
+      StuntVisualItemName: "Fold Flip"
+      Text: "This trick will give you %1 perfomance points"
+    AboveCar_2:
+      StuntVisualItemName: "Superior Fold Flip"
+      Text: "This trick will give you %1 perfomance points"
+    AboveCar_3:
+      StuntVisualItemName: "Ultimate Fold Flip"
+      Text: "This trick will give you %1 perfomance points"
+    AirBomb:
+      StuntVisualItemName: "Air Bomb"
+    AirBomb_1:
+      StuntVisualItemName: "Air Bomb"
+      Text: "This trick will give you %1 perfomance points"
+    AirBomb_2:
+      StuntVisualItemName: "Superior Air Bomb"
+      Text: "This trick will give you %1 perfomance points"
+    AirBomb_3:
+      StuntVisualItemName: "Ultimate Air Bomb"
+      Text: "This trick will give you %1 perfomance points"
+    AirSpin:
+      StuntVisualItemName: "Air Spin"
+    AirSpin_1:
+      StuntVisualItemName: "Air Spin"
+      Text: " %1"
+    AirSpin_2:
+      StuntVisualItemName: "Superior Air Spin"
+      Text: " %1"
+    AirSpin_3:
+      StuntVisualItemName: "Ultimate Air Spin"
+      Text: " %1"
+    BackFlip:
+      StuntVisualItemName: "Backflip"
+    BackFlip_1:
+      StuntVisualItemName: "Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BackFlip_2:
+      StuntVisualItemName: "Superior Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BackFlip_3:
+      StuntVisualItemName: "Ultimate Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BarJump:
+      StuntVisualItemName: "Bar Backflip"
+    BarJumpSaltoless:
+      StuntVisualItemName: "Bar Jump Saltoless"
+    BarJumpSaltoless_1:
+      StuntVisualItemName: "Bar Jump Saltoless"
+      Text: "This trick will give you %1 perfomance points"
+    BarJumpSaltoless_2:
+      StuntVisualItemName: "Superior Bar Jump Saltoless"
+      Text: "This trick will give you %1 perfomance points"
+    BarJumpSaltoless_3:
+      StuntVisualItemName: "Ultimate Bar Jump Saltoless"
+      Text: "This trick will give you %1 perfomance points"
+    BarJump_1:
+      StuntVisualItemName: "Bar Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BarJump_2:
+      StuntVisualItemName: "Superior Bar Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BarJump_3:
+      StuntVisualItemName: "Ultimate Bar Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BarrelVault:
+      StuntVisualItemName: "Barrel Vault"
+    BarrelVault_1:
+      StuntVisualItemName: "Barrel Vault"
+      Text: "This trick will give you %1 perfomance points"
+    BarrelVault_2:
+      StuntVisualItemName: "Superior Barrel Vault"
+      Text: "This trick will give you %1 perfomance points"
+    BarrelVault_3:
+      StuntVisualItemName: "Ultimate Barrel Vault"
+      Text: "This trick will give you %1 perfomance points"
+    BoomBoomSh:
+      StuntVisualItemName: "Boom Boom Sh"
+    BoomBoomSh_1:
+      StuntVisualItemName: "Boom Boom Sh"
+      Text: " %1"
+    BoomBoomSh_2:
+      StuntVisualItemName: "Superior Boom Boom Sh"
+      Text: " %1"
+    BoomBoomSh_3:
+      StuntVisualItemName: "Ultimate Boom Boom Sh"
+      Text: " %1"
+    Bullet:
+      StuntVisualItemName: "Bullet"
+    Bullet_1:
+      StuntVisualItemName: "Bullet"
+      Text: " %1"
+    Bullet_2:
+      StuntVisualItemName: "Superior Bullet"
+      Text: " %1"
+    Bullet_3:
+      StuntVisualItemName: "Ultimate Bullet"
+      Text: " %1"
+    CheatGainer:
+      StuntVisualItemName: "Cheat Gainer"
+    CheatGainer_1:
+      StuntVisualItemName: "Cheat Gainer"
+      Text: " %1"
+    CheatGainer_2:
+      StuntVisualItemName: "Superior Cheat Gainer"
+      Text: " %1"
+    CheatGainer_3:
+      StuntVisualItemName: "Ultimate Cheat Gainer"
+      Text: " %1"
+    CoolSwing:
+      StuntVisualItemName: "Cool Swing"
+    CoolSwing_1:
+      StuntVisualItemName: "Cool Swing"
+      Text: "This trick will give you %1 perfomance points"
+    CoolSwing_2:
+      StuntVisualItemName: "Superior Cool Swing"
+      Text: "This trick will give you %1 perfomance points"
+    CoolSwing_3:
+      StuntVisualItemName: "Ultimate Cool Swing"
+      Text: "This trick will give you %1 perfomance points"
+    DashToFrontflip:
+      StuntVisualItemName: "Dash to Frontflip"
+    DashToFrontflip_1:
+      StuntVisualItemName: "Dash to Frontflip"
+      Text: "This trick will give you %1 perfomance points"
+    DashToFrontflip_2:
+      StuntVisualItemName: "Superior Dash to Frontflip"
+      Text: "This trick will give you %1 perfomance points"
+    DashToFrontflip_3:
+      StuntVisualItemName: "Ultimate Dash to Frontflip"
+      Text: "This trick will give you %1 perfomance points"
+    DashVault:
+      StuntVisualItemName: "Dash Vault"
+    DashVault_1:
+      StuntVisualItemName: "Dash Vault"
+      Text: "This trick will give you %1 perfomance points"
+    DashVault_2:
+      StuntVisualItemName: "Superior Dash Vault"
+      Text: "This trick will give you %1 perfomance points"
+    DashVault_3:
+      StuntVisualItemName: "Ultimate Dash Vault"
+      Text: "This trick will give you %1 perfomance points"
+    Default:
+      Text: "This trick will give you %2 perfomance points"
+    DiveDown:
+      StuntVisualItemName: "Dive Down"
+    DiveDown_1:
+      StuntVisualItemName: "Dive Down"
+      Text: " %1"
+    DiveDown_2:
+      StuntVisualItemName: "Superior Dive Down"
+      Text: " %1"
+    DiveDown_3:
+      StuntVisualItemName: "Ultimate Dive Down"
+      Text: " %1"
+    DiveRoll:
+      StuntVisualItemName: "Dive Roll"
+    DiveRoll_1:
+      StuntVisualItemName: "Dive Roll"
+      Text: " %1"
+    DiveRoll_2:
+      StuntVisualItemName: "Superior Dive Roll"
+      Text: " %1"
+    DiveRoll_3:
+      StuntVisualItemName: "Ultimate Dive Roll"
+      Text: " %1"
+    DoubleBack:
+      StuntVisualItemName: "Double Back"
+    DoubleBack_1:
+      StuntVisualItemName: "Double Back"
+      Text: " %1"
+    DoubleBack_2:
+      StuntVisualItemName: "Superior Double Back"
+      Text: " %1"
+    DoubleBack_3:
+      StuntVisualItemName: "Ultimate Double Back"
+      Text: " %1"
+    DoubleJumpRoll:
+      StuntVisualItemName: "Double Jump Roll"
+    DoubleJumpRoll_1:
+      StuntVisualItemName: "Double Jump Roll"
+      Text: " %1"
+    DoubleJumpRoll_2:
+      StuntVisualItemName: "Superior Double Jump Roll"
+      Text: " %1"
+    DoubleJumpRoll_3:
+      StuntVisualItemName: "Ultimate Double Jump Roll"
+      Text: " %1"
+    DoubleKong:
+      StuntVisualItemName: "Double Kong"
+    DoubleKong_1:
+      StuntVisualItemName: "Double Kong"
+      Text: " %1"
+    DoubleKong_2:
+      StuntVisualItemName: "Superior Double Kong"
+      Text: " %1"
+    DoubleKong_3:
+      StuntVisualItemName: "Ultimate Double Kong"
+      Text: " %1"
+    DoubleSpinToRoll_1:
+      StuntVisualItemName: "Double Spin To Roll"
+      Text: " %1"
+    DoubleSpinToRoll_2:
+      StuntVisualItemName: "Superior Double Spin To Roll"
+      Text: " %1"
+    DoubleSpinToRoll_3:
+      StuntVisualItemName: "Ultimate Double Spin To Roll"
+      Text: " %1"
+    DoubleSpinVault:
+      StuntVisualItemName: "Double Spin Vault"
+    DoubleSpinVault_1:
+      StuntVisualItemName: "Double Spin Vault"
+      Text: " %1"
+    DoubleSpinVault_2:
+      StuntVisualItemName: "Superior Double Spin Vault"
+      Text: " %1"
+    DoubleSpinVault_3:
+      StuntVisualItemName: "Ultimate Double Spin Vault"
+      Text: " %1"
+    FlippingSwing:
+      StuntVisualItemName: "Flipping Swing"
+    FlippingSwing_1:
+      StuntVisualItemName: "Flipping Swing"
+      Text: " %1"
+    FlippingSwing_2:
+      StuntVisualItemName: "Superior Flipping Swing"
+      Text: " %1"
+    FlippingSwing_3:
+      StuntVisualItemName: "Ultimate Flipping Swing"
+      Text: " %1"
+    FlyingArrow:
+      StuntVisualItemName: "Flying Arrow"
+    FlyingArrow_1:
+      StuntVisualItemName: "Flying Arrow"
+      Text: " %1"
+    FlyingArrow_2:
+      StuntVisualItemName: "Superior Flying Arrow"
+      Text: " %1"
+    FlyingArrow_3:
+      StuntVisualItemName: "Ultimate Flying Arrow"
+      Text: " %1"
+    FrontFlipTwoLegs:
+      StuntVisualItemName: "Straight Legs Flip"
+    FrontFlipTwoLegs_1:
+      StuntVisualItemName: "Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    FrontFlipTwoLegs_2:
+      StuntVisualItemName: "Superior Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    FrontFlipTwoLegs_3:
+      StuntVisualItemName: "Ultimate Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    FrontflipLegsUp:
+      StuntVisualItemName: "Frontflip Legs Up"
+    FrontflipLegsUp_1:
+      StuntVisualItemName: "Frontflip Legs Up"
+      Text: " %1"
+    FrontflipLegsUp_2:
+      StuntVisualItemName: "Superior Frontflip Legs Up"
+      Text: " %1"
+    FrontflipLegsUp_3:
+      StuntVisualItemName: "Ultimate Frontflip Legs Up"
+      Text: " %1"
+    GateVault:
+      StuntVisualItemName: "Gate Vault"
+    GateVault_1:
+      StuntVisualItemName: "Gate Vault"
+      Text: " %1"
+    GateVault_2:
+      StuntVisualItemName: "Superior Gate Vault"
+      Text: " %1"
+    GateVault_3:
+      StuntVisualItemName: "Ultimate Gate Vault"
+      Text: " %1"
+    HandSpring:
+      StuntVisualItemName: "Hand Spring"
+    HandSpring_1:
+      StuntVisualItemName: "Hand Spring"
+      Text: " %1"
+    HandSpring_2:
+      StuntVisualItemName: "Superior Hand Spring"
+      Text: " %1"
+    HandSpring_3:
+      StuntVisualItemName: "Ultimate Hand Spring"
+      Text: " %1"
+    HandspringToRoll:
+      StuntVisualItemName: "Handspring To Roll"
+    HandspringToRoll_1:
+      StuntVisualItemName: "Handspring To Roll"
+      Text: " %1"
+    HandspringToRoll_2:
+      StuntVisualItemName: "Superior Handspring To Roll"
+      Text: " %1"
+    HandspringToRoll_3:
+      StuntVisualItemName: "Ultimate Handspring To Roll"
+      Text: " %1"
+    JumpDownRoll:
+      StuntVisualItemName: "Jump Down Roll"
+    JumpDownRoll_1:
+      StuntVisualItemName: "Jump Down Roll"
+      Text: " %1"
+    JumpDownRoll_2:
+      StuntVisualItemName: "Superior Jump Down Roll"
+      Text: " %1"
+    JumpDownRoll_3:
+      StuntVisualItemName: "Ultimate Jump Down Roll"
+      Text: " %1"
+    JumpObstacle:
+      StuntVisualItemName: "Jump Obstacle"
+    JumpObstacle_1:
+      StuntVisualItemName: "Jump Obstacle"
+      Text: "This trick will give you %1 perfomance points"
+    JumpObstacle_2:
+      StuntVisualItemName: "Superior Jump Obstacle"
+      Text: "This trick will give you %1 perfomance points"
+    JumpObstacle_3:
+      StuntVisualItemName: "Ultimate Jump Obstacle"
+      Text: "This trick will give you %1 perfomance points"
+    JumpSpinVault:
+      StuntVisualItemName: "Jump Spin Vault"
+    JumpSpinVault_1:
+      StuntVisualItemName: "Jump Spin Vault"
+      Text: " %1"
+    JumpSpinVault_2:
+      StuntVisualItemName: "Superior Jump Spin Vault"
+      Text: " %1"
+    JumpSpinVault_3:
+      StuntVisualItemName: "Ultimate Jump Spin Vault"
+      Text: " %1"
+    JumpTumble:
+      StuntVisualItemName: "Jump Tumble"
+    JumpTumble_1:
+      StuntVisualItemName: "Jump Tumble"
+      Text: "This trick will give you %1 perfomance points"
+    JumpTumble_2:
+      StuntVisualItemName: "Superior Jump Tumble"
+      Text: "This trick will give you %1 perfomance points"
+    JumpTumble_3:
+      StuntVisualItemName: "Ultimate Jump Tumble"
+      Text: "This trick will give you %1 perfomance points"
+    JumpWheel:
+      StuntVisualItemName: "Jump Wheel"
+    JumpWheel_1:
+      StuntVisualItemName: "Jump Wheel"
+      Text: "This trick will give you %1 perfomance points"
+    JumpWheel_2:
+      StuntVisualItemName: "Superior Jump Wheel"
+      Text: "This trick will give you %1 perfomance points"
+    JumpWheel_3:
+      StuntVisualItemName: "Ultimate Jump Wheel"
+      Text: "This trick will give you %1 perfomance points"
+    KingKongJumpoff:
+      StuntVisualItemName: "King Kong Jumpoff"
+    KingKongJumpoff_1:
+      StuntVisualItemName: "King Kong Jumpoff"
+      Text: " %1"
+    KingKongJumpoff_2:
+      StuntVisualItemName: "Superior King Kong Jumpoff"
+      Text: " %1"
+    KingKongJumpoff_3:
+      StuntVisualItemName: "Ultimate King Kong Jumpoff"
+      Text: " %1"
+    KingKongToBend:
+      StuntVisualItemName: "King Kong To Bend"
+    KingKongToBend_1:
+      StuntVisualItemName: "King Kong To Bend"
+      Text: " %1"
+    KingKongToBend_2:
+      StuntVisualItemName: "Superior King Kong To Bend"
+      Text: " %1"
+    KingKongToBend_3:
+      StuntVisualItemName: "Ultimate King Kong To Bend"
+      Text: " %1"
+    KingKongToFlip:
+      StuntVisualItemName: "King Kong To Flip"
+    KingKongToFlip_1:
+      StuntVisualItemName: "King Kong To Flip"
+      Text: " %1"
+    KingKongToFlip_2:
+      StuntVisualItemName: "Superior King Kong To Flip"
+      Text: " %1"
+    KingKongToFlip_3:
+      StuntVisualItemName: "Ultimate King Kong To Flip"
+      Text: " %1"
+    LongCircle:
+      StuntVisualItemName: "Long Circle"
+    LongCircle_1:
+      StuntVisualItemName: "Long Circle"
+      Text: " %1"
+    LongCircle_2:
+      StuntVisualItemName: "Superior Long Circle"
+      Text: " %1"
+    LongCircle_3:
+      StuntVisualItemName: "Ultimate Long Circle"
+      Text: " %1"
+    LongJumpToBarrel:
+      StuntVisualItemName: "Long Jump To Barrel"
+    LongJumpToBarrel_1:
+      StuntVisualItemName: "Long Jump To Barrel"
+      Text: " %1"
+    LongJumpToBarrel_2:
+      StuntVisualItemName: "Superior Long Jump To Barrel"
+      Text: " %1"
+    LongJumpToBarrel_3:
+      StuntVisualItemName: "Ultimate Long Jump To Barrel"
+      Text: " %1"
+    MonkeyToBackflip:
+      StuntVisualItemName: "Monkey To Backflip"
+    MonkeyToBackflip_1:
+      StuntVisualItemName: "Monkey To Backflip"
+      Text: " %1"
+    MonkeyToBackflip_2:
+      StuntVisualItemName: "Superior Monkey To Backflip"
+      Text: " %1"
+    MonkeyToBackflip_3:
+      StuntVisualItemName: "Ultimate Monkey To Backflip"
+      Text: " %1"
+    MonkeyToBomb:
+      StuntVisualItemName: "Monkey To Bomb"
+    MonkeyToBomb_1:
+      StuntVisualItemName: "Monkey To Bomb"
+      Text: " %1"
+    MonkeyToBomb_2:
+      StuntVisualItemName: "Superior Monkey To Bomb"
+      Text: " %1"
+    MonkeyToBomb_3:
+      StuntVisualItemName: "Ultimate Monkey To Bomb"
+      Text: " %1"
+    MonkeyVault:
+      StuntVisualItemName: "Monkey Vault"
+    MonkeyVault_1:
+      StuntVisualItemName: "Monkey Vault"
+      Text: "This trick will give you %1 perfomance points"
+    MonkeyVault_2:
+      StuntVisualItemName: "Superior Monkey Vault"
+      Text: "This trick will give you %1 perfomance points"
+    MonkeyVault_3:
+      StuntVisualItemName: "Ultimate Monkey Vault"
+      Text: "This trick will give you %1 perfomance points"
+    NoStunt: "Unknown Trick!"
+    ObstacleFrontflip:
+      StuntVisualItemName: "Obstacle Front Flip"
+    ObstacleFrontflip_1:
+      StuntVisualItemName: "Obstacle Front Flip"
+      Text: "This trick will give you %1 perfomance points"
+    ObstacleFrontflip_2:
+      StuntVisualItemName: "Superior Obstacle Front Flip"
+      Text: "This trick will give you %1 perfomance points"
+    ObstacleFrontflip_3:
+      StuntVisualItemName: "Ultimate Obstacle Front Flip"
+      Text: "This trick will give you %1 perfomance points"
+    RailFlipVault:
+      StuntVisualItemName: "Railflip Vault"
+    RailFlipVault_1:
+      StuntVisualItemName: "Railflip Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RailFlipVault_2:
+      StuntVisualItemName: "Superior Railflip Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RailFlipVault_3:
+      StuntVisualItemName: "Ultimate Railflip Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ReverseVault:
+      StuntVisualItemName: "Reverse Vault"
+    ReverseVault_1:
+      StuntVisualItemName: "Reverse Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ReverseVault_2:
+      StuntVisualItemName: "Superior Reverse Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ReverseVault_3:
+      StuntVisualItemName: "Ultimate Reverse Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RocketVault:
+      StuntVisualItemName: "Rocket Vault"
+    RocketVault_1:
+      StuntVisualItemName: "Rocket Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RocketVault_2:
+      StuntVisualItemName: "Superior Rocket Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RocketVault_3:
+      StuntVisualItemName: "Ultimate Rocket Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RollForward:
+      StuntVisualItemName: "Roll Forward"
+    RollForward_1:
+      StuntVisualItemName: "Roll Forward"
+      Text: " %1"
+    RollForward_2:
+      StuntVisualItemName: "Superior Roll Forward"
+      Text: " %1"
+    RollForward_3:
+      StuntVisualItemName: "Ultimate Roll Forward"
+      Text: " %1"
+    RollToStraightLegsFlip:
+      StuntVisualItemName: "Roll To Straight Legs"
+    RollToStraightLegsFlip_1:
+      StuntVisualItemName: "Roll To Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    RollToStraightLegsFlip_2:
+      StuntVisualItemName: "Superior Roll To Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    RollToStraightLegsFlip_3:
+      StuntVisualItemName: "Ultimate Roll To Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    ScrewDriver:
+      StuntVisualItemName: "Screwdriver"
+    ScrewDriver_1:
+      StuntVisualItemName: "Screwdriver"
+      Text: "This trick will give you %1 perfomance points"
+    ScrewDriver_2:
+      StuntVisualItemName: "Superior Screwdriver"
+      Text: "This trick will give you %1 perfomance points"
+    ScrewDriver_3:
+      StuntVisualItemName: "Ultimate Screwdriver"
+      Text: "This trick will give you %1 perfomance points"
+    SideFlip:
+      StuntVisualItemName: "Side Flip"
+    SideFlip_1:
+      StuntVisualItemName: "Side Flip"
+      Text: "This trick will give you %1 perfomance points"
+    SideFlip_2:
+      StuntVisualItemName: "Superior Side Flip"
+      Text: "This trick will give you %1 perfomance points"
+    SideFlip_3:
+      StuntVisualItemName: "Ultimate Side Flip"
+      Text: "This trick will give you %1 perfomance points"
+    Sidebomb:
+      StuntVisualItemName: "Sidebomb"
+    Sidebomb_1:
+      StuntVisualItemName: "Sidebomb"
+      Text: " %1"
+    Sidebomb_2:
+      StuntVisualItemName: "Superior Sidebomb"
+      Text: " %1"
+    Sidebomb_3:
+      StuntVisualItemName: "Ultimate Sidebomb"
+      Text: " %1"
+    SlowSpin:
+      StuntVisualItemName: "Slow Spin"
+    SlowSpin_1:
+      StuntVisualItemName: "Slow Spin"
+      Text: " %1"
+    SlowSpin_2:
+      StuntVisualItemName: "Superior Slow Spin"
+      Text: " %1"
+    SlowSpin_3:
+      StuntVisualItemName: "Ultimate Slow Spin"
+      Text: " %1"
+    SpinBicycle:
+      StuntVisualItemName: "Spin Bicycle"
+    SpinBicycle_1:
+      StuntVisualItemName: "Spin Bicycle"
+      Text: " %1"
+    SpinBicycle_2:
+      StuntVisualItemName: "Superior Spin Bicycle"
+      Text: " %1"
+    SpinBicycle_3:
+      StuntVisualItemName: "Ultimate Spin Bicycle"
+      Text: " %1"
+    SpinVault:
+      StuntVisualItemName: "Spin Vault"
+    SpinVault_1:
+      StuntVisualItemName: "Spin Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SpinVault_2:
+      StuntVisualItemName: "Superior Spin Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SpinVault_3:
+      StuntVisualItemName: "Ultimate Spin Vault"
+      Text: "This trick will give you %1 perfomance points"
+    Spin:
+      StuntVisualItemName: "Spin"
+    Spin_1:
+      StuntVisualItemName: "Spin"
+      Text: " %1"
+    Spin_2:
+      StuntVisualItemName: "Superior Spin"
+      Text: " %1"
+    Spin_3:
+      StuntVisualItemName: "Ultimate Spin"
+      Text: " %1"
+    SpinningVault:
+      StuntVisualItemName: "Spinning Vault"
+    SpinningVault_1:
+      StuntVisualItemName: "Spinning Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SpinningVault_2:
+      StuntVisualItemName: "Superior Spinning Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SpinningVault_3:
+      StuntVisualItemName: "Ultimate Spinning Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SplitOne:
+      StuntVisualItemName: "Split"
+    SplitOne_1:
+      StuntVisualItemName: "Split"
+      Text: "This trick will give you %1 perfomance points"
+    SplitOne_2:
+      StuntVisualItemName: "Superior Split"
+      Text: "This trick will give you %1 perfomance points"
+    SplitOne_3:
+      StuntVisualItemName: "Ultimate Split"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow:
+      StuntVisualItemName: "Swallow"
+    Swallow400:
+      StuntVisualItemName: "Swallow"
+    Swallow400_1:
+      StuntVisualItemName: "Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow400_2:
+      StuntVisualItemName: "Superior Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow400_3:
+      StuntVisualItemName: "Ultimate Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow_1:
+      StuntVisualItemName: "Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow_2:
+      StuntVisualItemName: "Superior Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow_3:
+      StuntVisualItemName: "Ultimate Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swing:
+      StuntVisualItemName: "Swing"
+    Swing_1:
+      StuntVisualItemName: "Swing"
+      Text: " %1"
+    Swing_2:
+      StuntVisualItemName: "Superior Swing"
+      Text: " %1"
+    Swing_3:
+      StuntVisualItemName: "Ultimate Swing"
+      Text: " %1"
+    Text: "This trick will give you %1 perfomance points"
+    ThiefVault:
+      StuntVisualItemName: "Thief Vault"
+    ThiefVault_1:
+      StuntVisualItemName: "Thief Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ThiefVault_2:
+      StuntVisualItemName: "Superior Thief Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ThiefVault_3:
+      StuntVisualItemName: "Ultimate Thief Vault"
+      Text: "This trick will give you %1 perfomance points"
+    TripleHit:
+      StuntVisualItemName: "Triple Hit"
+    TripleHit_1:
+      StuntVisualItemName: "Triple Hit"
+      Text: "This trick will give you %1 perfomance points"
+    TripleHit_2:
+      StuntVisualItemName: "Superior Triple Hit"
+      Text: "This trick will give you %1 perfomance points"
+    TripleHit_3:
+      StuntVisualItemName: "Ultimate Triple Hit"
+      Text: "This trick will give you %1 perfomance points"
+    TripleSwing:
+      StuntVisualItemName: "Triple Swing"
+    TripleSwing_1:
+      StuntVisualItemName: "Triple Swing"
+      Text: " %1"
+    TripleSwing_2:
+      StuntVisualItemName: "Superior Triple Swing"
+      Text: " %1"
+    TripleSwing_3:
+      StuntVisualItemName: "Ultimate Triple Swing"
+      Text: " %1"
+    TripleTrickToSwallow:
+      StuntVisualItemName: "Triple Trick To Swallow"
+    TripleTrickToSwallow_1:
+      StuntVisualItemName: "Triple Trick To Swallow"
+      Text: " %1"
+    TripleTrickToSwallow_2:
+      StuntVisualItemName: "Superior Triple Trick To Swallow"
+      Text: " %1"
+    TripleTrickToSwallow_3:
+      StuntVisualItemName: "Ultimate Triple Trick To Swallow"
+      Text: " %1"
+    TurnVault:
+      StuntVisualItemName: "Turn Vault"
+    TurnVault_1:
+      StuntVisualItemName: "Turn Vault"
+      Text: " %1"
+    TurnVault_2:
+      StuntVisualItemName: "Superior Turn Vault"
+      Text: " %1"
+    TurnVault_3:
+      StuntVisualItemName: "Ultimate Turn Vault"
+      Text: " %1"
+    Underbar:
+      StuntVisualItemName: "Underbar"
+    Underbar_1:
+      StuntVisualItemName: "Underbar"
+      Text: "This trick will give you %1 perfomance points"
+    Underbar_2:
+      StuntVisualItemName: "Superior Underbar"
+      Text: "This trick will give you %1 perfomance points"
+    Underbar_3:
+      StuntVisualItemName: "Ultimate Underbar"
+      Text: "This trick will give you %1 perfomance points"
+    VertVault:
+      StuntVisualItemName: "Vert Vault"
+    VertVault_1:
+      StuntVisualItemName: "Vert Vault"
+      Text: " %1"
+    VertVault_2:
+      StuntVisualItemName: "Superior Vert Vault"
+      Text: " %1"
+    VertVault_3:
+      StuntVisualItemName: "Ultimate Vert Vault"
+      Text: " %1"
+    WallBackRoll:
+      StuntVisualItemName: "Wall Back Roll"
+    WallBackRoll_1:
+      StuntVisualItemName: "Wall Back Roll"
+      Text: " %1"
+    WallBackRoll_2:
+      StuntVisualItemName: "Superior Wall Back Roll"
+      Text: " %1"
+    WallBackRoll_3:
+      StuntVisualItemName: "Ultimate Wall Back Roll"
+      Text: " %1"
+    WallCling:
+      StuntVisualItemName: "Wall Cling"
+    WallCling_1:
+      StuntVisualItemName: "Wall Cling"
+      Text: " %1"
+    WallCling_2:
+      StuntVisualItemName: "Superior Wall Cling"
+      Text: " %1"
+    WallCling_3:
+      StuntVisualItemName: "Ultimate Wall Cling"
+      Text: " %1"
+    WallHop:
+      StuntVisualItemName: "Wall Hop"
+    WallHop360:
+      StuntVisualItemName: "Ultimate Wall Hop 360"
+    WallHop360_1:
+      StuntVisualItemName: "Ultimate Wall Hop 360"
+      Text: " %1"
+    WallHop360_2:
+      StuntVisualItemName: "Ultimate Wall Hop 360"
+      Text: " %1"
+    WallHop360_3:
+      StuntVisualItemName: "Ultimate Wall Hop 360"
+      Text: " %1"
+    WallHop_1:
+      StuntVisualItemName: "Wall Hop"
+      Text: " %1"
+    WallHop_2:
+      StuntVisualItemName: "Superior Wall Hop"
+      Text: " %1"
+    WallHop_3:
+      StuntVisualItemName: "Ultimate Wall Hop"
+      Text: " %1"
+    WallSpeedVault:
+      StuntVisualItemName: "Wall Speed Vault"
+    WallSpeedVault_1:
+      StuntVisualItemName: "Wall Speed Vault"
+      Text: " %1"
+    WallSpeedVault_2:
+      StuntVisualItemName: "Superior Wall Speed Vault"
+      Text: " %1"
+    WallSpeedVault_3:
+      StuntVisualItemName: "Ultimate Wall Speed Vault"
+      Text: " %1"
+    Webster:
+      StuntVisualItemName: "Webster"
+    WebsterWithSalto:
+      StuntVisualItemName: "Webster With Salto"
+    WebsterWithSalto_1:
+      StuntVisualItemName: "Webster With Salto"
+      Text: "This trick will give you %1 perfomance points"
+    WebsterWithSalto_2:
+      StuntVisualItemName: "Superior Webster With Salto"
+      Text: "This trick will give you %1 perfomance points"
+    WebsterWithSalto_3:
+      StuntVisualItemName: "Ultimate Webster With Salto"
+      Text: "This trick will give you %1 perfomance points"
+    Webster_1:
+      StuntVisualItemName: "Webster"
+      Text: "This trick will give you %1 perfomance points"
+    Webster_2:
+      StuntVisualItemName: "Superior Webster"
+      Text: "This trick will give you %1 perfomance points"
+    Webster_3:
+      StuntVisualItemName: "Ultimate Webster"
+      Text: "This trick will give you %1 perfomance points"
+Tutorial:
+  Activator:
+    Text: "上にスワイプして\n\nアクティベート"
+  BoosterPack:
+    Dialog:
+      Button: "OK"
+      Message: "アップグレードキットが手に入りましたね！この方法でもアップグレードとトリックが手に入るんですよ。では開いてみましょう。"
+      Title: "告知"
+  FirstFloor:
+    Mobile:
+      Accelerate:
+        Line1: "右にスワイプ"
+        Line2: "で加速"
+      Jump:
+        Line1: "上にスワイプ"
+        Line2: "でジャンプ"
+      Slide:
+        Line1: "下にスワイプ"
+        Line2: "でスライド"
+      WallJumpLeft:
+        Line1: "スワイプ"
+        Line2: "で左へジャンプ"
+      WallJumpRight:
+        Line1: "スワイプ"
+        Line2: "で右へジャンプ"
+    PC:
+      Accelerate:
+        Line1: "押す"
+        Line2: "で加速"
+      Jump:
+        Line1: "押す"
+        Line2: "でジャンプ"
+      Slide:
+        Line1: "押す"
+        Line2: "でスライド"
+      WallJumpLeft:
+        Line1: "押す"
+        Line2: "で左へジャンプ"
+      WallJumpRight:
+        Line1: "押す"
+        Line2: "で右へジャンプ"
+  Missions:
+    Dialog1:
+      Button: " %1"
+      Message: "各フロアでミッションを達成して追加ポイントを獲得しよう！"
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "ミッションを達成してこれらの報酬をロック解除しよう！ 報酬は次の走行でのボーナスを出すか、装備を永久に改良してくれる。"
+      Title: " %1"
+  Reroll:
+    Dialog1:
+      Button: " %1"
+      Message: "アーカイブにお勧めのアップグレードがあります。今すぐその場所をご案内しますね！"
+      Title: " %1"
+    Dialog2:
+      Button: "チップを貰う"
+      Message: "最初の走行で思うような結果が出ないこともあるでしょう。データチップを%1枚差し上げますので、もう一度やってみましょう。"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "こっちの方がずっといいですよ！このようなアップグレードは一緒に使うと効果的なんですよ。実験して、非常に役立つ組み合わせを発見しましょう。"
+      Title: " %1"

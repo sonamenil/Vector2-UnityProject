@@ -1,0 +1,208 @@
+UserVersion: 14
+CountersUpdater_PRE_ACHIEVEMENTATOR:
+  NoShuffle: 1
+  BoxContent:
+    CalculateCards:
+      Select: {Type: Items, Root: All}
+      StringActions: {OnEnter: [{Name: Item, Value: "?getString[SelectKey]"}]}
+      BoxContent:
+        Head:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[Item]', Head]}]
+          Select: {Type: ItemGroups, Root: Head} 
+          CounterActions: {OnEnter: [{Name: "?getCardInfo[?getString[SelectKey],Stats,Rarity]", Namespace: ACHIVEMENTATOR, Type: IncrementBy, Value: '?getItemAttribute[?getString[Item],?getString[SelectKey],Count]'}]}
+        Torso:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[Item]', Torso]}]
+          Select: {Type: ItemGroups, Root: Torso} 
+          CounterActions: {OnEnter: [{Name: "?getCardInfo[?getString[SelectKey],Stats,Rarity]", Namespace: ACHIVEMENTATOR, Type: IncrementBy, Value: '?getItemAttribute[?getString[Item],?getString[SelectKey],Count]'}]}
+        Legs:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[Item]', Legs]}]
+          Select: {Type: ItemGroups, Root: Legs} 
+          CounterActions: {OnEnter: [{Name: "?getCardInfo[?getString[SelectKey],Stats,Rarity]", Namespace: ACHIVEMENTATOR, Type: IncrementBy, Value: '?getItemAttribute[?getString[Item],?getString[SelectKey],Count]'}]}
+        Hands:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[Item]', Hands]}]
+          Select: {Type: ItemGroups, Root: Hands} 
+          CounterActions: {OnEnter: [{Name: "?getCardInfo[?getString[SelectKey],Stats,Rarity]", Namespace: ACHIVEMENTATOR, Type: IncrementBy, Value: '?getItemAttribute[?getString[Item],?getString[SelectKey],Count]'}]}
+        Belt:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[Item]', Belt]}]
+          Select: {Type: ItemGroups, Root: Belt} 
+          CounterActions: {OnEnter: [{Name: "?getCardInfo[?getString[SelectKey],Stats,Rarity]", Namespace: ACHIVEMENTATOR, Type: IncrementBy, Value: '?getItemAttribute[?getString[Item],?getString[SelectKey],Count]'}]}
+        Stunts:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[Item]', Stunts]}]
+          Select: {Type: ItemGroups, Root: Stunts} 
+          CounterActions: {OnEnter: [{Name: "?getCardInfo[?getString[SelectKey],Stats,Rarity]", Namespace: ACHIVEMENTATOR, Type: IncrementBy, Value: '?getItemAttribute[?getString[Item],?getString[SelectKey],Count]'}]}
+CountersUpdater_ACHIEVEMENTATOR:
+  NoShuffle: 1
+  BoxContent:
+    Science_101:
+      Conditions: [{ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: -1}]
+      CounterActions: {OnEnter: [{Name: Science_101, Namespace: ST_Achievements, Type: Assign, Value: 1}]}
+    Bachelor:
+      Conditions: [{ConditionType: CounterRange, Name: ThirdProtocol, Namespace: ST_Quests, Equal: -1}]
+      CounterActions: {OnEnter: [{Name: Bachelor, Namespace: ST_Achievements, Type: Assign, Value: 1}]}
+    Master:
+      Conditions: 
+      - ConditionType: Or
+        Content:
+        - {ConditionType: CounterRange, Name: Bruteforce, Namespace: ST_Quests, Equal: -1}
+        - {ConditionType: CounterRange, Name: Progress12Floor, Namespace: ST_Statistics, Min: 1}
+      CounterActions: {OnEnter: [{Name: Master, Namespace: ST_Achievements, Type: Assign, Value: 1}]}
+    Ph.D.:  # reach 20 floor with Experimental Protocol
+      {} 
+    Effective:
+      CounterActions: {OnEnter: [{Name: Effective, Namespace: ST_Achievements, Type: Assign, Value: '?min[50,<ACHIVEMENTATOR.1>]'}]}
+    # Collector:
+      # CounterActions: {OnEnter: [{Name: Collector, Namespace: ST_Achievements, Type: Assign, Value: '?min[200,<ACHIVEMENTATOR.1>]'}]}
+    # Da_boo_dee_da_boo_da:
+      # CounterActions: {OnEnter: [{Name: Da_boo_dee_da_boo_da, Namespace: ST_Achievements, Type: Assign, Value: '?min[500,<ACHIVEMENTATOR.1>]'}]}
+    Mid-range_equipment:
+      CounterActions: {OnEnter: [{Name: Mid-range_equipment, Namespace: ST_Achievements, Type: Assign, Value: '?min[50,<ACHIVEMENTATOR.2>]'}]}
+    # Hoarder:
+      # CounterActions: {OnEnter: [{Name: Hoarder, Namespace: ST_Achievements, Type: Assign, Value: '?min[200,<ACHIVEMENTATOR.2>]'}]}
+    # Secure_and_reliable:
+      # CounterActions: {OnEnter: [{Name: Secure_and_reliable, Namespace: ST_Achievements, Type: Assign, Value: '?min[500,<ACHIVEMENTATOR.2>]'}]}  
+    The_best_kind_of_stuff:
+      CounterActions: {OnEnter: [{Name: The_best_kind_of_stuff, Namespace: ST_Achievements, Type: Assign, Value: '?min[50,<ACHIVEMENTATOR.3>]'}]}
+    # Scrupulous:
+      # CounterActions: {OnEnter: [{Name: Scrupulous, Namespace: ST_Achievements, Type: Assign, Value: '?min[200,<ACHIVEMENTATOR.3>]'}]}
+    # State-of-the-art_equipment:
+      # CounterActions: {OnEnter: [{Name: State-of-the-art_equipment, Namespace: ST_Achievements, Type: Assign, Value: '?min[500,<ACHIVEMENTATOR.3>]'}]}  
+    CLEAR:
+      CounterActions: {OnEnter: [{Namespace: ACHIVEMENTATOR, Type: Clear}]}
+
+CountersUpdater_Bruteforce:
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    BruteforceCompleted:
+      Conditions: 
+      - {ConditionType: CounterRange, Name: Bruteforce, Namespace: ST_Quests, Equal: -1}
+      CounterActions:
+        OnEnter:
+        - {Name: Bruteforce1, Namespace: ST_Quests, Type: Assign, Value: -1}
+        - {Name: Bruteforce2, Namespace: ST_Quests, Type: Assign, Value: -1}
+        - {Name: Bruteforce3, Namespace: ST_Quests, Type: Assign, Value: -1}
+        - {Name: Bruteforce, Namespace: ST_Quests, Type: Assign, Value: 0}
+        - {Name: Progress8Floor, Namespace: ST_Statistics, Type: Assign, Value: '?getBalance[Quests,Bruteforce1,LocksCountOnFloor]'}
+        - {Name: Progress10Floor, Namespace: ST_Statistics, Type: Assign, Value: '?getBalance[Quests,Bruteforce2,LocksCountOnFloor]'}
+        - {Name: Progress12Floor, Namespace: ST_Statistics, Type: Assign, Value: '?getBalance[Quests,Bruteforce3,LocksCountOnFloor]'}
+        - {Name: GiveBoosterPackBF1, Namespace: BruteforceUpdate, Type: Assign, Value: 1}
+        - {Name: GiveMoneyBF2, Namespace: BruteforceUpdate, Type: Assign, Value: 1}
+    BruteforceInProgress:
+      NoShuffle: 1
+      BoxContent:
+        BruteforceInProgress:
+          Conditions: 
+            - {ConditionType: CounterRange, Name: Bruteforce, Namespace: ST_Quests, Equal: 1}
+          CounterActions:
+            OnEnter:
+            - {Name: Bruteforce, Namespace: ST_Quests, Type: Assign, Value: 0}
+        BruteforceInProgress10:
+          Conditions:
+            - ConditionType: Or
+              Content:
+                - {ConditionType: CounterRange, Name: Progress10Floor, Namespace: ST_Statistics, Min: 1}
+                - {ConditionType: CounterRange, Name: Progress12Floor, Namespace: ST_Statistics, Min: 1}
+          CounterActions:
+            OnEnter:
+            - {Name: Bruteforce1, Namespace: ST_Quests, Type: Assign, Value: -1}
+            - {Name: Progress8Floor, Namespace: ST_Statistics, Type: Assign, Value: '?getBalance[Quests,Bruteforce1,LocksCountOnFloor]'}
+            - {Name: GiveBoosterPackBF1, Namespace: BruteforceUpdate, Type: Assign, Value: 1}
+        BruteforceInProgress12:
+          Conditions: 
+          - {ConditionType: CounterRange, Name: Progress12Floor, Namespace: ST_Statistics, Min: 1}
+          CounterActions:
+            OnEnter:
+            - {Name: Bruteforce2, Namespace: ST_Quests, Type: Assign, Value: -1}
+            - {Name: Progress10Floor, Namespace: ST_Statistics, Type: Assign, Value: '?getBalance[Quests,Bruteforce2,LocksCountOnFloor]'}
+            - {Name: GiveMoneyBF2, Namespace: BruteforceUpdate, Type: Assign, Value: 1}
+
+NewItems_BoosterPackBF1:
+  GiveBoosterPack:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions:
+      - {ConditionType: CounterRange, Name: GiveBoosterPackBF1, Namespace: BruteforceUpdate, Equal: 1}
+    Set: 1
+    NoShuffle: 1
+    BoxContent:
+      AppendValue:
+        Conditions:
+        - {ConditionType: GroupExists, Item: "Boosterpacks", Group: "BaseBoosterpack"}
+        GroupContent:
+          BaseBoosterpack: {Quantity: "{?getItemAttribute[Boosterpacks, BaseBoosterpack, Quantity] + 3}"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+      CreateItem:
+        GroupContent:
+          BaseBoosterpack: {Quantity: "3"}
+          ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+
+NewItems_MoneyPremiumRewardBF2:
+  GiveChips:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions:
+    - {ConditionType: CounterRange, Name: GiveMoneyBF2, Namespace: BruteforceUpdate, Equal: 1}
+    GroupContent:
+      Countable: {Quantity: '{?getBalance[Quests,Bruteforce2,ChipReward]+?getItemAttribute[MoneyPremium, Countable, Quantity]}'}
+      Currency: {Type: MoneyPremium}
+      ST_ItemMainData: {ST_ItemName: "MoneyPremium", ST_VisualItemName: MoneyPremium, ST_ItemType: ''}
+      ST_ForceSave: {Value: 1}
+
+CountersUpdater_BruteforceUpdateClear:
+  CounterActions:
+    OnEnter:
+    - {Namespace: BruteforceUpdate, Type: Clear}
+
+CountersUpdater_MagnetizerWeight:
+  Conditions: [{ConditionType: CounterRange, Name: BoosterPackTutor, Namespace: ST_Tutorial, Equal: 0}]
+  CounterActions: {OnEnter: [{Name: Magnetizer_3_Torso, Namespace: CustomCardWeightMultipliers, Type: Assign, Value: 100}]}
+      
+CountersUpdater_ACTIVES_TUTOR:
+  CounterActions: {OnEnter: [{Name: ShowActivesTutorial, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}]}
+  
+CountersUpdater_SPECIFIC_UPGRADES_GENERATION_SYSTEM:
+  Conditions: [{ConditionType: CounterRange, Name: CouponRerollPassive_1_Torso_AddSupplyWeightCount, Min: 1}]
+  CounterActions:
+    OnEnter: 
+    - {Name: CouponRerollPassive_AfterBoosterpack, Namespace: SpecificUpgradesGeneration, Type: Assign, Value: '<CouponRerollPassive_1_Torso_AddSupplyWeightCount>'}
+    - {Name: CouponRerollPassive_1_Torso_AddSupplyWeightCount, Type: Assign, Value: 0}
+    
+NewItems_FORCED_EMP_AT_TERMINAL:
+  ForceEMP:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: -1}]
+    NoShuffle: 1
+    BoxContent:
+      FindLastProtocol:
+        Set: 1
+        NoShuffle: 1
+        BoxContent:
+          ExperimentalProtocolHere:
+            Conditions:
+            - {ConditionType: GroupExists, Item: "ExperimentalProtocol"}
+            - {ConditionType: GroupExists, Item: "ExperimentalProtocol", Group: "BlockedStarterPack", Not: 1}
+            StringActions: {OnEnter: [{Name: 'Prtcl', Value: "ExperimentalProtocol"}]}
+          AdvancedProtocolHere:
+            Conditions:
+            - {ConditionType: GroupExists, Item: "AdvancedProtocol"}
+            - {ConditionType: GroupExists, Item: "AdvancedProtocol", Group: "BlockedStarterPack", Not: 1}
+            StringActions: {OnEnter: [{Name: 'Prtcl', Value: "AdvancedProtocol"}]}
+          StandardProtocol:
+            Conditions:
+            - {ConditionType: GroupExists, Item: "StandardProtocol"}
+            - {ConditionType: GroupExists, Item: "StandardProtocol", Group: "BlockedStarterPack", Not: 1}
+            StringActions: {OnEnter: [{Name: 'Prtcl', Value: "StandardProtocol"}]}
+      CorruptTerminal:
+        StringActions: {OnEnter: [{Name: 'Trmnl', Value: "?concat['Terminal_%1', ?_getString[Prtcl]]"}]}
+        GroupContent: {ST_ItemMainData: {ST_ItemName: "?getString[Trmnl]", ST_VisualItemName: '', ST_ItemType: ''}}
+        Set: 1
+        NoShuffle: 1
+        BoxContent:
+          TrmnlExists:
+            Conditions: [{ConditionType: GroupExists, Item: "?getString[Trmnl]"}]
+            GroupContent: 
+              '4': {Type: Card, Card: "EMP_3_Legs", Price: "?getCardInfo[EMP_3_Legs,Balance,CardPrice]", IsExpired: "0"}
+          TrmnlNotExists:
+            GroupContent: 
+              '1': {IsExpired: "1"}
+              '2': {IsExpired: "1"}
+              '3': {IsExpired: "1"}
+              '4': {Lock: '', Text: '', Type: Card, Card: "EMP_3_Legs", Price: "?getCardInfo[EMP_3_Legs,Balance,CardPrice]", IsExpired: "0"}

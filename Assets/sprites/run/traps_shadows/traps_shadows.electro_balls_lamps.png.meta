@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 3771867b803dbe6468324679f8176e88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8485679716110176172
+    second: traps_shadows.electro_balls_lamps_0
+  - first:
+      213: 4946809275302511562
+    second: traps_shadows.electro_balls_lamps_1
+  - first:
+      213: -3958277470692837214
+    second: traps_shadows.electro_balls_lamps_2
+  - first:
+      213: -6034555279562273369
+    second: traps_shadows.electro_balls_lamps_3
+  - first:
+      213: 3318415708269979837
+    second: traps_shadows.electro_balls_lamps_4
+  - first:
+      213: -8051547378546197092
+    second: traps_shadows.electro_balls_lamps_5
+  - first:
+      213: -2340401566728711495
+    second: traps_shadows.electro_balls_lamps_6
+  - first:
+      213: -1091160784969925465
+    second: traps_shadows.electro_balls_lamps_7
+  - first:
+      213: -4962774031161786156
+    second: traps_shadows.electro_balls_lamps_8
+  - first:
+      213: -8490784071964478331
+    second: traps_shadows.electro_balls_lamps_9
+  - first:
+      213: 5689866857419607519
+    second: traps_shadows.electro_balls_lamps_10
+  - first:
+      213: 2431871175976830455
+    second: traps_shadows.electro_balls_lamps_11
+  - first:
+      213: 7637576314652368010
+    second: traps_shadows.electro_balls_lamps_12
+  - first:
+      213: 7070866042325728551
+    second: traps_shadows.electro_balls_lamps_13
+  - first:
+      213: -828084508922376739
+    second: traps_shadows.electro_balls_lamps_14
+  - first:
+      213: -3322102410453344758
+    second: traps_shadows.electro_balls_lamps_15
+  - first:
+      213: 1716555945201563203
+    second: traps_shadows.electro_balls_lamps_16
+  - first:
+      213: 8980907566688425727
+    second: traps_shadows.electro_balls_lamps_17
+  - first:
+      213: -574717698908485805
+    second: traps_shadows.electro_balls_lamps_18
+  - first:
+      213: 2450205399014069360
+    second: traps_shadows.electro_balls_lamps_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 47
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf0c742eb033c570800000000000000
+      internalID: 8485679716110176172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 55
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3830a93d896a440800000000000000
+      internalID: 4946809275302511562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 55
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8fbecbc9f5119c0800000000000000
+      internalID: -3958277470692837214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 54
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad8b3812f3f04ca0800000000000000
+      internalID: -6034555279562273369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 51
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8228441816d0e20800000000000000
+      internalID: 3318415708269979837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_5
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 47
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9db6817158234090800000000000000
+      internalID: -8051547378546197092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b21e5fcc29358fd0800000000000000
+      internalID: -2340401566728711495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 41
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7acf70b1c0b6bd0f0800000000000000
+      internalID: -1091160784969925465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_8
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 18
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d08114005fa02bb0800000000000000
+      internalID: -4962774031161786156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_9
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 41
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58433066fdcaa2a80800000000000000
+      internalID: -8490784071964478331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 35
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd83c7b2c776fe40800000000000000
+      internalID: 5689866857419607519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 27
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f54c9f23fdbfb120800000000000000
+      internalID: 2431871175976830455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c9acb413f1ef960800000000000000
+      internalID: 7637576314652368010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_13
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 20
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d7233d333c02260800000000000000
+      internalID: 7070866042325728551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_14
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 27
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd8da9c68d0284f0800000000000000
+      internalID: -828084508922376739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 13
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e957d757585e1d0800000000000000
+      internalID: -3322102410453344758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 3
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346f2d6998e62d710800000000000000
+      internalID: 1716555945201563203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_17
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6d41959d792ac70800000000000000
+      internalID: 8980907566688425727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_18
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3570e6e3c413608f0800000000000000
+      internalID: -574717698908485805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: traps_shadows.electro_balls_lamps_19
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0745af224d0e00220800000000000000
+      internalID: 2450205399014069360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      traps_shadows.electro_balls_lamps_0: 8485679716110176172
+      traps_shadows.electro_balls_lamps_1: 4946809275302511562
+      traps_shadows.electro_balls_lamps_10: 5689866857419607519
+      traps_shadows.electro_balls_lamps_11: 2431871175976830455
+      traps_shadows.electro_balls_lamps_12: 7637576314652368010
+      traps_shadows.electro_balls_lamps_13: 7070866042325728551
+      traps_shadows.electro_balls_lamps_14: -828084508922376739
+      traps_shadows.electro_balls_lamps_15: -3322102410453344758
+      traps_shadows.electro_balls_lamps_16: 1716555945201563203
+      traps_shadows.electro_balls_lamps_17: 8980907566688425727
+      traps_shadows.electro_balls_lamps_18: -574717698908485805
+      traps_shadows.electro_balls_lamps_19: 2450205399014069360
+      traps_shadows.electro_balls_lamps_2: -3958277470692837214
+      traps_shadows.electro_balls_lamps_3: -6034555279562273369
+      traps_shadows.electro_balls_lamps_4: 3318415708269979837
+      traps_shadows.electro_balls_lamps_5: -8051547378546197092
+      traps_shadows.electro_balls_lamps_6: -2340401566728711495
+      traps_shadows.electro_balls_lamps_7: -1091160784969925465
+      traps_shadows.electro_balls_lamps_8: -4962774031161786156
+      traps_shadows.electro_balls_lamps_9: -8490784071964478331
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,110 @@
+Upgrades:
+  Target: {Type: NewItem, Destination: ShopBasket}
+  CounterActions: {OnEnter: [{Namespace: UpgradesGenerator, Name: LocalIteration, Type: Assign, Value: 0}]}
+  NoShuffle: 1
+  BoxContent:
+    AvailableCardsIsOver:
+      Conditions: [{ConditionType: CounterRange, Namespace: 'UpgradesGenerator', Name: 'AvailableCardsIsOver', Equal: 1}]
+      CancelGeneration: 1
+    Loop:
+      ItemsCount: '{?getBalance[StarterPacks, ?getString[ProtocolName], Ranks,Rewards,<Rank>,Cards] + 1}'
+      CounterActions: {OnEnter: [{Namespace: UpgradesGenerator, Name: LocalIteration, Type: IncrementBy, Value: 1}]}
+      StringActions: {OnEnter: [{Name: CardName, Value: ''}]}
+      NoShuffle: 1
+      BoxContent:
+        ChooseUpgrade:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            GuaranteedUpgrades:
+              Conditions: [{ConditionType: CounterRange, Namespace: 'UpgradesGenerator', Name: 'GuaranteedUpgrades', Min: 1}]
+              Select: {Type: Balance, Root: SpecificUpgradesGeneration}
+              BoxContent:
+                Finded:
+                  Conditions: [{ConditionType: CounterRange, Namespace: 'GuaranteedUpgrades', Name: '?getString[SelectKey]', Min: 1}]
+                  CounterActions: 
+                    OnEnter: 
+                    - {Name: '?getString[SelectKey]', Namespace: 'GuaranteedUpgrades', Type: Assign, Value: 0}
+                    - {Name: GuaranteedUpgrades, Namespace: 'UpgradesGenerator', Type: IncrementBy, Value: -1}
+                  StringActions: {OnEnter: [{Name: CardName, Value: '?getBalance[SpecificUpgradesGeneration,?getString[SelectKey],CardName]'}]}
+                  NoShuffle: 1
+                  BoxContent:
+                    DecrementAfterGeneration:
+                      Conditions: [{ConditionType: ValuesEqual, Values: ['?getBalance[SpecificUpgradesGeneration,?getString[SelectKey],DecrementAfterGeneration]', 1]}]
+                      CounterActions: {OnEnter: [{Name: '?getString[SelectKey]', Namespace: SpecificUpgradesGeneration, Type: IncrementBy, Value: -1}]}
+                    End: {BreakSelect: 1}
+            RerollTutor:
+              Conditions: [{ConditionType: CounterRange, Namespace: 'ST_Tutorial', Name: 'ST_RerollTutorial', Equal: 1}]
+              Set: 1
+              BoxContent:
+                First:
+                  Conditions: [{ConditionType: CounterRange, Namespace: 'UpgradesGenerator', Name: 'LocalIteration', Equal: 1}]
+                  StringActions: {OnEnter: [{Name: CardName, Value: 'BonusTokens_1_Torso'}]}
+                Second:
+                  Conditions: [{ConditionType: CounterRange, Namespace: 'UpgradesGenerator', Name: 'LocalIteration', Equal: 2}]
+                  StringActions: {OnEnter: [{Name: CardName, Value: 'StuntReward_1_Legs'}]}
+                  CounterActions: {OnEnter: [{Namespace: ST_Tutorial, Name: 'ST_RerollTutorial', Type: Assign, Value: 2}]}
+            Select: 
+              Select: 
+                Type: Balance
+                Root: 'PassiveSpace'
+                Random: 1
+                Weight: "{?getCardInfo[?getString[SelectKey],Balance,WeightForUse]*(1+?getCounter[OverweightedUpgrades,?getString[SelectKey]]*?getBalance[Cards,BoostedWeightMultiplier])*(1+?getCounter[UsefulCards,?getCardInfo[?getString[SelectKey],Stats,EffectID]]*?getBalance[Missions,AddWeightForUsefulCards])}"
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                UpgradeTutorCard:
+                  Conditions: [{ConditionType: CounterRange, Namespace: 'ST_Tutorial', Name: 'InsertUpgradeTutor', Equal: 1}]
+                  StringActions: {OnEnter: [{Name: CardName, Value: '?getBalance[Quests,InspectGear,RewardCard]'}]}
+                  BreakSelect: 1
+                RerollTutorCardNotBlue:
+                  Conditions:
+                  - {ConditionType: CounterRange, Namespace: 'ST_Tutorial', Name: 'ST_RerollTutorial', Min: 1, Max: 3}
+                  - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[SelectKey],Stats,Rarity]', '1'], Not: 1}
+                RerollTutorUsedCard:
+                  Conditions:
+                  - {ConditionType: CounterRange, Namespace: 'ST_Tutorial', Name: 'ST_RerollTutorial', Min: 1, Max: 3}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'BonusTokens_1_Torso']}
+                    - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'StuntReward_1_Legs']}
+                    - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'BonusTokensFromTraps_1_Torso']}
+                    - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'StuntMultiReward_2_Legs']}
+                UpgradeGeneratedAlready_FractionationColumn:
+                  Conditions: [{ConditionType: CounterRange, Namespace: UpgradesGenerator, Name: '?getString[SelectKey]', Min: 1}]
+                WrongSlot_FractionationColumn:
+                  Conditions: [{ConditionType: GroupExists, Item: "?concat['Gadget%1', ?_getCardInfo[?getString[SelectKey],Stats,Slot]]", Not: 1}]
+                UpgradeInsertedAlready_FractionationColumn:
+                  Conditions: [{ConditionType: CounterRange, Namespace: InsertedCards, Name: '?getString[SelectKey]', Min: 1}]
+                NotOwned_FractionationColumn:
+                  Conditions: [{ConditionType: GroupExists, Item: '?getCardInfo[?getString[SelectKey],Stats,Slot]', Group: '?getString[SelectKey]', Not: 1}]
+                BadCoolness_FractionationColumn: # RANK, NOT SETUPMIN?
+                  Conditions: [{ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: '?getCardInfo[?getString[SelectKey],Balance,SetupMin]', Not: 1}]
+                GoodUpgrade:
+                  #Log: '?getString[SelectKey]'
+                  StringActions: {OnEnter: [{Name: CardName, Value: '?getString[SelectKey]'}]}
+                  BreakSelect: 1
+        Implement:
+          GroupContent:
+            ST_ItemMainData: {ST_ItemName: "?concat['Rank_%1',<Rank>]", ST_VisualItemName: '', ST_ItemType: 'Supply'}
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            EmptyButThisIsRerollTutor:
+              Conditions: 
+              - {ConditionType: ValuesEqual, Values: ['?getString[CardName]', '']}
+              - {ConditionType: CounterRange, Namespace: 'ST_Tutorial', Name: 'ST_RerollTutorial', Min: 1}
+            Empty:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[CardName]', '']}]
+              CounterActions: {OnEnter: [{Namespace: UpgradesGenerator, Name: 'AvailableCardsIsOver', Type: Assign, Value: 1}]}
+            JustCheck: # проверяем, можем ли мы сгенерить следующую карту
+              Conditions: [{ConditionType: CounterRange, Namespace: UpgradesGenerator, Name: LocalIteration, Equal: '{?getBalance[StarterPacks, ?getString[ProtocolName], Ranks,Rewards,<Rank>,Cards] + 1}'}]
+            GoodCard:
+              CounterActions: 
+                OnEnter: 
+                - {Namespace: UpgradesGenerator, Name: '?getString[CardName]', Type: Assign, Value: 1}
+                - Namespace: GeneratedEffects
+                  Name: '?getCardInfo[?getString[CardName],Stats,EffectID]'
+                  Type: Assign
+                  Value: '?max[<GeneratedEffects.?getCardInfo[?getString[CardName],Stats,EffectID]>, ?getCardInfo[?getString[CardName],Stats,Rarity]]'
+              GroupContent: {'?getString[CardName]': {FreeRerolls: '?getBalance[Reroll,FreeRerolls]'}}

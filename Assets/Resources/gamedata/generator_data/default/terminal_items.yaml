@@ -1,0 +1,160 @@
+Terminality:
+  Target: "?concat['Terminal_%1', ?_getString[StarterPackName]]"
+  CounterActions: 
+    OnExit: 
+    - {Namespace: Terminal, Type: Clear}
+    - {Namespace: SpecificTerminalCards, Type: Clear}
+    - {Namespace: SpecificTerminal, Type: Clear}
+  StringActions: {OnEnter:  [{Name: ItemName, Value: "?concat['Terminal_%1', ?_getString[StarterPackName]]"}]}
+  NoShuffle: 1
+  BoxContent:
+    GoByRequirements:
+      Select: {Type: Balance, Root: 'StarterPacks,?getString[StarterPackName],ResearchRequirements'}
+      CounterActions: 
+        OnEnter: 
+        - {Namespace: Terminal, Name: SlotNumber, Type: IncrementBy, Value: 1}
+        - {Namespace: Terminal, Name: Generate, Type: Assign, Value: 1}
+        - {Namespace: Terminal, Name: GenerateFiller, Type: Assign, Value: 1}
+      StringActions: {OnEnter: [{Name: Preset, Value: ""},{Name: Card, Value: ""}]}
+      NoShuffle: 1
+      BoxContent:
+        CheckSlot:
+          Conditions: [{ConditionType: GroupExists, Item: "?getString[ItemName]", Group: "<Terminal.SlotNumber>"}]
+          NoShuffle: 1
+          BoxContent:
+            GetSlotData:
+              Set: 1
+              BoxContent:
+                IsCard:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[ItemName],<Terminal.SlotNumber>,Type]', Card]}]
+                  StringActions: {OnEnter: [{Name: Card, Value: "?getItemAttribute[?getString[ItemName],<Terminal.SlotNumber>,Card]"}]}
+                IsItem:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[ItemName],<Terminal.SlotNumber>,Type]', Item]}]
+                  StringActions: {OnEnter: [{Name: Preset, Value: "?getItemAttribute[?getString[ItemName],<Terminal.SlotNumber>,Preset]"}]}
+                WTF: {Weight: 0}
+            IfSlotNotExpired:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[ItemName],<Terminal.SlotNumber>,IsExpired]', '0']}]
+              CounterActions: 
+                OnEnter: 
+                - {Namespace: Terminal, Name: Generate, Type: Assign, Value: 0}
+                - {Namespace: Terminal, Name: GenerateFiller, Type: Assign, Value: 0}
+            IfSlotCardLevelIsMax:
+              Conditions: 
+              - {ConditionType: ValuesEqual, Values: ['?getString[Card]', ''], Not: 1}
+              - {ConditionType: GroupExists, Item: "?getCardInfo[?getString[Card],Stats,Slot]", Group: "?getString[Card]"}
+              - {ConditionType: ValuesEqual, Values: ['?greaterEqual[?getItemAttribute[?getCardInfo[?getString[Card],Stats,Slot],?getString[Card],Count], ?getBalance[CardLevels,MaxCards]]', '1']}
+              CounterActions: {OnEnter: [{Namespace: Terminal, Name: Generate, Type: Assign, Value: 1}]}
+        ClearSlot:
+          Conditions: [{ConditionType: CounterRange, Namespace: Terminal, Name: Generate, Equal: 1}]
+          ReplaceGroup: {'<Terminal.SlotNumber>': {NewName: '<Terminal.SlotNumber>'}}
+        SetRequirementInfo:
+          GroupContent:
+            "<Terminal.SlotNumber>":
+              Lock: '?less[<Requirements.?getBalance[Requirements,?getString[SelectKey],Counter]>, ?getBalance[Requirements,?getString[SelectKey],Value]]'
+              Text: '?getBalance[Requirements,?getString[SelectKey],Text]'
+        Generate:
+          Conditions: [{ConditionType: CounterRange, Namespace: Terminal, Name: Generate, Equal: 1}]
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            SpecifiedCard:
+              Conditions: [{ConditionType: CounterRange, Name: '<Terminal.SlotNumber>', Namespace: SpecificTerminalCards, Equal: 1}]
+              CounterActions: 
+                OnEnter: 
+                - {Name: '?getString[<Terminal.SlotNumber>]', Namespace: SpecificTerminalSlots, Type: Assign, Value: 0}
+                - {Namespace: Terminal, Name: '?getBalance[SpecificTerminalSlots, ?getString[<Terminal.SlotNumber>], Card]', Type: Assign, Value: 1}
+                - {Namespace: Terminal, Name: GenerateFiller, Type: Assign, Value: 0}
+              StringActions: {OnEnter: [{Name: 'Card', Value: '?getBalance[SpecificTerminalSlots, ?getString[<Terminal.SlotNumber>], Card]'}]}
+              GroupContent:
+                "<Terminal.SlotNumber>":
+                  Type: Card
+                  Card: '?getString[Card]'
+                  Price: '?getCardInfo[?getString[Card],Balance,CardPrice]'
+                  IsExpired: 0
+            TutorCard:
+              Conditions:
+              - {ConditionType: CounterRange, Namespace: ST_Tutorial, Name: UpgradeEffectTutor, Equal: 1}
+              - {ConditionType: CounterRange, Namespace: UpgradeEffectTutor, Name: GiveFirstStunt, Equal: 1}
+              CounterActions: 
+                OnEnter: 
+                - {Namespace: UpgradeEffectTutor, Type: Clear}
+                - {Namespace: Terminal, Name: "JumpObstacle_1", Type: Assign, Value: 1}
+                - {Namespace: Terminal, Name: GenerateFiller, Type: Assign, Value: 0}
+              GroupContent:
+                "<Terminal.SlotNumber>":
+                  Type: Card
+                  Card: JumpObstacle_1
+                  Price: '?getCardInfo[JumpObstacle_1,Balance,CardPrice]'
+                  IsExpired: 0
+            RandomCard:
+              Select: {Type: 'Cards', Random: 1, Weight: '{?getCardInfo[?getString[SelectKey],Balance,Weight]*(?getBalance[Terminal,Slots,<Terminal.SlotNumber>, RarityWeightModifier, ?getCardInfo[?getString[SelectKey],Stats,Rarity]])*(1 + <CustomCardWeightMultipliers.?getString[SelectKey]>)}'}
+              StringActions: {OnEnter: [{Name: CardName, Value: '?getString[SelectKey]'}]}
+              Set: 1
+              NoShuffle: 1
+              BoxContent:
+                CardExistsInTerminalItem:
+                  Conditions: 
+                  - ConditionType: Or 
+                    Content:
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: GroupExists, Item: "?getString[ItemName]", Group: "1"}
+                      - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[ItemName],1,Card]', '?getString[CardName]']}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: GroupExists, Item: "?getString[ItemName]", Group: "2"}
+                      - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[ItemName],2,Card]', '?getString[CardName]']}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: GroupExists, Item: "?getString[ItemName]", Group: "3"}
+                      - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[ItemName],3,Card]', '?getString[CardName]']}
+                    - ConditionType: And
+                      Content:
+                      - {ConditionType: GroupExists, Item: "?getString[ItemName]", Group: "4"}
+                      - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[ItemName],4,Card]', '?getString[CardName]']}
+                CardAlreadyGenerated:
+                  Conditions: [{ConditionType: CounterRange, Namespace: Terminal, Name: '?getString[CardName]', Equal: 1}]
+                MaxLevelAchieved: # card already have max rang!
+                  Conditions:
+                  - {ConditionType: GroupExists, Item: '?getCardInfo[?getString[CardName],Stats,Slot]', Group: '?getString[CardName]'}
+                  - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getCardInfo[?getString[CardName],Stats,Slot],?getString[CardName],Count]', '?getBalance[CardLevels,MaxCards]']}
+                CardIsBad: # too cool for actual starter pack
+                  Conditions: [{ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: "?getCardInfo[?getString[CardName],Balance,SetupMin]", Not: 1}]
+                CardIsNotForPaid:
+                  Conditions:
+                  - {ConditionType: ValuesEqual, Values: ['?isPaid[]', '1']}
+                  - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CardName], Stats, CardType]', 'Stunts'], Not: 1}
+                  - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CardName], Stats, EffectID]', 'CouponEnergyRechargePassive']}
+                GoodCard:
+                  CounterActions: 
+                    OnEnter: 
+                    - {Namespace: Terminal, Name: '?getString[CardName]', Type: Assign, Value: 1}
+                    - {Namespace: Terminal, Name: GenerateFiller, Type: Assign, Value: 0}
+                    - {Name: '?getString[CardName]', Namespace: CustomCardWeightMultipliers, Type: Assign, Value: 0}
+                  GroupContent:
+                    "<Terminal.SlotNumber>":
+                      Type: Card
+                      Card: '?getString[CardName]'
+                      Price: '?getCardInfo[?getString[CardName],Balance,CardPrice]'
+                      IsExpired: 0
+                  BreakSelect: 1
+        IfCardsOver:
+          Conditions: [{ConditionType: CounterRange, Namespace: Terminal, Name: GenerateFiller, Equal: 1}]
+          Select: {Type: Balance, Root: Coupons, Random: 1}
+          NoShuffle: 1
+          BoxContent:
+            RechargeCouponForIsPaid:
+              Conditions: 
+              - {ConditionType: ValuesEqual, Values: ['?isPaid[]', '1']}
+              - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'EnergyRecharge']}
+            GIVE_HIM_COUPON:
+              GroupContent:
+                "<Terminal.SlotNumber>":
+                  ItemPreset: "?concat['Coupon_%1', ?getString[SelectKey]]"
+                  ItemName: "?concat['^Coupons.%1.VisualName^', ?getString[SelectKey]]"
+                  ItemDescription: "?concat['^Coupons.%1.Info^', ?getString[SelectKey]]"
+                  ItemImage: '?getBalance[Coupons,?getString[SelectKey],DefaultItemImage]'
+                  Price: 4000
+                  IsExpired: 0
+                  Type: Item
+              BreakSelect: 1

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Material #40
+  m_Shader: {fileID: 4800000, guid: 1b62b12fc5190a64d9319674d9b24c2b, type: 3}
+  m_ShaderKeywords: GLOW11_GLOW_VERTEXCOLOR GLOW11_MULTIPLY_GLOWCOLOR
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Cube:
+        m_Texture: {fileID: 8900000, guid: 8076a1302baac9f439bf836798bcfdf0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _BumpAmt: 0.736
+    - _ColorStrength: 1.16
+    - _CoreStrength: 0.11111111
+    - _CutOutLightCore: 0.11111111
+    - _Cutoff: 0.11111111
+    - _EmissionLM: 0
+    - _GlowStrength: 111.111115
+    - _InvFade: 1
+    - _LineWidth: 0.11111111
+    - _MKGlowPower: 1.09
+    - _Outline: 0
+    - _Parallax: 0
+    - _Shininess: 0.11111111
+    - _TintStrength: 1.0892857
+    - _Treshold: 0.11111111
+    m_Colors:
+    - _Color: {r: 1, g: 0.14102566, b: 0, a: 0.54509807}
+    - _CoreColor: {r: 0.11111111, g: 0.11111111, b: 0, a: 0.11111111}
+    - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColorMult: {r: 0.11111111, g: 0.11111111, b: 0, a: 1}
+    - _GridColor: {r: 0, g: 0, b: 0, a: 0}
+    - _LineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MKGlowColor: {r: 0.8235294, g: 0.18742393, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.11111111, g: 0.11111111, b: 0, a: 0.11111111}
+    - _TintColor: {r: 0.11111111, g: 0.11111111, b: 0, a: 0.11111111}
+  m_BuildTextureStacks: []

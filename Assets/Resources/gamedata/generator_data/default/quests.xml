@@ -1,0 +1,2172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Quests>
+	<Quest Name="Diagnostics">
+		<Info>
+			<VisualName Value="" />
+			<Description Value="" />
+			<Reward VisualName="^Quests.Diagnostics.RewardVisualName^" ImageName="box_level0" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Diagnostics" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="InspectGear" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="Any" />
+					</Events>
+					<Conditions></Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.Diagnostics.Dialog1.Title^" Text="^Quests.Diagnostics.Dialog1.Message^" Button="^Quests.Diagnostics.Dialog1.Button^" Image="AI_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.Diagnostics.CompleteNotificationText^" />
+						<Dialog Order="20" Title="^Quests.Diagnostics.Dialog2.Title^" Text="^Quests.Diagnostics.Dialog2.Message^" Button="^Quests.Diagnostics.Dialog2.Button^" Image="AI_portrait" />
+						<SetCounter Name="Diagnostics" Namespace="ST_NewQuest" Value="0" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="InspectGear">
+		<Info>
+			<VisualName Value="^Quests.InspectGear.VisualName^" />
+			<Description Value="^Quests.InspectGear.Description^" />
+			<Reward VisualName="^Quests.InspectGear.RewardVisualName^" ImageName="" Name="?getBalance[Quests,InspectGear,RewardCard]" Type="Card" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="QuestComplete" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InspectGear" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="Diagnostics" Namespace="ST_Quests" Equal="-1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<SetCounter Name="Diagnostics" Namespace="ST_Quests" Value="0" />
+						<ExecuteCall Message="InspectGearStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="InspectGearStart" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InspectGear" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="InspectGear" Equal="0" />
+					</Conditions>
+					<Actions>
+						<StartDialog Order="10" Title="^Quests.InspectGear.StartDialogTitle^" Text="^Quests.InspectGear.Objective^" NoDetails="1" />
+						<TutorialSequence Name="EquipmentTutorial" />
+						<SetCounter Name="Started" Namespace="InspectGear" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="UserLeft">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InspectGear" Namespace="ST_Quests" Equal="1" />
+						<Operator Type="Or">
+							<CounterRange Name="InspectGearTutor" Namespace="ST_Tutorial" Equal="-1" />
+							<CounterRange Name="InspectGearTutor" Namespace="ST_Tutorial" Equal="1" />
+						</Operator>
+					</Conditions>
+					<Actions>
+						<StartDialog Order="10" Title="^Quests.InspectGear.StartDialogTitle^" Text="^Quests.InspectGear.Objective^" NoDetails="1" />
+						<TutorialSequence Name="EquipmentTutorial" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="Tutorial" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InspectGear" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="InspectGearTutor" Namespace="ST_Tutorial" Equal="0" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.InspectGear.CompleteNotificationText^" />
+						<Statistics SignalMessage="?concat['inspectgear_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<SetString Name="CardName" Value="?getBalance[Quests,InspectGear,RewardCard]" />
+						<AddItem Preset="CardReward" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="InsertUpgrade">
+		<Info>
+			<VisualName Value="^Quests.InsertUpgrade.VisualName^" />
+			<Description Value="^Quests.InsertUpgrade.Description^" />
+			<Reward VisualName="^Quests.InsertUpgrade.RewardVisualName^" ImageName="token" Type="" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="QuestComplete" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InsertUpgrade" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="InspectGear" Namespace="ST_Quests" Equal="-1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<SetCounter Name="InsertUpgradeTutor" Namespace="ST_Tutorial" Value="1" />
+						<SetCounter Name="ST_TutorialLaserAndMine" Namespace="ST_Tutorial" Value="1" />
+						<ExecuteCall Message="InsertUpgradeStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="InsertUpgradeStart" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InsertUpgrade" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="InsertUpgrade" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.InsertUpgrade.Dialog1.Title^" Text="^Quests.InsertUpgrade.Dialog1.Message^" Button="^Quests.InsertUpgrade.Dialog1.Button^" Image="AI_portrait" />
+						<StartDialog Order="10" Title="^Quests.InsertUpgrade.StartDialogTitle^" Text="^Quests.InsertUpgrade.Objective^" NoDetails="1" />
+						<TutorialSequence Name="UpgradeTutorial" />
+						<SetCounter Name="Started" Namespace="InsertUpgrade" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="Main">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InsertUpgradeTutor" Namespace="ST_Tutorial" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.InsertUpgrade.Dialog1.Title^" Text="^Quests.InsertUpgrade.Dialog1.Message^" Button="^Quests.InsertUpgrade.Dialog1.Button^" Image="AI_portrait" />
+						<StartDialog Order="10" Title="^Quests.InsertUpgrade.StartDialogTitle^" Text="^Quests.InsertUpgrade.Objective^" NoDetails="1" />
+						<TutorialSequence Name="UpgradeTutorial" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Shop" />
+						<OnCall Name="Tutorial" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InsertUpgrade" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="InsertUpgradeTutor" Namespace="ST_Tutorial" Equal="0" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.InsertUpgrade.CompleteNotificationText^" />
+						<Dialog Order="20" Title="^Quests.InsertUpgrade.Dialog3.Title^" Text="^Quests.InsertUpgrade.Dialog3.Message^" Button="^Quests.InsertUpgrade.Dialog3.Button^" Image="AI_portrait" />
+						<Statistics SignalMessage="?concat['InsertUpgrade_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<SetCounter Name="CurrencyAmount" Namespace="Quests_Temp" Value="?getBalance[Quests,InsertUpgrade,TokensAmount]" />
+						<AddItem Preset="MoneyReward" Section="Stash" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="UpgradeEffect">
+		<Info>
+			<VisualName Value="^Quests.UpgradeEffect.VisualName^" />
+			<Description Value="^Quests.UpgradeEffect.Description^" />
+			<Reward VisualName="^Quests.UpgradeEffect.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="QuestComplete" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="UpgradeEffect" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="InsertUpgrade" Namespace="ST_Quests" Equal="-1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall Message="UpgradeEffectStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="UpgradeEffectStart" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="UpgradeEffect" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="UpgradeEffect" Equal="0" />
+					</Conditions>
+					<Actions>
+						<StartDialog Order="10" Title="^Quests.UpgradeEffect.StartDialogTitle^" Text="^Quests.UpgradeEffect.Objective^" NoDetails="1" />
+						<TutorialSequence Name="EffectUpgradeTutorialShop" />
+						<SetCounter Name="Started" Namespace="UpgradeEffect" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="Main">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="UpgradeEffectTutor" Namespace="ST_Tutorial" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.InsertUpgrade.Dialog3.Title^" Text="^Quests.InsertUpgrade.Dialog3.Message^" Button="^Quests.InsertUpgrade.Dialog3.Button^" Image="AI_portrait" />
+						<StartDialog Order="10" Title="^Quests.UpgradeEffect.StartDialogTitle^" Text="^Quests.UpgradeEffect.Objective^" NoDetails="1" />
+						<TutorialSequence Name="EffectUpgradeTutorialShop" />
+					</Actions>
+				</Loop>
+				<Loop Name="TerminalMain">
+					<Events>
+						<OnScreen Name="Terminal" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="UpgradeEffect" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="UpgradeEffectTutor" Namespace="ST_Tutorial" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.UpgradeEffect.Dialog1.Title^" Text="^Quests.UpgradeEffect.Dialog1.Message^" Button="^Quests.UpgradeEffect.Dialog1.Button^" Image="AI_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.UpgradeEffect.CompleteNotificationText^" />
+						<TutorialSequence Name="EffectUpgradeTutorialTerminal" />
+						<ExecuteCall />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="Any" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="UpgradeEffect" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="UpgradeEffectTutor" Namespace="ST_Tutorial" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Statistics SignalMessage="?concat['UpgradeEffect_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<SetCounter Name="WeWait_FirstForced_Boosterpack" Namespace="ST_Default" Value="1" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="StandardProtocolQuest">
+		<Info>
+			<VisualName Value="^Quests.EnduranceTest.VisualName^" />
+			<Description Value="^Quests.EnduranceTest.Description^" />
+			<Reward VisualName="^Quests.EnduranceTest.RewardVisualName^" ImageName="box_level2" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="Tutorial" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="StandardProtocolQuest" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="BoosterPackTutor" Namespace="ST_Tutorial" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<SetCounter Name="MissionsBlock" Namespace="ST_ProgressMarkers" Value="0" />
+						<SetCounter Name="MissionsTutor" Namespace="ST_Tutorial" Value="1" />
+						<ExecuteCall Message="StandardProtocolQuestStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="StandardProtocolQuestStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="StandardProtocolQuest" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="StandardProtocolQuest" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="10" Title="^Quests.EnduranceTest.Dialog1.Title^" Text="^Quests.EnduranceTest.Dialog1.Message^" Button="^Quests.EnduranceTest.Dialog1.Button^" Image="AI_portrait" />
+						<StartDialog Order="10" Title="^Quests.EnduranceTest.StartDialogTitle^" Text="^Quests.EnduranceTest.Objective^" NoDetails="1" />
+						<SetCounter Name="Started" Namespace="StandardProtocolQuest" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="Notification">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ST_Floor" Namespace="ST_Default" Min="2" />
+						<CounterRange Name="Floor3Reached" Namespace="ST_ProgressMarkers" Equal="0" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="Floor3Reached" Namespace="ST_ProgressMarkers" Value="1" />
+						<Notification Text="^Quests.EnduranceTest.ProgressNotificationText^" Image="box_level2" Orientation="Left" HideBy="Click" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Floor3Reached" Namespace="ST_ProgressMarkers" Equal="1" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.EnduranceTest.CompleteNotificationText^" />
+						<Delay TimeInSeconds="0.2" BlockAllTouches="1" />
+						<RemoveItemGroup ItemName="StandardProtocol" GroupName="BlockedStarterPack" />
+						<Statistics SignalMessage="?concat['standard_protocol_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<SetCounter Name="Floor3Reached" Namespace="ST_ProgressMarkers" Value="0" />
+						<Delay TimeInSeconds="1.5" BlockAllTouches="1" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="ThirdProtocol">
+		<Info>
+			<VisualName Value="^Quests.TheContact.VisualName^" />
+			<Description Value="^Quests.TheContact.Description^" Progress="?switch[?getCounter[ST_Statistics, BestRank],0:'','^Quests.TheContact.Progress^']" />
+			<Reward VisualName="^Quests.TheContact.RewardVisualName^" ImageName="box_level3" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="Any" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ThirdProtocol" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="StandardProtocolQuest" Namespace="ST_Quests" Equal="-1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<AddItem Preset="AdvancedProtocol" />
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="0" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="0" />
+						<SetCounter Name="AdBlock" Namespace="ST_ProgressMarkers" Value="0" />
+						<SetCounter Name="ST_NewsBlock" Namespace="ST_ProgressMarkers" Value="0" />
+						<SetCounter Name="TutorialInProgress" Namespace="ST_ProgressMarkers" Value="0" />
+						<SetCounter Name="TutorialEndRun" Namespace="ST_Statistics" Value="?getCounter[ST_Statistics, ST_run_counter]" />
+						<ExecuteCall Message="ThirdProtocolStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="ThirdProtocolStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ThirdProtocol" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="ThirdProtocol" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Chapter Title="^Chapters.Chapter1.Title^" Message="^Chapters.Chapter1.Description^" DarknessFadeIn="0.5" TitleFadeIn="1.2" ContentFadeIn="1" TitleDelay="0.7" ContentDelay="0.7" DarknessFadeOut="0.5" TitleFadeOut="1" ContentFadeOut="1" ContentFadeOutDelay="0.3" DarknessFadeOutDelay="1" HideDelay="4.5" HideBy="Time" />
+						<Dialog Order="20" Title="^Quests.TheContact.Dialog1.Title^" Text="^Quests.TheContact.Dialog1.Message^" Button="^Quests.TheContact.Dialog1.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.TheContact.Dialog2.Title^" Text="^Quests.TheContact.Dialog2.Message^" Button="^Quests.TheContact.Dialog2.Button^" Image="AI_hacked_portrait" />
+						<Dialog Order="20" Title="^Quests.TheContact.Dialog3.Title^" Text="^Quests.TheContact.Dialog3.Message^" Button="^Quests.TheContact.Dialog3.Button^" Image="AI_portrait" />
+						<StartDialog Order="10" Title="^Quests.TheContact.StartDialogTitle^" Text="^Quests.TheContact.Objective^" />
+						<SetCounter Name="Started" Namespace="ThirdProtocol" Value="1" />
+						<ExecuteCall />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Best">
+			<Content>
+				<Loop Name="BestRank">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ThirdProtocol" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="ST_LastThirdProtocolNotification" Namespace="ST_Default" Equal="0" />
+						<CounterRange Name="Rank" Namespace="ST_Default" Min="{?getCounter[ST_Statistics, BestRank]+1}" />
+						<CounterRange Name="BestRank" Namespace="ST_Default" Max="?getBalance[Quests,ThirdProtocol,RankNeeded]" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="?min[?getCounter[ST_ProgressMarkers, ST_ShowNoQuestProgressDialog], 0]" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="1" />
+						<SetCounter Name="BestRank" Namespace="ST_Statistics" Value="?min[?getCounter[ST_Default, Rank], ?getBalance[Quests,ThirdProtocol,RankNeeded]]" />
+						<Notification Text="^Quests.TheContact.ProgressNotificationText^" Image="AI_portrait" Orientation="Left" HideBy="Click" Swallow="1" />
+					</Actions>
+				</Loop>
+				<Loop>
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Rank" Namespace="ST_Default" Min="?getBalance[Quests,ThirdProtocol,RankNeeded]" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_LastThirdProtocolNotification" Namespace="ST_Default" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="Kostyl">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ThirdProtocol" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="BestRank" Namespace="ST_Default" Max="?getBalance[Quests,ThirdProtocol,RankNeeded]" />
+						<CounterRange Name="ST_LastThirdProtocolNotification" Namespace="ST_Default" Equal="1" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_LastThirdProtocolNotification" Namespace="ST_Default" Value="0" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="BestRank" Namespace="ST_Statistics" Min="?getBalance[Quests,ThirdProtocol,RankNeeded]" />
+						<CounterRange Name="ThirdProtocol" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="-1" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="0" />
+						<SetCounter Name="ST_RerollTutorial" Namespace="ST_Tutorial" Value="0" />
+						<SetCounter Name="RerollShopBlock" Namespace="ST_ProgressMarkers" Value="0" />
+						<SetCounter Name="ST_LastThirdProtocolNotification" Namespace="ST_Default" Value="0" />
+						<CompleteDialog Order="30" Title="^Quests.TheContact.CompleteNotificationText^" />
+						<RemoveItemGroup ItemName="AdvancedProtocol" GroupName="BlockedStarterPack" />
+						<Statistics SignalMessage="?concat['3rd_protocol_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<ExecuteCall />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="KeysIntro">
+		<Info>
+			<VisualName Value="^Quests.DecryptionTest.VisualName^" />
+			<Description Value="^Quests.DecryptionTest.Description^" />
+			<Reward VisualName="^Quests.DecryptionTest.RewardVisualName^" ImageName="booster" Type="" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="Any" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="KeysIntro" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="ST_NewsBlock" Namespace="ST_ProgressMarkers" Equal="0" />
+						<CounterRange Name="KeysIntroLockPassed" Namespace="KeysIntro" Equal="1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall Message="KeysIntroStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="KeysIntroStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="KeysIntro" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="KeysIntro" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.DecryptionTest.Dialog.Title^" Text="^Quests.DecryptionTest.Dialog.Message^" Button="^Quests.DecryptionTest.Dialog.Button^" Image="AI_portrait" />
+						<StartDialog Order="10" Title="^Quests.DecryptionTest.StartDialogTitle^" Text="^Quests.DecryptionTest.Objective^" />
+						<SetCounter Name="Started" Namespace="KeysIntro" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="RunNotification">
+					<Events>
+						<OnCall Name="Trigger" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Progress" Namespace="KeysIntro" Equal="2" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.DecryptionTest.CompleteNotificationText^" Image="booster" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+						<SetCounter Name="ST_SavemeBlock" Namespace="ST_ProgressMarkers" Value="0" />
+						<SetCounter Name="Progress" Namespace="KeysIntro" Value="3" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Progress" Namespace="KeysIntro" Min="3" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.DecryptionTest.CompleteNotificationText^" />
+						<SetCounter Name="CurrencyAmount" Namespace="Quests_Temp" Value="?getBalance[Quests,DecryptionTest,ChipsAmount]" />
+						<SetCounter Name="WeWait_FirstAfterKeysIntro_Boosterpack" Namespace="ST_Default" Value="1" />
+						<SetCounter Name="WeWait_LastAfterKeysIntro_Boosterpack" Namespace="ST_Default" Value="1" />
+						<SetCounter Name="ST_RerollTutorial" Namespace="ST_Tutorial" Value="1" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<Statistics SignalMessage="?concat['quest_keys_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="Bruteforce1">
+		<Info>
+			<VisualName Value="^Quests.Bruteforce1.VisualName^" />
+			<Description Value="^Quests.Bruteforce1.Description^" Progress="^Quests.Bruteforce1.Progress^" />
+			<Reward VisualName="^Quests.Bruteforce1.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="QuestComplete" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ThirdProtocol" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="Bruteforce1" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall Message="Bruteforce1Start" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="Bruteforce1Start" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce1" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="Bruteforce1" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.Bruteforce1.Dialog1.Title^" Text="^Quests.Bruteforce1.Dialog1.Message^" Button="^Quests.Bruteforce1.Dialog1.Button^" Image="AI_portrait" />
+						<StartDialog Order="10" Title="^Quests.Bruteforce1.StartDialogTitle^" Text="^Quests.Bruteforce1.Objective^" />
+						<SetCounter Name="Started" Namespace="Bruteforce1" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="ResetNoQuestProgressRunCount">
+					<Events>
+						<OnCall Name="Trigger" Message="BruteforceProgress" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce1" Namespace="ST_Quests" Equal="1" />
+						<Operator Type="Or">
+							<CounterRange Name="Progress8Floor" Namespace="ST_Statistics" Equal="?getBalance[Quests,Bruteforce1,LocksCountOnFloor]" Not="1" />
+							<CounterRange Name="ST_Floor" Namespace="ST_Default" Equal="8" />
+						</Operator>
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="?min[?getCounter[ST_ProgressMarkers, ST_ShowNoQuestProgressDialog], 0]" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="NotificationQuestFinished">
+					<Events>
+						<OnCall Name="Trigger" Message="BruteforceProgress" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce1" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress8Floor" Namespace="ST_Statistics" Equal="?getBalance[Quests,Bruteforce1,LocksCountOnFloor]" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.Bruteforce1.CompleteNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="NotifyOnFloor8">
+					<Events>
+						<OnScreen Name="Run" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce1" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress8Floor" Namespace="ST_Statistics" Max="{?getBalance[Quests,Bruteforce1,LocksCountOnFloor]-1}" />
+						<CounterRange Name="ST_Floor" Namespace="ST_Default" Min="8" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.Bruteforce1.ProgressNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Progress8Floor" Namespace="ST_Statistics" Min="?getBalance[Quests,Bruteforce1,LocksCountOnFloor]" />
+						<CounterRange Name="Bruteforce1" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="-1" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="0" />
+						<CompleteDialog Order="30" Title="^Quests.Bruteforce1.CompleteNotificationText^" />
+						<Statistics SignalMessage="?concat['bruteforce1_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="Bruteforce2">
+		<Info>
+			<VisualName Value="^Quests.Bruteforce2.VisualName^" />
+			<Description Value="^Quests.Bruteforce2.Description^" Progress="^Quests.Bruteforce2.Progress^" />
+			<Reward VisualName="^Quests.Bruteforce2.RewardVisualName^" ImageName="chip" Type="chips" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="QuestComplete" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce1" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="Bruteforce2" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.Bruteforce2.StartDialogTitle^" Text="^Quests.Bruteforce2.Objective^" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="ResetNoQuestProgressRunCount">
+					<Events>
+						<OnCall Name="Trigger" Message="BruteforceProgress" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce2" Namespace="ST_Quests" Equal="1" />
+						<Operator Type="Or">
+							<CounterRange Name="Progress10Floor" Namespace="ST_Statistics" Equal="?getBalance[Quests,Bruteforce2,LocksCountOnFloor]" Not="1" />
+							<CounterRange Name="ST_Floor" Namespace="ST_Default" Equal="10" />
+						</Operator>
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="?min[?getCounter[ST_ProgressMarkers, ST_ShowNoQuestProgressDialog], 0]" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="NotificationQuestFinished">
+					<Events>
+						<OnCall Name="Trigger" Message="BruteforceProgress" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce2" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress10Floor" Namespace="ST_Statistics" Equal="?getBalance[Quests,Bruteforce2,LocksCountOnFloor]" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.Bruteforce2.CompleteNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="NotifyOnFloor10">
+					<Events>
+						<OnScreen Name="Run" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce2" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress10Floor" Namespace="ST_Statistics" Max="{?getBalance[Quests,Bruteforce2,LocksCountOnFloor]-1}" />
+						<CounterRange Name="ST_Floor" Namespace="ST_Default" Min="10" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.Bruteforce2.ProgressNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Progress10Floor" Namespace="ST_Statistics" Min="?getBalance[Quests,Bruteforce2,LocksCountOnFloor]" />
+						<CounterRange Name="Bruteforce2" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="-1" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="0" />
+						<CompleteDialog Order="30" Title="^Quests.Bruteforce2.CompleteNotificationText^" />
+						<Statistics SignalMessage="?concat['bruteforce2_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="0" />
+						<SetCounter Name="CurrencyAmount" Namespace="Quests_Temp" Value="?getBalance[Quests,Bruteforce2,ChipReward]" />
+						<AddItem Preset="MoneyPremiumReward" Section="Stash" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="Bruteforce3">
+		<Info>
+			<VisualName Value="^Quests.Bruteforce3.VisualName^" />
+			<Description Value="^Quests.Bruteforce3.Description^" Progress="^Quests.Bruteforce3.Progress^" />
+			<Reward VisualName="^Quests.Bruteforce3.RewardVisualName^" ImageName="box_level4" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="QuestComplete" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce2" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="Bruteforce3" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<AddItem Preset="ExperimentalProtocol" />
+						<StartDialog Order="10" Title="^Quests.Bruteforce3.StartDialogTitle^" Text="^Quests.Bruteforce3.Objective^" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="ResetNoQuestProgressRunCount">
+					<Events>
+						<OnCall Name="Trigger" Message="BruteforceProgress" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce3" Namespace="ST_Quests" Equal="1" />
+						<Operator Type="Or">
+							<CounterRange Name="Progress12Floor" Namespace="ST_Statistics" Equal="?getBalance[Quests,Bruteforce3,LocksCountOnFloor]" Not="1" />
+							<CounterRange Name="ST_Floor" Namespace="ST_Default" Equal="12" />
+						</Operator>
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="?min[?getCounter[ST_ProgressMarkers, ST_ShowNoQuestProgressDialog], 0]" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="NotificationQuestFinished">
+					<Events>
+						<OnCall Name="Trigger" Message="BruteforceProgress" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce3" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress12Floor" Namespace="ST_Statistics" Equal="?getBalance[Quests,Bruteforce3,LocksCountOnFloor]" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.Bruteforce3.CompleteNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="NotifyOnFloor12">
+					<Events>
+						<OnScreen Name="Run" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Bruteforce3" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress12Floor" Namespace="ST_Statistics" Max="{?getBalance[Quests,Bruteforce3,LocksCountOnFloor]-1}" />
+						<CounterRange Name="ST_Floor" Namespace="ST_Default" Min="12" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.Bruteforce3.ProgressNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Progress12Floor" Namespace="ST_Statistics" Min="?getBalance[Quests,Bruteforce3,LocksCountOnFloor]" />
+						<CounterRange Name="Bruteforce3" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="ST_ShowNoQuestProgressDialog" Namespace="ST_ProgressMarkers" Value="-1" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="0" />
+						<CompleteDialog Order="30" Title="^Quests.Bruteforce3.CompleteNotificationText^" />
+						<RemoveItemGroup ItemName="ExperimentalProtocol" GroupName="BlockedStarterPack" />
+						<Statistics SignalMessage="?concat['bruteforce3_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<SetCounter Name="ST_QuestProgressByRun" Namespace="ST_Default" Value="0" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="SecureConnection">
+		<Info>
+			<VisualName Value="^Quests.SecureConnection.VisualName^" />
+			<Description Value="^Quests.SecureConnection.Description^" Progress="^Quests.SecureConnection.Progress^" />
+			<Reward VisualName="^Quests.SecureConnection.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger>
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ThirdProtocol" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="SecureConnection" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall Message="SecureConnectionStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="SecureConnectionStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="SecureConnection" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="SecureConnection" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.SecureConnection.Dialog1.Title^" Text="^Quests.SecureConnection.Dialog1.Message^" Button="^Quests.SecureConnection.Dialog1.Button^" Image="AI_hacked_portrait" RetainImage="1" />
+						<Dialog Order="20" Title="^Quests.SecureConnection.Dialog2.Title^" Text="^Quests.SecureConnection.Dialog2.Message^" Button="^Quests.SecureConnection.Dialog2.Button^" Image="AI_hacked_portrait" RetainImage="1" />
+						<Dialog Order="20" Title="^Quests.SecureConnection.Dialog3.Title^" Text="^Quests.SecureConnection.Dialog3.Message^" Button="^Quests.SecureConnection.Dialog3.Button^" Image="AI_hacked_portrait" />
+						<StartDialog Order="10" Title="^Quests.SecureConnection.StartDialogTitle^" Text="^Quests.SecureConnection.Objective^" />
+						<SetCounter Name="Started" Namespace="SecureConnection" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="Notifications">
+					<Events>
+						<OnCall Name="Trigger" Message="SecureConnection" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="SecureConnection" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress" Namespace="SecureConnection" Max="{?getBalance[Quests,SecureConnection,ButtonsCount]-1}" />
+					</Conditions>
+					<Actions>
+						<Statistics SignalMessage="?concat['quest_terminal_floor_%1', ?getCounter[ST_Default, ST_Floor]]" />
+						<Notification Text="^Quests.SecureConnection.ProgressNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="DialogChangeConditions">
+					<Events>
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="SecureConnection" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="NewQuestCondition" Namespace="SecureConnection" Equal="0" />
+						<CounterRange Name="Progress" Namespace="SecureConnection" Equal="?getBalance[Quests,SecureConnection,ButtonsCountForRankCondition]" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.SecureConnection.Dialog5.Title^" Text="^Quests.SecureConnection.Dialog5.Message^" Button="^Quests.SecureConnection.Dialog5.Button^" Image="AI_hacked_portrait" />
+						<SetCounter Name="NewQuestCondition" Namespace="SecureConnection" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="LastNotification">
+					<Events>
+						<OnCall Name="Trigger" Message="SecureConnection" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="LastNotificationShown" Equal="0" />
+						<CounterRange Name="SecureConnection" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress" Namespace="SecureConnection" Equal="?getBalance[Quests,SecureConnection,ButtonsCount]" />
+					</Conditions>
+					<Actions>
+						<Statistics SignalMessage="?concat['quest_terminal_floor_%1', ?getCounter[ST_Default, ST_Floor]]" />
+						<Notification Text="^Quests.SecureConnection.ProgressNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+						<SetCounter Name="LastNotificationShown" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="SecureConnection" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress" Namespace="SecureConnection" Min="{?getBalance[Quests,SecureConnection,ButtonsCount]}" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.SecureConnection.CompleteNotificationText^" />
+						<Dialog Order="20" Title="^Quests.SecureConnection.Dialog4.Title^" Text="^Quests.SecureConnection.Dialog4.Message^" Button="^Quests.SecureConnection.Dialog4.Button^" Image="AI_hacked_portrait" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<Statistics SignalMessage="?concat['secure_connection_quest_complete_subject_%1', ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="TreasureHunt">
+		<Info>
+			<VisualName Value="^Quests.TreasureHunt.VisualName^" />
+			<Description Value="^Quests.TreasureHunt.Description^" Progress="^Quests.TreasureHunt.Progress^" />
+			<Reward VisualName="^Quests.TreasureHunt.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="TreasureHunt" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="Bruteforce3" Namespace="ST_Quests" Equal="-1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.TreasureHunt.StartDialogTitle^" Text="^Quests.TreasureHunt.Objective^" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Notifies">
+			<Content>
+				<Loop Name="IncrementCount">
+					<Events>
+						<OnBuyCard Rarity="?getBalance[Quests,TreasureHunt,Rarity]" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="TreasureHunt" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="ObtainedItemsCountTreasureHuntQuest" Namespace="ST_Statistics" Max="{?getBalance[Quests,TreasureHunt,ObtainCardsCount]-1}" />
+					</Conditions>
+					<Actions>
+						<IncrementCounter Name="ObtainedItemsCountTreasureHuntQuest" Namespace="ST_Statistics" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="Notify">
+					<Events>
+						<OnBuyCard Rarity="?getBalance[Quests,TreasureHunt,Rarity]" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="TreasureHunt" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="ObtainedItemsCountTreasureHuntQuest" Namespace="ST_Statistics" Max="{?getBalance[Quests,TreasureHunt,ObtainCardsCount]-1}" />
+						<Equal Value1="?getBalance[Quests,TreasureHunt,NotifyProgress,?getCounter[ST_Statistics,ObtainedItemsCountTreasureHuntQuest]]" Value2="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.TreasureHunt.ProgressNotificationText^" Image="AI_portrait" Orientation="Left" HideBy="Click" Swallow="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnBuyCard Rarity="?getBalance[Quests,TreasureHunt,Rarity]" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ObtainedItemsCountTreasureHuntQuest" Namespace="ST_Statistics" Equal="?getBalance[Quests,TreasureHunt,ObtainCardsCount]" />
+						<CounterRange Name="TreasureHunt" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.TreasureHunt.CompleteNotificationText^" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<Statistics SignalMessage="?concat['TreasureHunt_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="RaresCollector">
+		<Info>
+			<VisualName Value="^Quests.RaresCollector.VisualName^" />
+			<Description Value="^Quests.RaresCollector.Description^" Progress="^Quests.RaresCollector.Progress^" />
+			<Reward VisualName="^Quests.RaresCollector.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="TreasureHunt" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="RaresCollector" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.RaresCollector.StartDialogTitle^" Text="^Quests.RaresCollector.Objective^" />
+					</Actions>
+				</Loop>
+				<Loop>
+					<Events>
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CheckScreenType ScreenName="DashEnd" Not="1" />
+						<CounterRange Name="TreasureHunt" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="RaresCollector" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.RaresCollector.StartDialogTitle^" Text="^Quests.RaresCollector.Objective^" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Notifies">
+			<Content>
+				<Loop Name="IncrementCount">
+					<Events>
+						<OnBuyCard Rarity="?getBalance[Quests,RaresCollector,Rarity]" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="RaresCollector" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="ObtainedItemsCountRaresCollectorQuest" Namespace="ST_Statistics" Max="{?getBalance[Quests,RaresCollector,ObtainCardsCount]-1}" />
+					</Conditions>
+					<Actions>
+						<IncrementCounter Name="ObtainedItemsCountRaresCollectorQuest" Namespace="ST_Statistics" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="Notify">
+					<Events>
+						<OnBuyCard Rarity="?getBalance[Quests,RaresCollector,Rarity]" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="RaresCollector" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="ObtainedItemsCountRaresCollectorQuest" Namespace="ST_Statistics" Max="{?getBalance[Quests,RaresCollector,ObtainCardsCount]-1}" />
+						<Equal Value1="?getBalance[Quests,RaresCollector,NotifyProgress,?getCounter[ST_Statistics,ObtainedItemsCountRaresCollectorQuest]]" Value2="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.RaresCollector.ProgressNotificationText^" Image="AI_portrait" Orientation="Left" HideBy="Click" Swallow="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnBuyCard Rarity="?getBalance[Quests,RaresCollector,Rarity]" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ObtainedItemsCountRaresCollectorQuest" Namespace="ST_Statistics" Equal="?getBalance[Quests,RaresCollector,ObtainCardsCount]" />
+						<CounterRange Name="RaresCollector" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.RaresCollector.CompleteNotificationText^" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<Statistics SignalMessage="?concat['RaresCollector_quest_complete_floor_%1_subject_%2', ?getCounter[ST_Default, ST_Floor], ?getCounter[ST_Statistics, ST_run_counter]]" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="ServiceEntrance">
+		<Info>
+			<VisualName Value="^Quests.ServiceEntrance.VisualName^" />
+			<Description Value="^Quests.ServiceEntrance.Description^" />
+			<Reward VisualName="^Quests.ServiceEntrance.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Shop" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="SecureConnection" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="ServiceEntrance" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall Message="ServiceEntranceStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="ServiceEntranceStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ServiceEntrance" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="ServiceEntrance" Equal="0" />
+					</Conditions>
+					<Actions>
+						<StartDialog Order="10" Title="^Quests.ServiceEntrance.StartDialogTitle^" Text="^Quests.ServiceEntrance.Objective^" />
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog1.Title^" Text="^Quests.ServiceEntrance.Dialog1.Message^" Button="^Quests.ServiceEntrance.Dialog1.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog2.Title^" Text="^Quests.ServiceEntrance.Dialog2.Message^" Button="^Quests.ServiceEntrance.Dialog2.Button^" Image="curator_portrait" />
+						<SetCounter Name="Started" Namespace="ServiceEntrance" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="BlackScreen">
+					<Events>
+						<OnCall Name="Trigger" Message="Escaped" />
+					</Events>
+					<Conditions></Conditions>
+					<Actions>
+						<Chapter Title="  " Message="  " HideBy="Manually" ActionAfterHide="GoToEquip" />
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog3.Title^" Text="^Quests.ServiceEntrance.Dialog3.Message^" Button="^Quests.ServiceEntrance.Dialog3.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog4.Title^" Text="^Quests.ServiceEntrance.Dialog4.Message^" Button="^Quests.ServiceEntrance.Dialog4.Button^" Image="AI_portrait" />
+						<HideChapter />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ServiceEntrance" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Progress" Namespace="ServiceEntrance" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog5.Title^" Text="^Quests.ServiceEntrance.Dialog5.Message^" Button="^Quests.ServiceEntrance.Dialog5.Button^" Image="curator_portrait" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<CompleteDialog Order="30" Title="^Quests.ServiceEntrance.CompleteNotificationText^" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="PowerFailures">
+		<Info>
+			<VisualName Value="^Quests.PowerFailures.VisualName^" />
+			<Description Value="^Quests.PowerFailures.Description^" />
+			<Reward VisualName="^Quests.PowerFailures.RewardVisualName^" ImageName="box2_level1" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="PowerFailures" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="ServiceEntrance" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="Bruteforce3" Namespace="ST_Quests" Equal="-1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<SetCounter Name="ShowTutorialWalljump" Namespace="ST_ProgressMarkers" Value="1" />
+						<AddItem Preset="AlphaProtocol" />
+						<ExecuteCall Message="PowerFailuresStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="PowerFailuresStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="PowerFailures" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="PowerFailures" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog6.Title^" Text="^Quests.ServiceEntrance.Dialog6.Message^" Button="^Quests.ServiceEntrance.Dialog6.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog7.Title^" Text="^Quests.ServiceEntrance.Dialog7.Message^" Button="^Quests.ServiceEntrance.Dialog7.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog8.Title^" Text="^Quests.ServiceEntrance.Dialog8.Message^" Button="^Quests.ServiceEntrance.Dialog8.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog9.Title^" Text="^Quests.ServiceEntrance.Dialog9.Message^" Button="^Quests.ServiceEntrance.Dialog9.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.ServiceEntrance.Dialog10.Title^" Text="^Quests.ServiceEntrance.Dialog10.Message^" Button="^Quests.ServiceEntrance.Dialog10.Button^" Image="curator_portrait" />
+						<StartDialog Order="10" Title="^Quests.PowerFailures.StartDialogTitle^" Text="^Quests.PowerFailures.Objective^" NoDetails="1" />
+						<SetCounter Name="Started" Namespace="PowerFailures" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="TriggerLoop">
+					<Events>
+						<OnCall Name="Trigger" Message="PowerFailures" />
+					</Events>
+					<Actions>
+						<Chapter Title="  " Message="  " HideBy="Manually" ActionAfterHide="GoToEquip" />
+						<SetCounter Name="ReadyToComplete" Namespace="PowerFailures" Value="1" />
+						<HideChapter />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ReadyToComplete" Namespace="PowerFailures" Equal="1" />
+					</Conditions>
+					<Actions>
+						<AddBundleRequest BundleId="zone2" />
+						<WaitForBundleRequestsDone />
+						<SetVariable Name="?getUserProperties[Zones].Zone2" Value="1" />
+						<SetVariable Name="?getUserProperties[Zones].Current" Value="Zone2" />
+						<Chapter Title="^Chapters.Chapter2.Title^" Message="^Chapters.Chapter2.Description^" DarknessFadeIn="0.5" TitleFadeIn="1.2" ContentFadeIn="1" TitleDelay="0.7" ContentDelay="0.7" DarknessFadeOut="0.5" TitleFadeOut="1" ContentFadeOut="1" ContentFadeOutDelay="0.3" DarknessFadeOutDelay="1" HideDelay="4.5" HideBy="Time" />
+						<Delay TimeInSeconds="0.1" BlockAllTouches="1" />
+						<CompleteDialog Order="30" Title="^Quests.PowerFailures.CompleteNotificationText^" />
+						<Delay TimeInSeconds="1.5" BlockAllTouches="1" />
+						<RemoveItemGroup ItemName="AlphaProtocol" GroupName="BlockedStarterPack" />
+						<SetCounter Name="ReadyToComplete" Namespace="PowerFailures" Value="0" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="SwarmEncounter">
+		<Info>
+			<VisualName Value="^Quests.SwarmEncounter.VisualName^" />
+			<Description Value="^Quests.SwarmEncounter.Description^" />
+			<Reward VisualName="^Quests.SwarmEncounter.RewardVisualName^" ImageName="box2_level2" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="SwarmEncounter" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="PowerFailures" Namespace="ST_Quests" Equal="-1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<SetCounter Name="SwarmForbidden" Namespace="ST_ProgressMarkers" Value="1" />
+						<AddItem Preset="BetaProtocol" />
+						<ExecuteCall Message="SwarmEncounterStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="SwarmEncounterStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="SwarmEncounter" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="SwarmEncounter" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.SwarmEncounter.Dialog1.Title^" Text="^Quests.SwarmEncounter.Dialog1.Message^" Button="^Quests.SwarmEncounter.Dialog1.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.SwarmEncounter.Dialog2.Title^" Text="^Quests.SwarmEncounter.Dialog2.Message^" Button="^Quests.SwarmEncounter.Dialog2.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.SwarmEncounter.Dialog3.Title^" Text="^Quests.SwarmEncounter.Dialog3.Message^" Button="^Quests.SwarmEncounter.Dialog3.Button^" Image="curator_portrait" />
+						<StartDialog Order="10" Title="^Quests.SwarmEncounter.StartDialogTitle^" Text="^Quests.SwarmEncounter.Objective^" NoDetails="1" />
+						<SetCounter Name="Started" Namespace="SwarmEncounter" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="Notification">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<Equal Value1="?getUserProperties[Zones].Current" Value2="Zone2" />
+						<CounterRange Name="ST_Floor" Namespace="ST_Default" Min="{?getBalance[Quests,SwarmEncounter,Floor]-1}" />
+						<CounterRange Name="ReadyToComplete" Namespace="SwarmEncounter" Equal="0" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="GenerateCutsceneSwarm" Namespace="SwarmEncounter" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Terminal" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ReadyToComplete" Namespace="SwarmEncounter" Equal="1" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.SwarmEncounter.CompleteNotificationText^" />
+						<Delay TimeInSeconds="0.2" BlockAllTouches="1" />
+						<RemoveItemGroup ItemName="BetaProtocol" GroupName="BlockedStarterPack" />
+						<SetCounter Name="ReadyToComplete" Namespace="SwarmEncounter" Value="0" />
+						<SetCounter Name="GenerateCutsceneSwarm" Namespace="SwarmEncounter" Value="0" />
+						<SetCounter Name="ST_SavemeBlock" Namespace="ST_ProgressMarkers" Value="0" />
+						<Delay TimeInSeconds="1.5" BlockAllTouches="1" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="MaintenanceOperations">
+		<Info>
+			<VisualName Value="^Quests.MaintenanceOperations.VisualName^" />
+			<Description Value="^Quests.MaintenanceOperations.Description^" />
+			<Reward VisualName="^Quests.MaintenanceOperations.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="MaintenanceOperations" Namespace="ST_Quests" Equal="0" />
+						<CounterRange Name="SwarmEncounter" Namespace="ST_Quests" Equal="-1" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall Message="MaintenanceOperationsStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="MaintenanceOperationsStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="MaintenanceOperations" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="MaintenanceOperations" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.MaintenanceOperations.Dialog1.Title^" Text="^Quests.MaintenanceOperations.Dialog1.Message^" Button="^Quests.MaintenanceOperations.Dialog1.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.MaintenanceOperations.Dialog2.Title^" Text="^Quests.MaintenanceOperations.Dialog2.Message^" Button="^Quests.MaintenanceOperations.Dialog2.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.MaintenanceOperations.Dialog3.Title^" Text="^Quests.MaintenanceOperations.Dialog3.Message^" Button="^Quests.MaintenanceOperations.Dialog3.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.MaintenanceOperations.Dialog4.Title^" Text="^Quests.MaintenanceOperations.Dialog4.Message^" Button="^Quests.MaintenanceOperations.Dialog4.Button^" Image="curator_portrait" />
+						<StartDialog Order="10" Title="^Quests.MaintenanceOperations.StartDialogTitle^" Text="^Quests.MaintenanceOperations.Objective^" NoDetails="1" />
+						<SetCounter Name="Started" Namespace="MaintenanceOperations" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="OnCall">
+					<Events>
+						<OnCall Name="Trigger" Message="MaintenanceOperations" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="MaintenanceOperations" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.MaintenanceOperations.Progress^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="Notification">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<Equal Value1="?getUserProperties[Zones].Current" Value2="Zone2" />
+						<CounterRange Name="MemoryUnitsCount" Namespace="MaintenanceOperations" Min="1" />
+						<CounterRange Name="GenerateMemoryUnits" Namespace="MaintenanceOperations" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.MaintenanceOperations.Dialog5.Title^" Text="^Quests.MaintenanceOperations.Dialog5.Message^" Button="^Quests.MaintenanceOperations.Dialog5.Button^" Image="curator_portrait" />
+						<SetCounter Name="GenerateMemoryUnits" Namespace="MaintenanceOperations" Value="1" />
+						<SetCounter Name="GenerateNotes" Namespace="ST_ProgressMarkers" Value="1" />
+						<SetCounter Name="ShowNotification" Namespace="MaintenanceOperations" Value="1" />
+					</Actions>
+				</Loop>
+				<Loop Name="CompleteNotification">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="MemoryUnitsCount" Namespace="MaintenanceOperations" Min="?getBalance[Quests,MaintenanceOperations,MemoryUnits]" />
+						<CounterRange Name="ShowNotification" Namespace="MaintenanceOperations" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.MaintenanceOperations.CompleteNotificationText^" Image="AI_portrait" Orientation="Left" HideBy="TimeBlockClicks" />
+						<SetCounter Name="ShowNotification" Namespace="MaintenanceOperations" Value="0" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="MemoryUnitsCount" Namespace="MaintenanceOperations" Min="?getBalance[Quests,MaintenanceOperations,MemoryUnits]" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.MaintenanceOperations.Dialog6.Title^" Text="^Quests.MaintenanceOperations.Dialog6.Message^" Button="^Quests.MaintenanceOperations.Dialog6.Button^" Image="curator_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.MaintenanceOperations.CompleteNotificationText^" />
+						<AddItem Preset="BaseBoosterpack" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="MemoryInstall">
+		<Info>
+			<VisualName Value="^Quests.MemoryInstall.VisualName^" />
+			<Description Value="^Quests.MemoryInstall.Description^" />
+			<Reward VisualName="^Quests.MemoryInstall.RewardVisualName^" ImageName="box2_level3" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="MaintenanceOperations" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="MemoryInstall" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<AddItem Preset="GammaProtocol" />
+						<StartDialog Order="10" Title="^Quests.MemoryInstall.StartDialogTitle^" Text="^Quests.MemoryInstall.Objective^" NoDetails="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="Notification">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<Equal Value1="?getUserProperties[Zones].Current" Value2="Zone2" />
+						<CounterRange Name="ST_Floor" Namespace="ST_Default" Equal="{?getBalance[Quests,MemoryInstall,Floor]-1}" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.SwarmEncounter.Dialog1.Title^" Text="^Quests.MemoryInstall.Dialog1.Message^" Button="^Quests.MemoryInstall.Dialog1.Button^" Image="curator_portrait" />
+					</Actions>
+				</Loop>
+				<Loop Name="FailNotificationInRoom">
+					<Events>
+						<OnCall Name="Trigger" Message="InstallOrderFail" />
+					</Events>
+					<Conditions />
+					<Actions>
+						<Notification Text="^Quests.MemoryInstall.WrongOrder^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="GoodNotificationInRoom">
+					<Events>
+						<OnCall Name="Trigger" Message="InstallOrderGood" />
+					</Events>
+					<Conditions />
+					<Actions>
+						<Notification Text="^Quests.MemoryInstall.RightOrder^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="FailNotificationShop">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<Equal Value1="?getUserProperties[Zones].Current" Value2="Zone2" />
+						<CounterRange Name="ST_Floor" Namespace="ST_Default" Equal="?getBalance[Quests,MemoryInstall,Floor]" />
+						<CounterRange Name="InstallProgress" Namespace="MemoryInstall" Max="4" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="FailCount" Namespace="MemoryInstall" Value="{?getCounter[MemoryInstall, FailCount]+1}" />
+						<Dialog Order="20" Title="^Quests.SwarmEncounter.Dialog2.Title^" Text="^Quests.MemoryInstall.Dialog2.Message^" RunEndButton="^DialogWindow.Button.ReturnToMainScene^" Button="^Quests.MemoryInstall.Dialog2.Button^" Image="curator_portrait" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<Operator Type="Or">
+							<CounterRange Name="InstallProgress" Namespace="MemoryInstall" Equal="5" />
+							<Equal Value1="?getBalance[Quests,MemoryInstall,MaxFails]" Value2="?getCounter[MemoryInstall, FailCount]" />
+						</Operator>
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.MemoryInstall.CompleteNotificationText^" />
+						<Delay TimeInSeconds="0.2" BlockAllTouches="1" />
+						<RemoveItemGroup ItemName="GammaProtocol" GroupName="BlockedStarterPack" />
+						<SetCounter Name="InstallProgress" Namespace="MemoryInstall" Value="0" />
+						<SetCounter Name="FailCount" Namespace="MemoryInstall" Value="0" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="ServerError">
+		<Info>
+			<VisualName Value="^Quests.ServerError.VisualName^" />
+			<Description Value="^Quests.ServerError.Description^" />
+			<Reward VisualName="^Quests.ServerError.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="MemoryInstall" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="ServerError" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall Message="ServerErrorStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="ServerErrorStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ServerError" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="ServerError" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.ServerError.Dialog1.Title^" Text="^Quests.ServerError.Dialog1.Message^" Button="^Quests.ServerError.Dialog1.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.ServerError.Dialog2.Title^" Text="^Quests.ServerError.Dialog2.Message^" Button="^Quests.ServerError.Dialog2.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.ServerError.Dialog3.Title^" Text="^Quests.ServerError.Dialog3.Message^" Button="^Quests.ServerError.Dialog3.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.ServerError.Dialog4.Title^" Text="^Quests.ServerError.Dialog4.Message^" Button="^Quests.ServerError.Dialog4.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.ServerError.Dialog5.Title^" Text="^Quests.ServerError.Dialog5.Message^" Button="^Quests.ServerError.Dialog5.Button^" Image="curator_portrait" />
+						<StartDialog Order="10" Title="^Quests.ServerError.StartDialogTitle^" Text="^Quests.ServerError.Objective^" NoDetails="1" />
+						<SetCounter Name="Started" Namespace="ServerError" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="WrongServerNotification">
+					<Events>
+						<OnCall Name="Trigger" Message="WrongServer" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ServerError" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.ServerError.WrongServerNotification^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="RightServerNotification">
+					<Events>
+						<OnCall Name="Trigger" Message="RightServer" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ServerError" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.ServerError.CompleteNotificationText^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ServerError" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="ServerPassed" Namespace="ServerError" Equal="1" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.ServerError.CompleteNotificationText^" />
+						<SetCounter Name="ServerPassed" Namespace="ServerError" Value="0" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="FileKeys">
+		<Info>
+			<VisualName Value="^Quests.FileKeys.VisualName^" />
+			<Description Value="^Quests.FileKeys.Description^" />
+			<Reward VisualName="^Quests.FileKeys.RewardVisualName^" ImageName="box2_level4" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ServerError" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="FileKeys" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<AddItem Preset="OmegaProtocol" />
+						<ExecuteCall Message="FileKeysStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="FileKeysStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="FileKeys" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="FileKeys" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.FileKeys.Dialog1.Title^" Text="^Quests.FileKeys.Dialog1.Message^" Button="^Quests.FileKeys.Dialog1.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.FileKeys.Dialog2.Title^" Text="^Quests.FileKeys.Dialog2.Message^" Button="^Quests.FileKeys.Dialog2.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.FileKeys.Dialog3.Title^" Text="^Quests.FileKeys.Dialog3.Message^" Button="^Quests.FileKeys.Dialog3.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.FileKeys.Dialog4.Title^" Text="^Quests.FileKeys.Dialog4.Message^" Button="^Quests.FileKeys.Dialog4.Button^" Image="curator_portrait" />
+						<StartDialog Order="10" Title="^Quests.FileKeys.StartDialogTitle^" Text="^Quests.FileKeys.Objective^" NoDetails="1" />
+						<SetCounter Name="Started" Namespace="FileKeys" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="OnCall">
+					<Events>
+						<OnCall Name="Trigger" Message="FileKeys" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="FileKeys" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.FileKeys.Progress^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="FileKeys" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="KeysCollected" Namespace="FileKeys" Min="4" />
+					</Conditions>
+					<Actions>
+						<CompleteDialog Order="30" Title="^Quests.FileKeys.CompleteNotificationText^" />
+						<RemoveItemGroup ItemName="OmegaProtocol" GroupName="BlockedStarterPack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="Reactor">
+		<Info>
+			<VisualName Value="^Quests.Reactor.VisualName^" />
+			<Description Value="^Quests.Reactor.Description^" />
+			<Reward VisualName="^Quests.Reactor.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="FileKeys" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="Reactor" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<ExecuteCall Message="ReactorStart" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Start">
+			<Content>
+				<Loop>
+					<Events>
+						<OnCall Name="Trigger" Message="ReactorStart" />
+						<OnScreen Name="Shop" />
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Reactor" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Started" Namespace="Reactor" Equal="0" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.Reactor.Dialog1.Title^" Text="^Quests.Reactor.Dialog1.Message^" Button="^Quests.Reactor.Dialog1.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.Reactor.Dialog2.Title^" Text="^Quests.Reactor.Dialog2.Message^" Button="^Quests.Reactor.Dialog2.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.Reactor.Dialog3.Title^" Text="^Quests.Reactor.Dialog3.Message^" Button="^Quests.Reactor.Dialog3.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.Reactor.Dialog4.Title^" Text="^Quests.Reactor.Dialog4.Message^" Button="^Quests.Reactor.Dialog4.Button^" Image="curator_portrait" />
+						<StartDialog Order="10" Title="^Quests.Reactor.StartDialogTitle^" Text="^Quests.Reactor.Objective^" NoDetails="1" />
+						<SetCounter Name="Started" Namespace="Reactor" Value="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Reactor" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Success" Namespace="Reactor" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.Reactor.Dialog5.Title^" Text="^Quests.Reactor.Dialog5.Message^" Button="^Quests.Reactor.Dialog5.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.Reactor.Dialog6.Title^" Text="^Quests.Reactor.Dialog6.Message^" Button="^Quests.Reactor.Dialog6.Button^" Image="curator_portrait" />
+						<Dialog Order="20" Title="^Quests.Reactor.Dialog7.Title^" Text="^Quests.Reactor.Dialog7.Message^" Button="^Quests.Reactor.Dialog7.Button^" Image="AI_portrait" />
+						<Dialog Order="20" Title="^Quests.Reactor.Dialog8.Title^" Text="^Quests.Reactor.Dialog8.Message^" Button="^Quests.Reactor.Dialog8.Button^" Image="curator_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.Reactor.CompleteNotificationText^" />
+						<SetCounter Name="ST_SavemeBlock" Namespace="ST_ProgressMarkers" Value="0" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="PowerNodes">
+		<Info>
+			<VisualName Value="^Quests.PowerNodes.VisualName^" />
+			<Description Value="^Quests.PowerNodes.Description^" />
+			<Reward VisualName="^Quests.PowerNodes.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="Reactor" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="PowerNodes" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.PowerNodes.StartDialogTitle^" Text="^Quests.PowerNodes.Objective^" NoDetails="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="OnCall">
+					<Events>
+						<OnCall Name="Trigger" Message="PowerNodes" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="PowerNodes" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.PowerNodes.Progress^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFailOnRun">
+					<Events>
+						<OnScreen Name="Start" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="PowerNodes" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="NodesActivated" Namespace="PowerNodes" Max="2" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="NodesActivated" Namespace="PowerNodes" Value="0" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="PowerNodes" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="NodesActivated" Namespace="PowerNodes" Min="3" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.PowerNodes.Dialog1.Title^" Text="^Quests.PowerNodes.Dialog1.Message^" Button="^Quests.PowerNodes.Dialog1.Button^" Image="curator_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.PowerNodes.CompleteNotificationText^" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="FindFuze">
+		<Info>
+			<VisualName Value="^Quests.FindFuze.VisualName^" />
+			<Description Value="^Quests.FindFuze.Description^" />
+			<Reward VisualName="^Quests.FindFuze.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="PowerNodes" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="FindFuze" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.FindFuze.StartDialogTitle^" Text="^Quests.FindFuze.Objective^" NoDetails="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="FindFuze" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Found" Namespace="FindFuze" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.FindFuze.Dialog1.Title^" Text="^Quests.FindFuze.Dialog1.Message^" Button="^Quests.FindFuze.Dialog1.Button^" Image="curator_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.FindFuze.CompleteNotificationText^" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="InsertFuze">
+		<Info>
+			<VisualName Value="^Quests.InsertFuze.VisualName^" />
+			<Description Value="^Quests.InsertFuze.Description^" />
+			<Reward VisualName="^Quests.InsertFuze.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="FindFuze" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="InsertFuze" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.InsertFuze.StartDialogTitle^" Text="^Quests.InsertFuze.Objective^" NoDetails="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InsertFuze" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Inserted" Namespace="InsertFuze" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.InsertFuze.Dialog1.Title^" Text="^Quests.InsertFuze.Dialog1.Message^" Button="^Quests.InsertFuze.Dialog1.Button^" Image="curator_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.InsertFuze.CompleteNotificationText^" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="ReadjustScanner">
+		<Info>
+			<VisualName Value="^Quests.ReadjustScanner.VisualName^" />
+			<Description Value="^Quests.ReadjustScanner.Description^" />
+			<Reward VisualName="^Quests.ReadjustScanner.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="InsertFuze" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="ReadjustScanner" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.ReadjustScanner.StartDialogTitle^" Text="^Quests.ReadjustScanner.Objective^" NoDetails="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="FailOnShop">
+					<Events>
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ReadjustScanner" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="DevicesCount" Namespace="ReadjustScanner" Max="{?getBalance[Quests,ReadjustScanner,DevicesCount]-1}" />
+					</Conditions>
+					<Actions>
+						<SetCounter Name="DevicesCount" Namespace="ReadjustScanner" Value="0" />
+					</Actions>
+				</Loop>
+				<Loop Name="DeviceNotification">
+					<Events>
+						<OnCall Name="Trigger" Message="ScannerDevice" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ReadjustScanner" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="DevicesCount" Namespace="ReadjustScanner" Max="{?getBalance[Quests,ReadjustScanner,DevicesCount]-1}" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.ReadjustScanner.ProgressNotification^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ReadjustScanner" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="DevicesCount" Namespace="ReadjustScanner" Min="?getBalance[Quests,ReadjustScanner,DevicesCount]" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.ReadjustScanner.Dialog1.Title^" Text="^Quests.ReadjustScanner.Dialog1.Message^" Button="^Quests.ReadjustScanner.Dialog1.Button^" Image="curator_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.ReadjustScanner.CompleteNotificationText^" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="ScannerProcedures">
+		<Info>
+			<VisualName Value="^Quests.ScannerProcedures.VisualName^" />
+			<Description Value="^Quests.ScannerProcedures.Description^" />
+			<Reward VisualName="^Quests.ScannerProcedures.RewardVisualName^" ImageName="box2_level5" Type="StarterPack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ReadjustScanner" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="ScannerProcedures" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.ScannerProcedures.StartDialogTitle^" Text="^Quests.ScannerProcedures.Objective^" NoDetails="1" />
+						<AddItem Preset="LastProtocol" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ScannerProcedures" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="Scanned" Namespace="ScannerProcedures" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.ScannerProcedures.Dialog1.Title^" Text="^Quests.ScannerProcedures.Dialog1.Message^" Button="^Quests.ScannerProcedures.Dialog1.Button^" Image="curator_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.ScannerProcedures.CompleteNotificationText^" />
+						<RemoveItemGroup ItemName="LastProtocol" GroupName="BlockedStarterPack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+	<Quest Name="FindCapsules">
+		<Info>
+			<VisualName Value="^Quests.FindCapsules.VisualName^" />
+			<Description Value="^Quests.FindCapsules.Description^" Progress="^Quests.FindCapsules.Progress^" />
+			<Reward VisualName="^Quests.FindCapsules.RewardVisualName^" ImageName="booster" Type="Boosterpack" />
+		</Info>
+		<StartTrigger Name="StartQuest">
+			<Content>
+				<Loop>
+					<Events>
+						<OnScreen Name="Start" />
+						<OnCall Name="QuestComplete" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="ScannerProcedures" Namespace="ST_Quests" Equal="-1" />
+						<CounterRange Name="FindCapsules" Namespace="ST_Quests" Equal="0" />
+					</Conditions>
+					<Actions>
+						<QuestStart />
+						<StartDialog Order="10" Title="^Quests.FindCapsules.StartDialogTitle^" Text="^Quests.FindCapsules.Objective^" NoDetails="1" />
+					</Actions>
+				</Loop>
+			</Content>
+		</StartTrigger>
+		<Trigger Name="Progress">
+			<Content>
+				<Loop Name="OnCall">
+					<Events>
+						<OnCall Name="Trigger" Message="FindCapsules" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="FindCapsules" Namespace="ST_Quests" Equal="1" />
+					</Conditions>
+					<Actions>
+						<Notification Text="^Quests.FindCapsules.Progress^" Image="AI_portrait" Orientation="LeftBottom" HideBy="TimeDontBlockClicks" />
+					</Actions>
+				</Loop>
+				<Loop Name="QuestFinish">
+					<Events>
+						<OnScreen Name="Start" />
+						<OnScreen Name="Shop" />
+					</Events>
+					<Conditions>
+						<CounterRange Name="FindCapsules" Namespace="ST_Quests" Equal="1" />
+						<CounterRange Name="CapsulesCount" Namespace="FindCapsules" Min="?getBalance[Quests,FindCapsules,CapsulesCount]" />
+					</Conditions>
+					<Actions>
+						<Dialog Order="20" Title="^Quests.FindCapsules.Dialog1.Title^" Text="^Quests.FindCapsules.Dialog1.Message^" Button="^Quests.FindCapsules.Dialog1.Button^" Image="curator_portrait" />
+						<CompleteDialog Order="30" Title="^Quests.FindCapsules.CompleteNotificationText^" />
+						<AddItem Preset="BaseBoosterpack" />
+						<QuestComplete />
+					</Actions>
+				</Loop>
+			</Content>
+		</Trigger>
+	</Quest>
+</Quests>

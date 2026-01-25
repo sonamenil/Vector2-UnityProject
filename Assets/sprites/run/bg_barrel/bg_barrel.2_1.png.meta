@@ -1,0 +1,1703 @@
+fileFormatVersion: 2
+guid: 67beb170b14ef694a84356b247198e0b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -682377845786798195
+    second: bg_barrel.2_1_0
+  - first:
+      213: -3783597679581146656
+    second: bg_barrel.2_1_1
+  - first:
+      213: -7499193838767766421
+    second: bg_barrel.2_1_2
+  - first:
+      213: -721646978618113763
+    second: bg_barrel.2_1_3
+  - first:
+      213: -7609557216649802270
+    second: bg_barrel.2_1_4
+  - first:
+      213: 1601536741930230364
+    second: bg_barrel.2_1_5
+  - first:
+      213: -249862376430482514
+    second: bg_barrel.2_1_6
+  - first:
+      213: -2818427835498331256
+    second: bg_barrel.2_1_7
+  - first:
+      213: -567754359677406633
+    second: bg_barrel.2_1_8
+  - first:
+      213: 4403751054785877819
+    second: bg_barrel.2_1_9
+  - first:
+      213: -6680690729673419018
+    second: bg_barrel.2_1_10
+  - first:
+      213: 72741841531599143
+    second: bg_barrel.2_1_11
+  - first:
+      213: 3755379795228055673
+    second: bg_barrel.2_1_12
+  - first:
+      213: -3270659000889113640
+    second: bg_barrel.2_1_13
+  - first:
+      213: 616799225664322349
+    second: bg_barrel.2_1_14
+  - first:
+      213: 8143142076166854376
+    second: bg_barrel.2_1_15
+  - first:
+      213: -224407595259008275
+    second: bg_barrel.2_1_16
+  - first:
+      213: -6332472570542811703
+    second: bg_barrel.2_1_17
+  - first:
+      213: 3243147595910407939
+    second: bg_barrel.2_1_18
+  - first:
+      213: 7580333925132329729
+    second: bg_barrel.2_1_19
+  - first:
+      213: -6772059120169461510
+    second: bg_barrel.2_1_20
+  - first:
+      213: -936052000342911752
+    second: bg_barrel.2_1_21
+  - first:
+      213: -5530046988173470802
+    second: bg_barrel.2_1_22
+  - first:
+      213: 8997934171834822846
+    second: bg_barrel.2_1_23
+  - first:
+      213: -8627793515076053234
+    second: bg_barrel.2_1_24
+  - first:
+      213: -6386343225621300900
+    second: bg_barrel.2_1_25
+  - first:
+      213: 249655375953416762
+    second: bg_barrel.2_1_26
+  - first:
+      213: -5483476754236048072
+    second: bg_barrel.2_1_27
+  - first:
+      213: 8149777365158702651
+    second: bg_barrel.2_1_28
+  - first:
+      213: 5090632269521579589
+    second: bg_barrel.2_1_29
+  - first:
+      213: -7687528919546493065
+    second: bg_barrel.2_1_30
+  - first:
+      213: 6087435379343871523
+    second: bg_barrel.2_1_31
+  - first:
+      213: -3030160151131982601
+    second: bg_barrel.2_1_32
+  - first:
+      213: -8324509909145132930
+    second: bg_barrel.2_1_33
+  - first:
+      213: 1305228605131106954
+    second: bg_barrel.2_1_34
+  - first:
+      213: 4293782599391143085
+    second: bg_barrel.2_1_35
+  - first:
+      213: -5835293014858480679
+    second: bg_barrel.2_1_36
+  - first:
+      213: -8870080414915219221
+    second: bg_barrel.2_1_37
+  - first:
+      213: 5628192067192068975
+    second: bg_barrel.2_1_38
+  - first:
+      213: 6815087981602399942
+    second: bg_barrel.2_1_39
+  - first:
+      213: 2015760734692887266
+    second: bg_barrel.2_1_40
+  - first:
+      213: 167656862808934335
+    second: bg_barrel.2_1_41
+  - first:
+      213: 6759650993486345858
+    second: bg_barrel.2_1_42
+  - first:
+      213: -1112182368756517191
+    second: bg_barrel.2_1_43
+  - first:
+      213: 5162540880076167097
+    second: bg_barrel.2_1_44
+  - first:
+      213: -7179676376820045125
+    second: bg_barrel.2_1_45
+  - first:
+      213: 8129184047655522072
+    second: bg_barrel.2_1_46
+  - first:
+      213: -845916743492877230
+    second: bg_barrel.2_1_47
+  - first:
+      213: -7928470188004206574
+    second: bg_barrel.2_1_48
+  - first:
+      213: 4239847477065673526
+    second: bg_barrel.2_1_49
+  - first:
+      213: 6584101561207585719
+    second: bg_barrel.2_1_50
+  - first:
+      213: 1060466908088588356
+    second: bg_barrel.2_1_51
+  - first:
+      213: 5850980578414393598
+    second: bg_barrel.2_1_52
+  - first:
+      213: 1919604070740812026
+    second: bg_barrel.2_1_53
+  - first:
+      213: 7317892065624671274
+    second: bg_barrel.2_1_54
+  - first:
+      213: 244174372838054916
+    second: bg_barrel.2_1_55
+  - first:
+      213: 944188676331820932
+    second: bg_barrel.2_1_56
+  - first:
+      213: -8142760404684704313
+    second: bg_barrel.2_1_57
+  - first:
+      213: -5450521387424073473
+    second: bg_barrel.2_1_58
+  - first:
+      213: -3518480595655406905
+    second: bg_barrel.2_1_59
+  - first:
+      213: 8427527848997902075
+    second: bg_barrel.2_1_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_barrel.2_1_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d871843f6f4b786f0800000000000000
+      internalID: -682377845786798195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1d29fe4f5fd7bc0800000000000000
+      internalID: -3783597679581146656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b640372afe28de790800000000000000
+      internalID: -7499193838767766421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_3
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 688
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11cb3a75e13cf5f0800000000000000
+      internalID: -721646978618113763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed0493570c656690800000000000000
+      internalID: -7609557216649802270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52ec757e2dc93610800000000000000
+      internalID: 1601536741930230364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_6
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab40221e7f488cf0800000000000000
+      internalID: -249862376430482514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_7
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8838c08f0dee2e8d0800000000000000
+      internalID: -2818427835498331256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_8
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752bfbffa6eee18f0800000000000000
+      internalID: -567754359677406633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_9
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 676
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3793c390444d1d30800000000000000
+      internalID: 4403751054785877819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_10
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 672
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6129b5d2b6943a0800000000000000
+      internalID: -6680690729673419018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_11
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 672
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7297cc8c15e620100800000000000000
+      internalID: 72741841531599143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_12
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 672
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9785f33e60acd1430800000000000000
+      internalID: 3755379795228055673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_13
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 671
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d30296a7f84c92d0800000000000000
+      internalID: -3270659000889113640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 675
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b3577b0af4f8800800000000000000
+      internalID: 616799225664322349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_15
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 664
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e65675f290420170800000000000000
+      internalID: 8143142076166854376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 56
+        width: 579
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deaefa72b7eb2ecf0800000000000000
+      internalID: -224407595259008275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_17
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 664
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c514ea7fb98e18a0800000000000000
+      internalID: -6332472570542811703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_18
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 664
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307e6683e89f10d20800000000000000
+      internalID: 3243147595910407939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 659
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103ea56ea81c23960800000000000000
+      internalID: 7580333925132329729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_20
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 604
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8da503c10d402a0800000000000000
+      internalID: -6772059120169461510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_21
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 600
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f454444aa97203f0800000000000000
+      internalID: -936052000342911752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_22
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 592
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea393be40935143b0800000000000000
+      internalID: -5530046988173470802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_23
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 584
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb03098c4751fdc70800000000000000
+      internalID: 8997934171834822846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_24
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 536
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e071972928be34880800000000000000
+      internalID: -8627793515076053234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_25
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 544
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59be1f2ca62f57a0800000000000000
+      internalID: -6386343225621300900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_26
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 528
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3258ffdd34f67300800000000000000
+      internalID: 249655375953416762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_27
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 520
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83df5a9d1f6c6e3b0800000000000000
+      internalID: -5483476754236048072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_28
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 512
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3eadc09553d91170800000000000000
+      internalID: 8149777365158702651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_29
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 504
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e69fae31f85a640800000000000000
+      internalID: 5090632269521579589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_30
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 496
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77783ed8d29605590800000000000000
+      internalID: -7687528919546493065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_31
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 488
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ecfe2993aea7450800000000000000
+      internalID: 6087435379343871523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_32
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 488
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f4fb33a565b2f5d0800000000000000
+      internalID: -3030160151131982601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_33
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 480
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e706f20c756697c80800000000000000
+      internalID: -8324509909145132930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_34
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 472
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8aa48f308a1d1210800000000000000
+      internalID: 1305228605131106954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_35
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 480
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da466735684969b30800000000000000
+      internalID: 4293782599391143085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_36
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 472
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3ca017befd40fa0800000000000000
+      internalID: -5835293014858480679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_37
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 464
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be034dbbbd427e480800000000000000
+      internalID: -8870080414915219221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_38
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 456
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b97ac9dda5b1e40800000000000000
+      internalID: 5628192067192068975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_39
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 448
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6e170596e049e50800000000000000
+      internalID: 6815087981602399942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_40
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 440
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eacc8f45bb69fb10800000000000000
+      internalID: 2015760734692887266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_41
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 432
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb702e74703a35200800000000000000
+      internalID: 167656862808934335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_42
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 424
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286be50b3ca1fcd50800000000000000
+      internalID: 6759650993486345858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_43
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 428
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6b0d8370cb090f0800000000000000
+      internalID: -1112182368756517191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_44
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 416
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b75f5ff39705a740800000000000000
+      internalID: 5162540880076167097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_45
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 408
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbaa065ff5aac5c90800000000000000
+      internalID: -7179676376820045125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_46
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 400
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f874232d9a0d070800000000000000
+      internalID: 8129184047655522072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_47
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 392
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2544d822433b244f0800000000000000
+      internalID: -845916743492877230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_48
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 384
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2181cbfee5a68f190800000000000000
+      internalID: -7928470188004206574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_49
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 376
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63be55411d6f6da30800000000000000
+      internalID: 4239847477065673526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_50
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 368
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb7fd06c7d6f5b50800000000000000
+      internalID: 6584101561207585719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_51
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 360
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4485da8c80987be00800000000000000
+      internalID: 1060466908088588356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_52
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 352
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8791416dbd23150800000000000000
+      internalID: 5850980578414393598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_53
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 328
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af066e95bbdc3aa10800000000000000
+      internalID: 1919604070740812026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_54
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 248
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a244534df006e8560800000000000000
+      internalID: 7317892065624671274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_55
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 240
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c14446c4b736300800000000000000
+      internalID: 244174372838054916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_56
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 224
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48754bd399e6a1d00800000000000000
+      internalID: 944188676331820932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_57
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 216
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5f6abdd8a1ffe80800000000000000
+      internalID: -8142760404684704313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_58
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 200
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff83bed1dabdb54b0800000000000000
+      internalID: -5450521387424073473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_59
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 208
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cacada3a88db2fc0800000000000000
+      internalID: -3518480595655406905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_barrel.2_1_60
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 168
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf65b3e7de794f470800000000000000
+      internalID: 8427527848997902075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bg_barrel.2_1_0: -682377845786798195
+      bg_barrel.2_1_1: -3783597679581146656
+      bg_barrel.2_1_10: -6680690729673419018
+      bg_barrel.2_1_11: 72741841531599143
+      bg_barrel.2_1_12: 3755379795228055673
+      bg_barrel.2_1_13: -3270659000889113640
+      bg_barrel.2_1_14: 616799225664322349
+      bg_barrel.2_1_15: 8143142076166854376
+      bg_barrel.2_1_16: -224407595259008275
+      bg_barrel.2_1_17: -6332472570542811703
+      bg_barrel.2_1_18: 3243147595910407939
+      bg_barrel.2_1_19: 7580333925132329729
+      bg_barrel.2_1_2: -7499193838767766421
+      bg_barrel.2_1_20: -6772059120169461510
+      bg_barrel.2_1_21: -936052000342911752
+      bg_barrel.2_1_22: -5530046988173470802
+      bg_barrel.2_1_23: 8997934171834822846
+      bg_barrel.2_1_24: -8627793515076053234
+      bg_barrel.2_1_25: -6386343225621300900
+      bg_barrel.2_1_26: 249655375953416762
+      bg_barrel.2_1_27: -5483476754236048072
+      bg_barrel.2_1_28: 8149777365158702651
+      bg_barrel.2_1_29: 5090632269521579589
+      bg_barrel.2_1_3: -721646978618113763
+      bg_barrel.2_1_30: -7687528919546493065
+      bg_barrel.2_1_31: 6087435379343871523
+      bg_barrel.2_1_32: -3030160151131982601
+      bg_barrel.2_1_33: -8324509909145132930
+      bg_barrel.2_1_34: 1305228605131106954
+      bg_barrel.2_1_35: 4293782599391143085
+      bg_barrel.2_1_36: -5835293014858480679
+      bg_barrel.2_1_37: -8870080414915219221
+      bg_barrel.2_1_38: 5628192067192068975
+      bg_barrel.2_1_39: 6815087981602399942
+      bg_barrel.2_1_4: -7609557216649802270
+      bg_barrel.2_1_40: 2015760734692887266
+      bg_barrel.2_1_41: 167656862808934335
+      bg_barrel.2_1_42: 6759650993486345858
+      bg_barrel.2_1_43: -1112182368756517191
+      bg_barrel.2_1_44: 5162540880076167097
+      bg_barrel.2_1_45: -7179676376820045125
+      bg_barrel.2_1_46: 8129184047655522072
+      bg_barrel.2_1_47: -845916743492877230
+      bg_barrel.2_1_48: -7928470188004206574
+      bg_barrel.2_1_49: 4239847477065673526
+      bg_barrel.2_1_5: 1601536741930230364
+      bg_barrel.2_1_50: 6584101561207585719
+      bg_barrel.2_1_51: 1060466908088588356
+      bg_barrel.2_1_52: 5850980578414393598
+      bg_barrel.2_1_53: 1919604070740812026
+      bg_barrel.2_1_54: 7317892065624671274
+      bg_barrel.2_1_55: 244174372838054916
+      bg_barrel.2_1_56: 944188676331820932
+      bg_barrel.2_1_57: -8142760404684704313
+      bg_barrel.2_1_58: -5450521387424073473
+      bg_barrel.2_1_59: -3518480595655406905
+      bg_barrel.2_1_6: -249862376430482514
+      bg_barrel.2_1_60: 8427527848997902075
+      bg_barrel.2_1_7: -2818427835498331256
+      bg_barrel.2_1_8: -567754359677406633
+      bg_barrel.2_1_9: 4403751054785877819
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

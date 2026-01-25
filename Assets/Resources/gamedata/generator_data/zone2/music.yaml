@@ -1,0 +1,29 @@
+Music:
+  Set: 1
+  BoxContent:
+    Hazardous_Mechanisms:
+      Weight: '<MusicGen.Hazardous_Mechanisms>'
+      CounterActions: {OnEnter: [{Name: Hazardous_Mechanisms, Namespace: MusicGen, Type: IncrementBy, Value: -1}]}
+      MusicContent: [{TrackName: "Hazardous Mechanisms"}]
+    Feral_Swarm:
+      Weight: '<MusicGen.Feral_Swarm>'
+      Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Min: 17}]
+      CounterActions: {OnEnter: [{Name: Feral_Swarm, Namespace: MusicGen, Type: IncrementBy, Value: -1}]}
+      MusicContent: [{TrackName: "Feral Swarm"}]
+    StandardPool:
+      Set: 1
+      BoxContent:
+        Track1: {MusicContent: [{TrackName: "Inside Mechanism"}]}
+        Track2: {MusicContent: [{TrackName: "Brain Conveyor p1"}]}
+        Track3: {MusicContent: [{TrackName: "Brain Conveyor p2"}]}
+        Track6: {MusicContent: [{TrackName: "Spectrum"}]}
+        Track7: {MusicContent: [{TrackName: "Tutor"}]}
+        Track4: {MusicContent: [{TrackName: "I Want Out"}]}
+        Track8: {MusicContent: [{TrackName: "Bells"}]}
+        Track5: {MusicContent: [{TrackName: "Running"}]}
+        Track9: {MusicContent: [{TrackName: "Tesla"}]}
+        TrackA: {MusicContent: [{TrackName: "Hazardous Mechanisms"}]}
+        TrackB: {MusicContent: [{TrackName: "Feral Swarm"}], Conditions: [{ConditionType: CounterRange, Name: ST_Floor, Min: 17}]}
+      
+Ambient:
+  MusicContent: [{AmbientName: "ambient_lab", Volume: 0.5}]

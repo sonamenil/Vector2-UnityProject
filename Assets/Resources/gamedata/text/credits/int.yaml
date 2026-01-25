@@ -1,0 +1,139 @@
+Credits:
+- BlockType: Fade
+  Content:
+  - Space: 1
+  - Title: "PRODUCERS"
+  - Space: 1
+  - Data:
+    - 'O<size=48>LEG</size> E<size=48>GOROV</size>'
+    - 'E<size=48>VGENIY</size> D<size=48>YABIN</size>'
+  - Space: 1
+  - Title: "PROJECT LEADS"
+  - Space: 1
+  - Data:
+    - 'V<size=48>ALENTIN</size> V<size=48>OZNESENSKIY</size>'
+    - 'A<size=48>NDREY</size> R<size=48>EVENKO</size>'
+- BlockType: Fade
+  Content:
+  - Space: 1
+  - Title: "LEAD PROGRAMMER"
+  - Space: 1
+  - Data:
+    - 'A<size=48>LEXEY</size> M<size=48>OISEEV</size>'
+  - Space: 1
+  - Title: "PROGRAMMERS"
+  - Space: 1
+  - Data:
+    - 'O<size=48>LEG</size> D<size=48>UROV</size>'
+    - 'A<size=48>RTEM</size> K<size=48>RASNOZHON</size>'
+    - 'Y<size=48>AROSLAV</size> P<size=48>ARSHUTIN</size>'
+    - 'P<size=48>AVEL</size> S<size=48>HCHELKUN</size>'
+  - Space: 1
+  - Title: "QA LEAD"
+  - Space: 1
+  - Data:
+    - 'A<size=48>LYONA</size> N<size=48>ATALUKHA</size>'
+- BlockType: Fade
+  Content:
+  - Space: 1
+  - Title: "LEAD ARTIST"
+  - Space: 1
+  - Data:
+    - 'W<size=48>ILLIAM</size> G<size=48>OZAK</size>'
+  - Space: 1
+  - Title: "ARTISTS"
+  - Space: 1
+  - Data:
+    - 'D<size=48>ENIS</size> R<size=48>OMANKO</size>'
+    - 'A<size=48>LEXEY</size> K<size=48>RAPIVIN</size>'
+    - 'R<size=48>INAT</size> T<size=48>IMERKAEV</size>'
+  - Space: 1
+  - Title: "ANIMATION"
+  - Space: 1
+  - Data:
+    - 'R<size=48>USLAN</size> K<size=48>HUDAYBERGENOV</size>'
+    - 'D<size=48>MITRIY</size> T<size=48>ERESCHENKO</size>'
+- BlockType: Fade
+  Content:
+  - Space: 1
+  - Title: "GAME DESIGN, PROGRAMMING"
+  - Space: 1
+  - Data:
+    - 'A<size=48>LEXANDER</size> P<size=48>LESKANOVSKY</size>'
+  - Space: 1
+  - Title: "GAME DESIGN, 3D ARTIST"
+  - Space: 1
+  - Data:
+    - 'I<size=48>GOR</size> S<size=48>AMOYLENKO</size>'
+- BlockType: Fade
+  Content:
+  - Space: 1
+  - Title: "GAME DESIGN"
+  - Space: 1
+  - Data:
+    - 'P<size=48>AVEL</size> P<size=48>OPOV</size>'
+    - 'G<size=48>RIGORIY</size> D<size=48>YADICHENKO</size>'
+    - 'A<size=48>RTHUR</size> M<size=48>URTAZIN</size>'
+    - 'D<size=48>ARIA</size> M<size=48>ORGUNOVA</size>'
+- BlockType: Fade
+  Content:
+  - Space: 1
+  - Title: "LEVEL DESIGN"
+  - Space: 1
+  - Data:
+    - 'K<size=48>ONSTANTIN</size> K<size=48>OMAROV</size>'
+    - 'V<size=48>ASILIY</size> S<size=48>KOBELEV</size>'
+    - 'K<size=48>ONSTANTIN</size> Z<size=48>HAVORONKOV</size>'
+    - 'A<size=48>RKADIY</size> P<size=48>RYADKO</size>'
+    - 'R<size=48>OMAN</size> P<size=48>AVLOV</size>'
+    - 'M<size=48>AXIM</size> C<size=48>HULYUCHKIN</size>'
+- BlockType: Fade
+  Content:
+  - Space: 1
+  - Title: "SOUND"
+  - Space: 1
+  - Data:
+    - 'J<size=48>.</size> Y<size=48>ARMOSH</size>'
+  - Space: 1
+  - Title: "MUSIC"
+  - Space: 1
+  - Data:
+    - 'J<size=48>.</size> Y<size=48>ARMOSH</size>'
+    - 'M<size=48>IKHAIL</size> K<size=48>OSTILEV</size>'
+  - Space: 1
+  - Title: "WRITERS"
+  - Space: 1
+  - Data:
+    - 'O<size=48>LEG</size> M<size=48>ARTYNOV</size>'
+    - 'V<size=48>ITALIY</size> A<size=48>LEKSASHIN</size>'
+    - 'C<size=48>HARITY</size> B<size=48>ECKER</size>'
+- BlockType: Scroll
+  Content:
+  - Space: 1
+  - Title: "ALSO THANKS TO"
+  - Space: 1
+  - Data:
+    - 'D<size=48>MITRIY</size> Z<size=48>HEBINYOV</size>'
+    - 'G<size=48>LEB</size> M<size=48>INAEV</size>'
+    - 'M<size=48>AXIM</size> B<size=48>OTVINEV</size>'
+    - 'T<size=48>ATYANA</size> M<size=48>UROMTSEVA</size>'
+    - 'E<size=48>KATERINA</size> Y<size=48>AKOVLEVA</size>'
+    - 'A<size=48>LEXANDER</size> N<size=48>EMOV</size>'
+    - 'S<size=48>ERGEI</size> B<size=48>ABAEV</size>'
+    - 'V<size=48>YACHESLAV</size> N<size=48>IKULIN</size>'
+    - 'A<size=48>LEXANDER</size> K<size=48>VITKA</size>'
+    - 'T<size=48>OM</size> B<size=48>OROVSKIS</size>'
+    - 'E<size=48>UGEN</size> Q<size=48>UIRING</size>'
+    - 'N<size=48>ATALIA</size> K<size=48>ALININA</size>'
+    - 'A<size=48>NDREY</size> T<size=48>RUBETSKOY</size>'
+    - 'P<size=48>YOTR</size> G<size=48>ERNET</size>'
+    - 'E<size=48>LENA</size> S<size=48>OLOVYOVA</size>'
+    - 'E<size=48>LENA</size> P<size=48>ETRICHENKO</size>'
+    - 'E<size=48>LLA</size> L<size=48>AVROVA</size>'
+    - 'M<size=48>ARIYA</size> G<size=48>AVRICHENKOVA</size>'
+    - 'A<size=48>LEXANDER</size> P<size=48>ANOV</size>'
+    - 'K<size=48>ONSTANTIN</size> S<size=48>AKHAROV</size>'
+- BlockType: Scroll
+  Content:
+  - Space: 1
+  - Title: "<size=80>THANKS FOR PLAYING</size>"

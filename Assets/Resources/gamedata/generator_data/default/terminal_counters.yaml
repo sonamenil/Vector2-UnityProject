@@ -1,0 +1,179 @@
+ActualStartFloorAndStarterPack:
+  Set: 1
+  NoShuffle: 1
+  Select: {Type: Items, Root: Equipped}
+  BoxContent:
+    SetActualStartFloorAndStarterPack:
+      Conditions: [{ConditionType: ValuesEqual, Values: ['?isItemType[?getString[SelectKey], StarterPack]', 1]}]
+      CounterActions: 
+        OnEnter: 
+        - {Name: StartFloor, Namespace: ST_Default, Type: Assign, Value: '?getBalance[StarterPacks,?getString[SelectKey],FloorNumber]'}
+        - {Name: StarterPackCoolness, Namespace: ST_Default, Type: Assign, Value: '?getBalance[StarterPacks,?getString[SelectKey],Coolness]'}
+      StringActions: {OnEnter: [{Name: StarterPackName, Value: '?getString[SelectKey]'}]}
+    Continue: {}
+
+Action_PaymentPromo:
+  Conditions:
+    - {ConditionType: CounterRange, Namespace: ST_ProgressMarkers, Name: TutorialInProgress, Equal: 0}
+    - {ConditionType: CounterRange, Namespace: ST_Events, Name: PaymentPromo, Equal: -1}
+  NoShuffle: 1
+  BoxContent:
+    IncrementCounter:
+      CounterActions:
+        OnEnter:
+          - {Name: RunCountAfterTutor, Namespace: ST_Statistics, Type: IncrementBy, Value: 1}
+
+Action_IncrementRunCountQuestNoProgressDialog:
+  Conditions:
+    - {ConditionType: CounterRange, Namespace: ST_ProgressMarkers, Name: ST_ShowNoQuestProgressDialog, Equal: -1, Not: 1}
+    - {ConditionType: CounterRange, Name: ST_QuestProgressByRun, Equal: 0}
+  NoShuffle: 1
+  BoxContent:
+    IncrementCounter:
+      CounterActions:
+        OnEnter:
+          - {Name: ST_ShowNoQuestProgressDialog, Namespace: ST_ProgressMarkers, Type: IncrementBy, Value: 1}
+          
+AchievementProgress:
+  BoxContent:
+    PigToDog:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Pavlov's_Dog, Max: 9}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Guinea_Pig, Equal: 10}
+      CounterActions:
+        OnEnter:
+          - {Name: Pavlov's_Dog, Namespace: ST_Achievements, Type: IncrementBy, Value: 10}
+    DogToCat:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Schroedinger's_Cat, Max: 99}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Pavlov's_Dog, Equal: 100}
+      CounterActions:
+        OnEnter:
+          - {Name: Schroedinger's_Cat, Namespace: ST_Achievements, Type: IncrementBy, Value: 100}
+    EffectiveToCollector:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Collector, Max: 49}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Effective, Equal: 50}
+      CounterActions:
+        OnEnter:
+          - {Name: Collector, Namespace: ST_Achievements, Type: IncrementBy, Value: 50}
+    CollectorToSong:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Da_boo_dee_da_boo_da, Max: 199}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Collector, Equal: 200}
+      CounterActions:
+        OnEnter:
+          - {Name: Da_boo_dee_da_boo_da, Namespace: ST_Achievements, Type: IncrementBy, Value: 200}
+    Mid-rangeequipmentToHoarder:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Hoarder, Max: 49}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Mid-range_equipment, Equal: 50}
+      CounterActions:
+        OnEnter:
+          - {Name: Hoarder, Namespace: ST_Achievements, Type: IncrementBy, Value: 50}
+    HoarderToSecure_and_reliable:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Secure_and_reliable, Max: 199}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Hoarder, Equal: 200}
+      CounterActions:
+        OnEnter:
+          - {Name: Secure_and_reliable, Namespace: ST_Achievements, Type: IncrementBy, Value: 200}
+    The_best_kind_of_stuffToScrupulous:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Scrupulous, Max: 49}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: The_best_kind_of_stuff, Equal: 50}
+      CounterActions:
+        OnEnter:
+          - {Name: Scrupulous, Namespace: ST_Achievements, Type: IncrementBy, Value: 50}
+    ScrupulousToState-of-the-art_equipment:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: State-of-the-art_equipment, Max: 199}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Scrupulous, Equal: 200}
+      CounterActions:
+        OnEnter:
+          - {Name: State-of-the-art_equipment, Namespace: ST_Achievements, Type: IncrementBy, Value: 200}
+  CounterActions:
+    OnExit:
+      - {Name: Loses, Namespace: AchievementsProgressByFloor, Type: Assign, Value: 1}
+    
+
+Floor3Difficulty:
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    DecreaseDifficulty:
+      Conditions:
+        - {ConditionType: CounterRange, Namespace: ST_Default, Name: Difficulty3rdFloor, Max: 2}
+        - {ConditionType: CounterRange, Namespace: ST_Default, Name: DeathOnFloor, Equal: 3}
+        - {ConditionType: CounterRange, Namespace: ST_Quests, Name: KeysIntro, Min: 0}
+      CounterActions:
+        OnEnter:
+          - {Name: Difficulty3rdFloor, Namespace: ST_Default, Type: IncrementBy, Value: 2}
+    IncreaseDifficulty:
+      Conditions:
+        - {ConditionType: CounterRange, Namespace: ST_Default, Name: Difficulty3rdFloor, Min: 1}
+        - {ConditionType: CounterRange, Namespace: ST_Default, Name: StartFloor, Max: 3}
+        - {ConditionType: CounterRange, Namespace: ST_Default, Name: DeathOnFloor, Min: 4}
+        - {ConditionType: CounterRange, Namespace: ST_Quests, Name: KeysIntro, Equal: -1}
+      CounterActions:
+        OnEnter:
+          - {Name: Difficulty3rdFloor, Namespace: ST_Default, Type: IncrementBy, Value: -1}
+    SameDifficulty: {}
+    
+PrepareTerminality:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    ST_ItemMainData: {ST_ItemType: '', ST_ItemName: "?concat['Terminal_%1', ?_getString[StarterPackName]]", ST_VisualItemName: ''}
+    
+SomeCounters:
+  CounterActions:
+    OnEnter:
+    - {Namespace: MissionObjectives, Type: Clear}
+    - {Namespace: MissionProgress, Type: Clear}
+    - {Namespace: OverweightedUpgrades, Type: Clear}
+    - {Namespace: Terminal, Type: Clear}
+    - {Namespace: SpecificTerminal, Type: Clear}
+    - {Namespace: SpecificTerminalCards, Type: Clear}
+    - {Name: RunInProgress, Type: Assign, Value: 0}
+    
+SpecificTerminalSlots:
+  Select: {Type: Balance, Root: SpecificTerminalSlots}
+  CounterActions: {OnEnter: [{Name: Slot, Namespace: SpecificTerminal, Type: Assign, Value: '?getBalance[SpecificTerminalSlots,?getString[SelectKey],Slot]'}]}
+  BoxContent:
+    Finded:
+      Conditions: 
+      - {ConditionType: CounterRange, Name: '?getString[SelectKey]', Namespace: SpecificTerminalSlots, Min: 1}
+      - {ConditionType: CounterRange, Name: '<SpecificTerminal.Slot>', Namespace: SpecificTerminal, Max: 0}
+      - {ConditionType: ValuesEqual, Values: ['?lessEqual[?getBalance[SpecificTerminalSlots,?getString[SelectKey],SetupMin], <StarterPackCoolness>]', 1]}
+      - {ConditionType: ValuesEqual, Values: ['?greaterEqual[?getBalance[SpecificTerminalSlots,?getString[SelectKey],SetupMax], <StarterPackCoolness>]', 1]}
+      CounterActions: {OnEnter: [{Name: '<SpecificTerminal.Slot>', Namespace: SpecificTerminal, Type: Assign, Value: 1}]}
+      StringActions: {OnEnter: [{Name: '<SpecificTerminal.Slot>', Value: '?getString[SelectKey]'}]}
+      NoShuffle: 1
+      BoxContent:
+        SpecifiedCard:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getBalance[SpecificTerminalSlots,?getString[SelectKey],SpecifiedCard]', 1]}]
+          CounterActions: 
+            OnEnter: 
+            - {Name: '<SpecificTerminal.Slot>', Namespace: SpecificTerminalCards, Type: Assign, Value: 1}
+            - {Name: '?getBalance[SpecificTerminalSlots,?getString[SelectKey],Card]', Namespace: Terminal, Type: Assign, Value: 1}
+        Other: {}
+      
+KillMissions:
+  ItemActions:
+    OnEnter:
+    - {Name: Mission_1, Type: "Remove", IsPartOfName: 1}
+    - {Name: Mission_2, Type: "Remove", IsPartOfName: 1}
+    - {Name: Mission_3, Type: "Remove", IsPartOfName: 1}
+      
+ReactorMission:
+  Conditions: [{ConditionType: CounterRange, Name: Reactor, Namespace: ST_Quests, Equal: 1}]
+  CounterActions: {OnEnter: [{Name: MissionsBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}]}
+  
+MissionsTutor:
+  Conditions:
+  - {ConditionType: CounterRange, Namespace: ST_Tutorial, Name: MissionsTutor, Equal: 2}
+  - {ConditionType: CounterRange, Namespace: StarRewards, Name: CurrentStars, Min: 1}
+  CounterActions: 
+    OnEnter: 
+    - {Name: MissionsTutorStars, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+    - {Name: MissionsTutor, Namespace: ST_Tutorial, Type: Assign, Value: 0}

@@ -1,0 +1,387 @@
+Floor:
+  CommonRooms:
+    0: 8
+    1: 4
+    2: 5
+    3: 5
+    4: 6
+    5: 6
+    6: 6
+    7: 6
+    8: 6
+    9: 6
+    10: 6
+    Default: 7
+  SpecialPlaces:
+    0:       {Interesting: 3, Hardcore: 2, Exciting: 2}
+    1:       {Interesting: 0, Hardcore: 0, Exciting: 0}
+    2:       {Interesting: 0, Hardcore: 0, Exciting: 1}
+    3:       {Interesting: 1, Hardcore: 0, Exciting: 1}
+    4:       {Interesting: 2, Hardcore: 0, Exciting: 1}
+    5:       {Interesting: 2, Hardcore: 0, Exciting: 1}
+    6:       {Interesting: 3, Hardcore: 1, Exciting: 2}
+    7:       {Interesting: 3, Hardcore: 1, Exciting: 2}
+    8:       {Interesting: 3, Hardcore: 1, Exciting: 2}
+    9:       {Interesting: 3, Hardcore: 1, Exciting: 2}
+    10:      {Interesting: 3, Hardcore: 1, Exciting: 2}
+    Default: {Interesting: 3, Hardcore: 2, Exciting: 2}
+  PrehardSpecialAbilities:
+    0:       {EMP: 9, Teleport: 9}
+    Default: {EMP: 2, Teleport: 2}
+  Forks:
+    1: {ForksOverall: {Min: 0, Max: 0}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 0}, BlueLock: {Min: 0, Max: 0}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    2: {ForksOverall: {Min: 1, Max: 2}, NoKeyEasy: {Min: 1, Max: 1}, NoKeyHard: {Min: 1, Max: 1}, BlueLock: {Min: 0, Max: 0}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    3: {ForksOverall: {Min: 1, Max: 2}, NoKeyEasy: {Min: 0, Max: 1}, NoKeyHard: {Min: 1, Max: 2}, BlueLock: {Min: 1, Max: 2}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    4: {ForksOverall: {Min: 1, Max: 3}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 2}, BlueLock: {Min: 1, Max: 2}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    5: {ForksOverall: {Min: 1, Max: 3}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 2}, BlueLock: {Min: 1, Max: 2}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    6: {ForksOverall: {Min: 2, Max: 4}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 2}, BlueLock: {Min: 2, Max: 4}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    7: {ForksOverall: {Min: 2, Max: 4}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 3}, BlueLock: {Min: 2, Max: 5}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    8: {ForksOverall: {Min: 2, Max: 5}, NoKeyEasy: {Min: 0, Max: 1}, NoKeyHard: {Min: 0, Max: 3}, BlueLock: {Min: 2, Max: 3}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    9: {ForksOverall: {Min: 2, Max: 5}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 3}, BlueLock: {Min: 3, Max: 4}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    15: {ForksOverall: {Min: 2, Max: 5}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 3}, BlueLock: {Min: 3, Max: 3}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    16: {ForksOverall: {Min: 2, Max: 5}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 3}, BlueLock: {Min: 2, Max: 5}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+    Default: {ForksOverall: {Min: 3, Max: 5}, NoKeyEasy: {Min: 0, Max: 0}, NoKeyHard: {Min: 0, Max: 5}, BlueLock: {Min: 3, Max: 5}, YellowLock: {Min: 0, Max: 0}, RedLock: {Min: 0, Max: 0}}
+  Keys:
+    0:        {Blue: '{2 + ?getBalance[StarBuffs,ExtraFloorKeysAmount] * <StarBuffs.ExtraFloorKeys>}', Yellow: 0, Red: 0}
+    1:        {Blue: '{0 + ?getBalance[StarBuffs,ExtraFloorKeysAmount] * <StarBuffs.ExtraFloorKeys>}', Yellow: 0, Red: 0}
+    2:        {Blue: '{0 + ?getBalance[StarBuffs,ExtraFloorKeysAmount] * <StarBuffs.ExtraFloorKeys>}', Yellow: 0, Red: 0}
+    3:        {Blue: '{1 + ?getBalance[StarBuffs,ExtraFloorKeysAmount] * <StarBuffs.ExtraFloorKeys>}', Yellow: 0, Red: 0}
+    Default:  {Blue: '{1 + ?getBalance[StarBuffs,ExtraFloorKeysAmount] * <StarBuffs.ExtraFloorKeys>}', Yellow: 0, Red: 0}
+  Traps:
+    Balls:
+      GeneratorPerRoom:
+        0: {Min: 0, Unlimited: 1}
+        1: {Min: 0, Max: 0}
+        2: {Min: 0, Max: 0}
+        3: {Min: 0, Max: 0}
+        4: {Min: 0, Max: 0}
+        5: {Min: 0, Max: 0}
+        6: {Min: 0, Max: 0}
+        7: {Min: 0, Max: 0}
+        8: {Min: 0, Max: 1}
+        9: {Min: 0, Max: 2}
+        10: {Min: 0, Max: 3}
+        11: {Min: 0, Max: 4}
+        12: {Min: 0, Max: 4}
+        Default: {Min: 0, Max: 100000, Unlimited: 1}
+      Overall:
+        0: {Min: 8, Unlimited: 1}
+        1: {Min: 0, Max: 0}
+        2: {Min: 0, Max: 0}
+        3: {Min: 0, Max: 0}
+        4: {Min: 0, Max: 0}
+        5: {Min: 0, Max: 0}
+        6: {Min: 0, Max: 0}
+        7: {Min: 0, Max: 0}
+        8: {Min: 2, Max: 5}
+        9: {Min: 4, Max: 8}
+        10: {Min: 5, Max: 10}
+        11: {Min: 5, Max: 10}
+        12: {Min: 6, Max: 12}
+        Default: {Min: 8, Unlimited: 1}
+    Laser:
+      0: {Min: 9, Unlimited: 1}
+      1: {Min: 2, Max: 4}
+      2: {Min: 3, Max: 6}
+      3: {Min: 3, Max: 10}
+      4: {Min: 3, Max: 11}
+      5: {Min: 5, Max: 12}
+      6: {Min: 6, Max: 13}
+      7: {Min: 6, Max: 13}
+      8: {Min: 7, Max: 13}
+      9: {Min: 8, Max: 15}
+      10: {Min: 9, Max: 20}
+      11: {Min: 9, Max: 20}
+      12: {Min: 9, Max: 20}
+      Default: {Min: 9, Unlimited: 1}   
+    MineShort:
+      0: {Min: 6, Unlimited: 1}
+      1: {Min: 0, Max: 0}
+      2: {Min: 1, Max: 1}
+      3: {Min: 4, Max: 10}
+      4: {Min: 6, Max: 10}
+      5: {Min: 8, Max: 15}
+      Default: {Min: 6, Unlimited: 1}   
+    MineHurdle:
+      0: {Min: 4, Unlimited: 1}
+      1: {Min: 0, Max: 0}
+      2: {Min: 0, Max: 0}
+      3: {Min: 0, Max: 2}
+      4: {Min: 1, Max: 2}
+      5: {Min: 1, Max: 3}
+      6: {Min: 1, Max: 3}
+      7: {Min: 2, Max: 4}
+      8: {Min: 2, Max: 6}
+      9: {Min: 4, Max: 6}
+      Default: {Min: 4, Unlimited: 1}   
+    Tesla:
+      Generator:
+        0: {Min: 0, Unlimited: 1}
+        1: {Min: 0, Max: 0}
+        2: {Min: 0, Max: 0}
+        3: {Min: 0, Max: 0}
+        4: {Min: 0, Max: 0}
+        5: {Min: 0, Max: 0}
+        6: {Min: 0, Max: 0}
+        7: {Min: 0, Max: 0}
+        8: {Min: 0, Max: 0}
+        9: {Min: 0, Max: 0}
+        10: {Min: 0, Max: 0}
+        11: {Min: 0, Max: 0}
+        12: {Min: 0, Max: 0}
+        13: {Min: 0, Max: 0}
+        14: {Min: 0, Max: 0}
+        15: {Min: 0, Max: 1}
+        16: {Min: 0, Max: 1}
+        Default: {Min: 0, Unlimited: 1}
+      Overall:
+        0: {Min: 12, Unlimited: 1}
+        1: {Min: 0, Max: 0}
+        2: {Min: 0, Max: 0}
+        3: {Min: 0, Max: 0}
+        4: {Min: 0, Max: 0}
+        5: {Min: 0, Max: 0}
+        6: {Min: 0, Max: 0}
+        7: {Min: 0, Max: 0}
+        8: {Min: 0, Max: 0}
+        9: {Min: 0, Max: 0}
+        10: {Min: 0, Max: 0}
+        11: {Min: 0, Max: 0}
+        12: {Min: 0, Max: 0}
+        13: {Min: 0, Max: 0}
+        14: {Min: 0, Max: 0}
+        15: {Min: 6, Max: 9}
+        16: {Min: 8, Max: 15}
+        17: {Min: 10, Max: 20}
+        Default: {Min: 12, Unlimited: 1}
+  Obstacles:
+    0: {Min: 0, Max: 0}
+    1: {Min: 0, Unlimited: 1}
+    2: {Min: 0, Unlimited: 1}
+    3: {Min: 4, Unlimited: 1}
+    4: {Min: 3, Unlimited: 1}
+    5: {Min: 2, Unlimited: 1}
+    6: {Min: 0, Max: 5}
+    7: {Min: 0, Max: 4}
+    8: {Min: 0, Max: 3}
+    9: {Min: 0, Max: 3}
+    Default: {Min: 0, Max: 0}
+  Coins:
+    Default: "{2 * ?getBalance[Floor, CommonRooms, <ST_Floor>]}"
+  SuperCoins:
+    0: 10
+    1: 0
+    2: 0
+    3: 1
+    4: 1
+    5: 2
+    6: 2
+    7: 3
+    8: 3
+    9: 4
+    10: 4
+    11: 5
+    12: 5
+    Default: 6  
+  SuperCoinsAfterLockMax: 1
+  CoinEV:
+    Default: "{10 + <StarBuffs.AddTokens>}"
+  SuperCoinEV:
+    Default: "{25 + <StarBuffs.AddTokens>}"
+  RewardsAfterLocks:
+    Default:
+      Red: 2
+      Yellow: 1
+      Blue: 1
+      NoLock: 0
+  EnableBonusBeforeTrap:
+    0: 1
+    1: 0
+    2: 0
+    3: 0
+    4: 0
+    5: 0
+    6: 0
+    7: 0
+    11: 0
+    Default: 1
+  EnableBonusAfterTrap:
+    0: 1
+    1: 0
+    2: 0
+    3: 0
+    4: 0
+    5: 0
+    6: 0
+    7: 0
+    11: 0
+    Default: 1
+  Points:
+    Default: 50
+  Stunts:
+    1: {Min: 1, Unlimited: 1}
+    2: {Min: 1, Unlimited: 1}
+    3: {Min: 2, Unlimited: 1}
+    4: {Min: 2, Unlimited: 1}
+    5: {Min: 2, Unlimited: 1}
+    6: {Min: 2, Unlimited: 1}
+    7: {Min: 2, Unlimited: 1}
+    8: {Min: 2, Unlimited: 1}
+    9: {Min: 3, Unlimited: 1}
+    10: {Min: 3, Unlimited: 1}
+    11: {Min: 3, Unlimited: 1}
+    12: {Min: 3, Unlimited: 1}
+    13: {Min: 3, Unlimited: 1}
+    14: {Min: 3, Unlimited: 1}
+    15: {Min: 3, Unlimited: 1}
+    Default: {Min: 4, Unlimited: 1}
+  Boosterpacks:
+    Default:  {Min: 0, Max: 1, Chance: 25}
+AvailableStarterPacks:
+  BasicProtocol: {}
+  StandardProtocol: {}
+  AdvancedProtocol: {}
+  ExperimentalProtocol: {}
+StarRewards:
+  1:
+    Repeated:
+      Preset: 'AddTokens'
+      Rarity: 1
+      Cost: 1
+  2:
+    Repeated:
+      Preset: 'ExtraChargeRewardOnly2'
+      Rarity: 1
+      Cost: 2
+      
+  3:
+    Repeated:
+      Preset: 'AddSockets'
+      Rarity: 1
+      Cost: 2
+    Single:
+      Preset: 'UpgradeTorso'
+      Rarity: 1
+      SingleRewardIcon: 'star_rewards.torso_black'
+      SingleRewardArt:  'run.torso_black'
+      CoolnessMin: 2
+      Cost: 2
+      
+  4:
+    Repeated:
+      Preset: 'ExtraCardRewardOnly2'
+      Rarity: 1
+      Cost: 3
+  5:
+    Repeated:
+      Preset: 'RankDiscount'
+      Rarity: 1
+      Cost: 2
+    Single:
+      Preset: 'UpgradeLegs'
+      Rarity: 1
+      SingleRewardIcon: 'star_rewards.boots_black'
+      SingleRewardArt:  'run.legs_black'
+      CoolnessMin: 2
+      Cost: 3
+  6:
+    Repeated:
+      Preset: 'RandomStartUpgrade'
+      Rarity: 1
+      Cost: 3
+    Single:
+      Preset: 'UpgradeHead'
+      Rarity: 1
+      SingleRewardIcon: 'star_rewards.helmet_black'
+      SingleRewardArt:  'run.head_black'
+      CoolnessMin: 3
+      Cost: 3
+  7:
+    Repeated:
+      Preset: 'ExtraFloorKeys'
+      Rarity: 1
+      Cost: 3
+    Single:
+      Preset: 'UpgradeBelt'
+      Rarity: 1
+      SingleRewardIcon: 'star_rewards.belt_black'
+      SingleRewardArt:  'run.belt_black'
+      CoolnessMin: 4
+      Cost: 3
+  8:
+    Repeated:
+      Preset: 'ExtraChargeAndCardRewardOnly4'
+      Rarity: 2
+      Cost: 5
+    Single:
+      Preset: 'UpgradeHands'
+      Rarity: 2
+      SingleRewardIcon: 'star_rewards.hand_black'
+      SingleRewardArt:  'run.hands_black'
+      CoolnessMin: 3
+      Cost: 5
+  9:
+    Repeated:
+      Preset: 'RandomStartUpgrade'
+      Rarity: 2
+      Cost: 5
+  10:
+    Repeated:
+      Preset: 'RankDiscount'
+      Rarity: 2
+      Cost: 5
+  11:
+    Repeated:
+      Preset: 'MoneyPremiumReward'
+      Rarity: 2
+      Cost: 7
+  12:
+    Repeated:
+      Preset: 'RandomStartUpgrade'
+      Rarity: 2
+      Cost: 7
+  13:
+    Repeated:
+      Preset: 'MoneyReward'
+      Rarity: 2
+      Cost: 8
+  14:
+    Repeated:
+      Preset: 'RankDiscount'
+      Rarity: 2
+      Cost: 8
+  15:
+    Repeated:
+      Preset: 'RandomStartUpgrade'
+      Rarity: 3
+      Cost: 10
+  16:
+    Repeated:
+      Preset: 'MoneyReward'
+      Rarity: 3
+      Cost: 10
+  17:
+    Repeated:
+      Preset: 'MoneyPremiumReward'
+      Rarity: 3
+      Cost: 13
+  18:
+    Repeated:
+      Preset: 'RankDiscount'
+      Rarity: 3
+      Cost: 16
+  19:
+    Repeated:
+      Preset: 'MoneyReward'
+      Rarity: 3
+      Cost: 16
+  20:
+    Repeated:
+      Preset: 'MoneyPremiumReward'
+      Rarity: 3
+      Cost: 16
+  21:
+    Repeated:
+      Preset: 'RankDiscount'
+      Rarity: 3
+      Cost: 16

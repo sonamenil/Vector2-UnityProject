@@ -1,0 +1,334 @@
+UserVersion: 15
+ItemsUpdater_GADGETS_DESCRIPTION:
+  Target: "?getString[Upd_ItemName]"
+  NoShuffle: 1
+  BoxContent:
+    THIS_IS_GADGET:
+      Conditions: [{ConditionType: GroupExists, Item: "?getString[Upd_ItemName]", Group: "ST_MyGadgets"}]
+      GroupContent: 
+        ST_VisualData: 
+          ST_Description: "?concat['^Labels.Details.%1Description^', ?_getItemAttribute[?getString[Upd_ItemName],ST_MyGadgets,ST_Slot]]"
+
+CountersUpdater_STARTERPACKS_CLEANER:
+  Select: {Type: Items, Root: All}
+  BoxContent:
+    STARTERPACK:
+      Conditions: [{ConditionType: GroupExists, Item: '?getString[SelectKey]', Group: StartFloor}]
+      ItemActions: {OnExit: [{Name: '?getString[SelectKey]', Type: Remove}]}
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        BLOCKED:
+          Conditions: [{ConditionType: GroupExists, Item: '?getString[SelectKey]', Group: BlockedStarterPack}]
+          StringActions: {OnEnter: [{Name: '?getString[SelectKey]', Value: '?getItemAttribute[?getString[SelectKey],BlockedStarterPack,Text]'}]}
+          CounterActions: {OnEnter: [{Name: '?getString[SelectKey]', Namespace: UPD_STRTRPCK, Type: Assign, Value: 2}]}
+        NOT:
+          CounterActions: {OnEnter: [{Name: '?getString[SelectKey]', Namespace: UPD_STRTRPCK, Type: Assign, Value: 1}]}
+
+NewItems_STARTERPACKS_CLEANER:
+  BasicProtocolOpened:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: BasicProtocol, Namespace: UPD_STRTRPCK, Equal: 1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "BasicProtocol", ST_VisualItemName: "^StarterPacks.BasicProtocol.PackName^", ST_ItemType: "StarterPack"}
+  StandardProtocolOpened:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: StandardProtocol, Namespace: UPD_STRTRPCK, Equal: 1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "StandardProtocol", ST_VisualItemName: "^StarterPacks.StandardProtocol.PackName^", ST_ItemType: "StarterPack"}
+  AdvancedProtocolOpened:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: AdvancedProtocol, Namespace: UPD_STRTRPCK, Equal: 1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "AdvancedProtocol", ST_VisualItemName: "^StarterPacks.AdvancedProtocol.PackName^", ST_ItemType: "StarterPack"}
+  ExperimentalProtocolOpened:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: ExperimentalProtocol, Namespace: UPD_STRTRPCK, Equal: 1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "ExperimentalProtocol", ST_VisualItemName: "^StarterPacks.ExperimentalProtocol.PackName^", ST_ItemType: "StarterPack"}
+  StandardProtocolBLOCKED:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: StandardProtocol, Namespace: UPD_STRTRPCK, Equal: 2}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "StandardProtocol", ST_VisualItemName: "^StarterPacks.StandardProtocol.PackName^", ST_ItemType: "StarterPack"}
+      BlockedStarterPack: {Text: "^Quests.EnduranceTest.BlockedStarterPack^"}
+  AdvancedProtocolBLOCKED:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: AdvancedProtocol, Namespace: UPD_STRTRPCK, Equal: 2}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "AdvancedProtocol", ST_VisualItemName: "^StarterPacks.AdvancedProtocol.PackName^", ST_ItemType: "StarterPack"}
+      BlockedStarterPack: {Text: "^Quests.TheContact.BlockedStarterPack^"}
+  ExperimentalProtocolBLOCKED:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: ExperimentalProtocol, Namespace: UPD_STRTRPCK, Equal: 2}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "ExperimentalProtocol", ST_VisualItemName: "^StarterPacks.ExperimentalProtocol.PackName^", ST_ItemType: "StarterPack"}
+      BlockedStarterPack: {Text: "^Quests.Bruteforce.BlockedStarterPack^"}
+  AlphaProtocolBLOCKED:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: ServiceEntrance, Namespace: ST_Quests, Equal: 1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "AlphaProtocol", ST_VisualItemName: "^StarterPacks.AlphaProtocol.PackName^", ST_ItemType: "StarterPack"}
+      BlockedStarterPack: {Text: ""}
+
+CountersUpdater_MR_PROPER:
+  CounterActions:
+    OnEnter:
+    - {Namespace: UPD_STRTRPCK, Type: Clear}
+
+ItemsUpdater_SLOTS_CLEANER:
+  ItemActions:
+    OnExit: 
+    - {Type: RemoveGroup, Name: 'Stunts', Group: ST_VisualData}
+    - {Type: RemoveGroup, Name: 'Legs', Group: ST_VisualData}
+    - {Type: RemoveGroup, Name: 'Torso', Group: ST_VisualData}
+    - {Type: RemoveGroup, Name: 'Head', Group: ST_VisualData}
+    - {Type: RemoveGroup, Name: 'Hands', Group: ST_VisualData}
+    - {Type: RemoveGroup, Name: 'Belt', Group: ST_VisualData}
+
+ItemsUpdater_NOTES_SLOT:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    ST_ItemMainData: {ST_ItemName: "Notes", ST_VisualItemName: "^Gadgets.SlotsVisualNames.Notes^"}
+
+ItemsUpdater_STORYITEMS_SLOT:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    ST_ItemMainData: {ST_ItemName: "StoryItems", ST_VisualItemName: "^Gadgets.SlotsVisualNames.StoryItems^"}
+
+CountersUpdater_MISSIONS:
+  BoxContent:
+    Block:
+      Conditions: [{ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: 0}]
+      CounterActions:
+        OnEnter:
+        - {Name: MissionsBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}
+    Tutor:
+      Conditions: [{ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: 0, Not: 1}]
+      CounterActions:
+        OnEnter:
+        - {Name: MissionsTutor, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+        - {Name: MissionsTutorStars, Namespace: ST_Tutorial, Type: Assign, Value: -1}
+
+CountersUpdater_CARDS_COUNTER:
+  Select: {Type: Balance, Root: Slots}
+  StringActions: {OnEnter: [{Name: IName, Value: '?getString[SelectKey]'}]}
+  BoxContent:
+    GoByCards:
+      Conditions: 
+      - {ConditionType: ValuesEqual, Values: ['?getString[IName]', 'Notes'], Not: '1'}
+      - {ConditionType: ValuesEqual, Values: ['?getString[IName]', 'StoryItems'], Not: '1'}
+      Select: {Type: ItemGroups, Root: '?getString[IName]'}
+      CounterActions: {OnEnter: [{Name: CardsCount, Namespace: ST_Statistics, Type: IncrementBy, Value: 1}]}
+
+CountersUpdater_MUSIC_GEN:
+  CounterActions:
+    OnEnter:
+    - {Name: I_Want_out, Namespace: MusicGen, Type: Assign, Value: 3}
+    - {Name: Bells, Namespace: MusicGen, Type: Assign, Value: 3}
+    - {Name: Running, Namespace: MusicGen, Type: Assign, Value: 3}
+    - {Name: Tesla, Namespace: MusicGen, Type: Assign, Value: 3}
+    - {Name: Hazardous_Mechanisms, Namespace: MusicGen, Type: Assign, Value: 3}
+    - {Name: Feral_Swarm, Namespace: MusicGen, Type: Assign, Value: 3}
+    
+CountersUpdater_CARDS_CHECKER:
+  Select: {Type: Balance, Root: Slots}
+  StringActions: {OnEnter: [{Name: IName, Value: '?getString[SelectKey]'}]}
+  BoxContent:
+    GoByCards:
+      Conditions: 
+      - {ConditionType: ValuesEqual, Values: ['?getString[IName]', 'Notes'], Not: '1'}
+      - {ConditionType: ValuesEqual, Values: ['?getString[IName]', 'StoryItems'], Not: '1'}
+      Select: {Type: ItemGroups, Root: '?getString[IName]'}
+      StringActions: {OnEnter: [{Name: CName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        IsLegalPassive:
+          Conditions: [{ConditionType: BalanceElementExists, Path: [PassiveSpace], Element: '?getString[CName]'}]
+          BoxContent:
+            Count:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?greater[?getItemAttribute[?getString[IName],?getString[CName],Count], 0]', '1']}]
+              CounterActions: {OnEnter: [{Name: '?getString[CName]', Namespace: UPD_CARDS_COUNT, Type: Assign, Value: '?getItemAttribute[?getString[IName],?getString[CName],Count]'}]}
+            Level:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?greater[?getItemAttribute[?getString[IName],?getString[CName],Level], 0]', '1']}]
+              CounterActions: {OnEnter: [{Name: '?getString[CName]', Namespace: UPD_CARDS_LEVEL, Type: Assign, Value: '?getItemAttribute[?getString[IName],?getString[CName],Level]'}]}
+            IsNew:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?greater[?getItemAttribute[?getString[IName],?getString[CName],IsNew], 0]', '1']}]
+              CounterActions: {OnEnter: [{Name: '?getString[CName]', Namespace: UPD_CARDS_ISNEW, Type: Assign, Value: '?getItemAttribute[?getString[IName],?getString[CName],IsNew]'}]}
+            IsLevelUp:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?greater[?getItemAttribute[?getString[IName],?getString[CName],IsLevelUp], 0]', '1']}]
+              CounterActions: {OnEnter: [{Name: '?getString[CName]', Namespace: UPD_CARDS_ISLEVELUP, Type: Assign, Value: '?getItemAttribute[?getString[IName],?getString[CName],IsLevelUp]'}]}
+        IsLegalStunt:
+          Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[IName]', 'Stunts']}]
+          Select: {Type: Balance, Root: 'Stunts,Groups'}
+          BoxContent:
+            IsReallyLegalStunt:
+              Conditions: [{ConditionType: BalanceElementExists, Path: [Stunts,Groups,'?getString[SelectKey]',Stunts], Element: '?getString[CName]'}]
+              NoShuffle: 1
+              BoxContent:
+                Count:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ['?greater[?getItemAttribute[?getString[IName],?getString[CName],Count], 0]', '1']}]
+                  CounterActions: {OnEnter: [{Name: '?getString[CName]', Namespace: UPD_CARDS_COUNT, Type: Assign, Value: '?getItemAttribute[?getString[IName],?getString[CName],Count]'}]}
+                Level:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ['?greater[?getItemAttribute[?getString[IName],?getString[CName],Level], 0]', '1']}]
+                  CounterActions: {OnEnter: [{Name: '?getString[CName]', Namespace: UPD_CARDS_LEVEL, Type: Assign, Value: '?getItemAttribute[?getString[IName],?getString[CName],Level]'}]}
+                IsNew:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ['?greater[?getItemAttribute[?getString[IName],?getString[CName],IsNew], 0]', '1']}]
+                  CounterActions: {OnEnter: [{Name: '?getString[CName]', Namespace: UPD_CARDS_ISNEW, Type: Assign, Value: '?getItemAttribute[?getString[IName],?getString[CName],IsNew]'}]}
+                IsLevelUp:
+                  Conditions: [{ConditionType: ValuesEqual, Values: ['?greater[?getItemAttribute[?getString[IName],?getString[CName],IsLevelUp], 0]', '1']}]
+                  CounterActions: {OnEnter: [{Name: '?getString[CName]', Namespace: UPD_CARDS_ISLEVELUP, Type: Assign, Value: '?getItemAttribute[?getString[IName],?getString[CName],IsLevelUp]'}]}
+                Break: {BreakSelect: 1}
+              
+CountersUpdater_CARDS_CLEANER:
+  Select: {Type: Balance, Root: Slots}
+  StringActions: {OnEnter: [{Name: IName, Value: '?getString[SelectKey]'}]}
+  BoxContent:
+    DeleteSomeShit:
+      Conditions: 
+      - {ConditionType: ValuesEqual, Values: ['?getString[IName]', 'Notes'], Not: '1'}
+      - {ConditionType: ValuesEqual, Values: ['?getString[IName]', 'StoryItems'], Not: '1'}
+      ItemActions: {OnEnter: [{Name: '?getString[IName]', Type: "Remove"}]}
+      
+ItemsUpdater_CARDS_RECREATOR_STUNTS:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent: {ST_ItemMainData: {ST_ItemName: "Stunts", ST_VisualItemName: "^Gadgets.SlotsVisualNames.Stunts^"}}
+  BoxContent:
+    GoByGroups:
+      Select: {Type: Balance, Root: 'Stunts,Groups'}
+      StringActions: {OnEnter: [{Name: GName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        GoByStunt:
+          Select: {Type: Balance, Root: 'Stunts,Groups,?getString[GName],Stunts'}
+          StringActions: {OnEnter: [{Name: SName, Value: '?getString[SelectKey]'}]}
+          BoxContent:
+            StuntExists:
+              Conditions: [{ConditionType: CounterRange, Name: '?getString[SName]', Namespace: UPD_CARDS_COUNT, Min: 1}]
+              GroupContent: 
+                '?getString[SName]': 
+                  Count: '<UPD_CARDS_COUNT.?getString[SName]>'
+                  Level: '<UPD_CARDS_LEVEL.?getString[SName]>'
+                  IsNew: '<UPD_CARDS_ISNEW.?getString[SName]>'
+                  IsLevelUp: '<UPD_CARDS_ISLEVELUP.?getString[SName]>'
+              
+ItemsUpdater_CARDS_RECREATOR_LEGS:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent: {ST_ItemMainData: {ST_ItemName: "Legs", ST_VisualItemName: "^Gadgets.SlotsVisualNames.Legs^"}}
+  BoxContent:
+    GoByPassives:
+      Select: {Type: Balance, Root: 'PassiveSpace'}
+      StringActions: {OnEnter: [{Name: CName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        RightCard:
+          Conditions: 
+          - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CName],Stats,Slot]', 'Legs']}
+          - {ConditionType: CounterRange, Name: '?getString[CName]', Namespace: UPD_CARDS_COUNT, Min: 1}
+          GroupContent: 
+            '?getString[CName]': 
+              Count: '<UPD_CARDS_COUNT.?getString[CName]>'
+              Level: '<UPD_CARDS_LEVEL.?getString[CName]>'
+              IsNew: '<UPD_CARDS_ISNEW.?getString[CName]>'
+              IsLevelUp: '<UPD_CARDS_ISLEVELUP.?getString[CName]>'
+              
+ItemsUpdater_CARDS_RECREATOR_TORSO:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent: {ST_ItemMainData: {ST_ItemName: "Torso", ST_VisualItemName: "^Gadgets.SlotsVisualNames.Torso^"}}
+  BoxContent:
+    GoByPassives:
+      Select: {Type: Balance, Root: 'PassiveSpace'}
+      StringActions: {OnEnter: [{Name: CName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        RightCard:
+          Conditions: 
+          - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CName],Stats,Slot]', 'Torso']}
+          - {ConditionType: CounterRange, Name: '?getString[CName]', Namespace: UPD_CARDS_COUNT, Min: 1}
+          GroupContent: 
+            '?getString[CName]': 
+              Count: '<UPD_CARDS_COUNT.?getString[CName]>'
+              Level: '<UPD_CARDS_LEVEL.?getString[CName]>'
+              IsNew: '<UPD_CARDS_ISNEW.?getString[CName]>'
+              IsLevelUp: '<UPD_CARDS_ISLEVELUP.?getString[CName]>'
+
+ItemsUpdater_CARDS_RECREATOR_HANDS:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent: {ST_ItemMainData: {ST_ItemName: "Hands", ST_VisualItemName: "^Gadgets.SlotsVisualNames.Hands^"}}
+  BoxContent:
+    GoByPassives:
+      Select: {Type: Balance, Root: 'PassiveSpace'}
+      StringActions: {OnEnter: [{Name: CName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        RightCard:
+          Conditions: 
+          - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CName],Stats,Slot]', 'Hands']}
+          - {ConditionType: CounterRange, Name: '?getString[CName]', Namespace: UPD_CARDS_COUNT, Min: 1}
+          GroupContent: 
+            '?getString[CName]': 
+              Count: '<UPD_CARDS_COUNT.?getString[CName]>'
+              Level: '<UPD_CARDS_LEVEL.?getString[CName]>'
+              IsNew: '<UPD_CARDS_ISNEW.?getString[CName]>'
+              IsLevelUp: '<UPD_CARDS_ISLEVELUP.?getString[CName]>'
+              
+ItemsUpdater_CARDS_RECREATOR_HEAD:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent: {ST_ItemMainData: {ST_ItemName: "Head", ST_VisualItemName: "^Gadgets.SlotsVisualNames.Head^"}}
+  BoxContent:
+    GoByPassives:
+      Select: {Type: Balance, Root: 'PassiveSpace'}
+      StringActions: {OnEnter: [{Name: CName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        RightCard:
+          Conditions: 
+          - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CName],Stats,Slot]', 'Head']}
+          - {ConditionType: CounterRange, Name: '?getString[CName]', Namespace: UPD_CARDS_COUNT, Min: 1}
+          GroupContent: 
+            '?getString[CName]': 
+              Count: '<UPD_CARDS_COUNT.?getString[CName]>'
+              Level: '<UPD_CARDS_LEVEL.?getString[CName]>'
+              IsNew: '<UPD_CARDS_ISNEW.?getString[CName]>'
+              IsLevelUp: '<UPD_CARDS_ISLEVELUP.?getString[CName]>'
+              
+ItemsUpdater_CARDS_RECREATOR_BELT:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent: {ST_ItemMainData: {ST_ItemName: "Belt", ST_VisualItemName: "^Gadgets.SlotsVisualNames.Belt^"}}
+  BoxContent:
+    GoByPassives:
+      Select: {Type: Balance, Root: 'PassiveSpace'}
+      StringActions: {OnEnter: [{Name: CName, Value: '?getString[SelectKey]'}]}
+      BoxContent:
+        RightCard:
+          Conditions: 
+          - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CName],Stats,Slot]', 'Belt']}
+          - {ConditionType: CounterRange, Name: '?getString[CName]', Namespace: UPD_CARDS_COUNT, Min: 1}
+          GroupContent: 
+            '?getString[CName]': 
+              Count: '<UPD_CARDS_COUNT.?getString[CName]>'
+              Level: '<UPD_CARDS_LEVEL.?getString[CName]>'
+              IsNew: '<UPD_CARDS_ISNEW.?getString[CName]>'
+              IsLevelUp: '<UPD_CARDS_ISLEVELUP.?getString[CName]>'
+              
+CountersUpdater_CARDS_RECREATOR_PROPER:
+  CounterActions:
+    OnEnter:
+    - {Namespace: UPD_CARDS_COUNT, Type: Clear}
+    - {Namespace: UPD_CARDS_LEVEL, Type: Clear}
+    - {Namespace: UPD_CARDS_ISNEW, Type: Clear}
+    - {Namespace: UPD_CARDS_ISLEVELUP, Type: Clear}
+    
+CountersUpdater_THIRD_P_QUEST_CRIT_FIX:
+  Conditions: 
+  - {ConditionType: CounterRange, Name: ThirdProtocol, Namespace: ST_Quests, Equal: 1}
+  - {ConditionType: CounterRange, Name: ST_NewsBlock, Namespace: ST_ProgressMarkers, Equal: 1}
+  CounterActions:
+    OnEnter:
+    - {Name: ST_ShowNoQuestProgressDialog, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+    - {Name: AdBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+    - {Name: ST_NewsBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+    - {Name: TutorialInProgress, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+    - {Name: ST_QuestProgressByRun, Namespace: ST_Default, Type: Assign, Value: 0}
+    - {Name: TutorialEndRun, Namespace: ST_Statistics, Type: Assign, Value: "?getCounter[ST_Statistics, ST_run_counter]"}
+    - {Name: Started, Namespace: ThirdProtocol, Type: Assign, Value: 1}
+    - {Namespace: KeysIntro, Type: Clear}
+    
+CountersUpdater_DROP_RANK:
+  CounterActions:
+    OnEnter:
+    - {Name: Rank, Type: Assign, Value: 0}

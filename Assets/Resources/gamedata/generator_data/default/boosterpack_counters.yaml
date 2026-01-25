@@ -1,0 +1,100 @@
+Clear:
+  CounterActions: 
+    OnEnter: 
+    - {Namespace: BoosterpackGenerator, Type: Clear}
+# Забираем максимальный Coolness из стартерпаков игрока 
+SetupCoolness:
+  Select: {Type: 'Items', Root: 'All'}
+  NoShuffle: 1
+  BoxContent:
+    IsStarterPack:
+      Conditions:
+      - {ConditionType: ValuesEqual, Values: ['?isItemType[?getString[SelectKey], StarterPack]', 1]}
+      - {ConditionType: GroupExists, Item: "?getString[SelectKey]", Group: "BlockedStarterPack", Not: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: 'StarterPackCoolness', Namespace: BoosterpackGenerator, Type: Assign, Value: "?max[<BoosterpackGenerator.StarterPackCoolness>, ?getBalance[StarterPacks, ?getString[SelectKey], Coolness]]"}
+ActivateCustomBoosterpacks:
+  StringActions: {OnEnter: [{Name: CustomBoosterpack, Value: ''}]}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    FirstForced:
+      Conditions: [{ConditionType: CounterRange, Name: WeWait_FirstForced_Boosterpack, Equal: 1}]
+      StringActions: {OnEnter: [{Name: CustomBoosterpack, Value: FirstForced}]}
+      CounterActions: 
+        OnEnter: 
+        - {Name: CustomBoosterpack, Namespace: BoosterpackGenerator, Type: Assign, Value: 1}
+        - {Name: WeWait_FirstForced_Boosterpack, Type: Assign, Value: 0}
+        - {Name: WeWait_SecondForced_Boosterpack, Namespace: ST_Default, Type: Assign, Value: 1}
+    SecondForced:
+      Conditions: [{ConditionType: CounterRange, Name: WeWait_SecondForced_Boosterpack, Equal: 1}]
+      StringActions: {OnEnter: [{Name: CustomBoosterpack, Value: SecondForced}]}
+      CounterActions: 
+        OnEnter: 
+        - {Name: CustomBoosterpack, Namespace: BoosterpackGenerator, Type: Assign, Value: 1}
+        - {Name: WeWait_SecondForced_Boosterpack, Type: Assign, Value: 0}
+        - {Name: Magnetizer_AfterBoosterpack, Namespace: SpecificUpgradesGeneration, Type: Assign, Value: 1}
+    FirstAfterKeysIntro:
+      Conditions: [{ConditionType: CounterRange, Name: WeWait_FirstAfterKeysIntro_Boosterpack, Equal: 1}]
+      StringActions: {OnEnter: [{Name: CustomBoosterpack, Value: FirstAfterKeysIntro}]}
+      CounterActions: 
+        OnEnter: 
+        - {Name: ST_ForcedOpenBoosterpacks, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+        - {Name: CustomBoosterpack, Namespace: BoosterpackGenerator, Type: Assign, Value: 1}
+        - {Name: WeWait_FirstAfterKeysIntro_Boosterpack, Type: Assign, Value: 0}
+        - {Name: CouponRerollPassive_AfterBoosterpack, Namespace: SpecificUpgradesGeneration, Type: Assign, Value: '?getBalance[SpecificUpgradesGeneration,CouponRerollPassive_AfterBoosterpack,RunCount]'}
+    LastAfterKeysIntro:
+      Conditions:
+      - {ConditionType: CounterRange, Name: WeWait_LastAfterKeysIntro_Boosterpack, Equal: 1}
+      - {ConditionType: GroupExists, Item: "Boosterpacks", Group: "BaseBoosterpack", Not: 1}
+      StringActions: {OnEnter: [{Name: CustomBoosterpack, Value: LastAfterKeysIntro}]}
+      CounterActions: 
+        OnEnter: 
+        - {Name: CustomBoosterpack, Namespace: BoosterpackGenerator, Type: Assign, Value: 1}
+        - {Name: WeWait_LastAfterKeysIntro_Boosterpack, Type: Assign, Value: 0}
+    None: {}
+Achievements:
+  BoxContent:
+    EffectiveToCollector:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Collector, Max: 49}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Effective, Equal: 50}
+      CounterActions:
+        OnEnter:
+          - {Name: Collector, Namespace: ST_Achievements, Type: IncrementBy, Value: 50}
+    CollectorToSong:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Da_boo_dee_da_boo_da, Max: 199}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Collector, Equal: 200}
+      CounterActions:
+        OnEnter:
+          - {Name: Da_boo_dee_da_boo_da, Namespace: ST_Achievements, Type: IncrementBy, Value: 200}
+    Mid-rangeequipmentToHoarder:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Hoarder, Max: 49}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Mid-range_equipment, Equal: 50}
+      CounterActions:
+        OnEnter:
+          - {Name: Hoarder, Namespace: ST_Achievements, Type: IncrementBy, Value: 50}
+    HoarderToSecure_and_reliable:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Secure_and_reliable, Max: 199}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Hoarder, Equal: 200}
+      CounterActions:
+        OnEnter:
+          - {Name: Secure_and_reliable, Namespace: ST_Achievements, Type: IncrementBy, Value: 200}
+    The_best_kind_of_stuffToScrupulous:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Scrupulous, Max: 49}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: The_best_kind_of_stuff, Equal: 50}
+      CounterActions:
+        OnEnter:
+          - {Name: Scrupulous, Namespace: ST_Achievements, Type: IncrementBy, Value: 50}
+    ScrupulousToState-of-the-art_equipment:
+      Conditions:
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: State-of-the-art_equipment, Max: 199}
+      - {ConditionType: CounterRange, Namespace: ST_Achievements, Name: Scrupulous, Equal: 200}
+      CounterActions:
+        OnEnter:
+          - {Name: State-of-the-art_equipment, Namespace: ST_Achievements, Type: IncrementBy, Value: 200}

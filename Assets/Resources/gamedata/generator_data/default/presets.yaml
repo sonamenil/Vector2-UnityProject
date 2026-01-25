@@ -1,0 +1,539 @@
+Key_blue:
+  Target: {Type: NewItem, Destination: Equip}
+  GroupContent:
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    Key: {Level: Blue}
+    Countable: {Quantity: "{1*(1+?getCounter[PassiveEffects, KeyFactor])}"}
+    ST_ItemMainData: {ST_ItemName: "?concat['%1_Key_%2',Blue,?getUserProperties[ItemNameIterator].Value]", ST_VisualItemName: "", ST_ItemType: ''} 
+    ST_VisualData: {ST_ItemImage: 'run.key1_icon'}
+Key_yellow:
+  Target: {Type: NewItem, Destination: Equip}
+  GroupContent:
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    Key: {Level: Yellow}
+    Countable: {Quantity: "{1*(1+?getCounter[PassiveEffects, KeyFactor])}"}
+    ST_ItemMainData: {ST_ItemName: "?concat['%1_Key_%2', Yellow, ?getUserProperties[ItemNameIterator].Value]", ST_VisualItemName: "", ST_ItemType: ''}
+    ST_VisualData: {ST_ItemImage: 'run.key2_icon'}
+Key_red:
+  Target: {Type: NewItem, Destination: Equip}
+  GroupContent:
+    ST_Expiration: {ST_ExpirationType: Run, ST_ExpirationTime: 1}
+    Key: {Level: Red}
+    Countable: {Quantity: "{1*(1+?getCounter[PassiveEffects, KeyFactor])}"}
+    ST_ItemMainData: {ST_ItemName: "?concat['%1_Key_%2', Red, ?getUserProperties[ItemNameIterator].Value]", ST_VisualItemName: "", ST_ItemType: ''}
+    ST_VisualData: {ST_ItemImage: 'run.key3_icon'}
+Points:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    Countable: {Quantity: 0}
+    Currency: {Type: Points}
+    ST_ItemMainData: {ST_ItemName: "Points", ST_VisualItemName: Points, ST_ItemType: ''}
+Money:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    Countable: {Quantity: 0}
+    Currency: {Type: Money}
+    ST_ItemMainData: {ST_ItemName: "Money", ST_VisualItemName: Money}
+MoneyPremium:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    Countable: {Quantity: 0}
+    Currency: {Type: MoneyPremium}
+    ST_ItemMainData: {ST_ItemName: "MoneyPremium", ST_VisualItemName: MoneyPremium, ST_ItemType: ''}
+    ST_ForceSave: {Value: 1}
+Coupons:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    ST_ItemMainData: {ST_ItemName: "Coupons", ST_VisualItemName: Coupons}
+Timers:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    ST_ItemMainData: {ST_ItemName: "Timers", ST_VisualItemName: Timers}
+    ST_ForceSave: {Value: 1}
+Boosterpacks:
+  Target: {Type: NewItem, Destination: Stash}
+  GroupContent:
+    ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+    ST_ForceSave: {Value: 1}
+ActivatePack:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ItemType:
+          Type: StarterPack
+        ST_Item_1:
+          Preset: StandardProtocolTorso
+        ST_Item_2:
+          Preset: StandardProtocolBoots
+        ST_Item_3:
+          Preset: StandardProtocolHead
+        StartFloor:
+          FloorNumber: "?_getBalance[StarterPacks, StandardProtocol, FloorNumber]"
+          FloorIcon: "?_getBalance[StarterPacks, FloorIcon]"
+        ST_VisualData:
+          ST_ItemImage: "?_getBalance[StarterPacks, StandardProtocol, DefaultItemImage]"
+          ST_Coolness: "?getBalance[StarterPacks, StandardProtocol, Coolness]"
+          ST_Equipment: 1
+          ST_Shop: 0
+        ST_ItemMainData: {ST_ItemName: "StandardProtocol", ST_VisualItemName: "^StarterPacks. StandardProtocol. PackName^", ST_ItemType: ''}
+
+# Для выдачи BaseBooosterpack через платежку и с трассы
+BaseBoosterpack:
+  Target: {Type: NewItem, Destination: Stash}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    AppendValue:
+      Conditions:
+      - {ConditionType: GroupExists, Item: "Boosterpacks", Group: "BaseBoosterpack"}
+      GroupContent:
+        BaseBoosterpack: {Quantity: "{?getItemAttribute[Boosterpacks, BaseBoosterpack, Quantity] + 1}"}
+        ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+    CreateItem:
+      GroupContent:
+        BaseBoosterpack: {Quantity: "1"}
+        ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}   
+# дебажные читопресеты
+dnone:   
+  CounterActions: {OnEnter: [{Namespace: Debug, Type: Clear}]}
+dstunts: 
+  CounterActions: {OnEnter: [{Name: AllStunts,       Namespace: Debug, Type: Assign, Value: 1}]}
+dtimer:  
+  CounterActions: {OnEnter: [{Name: NoTimerDeath,    Namespace: Debug, Type: Assign, Value: 1}]}
+dtraps:  
+  CounterActions: {OnEnter: [{Name: ImmunityToTraps, Namespace: Debug, Type: Assign, Value: 1}]}
+dswarm:  
+  CounterActions: {OnEnter: [{Name: ImmunityToSwarm, Namespace: Debug, Type: Assign, Value: 1}]}
+dhack:   
+  CounterActions: {OnEnter: [{Name: HackedDoors,     Namespace: Debug, Type: Assign, Value: 1}]}
+ddark:   
+  CounterActions: {OnEnter: [{Name: NoDark,          Namespace: Debug, Type: Assign, Value: 1}]}
+demp:    
+  CounterActions: {OnEnter: [{Name: EMP,             Namespace: Debug, Type: Assign, Value: 1}]}
+dtp:     
+  CounterActions: {OnEnter: [{Name: TP,              Namespace: Debug, Type: Assign, Value: 1}]}
+skipSC:  
+  CounterActions: {OnEnter: [{Name: Progress, Namespace: SecureConnection, Type: Assign, Value: "{?getBalance[Quests,SecureConnection,ButtonsCount] - 1}"}]}
+skipTH:  
+  CounterActions: {OnEnter: [{Name: ObtainedItemsCountTreasureHuntQuest, Namespace: ST_Statistics, Type: Assign, Value: "{?getBalance[Quests,TreasureHunt,ObtainCardsCount] - 1}"}]}
+skipRC:  
+  CounterActions: {OnEnter: [{Name: ObtainedItemsCountRaresCollectorQuest, Namespace: ST_Statistics, Type: Assign, Value: "{?getBalance[Quests,RaresCollector,ObtainCardsCount] - 1}"}]}
+skipBF:
+  CounterActions: 
+    OnEnter: 
+      - {Name: Progress8Floor, Namespace: ST_Statistics, Type: Assign, Value: "{?getBalance[Quests,Bruteforce,LocksCountOnFloor] - 1}"}
+      - {Name: Progress10Floor, Namespace: ST_Statistics, Type: Assign, Value: "?getBalance[Quests,Bruteforce,LocksCountOnFloor]"}
+      - {Name: Progress12Floor, Namespace: ST_Statistics, Type: Assign, Value: "?getBalance[Quests,Bruteforce,LocksCountOnFloor]"}
+      - {Name: AlmostDone, Namespace: Bruteforce, Type: Assign, Value: "1"}
+skipMO:
+  CounterActions: 
+    OnEnter: 
+      - {Name: MemoryUnitsCount, Namespace: MaintenanceOperations, Type: Assign, Value: "{?getBalance[Quests,MaintenanceOperations,MemoryUnits] - 1}"}
+skipMI:
+  CounterActions: 
+    OnEnter:
+      - {Name: InstallProgress, Namespace: MemoryInstall, Type: Assign, Value: 5}
+skipSE:
+  CounterActions: 
+    OnEnter: 
+      - {Name: ServerPassed, Namespace: ServerError, Type: Assign, Value: 1}
+skipSE_a:
+  CounterActions: 
+    OnEnter: 
+      - {Name: TriesCountOnMaxFloor, Namespace: ServerError, Type: Assign, Value: 2}
+skipFK:
+  CounterActions: 
+    OnEnter:
+      - {Name: KeysCollected, Namespace: FileKeys, Type: Assign, Value: 3}
+skipReactor:
+  CounterActions: 
+    OnEnter: 
+      - {Name: Success, Namespace: Reactor, Type: Assign, Value: 1}
+skipPN:
+  CounterActions: 
+    OnEnter:
+      - {Name: NodesActivated, Namespace: PowerNodes, Type: Assign, Value: 3}
+skipFF:
+  CounterActions: 
+    OnEnter:
+      - {Name: Found, Namespace: FindFuze, Type: Assign, Value: 1}
+skipIF:
+  CounterActions: 
+    OnEnter:
+      - {Name: Inserted, Namespace: InsertFuze, Type: Assign, Value: 1}
+skipRS:
+  CounterActions: 
+    OnEnter:
+      - {Name: DevicesCount, Namespace: ReadjustScanner, Type: Assign, Value: "?getBalance[Quests,ReadjustScanner,DevicesCount]"}
+skipSP:
+  CounterActions: 
+    OnEnter:
+      - {Name: Scanned, Namespace: ScannerProcedures, Type: Assign, Value: 1}
+skipFC:
+  CounterActions: 
+    OnEnter:
+      - {Name: CapsulesCount, Namespace: FindCapsules, Type: Assign, Value: "?getBalance[Quests,FindCapsules,CapsulesCount]"}
+godmode:
+  CounterActions:
+    OnEnter:
+      - {Name: HackedDoors, Namespace: Debug, Type: Assign, Value: 1}
+      - {Name: AllStunts, Namespace: Debug, Type: Assign, Value: 1}
+      - {Name: NoTimerDeath, Namespace: Debug, Type: Assign, Value: 1}
+      - {Name: ImmunityToTraps, Namespace: Debug, Type: Assign, Value: 1}
+      - {Name: EMP, Namespace: Debug, Type: Assign, Value: 1}
+      - {Name: TP, Namespace: Debug, Type: Assign, Value: 1}
+      - {Name: Missions, Namespace: Debug, Type: Assign, Value: 1}
+      - {Name: NoDark, Namespace: Debug, Type: Assign, Value: 1}
+      - {Name: SwarmForbidden, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+# dcard используется для выдачи мемориюнитов и заметок с триггера
+dcard:
+  Target: {Type: NewItem, Destination: Stash}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    Append:
+      Conditions: [{ConditionType: GroupExists, Item: "?getCardInfo[?getString[Arg0],Stats,Slot]", Group: "?getString[Arg0]"}]
+      GroupContent:
+        ST_ItemMainData:
+          ST_ItemType: ''
+          ST_ItemName: "?getCardInfo[?getString[Arg0],Stats,Slot]"
+          ST_VisualItemName: ''
+        "?getString[Arg0]":
+          Count: '{?getItemAttribute[?getCardInfo[?getString[Arg0],Stats,Slot],?getString[Arg0],Count] + 1}'
+    Create:
+      GroupContent:
+        ST_ItemMainData:
+          ST_ItemType: ''
+          ST_ItemName: "?getCardInfo[?getString[Arg0],Stats,Slot]"
+          ST_VisualItemName: "^Gadgets.SlotsVisualNames.?getCardInfo[?getString[Arg0],Stats,Slot]^"
+        "?getString[Arg0]": {IsNew: 1, Count: 1}
+dslot:
+  Target: '?getString[Arg0]'
+  Select: {Type: 'Cards'}
+  StringActions: {OnEnter: [{Name: CardName, Value: '?getString[SelectKey]'}]}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    Cardification:
+      Conditions: 
+      - {ConditionType: ValuesEqual, Values: ['?getString[CardName]', ''], Not: 1}
+      - {ConditionType: ValuesEqual, Values: ['?getString[Arg0]', '?getCardInfo[?getString[CardName],Stats,Slot]']}
+      - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CardName],Balance,SetupMin]', '99'], Not: 1}
+      GroupContent: {'?getString[CardName]': {IsNew: 0, Level: '?getBalance[CardLevels,MaxLevel]', Count: 100}}
+    End: {}
+dcoupon:
+  Target: {Type: NewItem, Destination: Stash}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    AppendValue:
+      Conditions:
+      - {ConditionType: GroupExists, Item: "Coupons", Group: "?getString[Arg0]"}
+      GroupContent:
+        "?getString[Arg0]": {Quantity: "{?getItemAttribute[Coupons, ?getString[Arg0], Quantity] + 1}"}
+        ST_ItemMainData: {ST_ItemName: "Coupons", ST_VisualItemName: Coupons}
+    CreateItem:
+      GroupContent:
+        "?getString[Arg0]": {Quantity: "1"}
+        ST_ItemMainData: {ST_ItemName: "Coupons", ST_VisualItemName: Coupons}
+m_done:
+  CounterActions: {OnEnter: [{Namespace: Debug, Name: Missions, Type: Assign, Value: 1}]}
+m1_done:
+  CounterActions: {OnEnter: [{Namespace: Debug, Name: Mission_1, Type: Assign, Value: 1}]}
+m2_done:
+  CounterActions: {OnEnter: [{Namespace: Debug, Name: Mission_2, Type: Assign, Value: 1}]}
+m3_done:
+  CounterActions: {OnEnter: [{Namespace: Debug, Name: Mission_3, Type: Assign, Value: 1}]}
+stars:
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    DefaultAmount:
+      Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[Arg0]', 0]}]
+      CounterActions: {OnEnter: [{Namespace: StarRewards, Name: CurrentStars, Type: Assign, Value: 100000}]}
+    SpecificAmount:
+      CounterActions: {OnEnter: [{Namespace: StarRewards, Name: CurrentStars, Type: Assign, Value: '?getString[Arg0]'}]}
+buffs_clear:
+  CounterActions: {OnEnter: [{Namespace: StarBuffs, Type: Clear}]}
+help:
+  NoShuffle: 1
+  BoxContent:
+    dstunts:
+      Log: 'dstunts -- unlock stunts.'
+    dtraps:
+      Log: 'dtraps -- grants immunity to traps.'
+    dtimer:
+      Log: 'dtimer -- no death in because of timer anymore.'
+    dhack:
+      Log: 'dhack -- ability to hack all locks.'
+    dcard:
+      Log: 'dcard <name> -- get speciefic card by name.'
+    dcoupon:
+      Log: 'dcoupon <name> -- get speciefic coupon by name.'
+    godmode:
+      Log: 'godmode -- antitrapss, allstunts, hack all door, emp, teleports.'
+    dnone:
+      Log: 'dnone -- cancel all cheats.'
+    activatepack:
+      Log: 'activatepack -- superStarterPack.'
+    key_blue:
+      Log: 'key_blue -- blue key.'
+    key_red:
+      Log: 'key_red -- red key.'
+    key_yellow:
+      Log: 'key_yellow -- yellow key.'
+    skipbf:
+      Log: 'SkipBF -- only one lock for completing quest BruteForce'
+    skipsc:
+      Log: 'SkipSC -- only one terminal for completing quest SecureConnection'
+    skiptp:
+      Log: 'SkipTP -- only one card for completing quest ThirdProtocol'
+    skiprc:
+      Log: 'SkipRC -- only one card for completing quest RaresCollector'
+    dslot:
+      Log: 'dslot SLOT -- give all cards for slot SLOT'
+    demp:
+      Log: 'demp -- unlock EMP'
+    dtp:
+      Log: 'dtp -- unlock Teleports'
+# end of дебажные читопресеты
+CheckPromoStart:
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    PaidUser:  # вместо первого промо включаем игроку второе промо раньше
+      Conditions: 
+      - {ConditionType: ValuesEqual, Values: ['?isPaid[]', 1]}
+      - {ConditionType: CounterRange, Namespace: ST_Quests, Name: StandardProtocolQuest, Equal: -1} 
+      CounterActions:
+        OnEnter:
+          - {Name: RunCountAfterTutor, Namespace: ST_Statistics, Type: Assign, Value: 0}
+          - {Name: PaymentPromo, Namespace: ST_Events, Type: Assign, Value: 0}
+          - {Name: Promo2CanRun, Namespace: ST_Events, Type: Assign, Value: 1}
+    Promo:
+      Conditions:
+        - {ConditionType: CounterRange, Namespace: ST_Statistics, Name: RunCountAfterTutor, Min: "?getBalance[Events, PaymentPromo, RequiredRunCount]"}
+      CounterActions:
+        OnEnter:
+          - {Name: RunCountAfterTutor, Namespace: ST_Statistics, Type: Assign, Value: 0}
+          - {Name: PaymentPromo, Namespace: ST_Events, Type: Assign, Value: 1}
+          - {Name: Promo1, Namespace: UnlockProduct, Type: Assign, Value: 1}
+      TimerActions:
+        OnEnter:
+          - {Name: PaymentPromoTimer, Type: Set, Value: "?getBalance[Events, PaymentPromo, EventDuration]", Preset: PromoExpired}
+    No: {}
+PromoExpired:
+  NoShuffle: 1
+  BoxContent:
+    Always:
+      CounterActions:
+        OnEnter:
+          - {Name: PaymentPromo, Namespace: ST_Events, Type: Assign, Value: 0}
+          - {Name: Promo1, Namespace: UnlockProduct, Type: Assign, Value: 0}
+    SetPromo2RunCounter:
+      Conditions:
+        - {ConditionType: ValuesEqual, Values: ['?getBalance[Events, PaymentPromo2, Enable]', '1']}
+      CounterActions:
+        OnEnter:
+          - {Name: Promo2CanRun, Namespace: ST_Events, Type: Assign, Value: 1}
+PromoGet:
+  CounterActions:
+    OnEnter:
+      - {Name: PaymentPromo, Namespace: ST_Events, Type: Assign, Value: 0}
+      - {Name: PromoActiveEffect, Namespace: ST_Events, Type: Assign, Value: 1}
+      - {Name: ExtraEnergy, Namespace: Bonuses, Type: Assign, Value: 2}
+  TimerActions:
+    OnEnter:
+      - {Name: PaymentPromoTimer, Type: Stop}
+      - {Name: PromoActiveEffectTimer, Type: Set, Value: "?getBalance[Events, PaymentPromo, EffectDuration]", Preset: StopPromoActiveEffect}
+StopPromoActiveEffect:
+  CounterActions:
+    OnEnter:
+      - {Name: PromoActiveEffect, Namespace: ST_Events, Type: Assign, Value: 0}
+      - {Name: ExtraEnergy, Namespace: Bonuses, Type: Assign, Value: 0}
+Promo2Run:
+  Conditions:
+    - {ConditionType: CounterRange, Namespace: ST_Events, Name: Promo2CanRun, Equal: 1}
+  CounterActions:
+    OnEnter:
+      - {Name: PaymentPromo2, Namespace: ST_Events, Type: Assign, Value: 1}
+      - {Name: Promo2, Namespace: UnlockProduct, Type: Assign, Value: 1}
+      - {Name: Promo2CanRun, Namespace: ST_Events, Type: Assign, Value: 0}
+  TimerActions:
+    OnEnter:
+      - {Name: PaymentPromo2Timer, Type: Set, Value: "?getBalance[Events, PaymentPromo2, EventDuration]", Preset: Promo2Expired}
+Promo2Get:
+  TimerActions:
+    OnEnter:
+      - {Name: PaymentPromo2Timer, Type: Stop}
+Promo2Expired:
+  CounterActions:
+    OnEnter:
+      - {Name: PaymentPromo2, Namespace: ST_Events, Type: Assign, Value: 0}
+      - {Name: Promo2, Namespace: UnlockProduct, Type: Assign, Value: 0}
+# CreateCard используется в терминале
+CreateCard:
+  Target: NewItem
+  CounterActions: {OnEnter: [{Name: CardsCount, Namespace: ST_Statistics, Type: IncrementBy, Value: 1}]}
+  GroupContent:
+    ST_ItemMainData: {ST_ItemType: '', ST_ItemName: '?getCardInfo[?getString[Arg0],Stats,Slot]', ST_VisualItemName: ''}
+    '?getString[Arg0]': {IsNew: 1, Count: 1}
+
+# CreateUpgrade для реролла в сапплае
+CreateUpgrade:
+  Target: {Type: NewItem}
+  CounterActions: {OnEnter: [{Namespace: UpgradesGenerator, Name: LocalIteration, Type: Assign, Value: 0}]}
+  StringActions: {OnEnter: [{Name: OldCard, Value: '?getString[CardName]'}]}
+  NoShuffle: 1
+  BoxContent:
+    Counters:
+      CounterActions: 
+        OnEnter: 
+        - {Namespace: UpgradeReroller, Name: '?getString[OldCard]', Type: Assign, Value: 1}
+        - {Namespace: UpgradesGenerator, Name: '?getString[OldCard]', Type: Assign, Value: 0}
+        - Namespace: GeneratedEffects
+          Name: '?getCardInfo[?getString[OldCard],Stats,EffectID]'
+          Type: Assign
+          Value: '?switch[?getCardInfo[?getString[CardName],Stats,Rarity], <GeneratedEffects.?getCardInfo[?getString[OldCard],Stats,EffectID]>: 0, <GeneratedEffects.?getCardInfo[?getString[OldCard],Stats,EffectID]>]'
+    Loop:
+      ItemsCount: '2'
+      CounterActions: {OnEnter: [{Namespace: UpgradesGenerator, Name: LocalIteration, Type: IncrementBy, Value: 1}]}
+      StringActions: {OnEnter: [{Name: CardName, Value: ''}]}
+      NoShuffle: 1
+      BoxContent:
+        Select: 
+          Select: 
+            Type: Balance
+            Root: 'PassiveSpace'
+            Random: 1
+            Weight: "{?getCardInfo[?getString[SelectKey],Balance,WeightForUse]*(1+?getCounter[OverweightedUpgrades,?getString[SelectKey]]*?getBalance[Cards,BoostedWeightMultiplier])*(1+?getCounter[UsefulCards,?getCardInfo[?getString[SelectKey],Stats,EffectID]]*?getBalance[Missions,AddWeightForUsefulCards])}"
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            RerollTutorFirstTry:
+              Conditions: [{ConditionType: CounterRange, Namespace: 'ST_Tutorial', Name: 'ST_RerollTutorial', Equal: 3}]
+              StringActions: {OnEnter: [{Name: CardName, Value: 'BonusTokensFromTraps_1_Torso'}]}
+              BreakSelect: 1
+            RerollTutorSecondTry:
+              Conditions: [{ConditionType: CounterRange, Namespace: 'ST_Tutorial', Name: 'ST_RerollTutorial', Equal: 4}]
+              StringActions: {OnEnter: [{Name: CardName, Value: 'StuntMultiReward_2_Legs'}]}
+              BreakSelect: 1
+            UpgradeRerolledEarly:
+              Conditions: [{ConditionType: CounterRange, Namespace: UpgradeReroller, Name: '?getString[SelectKey]', Min: 1}]
+            UpgradeGeneratedAlready:
+              Conditions: [{ConditionType: CounterRange, Namespace: UpgradesGenerator, Name: '?getString[SelectKey]', Min: 1}]
+            WrongSlot:
+              Conditions: [{ConditionType: GroupExists, Item: "?concat['Gadget%1', ?_getCardInfo[?getString[SelectKey],Stats,Slot]]", Not: 1}]
+            UpgradeInsertedAlready:
+              Conditions: [{ConditionType: CounterRange, Namespace: InsertedCards, Name: '?getString[SelectKey]', Min: 1}]
+            NotOwned:
+              Conditions: [{ConditionType: GroupExists, Item: '?getCardInfo[?getString[SelectKey],Stats,Slot]', Group: '?getString[SelectKey]', Not: 1}]
+            BadCoolness: # RANK, NOT SETUPMIN?
+              Conditions: [{ConditionType: CounterRange, Namespace: ST_Default, Name: StarterPackCoolness, Min: '?getCardInfo[?getString[SelectKey],Balance,SetupMin]', Not: 1}]
+            GoodUpgrade:
+              #Log: '?getString[SelectKey]'
+              StringActions: {OnEnter: [{Name: CardName, Value: '?getString[SelectKey]'}]}
+              BreakSelect: 1
+        Implement:
+          GroupContent:
+            ST_ItemMainData: {ST_ItemName: "Upgrade", ST_VisualItemName: '', ST_ItemType: 'Supply'}
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            Empty:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[CardName]', '']}]
+              CounterActions: {OnEnter: [{Namespace: UpgradeReroller, Type: Clear}]}
+            JustCheck: # проверяем, можем ли мы сгенерить следующую карту
+              Conditions: [{ConditionType: CounterRange, Namespace: UpgradesGenerator, Name: LocalIteration, Equal: '2'}]
+            Good:
+              CounterActions: 
+                OnEnter: 
+                - {Namespace: UpgradesGenerator, Name: '?getString[CardName]', Type: Assign, Value: 1}
+                - Namespace: GeneratedEffects
+                  Name: '?getCardInfo[?getString[CardName],Stats,EffectID]'
+                  Type: Assign
+                  Value: '?max[<GeneratedEffects.?getCardInfo[?getString[CardName],Stats,EffectID]>, ?getCardInfo[?getString[CardName],Stats,Rarity]]'
+              GroupContent: {'?getString[CardName]': {}}
+
+
+# dAllCards:
+  # Target: {Type: NewItem, Destination: Stash}
+  # ItemsCount: 6
+  # Select: {Type: Balance, Root: 'Slots'}
+  # StringActions: {OnEnter: [{Name: SlotName, Value: '?getString[SelectKey]'}]}
+  # GroupContent: {ST_ItemMainData: {ST_ItemType: '', ST_ItemName: '?getString[SlotName]', ST_VisualItemName: ''}}
+  # Set: 1
+  # BoxContent:
+    # Cardizzzzzator:
+      # Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[SlotName]', ''], Not: 1}]
+      # Select: {Type: 'Cards'}
+      # StringActions: {OnEnter: [{Name: CardName, Value: '?getString[SelectKey]'}]}
+      # Set: 1
+      # NoShuffle: 1
+      # BoxContent:
+        # Cardification:
+          # Conditions: 
+          # - {ConditionType: ValuesEqual, Values: ['?getString[CardName]', ''], Not: 1}
+          # - {ConditionType: ValuesEqual, Values: ['?getString[SlotName]', '?getCardInfo[?getString[CardName],Stats,Slot]']}
+          # - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CardName],Balance,SetupMin]', '99'], Not: 1}
+          # GroupContent: {'?getString[CardName]': {IsNew: 0, Level: '?getBalance[CardLevels,MaxLevel]', Count: 100}}
+        # End: {}
+    # End: {Weight: 0}
+Coupon_CardsBoost:
+  Target: Coupons
+  GroupContent: {CardsBoost: {Quantity: "{?getItemAttribute[Coupons,CardsBoost,Quantity] + 1}"}}
+    
+Coupon_Saveme:
+  Target: Coupons
+  GroupContent: {Saveme: {Quantity: "{?getItemAttribute[Coupons,Saveme,Quantity] + 1}"}}
+    
+Coupon_EnergyRecharge:
+  Target: Coupons
+  GroupContent: {EnergyRecharge: {Quantity: "{?getItemAttribute[Coupons,EnergyRecharge,Quantity] + 1}"}}
+    
+Coupon_Reroll:
+  Target: Coupons
+  GroupContent: {Reroll: {Quantity: "{?getItemAttribute[Coupons,Reroll,Quantity] + 1}"}}
+  
+CreateNote:
+  Target: {Type: NewItem, Destination: Stash}
+  CounterActions: {OnEnter: [{Name: NoteGenerated, Namespace: Temp, Type: Assign, Value: 0}]}
+  NoShuffle: 1
+  BoxContent:
+    SpecialNote:
+      Conditions: [{ConditionType: CounterRange, Name: SpecialNote, Min: 1}]
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        AlreadyOwned:
+          Conditions: [{ConditionType: GroupExists, Item: "Notes", Group: "?getBalance[SpecialNotes,<SpecialNote>]"}]
+          CounterActions: {OnEnter: [{Name: SpecialNote, Type: Assign, Value: 0}]}
+        Good:
+          StringActions: {OnEnter: [{Name: NoteName, Value: "?getBalance[SpecialNotes,<SpecialNote>]"}]}
+          CounterActions: 
+            OnExit: 
+            - {Name: NoteGenerated, Namespace: Temp, Type: Assign, Value: 1}
+            - {Name: SpecialNote, Type: Assign, Value: 0}
+    Choose:
+      Conditions: [{ConditionType: CounterRange, Name: NoteGenerated, Namespace: Temp, Max: 0}]
+      Select: {Type: Strings, Root: Notes, Random: 1}
+      StringActions: {OnEnter: [{Name: NoteName, Value: '?getString[SelectKey]'}]}
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        AlreadyOwned:
+          Conditions: [{ConditionType: GroupExists, Item: "Notes", Group: "?getString[NoteName]"}]
+        Good:
+          CounterActions: {OnEnter: [{Name: NoteGenerated, Namespace: Temp, Type: Assign, Value: 1}]}
+          BreakSelect: 1
+    GiveHimNote:
+      #Log: '?getString[NoteName]'
+      Conditions: [{ConditionType: ValuesEqual, Values: ['?getString[NoteName]', ''], Not: 1}]
+      GroupContent:
+        ST_ItemMainData: {ST_ItemType: '', ST_ItemName: 'Notes', ST_VisualItemName: ''}
+        '?getString[NoteName]': {IsNew: 1}
+  
+  

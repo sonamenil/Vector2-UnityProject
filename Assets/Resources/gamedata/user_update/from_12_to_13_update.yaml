@@ -1,0 +1,16 @@
+UserVersion: 13
+CountersUpdater_ChengeProduct:
+  NoShuffle: 1
+  BoxContent:
+    Promo1:
+      Conditions: 
+      - {ConditionType: CounterRange, Name: com.nekki.vector2.promo_ios, Namespace: PromoProduct, Equal: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: Promo1, Namespace: UnlockProduct, Type: Assign, Value: 1}
+    Promo2:
+      Conditions: 
+      - {ConditionType: CounterRange, Name: com.nekki.vector2.promo2, Namespace: PromoProduct, Equal: 1}
+      CounterActions:
+        OnEnter:
+        - {Name: Promo2, Namespace: UnlockProduct, Type: Assign, Value: 1}

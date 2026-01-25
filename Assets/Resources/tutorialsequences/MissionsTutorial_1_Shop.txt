@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Steps>
+  <ChangeCounter Counter="MissionsTutor" Namespace="ST_Tutorial" Value="2" />
+  <Dialog Title="^Tutorial.Missions.Dialog1.Title^" Text="^Tutorial.Missions.Dialog1.Message^" ButtonText="^Tutorial.Missions.Dialog1.Button^" DialogType="Portrait" Image="AI_portrait" IgnoringQueue="1" />
+</Steps>

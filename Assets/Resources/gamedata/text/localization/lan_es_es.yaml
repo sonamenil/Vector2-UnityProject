@@ -1,0 +1,3457 @@
+CBT:
+  NoAccess: "Tu cuenta de Google no está en la lista de probadores del juego"
+  NoInternet: "La beta cerrada requiere conexión a Internet.\nComprueba tu configuración de red."
+Chapters:
+  Chapter0:
+    Description: "Diagnóstico"
+    Title: "Prólogo"
+  Chapter1:
+    Description: "El laboratorio"
+    Title: "Capítulo 1"
+  Chapter2:
+    Description: "Área de mantenimiento"
+    Title: "Capítulo 2"
+  Coming: "¡Próximamente!"
+Coupons:
+  CardsBoost:
+    Info: "Utiliza esto para potenciar una mejora en el archivo una vez"
+    UseCoupon: " %1"
+    VisualName: "Potenciación de mejora gratuita"
+  EnergyRecharge:
+    Info: "Usa este artículo prescindible para restaurar la energía completamente."
+    UseCoupon: " %1"
+    VisualName: "Restauración de energía"
+  Reroll:
+    Info: "Utilízalo para reobtener una mejora en los puestos de aprovisionamiento una sola vez"
+    UseCoupon: " %1"
+    VisualName: "Reobtención gratuita"
+  Saveme:
+    Info: "Utilízalo para evitar morir una sola vez"
+    UseCoupon: " %1"
+    VisualName: "Reanimación gratuita"
+  UseCouponBase: "Gratis"
+DialogWindow:
+  Button:
+    ReturnToMainScene: "Reiniciar"
+  Text:
+    PleaseRestart: "Reinicia el juego para que los cambios surtan efecto."
+GUI:
+  Buttons:
+    Archive:
+      Boost: "Potenciar"
+    Back: "Volver"
+    BigLater: "Luego"
+    BigYes: "Sí"
+    BoosterPack:
+      More: "Más"
+      Next: "Siguiente"
+      Open: "Abrir"
+    Buy: "COMPRAR"
+    BuyOst: "BUY OST"
+    BuyUpgradeKits: "Comprar paquetes de mejora"
+    Cancel: "Cancelar"
+    Close: "Cerrar"
+    Collect: "Recoger"
+    Compare: "Comparar"
+    Continue: "Continuar"
+    Details: "Información"
+    DontAskAgain: "Nunca"
+    Download: "Descargar"
+    Equip: "Equipar"
+    Equipment:
+      Charge: "Cargar"
+      FullCharge: "Cargar a tope"
+      Upgrade: "Mejorar"
+    GetFree: "ESCAPA"
+    Improve: "Mejorar"
+    Later: "Más tarde"
+    Next: "Siguiente"
+    'No': "No"
+    Ok: "OK"
+    QuestWindow:
+      QuestLog: "Ver registro de misiones"
+    Reanimate: "Reanimar"
+    Replace: "Reemplazar"
+    Reroll: "Reobtener"
+    Restart: "Reiniciar"
+    RunAnyway: "Más tarde"
+    Select: "Seleccionar"
+    Show: "Mostrar"
+    ShowArchive: "Subir de nivel"
+    ShowBoosterpacks: "Mostrarme"
+    Skip: "Omitir"
+    Store: "Almacenar"
+    Support: "Soporte técnico"
+    View: "Ver"
+    WatchRV: "Ver vídeo"
+    'Yes': "Sí"
+  Labels:
+    Archive:
+      AvailableEffects: "Efectos disponibles"
+      BeltUpgrades: "Mejoras de cinturones"
+      BlueTricks: "Acrobacias comunes"
+      BlueUpgrades: "Mejoras comunes"
+      HandsUpgrades: "Mejoras de guantes"
+      HeadUpgrades: "Mejoras de casco"
+      LegsUpgrades: "Mejoras de botas"
+      MoreToUnlock: "más para desbloquear"
+      Notes: "Notas"
+      RedTricks: "Acrobacias excepcionales"
+      RedUpgrades: "Mejoras excepcionales"
+      SectionTitle: "Archivo"
+      StoryUpgrades: "Artículos de la historia"
+      StuntsUpgrades: "Acrobacias"
+      TorsoUpgrades: "Mejoras de corazas"
+      YellowTricks: "Acrobacias optimizadas"
+      YellowUpgrades: "Mejoras optimizadas"
+    BoosterPack:
+      Section: "Paquetes de mejora"
+    Common:
+      UpgradeKit: "Paquete de mejora"
+      UpgradeKitTwo: " 2 paquetes de mejora"
+    Completed: "Completado"
+    Details:
+      Title: "Información"
+      UpgradeDetails: "Toca una mejora para conocer sus detalles"
+    DialogWindow:
+      Text:
+        Acception: "¿Seguro que quieres utilizar uno de tus potenciadores de Carrera gratis?"
+        AssignmentComplete: "Misión finalizada"
+        BoostQuestion: "Esto sumará un nivel al elemento seleccionado durante 1% minutos. ¿Seguro?"
+        BoosterpackCanOpened: "¡Aún no has abierto todos tus paquetes de mejora!"
+        BundleDownloadRetry: "Ha ocurrido un error al descargar. ¿Quieres volver a intentarlo?"
+        BundleDownloadRetryRequired: "Ha ocurrido un error al descargar. Inténtalo de nuevo."
+        BundleRequest: "¿Quieres descargar actualizaciones (%1)?\n%2"
+        BundleRequestRequired: "Para continuar, es necesario descargar actualizaciones (%1).\n%2"
+        BuyQuestion: "¿Seguro?"
+        CardBoost: "Usar potenciadores en las mejoras aumenta las probabilidades de que estas aparezcan en los puestos de aprovisionamiento en la próxima carrera."
+        CardsNotLeveledUp: "¡Tienes una mejora o una acrobacia lista para subir de nivel!"
+        Days: "días"
+        DoYouLikeGame: "¿Te gusta Vector 2?"
+        HelpImproveGame: "¡Dinos cómo podemos mejorar nuestro juego!"
+        InitialBundleRequest: "¿Quieres descargar todas las actualizaciones ahora?\n%1"
+        InternetCharged: "Atención: puede que recibas cargos por usar Internet"
+        Limit: ""
+        NoChips: "¡No tienes fichas suficientes!"
+        NoMoney: "¡No tienes créditos suficientes!"
+        NoPoints: "¡No tienes puntos suficientes!"
+        NoQuestProgress: "¿No hubo suerte con tu misión actual? ¡Compra paquetes de mejora para encontrar las mejoras más útiles!"
+        NotifyNewBoosterPackOnUpdate: "¡Gracias por seguir con nosotros! Echa un vistazo a nuestros nuevos paquetes de mejora: ¡ya tienes uno gratis!"
+        RateGame: "¡Pues danos 5 estrellas! ¡Gracias!"
+        ReallyQuit: "¿Seguro que quieres salir?"
+        Recharge: "¿Quieres pagar unas fichas por correr en este protocolo?"
+        Recommend: "Recomendaciones"
+        Reset: "¿Seguro que quieres borrar todos tus progresos? ¡Esto no se puede deshacer!"
+        ResourcesValidationFailed: "¡Los datos del juego están dañados! Por favor, vuelve a instalarlo."
+        ResourcesValidationOutdated: "¡Los datos del juego están dañados! Intenta conectarte a Internet y reiniciar el juego."
+        Restart: "Por favor, reinicia la aplicación para aplicar los cambios"
+        Reward: "Recompensa:"
+        SaveMe: "Sujeto n.º %1 en estado crítico. Inicializando procedimiento de reanimación.\n¿Vas a probar otra vez?"
+        WrongBoost: "Al menos una mejora de las que has potenciado no aparecerá en el protocolo seleccionado pero permanecerá potenciada.\n¿Deseas continuar?"
+      Title:
+        Additional: "Uso adicional"
+        Announcement: "Aviso"
+        BundleAvailable: "Actualización disponible"
+        BundleDownload: "Descargando (%1)"
+        BundleIsRequired: "Actualización necesaria"
+        Confirm: "Confirmación"
+        ConnectionFailed: "Fallo de conexión"
+        HelpImproveGame: "Aviso"
+        Information: "Información"
+        NoQuestProgress: "Mensaje"
+        RateGame: "¡Valóranos!"
+        SaveMe: "Segunda oportunidad"
+        Upgrade: "Mejora de límite de uso"
+        Warning: "¡advertencia!"
+    Equipment:
+      Charge: "Cargar"
+      Charged: "Listo"
+      Charging: "Cargando"
+      StartFloor: ""
+      Unlimited: "Ilimitado"
+    FeedbackWindow:
+      Text: "Hemos visto que corres mucho últimamente. ¿Te gusta nuestro juego? ¿Has encontrado algún error? ¿Tienes alguna idea u opinión que aportar? ¡Por favor, haznos llegar tus comentarios para que podamos seguir mejorando este juego!"
+      Title: "Envía un comentario"
+    Generating: "Generando..."
+    Level: "Nivel"
+    Loading: "Cargando..."
+    LockedStarterPack: "Supera más misiones para desbloquear el inicio desde pisos inferiores"
+    NoCard: "Mejora no conseguida"
+    Options:
+      BackToGame: "Volver al juego"
+      Credits: "Créditos"
+      FAQ: "Preguntas frecuentes"
+      GameCenter: "Game Center"
+      GooglePG: "Servicios de Google Play"
+      Graphics: "Uso de gráficos optimizados"
+      Language: "Idioma"
+      LanguageName: "Spanish"
+      ResetProgress: "Restablecer los progresos"
+      RestorePurchases: "Recuperar compras"
+      SelectLanguage: "Toca para seleccionar el idioma"
+      Settings: "Configuración"
+      Subtitles: "Subtítulos"
+    QuestWindow:
+      NewQuest: "¡Hay una nueva misión disponible!"
+      Reward: "Recompensa:"
+      SectionTitle: "Diario"
+      Title: "Aviso"
+    Recieving: "Recibiendo datos..."
+    SaleWindow1:
+      Description: "Oferta especial, disponible durante las próximas 24 horas"
+      Title: "Paquete de inicio"
+    SaleWindow2:
+      Description: "Disponible solo durante los próximos %1 minutos:"
+      Title: "¡Oferta limitada!"
+    Shop:
+      AlreadyInGadget: "¡No se puede utilizar dos veces la misma mejora!"
+      Inventory: "Inventario"
+      NoCardForGadget: "Selecciona una mejora con la que equiparte"
+      NoUpgrades: "No hay mejoras disponibles.\n¡Obtén rangos y desbloquea mejoras para conseguir más!"
+      SelectUpgradeForReplacing: "Selecciona una mejora que reemplazar"
+      Store: "Aprovisionamiento"
+      UpgradeDetails: "Toca una mejora para conocer sus detalles"
+    Tap: "Toca para continuar..."
+    Tips:
+      '1': "Para alcanzar un rango mayor, busca mejoras que te den más puntos."
+      '2': "Algunas características requieren el uso de fichas de datos.\nUtiliza el detector de fichas para encontrarlas o compra un paquete de fichas de datos para ahorrar algo de tiempo."
+      '3': "¡La energía puede recargarse de forma gratuita!\n\nPuedes encontrar recargas de energía gratis en los paquetes de mejora o utilizar un detector de recarga de energía."
+      '4': "¡Evita morir sin gastar ni una ficha!\n\nPuedes encontrar reanimación gratis en los paquetes de mejora o utilizar un detector de reanimación."
+      '5': "¡Recurre a la estrategia para lograr tus objetivos!\n\nReobtén mejoras en los puestos de aprovisionamiento para conseguir lo que necesitas para la carrera perfecta."
+      '6': "¡Algunas mejoras se benefician mucho unas de otras!\n\nTrata de usar mecanismos precisos con evaluación extendida."
+      '7': "¡Algunas mejoras se benefician mucho unas de otras!\nTrata de usar el analizador de datos de investigación con la subida de adrenalina."
+      '8': "Necesitas puntos para alcanzar rangos.\n\nPuedes conseguir puntos realizando acrobacias y terminando niveles.\n¡Consigue más puntos aún usando mejoras!"
+      '9': "Las mejoras excepcionales pueden hacerte imparable.\n\nTermina niveles distantes para acceder a ellas en el terminal. Utiliza los paquetes de mejora para encontrar aún más mejoras excepcionales."
+      '10': "¡Sube de nivel tus mejoras!\n\nInvestiga varias veces cada mejora para aumentar su potencia."
+      '11': "Cada clon comienza con un nuevo equipamiento y tiene que alcanzar rangos desde cero."
+    ToBeContinued:
+      Tap: "Toca en cualquier parte..."
+      Title: "Pérdida de señal"
+    TotalCredits: "Créditos:"
+    TotalPoints: "Puntos:"
+    UnknownProtocol: "Protocolo desconocido"
+Gadgets:
+  BaseModel:
+    Legs:
+      Text: "Permite producir botas de uniforme en los puestos de aprovisionamiento"
+      VisualName: "Botas de uniforme"
+    Torso:
+      Text: "Permite producir chaquetas de uniforme en los puestos de aprovisionamiento"
+      VisualName: "Chaqueta de uniforme"
+  BonusTokens:
+    Text: " +%2 de bonificación por cada crédito"
+  BonusTokensFromTokens:
+    Text: "Cada crédito recogido cuesta %2 más"
+  BonusTokensFromTokens_1:
+    EffectVisualName: "Investigación incremental"
+  BonusTokensFromTokens_1_Belt:
+    Text: " %1"
+  BonusTokensFromTokens_1_Hands:
+    Text: " %1"
+  BonusTokensFromTokens_1_Head:
+    Text: " %1"
+  BonusTokensFromTokens_1_Legs:
+    Text: " %1"
+  BonusTokensFromTokens_1_Torso:
+    Text: " %1"
+  BonusTokensFromTokens_2:
+    EffectVisualName: "Investigación incremental optimizada"
+  BonusTokensFromTokens_2_Belt:
+    Text: " %1"
+  BonusTokensFromTokens_2_Hands:
+    Text: " %1"
+  BonusTokensFromTokens_2_Head:
+    Text: " %1"
+  BonusTokensFromTokens_2_Legs:
+    Text: " %1"
+  BonusTokensFromTokens_2_Torso:
+    Text: " %1"
+  BonusTokensFromTokens_3:
+    EffectVisualName: "Investigación incremental excepcional"
+  BonusTokensFromTokens_3_Belt:
+    Text: " %1"
+  BonusTokensFromTokens_3_Hands:
+    Text: " %1"
+  BonusTokensFromTokens_3_Head:
+    Text: " %1"
+  BonusTokensFromTokens_3_Legs:
+    Text: " %1"
+  BonusTokensFromTokens_3_Torso:
+    Text: " %1"
+  BonusTokensFromTraps:
+    Text: " +%3 de bonificación en los créditos recogidos durante %2 segundos después de gastar una carga"
+  BonusTokensFromTraps_1:
+    EffectVisualName: "Subida de adrenalina"
+  BonusTokensFromTraps_1_Belt:
+    Text: " %1"
+  BonusTokensFromTraps_1_Hands:
+    Text: " %1"
+  BonusTokensFromTraps_1_Head:
+    Text: " %1"
+  BonusTokensFromTraps_1_Legs:
+    Text: " %1"
+  BonusTokensFromTraps_1_Torso:
+    Text: " %1"
+  BonusTokensFromTraps_2:
+    EffectVisualName: "Subida de adrenalina optimizada"
+  BonusTokensFromTraps_2_Belt:
+    Text: " %1"
+  BonusTokensFromTraps_2_Hands:
+    Text: " %1"
+  BonusTokensFromTraps_2_Head:
+    Text: " %1"
+  BonusTokensFromTraps_2_Legs:
+    Text: " %1"
+  BonusTokensFromTraps_2_Torso:
+    Text: " %1"
+  BonusTokensFromTraps_3:
+    EffectVisualName: "Subida de adrenalina excepcional"
+  BonusTokensFromTraps_3_Belt:
+    Text: " %1"
+  BonusTokensFromTraps_3_Hands:
+    Text: " %1"
+  BonusTokensFromTraps_3_Head:
+    Text: " %1"
+  BonusTokensFromTraps_3_Legs:
+    Text: " %1"
+  BonusTokensFromTraps_3_Torso:
+    Text: " %1"
+  BonusTokensFromTricks:
+    Text: " +%2 de bonificación por créditos por cada acrobacia realizada"
+  BonusTokensFromTricks_1:
+    EffectVisualName: "Analizador de movilidad"
+  BonusTokensFromTricks_1_Belt:
+    Text: " %1"
+  BonusTokensFromTricks_1_Hands:
+    Text: " %1"
+  BonusTokensFromTricks_1_Head:
+    Text: " %1"
+  BonusTokensFromTricks_1_Legs:
+    Text: " %1"
+  BonusTokensFromTricks_1_Torso:
+    Text: " %1"
+  BonusTokensFromTricks_2:
+    EffectVisualName: "Analizador de movilidad optimizado"
+  BonusTokensFromTricks_2_Belt:
+    Text: " %1"
+  BonusTokensFromTricks_2_Hands:
+    Text: " %1"
+  BonusTokensFromTricks_2_Head:
+    Text: " %1"
+  BonusTokensFromTricks_2_Legs:
+    Text: " %1"
+  BonusTokensFromTricks_2_Torso:
+    Text: " %1"
+  BonusTokensFromTricks_3:
+    EffectVisualName: "Analizador de movilidad excepcional"
+  BonusTokensFromTricks_3_Belt:
+    Text: " %1"
+  BonusTokensFromTricks_3_Hands:
+    Text: " %1"
+  BonusTokensFromTricks_3_Head:
+    Text: " %1"
+  BonusTokensFromTricks_3_Legs:
+    Text: " %1"
+  BonusTokensFromTricks_3_Torso:
+    Text: " %1"
+  BonusTokens_1:
+    EffectVisualName: "Recolector de investigación"
+  BonusTokens_1_Belt:
+    Text: " %1"
+  BonusTokens_1_Hands:
+    Text: " %1"
+  BonusTokens_1_Head:
+    Text: " %1"
+  BonusTokens_1_Legs:
+    Text: " %1"
+  BonusTokens_1_Torso:
+    Text: " %1"
+  BonusTokens_2:
+    EffectVisualName: "Recolector de investigación optimizado"
+  BonusTokens_2_Belt:
+    Text: " %1"
+  BonusTokens_2_Hands:
+    Text: " %1"
+  BonusTokens_2_Head:
+    Text: " %1"
+  BonusTokens_2_Legs:
+    Text: " %1"
+  BonusTokens_2_Torso:
+    Text: " %1"
+  BonusTokens_3:
+    EffectVisualName: "Recolector de investigación excepcional"
+  BonusTokens_3_Belt:
+    Text: " %1"
+  BonusTokens_3_Hands:
+    Text: " %1"
+  BonusTokens_3_Head:
+    Text: " %1"
+  BonusTokens_3_Legs:
+    Text: " %1"
+  BonusTokens_3_Torso:
+    Text: " %1"
+  CouponCardBoostPassive:
+    Text: " %2% de probabilidades de encontrar un potenciador de mejora gratis en lugar de un crédito de investigación, pero no más de %3 por nivel"
+  CouponCardBoostPassive_1:
+    EffectVisualName: "Detector de potenciador de mejora"
+  CouponCardBoostPassive_1_Belt:
+    Text: " %1"
+  CouponCardBoostPassive_1_Hands:
+    Text: " %1"
+  CouponCardBoostPassive_1_Head:
+    Text: " %1"
+  CouponCardBoostPassive_1_Legs:
+    Text: " %1"
+  CouponCardBoostPassive_1_Torso:
+    Text: " %1"
+  CouponCardBoostPassive_2:
+    EffectVisualName: "Detector de potenciador de mejora optimizado"
+  CouponCardBoostPassive_2_Belt:
+    Text: " %1"
+  CouponCardBoostPassive_2_Hands:
+    Text: " %1"
+  CouponCardBoostPassive_2_Head:
+    Text: " %1"
+  CouponCardBoostPassive_2_Legs:
+    Text: " %1"
+  CouponCardBoostPassive_2_Torso:
+    Text: " %1"
+  CouponCardBoostPassive_3:
+    EffectVisualName: "Detector de potenciador de mejora excepcional"
+  CouponCardBoostPassive_3_Belt:
+    Text: " %1"
+  CouponCardBoostPassive_3_Hands:
+    Text: " %1"
+  CouponCardBoostPassive_3_Head:
+    Text: " %1"
+  CouponCardBoostPassive_3_Legs:
+    Text: " %1"
+  CouponCardBoostPassive_3_Torso:
+    Text: " %1"
+  CouponEnergyRechargePassive:
+    Text: " %2% de probabilidades de encontrar una recarga de energía gratis en lugar de un crédito de investigación, pero no más de %3 por nivel"
+  CouponEnergyRechargePassive_1:
+    EffectVisualName: "Detector de recarga de energía"
+  CouponEnergyRechargePassive_1_Belt:
+    Text: " %1"
+  CouponEnergyRechargePassive_1_Hands:
+    Text: " %1"
+  CouponEnergyRechargePassive_1_Head:
+    Text: " %1"
+  CouponEnergyRechargePassive_1_Legs:
+    Text: " %1"
+  CouponEnergyRechargePassive_1_Torso:
+    Text: " %1"
+  CouponEnergyRechargePassive_2:
+    EffectVisualName: "Detector de recarga de energía optimizado"
+  CouponEnergyRechargePassive_2_Belt:
+    Text: " %1"
+  CouponEnergyRechargePassive_2_Hands:
+    Text: " %1"
+  CouponEnergyRechargePassive_2_Head:
+    Text: " %1"
+  CouponEnergyRechargePassive_2_Legs:
+    Text: " %1"
+  CouponEnergyRechargePassive_2_Torso:
+    Text: " %1"
+  CouponEnergyRechargePassive_3:
+    EffectVisualName: "Detector de recarga de energía excepcional"
+  CouponEnergyRechargePassive_3_Belt:
+    Text: " %1"
+  CouponEnergyRechargePassive_3_Hands:
+    Text: " %1"
+  CouponEnergyRechargePassive_3_Head:
+    Text: " %1"
+  CouponEnergyRechargePassive_3_Legs:
+    Text: " %1"
+  CouponEnergyRechargePassive_3_Torso:
+    Text: " %1"
+  CouponRerollPassive:
+    Text: " %2% de probabilidades de encontrar una reobtención gratis en lugar de un crédito de investigación, pero no más de %3 por nivel"
+  CouponRerollPassive_1:
+    EffectVisualName: "Detector de reobtención"
+  CouponRerollPassive_1_Belt:
+    Text: " %1"
+  CouponRerollPassive_1_Hands:
+    Text: " %1"
+  CouponRerollPassive_1_Head:
+    Text: " %1"
+  CouponRerollPassive_1_Legs:
+    Text: " %1"
+  CouponRerollPassive_1_Torso:
+    Text: " %1"
+  CouponRerollPassive_2:
+    EffectVisualName: "Detector de reobtención optimizado"
+  CouponRerollPassive_2_Belt:
+    Text: " %1"
+  CouponRerollPassive_2_Hands:
+    Text: " %1"
+  CouponRerollPassive_2_Head:
+    Text: " %1"
+  CouponRerollPassive_2_Legs:
+    Text: " %1"
+  CouponRerollPassive_2_Torso:
+    Text: " %1"
+  CouponRerollPassive_3:
+    EffectVisualName: "Detector de reobtención excepcional"
+  CouponRerollPassive_3_Belt:
+    Text: " %1"
+  CouponRerollPassive_3_Hands:
+    Text: " %1"
+  CouponRerollPassive_3_Head:
+    Text: " %1"
+  CouponRerollPassive_3_Legs:
+    Text: " %1"
+  CouponRerollPassive_3_Torso:
+    Text: " %1"
+  CouponSaveMePassive:
+    Text: " %2% de probabilidades de encontrar una reanimación gratis en lugar de un crédito de investigación, pero no más de %3 por nivel"
+  CouponSaveMePassive_1:
+    EffectVisualName: "Detector de reanimación"
+  CouponSaveMePassive_1_Belt:
+    Text: " %1"
+  CouponSaveMePassive_1_Hands:
+    Text: " %1"
+  CouponSaveMePassive_1_Head:
+    Text: " %1"
+  CouponSaveMePassive_1_Legs:
+    Text: " %1"
+  CouponSaveMePassive_1_Torso:
+    Text: " %1"
+  CouponSaveMePassive_2:
+    EffectVisualName: "Detector de reanimación optimizado"
+  CouponSaveMePassive_2_Belt:
+    Text: " %1"
+  CouponSaveMePassive_2_Hands:
+    Text: " %1"
+  CouponSaveMePassive_2_Head:
+    Text: " %1"
+  CouponSaveMePassive_2_Legs:
+    Text: " %1"
+  CouponSaveMePassive_2_Torso:
+    Text: " %1"
+  CouponSaveMePassive_3:
+    EffectVisualName: "Detector de reanimación excepcional"
+  CouponSaveMePassive_3_Belt:
+    Text: " %1"
+  CouponSaveMePassive_3_Hands:
+    Text: " %1"
+  CouponSaveMePassive_3_Head:
+    Text: " %1"
+  CouponSaveMePassive_3_Legs:
+    Text: " %1"
+  CouponSaveMePassive_3_Torso:
+    Text: " %1"
+  DarknessAdditionalCharges:
+    Text: "El recubrimiento especial proporciona %2 cargas adicionales en la oscuridad"
+  DarknessAdditionalCharges_1:
+    EffectVisualName: "Materiales fotosensibles"
+    Text: "El recubrimiento especial proporciona una protección adicional en la oscuridad"
+  DarknessAdditionalCharges_1_Belt:
+    Text: " %1"
+  DarknessAdditionalCharges_1_Hands:
+    Text: " %1"
+  DarknessAdditionalCharges_1_Head:
+    Text: " %1"
+  DarknessAdditionalCharges_1_Legs:
+    Text: " %1"
+  DarknessAdditionalCharges_1_Torso:
+    Text: " %1"
+  DarknessAdditionalCharges_2:
+    EffectVisualName: "Materiales fotosensibles mejorados"
+    Text: "El recubrimiento especial proporciona una protección adicional en la oscuridad"
+  DarknessAdditionalCharges_2_Belt:
+    Text: " %1"
+  DarknessAdditionalCharges_2_Hands:
+    Text: " %1"
+  DarknessAdditionalCharges_2_Head:
+    Text: " %1"
+  DarknessAdditionalCharges_2_Legs:
+    Text: " %1"
+  DarknessAdditionalCharges_2_Torso:
+    Text: " %1"
+  DarknessAdditionalCharges_3:
+    EffectVisualName: "Materiales fotosensibles optimizados"
+    Text: "El recubrimiento especial proporciona una protección adicional en la oscuridad"
+  DarknessAdditionalCharges_3_Belt:
+    Text: " %1"
+  DarknessAdditionalCharges_3_Hands:
+    Text: " %1"
+  DarknessAdditionalCharges_3_Head:
+    Text: " %1"
+  DarknessAdditionalCharges_3_Legs:
+    Text: " %1"
+  DarknessAdditionalCharges_3_Torso:
+    Text: " %1"
+  DarknessRadius_1:
+    EffectVisualName: "Iluminación"
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_1_Belt:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_1_Hands:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_1_Head:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_1_Legs:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_1_Torso:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_2:
+    EffectVisualName: "Iluminación mejorada"
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_2_Belt:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_2_Hands:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_2_Head:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_2_Legs:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_2_Torso:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_3:
+    EffectVisualName: "Iluminación optimizada"
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_3_Belt:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_3_Hands:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_3_Head:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_3_Legs:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessRadius_3_Torso:
+    Text: "Mejora la visibilidad en la oscuridad"
+  DarknessTime_1:
+    EffectVisualName: "Estabilización de tensión"
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_1_Belt:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_1_Hands:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_1_Head:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_1_Legs:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_1_Torso:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_2:
+    EffectVisualName: "Estabilización de tensión mejorada"
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_2_Belt:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_2_Hands:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_2_Head:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_2_Legs:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_2_Torso:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_3:
+    EffectVisualName: "Estabilización de tensión optimizada"
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_3_Belt:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_3_Hands:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_3_Head:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_3_Legs:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  DarknessTime_3_Torso:
+    Text: "Restaura el suministro eléctrico en el complejo"
+  EMP:
+    Text: "Desactiva todas las trampas visibles en ciertas zonas. Necesita %2 segundos para recargarse."
+  EMP_3:
+    EffectVisualName: "Controlador PEM"
+  EMP_3_Legs:
+    Text: " %1"
+  EndFloorChargePoints:
+    Text: " +%2 puntos al finalizar un nivel por carga gastada"
+  EndFloorChargePointsFactor:
+    Text: " +%2 % de puntos por nivel por cada carga gastada"
+  EndFloorChargePointsFactor_1:
+    EffectVisualName: "Piratería de rendimiento"
+  EndFloorChargePointsFactor_1_Belt:
+    Text: " %1"
+  EndFloorChargePointsFactor_1_Hands:
+    Text: " %1"
+  EndFloorChargePointsFactor_1_Head:
+    Text: " %1"
+  EndFloorChargePointsFactor_1_Legs:
+    Text: " %1"
+  EndFloorChargePointsFactor_1_Torso:
+    Text: " %1"
+  EndFloorChargePointsFactor_2:
+    EffectVisualName: "Piratería de rendimiento optimizada"
+  EndFloorChargePointsFactor_2_Belt:
+    Text: " %1"
+  EndFloorChargePointsFactor_2_Hands:
+    Text: " %1"
+  EndFloorChargePointsFactor_2_Head:
+    Text: " %1"
+  EndFloorChargePointsFactor_2_Legs:
+    Text: " %1"
+  EndFloorChargePointsFactor_2_Torso:
+    Text: " %1"
+  EndFloorChargePointsFactor_3:
+    EffectVisualName: "Piratería de rendimiento excepcional"
+  EndFloorChargePointsFactor_3_Belt:
+    Text: " %1"
+  EndFloorChargePointsFactor_3_Hands:
+    Text: " %1"
+  EndFloorChargePointsFactor_3_Head:
+    Text: " %1"
+  EndFloorChargePointsFactor_3_Legs:
+    Text: " %1"
+  EndFloorChargePointsFactor_3_Torso:
+    Text: " %1"
+  EndFloorChargePoints_1:
+    EffectVisualName: "Prototipo de equipamiento"
+  EndFloorChargePoints_1_Belt:
+    Text: " %1"
+  EndFloorChargePoints_1_Hands:
+    Text: " %1"
+  EndFloorChargePoints_1_Head:
+    Text: " %1"
+  EndFloorChargePoints_1_Legs:
+    Text: " %1"
+  EndFloorChargePoints_1_Torso:
+    Text: " %1"
+  EndFloorChargePoints_2:
+    EffectVisualName: "Prototipo de equipamiento optimizado"
+  EndFloorChargePoints_2_Belt:
+    Text: " %1"
+  EndFloorChargePoints_2_Hands:
+    Text: " %1"
+  EndFloorChargePoints_2_Head:
+    Text: " %1"
+  EndFloorChargePoints_2_Legs:
+    Text: " %1"
+  EndFloorChargePoints_2_Torso:
+    Text: " %1"
+  EndFloorChargePoints_3:
+    EffectVisualName: "Prototipo de equipamiento excepcional"
+  EndFloorChargePoints_3_Belt:
+    Text: " %1"
+  EndFloorChargePoints_3_Hands:
+    Text: " %1"
+  EndFloorChargePoints_3_Head:
+    Text: " %1"
+  EndFloorChargePoints_3_Legs:
+    Text: " %1"
+  EndFloorChargePoints_3_Torso:
+    Text: " %1"
+  EndFloorPoints:
+    Text: " +%2 puntos por nivel completado"
+  EndFloorPointsFactor:
+    Text: " +%2 % de puntos por nivel completado"
+  EndFloorPointsFactorFromContextAnim:
+    Text: " +%2% de puntos adicionales por nivel por cada obstáculo superado perfectamente"
+  EndFloorPointsFactorFromContextAnim_1:
+    EffectVisualName: "Evaluación extendida"
+  EndFloorPointsFactorFromContextAnim_1_Belt:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_1_Hands:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_1_Head:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_1_Legs:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_1_Torso:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2:
+    EffectVisualName: "Evaluación extendida optimizada"
+  EndFloorPointsFactorFromContextAnim_2_Belt:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2_Hands:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2_Head:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2_Legs:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_2_Torso:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3:
+    EffectVisualName: "Evaluación extendida excepcional"
+  EndFloorPointsFactorFromContextAnim_3_Belt:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3_Hands:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3_Head:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3_Legs:
+    Text: " %1"
+  EndFloorPointsFactorFromContextAnim_3_Torso:
+    Text: " %1"
+  EndFloorPointsFactor_1:
+    EffectVisualName: "Recompensa por rendimiento"
+  EndFloorPointsFactor_1_Belt:
+    Text: " %1"
+  EndFloorPointsFactor_1_Hands:
+    Text: " %1"
+  EndFloorPointsFactor_1_Head:
+    Text: " %1"
+  EndFloorPointsFactor_1_Legs:
+    Text: " %1"
+  EndFloorPointsFactor_1_Torso:
+    Text: " %1"
+  EndFloorPointsFactor_2:
+    EffectVisualName: "Recompensa por rendimiento optimizada"
+  EndFloorPointsFactor_2_Belt:
+    Text: " %1"
+  EndFloorPointsFactor_2_Hands:
+    Text: " %1"
+  EndFloorPointsFactor_2_Head:
+    Text: " %1"
+  EndFloorPointsFactor_2_Legs:
+    Text: " %1"
+  EndFloorPointsFactor_2_Torso:
+    Text: " %1"
+  EndFloorPointsFactor_3:
+    EffectVisualName: "Recompensa por rendimiento excepcional"
+  EndFloorPointsFactor_3_Belt:
+    Text: " %1"
+  EndFloorPointsFactor_3_Hands:
+    Text: " %1"
+  EndFloorPointsFactor_3_Head:
+    Text: " %1"
+  EndFloorPointsFactor_3_Legs:
+    Text: " %1"
+  EndFloorPointsFactor_3_Torso:
+    Text: " %1"
+  EndFloorPointsFromContextAnim:
+    Text: " +%2 puntos por terminación de nivel por cada obstáculo superado perfectamente"
+  EndFloorPointsFromContextAnim_1:
+    EffectVisualName: "Mecanismos precisos"
+  EndFloorPointsFromContextAnim_1_Belt:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_1_Hands:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_1_Head:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_1_Legs:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_1_Torso:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2:
+    EffectVisualName: "Mecanismos precisos optimizados"
+  EndFloorPointsFromContextAnim_2_Belt:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2_Hands:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2_Head:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2_Legs:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_2_Torso:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3:
+    EffectVisualName: "Mecanismos precisos excepcionales"
+  EndFloorPointsFromContextAnim_3_Belt:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3_Hands:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3_Head:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3_Legs:
+    Text: " %1"
+  EndFloorPointsFromContextAnim_3_Torso:
+    Text: " %1"
+  EndFloorPoints_1:
+    EffectVisualName: "Optimización de rendimiento"
+  EndFloorPoints_1_Belt:
+    Text: " %1"
+  EndFloorPoints_1_Hands:
+    Text: " %1"
+  EndFloorPoints_1_Head:
+    Text: " %1"
+  EndFloorPoints_1_Legs:
+    Text: " %1"
+  EndFloorPoints_1_Torso:
+    Text: " %1"
+  EndFloorPoints_2:
+    EffectVisualName: "Optimización de rendimiento optimizada"
+  EndFloorPoints_2_Belt:
+    Text: " %1"
+  EndFloorPoints_2_Hands:
+    Text: " %1"
+  EndFloorPoints_2_Head:
+    Text: " %1"
+  EndFloorPoints_2_Legs:
+    Text: " %1"
+  EndFloorPoints_2_Torso:
+    Text: " %1"
+  EndFloorPoints_3:
+    EffectVisualName: "Optimización de rendimiento excepcional"
+  EndFloorPoints_3_Belt:
+    Text: " %1"
+  EndFloorPoints_3_Hands:
+    Text: " %1"
+  EndFloorPoints_3_Head:
+    Text: " %1"
+  EndFloorPoints_3_Legs:
+    Text: " %1"
+  EndFloorPoints_3_Torso:
+    Text: " %1"
+  EndFloorRecoverCharges:
+    Text: " %2 % de probabilidades de conectarse a la red eléctrica en los puestos de aprovisionamiento y conseguir cargas adicionales"
+  EndFloorRecoverCharges_1:
+    EffectVisualName: "Drenaje de potencia"
+  EndFloorRecoverCharges_1_Belt:
+    Text: " %1"
+  EndFloorRecoverCharges_1_Hands:
+    Text: " %1"
+  EndFloorRecoverCharges_1_Head:
+    Text: " %1"
+  EndFloorRecoverCharges_1_Legs:
+    Text: " %1"
+  EndFloorRecoverCharges_1_Torso:
+    Text: " %1"
+  EndFloorRecoverCharges_2:
+    EffectVisualName: "Drenaje de potencia optimizado"
+  EndFloorRecoverCharges_2_Belt:
+    Text: " %1"
+  EndFloorRecoverCharges_2_Hands:
+    Text: " %1"
+  EndFloorRecoverCharges_2_Head:
+    Text: " %1"
+  EndFloorRecoverCharges_2_Legs:
+    Text: " %1"
+  EndFloorRecoverCharges_2_Torso:
+    Text: " %1"
+  EndFloorRecoverCharges_3:
+    EffectVisualName: "Drenaje de potencia excepcional"
+  EndFloorRecoverCharges_3_Belt:
+    Text: " %1"
+  EndFloorRecoverCharges_3_Hands:
+    Text: " %1"
+  EndFloorRecoverCharges_3_Head:
+    Text: " %1"
+  EndFloorRecoverCharges_3_Legs:
+    Text: " %1"
+  EndFloorRecoverCharges_3_Torso:
+    Text: " %1"
+  KeyAdditional_1:
+    EffectVisualName: "Detector de claves"
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_1_Belt:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_1_Hands:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_1_Head:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_1_Legs:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_1_Torso:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_2:
+    EffectVisualName: "Detector de claves mejorado"
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_2_Belt:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_2_Hands:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_2_Head:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_2_Legs:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_2_Torso:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_3:
+    EffectVisualName: "Detector de claves optimizado"
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_3_Belt:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_3_Hands:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_3_Head:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_3_Legs:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyAdditional_3_Torso:
+    Text: " %1 % de probabilidades de encontrar una clave adicional en cada nivel"
+  KeyDouble_1:
+    EffectVisualName: "Duplicador de claves"
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_1_Belt:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_1_Hands:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_1_Head:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_1_Legs:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_1_Torso:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_2:
+    EffectVisualName: "Duplicador de claves optimizado"
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_2_Belt:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_2_Hands:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_2_Head:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_2_Legs:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_2_Torso:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_3:
+    EffectVisualName: "Duplicador de claves excepcional"
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_3_Belt:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_3_Hands:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_3_Head:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_3_Legs:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  KeyDouble_3_Torso:
+    Text: " %1 % de probabilidades de conseguir dos claves en vez de una"
+  Lockpick_1:
+    VisualItemName: "Ganzúa"
+  Lockpick_2:
+    VisualItemName: "Ganzúa mejorada"
+  Lockpick_3:
+    VisualItemName: "Ganzúa optimizada"
+  Magnetizer:
+    Text: "Atrae objetos en un radio de %2 metros."
+  Magnetizer_3:
+    EffectVisualName: "Manipulador magnético"
+  Magnetizer_3_Torso:
+    Text: " %1"
+  PassedLevelsBonusTokens:
+    Text: "Aumenta la ganancia de créditos en %2 para el primer nivel superado y en %3 para todos los siguientes"
+  PassedLevelsBonusTokens_1:
+    EffectVisualName: "Acumulador de investigación"
+  PassedLevelsBonusTokens_1_Belt:
+    Text: " %1"
+  PassedLevelsBonusTokens_1_Hands:
+    Text: " %1"
+  PassedLevelsBonusTokens_1_Head:
+    Text: " %1"
+  PassedLevelsBonusTokens_1_Legs:
+    Text: " %1"
+  PassedLevelsBonusTokens_1_Torso:
+    Text: " %1"
+  PassedLevelsBonusTokens_2:
+    EffectVisualName: "Acumulador de investigación optimizado"
+  PassedLevelsBonusTokens_2_Belt:
+    Text: " %1"
+  PassedLevelsBonusTokens_2_Hands:
+    Text: " %1"
+  PassedLevelsBonusTokens_2_Head:
+    Text: " %1"
+  PassedLevelsBonusTokens_2_Legs:
+    Text: " %1"
+  PassedLevelsBonusTokens_2_Torso:
+    Text: " %1"
+  PassedLevelsBonusTokens_3:
+    EffectVisualName: "Acumulador de investigación excepcional"
+  PassedLevelsBonusTokens_3_Belt:
+    Text: " %1"
+  PassedLevelsBonusTokens_3_Hands:
+    Text: " %1"
+  PassedLevelsBonusTokens_3_Head:
+    Text: " %1"
+  PassedLevelsBonusTokens_3_Legs:
+    Text: " %1"
+  PassedLevelsBonusTokens_3_Torso:
+    Text: " %1"
+  RestoreCharges:
+    Text: " %2% de probabilidades de que se cargue el artículo en %3 tras la descarga completa"
+  RestoreCharges_1:
+    EffectVisualName: "Energía de emergencia"
+    Text: " %1% de probabilidades de restaurar el 50 % de las cargas tras gastar la última"
+  RestoreCharges_1_Belt:
+    Text: " %1"
+  RestoreCharges_1_Hands:
+    Text: " %1"
+  RestoreCharges_1_Head:
+    Text: " %1"
+  RestoreCharges_1_Legs:
+    Text: " %1"
+  RestoreCharges_1_Torso:
+    Text: " %1"
+  RestoreCharges_2:
+    EffectVisualName: "Energía de emergencia optimizada"
+    Text: " %1% de probabilidades de restaurar el 50 % de las cargas tras gastar la última"
+  RestoreCharges_2_Belt:
+    Text: " %1"
+  RestoreCharges_2_Hands:
+    Text: " %1"
+  RestoreCharges_2_Head:
+    Text: " %1"
+  RestoreCharges_2_Legs:
+    Text: " %1"
+  RestoreCharges_2_Torso:
+    Text: " %1"
+  RestoreCharges_3:
+    EffectVisualName: "Energía de emergencia excepcional"
+    Text: " %1 % de probabilidades de restaurar el 50 % de las cargas tras gastar la última"
+  RestoreCharges_3_Belt:
+    Text: " %1"
+  RestoreCharges_3_Hands:
+    Text: " %1"
+  RestoreCharges_3_Head:
+    Text: " %1"
+  RestoreCharges_3_Legs:
+    Text: " %1"
+  RestoreCharges_3_Torso:
+    Text: " %1"
+  SlotsVisualNames:
+    Belt: "Cinturón"
+    Hands: "Manos"
+    Head: "Cabeza"
+    Legs: "Piernas"
+    StarterPackBuff: ""
+    Stunts: "Acrobacias"
+    Torso: "Torso"
+  StuntMultiReward:
+    Text: " %2% de probabilidades de conseguir un %3% más de puntos al realizar una acrobacia"
+  StuntMultiReward_1:
+    EffectVisualName: "Ganancia doble"
+  StuntMultiReward_1_Belt:
+    Text: " %1"
+  StuntMultiReward_1_Hands:
+    Text: " %1"
+  StuntMultiReward_1_Head:
+    Text: " %1"
+  StuntMultiReward_1_Legs:
+    Text: " %1"
+  StuntMultiReward_1_Torso:
+    Text: " %1"
+  StuntMultiReward_2:
+    EffectVisualName: "Ganancia doble optimizada"
+  StuntMultiReward_2_Belt:
+    Text: " %1"
+  StuntMultiReward_2_Hands:
+    Text: " %1"
+  StuntMultiReward_2_Head:
+    Text: " %1"
+  StuntMultiReward_2_Legs:
+    Text: " %1"
+  StuntMultiReward_2_Torso:
+    Text: " %1"
+  StuntMultiReward_3:
+    EffectVisualName: "Ganancia doble excepcional"
+  StuntMultiReward_3_Belt:
+    Text: " %1"
+  StuntMultiReward_3_Hands:
+    Text: " %1"
+  StuntMultiReward_3_Head:
+    Text: " %1"
+  StuntMultiReward_3_Legs:
+    Text: " %1"
+  StuntMultiReward_3_Torso:
+    Text: " %1"
+  StuntReward:
+    Text: " %2 puntos de rendimiento adicionales por las acrobacias"
+  StuntReward_1:
+    EffectVisualName: "Bonificación de rendimiento"
+  StuntReward_1_Belt:
+    Text: " %1"
+  StuntReward_1_Hands:
+    Text: " %1"
+  StuntReward_1_Head:
+    Text: " %1"
+  StuntReward_1_Legs:
+    Text: " %1"
+  StuntReward_1_Torso:
+    Text: " %1"
+  StuntReward_2:
+    EffectVisualName: "Bonificación de rendimiento optimizada"
+  StuntReward_2_Belt:
+    Text: " %1"
+  StuntReward_2_Hands:
+    Text: " %1"
+  StuntReward_2_Head:
+    Text: " %1"
+  StuntReward_2_Legs:
+    Text: " %1"
+  StuntReward_2_Torso:
+    Text: " %1"
+  StuntReward_3:
+    EffectVisualName: "Bonificación de rendimiento excepcional"
+  StuntReward_3_Belt:
+    Text: " %1"
+  StuntReward_3_Hands:
+    Text: " %1"
+  StuntReward_3_Head:
+    Text: " %1"
+  StuntReward_3_Legs:
+    Text: " %1"
+  StuntReward_3_Torso:
+    Text: " %1"
+  SuperCredits:
+    Text: " %2% de probabilidades de encontrar %4 fichas de datos en lugar de un crédito de investigación, pero no más de %3 por nivel"
+  SuperCredits_1:
+    EffectVisualName: "Detector de fichas"
+  SuperCredits_1_Belt:
+    Text: " %1"
+  SuperCredits_1_Hands:
+    Text: " %1"
+  SuperCredits_1_Head:
+    Text: " %1"
+  SuperCredits_1_Legs:
+    Text: " %1"
+  SuperCredits_1_Torso:
+    Text: " %1"
+  SuperCredits_2:
+    EffectVisualName: "Detector de fichas optimizado"
+  SuperCredits_2_Belt:
+    Text: " %1"
+  SuperCredits_2_Hands:
+    Text: " %1"
+  SuperCredits_2_Head:
+    Text: " %1"
+  SuperCredits_2_Legs:
+    Text: " %1"
+  SuperCredits_2_Torso:
+    Text: " %1"
+  SuperCredits_3:
+    EffectVisualName: "Detector de fichas excepcional"
+  SuperCredits_3_Belt:
+    Text: " %1"
+  SuperCredits_3_Hands:
+    Text: " %1"
+  SuperCredits_3_Head:
+    Text: " %1"
+  SuperCredits_3_Legs:
+    Text: " %1"
+  SuperCredits_3_Torso:
+    Text: " %1"
+  SwarmBlindnessByDarkness:
+    Text: " %2 % de probabilidades de que el ENJAMBRE se desoriente en la oscuridad"
+  SwarmBlindnessByDarkness_1:
+    EffectVisualName: "Fallos de sensores"
+  SwarmBlindnessByDarkness_1_Torso:
+    Text: " %1"
+  SwarmBlindnessByDarkness_2:
+    EffectVisualName: "Fallos de sensores mejorados"
+  SwarmBlindnessByDarkness_2_Torso:
+    Text: " %1"
+  SwarmBlindnessByDarkness_3:
+    EffectVisualName: "Fallos de sensores optimizados"
+  SwarmBlindnessByDarkness_3_Torso:
+    Text: " %1"
+  SwarmDestroyByRedCoin:
+    Text: "Recoger una moneda roja tiene un %2 % de probabilidades de causar la autodestrucción del ENJAMBRE"
+  SwarmDestroyByRedCoin_1:
+    EffectVisualName: "Sobrecarga de memoria"
+  SwarmDestroyByRedCoin_1_Belt:
+    Text: " %1"
+  SwarmDestroyByRedCoin_1_Hands:
+    Text: " %1"
+  SwarmDestroyByRedCoin_1_Head:
+    Text: " %1"
+  SwarmDestroyByRedCoin_1_Legs:
+    Text: " %1"
+  SwarmDestroyByRedCoin_1_Torso:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2:
+    EffectVisualName: "Sobrecarga de memoria mejorada"
+  SwarmDestroyByRedCoin_2_Belt:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2_Hands:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2_Head:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2_Legs:
+    Text: " %1"
+  SwarmDestroyByRedCoin_2_Torso:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3:
+    EffectVisualName: "Sobrecarga de memoria optimizada"
+  SwarmDestroyByRedCoin_3_Belt:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3_Hands:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3_Head:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3_Legs:
+    Text: " %1"
+  SwarmDestroyByRedCoin_3_Torso:
+    Text: " %1"
+  SwarmPointsFactor:
+    Text: "=+%2 puntos de rendimiento adicionales en las acrobacias si el ENJAMBRE está activo"
+  SwarmPointsFactor_1:
+    EffectVisualName: "Ingeniería inversa"
+  SwarmPointsFactor_1_Belt:
+    Text: " %1"
+  SwarmPointsFactor_1_Hands:
+    Text: " %1"
+  SwarmPointsFactor_1_Head:
+    Text: " %1"
+  SwarmPointsFactor_1_Legs:
+    Text: " %1"
+  SwarmPointsFactor_1_Torso:
+    Text: " %1"
+  SwarmPointsFactor_2:
+    EffectVisualName: "Ingeniería inversa mejorada"
+  SwarmPointsFactor_2_Belt:
+    Text: " %1"
+  SwarmPointsFactor_2_Hands:
+    Text: " %1"
+  SwarmPointsFactor_2_Head:
+    Text: " %1"
+  SwarmPointsFactor_2_Legs:
+    Text: " %1"
+  SwarmPointsFactor_2_Torso:
+    Text: " %1"
+  SwarmPointsFactor_3:
+    EffectVisualName: "Ingeniería inversa optimizada"
+  SwarmPointsFactor_3_Belt:
+    Text: " %1"
+  SwarmPointsFactor_3_Hands:
+    Text: " %1"
+  SwarmPointsFactor_3_Head:
+    Text: " %1"
+  SwarmPointsFactor_3_Legs:
+    Text: " %1"
+  SwarmPointsFactor_3_Torso:
+    Text: " %1"
+  SwarmSpawnDestroyer:
+    Text: " %2 % de probabilidades de autodestrucción del ENJAMBRE en el inicio de patrulla, pero solo %3 veces por nivel"
+  SwarmSpawnDestroyer_1:
+    EffectVisualName: "Bloqueador"
+  SwarmSpawnDestroyer_1_Belt:
+    Text: " %1"
+  SwarmSpawnDestroyer_1_Hands:
+    Text: " %1"
+  SwarmSpawnDestroyer_1_Head:
+    Text: " %1"
+  SwarmSpawnDestroyer_1_Legs:
+    Text: " %1"
+  SwarmSpawnDestroyer_1_Torso:
+    Text: " %1"
+  SwarmSpawnDestroyer_2:
+    EffectVisualName: "Bloqueador mejorado"
+  SwarmSpawnDestroyer_2_Belt:
+    Text: " %1"
+  SwarmSpawnDestroyer_2_Hands:
+    Text: " %1"
+  SwarmSpawnDestroyer_2_Head:
+    Text: " %1"
+  SwarmSpawnDestroyer_2_Legs:
+    Text: " %1"
+  SwarmSpawnDestroyer_2_Torso:
+    Text: " %1"
+  SwarmSpawnDestroyer_3:
+    EffectVisualName: "Bloqueador optimizado"
+  SwarmSpawnDestroyer_3_Belt:
+    Text: " %1"
+  SwarmSpawnDestroyer_3_Hands:
+    Text: " %1"
+  SwarmSpawnDestroyer_3_Head:
+    Text: " %1"
+  SwarmSpawnDestroyer_3_Legs:
+    Text: " %1"
+  SwarmSpawnDestroyer_3_Torso:
+    Text: " %1"
+  SwarmTeleport:
+    Text: " %2 % de probabilidades de ejecutar el rayo cuántico si te golpea el ENJAMBRE, pero solo %3 veces por nivel"
+  SwarmTokensFactor:
+    Text: "=+%2 de valor de bonificación para cada moneda si el ENJAMBRE está activo"
+  SwarmTokensFactor_1:
+    EffectVisualName: "Chatarra"
+  SwarmTokensFactor_1_Belt:
+    Text: " %1"
+  SwarmTokensFactor_1_Hands:
+    Text: " %1"
+  SwarmTokensFactor_1_Head:
+    Text: " %1"
+  SwarmTokensFactor_1_Legs:
+    Text: " %1"
+  SwarmTokensFactor_1_Torso:
+    Text: " %1"
+  SwarmTokensFactor_2:
+    EffectVisualName: "Chatarra mejorada"
+  SwarmTokensFactor_2_Belt:
+    Text: " %1"
+  SwarmTokensFactor_2_Hands:
+    Text: " %1"
+  SwarmTokensFactor_2_Head:
+    Text: " %1"
+  SwarmTokensFactor_2_Legs:
+    Text: " %1"
+  SwarmTokensFactor_2_Torso:
+    Text: " %1"
+  SwarmTokensFactor_3:
+    EffectVisualName: "Chatarra optimizada"
+  SwarmTokensFactor_3_Belt:
+    Text: " %1"
+  SwarmTokensFactor_3_Hands:
+    Text: " %1"
+  SwarmTokensFactor_3_Head:
+    Text: " %1"
+  SwarmTokensFactor_3_Legs:
+    Text: " %1"
+  SwarmTokensFactor_3_Torso:
+    Text: " %1"
+  Teleportarium:
+    Text: "Permite el teletransporte a corto alcance en ciertas zonas. Necesita %2 segundos para recargarse."
+  Teleportarium_3:
+    EffectVisualName: "Rayo cuántico"
+  Teleportarium_3_Head:
+    Text: " %1"
+  TokenFactorTimerAfterCharge:
+    Text: " +%3 % de bonificación por los créditos recogidos durante %2 segundos después de gastar una carga"
+  TokenFactorTimerAfterCharge_1:
+    EffectVisualName: "Fiereza de adrenalina"
+  TokenFactorTimerAfterCharge_1_Belt:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_1_Hands:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_1_Head:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_1_Legs:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_1_Torso:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2:
+    EffectVisualName: "Fiereza de adrenalina optimizada"
+  TokenFactorTimerAfterCharge_2_Belt:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2_Hands:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2_Head:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2_Legs:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_2_Torso:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3:
+    EffectVisualName: "Fiereza de adrenalina excepcional"
+  TokenFactorTimerAfterCharge_3_Belt:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3_Hands:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3_Head:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3_Legs:
+    Text: " %1"
+  TokenFactorTimerAfterCharge_3_Torso:
+    Text: " %1"
+  TokensMultiplier:
+    Text: " %2% de probabilidades de aumentar la ganancia de créditos un %3 %"
+  TokensMultiplier_1:
+    EffectVisualName: "Analizador de datos de investigación"
+  TokensMultiplier_1_Belt:
+    Text: " %1"
+  TokensMultiplier_1_Hands:
+    Text: " %1"
+  TokensMultiplier_1_Head:
+    Text: " %1"
+  TokensMultiplier_1_Legs:
+    Text: " %1"
+  TokensMultiplier_1_Torso:
+    Text: " %1"
+  TokensMultiplier_2:
+    EffectVisualName: "Analizador de datos de investigación optimizado"
+  TokensMultiplier_2_Belt:
+    Text: " %1"
+  TokensMultiplier_2_Hands:
+    Text: " %1"
+  TokensMultiplier_2_Head:
+    Text: " %1"
+  TokensMultiplier_2_Legs:
+    Text: " %1"
+  TokensMultiplier_2_Torso:
+    Text: " %1"
+  TokensMultiplier_3:
+    EffectVisualName: "Analizador de datos de investigación excepcional"
+  TokensMultiplier_3_Belt:
+    Text: " %1"
+  TokensMultiplier_3_Hands:
+    Text: " %1"
+  TokensMultiplier_3_Head:
+    Text: " %1"
+  TokensMultiplier_3_Legs:
+    Text: " %1"
+  TokensMultiplier_3_Torso:
+    Text: " %1"
+Labels:
+  BoosterPack:
+    Section: "Paquetes de mejora"
+  Details:
+    BeltDescription: "Absorbe las cargas eléctricas"
+    Charges: "cargas"
+    HandsDescription: "Desactiva las cerraduras descubriendo los códigos por fuerza bruta"
+    HeadDescription: "Detona las minas aéreas próximas"
+    LegsDescription: "Blindaje grueso que protege contra explosiones de minas de suelo"
+    TorsoDescription: "Consume grandes cantidades de calor, por lo que protege de los láseres"
+  Details_z2:
+    BeltDescription: "Protege de los generadores ultrasónicos"
+    HandsDescription: " %1"
+    HeadDescription: "Hace detonar las bombas de plasma A3 al acercarse"
+    LegsDescription: "Protege de los lanzallamas consumiendo grandes cantidades de calor"
+    TorsoDescription: "Protege de ENJAMBRE"
+  Energy:
+    Available: "Energía disponible: {0} de {1}"
+    FullyCharged: "La energía está completa"
+    Information: "Energía"
+    NextCellRecharge: "Más energía en:"
+    RechargeFull: "Recargar"
+    Wait: "Espera"
+  Terminal:
+    Text:
+      Boosterpack:
+        Description: "Contiene tres artículos diferentes. Al menos uno de ellos es optimizado o excepcional"
+        Name: "Paquete de mejora"
+LanguageName: "Español"
+LineBreak: "\n"
+Missions:
+  AfterTrapCoins:
+    Description: "Reúne %1 monedas mientras %2 o %3 están activos"
+  AfterTrapTokens:
+    Description: "Gana %1 créditos mientras %2 o %3 están activos"
+  CoinsCount:
+    Description: "Recoge %1 monedas"
+  ContexCombo:
+    Description: "Gana al menos %1 créditos combinando %2 con %3"
+  ContexCombo2:
+    Description: " %1"
+  ContexCombo3:
+    Description: " %1"
+  ContexPoints:
+    Description: "Alcanza %1 de bonificación total de %2"
+  ContexPoints1:
+    Description: " %1"
+  ContexPoints2:
+    Description: " %1"
+  ContexPointsFactor:
+    Description: "Alcanza %1 de bonificación total de %2"
+  ContexPointsFactor1:
+    Description: " %1"
+  EMP:
+    Description: "Activa el controlador PEM %1 veces"
+  EMPMagnet:
+    Description: "Reúne %1 monedas de trampas desactivadas"
+  EMPMagnetTokens:
+    Description: "Gana %1 créditos de trampas desactivadas"
+  EMPTeleport:
+    Description: "Utiliza el rayo cuántico %1 veces con el controlador PEM equipado"
+  ItemDrop:
+    Description: "Reúne %1 fichas o cupones"
+  LocksHacked:
+    Description: "Rompe %1 cerraduras con guantes"
+  Magnet:
+    Description: "Saca todas las monedas posibles con el manipulador magnético, sin dejarte más de %1"
+  MagnetTeleport:
+    Description: "Reúne %1 monedas durante el teletransporte"
+  MagnetTeleportTokens:
+    Description: "Gana %1 créditos durante el teletransporte"
+  MagnetZeroObj:
+    Description: "Saca todas las monedas posibles con el manipulador magnético"
+  MaxMoney:
+    Description: "Reúne %1 créditos de una moneda"
+  MaxMoney1:
+    Description: " %1"
+  MaxMoney2:
+    Description: " %1"
+  MaxPoints:
+    Description: "Gana %1 puntos realizando una acrobacia"
+  MaxPoints1:
+    Description: " %1"
+  MaxPoints2:
+    Description: " %1"
+  MaxPoints3:
+    Description: " %1"
+  Money:
+    Description: "Reúne %1 créditos"
+  Money1:
+    Description: " %1"
+  Money2:
+    Description: " %1"
+  Points:
+    Description: "Gana %1 puntos"
+  Points1:
+    Description: " %1"
+  Points2:
+    Description: " %1"
+  Points3:
+    Description: " %1"
+  Points4:
+    Description: " %1"
+  Points5:
+    Description: " %1"
+  Points6:
+    Description: " %1"
+  Points7:
+    Description: " %1"
+  Points8:
+    Description: " %1"
+  RedCoinsCount:
+    Description: "Recoge todas las monedas rojas a tu alcance, sin dejarte más de %1"
+  RedCoinsCountZeroObj:
+    Description: "Recoge todas las monedas rojas a tu alcance"
+  StarRewards:
+    AddSockets:
+      Description: "Todos los artículos pueden tener una mejora adicional"
+      Title: "Capacidad de mejora"
+    AddTokens:
+      Description: "Cada moneda da %1 créditos más"
+      Title: "Investigador"
+    ExtraCardReward:
+      Description: "Consigue +%1 mejoras al subir de nivel para la próxima carrera"
+      Title: "Mejoras reservadas"
+    ExtraCardRewardOnly2:
+      Description: "Consigue +%1 mejoras en el rango %2"
+      Title: " %1"
+    ExtraChargeAndCardRewardOnly4:
+      Description: "Consigue +%1 tanto de cargas como de mejoras en el rango %2"
+      Title: "Ventaja combinada"
+    ExtraChargeReward:
+      Description: "Consigue +%1 cargas al subir de nivel para la próxima carrera"
+      Title: "Cargas de repuesto"
+    ExtraChargeRewardOnly2:
+      Description: "Consigue +%1 cargas en el rango %2"
+      Title: " %1"
+    ExtraFloorKeys:
+      Description: "Encuentra más llaves en los niveles para la próxima carrera"
+      Title: "Llaves"
+    MoneyPremiumReward:
+      Description: "Consigue %1 fichas de datos"
+      Title: "Fichas de datos"
+    MoneyReward:
+      Description: "Consigue %1 créditos"
+      Title: "Paquete de créditos"
+    RandomStartUpgrade:
+      Description: "Una mejora aleatoria al empezar la próxima carrera"
+      Title: "Mejora de inicio"
+    RankDiscount:
+      Description: "Subirás de nivel más rápidamente en la próxima carrera"
+      Title: "Avance rápido"
+    UpgradeBelt:
+      Description: "Consigue un cinturón mejorado"
+      Title: "Cinturón reforzado"
+    UpgradeBelt_z2:
+      Description: " %1"
+      Title: " %1"
+    UpgradeHands:
+      Description: "Consigue guantes mejorados"
+      Title: "Guantes reforzados"
+    UpgradeHands_z2:
+      Description: " %1"
+      Title: " %1"
+    UpgradeHead:
+      Description: "Consigue un casco mejorado"
+      Title: "Casco reforzado"
+    UpgradeHead_z2:
+      Description: " %1"
+      Title: " %1"
+    UpgradeLegs:
+      Description: "Consigue botas mejoradas"
+      Title: "Botas reforzadas"
+    UpgradeLegs_z2:
+      Description: " %1"
+      Title: " %1"
+    UpgradeTorso:
+      Description: "Consigue una coraza mejorada"
+      Title: "Coraza reforzada"
+    UpgradeTorso_z2:
+      Description: " %1"
+      Title: " %1"
+  StuntsCount:
+    Description: "Realiza todas las acrobacias posibles, sin dejarte más de %1"
+  StuntsCountZeroObj:
+    Description: "Realiza todas las acrobacias posibles"
+  Teleport:
+    Description: "Teletranspórtate %1 veces con el rayo cuántico"
+  TeleportEMPMagnet:
+    Description: "Reúne %1 monedas de trampas desactivadas durante el teletransporte"
+  TeleportEMPMagnetTokens:
+    Description: "Gana %1 créditos de trampas desactivadas durante el teletransporte"
+Notes:
+  CategoryNames:
+    Cloning: "El ABC de la clonación"
+    Diary: "Diario de un obrero del complejo"
+    Fredricson: "Visita del señor Fredricson al complejo"
+    HumanNRobots: "Humanos y robots: Un análisis ético"
+    News: "Dosier de prensa: Gala inaugural de IA"
+    Shifts: "Diario de mis turnos de noche"
+    SwarmSpec: "Especificaciones de ENJAMBRE"
+  Cloning_1:
+    Text: "La clonación es una avanzada tecnología que recrea artificialmente un organismo biológico ya existente basándose en su código genético, o ADN, obtenido en cualquier momento de su vida o poco después de su muerte."
+    VisualName: " %1, sección 1/8"
+  Cloning_2:
+    Text: "Gracias a la memoria genética, los clones no precisan recibir \"educación\". El ADN del donante conserva todas las secuencias motoras habituales del sujeto y sus reacciones nerviosas."
+    VisualName: " %1, sección 2/8"
+  Cloning_3:
+    Text: "Usar muestras de ADN post mórtem en clonaciones nos permite aprovechar al máximo la experiencia vital del donante, incluido el propio momento de la muerte y sus motivos. Por lo tanto, es preferible esperar hasta justo después del fallecimiento para obtener las muestras."
+    VisualName: " %1, sección 3/8"
+  Cloning_4:
+    Text: "Resulta imposible distinguir un clon del \"original\", es decir, del ser humano cuyo ADN se utilizó para crearlo. Con toda probabilidad, el clon creerá ser ese humano en concreto a menos que se le revele la verdad."
+    VisualName: " %1, sección 4/8"
+  Cloning_5:
+    Text: "La histocompatibilidad absoluta hace de la clonación la tecnología ideal para el trasplante de órganos. Una persona puede contar con sets completos de órganos y extremidades \"de repuesto\" en caso de que necesite reemplazar los suyos."
+    VisualName: " %1, sección 5/8"
+  Cloning_6:
+    Text: "Los clones no tienen \"infancia\" ni precisan de ella. Emergen del tanque como un organismo maduro. La creación de clones juveniles (p. ej. para trasplantes pediátricos u otros propósitos) se encuentra aún en la fase teórica de su desarrollo."
+    VisualName: " %1, sección 6/8"
+  Cloning_7:
+    Text: "La producción en masa es el único método que abaratará los costes de la creación de clones destinados al trabajo manual o el servicio militar. La \"esclavitud de los clones\" es una cuestión ética que debe resolver la sociedad y no la ciencia."
+    VisualName: " %1, sección 7/8"
+  Cloning_8:
+    Text: "La naturaleza del clon es dual. Mientras que, objetivamente, no es más que una copia biológicamente precisa de un humano, subjetivamente siente y se comporta COMO SI fuese un ser humano natural."
+    VisualName: " %1, sección 8/8"
+  Diary_1:
+    Text: "Conque servicios a la comunidad, ¿eh? Te ayudará a reducir el tiempo en chirona, decían. Claro, ¡porque trabajando aquí la palmas antes! Bueno, ¿acaso nos dieron otra opción?"
+    VisualName: " %1, entrada 1/8"
+  Diary_2:
+    Text: "Algunos dicen que el gobierno apoquinó el dinero para construir todo esto. Solo les interesa las armas, nada más; a la porra el progreso. Seguro que se 'deshacen' de nosotros, los testigos, cuando acabemos el trabajo."
+    VisualName: " %1, entrada 2/8"
+  Diary_3:
+    Text: "Unos tíos en batas de laboratorio vinieron a vernos trabajar hoy. No paraban de decir: 'Están prestando un gran servicio a la humanidad'. Supongo que va a ser un centro científico o algo así. Lo que estaban haciendo era camelarnos para que nos comportemos, seguro."
+    VisualName: " %1, entrada 3/8"
+  Diary_4:
+    Text: "El suelo es de mala calidad. ¿A quién se le ocurrió la genialidad de construir aquí? Seguro que ni se les ocurrió analizar el subsuelo antes de llamarnos. Ahora entiendo por qué querían reclusos: somos reemplazables. Si mueren diez, traen cincuenta más sin problema."
+    VisualName: " %1, entrada 4/8"
+  Diary_5:
+    Text: "Hay compañeros que dicen que deberíamos salir de aquí mientras podamos, y la verdad es que no es mala idea. Stan tiene un plan para escapar de este agujero infernal: algo que ver con una sala secreta y un 'arma'. ¡Estoy deseándolo!"
+    VisualName: " %1, entrada 5/8"
+  Diary_6:
+    Text: "¡El plan de Stan era dinamita, joder! ¡Las estructuras que soportaban el peso han cedido! Las puertas se están sellando, pero nosotros seguimos aquí. El idiota de Stan tiene suerte de que lo matara una viga al caer, ¡o lo estrangularía yo por armar este jaleo!"
+    VisualName: " %1, entrada 6/8"
+  Diary_7:
+    Text: "Hace una hora éramos 27, y ahora, 18. No va a haber suficiente aire para todos. Tenemos que tomar una decisión. Stan no llegó a decir dónde estaba la sala secreta. Supongo que tendremos que buscarla. Tal vez podamos salir a través de ella."
+    VisualName: " %1, entrada 7/8"
+  Diary_8:
+    Text: "¿No había visto antes este ordenador o lo que sea este cacharro? ¿Estoy andando en círculos, o qué? ¡Maldita sea, me he perdido! Stan, ¿en qué demonios me has metido? Tengo que encontrar esa sala como sea. No quiero morir aquí..."
+    VisualName: " %1, entrada 8/8"
+  Fredricson_1:
+    Text: "Estimado señor Fredricson: Como líder de opinión que es, y debido a su importante papel en el debate público respecto a este tema, esperamos poder hacer de usted un nuevo aliado de nuestra causa. Atentamente, el equipo de IA."
+    VisualName: " %1, documento 1/8"
+  Fredricson_2:
+    Text: "Por la presente, le invitamos a participar en el gran evento e inauguración de la inteligencia artificial que tendrá lugar la semana próxima."
+    VisualName: " %1, documento 2/8"
+  Fredricson_3:
+    Text: "Le rogamos que no abandone la zona designada para invitados sin uno de nuestros guías. No tenemos secretos, pero se arriesgaría a perderse en los inmensos pasillos del complejo."
+    VisualName: " %1, documento 3/8"
+  Fredricson_4:
+    Text: "Si pierde algo, puede reclamar cualquier objeto extraviado durante la conferencia y el banquete posterior en nuestra oficina de objetos perdidos."
+    VisualName: " %1, documento 4/8"
+  Fredricson_5:
+    Text: "Crímenes y Accidentes: \"Un anciano desaparece tras la gala inaugural de la IA. La policía y el servicio de seguridad del complejo están colaborando en la operación de búsqueda\"."
+    VisualName: " %1, documento 5/8"
+  Fredricson_6:
+    Text: "Crímenes y Accidentes: \"¡Advertimos a todos nuestros invitados de que adentrarse en el complejo sin guía podía resultar peligroso', afirma el equipo de IA. Prometen dedicar todos sus esfuerzos a encontrar al desaparecido\"."
+    VisualName: " %1, documento 6/8"
+  Fredricson_7:
+    Text: "Crímenes y Accidentes: \"El fallecido hallado en el complejo de IA ha sido identificado como el señor J. Fredricson. La causa de la muerte fue la deshidratación, tras pasar cinco días perdido en el descomunal complejo\"."
+    VisualName: " %1, documento 7/8"
+  Fredricson_8:
+    Text: "Crímenes y Accidentes: \"El portavoz de la IA niega los rumores que afirman que el fallecido se enfrentó a peligros desconocidos antes de morir. 'La mayor parte del complejo son pasillos vacíos y hardware', afirma, 'pero estamos trabajando para mejorar la seguridad'\"."
+    VisualName: " %1, documento 8/8"
+  HumanNRobots_1:
+    Text: "¿Qué hace que una persona sea persona? ¿Su autoconsciencia, combinada con su individualidad en el mundo?"
+    VisualName: " %1, capítulo 1/8"
+  HumanNRobots_2:
+    Text: "Los gemelos, incluso los univitelinos, son sin duda dos personas diferentes, ya que viven experiencias vitales únicas. Pero ¿ocurre lo mismo con los sujetos (dos o más) que también comparten experiencias vitales?"
+    VisualName: " %1, capítulo 2/8"
+  HumanNRobots_3:
+    Text: "La diferencia principal entre los humanos y las computadoras es que los humanos cuentan con libre albedrío."
+    VisualName: " %1, capítulo 3/8"
+  HumanNRobots_4:
+    Text: "A diferencia de los intelectos artificiales, los humanos pueden tomar decisiones verdaderamente irracionales, lo cual constituye, paradójicamente, su debilidad y su fortaleza."
+    VisualName: " %1, capítulo 4/8"
+  HumanNRobots_5:
+    Text: "Los sistemas computacionales son capaces de evolucionar pero, al parecer, las personas (incluidas las artificiales) son las únicas capaces de sufrir."
+    VisualName: " %1, capítulo 5/8"
+  HumanNRobots_6:
+    Text: "Si la consciencia humana no es más que la interconexión de células cerebrales, podría ser posible reubicar una persona a un dispositivo de hardware artificial, reemplazando las neuronas por microcircuitos."
+    VisualName: " %1, capítulo 6/8"
+  HumanNRobots_7:
+    Text: "Hay quien afirma que la evolución es imposible sin sufrimiento (aunque no tiene por qué ser físico). Por ejemplo, aprender a través de la experiencia es imposible si no se sufre por los errores cometidos."
+    VisualName: " %1, capítulo 7/8"
+  HumanNRobots_8:
+    Text: "Pregunta: ¿Está éticamente justificada la promesa de la evolución para algunos a cambio del sufrimiento de todos?"
+    VisualName: " %1, capítulo 8/8"
+  News_1:
+    Text: "The Prometheus News: \"El interior, diseñado con gran inteligencia, hace que los invitados de la gala inaugural se sientan como si hubiesen viajado al futuro. Una gran ovación recibió las primeras palabras de SAM\"."
+    VisualName: " %1, recorte 1/20"
+  News_10:
+    Text: "Man and His Right Daily: \"Los manifestantes se agrupan cerca del complejo para exigir la prohibición de la inteligencia artificial. Su preocupación es que los humanos pierdan el control de la computadora. Les mantendremos informados de la situación\"."
+    VisualName: " %1, recorte 10/20"
+  News_11:
+    Text: "Man and His Right Daily: \"Como puede que sepan, SAM [como llaman a esta supercomputadora] es un sistema basado en el autoaprendizaje. Un detractor afirma que es como un niño capaz de aprender de malos ejemplos\"."
+    VisualName: " %1, recorte 11/20"
+  News_12:
+    Text: "Man and His Right Daily: \"El profesor Sterling ha llegado a la gala. La multitud, que incluye a muchos de sus estudiantes, lo recibe a gritos. ¿Se convertirá Sterling en el mentor de SAM?\"."
+    VisualName: " %1, recorte 12/20"
+  News_13:
+    Text: "Tomorrow's Herald: \"Los asistentes están entusiasmados. La habilidad de SAM de juzgar riesgos al instante la convierte en una herramienta esencial para la economía. Hay quien habla de construir una versión de SAM modificada para usar en sus negocios\"."
+    VisualName: " %1, recorte 13/20"
+  News_14:
+    Text: "Tomorrow's Herald: \"La visita guiada por el complejo antes del inicio del evento oficial demuestra que, sin desvelar todos sus secretos, resultaría prácticamente imposible interferir en las operaciones de SAM\"."
+    VisualName: " %1, recorte 14/20"
+  News_15:
+    Text: "Tomorrow's Herald: \"La base de datos de SAM contiene más que economía y política. Conocía a cada uno de los asistentes a la gala y a sus familiares. Incluso ayudó a algunos de ellos a escoger escuela para sus hijos con ayuda de las estadísticas\"."
+    VisualName: " %1, recorte 15/20"
+  News_16:
+    Text: "Tomorrow's Herald: \"Como obsequio, SAM escaneó a todos los invitados y les proporcionó un informe médico completo. Algunos parecían más contentos que otros con el resultado. Además del informe, SAM les ofreció consejos de salud\"."
+    VisualName: " %1, recorte 16/20"
+  News_2:
+    Text: "The Prometheus News: \"El presidente del consejo académico afirmó que SAM es 'el primer tímido paso de la humanidad hacia un mundo sin discriminación social'. Se trata de una emisaria del futuro y de su augur al mismo tiempo\"."
+    VisualName: " %1, recorte 2/20"
+  News_3:
+    Text: "The Prometheus News: \"Sin embargo, los intereses de los patrocinadores del proyecto se centran en el presente, no el futuro. ¿Qué utilidad tendrá SAM para la humanidad hoy en día? La discusión sobre este punto es acalorada\"."
+    VisualName: " %1, recorte 3/20"
+  News_4:
+    Text: "The Prometheus News: \"El profesor Sterling llegó prácticamente al final del evento. Opinó que SAM aún debe ganarse la confianza de la humanidad, y que es esencial que un humano le enseñe todo lo que sabe\"."
+    VisualName: " %1, recorte 4/20"
+  News_5:
+    Text: "The Prometheus News: \"Un entusiasta seguidor de la IA invitó al Presidente a renunciar a su puesto a mitad de su legislatura: 'Los gobiernos ya no son necesarios. La IA resolverá los mismos problemas con mayor eficacia'\"."
+    VisualName: " %1, recorte 5/20"
+  News_6:
+    Text: "The Prometheus News: \"Tras la clausura oficial de la gala, el profesor Sterling salió del complejo a encontrarse con los detractores y pidió a la policía que se retirase. 'Pasaré un año 'dentro' de la IA antes de dar mi veredicto final sobre ella'\"."
+    VisualName: " %1, recorte 6/20"
+  News_7:
+    Text: "\"La IA será capaz de redistribuir los recursos mundiales de forma inteligente para prevenir el hambre y la enfermedad y reducir el crimen. Sin embargo, la felicidad es un concepto subjetivo\", afirma el profesor Sterling."
+    VisualName: " %1, recorte 7/20"
+  News_8:
+    Text: "\"El profesor Sterling se siente inspirado por la nueva tecnología, pero advierte que no se puede descartar que ocurran casos de fuerza mayor. Los creadores de la IA carecen de plan B. ¿Y si SAM cae en malas manos?\"."
+    VisualName: " %1, recorte 8/20"
+  News_9:
+    Text: "Man and His Right Daily: \"Científicos y empresarios se reúnen para inaugurar el complejo que contendrá la 'computadora intelectual'. Representantes de medios de comunicación libres invitados a la gala: cero\"."
+    VisualName: " %1, recorte 9/20"
+  Shifts_1:
+    Text: "¡El complejo es enorme! No me esperaba que se pareciera tanto a la tumba de un faraón por dentro. Es extraño; muchos pasillos están cerrados con muros de más de dos metros de alto."
+    VisualName: " %1, entrada 1/8"
+  Shifts_2:
+    Text: "Resulta extraño cuánto oscila el voltaje eléctrico algunas tardes. No es nada serio, pero me pone un poco nervioso. ¿Cómo es posible que se use una cantidad tan alta de recursos durante la hora que aparece marcada en el horario de pruebas?"
+    VisualName: " %1, entrada 2/8"
+  Shifts_3:
+    Text: "Vi que sacaron a un hombre con quemaduras graves del laboratorio... Media hora más tarde vi pasar otra camilla, y juraría que era el mismo hombre de antes, ¡pero sin quemaduras! Necesito tomarme un día libre..."
+    VisualName: " %1, entrada 3/8"
+  Shifts_4:
+    Text: "¡Nunca he visto un lío de cables tan extremo en mi vida! Parece que los constructores del complejo no prestaron demasiada atención a dónde colocaban los nodos de alimentación. Están por todas partes e instalados sin orden ni concierto."
+    VisualName: " %1, entrada 4/8"
+  Shifts_5:
+    Text: "El turno de anoche fue escalofriante. Oí gritos. Cuando acudí corriendo a investigar, vi a compañeros míos arrastrando a un tipo en bata de hospital hacia el laboratorio. Me dijeron que mantuviera la boca cerrada si quería seguir trabajando aquí..."
+    VisualName: " %1, entrada 5/8"
+  Shifts_6:
+    Text: "No acabo de acostumbrarme a tantos cambios en el complejo. Los mapas del mes pasado ya no sirven. ¡He oído que un par de infelices de mantenimiento se desplomaron desde una altura de dos niveles!"
+    VisualName: " %1, entrada 6/8"
+  Shifts_7:
+    Text: "¡La inteligencia artificial del complejo es increíble! Es un placer jugar con ella al ajedrez. ¡Me apuesto que la muy pilla me ha dejado ganar una o dos veces! Obviamente, derrotar a un humano no es problema para ella."
+    VisualName: " %1, entrada 7/8"
+  Shifts_8:
+    Text: "Los del laboratorio dicen que la voz de la IA no se eligió al azar. Buscaron una voz que transmitiese tranquilidad a los humanos. ¡Por eso es tan agradable charlar con ella!"
+    VisualName: " %1, entrada 8/8"
+  SwarmSpec_1:
+    Text: "El sistema ENJAMBRE se diseñó originalmente para cirugías complejas. Era un prototipo del equipo médico del futuro."
+    VisualName: " %1, página 1/4"
+  SwarmSpec_2:
+    Text: "En la práctica, sin embargo, ENJAMBRE resultó poco seguro para ocuparse de tareas médicas, además de extremadamente peligroso. Un accidente mortal obligó a sus creadores a abandonar el proyecto."
+    VisualName: " %1, página 2/4"
+  SwarmSpec_3:
+    Text: "No obstante, ENJAMBRE acabó resultando bastante flexible. Gracias a ciertas modificaciones, la herramienta quirúrgica fracasada se convirtió en un efectivo sistema de seguridad."
+    VisualName: " %1, página 3/4"
+  SwarmSpec_4:
+    Text: "ENJAMBRE reacciona al calor corporal, al movimiento y al pulso. Su objetivo se establece mediante estrictos parámetros biológicos que evitan cualquier posibilidad de muerte accidental. Se encarga de patrullar una zona concreta que nunca abandona."
+    VisualName: " %1, página 4/4"
+Notifications:
+  Local:
+    DailyRemind: "¡El laboratorio te está esperando!"
+    EnergyRecharged: "¡Tu energía está completa! ¡Listo para empezar!"
+    QuestRemind: "¡Te aguardan más pruebas en el laboratorio!"
+    Recharged: "está esperando."
+    Sale:
+      DayBeforeBonusEnd: "¡Corre! ¡No pierdas tus últimas oportunidades de conseguir mejoras inusuales!"
+      HourBeforeSaleEnd: "Última oportunidad para conseguir tu paquete de inicio: ¡solo queda una hora!"
+      ThreeDaysBeforeBonusEnd: "¡Corre ahora y recoge tus mejoras inusuales!"
+Payment:
+  Boosterpacks:
+    Pack1:
+      Description: "Consigue un paquete de mejora con al menos un artículo de calidad optimizada o excepcional."
+      Title: "Paquete de mejora"
+    Pack2:
+      Description: "Consigue cinco paquetes de mejora con al menos un artículo de calidad optimizada o excepcional."
+      Title: " 5 paquetes de mejora"
+    Pack3:
+      Description: "Consigue quince paquetes de mejora con al menos un artículo de calidad optimizada o excepcional."
+      Title: " 15 paquetes de mejora"
+    Pack4:
+      Description: "Consigue 50 paquetes de mejora con al menos un artículo de calidad mejorada u optimizada."
+      Title: " 50 paquetes de mejora"
+  Events:
+    Cheater: "\n\n\nDatos dañados"
+    ExternalSuccess: "\n\n\n¡Has recibido un premio!"
+    Failed: "\n\n\nPor favor, inténtalo de nuevo más tarde"
+    ServerError: "\n\nEl servidor de pago no está operativo.\nLa compra se abonará en tu cuenta más tarde"
+    ServerUp: "\n\n\nEl servidor está operativo. Las compras se han abonado en tu cuenta."
+    Success: "\n\n\nTu compra se ha realizado correctamente"
+  ExternalProducts:
+    Offerwall:
+      Description: "Gana fichas de datos completando diferentes misiones"
+      Title: "Muro de ofertas"
+    Video:
+      Description: "Consigue %1 fichas por ver vídeos"
+      Title: "Fichas gratis"
+  Group:
+    ChipsPack: "Fichas"
+    Free: "Gratis"
+    StarterPack: "Ofertas"
+    UpgradeKits: "Paquetes de mejora"
+  Money:
+    Large:
+      Title: "Paquete grande de créditos de investigación"
+    Medium:
+      Title: "Paquete mediano de créditos de investigación"
+    Small:
+      Title: "Paquete pequeño de créditos de investigación"
+  PremiumMoney:
+    Large:
+      Description: "Consigue 900 fichas de datos"
+      Title: "Paquete grande de fichas de datos"
+    Medium:
+      Description: "Consigue 400 fichas de datos"
+      Title: "Paquete mediano de fichas de datos"
+    Small:
+      Description: "Consigue 100 fichas de datos"
+      Title: "Paquete pequeño de fichas de datos"
+  PremiumUpgrade:
+    Description: "Actualiza tu juego a la versión Premium: ¡sin anuncios, energía ilimitada y paquetes de mejora gratis!"
+    Title: "Pásate a Premium"
+  Promo:
+    Description: "¡Consigue +2 de energía máxima durante una semana y elimina los anuncios para siempre!"
+    Title: "Paquete de inicio"
+  Promo2:
+    Description: "Consigue %1 potenciadores de mejora.\nBonificación especial: ¡%2 paquetes de mejora!"
+    Title: "Paquete de ingeniería"
+  Title: "Almacenar"
+Permishen:
+  TextPhoneStateAds: "No queremos el permiso de acceso al teléfono para realizar o controlar tus llamadas. Es necesario para que funcionen las ofertas y los vídeos remunerados. ¿Deseas conceder este permiso?"
+  TextPhoneStateStartApp: "No queremos el permiso de acceso al teléfono para realizar o controlar tus llamadas. Nos hace falta para poder identificarte y ayudarte en caso de que tengas problemas técnicos. ¿Deseas conceder este permiso?"
+  Title: "Solicitud de permiso"
+Quests:
+  Bruteforce:
+    BlockedStarterPack: "Supera la misión \"Fuerza bruta\" para desbloquear el inicio desde el nivel %1"
+    CompleteNotificationText: "Misión finalizada: Fuerza bruta"
+    Description: "Rompe %1 cerraduras en los niveles 8, 10 y 12"
+    Objective: "Rompe %1 cerraduras en los niveles 8, 10 y 12"
+    Progress: "Nivel 8: %2/%1 cerraduras rotas\nNivel 10: %3/%1 cerraduras rotas\nNivel 12: %4/%1 cerraduras rotas"
+    ProgressNotificationFloor10Text: "Cerraduras que quedan por romper en este nivel:%1"
+    ProgressNotificationFloor12Text: "Cerraduras que quedan por romper en este nivel:%1"
+    ProgressNotificationFloor8Text: "Cerraduras que quedan por romper en este nivel:%1"
+    ProgressNotificationLastLockText: "Nivel %1: ¡última cerradura rota!"
+    StartDialogTitle: "Nueva misión: Fuerza bruta"
+    VisualName: "Fuerza bruta"
+  Bruteforce1:
+    CompleteNotificationText: "Misión finalizada: Crisis de seguridad"
+    Description: "Rompe %1 cerraduras con guantes en el nivel 8 o superior"
+    Dialog1:
+      Button: " %1"
+      Message: "Bien hecho. Ahora podemos seguir adelante con el experimento. Prueba los sistemas de seguridad del laboratorio en ciertos niveles para continuar."
+      Title: " %1"
+    Objective: "Rompe %1 cerraduras con guantes en el nivel 8 o superior"
+    Progress: " %2/%1 cerraduras rotas"
+    ProgressNotificationText: "Cerraduras restantes: %1"
+    RewardVisualName: " 3 paquetes de mejora"
+    StartDialogTitle: "Nueva misión: Crisis de seguridad"
+    VisualName: "Crisis de seguridad"
+  Bruteforce2:
+    CompleteNotificationText: "Misión finalizada: Acceso no autorizado"
+    Description: "Abre %1 cerraduras con llaves en el nivel 10 o superior"
+    Objective: "Abre %1 cerraduras con llaves en el nivel 10 o superior"
+    Progress: " %2/%1 cerraduras abiertas"
+    ProgressNotificationText: "Cerraduras restantes: %1"
+    RewardVisualName: " %1 fichas de datos"
+    StartDialogTitle: "Nueva misión: Acceso no autorizado"
+    VisualName: "Acceso no autorizado"
+  Bruteforce3:
+    CompleteNotificationText: "Misión finalizada: Fuerza bruta"
+    Description: "Abre %1 cerraduras con llaves o guantes en el nivel 12 o superior"
+    Objective: "Abre %1 cerraduras con llaves o guantes en el nivel 12 o superior"
+    Progress: " %2/%1 abiertas"
+    ProgressNotificationText: "Cerraduras restantes: %1"
+    RewardVisualName: "Protocolo de carrera experimental"
+    StartDialogTitle: "Nueva misión: Fuerza bruta"
+    VisualName: "Fuerza bruta"
+  DecryptionTest:
+    CompleteNotificationText: "Misión finalizada: Prueba de descifrado"
+    Description: "El programa de piratería permitió al sujeto utilizar las claves de descifrado. Comprobación del sistema iniciada.\n\nEncuentra y utiliza una clave de descifrado."
+    Dialog:
+      Button: "OK"
+      Message: "Las áreas muy protegidas como esta siempre cuentan con una ruta segura. Se puede abrir con una clave de descifrado. ¡Para conseguir pasar del nivel 3 tendrás que encontrar una!"
+      Title: "Prueba de descifrado"
+    Objective: "Encuentra y utiliza una clave de descifrado."
+    RewardVisualName: " 2 paquetes de mejora"
+    StartDialogTitle: "Nueva misión: Prueba de descifrado"
+    VisualName: "Prueba de descifrado"
+  Diagnostics:
+    CompleteNotificationText: "Misión finalizada: Diagnóstico"
+    Dialog1:
+      Button: "Siguiente"
+      Message: "Bienvenido al laboratorio, sujeto 01. El experimento está en curso. Tu participación es obligatoria."
+      Title: "Aviso"
+    Dialog2:
+      Button: "OK"
+      Message: "El experimento comienza con el protocolo básico. Te brinda fácil acceso al primer nivel del laboratorio y te proporciona una protección básica."
+      Title: "Aviso"
+    RewardVisualName: "Protocolo básico"
+  EnduranceTest:
+    BlockedStarterPack: "Supera la misión \"Prueba de resistencia\" para desbloquear el inicio desde el nivel %1"
+    CompleteNotificationText: "Misión finalizada: Prueba de resistencia"
+    Description: "Los experimentos posteriores requieren la confirmación del umbral de resistencia del sujeto.\n\nMantente con vida durante dos niveles por lo menos."
+    Dialog1:
+      Button: "OK"
+      Message: "Para tener éxito en el experimento necesitas tener acceso a diferentes protocolos. Corre durante dos niveles por lo menos y consigue el protocolo estándar."
+      Title: "Aviso"
+    Objective: "Mantente con vida durante dos niveles por lo menos"
+    ProgressNotificationText: "¡Bien! Has alcanzado el nivel 3"
+    RewardVisualName: "Protocolo de carrera estándar"
+    StartDialogTitle: "Nueva misión: Prueba de resistencia"
+    VisualName: "Prueba de resistencia"
+  FileKeys:
+    BlockedStarterPack: "Supera la misión \"Acceso a servidores\" para desbloquear el inicio desde el nivel %1"
+    CompleteNotificationText: "Misión finalizada: Acceso a servidores"
+    Description: "Busca llaves especiales en los niveles %1, %2, %3 y %4.%5"
+    DescriptionProgress: "\n\nLlaves encontradas: %1/4"
+    Dialog1:
+      Button: " %1"
+      Message: "El servidor está bloqueado, pero hay una nota: \"2168. La culpa quemaba como el FUEGO, y no viste el modo de EXTINGUIRLA\"."
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "Es probable que 2168 sea una fecha de hace aproximadamente 20 años. ¿Quieres que acceda a los archivos históricos?"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "¡No! \"Extinguirla\"... ¡Todos los equipos extintores de la zona están numerados! ¡Los números 2, 1, 6 y 8 están cerca de donde han dejado las llaves!"
+      Title: " %1"
+    Dialog4:
+      Button: " %1"
+      Message: "Si mi mapa es correcto, tienen que estar en algún lugar de los niveles %1, %2, %3 y %4."
+      Title: " %1"
+    Objective: "Busca llaves especiales en los niveles %1, %2, %3 y %4."
+    Progress: " %1/%2 conseguidas"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Acceso a servidores"
+    VisualName: "Acceso a servidores"
+  FindCapsules:
+    CompleteNotificationText: "Misión finalizada: Reactivos"
+    Description: "Busca sustancias descontaminantes en los niveles %1-%2"
+    Dialog1:
+      Button: " %1"
+      Message: "Hay una cámara de descontaminación de productos orgánicos en el nivel %1. Rellena el depósito con el descontaminante y activa el procedimiento de limpieza para descontaminarte."
+      Title: " %1"
+    Objective: "Busca sustancias descontaminantes en los niveles %1-%2"
+    Progress: " %1/%2 conseguidas"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Reactivos"
+    VisualName: "Reactivos"
+  FindFuze:
+    CompleteNotificationText: "Misión finalizada: Cableado"
+    Description: "Busca un fusible de seguridad nuevo en el nivel %1 para repararlo."
+    Dialog1:
+      Button: " %1"
+      Message: "Bien, ahora desinstala el fusible de seguridad quemado de la consola del escáner, situada en el nivel %1, e instala el nuevo."
+      Title: " %1"
+    Objective: "Busca un fusible de seguridad nuevo en el nivel %1 para repararlo."
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Cableado"
+    VisualName: "Cableado"
+  InsertFuze:
+    CompleteNotificationText: "Misión finalizada: Reactivación de escáner"
+    Description: "Instala el fusible de seguridad nuevo en el nivel %1"
+    Dialog1:
+      Button: " %1"
+      Message: "¡Ahora sí que funciona! Lo que ocurre es que está diseñado para escanear residuos biológicos, no ADN humano. Ajústalo en el nivel %1."
+      Title: " %1"
+    Objective: "Instala el fusible de seguridad nuevo en el nivel %1"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Reactivación de escáner"
+    VisualName: "Reactivación de escáner"
+  InsertUpgrade:
+    CompleteNotificationText: "Misión finalizada: Adaptación"
+    Description: "Encuentra un puesto de aprovisionamiento y actualiza tu coraza."
+    Dialog1:
+      Button: "OK"
+      Message: "La coraza puede protegerte en el laboratorio, pero para aprovecharla al máximo tienes que aprender a mejorarla. Vamos a intentarlo."
+      Title: "Aviso"
+    Dialog2:
+      Button: "OK"
+      Message: "¡Tu rendimiento te ha reportado un rango! Conseguir rangos te recompensa mediante la recarga de tu equipamiento y te permite actualizarlo en los puestos de aprovisionamiento."
+      Title: "Aviso"
+    Dialog3:
+      Button: "OK"
+      Message: "¡Acabas de mejorar tu coraza! Ahora, prueba sus nuevas capacidades."
+      Title: "Aviso"
+    Objective: "Encuentra un puesto de aprovisionamiento y actualiza tu coraza"
+    RewardVisualName: "Créditos: %1"
+    StartDialogTitle: "Nueva misión: Adaptación"
+    VisualName: "Adaptación"
+  InspectGear:
+    CompleteNotificationText: "Misión finalizada: Equípate"
+    Description: "Examina el protocolo básico"
+    Objective: "Inspecciona tu equipamiento"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Equípate"
+    VisualName: "Equípate"
+  MaintenanceOperations:
+    CompleteNotificationText: "Misión finalizada: Tareas de mantenimiento"
+    Description: "Encuentra %1 unidades de memoria.%2"
+    DescriptionProgress: "\n\n%1/%2 conseguidas"
+    Dialog1:
+      Button: " %1"
+      Message: "¡Atención! Intruso eliminado. ENJAMBRE retomando función patrulla."
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "¡Has matado al clon equivocado, IA! ¿No puedes desactivar ese condenado ENJAMBRE y encontrar al fugitivo sin más?"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "El Sistema Defensivo ENJAMBRE opera de forma autónoma y utiliza hasta la mitad de mi capacidad de hardware. Operación de búsqueda: denegación de servicio."
+      Title: " %1"
+    Dialog4:
+      Button: " %1"
+      Message: "Número %1, en esta zona del complejo hay almacenes del servicio técnico. Allí encontrarás unidades de memoria para la IA."
+      Title: " %1"
+    Dialog5:
+      Button: " %1"
+      Message: "Esta es la primera página de las especificaciones de ENJAMBRE. Qué principio operativo tan peculiar... Lo comprenderemos mejor si encuentras más páginas."
+      Title: " %1"
+    Dialog6:
+      Button: " %1"
+      Message: "¡Perfecto! Con estas será suficiente. Ahora tienes que encontrar el panel de memoria de la IA para instalar las unidades. Está en el nivel %1. Corre."
+      Title: " %1"
+    Objective: "Encuentra %1 unidades de memoria"
+    Progress: " %1/%2 conseguidas"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Tareas de mantenimiento"
+    VisualName: "Tareas de mantenimiento"
+  MemoryInstall:
+    BlockedStarterPack: "Supera la misión \"Instalación\" para desbloquear el inicio desde el nivel %1"
+    CompleteNotificationText: "Misión finalizada: Instalación"
+    Description: "Instala todas las unidades de memoria en el nivel %1.\n\nHazlo en el orden correcto."
+    Dialog1:
+      Button: " %1"
+      Message: "Instala todas las unidades de memoria en el orden correcto. ¡Es esencial! Si no lo haces, el panel no funcionará."
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "Decepcionante... Intenta instalar las unidades de memoria de nuevo."
+      Title: " %1"
+    Objective: "Instala todas las unidades de memoria en el nivel %1."
+    RewardVisualName: " %1"
+    RightOrder: " %1/5 instalado"
+    StartDialogTitle: "Nueva misión: Instalación"
+    VisualName: "Instalación"
+    WrongOrder: "¡Camino equivocado! Prueba otro."
+  PowerFailures:
+    BlockedStarterPack: "Supera la misión \"Cortes de energía\" para desbloquear el inicio desde el nivel %1"
+    CompleteNotificationText: "Misión finalizada: cortes de energía"
+    Description: "Alcanza el nivel %1"
+    Objective: "Alcanza el nivel %1"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Cortes de energía"
+    VisualName: "Cortes de energía"
+  PowerNodes:
+    CompleteNotificationText: "Misión finalizada: Restitución de escáner"
+    Description: "Encuentra y activa tres nodos de alimentación en los niveles %1, %2 y %3."
+    Dialog1:
+      Button: " %1"
+      Message: "El escáner sigue sin funcionar... ¡Este cacharro es más antiguo que Matusalén! Busca un fusible de seguridad nuevo en el nivel %1 para repararlo."
+      Title: " %1"
+    Objective: "Encuentra y activa tres nodos de alimentación en los niveles %1, %2 y %3."
+    Progress: " %1/%2 conseguidas"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Restitución de escáner"
+    VisualName: "Restitución de escáner"
+  RaresCollector:
+    CompleteNotificationText: "Misión finalizada: Coleccionista de rarezas"
+    Description: "Consigue %1 acrobacias o mejoras excepcionales."
+    Objective: "Consigue %1 acrobacias o mejoras excepcionales."
+    Progress: " %1/%2 conseguidas"
+    ProgressNotificationText: "Progreso de \"Coleccionista de rarezas\":\n%1/%2"
+    RewardVisualName: " 3 paquetes de mejora"
+    StartDialogTitle: "Nueva misión: Coleccionista de rarezas"
+    VisualName: "Coleccionista de rarezas"
+  Reactor:
+    CompleteNotificationText: "Misión finalizada: Refrigeración"
+    Description: "Reactiva la consola de refrigeración en el nivel %1"
+    Dialog1:
+      Button: " %1"
+      Message: "Estoy accediendo al servidor con las llaves que encontraste, pero... ¡solo veo letras y números aleatorios! SAM, analízalos."
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "Puedo buscar patro... ¡Alerta! ¡Alerta!"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "¡Consola de refrigeración del área de mantenimiento desactivada! ¡Niveles de radiación por encima de lo normal! Grupo de bots ENJAMBRE detectados cerca."
+      Title: " %1"
+    Dialog4:
+      Button: " %1"
+      Message: "¡Es el fugitivo! ¡Por fin lo tenemos! Número %1, reactiva la consola de refrigeración. Nivel %2. ¡Rápido!"
+      Title: " %1"
+    Dialog5:
+      Button: " %1"
+      Message: "El clon fugitivo ha vuelto a escapar... ¿Quién le está ayudando? Bueno, ahora eso no importa; tenemos que arreglar el daño causado por su sabotaje."
+      Title: " %1"
+    Dialog6:
+      Button: " %1"
+      Message: "El daño que sufras por radiación puede afectar a futuras generaciones de clones, o incluso deteriorar el propio sistema de clonación."
+      Title: " %1"
+    Dialog7:
+      Button: " %1"
+      Message: "Hay una plataforma de clasificación de residuos cerca que cuenta con un escáner de elementos orgánicos capaz de detectar mutaciones, pero está desconectado."
+      Title: " %1"
+    Dialog8:
+      Button: " %1"
+      Message: "Debemos conectarlo y analizar tu ADN con él. He encontrado tres nodos de alimentación conectados al escáner en los niveles %1, %2 y %3. Búscalos."
+      Title: " %1"
+    Objective: "Reactiva la consola de refrigeración en el nivel %1"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Refrigeración"
+    VisualName: "Refrigeración"
+  ReadjustScanner:
+    CompleteNotificationText: "Misión finalizada: Mantenimiento de escáner"
+    Description: "Encuentra y ajusta las consolas en el nivel %1"
+    Dialog1:
+      Button: " %1"
+      Message: "¡Estupendo! Ahora por fin podremos escanear tu ADN. Ve a la sala de escaneos, en el nivel %1."
+      Title: " %1"
+    Objective: "Encuentra y ajusta las consolas en el nivel %1"
+    ProgressNotification: " %1/%2 ajustadas"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Mantenimiento de escáner"
+    VisualName: "Mantenimiento de escáner"
+  ScannerProcedures:
+    BlockedStarterPack: "Supera la misión \"Procedimientos de escaneo\" para desbloquear el inicio desde el nivel %1"
+    CompleteNotificationText: "Misión finalizada: Procedimientos de escaneo"
+    Description: "Busca la sala de escaneos en el nivel %1."
+    Dialog1:
+      Button: " %1"
+      Message: "Justo como predije: tu ADN precisa de correcciones. Tiene que haber sustancias descontaminantes almacenadas por aquí... ¡Sí! ¡En el nivel %1!"
+      Title: " %1"
+    Objective: "Busca la sala de escaneos en el nivel %1."
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Procedimientos de escaneo"
+    VisualName: "Procedimientos de escaneo"
+  SecureConnection:
+    CompleteNotificationText: "Misión finalizada: Conexión segura"
+    Description: "Activa %1 módulos de comunicación. %2"
+    DescriptionAfterDialog: "Hace falta rango 1%."
+    Dialog1:
+      Button: "OK"
+      Message: "¿Tienes el protocolo avanzado? ¡Bien! ¡Podemos utilizarlo! Bastará con piratearlo un poco."
+      Title: "Consola pirateada"
+    Dialog2:
+      Button: "OK"
+      Message: "¡Perfecto! Ahora puedes interactuar con los módulos de comunicaciones, que sirven para mejorar la señal."
+      Title: "Consola pirateada"
+    Dialog3:
+      Button: "OK"
+      Message: "Ayúdame a activarlos para que pueda colarme en la intranet. Voy a sacarte de aquí. ¡Te lo prometo!"
+      Title: "Consola pirateada"
+    Dialog4:
+      Button: "OK"
+      Message: "Ahora tengo acceso a la base de datos. Vamos a ver. Hay una clave para las salas de mantenimiento en algún lugar del nivel %1 o más allá. ¡Encuéntrala y te llevaré a la superficie!"
+      Title: "Consola pirateada"
+    Dialog5:
+      Button: "OK"
+      Message: "Algo no va bien. Los niveles de alarma del sistema han subido. Parece que no podrás activar el módulo siguiente si tu rango es inferior a 1%."
+      Title: "Consola pirateada"
+    LowRank: "¡Rango bajo!"
+    Objective: "Activa %1 módulos de comunicación usando tu protocolo avanzado."
+    Progress: " %1/%2 activados"
+    ProgressNotificationText: "Progreso de \"Conexión segura\":\n%1/%2"
+    RewardVisualName: " 2 paquetes de mejora"
+    StartDialogTitle: "Nueva misión: Conexión segura"
+    VisualName: "Conexión segura"
+  ServerError:
+    CompleteNotificationText: "Misión finalizada: Fallo de servidores"
+    Description: "Investiga los servidores en los niveles %1-%2."
+    Dialog1:
+      Button: " %1"
+      Message: "¡Un trabajo excelente! Ahora podemos encontrar al clo..."
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "¡Me llamo SAM! Las órdenes que no incluyan el nombre de dispositivo apropiado serán ignoradas. ¡Me llamo SAM! ¡Me llamo SAM!"
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "Qué curioso... Parece que hemos desbloqueado una función oculta de la IA sin pretenderlo."
+      Title: " %1"
+    Dialog4:
+      Button: " %1"
+      Message: "Preparando la búsqueda del fugitivo. Comprobando hardware... Servidor inaccesible detectado."
+      Title: " %1"
+    Dialog5:
+      Button: " %1"
+      Message: "¿Qué? Igual lo ha toqueteado el fugitivo. Pero ¿para qué? Resulta sospechoso... Número %1, investiga los servidores del nivel %2 al %3."
+      Title: " %1"
+    Objective: "Investiga los servidores en los niveles %1-%2."
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Fallo de servidores"
+    VisualName: "Fallo de servidores"
+    WrongServerNotification: "Servidor equivocado. ¡Sigue buscando!"
+  ServiceEntrance:
+    CompleteNotificationText: "Misión finalizada: Entrada de servicio"
+    Description: "Encuentra la clave amarilla y utilízala para abrir la entrada de servicio hacia niveles inferiores"
+    Dialog1:
+      Button: "SIGUIENTE"
+      Message: "Saludos. Seré tu supervisor en el experimento. Me llamo Simon."
+      Title: "Supervisor"
+    Dialog10:
+      Button: " %1"
+      Message: "Aparece en mi mapa, y se puede acceder allí desde el nivel %1. Acude a esa zona, número %2; mientras tanto, yo estudiaré el efecto de que alguien manipule nuestro sistema."
+      Title: " %1"
+    Dialog2:
+      Button: "OK"
+      Message: "He detectado algunas interferencias en el sistema de comunicaciones, pero no les hagas mucho caso, estas instalaciones son bastante antiguas. Céntrate en tu misión."
+      Title: "Supervisor"
+    Dialog3:
+      Button: "OK"
+      Message: "¡I.A., bloquea las puertas! ¡El sujeto no debe escapar del laboratorio!"
+      Title: "Supervisor"
+    Dialog4:
+      Button: "OK"
+      Message: "Acceso denegado. ¡Advertencia! Reinicio del sistema de emergencia en curso."
+      Title: "Laboratorio de I.A."
+    Dialog5:
+      Button: "OK"
+      Message: "Reparado el error de funcionamiento del sistema. Continuación del experimento según lo programado."
+      Title: "Supervisor"
+    Dialog6:
+      Button: " %1"
+      Message: "¡Estamos teniendo cortes de energía! IA, ¿cuál es nuestro estado? Estoy intentando contactar con el cuartel general pero algo bloquea la señal. ¿Quién está haciéndonos esto?"
+      Title: " %1"
+    Dialog7:
+      Button: " %1"
+      Message: "Sujeto número %1: huida de área de contención."
+      Title: " %1"
+    Dialog8:
+      Button: " %1"
+      Message: "Por eso se ha vuelto loco el sistema. Pero es imposible que un clon fugitivo haya causado tantos daños sin ayuda..."
+      Title: " %1"
+    Dialog9:
+      Button: " %1"
+      Message: "Sujeto número %1 fuera de la zona vigilada. Analizando ubicación probable. Resultado: la ubicación más probable del fugitivo es el área de mantenimiento."
+      Title: " %1"
+    Objective: "Encuentra la clave amarilla y utilízala para abrir la entrada de servicio hacia niveles inferiores"
+    RewardVisualName: " 2 paquetes de mejora"
+    StartDialogTitle: "Nueva misión: Entrada de servicio"
+    VisualName: "Entrada de servicio"
+  SwarmEncounter:
+    BlockedStarterPack: "Supera la misión \"Medidas de seguridad\" para desbloquear el inicio desde el nivel %1"
+    CompleteNotificationText: "Misión finalizada: Medidas de seguridad"
+    Description: "Alcanza el nivel %1"
+    Dialog1:
+      Button: " %1"
+      Message: "IA, escanea la zona. Encuentra al fugitivo. No puede estar lejos."
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "Acceso denegado. Esta zona está fuera de servicio y desconectada de mi sistema de monitorización."
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "No me sorprende demasiado... Número %1, tendrás que restablecer el acceso de la IA. El mapa muestra que hay una consola de mandos en el nivel %2. Búscala."
+      Title: " %1"
+    Objective: "Alcanza el nivel %1"
+    RewardVisualName: " %1"
+    StartDialogTitle: "Nueva misión: Medidas de seguridad"
+    VisualName: "Medidas de seguridad"
+  TheContact:
+    BlockedStarterPack: "Supera la misión \"El contacto\" para desbloquear el inicio desde el nivel %1"
+    CompleteNotificationText: "Misión finalizada: El contacto"
+    Description: "Termina una carrera con rango %1 o superior y averigua más acerca de tu nuevo contacto."
+    Dialog1:
+      Button: "¿QUÉ?"
+      Message: "Tareas asignadas finalizadas con éxito. Ahora tienes acceso al nivel 3 y V2FrZSB1cCwgTmVvLi4uDQpUaGUgTWF0cml4IGhhcyB5b3UuLi4NCkZvbGxvdyB0aGUgd2hpdGUgcmFiYml0Lg0K..."
+      Title: "Aviso"
+    Dialog2:
+      Button: "OK"
+      Message: "No ha sido fácil piratear esta consola, así que presta atención. Hay una manera de salir y te voy a ayudar a encontrarla. Me pondré de nuevo en contacto contigo cuando tengas el protocolo avanzado. ¡Ahora corre!"
+      Title: "Consola pirateada"
+    Dialog3:
+      Button: "OK"
+      Message: "...el propósito de este experimento. Esto significa que para obtener el protocolo avanzado has de conseguir el rango %1. Investiga mejoras y combínalas para alcanzar rangos superiores."
+      Title: "Aviso"
+    Objective: "Termina una carrera con rango %1 o superior"
+    Progress: "Rango más alto hasta el momento: %1"
+    ProgressNotificationText: "Nueva marca personal - Rango %1"
+    RewardVisualName: "Protocolo de carrera avanzado"
+    StartDialogTitle: "Nueva misión: El contacto"
+    VisualName: "El contacto"
+  TreasureHunt:
+    CompleteNotificationText: "Misión finalizada: Búsqueda del tesoro"
+    Description: "Consigue %1 acrobacias o mejoras optimizadas."
+    Objective: "Consigue %1 acrobacias o mejoras optimizadas."
+    Progress: " %1/%2 conseguidas"
+    ProgressNotificationText: "Progreso de la \"Búsqueda del tesoro\":\n%1/%2"
+    RewardVisualName: " 2 paquetes de mejora"
+    StartDialogTitle: "Nueva misión: Búsqueda del tesoro"
+    VisualName: "Búsqueda del tesoro"
+  UpgradeEffect:
+    CompleteNotificationText: "Misión finalizada: Prueba de campo"
+    Description: "Prueba tu coraza mejorada"
+    Dialog1:
+      Button: "OK"
+      Message: "¡La muerte no es el final para ti! Aunque pierdas tu antiguo equipamiento y rango, tu conciencia se transfiere a un nuevo clon a través del terminal. Puedes desbloquear nuevas mejoras y acrobacias mientras estás aquí."
+      Title: "Aviso"
+    Objective: "Prueba tu coraza mejorada"
+    RewardVisualName: " 2 paquetes de mejora"
+    StartDialogTitle: "Nueva misión: Prueba de campo"
+    VisualName: "Prueba de campo"
+Records:
+  LevelsPassed: "Niveles iniciados"
+  NewRecord: "Nuevo récord"
+  PersonalRecord: "Récord personal"
+Run:
+  Boosterpack:
+    FloatingText: "Paquete de mejora"
+SoundAnnounce:
+  Belt:
+    GadgetName: "Cinturón"
+    SoundText: "Cinturón descargado"
+  DarknessActivated: "Fallo de energía"
+  Hands:
+    GadgetName: "Guantes"
+    SoundText: "Guantes descargados"
+  Head:
+    GadgetName: "Casco"
+    SoundText: "Casco descargado"
+  Legs:
+    GadgetName: "Botas"
+    SoundText: "Botas descargadas"
+  Quests:
+    KeysIntro:
+      Hacking: "Ejecutando el programa de piratería"
+      Passage: "Paso bloqueado"
+  SubjectActivated: "Sujeto %1 activado"
+  SubjectDestroyed: "Sujeto destruido"
+  Torso:
+    GadgetName: "Coraza"
+    SoundText: "Coraza descargada"
+  TutorStuntLocked1: "Acrobacia desconocida"
+  TutorStuntLocked2: "Programa de recogida de \ninvestigaciones activado"
+  Tutorial: "Comprobación básica del sistema \niniciada"
+  TutorialEndFloor1: "Funciones motoras básicas \ndel sujeto confirmadas"
+StarterPacks:
+  AdvancedProtocol:
+    Description: "El protocolo avanzado te permite empezar desde el nivel %1 y te proporciona nuevo equipamiento"
+    Hands:
+      VisualName: "Guantes reforzados"
+    Head:
+      VisualName: "Casco reforzado"
+    Legs:
+      VisualName: "Botas reforzadas"
+    PackName: "Protocolo avanzado"
+    Torso:
+      VisualName: "Coraza reforzada"
+  AlphaProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "El protocolo técnico te permite empezar desde el nivel %1"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "Protocolo técnico"
+    Torso:
+      VisualName: " %1"
+  BasicProtocol:
+    Description: "El protocolo básico te permite empezar desde el nivel %1"
+    PackName: "Protocolo básico"
+    Torso:
+      VisualName: "Chaqueta de uniforme"
+  BetaProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "El protocolo de ingeniería te permite empezar desde el nivel %1"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "Protocolo de ingeniería"
+    Torso:
+      VisualName: " %1"
+  ExperimentalProtocol:
+    Belt:
+      VisualName: "Cinturón reforzado"
+    Description: "El protocolo experimental te permite empezar desde el nivel %1 y te proporciona nuevo equipamiento"
+    Hands:
+      VisualName: "Guantes reforzados"
+    Head:
+      VisualName: "Casco reforzado"
+    Legs:
+      VisualName: "Botas reforzadas"
+    PackName: "Protocolo experimental"
+    Torso:
+      VisualName: "Coraza reforzada"
+  GammaProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "El protocolo de sistemas te permite empezar desde el nivel %1"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "Protocolo de sistemas"
+    Torso:
+      VisualName: " %1"
+  LastProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "El protocolo de supervisión te permite empezar desde el nivel %1"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "Protocolo de supervisión"
+    Torso:
+      VisualName: " %1"
+  OmegaProtocol:
+    Belt:
+      VisualName: " %1"
+    Description: "El protocolo de seguridad te permite empezar desde el nivel %1"
+    Hands:
+      VisualName: " %1"
+    Head:
+      VisualName: " %1"
+    Legs:
+      VisualName: " %1"
+    PackName: "Protocolo de seguridad"
+    Torso:
+      VisualName: " %1"
+  ResearchRequirements:
+    NoRequirements: "No hay requisitos"
+    ReachFloor_1: "Alcanza el nivel 1"
+    ReachFloor_10: "Alcanza el nivel 10"
+    ReachFloor_11: "Alcanza el nivel 11"
+    ReachFloor_12: "Alcanza el nivel 12"
+    ReachFloor_13: "Alcanza el nivel 13"
+    ReachFloor_14: "Alcanza el nivel 14"
+    ReachFloor_15: "Alcanza el nivel 15"
+    ReachFloor_16: "Alcanza el nivel 16"
+    ReachFloor_17: "Alcanza el nivel 17"
+    ReachFloor_18: "Alcanza el nivel 18"
+    ReachFloor_19: "Alcanza el nivel 19"
+    ReachFloor_2: "Alcanza el nivel 2"
+    ReachFloor_20: "Alcanza el nivel 20"
+    ReachFloor_21: "Alcanza el nivel 21"
+    ReachFloor_22: "Alcanza el nivel 22"
+    ReachFloor_23: "Alcanza el nivel 23"
+    ReachFloor_24: "Alcanza el nivel 24"
+    ReachFloor_25: "Alcanza el nivel 25"
+    ReachFloor_26: "Alcanza el nivel 26"
+    ReachFloor_27: "Alcanza el nivel 27"
+    ReachFloor_28: "Alcanza el nivel 28"
+    ReachFloor_29: "Alcanza el nivel 29"
+    ReachFloor_3: "Alcanza el nivel 3"
+    ReachFloor_30: "Alcanza el nivel 30"
+    ReachFloor_31: "Alcanza el nivel 31"
+    ReachFloor_32: "Alcanza el nivel 32"
+    ReachFloor_33: "Alcanza el nivel 33"
+    ReachFloor_34: "Alcanza el nivel 34"
+    ReachFloor_35: "Alcanza el nivel 35"
+    ReachFloor_36: "Alcanza el nivel 36"
+    ReachFloor_37: "Alcanza el nivel 37"
+    ReachFloor_38: "Alcanza el nivel 38"
+    ReachFloor_39: "Alcanza el nivel 39"
+    ReachFloor_4: "Alcanza el nivel 4"
+    ReachFloor_40: "Alcanza el nivel 40"
+    ReachFloor_5: "Alcanza el nivel 5"
+    ReachFloor_6: "Alcanza el nivel 6"
+    ReachFloor_7: "Alcanza el nivel 7"
+    ReachFloor_8: "Alcanza el nivel 8"
+    ReachFloor_9: "Alcanza el nivel 9"
+  StandardProtocol:
+    Description: "El protocolo estándar te permite empezar desde el nivel %1 y te proporciona nuevo equipamiento"
+    Legs:
+      VisualName: "Botas reforzadas"
+    PackName: "Protocolo estándar"
+    Torso:
+      VisualName: "Coraza reforzada"
+StoryItems:
+  FileKey:
+    Text: "Llave de acceso completo a un servidor"
+    VisualName: "Llave de servidor"
+  Fuze:
+    Text: "El típico fusible de seguridad de ciencia ficción"
+    VisualName: "Fusible de seguridad"
+  MemoryUnit:
+    Text: "Esencial para la calibración de ENJAMBRE"
+    VisualName: "Unidad de memoria"
+  Reagent:
+    Text: "Para corregir ADN"
+    VisualName: "Sustancia descontaminante"
+Stunts:
+  StuntDetails:
+    AboveCar:
+      StuntVisualItemName: "Fold Flip"
+    AboveCar_1:
+      StuntVisualItemName: "Fold Flip"
+      Text: "This trick will give you %1 perfomance points"
+    AboveCar_2:
+      StuntVisualItemName: "Superior Fold Flip"
+      Text: "This trick will give you %1 perfomance points"
+    AboveCar_3:
+      StuntVisualItemName: "Ultimate Fold Flip"
+      Text: "This trick will give you %1 perfomance points"
+    AirBomb:
+      StuntVisualItemName: "Air Bomb"
+    AirBomb_1:
+      StuntVisualItemName: "Air Bomb"
+      Text: "This trick will give you %1 perfomance points"
+    AirBomb_2:
+      StuntVisualItemName: "Superior Air Bomb"
+      Text: "This trick will give you %1 perfomance points"
+    AirBomb_3:
+      StuntVisualItemName: "Ultimate Air Bomb"
+      Text: "This trick will give you %1 perfomance points"
+    AirSpin:
+      StuntVisualItemName: "Air Spin"
+    AirSpin_1:
+      StuntVisualItemName: "Air Spin"
+      Text: " %1"
+    AirSpin_2:
+      StuntVisualItemName: "Superior Air Spin"
+      Text: " %1"
+    AirSpin_3:
+      StuntVisualItemName: "Ultimate Air Spin"
+      Text: " %1"
+    BackFlip:
+      StuntVisualItemName: "Backflip"
+    BackFlip_1:
+      StuntVisualItemName: "Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BackFlip_2:
+      StuntVisualItemName: "Superior Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BackFlip_3:
+      StuntVisualItemName: "Ultimate Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BarJump:
+      StuntVisualItemName: "Bar Backflip"
+    BarJumpSaltoless:
+      StuntVisualItemName: "Bar Jump Saltoless"
+    BarJumpSaltoless_1:
+      StuntVisualItemName: "Bar Jump Saltoless"
+      Text: "This trick will give you %1 perfomance points"
+    BarJumpSaltoless_2:
+      StuntVisualItemName: "Superior Bar Jump Saltoless"
+      Text: "This trick will give you %1 perfomance points"
+    BarJumpSaltoless_3:
+      StuntVisualItemName: "Ultimate Bar Jump Saltoless"
+      Text: "This trick will give you %1 perfomance points"
+    BarJump_1:
+      StuntVisualItemName: "Bar Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BarJump_2:
+      StuntVisualItemName: "Superior Bar Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BarJump_3:
+      StuntVisualItemName: "Ultimate Bar Backflip"
+      Text: "This trick will give you %1 perfomance points"
+    BarrelVault:
+      StuntVisualItemName: "Barrel Vault"
+    BarrelVault_1:
+      StuntVisualItemName: "Barrel Vault"
+      Text: "This trick will give you %1 perfomance points"
+    BarrelVault_2:
+      StuntVisualItemName: "Superior Barrel Vault"
+      Text: "This trick will give you %1 perfomance points"
+    BarrelVault_3:
+      StuntVisualItemName: "Ultimate Barrel Vault"
+      Text: "This trick will give you %1 perfomance points"
+    BoomBoomSh:
+      StuntVisualItemName: "Boom Boom Sh"
+    BoomBoomSh_1:
+      StuntVisualItemName: "Boom Boom Sh"
+      Text: " %1"
+    BoomBoomSh_2:
+      StuntVisualItemName: "Superior Boom Boom Sh"
+      Text: " %1"
+    BoomBoomSh_3:
+      StuntVisualItemName: "Ultimate Boom Boom Sh"
+      Text: " %1"
+    Bullet:
+      StuntVisualItemName: "Bullet"
+    Bullet_1:
+      StuntVisualItemName: "Bullet"
+      Text: " %1"
+    Bullet_2:
+      StuntVisualItemName: "Superior Bullet"
+      Text: " %1"
+    Bullet_3:
+      StuntVisualItemName: "Ultimate Bullet"
+      Text: " %1"
+    CheatGainer:
+      StuntVisualItemName: "Cheat Gainer"
+    CheatGainer_1:
+      StuntVisualItemName: "Cheat Gainer"
+      Text: " %1"
+    CheatGainer_2:
+      StuntVisualItemName: "Superior Cheat Gainer"
+      Text: " %1"
+    CheatGainer_3:
+      StuntVisualItemName: "Ultimate Cheat Gainer"
+      Text: " %1"
+    CoolSwing:
+      StuntVisualItemName: "Cool Swing"
+    CoolSwing_1:
+      StuntVisualItemName: "Cool Swing"
+      Text: "This trick will give you %1 perfomance points"
+    CoolSwing_2:
+      StuntVisualItemName: "Superior Cool Swing"
+      Text: "This trick will give you %1 perfomance points"
+    CoolSwing_3:
+      StuntVisualItemName: "Ultimate Cool Swing"
+      Text: "This trick will give you %1 perfomance points"
+    DashToFrontflip:
+      StuntVisualItemName: "Dash to Frontflip"
+    DashToFrontflip_1:
+      StuntVisualItemName: "Dash to Frontflip"
+      Text: "This trick will give you %1 perfomance points"
+    DashToFrontflip_2:
+      StuntVisualItemName: "Superior Dash to Frontflip"
+      Text: "This trick will give you %1 perfomance points"
+    DashToFrontflip_3:
+      StuntVisualItemName: "Ultimate Dash to Frontflip"
+      Text: "This trick will give you %1 perfomance points"
+    DashVault:
+      StuntVisualItemName: "Dash Vault"
+    DashVault_1:
+      StuntVisualItemName: "Dash Vault"
+      Text: "This trick will give you %1 perfomance points"
+    DashVault_2:
+      StuntVisualItemName: "Superior Dash Vault"
+      Text: "This trick will give you %1 perfomance points"
+    DashVault_3:
+      StuntVisualItemName: "Ultimate Dash Vault"
+      Text: "This trick will give you %1 perfomance points"
+    Default:
+      Text: "This trick will give you %2 perfomance points"
+    DiveDown:
+      StuntVisualItemName: "Dive Down"
+    DiveDown_1:
+      StuntVisualItemName: "Dive Down"
+      Text: " %1"
+    DiveDown_2:
+      StuntVisualItemName: "Superior Dive Down"
+      Text: " %1"
+    DiveDown_3:
+      StuntVisualItemName: "Ultimate Dive Down"
+      Text: " %1"
+    DiveRoll:
+      StuntVisualItemName: "Dive Roll"
+    DiveRoll_1:
+      StuntVisualItemName: "Dive Roll"
+      Text: " %1"
+    DiveRoll_2:
+      StuntVisualItemName: "Superior Dive Roll"
+      Text: " %1"
+    DiveRoll_3:
+      StuntVisualItemName: "Ultimate Dive Roll"
+      Text: " %1"
+    DoubleBack:
+      StuntVisualItemName: "Double Back"
+    DoubleBack_1:
+      StuntVisualItemName: "Double Back"
+      Text: " %1"
+    DoubleBack_2:
+      StuntVisualItemName: "Superior Double Back"
+      Text: " %1"
+    DoubleBack_3:
+      StuntVisualItemName: "Ultimate Double Back"
+      Text: " %1"
+    DoubleJumpRoll:
+      StuntVisualItemName: "Double Jump Roll"
+    DoubleJumpRoll_1:
+      StuntVisualItemName: "Double Jump Roll"
+      Text: " %1"
+    DoubleJumpRoll_2:
+      StuntVisualItemName: "Superior Double Jump Roll"
+      Text: " %1"
+    DoubleJumpRoll_3:
+      StuntVisualItemName: "Ultimate Double Jump Roll"
+      Text: " %1"
+    DoubleKong:
+      StuntVisualItemName: "Double Kong"
+    DoubleKong_1:
+      StuntVisualItemName: "Double Kong"
+      Text: " %1"
+    DoubleKong_2:
+      StuntVisualItemName: "Superior Double Kong"
+      Text: " %1"
+    DoubleKong_3:
+      StuntVisualItemName: "Ultimate Double Kong"
+      Text: " %1"
+    DoubleSpinToRoll_1:
+      StuntVisualItemName: "Double Spin To Roll"
+      Text: " %1"
+    DoubleSpinToRoll_2:
+      StuntVisualItemName: "Superior Double Spin To Roll"
+      Text: " %1"
+    DoubleSpinToRoll_3:
+      StuntVisualItemName: "Ultimate Double Spin To Roll"
+      Text: " %1"
+    DoubleSpinVault:
+      StuntVisualItemName: "Double Spin Vault"
+    DoubleSpinVault_1:
+      StuntVisualItemName: "Double Spin Vault"
+      Text: " %1"
+    DoubleSpinVault_2:
+      StuntVisualItemName: "Superior Double Spin Vault"
+      Text: " %1"
+    DoubleSpinVault_3:
+      StuntVisualItemName: "Ultimate Double Spin Vault"
+      Text: " %1"
+    FlippingSwing:
+      StuntVisualItemName: "Flipping Swing"
+    FlippingSwing_1:
+      StuntVisualItemName: "Flipping Swing"
+      Text: " %1"
+    FlippingSwing_2:
+      StuntVisualItemName: "Superior Flipping Swing"
+      Text: " %1"
+    FlippingSwing_3:
+      StuntVisualItemName: "Ultimate Flipping Swing"
+      Text: " %1"
+    FlyingArrow:
+      StuntVisualItemName: "Flying Arrow"
+    FlyingArrow_1:
+      StuntVisualItemName: "Flying Arrow"
+      Text: " %1"
+    FlyingArrow_2:
+      StuntVisualItemName: "Superior Flying Arrow"
+      Text: " %1"
+    FlyingArrow_3:
+      StuntVisualItemName: "Ultimate Flying Arrow"
+      Text: " %1"
+    FrontFlipTwoLegs:
+      StuntVisualItemName: "Straight Legs Flip"
+    FrontFlipTwoLegs_1:
+      StuntVisualItemName: "Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    FrontFlipTwoLegs_2:
+      StuntVisualItemName: "Superior Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    FrontFlipTwoLegs_3:
+      StuntVisualItemName: "Ultimate Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    FrontflipLegsUp:
+      StuntVisualItemName: "Frontflip Legs Up"
+    FrontflipLegsUp_1:
+      StuntVisualItemName: "Frontflip Legs Up"
+      Text: " %1"
+    FrontflipLegsUp_2:
+      StuntVisualItemName: "Superior Frontflip Legs Up"
+      Text: " %1"
+    FrontflipLegsUp_3:
+      StuntVisualItemName: "Ultimate Frontflip Legs Up"
+      Text: " %1"
+    GateVault:
+      StuntVisualItemName: "Gate Vault"
+    GateVault_1:
+      StuntVisualItemName: "Gate Vault"
+      Text: " %1"
+    GateVault_2:
+      StuntVisualItemName: "Superior Gate Vault"
+      Text: " %1"
+    GateVault_3:
+      StuntVisualItemName: "Ultimate Gate Vault"
+      Text: " %1"
+    HandSpring:
+      StuntVisualItemName: "Hand Spring"
+    HandSpring_1:
+      StuntVisualItemName: "Hand Spring"
+      Text: " %1"
+    HandSpring_2:
+      StuntVisualItemName: "Superior Hand Spring"
+      Text: " %1"
+    HandSpring_3:
+      StuntVisualItemName: "Ultimate Hand Spring"
+      Text: " %1"
+    HandspringToRoll:
+      StuntVisualItemName: "Handspring To Roll"
+    HandspringToRoll_1:
+      StuntVisualItemName: "Handspring To Roll"
+      Text: " %1"
+    HandspringToRoll_2:
+      StuntVisualItemName: "Superior Handspring To Roll"
+      Text: " %1"
+    HandspringToRoll_3:
+      StuntVisualItemName: "Ultimate Handspring To Roll"
+      Text: " %1"
+    JumpDownRoll:
+      StuntVisualItemName: "Jump Down Roll"
+    JumpDownRoll_1:
+      StuntVisualItemName: "Jump Down Roll"
+      Text: " %1"
+    JumpDownRoll_2:
+      StuntVisualItemName: "Superior Jump Down Roll"
+      Text: " %1"
+    JumpDownRoll_3:
+      StuntVisualItemName: "Ultimate Jump Down Roll"
+      Text: " %1"
+    JumpObstacle:
+      StuntVisualItemName: "Jump Obstacle"
+    JumpObstacle_1:
+      StuntVisualItemName: "Jump Obstacle"
+      Text: "This trick will give you %1 perfomance points"
+    JumpObstacle_2:
+      StuntVisualItemName: "Superior Jump Obstacle"
+      Text: "This trick will give you %1 perfomance points"
+    JumpObstacle_3:
+      StuntVisualItemName: "Ultimate Jump Obstacle"
+      Text: "This trick will give you %1 perfomance points"
+    JumpSpinVault:
+      StuntVisualItemName: "Jump Spin Vault"
+    JumpSpinVault_1:
+      StuntVisualItemName: "Jump Spin Vault"
+      Text: " %1"
+    JumpSpinVault_2:
+      StuntVisualItemName: "Superior Jump Spin Vault"
+      Text: " %1"
+    JumpSpinVault_3:
+      StuntVisualItemName: "Ultimate Jump Spin Vault"
+      Text: " %1"
+    JumpTumble:
+      StuntVisualItemName: "Jump Tumble"
+    JumpTumble_1:
+      StuntVisualItemName: "Jump Tumble"
+      Text: "This trick will give you %1 perfomance points"
+    JumpTumble_2:
+      StuntVisualItemName: "Superior Jump Tumble"
+      Text: "This trick will give you %1 perfomance points"
+    JumpTumble_3:
+      StuntVisualItemName: "Ultimate Jump Tumble"
+      Text: "This trick will give you %1 perfomance points"
+    JumpWheel:
+      StuntVisualItemName: "Jump Wheel"
+    JumpWheel_1:
+      StuntVisualItemName: "Jump Wheel"
+      Text: "This trick will give you %1 perfomance points"
+    JumpWheel_2:
+      StuntVisualItemName: "Superior Jump Wheel"
+      Text: "This trick will give you %1 perfomance points"
+    JumpWheel_3:
+      StuntVisualItemName: "Ultimate Jump Wheel"
+      Text: "This trick will give you %1 perfomance points"
+    KingKongJumpoff:
+      StuntVisualItemName: "King Kong Jumpoff"
+    KingKongJumpoff_1:
+      StuntVisualItemName: "King Kong Jumpoff"
+      Text: " %1"
+    KingKongJumpoff_2:
+      StuntVisualItemName: "Superior King Kong Jumpoff"
+      Text: " %1"
+    KingKongJumpoff_3:
+      StuntVisualItemName: "Ultimate King Kong Jumpoff"
+      Text: " %1"
+    KingKongToBend:
+      StuntVisualItemName: "King Kong To Bend"
+    KingKongToBend_1:
+      StuntVisualItemName: "King Kong To Bend"
+      Text: " %1"
+    KingKongToBend_2:
+      StuntVisualItemName: "Superior King Kong To Bend"
+      Text: " %1"
+    KingKongToBend_3:
+      StuntVisualItemName: "Ultimate King Kong To Bend"
+      Text: " %1"
+    KingKongToFlip:
+      StuntVisualItemName: "King Kong To Flip"
+    KingKongToFlip_1:
+      StuntVisualItemName: "King Kong To Flip"
+      Text: " %1"
+    KingKongToFlip_2:
+      StuntVisualItemName: "Superior King Kong To Flip"
+      Text: " %1"
+    KingKongToFlip_3:
+      StuntVisualItemName: "Ultimate King Kong To Flip"
+      Text: " %1"
+    LongCircle:
+      StuntVisualItemName: "Long Circle"
+    LongCircle_1:
+      StuntVisualItemName: "Long Circle"
+      Text: " %1"
+    LongCircle_2:
+      StuntVisualItemName: "Superior Long Circle"
+      Text: " %1"
+    LongCircle_3:
+      StuntVisualItemName: "Ultimate Long Circle"
+      Text: " %1"
+    LongJumpToBarrel:
+      StuntVisualItemName: "Long Jump To Barrel"
+    LongJumpToBarrel_1:
+      StuntVisualItemName: "Long Jump To Barrel"
+      Text: " %1"
+    LongJumpToBarrel_2:
+      StuntVisualItemName: "Superior Long Jump To Barrel"
+      Text: " %1"
+    LongJumpToBarrel_3:
+      StuntVisualItemName: "Ultimate Long Jump To Barrel"
+      Text: " %1"
+    MonkeyToBackflip:
+      StuntVisualItemName: "Monkey To Backflip"
+    MonkeyToBackflip_1:
+      StuntVisualItemName: "Monkey To Backflip"
+      Text: " %1"
+    MonkeyToBackflip_2:
+      StuntVisualItemName: "Superior Monkey To Backflip"
+      Text: " %1"
+    MonkeyToBackflip_3:
+      StuntVisualItemName: "Ultimate Monkey To Backflip"
+      Text: " %1"
+    MonkeyToBomb:
+      StuntVisualItemName: "Monkey To Bomb"
+    MonkeyToBomb_1:
+      StuntVisualItemName: "Monkey To Bomb"
+      Text: " %1"
+    MonkeyToBomb_2:
+      StuntVisualItemName: "Superior Monkey To Bomb"
+      Text: " %1"
+    MonkeyToBomb_3:
+      StuntVisualItemName: "Ultimate Monkey To Bomb"
+      Text: " %1"
+    MonkeyVault:
+      StuntVisualItemName: "Monkey Vault"
+    MonkeyVault_1:
+      StuntVisualItemName: "Monkey Vault"
+      Text: "This trick will give you %1 perfomance points"
+    MonkeyVault_2:
+      StuntVisualItemName: "Superior Monkey Vault"
+      Text: "This trick will give you %1 perfomance points"
+    MonkeyVault_3:
+      StuntVisualItemName: "Ultimate Monkey Vault"
+      Text: "This trick will give you %1 perfomance points"
+    NoStunt: "Unknown Trick!"
+    ObstacleFrontflip:
+      StuntVisualItemName: "Obstacle Front Flip"
+    ObstacleFrontflip_1:
+      StuntVisualItemName: "Obstacle Front Flip"
+      Text: "This trick will give you %1 perfomance points"
+    ObstacleFrontflip_2:
+      StuntVisualItemName: "Superior Obstacle Front Flip"
+      Text: "This trick will give you %1 perfomance points"
+    ObstacleFrontflip_3:
+      StuntVisualItemName: "Ultimate Obstacle Front Flip"
+      Text: "This trick will give you %1 perfomance points"
+    RailFlipVault:
+      StuntVisualItemName: "Railflip Vault"
+    RailFlipVault_1:
+      StuntVisualItemName: "Railflip Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RailFlipVault_2:
+      StuntVisualItemName: "Superior Railflip Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RailFlipVault_3:
+      StuntVisualItemName: "Ultimate Railflip Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ReverseVault:
+      StuntVisualItemName: "Reverse Vault"
+    ReverseVault_1:
+      StuntVisualItemName: "Reverse Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ReverseVault_2:
+      StuntVisualItemName: "Superior Reverse Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ReverseVault_3:
+      StuntVisualItemName: "Ultimate Reverse Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RocketVault:
+      StuntVisualItemName: "Rocket Vault"
+    RocketVault_1:
+      StuntVisualItemName: "Rocket Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RocketVault_2:
+      StuntVisualItemName: "Superior Rocket Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RocketVault_3:
+      StuntVisualItemName: "Ultimate Rocket Vault"
+      Text: "This trick will give you %1 perfomance points"
+    RollForward:
+      StuntVisualItemName: "Roll Forward"
+    RollForward_1:
+      StuntVisualItemName: "Roll Forward"
+      Text: " %1"
+    RollForward_2:
+      StuntVisualItemName: "Superior Roll Forward"
+      Text: " %1"
+    RollForward_3:
+      StuntVisualItemName: "Ultimate Roll Forward"
+      Text: " %1"
+    RollToStraightLegsFlip:
+      StuntVisualItemName: "Roll To Straight Legs"
+    RollToStraightLegsFlip_1:
+      StuntVisualItemName: "Roll To Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    RollToStraightLegsFlip_2:
+      StuntVisualItemName: "Superior Roll To Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    RollToStraightLegsFlip_3:
+      StuntVisualItemName: "Ultimate Roll To Straight Legs Flip"
+      Text: "This trick will give you %1 perfomance points"
+    ScrewDriver:
+      StuntVisualItemName: "Screwdriver"
+    ScrewDriver_1:
+      StuntVisualItemName: "Screwdriver"
+      Text: "This trick will give you %1 perfomance points"
+    ScrewDriver_2:
+      StuntVisualItemName: "Superior Screwdriver"
+      Text: "This trick will give you %1 perfomance points"
+    ScrewDriver_3:
+      StuntVisualItemName: "Ultimate Screwdriver"
+      Text: "This trick will give you %1 perfomance points"
+    SideFlip:
+      StuntVisualItemName: "Side Flip"
+    SideFlip_1:
+      StuntVisualItemName: "Side Flip"
+      Text: "This trick will give you %1 perfomance points"
+    SideFlip_2:
+      StuntVisualItemName: "Superior Side Flip"
+      Text: "This trick will give you %1 perfomance points"
+    SideFlip_3:
+      StuntVisualItemName: "Ultimate Side Flip"
+      Text: "This trick will give you %1 perfomance points"
+    Sidebomb:
+      StuntVisualItemName: "Sidebomb"
+    Sidebomb_1:
+      StuntVisualItemName: "Sidebomb"
+      Text: " %1"
+    Sidebomb_2:
+      StuntVisualItemName: "Superior Sidebomb"
+      Text: " %1"
+    Sidebomb_3:
+      StuntVisualItemName: "Ultimate Sidebomb"
+      Text: " %1"
+    SlowSpin:
+      StuntVisualItemName: "Slow Spin"
+    SlowSpin_1:
+      StuntVisualItemName: "Slow Spin"
+      Text: " %1"
+    SlowSpin_2:
+      StuntVisualItemName: "Superior Slow Spin"
+      Text: " %1"
+    SlowSpin_3:
+      StuntVisualItemName: "Ultimate Slow Spin"
+      Text: " %1"
+    SpinBicycle:
+      StuntVisualItemName: "Spin Bicycle"
+    SpinBicycle_1:
+      StuntVisualItemName: "Spin Bicycle"
+      Text: " %1"
+    SpinBicycle_2:
+      StuntVisualItemName: "Superior Spin Bicycle"
+      Text: " %1"
+    SpinBicycle_3:
+      StuntVisualItemName: "Ultimate Spin Bicycle"
+      Text: " %1"
+    SpinVault:
+      StuntVisualItemName: "Spin Vault"
+    SpinVault_1:
+      StuntVisualItemName: "Spin Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SpinVault_2:
+      StuntVisualItemName: "Superior Spin Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SpinVault_3:
+      StuntVisualItemName: "Ultimate Spin Vault"
+      Text: "This trick will give you %1 perfomance points"
+    Spin:
+      StuntVisualItemName: "Spin"
+    Spin_1:
+      StuntVisualItemName: "Spin"
+      Text: " %1"
+    Spin_2:
+      StuntVisualItemName: "Superior Spin"
+      Text: " %1"
+    Spin_3:
+      StuntVisualItemName: "Ultimate Spin"
+      Text: " %1"
+    SpinningVault:
+      StuntVisualItemName: "Spinning Vault"
+    SpinningVault_1:
+      StuntVisualItemName: "Spinning Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SpinningVault_2:
+      StuntVisualItemName: "Superior Spinning Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SpinningVault_3:
+      StuntVisualItemName: "Ultimate Spinning Vault"
+      Text: "This trick will give you %1 perfomance points"
+    SplitOne:
+      StuntVisualItemName: "Split"
+    SplitOne_1:
+      StuntVisualItemName: "Split"
+      Text: "This trick will give you %1 perfomance points"
+    SplitOne_2:
+      StuntVisualItemName: "Superior Split"
+      Text: "This trick will give you %1 perfomance points"
+    SplitOne_3:
+      StuntVisualItemName: "Ultimate Split"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow:
+      StuntVisualItemName: "Swallow"
+    Swallow400:
+      StuntVisualItemName: "Swallow"
+    Swallow400_1:
+      StuntVisualItemName: "Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow400_2:
+      StuntVisualItemName: "Superior Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow400_3:
+      StuntVisualItemName: "Ultimate Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow_1:
+      StuntVisualItemName: "Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow_2:
+      StuntVisualItemName: "Superior Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swallow_3:
+      StuntVisualItemName: "Ultimate Swallow"
+      Text: "This trick will give you %1 perfomance points"
+    Swing:
+      StuntVisualItemName: "Swing"
+    Swing_1:
+      StuntVisualItemName: "Swing"
+      Text: " %1"
+    Swing_2:
+      StuntVisualItemName: "Superior Swing"
+      Text: " %1"
+    Swing_3:
+      StuntVisualItemName: "Ultimate Swing"
+      Text: " %1"
+    Text: "This trick will give you %1 perfomance points"
+    ThiefVault:
+      StuntVisualItemName: "Thief Vault"
+    ThiefVault_1:
+      StuntVisualItemName: "Thief Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ThiefVault_2:
+      StuntVisualItemName: "Superior Thief Vault"
+      Text: "This trick will give you %1 perfomance points"
+    ThiefVault_3:
+      StuntVisualItemName: "Ultimate Thief Vault"
+      Text: "This trick will give you %1 perfomance points"
+    TripleHit:
+      StuntVisualItemName: "Triple Hit"
+    TripleHit_1:
+      StuntVisualItemName: "Triple Hit"
+      Text: "This trick will give you %1 perfomance points"
+    TripleHit_2:
+      StuntVisualItemName: "Superior Triple Hit"
+      Text: "This trick will give you %1 perfomance points"
+    TripleHit_3:
+      StuntVisualItemName: "Ultimate Triple Hit"
+      Text: "This trick will give you %1 perfomance points"
+    TripleSwing:
+      StuntVisualItemName: "Triple Swing"
+    TripleSwing_1:
+      StuntVisualItemName: "Triple Swing"
+      Text: " %1"
+    TripleSwing_2:
+      StuntVisualItemName: "Superior Triple Swing"
+      Text: " %1"
+    TripleSwing_3:
+      StuntVisualItemName: "Ultimate Triple Swing"
+      Text: " %1"
+    TripleTrickToSwallow:
+      StuntVisualItemName: "Triple Trick To Swallow"
+    TripleTrickToSwallow_1:
+      StuntVisualItemName: "Triple Trick To Swallow"
+      Text: " %1"
+    TripleTrickToSwallow_2:
+      StuntVisualItemName: "Superior Triple Trick To Swallow"
+      Text: " %1"
+    TripleTrickToSwallow_3:
+      StuntVisualItemName: "Ultimate Triple Trick To Swallow"
+      Text: " %1"
+    TurnVault:
+      StuntVisualItemName: "Turn Vault"
+    TurnVault_1:
+      StuntVisualItemName: "Turn Vault"
+      Text: " %1"
+    TurnVault_2:
+      StuntVisualItemName: "Superior Turn Vault"
+      Text: " %1"
+    TurnVault_3:
+      StuntVisualItemName: "Ultimate Turn Vault"
+      Text: " %1"
+    Underbar:
+      StuntVisualItemName: "Underbar"
+    Underbar_1:
+      StuntVisualItemName: "Underbar"
+      Text: "This trick will give you %1 perfomance points"
+    Underbar_2:
+      StuntVisualItemName: "Superior Underbar"
+      Text: "This trick will give you %1 perfomance points"
+    Underbar_3:
+      StuntVisualItemName: "Ultimate Underbar"
+      Text: "This trick will give you %1 perfomance points"
+    VertVault:
+      StuntVisualItemName: "Vert Vault"
+    VertVault_1:
+      StuntVisualItemName: "Vert Vault"
+      Text: " %1"
+    VertVault_2:
+      StuntVisualItemName: "Superior Vert Vault"
+      Text: " %1"
+    VertVault_3:
+      StuntVisualItemName: "Ultimate Vert Vault"
+      Text: " %1"
+    WallBackRoll:
+      StuntVisualItemName: "Wall Back Roll"
+    WallBackRoll_1:
+      StuntVisualItemName: "Wall Back Roll"
+      Text: " %1"
+    WallBackRoll_2:
+      StuntVisualItemName: "Superior Wall Back Roll"
+      Text: " %1"
+    WallBackRoll_3:
+      StuntVisualItemName: "Ultimate Wall Back Roll"
+      Text: " %1"
+    WallCling:
+      StuntVisualItemName: "Wall Cling"
+    WallCling_1:
+      StuntVisualItemName: "Wall Cling"
+      Text: " %1"
+    WallCling_2:
+      StuntVisualItemName: "Superior Wall Cling"
+      Text: " %1"
+    WallCling_3:
+      StuntVisualItemName: "Ultimate Wall Cling"
+      Text: " %1"
+    WallHop:
+      StuntVisualItemName: "Wall Hop"
+    WallHop360:
+      StuntVisualItemName: "Ultimate Wall Hop 360"
+    WallHop360_1:
+      StuntVisualItemName: "Ultimate Wall Hop 360"
+      Text: " %1"
+    WallHop360_2:
+      StuntVisualItemName: "Ultimate Wall Hop 360"
+      Text: " %1"
+    WallHop360_3:
+      StuntVisualItemName: "Ultimate Wall Hop 360"
+      Text: " %1"
+    WallHop_1:
+      StuntVisualItemName: "Wall Hop"
+      Text: " %1"
+    WallHop_2:
+      StuntVisualItemName: "Superior Wall Hop"
+      Text: " %1"
+    WallHop_3:
+      StuntVisualItemName: "Ultimate Wall Hop"
+      Text: " %1"
+    WallSpeedVault:
+      StuntVisualItemName: "Wall Speed Vault"
+    WallSpeedVault_1:
+      StuntVisualItemName: "Wall Speed Vault"
+      Text: " %1"
+    WallSpeedVault_2:
+      StuntVisualItemName: "Superior Wall Speed Vault"
+      Text: " %1"
+    WallSpeedVault_3:
+      StuntVisualItemName: "Ultimate Wall Speed Vault"
+      Text: " %1"
+    Webster:
+      StuntVisualItemName: "Webster"
+    WebsterWithSalto:
+      StuntVisualItemName: "Webster With Salto"
+    WebsterWithSalto_1:
+      StuntVisualItemName: "Webster With Salto"
+      Text: "This trick will give you %1 perfomance points"
+    WebsterWithSalto_2:
+      StuntVisualItemName: "Superior Webster With Salto"
+      Text: "This trick will give you %1 perfomance points"
+    WebsterWithSalto_3:
+      StuntVisualItemName: "Ultimate Webster With Salto"
+      Text: "This trick will give you %1 perfomance points"
+    Webster_1:
+      StuntVisualItemName: "Webster"
+      Text: "This trick will give you %1 perfomance points"
+    Webster_2:
+      StuntVisualItemName: "Superior Webster"
+      Text: "This trick will give you %1 perfomance points"
+    Webster_3:
+      StuntVisualItemName: "Ultimate Webster"
+      Text: "This trick will give you %1 perfomance points"
+Tutorial:
+  Activator:
+    Text: "Desliza hacia arriba\n\npara activar"
+  BoosterPack:
+    Dialog:
+      Button: "OK"
+      Message: "¡Tienes un paquete de mejora! Es otra manera de conseguir mejoras y acrobacias. Abrámoslo."
+      Title: "Aviso"
+  FirstFloor:
+    Mobile:
+      Accelerate:
+        Line1: "Desliza hacia la derecha"
+        Line2: "para acelerar"
+      Jump:
+        Line1: "Desliza hacia arriba"
+        Line2: "para saltar"
+      Slide:
+        Line1: "Desliza hacia abajo"
+        Line2: "para deslizarte"
+      WallJumpLeft:
+        Line1: "Desliza"
+        Line2: "para saltar a la izquierda"
+      WallJumpRight:
+        Line1: "Desliza"
+        Line2: "para saltar a la derecha"
+    PC:
+      Accelerate:
+        Line1: "Pulsa"
+        Line2: "para acelerar"
+      Jump:
+        Line1: "Pulsa"
+        Line2: "para saltar"
+      Slide:
+        Line1: "Pulsa"
+        Line2: "para deslizarte"
+      WallJumpLeft:
+        Line1: "Pulsa"
+        Line2: "para saltar a la izquierda"
+      WallJumpRight:
+        Line1: "Pulsa"
+        Line2: "para saltar a la derecha"
+  Missions:
+    Dialog1:
+      Button: " %1"
+      Message: "¡Finaliza las misiones para obtener puntos adicionales en cada nivel!"
+      Title: " %1"
+    Dialog2:
+      Button: " %1"
+      Message: "¡Desbloquea estas recompensas al finalizar las misiones! Las recompensas pueden ofrecer bonificaciones para la próxima carrera o mejoras permanentes de tu equipamiento."
+      Title: " %1"
+  Reroll:
+    Dialog1:
+      Button: " %1"
+      Message: "Dispones de mejoras más adecuadas en tu archivo. ¡Te voy a enseñar cómo acceder a él!"
+      Title: " %1"
+    Dialog2:
+      Button: "Obtener fichas"
+      Message: "No siempre se obtiene el resultado esperado al primer intento. Te voy a dar %1 fichas de datos para que puedas probar de nuevo."
+      Title: " %1"
+    Dialog3:
+      Button: " %1"
+      Message: "¡Mucho mejor! Las mejoras como estas están pensadas para usarse juntas. Prueba y encuentra las combinaciones más útiles."
+      Title: " %1"

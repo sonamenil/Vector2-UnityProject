@@ -1,0 +1,45 @@
+Charges:
+  Target: NewItem
+  ItemsCount: '?getBalance[StarterPacks, ?getString[ProtocolName], Ranks,Rewards,<Rank>,Charges]'
+  CounterActions: {OnEnter: [{Namespace: ChargesGenerator, Name: GadgetCharged, Type: Assign, Value: 0}]}
+  NoShuffle: 1
+  BoxContent:
+    TryChooseDischarged:
+      Select: {Type: 'Items', Root: 'Equipped', Random: 1}
+      BoxContent:
+        ISeeDischargedThing:
+          Conditions: 
+          - {ConditionType: GroupExists, Item: "?getString[SelectKey]", Group: "ST_GadgetBase"}
+          - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[SelectKey], ST_GadgetBase, ST_ChargesCurrent]', '0']}
+          StringActions: {OnEnter: [{Name: GadgetName, Value: "?getString[SelectKey]"}]}
+          CounterActions: {OnEnter: [{Name: 'GadgetCharged', Namespace: ChargesGenerator, Type: Assign, Value: 1}]}
+          BreakSelect: 1
+    ChooseRandom:
+      Conditions: [{ConditionType: CounterRange, Namespace: ChargesGenerator, Name: GadgetCharged, Equal: 0}]
+      Set: 1
+      BoxContent:
+        GadgetHead:
+          Weight: '?getBalance[GadgetChargerWeights,GadgetHead,?getItemAttribute[GadgetHead,ST_GadgetBase,ST_ChargesCurrent]]'
+          Conditions: [{ConditionType: GroupExists, Item: "GadgetHead"}]
+          StringActions: {OnEnter: [{Name: GadgetName, Value: "GadgetHead"}]}
+        GadgetHands:
+          Weight: '?getBalance[GadgetChargerWeights,GadgetHands,?getItemAttribute[GadgetHands,ST_GadgetBase,ST_ChargesCurrent]]'
+          Conditions: [{ConditionType: GroupExists, Item: "GadgetHands"}]
+          StringActions: {OnEnter: [{Name: GadgetName, Value: "GadgetHands"}]}
+        GadgetTorso: 
+          Weight: '?getBalance[GadgetChargerWeights,GadgetTorso,?getItemAttribute[GadgetTorso,ST_GadgetBase,ST_ChargesCurrent]]'
+          Conditions: [{ConditionType: GroupExists, Item: "GadgetTorso"}]
+          StringActions: {OnEnter: [{Name: GadgetName, Value: "GadgetTorso"}]}
+        GadgetLegs:
+          Weight: '?getBalance[GadgetChargerWeights,GadgetLegs,?getItemAttribute[GadgetLegs,ST_GadgetBase,ST_ChargesCurrent]]'
+          Conditions: [{ConditionType: GroupExists, Item: "GadgetLegs"}]
+          StringActions: {OnEnter: [{Name: GadgetName, Value: "GadgetLegs"}]}
+        GadgetBelt:
+          Weight: '?getBalance[GadgetChargerWeights,GadgetBelt,?getItemAttribute[GadgetBelt,ST_GadgetBase,ST_ChargesCurrent]]'
+          Conditions: [{ConditionType: GroupExists, Item: "GadgetBelt"}]
+          StringActions: {OnEnter: [{Name: GadgetName, Value: "GadgetBelt"}]}
+    Implement:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: '?getString[GadgetName]', ST_VisualItemName: '', ST_ItemType: 'Gadget'}
+        ST_GadgetBase: {ST_ChargesCurrent: '{?getItemAttribute[?getString[GadgetName],ST_GadgetBase,ST_ChargesCurrent] + 1}'}
+        ST_MyGadgets: {}

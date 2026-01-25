@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 8dd8a143948fbea4b82f5afde88508af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5067999005355474841
+    second: walls.pipeline_hight_pressure_blue_0
+  - first:
+      213: 2120910925431727386
+    second: walls.pipeline_hight_pressure_blue_1
+  - first:
+      213: -91462504149684988
+    second: walls.pipeline_hight_pressure_blue_2
+  - first:
+      213: 2650297027594409981
+    second: walls.pipeline_hight_pressure_blue_3
+  - first:
+      213: 6259951693476649212
+    second: walls.pipeline_hight_pressure_blue_4
+  - first:
+      213: 2717883284699717299
+    second: walls.pipeline_hight_pressure_blue_5
+  - first:
+      213: 8582975766778611551
+    second: walls.pipeline_hight_pressure_blue_6
+  - first:
+      213: -5744259488072509473
+    second: walls.pipeline_hight_pressure_blue_7
+  - first:
+      213: 5574819315571277511
+    second: walls.pipeline_hight_pressure_blue_8
+  - first:
+      213: 4383730814944145025
+    second: walls.pipeline_hight_pressure_blue_9
+  - first:
+      213: 777122552601098111
+    second: walls.pipeline_hight_pressure_blue_10
+  - first:
+      213: 596180776951695694
+    second: walls.pipeline_hight_pressure_blue_11
+  - first:
+      213: 2144409906854018166
+    second: walls.pipeline_hight_pressure_blue_12
+  - first:
+      213: 1666113540529742270
+    second: walls.pipeline_hight_pressure_blue_13
+  - first:
+      213: 5122131393324457162
+    second: walls.pipeline_hight_pressure_blue_14
+  - first:
+      213: 3942723815330143498
+    second: walls.pipeline_hight_pressure_blue_15
+  - first:
+      213: -7351074285347694041
+    second: walls.pipeline_hight_pressure_blue_16
+  - first:
+      213: 1674531570984642385
+    second: walls.pipeline_hight_pressure_blue_17
+  - first:
+      213: -1668458842551361499
+    second: walls.pipeline_hight_pressure_blue_18
+  - first:
+      213: -6501448114163806664
+    second: walls.pipeline_hight_pressure_blue_19
+  - first:
+      213: -8222536764845056825
+    second: walls.pipeline_hight_pressure_blue_20
+  - first:
+      213: 7195546529894238156
+    second: walls.pipeline_hight_pressure_blue_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ffe347e36255640800000000000000
+      internalID: 5067999005355474841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 22
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a156a96ef3dfe6d10800000000000000
+      internalID: 2120910925431727386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 22
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40de3e9465f0bbef0800000000000000
+      internalID: -91462504149684988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 22
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df7d90fca1fb7c420800000000000000
+      internalID: 2650297027594409981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 22
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8d7c806e0dfd650800000000000000
+      internalID: 6259951693476649212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 22
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be9f7d827cd7b520800000000000000
+      internalID: 2717883284699717299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 22
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5700ae3cfadc1770800000000000000
+      internalID: 8582975766778611551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 22
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd755c31e6a4840b0800000000000000
+      internalID: -5744259488072509473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 22
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cebc9f71acbd5d40800000000000000
+      internalID: 5574819315571277511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_9
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18eedaf33f326dc30800000000000000
+      internalID: 4383730814944145025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f77bbbe18d4e8ca00800000000000000
+      internalID: 777122552601098111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_11
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e494f18024f064800800000000000000
+      internalID: 596180776951695694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_12
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cbcded27972cd10800000000000000
+      internalID: 2144409906854018166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_13
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 0
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb16eba00793f1710800000000000000
+      internalID: 1666113540529742270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_14
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc1bff2d57751740800000000000000
+      internalID: 5122131393324457162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0dd93cab6e57b630800000000000000
+      internalID: 3942723815330143498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_16
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a975892ecbbf990800000000000000
+      internalID: -7351074285347694041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_17
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15767bd77912d3710800000000000000
+      internalID: 1674531570984642385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_18
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 0
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 520ed57c58178d8e0800000000000000
+      internalID: -1668458842551361499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_19
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e02a5e26736c5a0800000000000000
+      internalID: -6501448114163806664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_20
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 0
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc12d2906ea3ed80800000000000000
+      internalID: -8222536764845056825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls.pipeline_hight_pressure_blue_21
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 0
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7042ff177bbd360800000000000000
+      internalID: 7195546529894238156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      walls.pipeline_hight_pressure_blue_0: 5067999005355474841
+      walls.pipeline_hight_pressure_blue_1: 2120910925431727386
+      walls.pipeline_hight_pressure_blue_10: 777122552601098111
+      walls.pipeline_hight_pressure_blue_11: 596180776951695694
+      walls.pipeline_hight_pressure_blue_12: 2144409906854018166
+      walls.pipeline_hight_pressure_blue_13: 1666113540529742270
+      walls.pipeline_hight_pressure_blue_14: 5122131393324457162
+      walls.pipeline_hight_pressure_blue_15: 3942723815330143498
+      walls.pipeline_hight_pressure_blue_16: -7351074285347694041
+      walls.pipeline_hight_pressure_blue_17: 1674531570984642385
+      walls.pipeline_hight_pressure_blue_18: -1668458842551361499
+      walls.pipeline_hight_pressure_blue_19: -6501448114163806664
+      walls.pipeline_hight_pressure_blue_2: -91462504149684988
+      walls.pipeline_hight_pressure_blue_20: -8222536764845056825
+      walls.pipeline_hight_pressure_blue_21: 7195546529894238156
+      walls.pipeline_hight_pressure_blue_3: 2650297027594409981
+      walls.pipeline_hight_pressure_blue_4: 6259951693476649212
+      walls.pipeline_hight_pressure_blue_5: 2717883284699717299
+      walls.pipeline_hight_pressure_blue_6: 8582975766778611551
+      walls.pipeline_hight_pressure_blue_7: -5744259488072509473
+      walls.pipeline_hight_pressure_blue_8: 5574819315571277511
+      walls.pipeline_hight_pressure_blue_9: 4383730814944145025
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

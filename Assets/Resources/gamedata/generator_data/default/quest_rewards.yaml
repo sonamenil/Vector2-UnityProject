@@ -1,0 +1,152 @@
+BasicProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "BasicProtocol", ST_VisualItemName: "^StarterPacks.BasicProtocol.PackName^", ST_ItemType: "StarterPack"}
+
+StandardProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "StandardProtocol", ST_VisualItemName: "^StarterPacks.StandardProtocol.PackName^", ST_ItemType: "StarterPack"}
+        BlockedStarterPack: {Text: "^Quests.EnduranceTest.BlockedStarterPack^"}
+
+AdvancedProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "AdvancedProtocol", ST_VisualItemName: "^StarterPacks.AdvancedProtocol.PackName^", ST_ItemType: "StarterPack"}
+        BlockedStarterPack: {Text: "^Quests.TheContact.BlockedStarterPack^"}
+
+ExperimentalProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "ExperimentalProtocol", ST_VisualItemName: "^StarterPacks.ExperimentalProtocol.PackName^", ST_ItemType: "StarterPack"}
+        BlockedStarterPack: {Text: "^Quests.Bruteforce.BlockedStarterPack^"}
+
+AlphaProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "AlphaProtocol", ST_VisualItemName: "^StarterPacks.AlphaProtocol.PackName^", ST_ItemType: "StarterPack"}
+        BlockedStarterPack: {Text: "^Quests.PowerFailures.BlockedStarterPack^"}
+
+BetaProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "BetaProtocol", ST_VisualItemName: "^StarterPacks.BetaProtocol.PackName^", ST_ItemType: "StarterPack"}
+        BlockedStarterPack: {Text: "^Quests.SwarmEncounter.BlockedStarterPack^"}
+
+GammaProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "GammaProtocol", ST_VisualItemName: "^StarterPacks.GammaProtocol.PackName^", ST_ItemType: "StarterPack"}
+        BlockedStarterPack: {Text: "^Quests.MemoryInstall.BlockedStarterPack^"}
+
+OmegaProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "OmegaProtocol", ST_VisualItemName: "^StarterPacks.OmegaProtocol.PackName^", ST_ItemType: "StarterPack"}
+        BlockedStarterPack: {Text: "^Quests.FileKeys.BlockedStarterPack^"}
+        
+LastProtocol:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    StarterPack:
+      GroupContent:
+        ST_ItemMainData: {ST_ItemName: "LastProtocol", ST_VisualItemName: "^StarterPacks.LastProtocol.PackName^", ST_ItemType: "StarterPack"}
+        BlockedStarterPack: {Text: "^Quests.ScannerProcedures.BlockedStarterPack^"}
+
+MoneyReward:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    Money:
+      GroupContent:
+        Countable: {Quantity: '{?getCounter[Quests_Temp,CurrencyAmount]+?getItemAttribute[Money, Countable, Quantity]}' }
+        Currency: {Type: Money}
+        ST_ItemMainData: {ST_ItemName: "Money", ST_VisualItemName: Money, ST_ItemType: ''}
+
+MoneyPremiumReward:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  Set: 1
+  BoxContent:
+    IfExist:
+      Conditions:
+      - {ConditionType: GroupExists, Item: "MoneyPremium"}
+      GroupContent:
+        Countable: {Quantity: '{?getCounter[Quests_Temp,CurrencyAmount]+?getItemAttribute[MoneyPremium, Countable, Quantity]}' }
+        Currency: {Type: MoneyPremium}
+        ST_ItemMainData: {ST_ItemName: "MoneyPremium", ST_VisualItemName: MoneyPremium, ST_ItemType: ''}
+        ST_ForceSave: {Value: 1}
+    NotExist:
+      GroupContent:
+        Countable: {Quantity: '?getCounter[Quests_Temp,CurrencyAmount]'}
+        Currency: {Type: MoneyPremium}
+        ST_ItemMainData: {ST_ItemName: "MoneyPremium", ST_VisualItemName: MoneyPremium, ST_ItemType: ''}
+        ST_ForceSave: {Value: 1}
+
+# Выдает любую карточку в виде награды; аргументы:
+#     ?getString[CardName] - имя карточки
+CardReward:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    Card:
+      CounterActions: {OnEnter: [{Name: CardsCount, Namespace: ST_Statistics, Type: IncrementBy, Value: 1}]}
+      GroupContent:
+        ST_ItemMainData:
+          ST_ItemType: ''
+          ST_ItemName: "?getCardInfo[?getString[CardName],Stats,Slot]"
+          ST_VisualItemName: "^Gadgets.SlotsVisualNames.?getCardInfo[?getString[CardName],Stats,Slot]^"
+        "?getString[CardName]": {IsNew: 1, Count: 1}
+
+BaseBoosterpack:
+  Target: {Type: NewItem, Destination: Stash}
+  Set: 1
+  NoShuffle: 1
+  BoxContent:
+    AppendValue:
+      Conditions:
+      - {ConditionType: GroupExists, Item: "Boosterpacks", Group: "BaseBoosterpack"}
+      GroupContent:
+        BaseBoosterpack: {Quantity: "{?getItemAttribute[Boosterpacks, BaseBoosterpack, Quantity] + 1}"}
+        ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}
+    CreateItem:
+      GroupContent:
+        BaseBoosterpack: {Quantity: "1"}
+        ST_ItemMainData: {ST_ItemName: "Boosterpacks", ST_VisualItemName: Boosterpacks}

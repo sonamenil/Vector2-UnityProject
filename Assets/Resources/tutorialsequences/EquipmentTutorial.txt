@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Steps>
+  <ChangeCounter Counter="InspectGearTutor" Namespace="ST_Tutorial" Value="1" />
+  <LockButton IsLock="1">
+    <Module Name="BottomPanel" LockAllButtons="1" />
+    <Module Name="MainScreen">
+      <Button Name="Floor_4" />
+      <Button Name="Floor_3" />
+      <Button Name="Floor_2" />
+      <Button Name="Floor_1" />
+      <Button Name="PlayButton" />
+    </Module>
+    <Module Name="TopPanel">
+      <Button Name="DonateBtn" />
+      <Button Name="FreeBtn" />
+      <Button Name="Timer" />
+      <Button Name="Energy" />
+    </Module>
+    <Dialog Name="OptionsDialog">
+      <Button Name="ButtonCredits"/>
+    </Dialog>
+  </LockButton>
+  <ClickButton Module="MainScreen" Button="DetailsButton" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="0" Y="-320" Z="0" />
+      <DeltaMove X="0" Y="50" />
+      <Angle Value="0" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <WaitForModuleActivated ModuleName="DetailsPanel" />
+  <LockButton IsLock="1">
+    <Module Name="MainScreen" LockAllButtons="1" />
+    <Module Name="TopPanel">
+      <Button Name="DonateBtn" />
+      <Button Name="FreeBtn" />
+      <Button Name="Timer" />
+      <Button Name="Energy" />
+    </Module>
+    <Module Name="BottomPanel" LockAllButtons="1" />
+  </LockButton>
+  <ClickGadget SlotName="Torso">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="0" Y="-200" Z="0" />
+      <DeltaMove X="0" Y="40" />
+      <Angle Value="0" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickGadget>
+  <Delay TimeInSeconds="0.8" />
+  <LockButton IsLock="0">
+    <Module Name="BottomPanel">
+      <Button Name="BackBtn" />
+    </Module>
+  </LockButton>
+  <ClickButton Module="BottomPanel" Button="BackBtn" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="0" Y="80" Z="0" />
+      <DeltaMove X="0" Y="70" />
+      <Angle Value="180" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <ChangeCounter Counter="InspectGearTutor" Namespace="ST_Tutorial" Value="0" />
+  <Delay TimeInSeconds="0.6" />
+  <LockButton IsLock="0">
+    <Module Name="MainScreen" LockAllButtons="1" />
+    <Module Name="BottomPanel" LockAllButtons="1" />
+    <Dialog Name="OptionsDialog">
+      <Button Name="ButtonCredits"/>
+    </Dialog>
+  </LockButton>
+  <CheckQuests />
+</Steps>

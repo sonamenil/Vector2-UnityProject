@@ -1,0 +1,183 @@
+Item:
+  Target: NewItem
+  CounterActions: 
+    OnEnter: 
+    - {Namespace: BoosterpackItemGeneration, Type: Clear}
+    - {Name: ItemNumber, Namespace: BoosterpackGenerator, Type: IncrementBy, Value: 1}
+  ItemsCount: 3
+  NoShuffle: 1
+  BoxContent:
+    Generate:
+      NoShuffle: 1
+      BoxContent:
+        ChooseRewardType:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            SpecifiedCard:
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: CustomBoosterpack, Min: 1}
+              - {ConditionType: ValuesEqual, Values: ['?getBalance[CustomBoosterpacks,?getString[CustomBoosterpack],<BoosterpackGenerator.ItemNumber>,SpecifiedCard]', '1']}
+              StringActions: 
+                OnEnter: 
+                - {Name: CardName, Value: '?getBalance[CustomBoosterpacks,?getString[CustomBoosterpack],<BoosterpackGenerator.ItemNumber>,Card]'}
+                - {Name: CardSlotName, Value: '?getCardInfo[?getString[CardName],Stats,Slot]'}
+              CounterActions: 
+                OnExit: 
+                - {Name: '?getString[CardName]', Namespace: BoosterpackGenerator, Type: Assign, Value: '1'}
+                - {Name: CreateCard, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}
+            SpecifiedCoupon:
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: CustomBoosterpack, Min: 1}
+              - {ConditionType: ValuesEqual, Values: ['?getBalance[CustomBoosterpacks,?getString[CustomBoosterpack],<BoosterpackGenerator.ItemNumber>,SpecifiedCoupon]', '1']}
+              StringActions: 
+                OnEnter: 
+                - {Name: CouponName, Value: '?getBalance[CustomBoosterpacks,?getString[CustomBoosterpack],<BoosterpackGenerator.ItemNumber>,Coupon]'}
+              CounterActions: 
+                OnExit: 
+                - {Name: CreateCoupon, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}
+                - {Name: '?getString[CouponName]', Namespace: BoosterpackGenerator, Type: IncrementBy, Value: 1}
+                - {Name: Coupons, Namespace: BoosterpackGenerator, Type: IncrementBy, Value: 1}
+            Couponless:
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: CustomBoosterpack, Min: 1}
+              - {ConditionType: ValuesEqual, Values: ['?getBalance[CustomBoosterpacks,?getString[CustomBoosterpack],<BoosterpackGenerator.ItemNumber>,Couponless]', '1']}
+              CounterActions: {OnEnter: [{Name: GenerateRandomCard, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}]}
+            Cardless:
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: CustomBoosterpack, Min: 1}
+              - {ConditionType: ValuesEqual, Values: ['?getBalance[CustomBoosterpacks,?getString[CustomBoosterpack],<BoosterpackGenerator.ItemNumber>,Cardless]', '1']}
+              CounterActions: {OnEnter: [{Name: GenerateRandomCoupon, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}]}
+            CardOrCoupon:
+              Set: 1
+              BoxContent:
+                Card: 
+                  Weight: 1000
+                  CounterActions: {OnEnter: [{Name: GenerateRandomCard, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}]}
+                Coupon:
+                  Weight: '?switch[<BoosterpackGenerator.Coupons>,0:?switch[<BoosterpackGenerator.ItemNumber>, 2:70, 210], 0]'
+                  CounterActions: {OnEnter: [{Name: GenerateRandomCoupon, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}]}
+
+        RandomCard:
+          Conditions: [{ConditionType: CounterRange, Namespace: BoosterpackItemGeneration, Name: GenerateRandomCard, Equal: 1}]
+          Select: {Type: 'Cards', Random: 1, Weight: '{?getCardInfo[?getString[SelectKey],Balance,Weight]*(1 + <CustomCardWeightMultipliers.?getString[SelectKey]>)*(1+?equal[<UsefulCards.?getCardInfo[?getString[SelectKey],Stats,EffectID]>,?getCardInfo[?getString[SelectKey],Stats,Rarity]]*?getBalance[Missions,AddWeightForUsefulCards]*?greater[<UsefulCards.?getCardInfo[?getString[SelectKey],Stats,EffectID]>,<AvailableCards.?getCardInfo[?getString[SelectKey],Stats,EffectID]>])}'}
+          StringActions: 
+            OnEnter: 
+            - {Name: CardName, Value: '?getString[SelectKey]'}
+            - {Name: CardSlotName, Value: '?getCardInfo[?getString[SelectKey],Stats,Slot]'}
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            CardIsNotForPaid:
+              Conditions:
+              - ConditionType: And
+                Content:
+                - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CardName], Stats, CardType]', 'Stunts'], Not: 1}
+                - {ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CardName], Stats, EffectID]', 'CouponEnergyRechargePassive']}
+                - {ConditionType: ValuesEqual, Values: ['?isPaid[]', '1']}
+            Blueless:
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: CustomBoosterpack, Min: 1}
+              - {ConditionType: ValuesEqual, Values: ['?getBalance[CustomBoosterpacks,?getString[CustomBoosterpack],<BoosterpackGenerator.ItemNumber>,Blueless]', '1']}
+              - {ConditionType: ValuesEqual, Values: ["?getCardInfo[?getString[CardName], Stats, Rarity]", '1']}
+            CardIsTooGoodOrBad: # too cool for actual starter pack
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: StarterPackCoolness, Min: "?getCardInfo[?getString[CardName],Balance,SetupMin]", Max: "?getCardInfo[?getString[CardName],Balance,SetupMax]", Not: 1}
+            BlueForSecondSlot: # blue card in second slot or blueless boosterpack
+              Conditions: 
+              - {ConditionType: ValuesEqual, Values: ["?getCardInfo[?getString[CardName], Stats, Rarity]", '1']}
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: ItemNumber, Min: 2, Max: 2}
+            AlreadyGenerated: # chosen item is generated in previous slots
+              Conditions:
+              - {ConditionType: ValuesEqual, Values: ['?getCounter[BoosterpackGenerator, ?getString[CardName]]', '0'], Not: 1}
+            NewCard:
+              Conditions:
+              - {ConditionType: GroupExists, Item: '?getCardInfo[?getString[SelectKey],Stats,Slot]', Group: '?getString[CardName]', Not: 1}
+              CounterActions: 
+                OnEnter: 
+                - {Name: '?getString[CardName]', Namespace: BoosterpackGenerator, Type: Assign, Value: 1}
+                - {Name: CreateCard, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}
+                - {Name: '?getString[CardName]', Namespace: CustomCardWeightMultipliers, Type: Assign, Value: 0}
+              BreakSelect: 1
+            MaxLevelAchieved: # card already have max rang!
+              Conditions:
+              - {ConditionType: GroupExists, Item: '?getString[CardSlotName]', Group: '?getString[CardName]'}
+              - {ConditionType: ValuesEqual, Values: ['?getItemAttribute[?getString[CardSlotName],?getString[CardName],Count]', '?getBalance[CardLevels,MaxCards]']}
+            GoodCard: # passed through all conditions
+              CounterActions: 
+                OnEnter: 
+                - {Name: '?getString[CardName]', Namespace: BoosterpackGenerator, Type: Assign, Value: '?min[?getBalance[Boosterpacks,CardsAmount], {?getBalance[CardLevels,MaxCards] - ?getItemAttribute[?getString[CardSlotName],?getString[CardName],Count]}]'}
+                - {Name: CreateCard, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}
+                - {Name: '?getString[CardName]', Namespace: CustomCardWeightMultipliers, Type: Assign, Value: 0}
+              BreakSelect: 1
+        RandomCoupon:
+          Conditions: 
+          - {ConditionType: CounterRange, Namespace: BoosterpackItemGeneration, Name: GenerateRandomCoupon, Equal: 1}
+          Set: 1
+          Select: {Type: 'Balance', Root: 'Coupons', Random: 1, Weight: '?getBalance[Coupons,?getString[SelectKey],Weight]'}
+          NoShuffle: 1
+          BoxContent:
+            CouponIsNotForPaid:
+              Conditions:
+              - ConditionType: And
+                Content:
+                - {ConditionType: ValuesEqual, Values: ['?getString[SelectKey]', 'EnergyRecharge']}
+                - {ConditionType: ValuesEqual, Values: ['?isPaid[]', '1']}
+            Done:
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: ItemNumber, Min: 2, Max: 2, Not: 1}
+              CounterActions:  
+                OnEnter: 
+                - {Name: CreateCoupon, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}
+                - {Name: '?getString[SelectKey]', Namespace: BoosterpackGenerator, Type: IncrementBy, Value: 1}
+                - {Name: Coupons, Namespace: BoosterpackGenerator, Type: IncrementBy, Value: 1}
+              StringActions: {OnEnter: [{Name: CouponName, Value: '?getString[SelectKey]'}]}
+              BreakSelect: 1
+            Middle:
+              Conditions: 
+              - {ConditionType: CounterRange, Namespace: BoosterpackGenerator, Name: ItemNumber, Min: 2, Max: 2}
+              - {ConditionType: ValuesEqual, Values: ['?getBalance[Coupons,?getString[SelectKey],Rarity]', '1'], Not: 1}
+              CounterActions:  
+                OnEnter: 
+                - {Name: CreateCoupon, Namespace: BoosterpackItemGeneration, Type: Assign, Value: 1}
+                - {Name: '?getString[SelectKey]', Namespace: BoosterpackGenerator, Type: IncrementBy, Value: 1}
+                - {Name: Coupons, Namespace: BoosterpackGenerator, Type: IncrementBy, Value: 1}
+              StringActions: {OnEnter: [{Name: CouponName, Value: '?getString[SelectKey]'}]}
+              BreakSelect: 1
+            Skip: {}
+
+    CreateItem:
+      NoShuffle: 1
+      Set: 1
+      BoxContent:
+        IsNormalCard:
+          Conditions: [{ConditionType: CounterRange, Namespace: BoosterpackItemGeneration, Name: CreateCard, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: CardsCount, Namespace: ST_Statistics, Type: IncrementBy, Value: 1}]}
+          GroupContent:
+            ST_ItemMainData: {ST_ItemName: "?getString[CardSlotName]", ST_VisualItemName: ''}
+            "?getString[CardName]": {IsNew: 1, Level: 0, Count: '<BoosterpackGenerator.?getString[CardName]>'}
+            ST_ShopSignal: 
+              ST_CounterName: "?_concat['CardsWithRarity%1','?_getCardInfo[?getString[CardName],Stats,Rarity]']"
+              ST_Namespace: "AchievementsProgressByFloor"
+              ST_Type: Assign
+              ST_Value: 1
+              NoIterable: 1
+          BoxContent:
+            UpdateAvailableCardsForMissions:
+              Conditions: [{ConditionType: ValuesEqual, Values: ['?getCardInfo[?getString[CardName],Stats,Slot]', 'Stunts'], Not: '1'}]
+              CounterActions:
+                OnEnter:
+                - Name: '?getCardInfo[?getString[CardName],Stats,EffectID]'
+                  Namespace: AvailableCards
+                  Type: Assign
+                  Value: '?max[<AvailableCards.?getCardInfo[?getString[CardName],Stats,EffectID]>,?getCardInfo[?getString[CardName],Stats,Rarity]]'
+        Coupon:
+          Conditions: [{ConditionType: CounterRange, Namespace: BoosterpackItemGeneration, Name: CreateCoupon, Equal: 1}]
+          GroupContent:
+            "?getString[CouponName]": {Quantity: "?getCounter[BoosterpackGenerator,?getString[CouponName]]"}
+            ST_ItemMainData: {ST_ItemName: "Coupons", ST_VisualItemName: Coupons}
+        Default:
+          GroupContent:
+            Saveme: {Quantity: "1"}
+            ST_ItemMainData: {ST_ItemName: "Coupons", ST_VisualItemName: Coupons}
+          

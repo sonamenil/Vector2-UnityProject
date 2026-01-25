@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DeathCoinMaterial
+  m_Shader: {fileID: 4800000, guid: 1b62b12fc5190a64d9319674d9b24c2b, type: 3}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Cube:
+        m_Texture: {fileID: 8900000, guid: 8076a1302baac9f439bf836798bcfdf0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _BumpAmt: 0.958
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 10
+    - _EmissionLM: 5
+    - _Glossiness: 0.912
+    - _MKGlowOffSet: 0.075
+    - _MKGlowPower: 2.5
+    - _MKGlowTexStrength: 0.952
+    - _Metallic: 0.224
+    - _Mode: 3
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shininess: 0.114
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 0
+    m_Colors:
+    - _Color: {r: 1, g: 0.8482759, b: 0, a: 1}
+    - _EmissionColor: {r: 0.5, g: 0.20955881, b: 0.20955881, a: 1}
+    - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColorMult: {r: 1, g: 1, b: 1, a: 1}
+    - _MKGlowColor: {r: 0, g: 0.04827571, b: 1, a: 1}
+    - _MKGlowTexColor: {r: 0, g: 0.9632353, b: 0.12621717, a: 1}
+    - _ReflectColor: {r: 0.90344834, g: 1, b: 0, a: 0.5}
+    - _SpecColor: {r: 0.9191176, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

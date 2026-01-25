@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Steps>
+  <LockButton IsLock="1">
+    <Module Name="ShopPanel" LockAllButtons="1" />
+    <Module Name="TopPanel">
+      <Button Name="DonateBtn" />
+      <Button Name="FreeBtn" />
+      <Button Name="PromoTimer-Label" />
+      <Button Name="Energy" />
+      <Button Name="PromoEffectTimer-Button" />
+    </Module>
+    <Module Name="BottomPanel" LockAllButtons="1" />
+    <Module Name="ArchivePanel" LockAllButtons="1" />
+    <Module Name="ArchiveCategoryPanel" LockAllButtons="1" />
+    <Dialog Name="OptionsDialog">
+      <Button Name="ButtonCredits"/>
+    </Dialog>
+  </LockButton>
+  <LockScroller IsLock="1">
+    <Module Name="ShopPanel" />
+  </LockScroller>
+  <ClickButton Module="ShopPanel" Button="RerollButton" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="0" Y="130" Z="0" />
+      <DeltaMove X="0" Y="60" />
+      <Angle Value="180" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+  <LockButton IsLock="1">
+    <Module Name="ShopPanel">
+      <Button Name="RerollButton" />
+    </Module>
+  </LockButton>
+  <GiveMoney Type="Money3" Value="?getBalance[Reroll, BonusChipsForReroll]" />
+  <ChangeCounter Counter="ST_RerollTutorial" Namespace="ST_Tutorial" Value="4" />
+  <Delay TimeInSeconds="2" />
+  <Dialog Title="^Tutorial.Reroll.Dialog2.Title^" Text="^Tutorial.Reroll.Dialog2.Message^" ButtonText="^Tutorial.Reroll.Dialog2.Button^" DialogType="Portrait" Image="AI_portrait" />
+  <StartSequence Sequence="TutorialSequences/RerollTutorialPart3" />
+</Steps>

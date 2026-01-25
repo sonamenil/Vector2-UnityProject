@@ -1,0 +1,256 @@
+CountersUpdater_NewsBlock:
+  Set: 1
+  NoShuffle: 1
+  BoxContent: 
+    BeforeCardBoost:
+      Conditions:
+      - {ConditionType: CounterRange, Name: CardBoostTutorial, Namespace: ST_Tutorial, Equal: 0}
+      - {ConditionType: CounterRange, Name: ST_CardBoostBlock, Namespace: ST_ProgressMarkers, Equal: 1}
+      CounterActions: {OnEnter: [{Name: ST_NewsBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}]}
+    CardBoostInProgress:
+      Conditions: [{ConditionType: CounterRange, Name: CardBoostTutorial, Namespace: ST_Tutorial, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: ST_NewsBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}]}
+    Later: {}
+    
+CountersUpdater_ShowRateDialog:
+  # BoxContent:
+    # AddCounter:
+  CounterActions: {OnEnter: [{Name: ST_ShowSetStarDialog, Namespace: ST_ProgressMarkers, Type: Assign, Value: 12}]}
+
+CountersUpdater_TutorialCounters:
+  NoShuffle: 1
+  BoxContent:
+    ST_TutorialBasic:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        BeforeShop:
+          Conditions: [{ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_ProgressMarkers, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: ST_TutorialBasic, Namespace: ST_Tutorial, Type: Assign, Value: 1}]}
+        AfterShop:
+          Conditions: [{ConditionType: CounterRange, Name: ST_FirstShop, Namespace: ST_Tutorial, Equal: 0}]
+          CounterActions: {OnEnter: [{Name: ST_TutorialBasic, Namespace: ST_Tutorial, Type: Assign, Value: 0}]}
+        Later: {CounterActions: {OnEnter: [{Name: ST_TutorialBasic, Namespace: ST_Tutorial, Type: Assign, Value: 0}]}}
+    ST_TutorialLaserAndMine:
+      Set: 1
+      BoxContent:
+        UserOnFirstFloor:
+          Conditions: [{ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        UserInFirstShopOrSecondFloor:
+          Conditions: 
+          - {ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_ProgressMarkers, Equal: 1}
+          CounterActions: {OnEnter: [{Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Type: Assign, Value: 1}]}
+        UserDiedInLaser:
+          Conditions: [{ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_ProgressMarkers, Equal: 0}]
+          CounterActions: {OnEnter: [{Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Type: Assign, Value: 0}]}
+    ST_RunEnd:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UserUntilFirstEquipment:
+          Conditions: [{ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_ProgressMarkers, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: ST_RunEnd, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        RunEndActive:
+          Conditions: [{ConditionType: CounterRange, Name: RunEnd, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: 
+            OnEnter: 
+              - {Name: ST_RunEnd, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+              - {Name: RunEnd, Namespace: ST_Tutorial, Type: Assign, Value: 0}
+        Later: {}
+    ST_StartItemsInfo:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UserUntilFirstEquipment:
+          Conditions: [{ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_ProgressMarkers, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: ST_StartItemsInfo, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        RunEndActive:
+          Conditions: [{ConditionType: CounterRange, Name: ST_RunEnd, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: ST_StartItemsInfo, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        StartItemsInfoActive:
+          Conditions: [{ConditionType: CounterRange, Name: StartItemsInfo, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: 
+            OnEnter: 
+              - {Name: ST_StartItemsInfo, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+              - {Name: StartItemsInfo, Namespace: ST_Tutorial, Type: Assign, Value: 0}
+        Later: {}
+    EnterQuestlog:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UserUntilFirstEquipment:
+          Conditions: [{ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_ProgressMarkers, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: EnterQuestlog, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        RunEndActive:
+          Conditions: [{ConditionType: CounterRange, Name: ST_RunEnd, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: EnterQuestlog, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        StartItemsInfoActive:
+          Conditions: [{ConditionType: CounterRange, Name: ST_StartItemsInfo, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: {OnEnter: [{Name: EnterQuestlog, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        EnterQuestlogActive:
+          Conditions: [{ConditionType: CounterRange, Name: EnterQuestlog, Namespace: ST_Tutorial, Equal: 1}]
+        Later: {}
+    ST_Archive_part1:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UntilMineQuest:
+          Conditions: [{ConditionType: CounterRange, Name: MineQuest, Namespace: ST_Quests, Equal: 0}]
+          CounterActions: {OnEnter: [{Name: ST_Archive_part1, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        ArchivePt1Active:
+          Conditions: [{ConditionType: CounterRange, Name: Archive_part1, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: 
+            OnEnter: 
+              - {Name: ST_Archive_part1, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+              - {Name: Archive_part1, Namespace: ST_Tutorial, Type: Assign, Value: 0}
+        Later: {}
+    ST_Archive_part2:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UntilArchivePt1OrInProgress:
+          Conditions: [{ConditionType: CounterRange, Name: ST_Archive_part1, Namespace: ST_Tutorial, Equal: 0, Not: 1}]
+          CounterActions: {OnEnter: [{Name: ST_Archive_part2, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        ArchivePt2Active:
+          Conditions: [{ConditionType: CounterRange, Name: Archive_part2, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: 
+            OnEnter: 
+              - {Name: ST_Archive_part2, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+              - {Name: Archive_part2, Namespace: ST_Tutorial, Type: Assign, Value: 0}
+        Later: {}
+    ST_PassivesIntro:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UntilQuestPassivesIntro:
+          Conditions: [{ConditionType: CounterRange, Name: PassivesIntro, Namespace: ST_Quests, Equal: 0}]
+          CounterActions: {OnEnter: [{Name: ST_PassivesIntro, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        PassivesIntroActive:
+          Conditions: [{ConditionType: CounterRange, Name: PassivesIntro, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: 
+            OnEnter: 
+              - {Name: ST_PassivesIntro, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+              - {Name: PassivesIntro, Namespace: ST_Tutorial, Type: Assign, Value: 0}
+        Later: {}
+    BoosterpackTutorial_Part1:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UntilQuestKeyIntroOrInProgress:
+          Conditions: [{ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1, Not: 1}]
+          CounterActions: {OnEnter: [{Name: BoosterpackTutorial_Part1, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        Later: {}
+    ST_BoosterpackTutorial_Part2:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UntilBoosterpackTutorialPt1OrInProgress:
+          Conditions: [{ConditionType: CounterRange, Name: BoosterpackTutorial_Part1, Namespace: ST_Tutorial, Equal: 0, Not: 1}]
+          CounterActions: {OnEnter: [{Name: ST_BoosterpackTutorial_Part2, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        BoosterpackTutorial_Part2Active:
+          Conditions: [{ConditionType: CounterRange, Name: BoosterpackTutorial_Part2, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: 
+            OnEnter: 
+              - {Name: ST_BoosterpackTutorial_Part2, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+              - {Name: BoosterpackTutorial_Part2, Namespace: ST_Tutorial, Type: Assign, Value: 0}
+        Later: {}
+    ST_CardBoostTutorial:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        UntilBoosterpackTutorialPt2OrInProgress:
+          Conditions: [{ConditionType: CounterRange, Name: ST_BoosterpackTutorial_Part2, Namespace: ST_Tutorial, Equal: 0, Not: 1}]
+          CounterActions: {OnEnter: [{Name: ST_CardBoostTutorial, Namespace: ST_Tutorial, Type: Assign, Value: -1}]}
+        CardBoostTutorialActive:
+          Conditions: [{ConditionType: CounterRange, Name: CardBoostTutorial, Namespace: ST_Tutorial, Equal: 1}]
+          CounterActions: 
+            OnEnter: 
+              - {Name: ST_CardBoostTutorial, Namespace: ST_Tutorial, Type: Assign, Value: 1}
+              - {Name: CardBoostTutorial, Namespace: ST_Tutorial, Type: Assign, Value: 0}
+        Later: {}
+    KILL_SHIT_IN_PROGRESSMARKERS:
+      CounterActions: 
+        OnEnter: 
+        - {Name: ST_Tutorial, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+        - {Name: ST_TutorialBasic, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+        - {Name: ST_TutorialLaserAndMine, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+    KeysIntroLockPassed:
+      CounterActions: {OnExit: [{Name: QuestKeysIntro, Namespace: ST_Tutorial, Type: Assign, Value: 0}]}
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        LockPassedUntilKeysIntro:
+          Conditions: 
+          - {ConditionType: CounterRange, Name: QuestKeysIntro, Namespace: ST_Tutorial, Equal: 1}
+          - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: 0}
+          CounterActions: {OnEnter: [{Name: KeysIntroLockPassed, Namespace: ST_Quests, Type: Assign, Value: 1}]}
+        Other: {}
+    LocksBlock:
+      CounterActions: {OnExit: [{Name: TutorLockGenerated , Namespace: ST_Tutorial, Type: Assign, Value: 0}]}
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        IsNotTutorLockGenerated:
+          Conditions: [{ConditionType: CounterRange, Name: TutorLockGenerated, Namespace: ST_Tutorial, Equal: 0}]
+          CounterActions: {OnEnter: [{Name: LocksBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}]}
+        Other: {}
+    TutorialInProgress:
+      Conditions: [{ConditionType: CounterRange, Name: ST_CardBoostTutorial, Namespace: ST_Tutorial, Equal: 0, Not: 1}]
+      CounterActions: {OnEnter: [{Name: TutorialInProgress, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}]}
+    Bruteforce:
+      Set: 1
+      NoShuffle: 1
+      BoxContent:
+        FourthProtocolActive:
+          Conditions: [{ConditionType: CounterRange, Name: FourthProtocol, Namespace: ST_Quests, Equal: 1}]
+          CounterActions: 
+            OnEnter:
+            - {Name: Bruteforce, Namespace: ST_Quests, Type: Assign, Value: 1}
+            - {Name: FourthProtocol, Namespace: ST_Quests, Type: Assign, Value: 0}
+        FourthProtocolComplete:
+          Conditions: [{ConditionType: CounterRange, Name: FourthProtocol, Namespace: ST_Quests, Equal: -1}]
+          CounterActions: 
+            OnEnter:
+            - {Name: Bruteforce, Namespace: ST_Quests, Type: Assign, Value: -1}
+            - {Name: FourthProtocol, Namespace: ST_Quests, Type: Assign, Value: 0}
+            - {Name: FourthProtocolCompleteNotification, Namespace: ST_Statistics, Type: Assign, Value: 0}
+            - {Name: Progress, Namespace: QuestBruteforce, Type: Assign, Value: 15}
+        Other: {}
+ReplaceRegularExpression:
+  NoShuffle: 1
+  BoxContent:
+    RegularExpression1:
+      Regular: '<Item Name="Boosterpacks"'
+      Replace: '<Item Name="Boosterpacks" ForceSave="1"'
+    RegularExpression2:
+      Regular: '<Item Name="MoneyPremium"'
+      Replace: '<Item Name="MoneyPremium" ForceSave="1"'
+    RegularExpression3:
+      Regular: '</UserCounters>'
+      Replace: '<Namespace Name="ST_Events" ForceSave="1" > <Counter Name="PaymentPromo" Value="-1" /> </Namespace> <Namespace Name="ST_Achievements" ForceSave="1" /> </UserCounters>'
+    RegularExpression4:
+      Regular: 'Quest1'
+      Replace: 'Experiment1'
+    RegularExpression5:      
+      Regular: 'Quest2'
+      Replace: 'EnduranceTest'    
+    RegularExpression6:      
+      Regular: 'Quest3'
+      Replace: 'RunProtocolCheck'
+    RegularExpression7:      
+      Regular: 'Quest4'
+      Replace: 'Accessibility'
+    RegularExpression8:     
+      Regular: 'Quest5'
+      Replace: 'DecryptionTest'
+    RegularExpression9:      
+      Regular: 'Quest6'
+      Replace: 'PlannedUpgrade'
+    RegularExpression10:      
+      Regular: 'Quest7'
+      Replace: 'TreasureHunt'
+    RegularExpression11:      
+      Regular: 'Quest8'
+      Replace: 'ServiceEntrance'
+      

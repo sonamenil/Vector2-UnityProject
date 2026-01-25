@@ -1,0 +1,2765 @@
+StarterPacks:
+  BasicProtocol:
+    Zone: 1
+    Coolness: 1
+    FloorNumber: 1
+    ItemImage: box_level0
+    Description: "^StarterPacks.BasicProtocol.Description^"
+    ItemPresets:
+      1: BasicProtocolTorso
+    Torso:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso>}"
+      MaxSockets: "{2 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_3: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * 1.1 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * 1.2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * 1.3 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * 1.4 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * 1.6 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * 1.8 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        Default:
+          Charges: "{1 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+
+  StandardProtocol:
+    Zone: 1
+    Coolness: 2
+    FloorNumber: 3
+    ItemImage: box_level2
+    Description: "^StarterPacks.StandardProtocol.Description^"
+    ItemPresets:
+      1: StandardProtocolTorso
+      2: StandardProtocolBoots
+    Legs:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeLegsCharges] * <StarRewards.UpgradeLegs>}"
+      MaxSockets: "{2 + <StarRewards.AddSockets>}"
+    Torso:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso>}"
+      MaxSockets: "{2 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_4: {}
+      ReachFloor_6: {}
+      ReachFloor_7: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * 1.1 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * 1.2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * 1.3 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * 1.4 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * 1.6 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * 1.8 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        2:
+          Charges: "{2 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward> + ?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount] * <StarBuffs.ExtraChargeRewardOnly2>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward> + ?getBalance[StarBuffs,ExtraCardRewardOnly2Amount] * <StarBuffs.ExtraCardRewardOnly2>}"
+        4:
+          Charges: "{2 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+        Default:
+          Charges: "{1 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+
+  AdvancedProtocol:
+    Zone: 1
+    Coolness: 3
+    FloorNumber: 8
+    ItemImage: box_level3
+    Description: "^StarterPacks.AdvancedProtocol.Description^"
+    ItemPresets:
+      1: AdvancedProtocolHead
+      2: AdvancedProtocolTorso
+      3: AdvancedProtocolHands
+      4: AdvancedProtocolBoots
+    Head:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeHeadCharges] * <StarRewards.UpgradeHead>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Torso:
+      Charges: "{3 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Hands:
+      Charges: "{1 + ?getBalance[StarBuffs,UpgradeHandsCharges] * <StarRewards.UpgradeHands>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Legs:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeLegsCharges] * <StarRewards.UpgradeLegs>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_10: {}
+      ReachFloor_12: {}
+      ReachFloor_14: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * 1.1 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * 1.2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * 1.3 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * 1.4 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * 1.6 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * 1.8 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        2:
+          Charges: "{4 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward> + ?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount] * <StarBuffs.ExtraChargeRewardOnly2>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward> + ?getBalance[StarBuffs,ExtraCardRewardOnly2Amount] * <StarBuffs.ExtraCardRewardOnly2>}"
+        3:
+          Charges: "{3 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+        4:
+          Charges: "{3 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+        Default:
+          Charges: "{2 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+
+  ExperimentalProtocol:
+    Zone: 1
+    Coolness: 4
+    FloorNumber: 15
+    ItemImage: box_level4
+    Description: "^StarterPacks.ExperimentalProtocol.Description^"
+    ItemPresets:
+      1: ExperimentalProtocolHead
+      2: ExperimentalProtocolTorso
+      3: ExperimentalProtocolHands
+      4: ExperimentalProtocolBelt
+      5: ExperimentalProtocolBoots
+    Head:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeHeadCharges] * <StarRewards.UpgradeHead>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Torso:
+      Charges: "{3 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Hands:
+      Charges: "{1 + ?getBalance[StarBuffs,UpgradeHandsCharges] * <StarRewards.UpgradeHands>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Belt:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeBeltCharges] * <StarRewards.UpgradeBelt>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Legs:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeLegsCharges] * <StarRewards.UpgradeLegs>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_17: {}
+      ReachFloor_19: {}
+      ReachFloor_21: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * 1.1 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * 1.2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * 1.3 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * 1.4 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * 1.6 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * 1.8 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        2:
+          Charges: "{5 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward> + ?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount] * <StarBuffs.ExtraChargeRewardOnly2>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward> + ?getBalance[StarBuffs,ExtraCardRewardOnly2Amount] * <StarBuffs.ExtraCardRewardOnly2>}"
+        3:
+          Charges: "{4 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+        4:
+          Charges: "{4 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+        Default:
+          Charges: "{3 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+
+  AlphaProtocol:
+    Zone: 2
+    Coolness: 5
+    FloorNumber: 15
+    ItemImage: box2_level1
+    Description: "^StarterPacks.AlphaProtocol.Description^"
+    ItemPresets:
+      1: AlphaProtocolHead
+      2: AlphaProtocolTorso
+      3: AlphaProtocolHands
+      4: AlphaProtocolBelt
+      5: AlphaProtocolLegs
+    Head:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeHeadCharges] * <StarRewards.UpgradeHead>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Torso:
+      Charges: "{3 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Hands:
+      Charges: "{1 + ?getBalance[StarBuffs,UpgradeHandsCharges] * <StarRewards.UpgradeHands_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Belt:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeBeltCharges] * <StarRewards.UpgradeBelt>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Legs:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeLegsCharges] * <StarRewards.UpgradeLegs>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_17: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * 1.1 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * 1.2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * 1.3 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * 1.4 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * 1.6 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * 1.8 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        Default:
+          Charges: "{1 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward> + ?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount] * <StarBuffs.ExtraChargeRewardOnly2>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward> + ?getBalance[StarBuffs,ExtraCardRewardOnly2Amount] * <StarBuffs.ExtraCardRewardOnly2>}"
+
+  BetaProtocol:
+    Zone: 2
+    Coolness: 6
+    FloorNumber: 17
+    ItemImage: box2_level2
+    Description: "^StarterPacks.BetaProtocol.Description^"
+    ItemPresets:
+      1: BetaProtocolHead
+      2: BetaProtocolTorso
+      3: BetaProtocolHands
+      4: BetaProtocolBelt
+      5: BetaProtocolLegs
+    Head:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeHeadCharges] * <StarRewards.UpgradeHead>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Torso:
+      Charges: "{3 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Hands:
+      Charges: "{1 + ?getBalance[StarBuffs,UpgradeHandsCharges] * <StarRewards.UpgradeHands_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Belt:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeBeltCharges] * <StarRewards.UpgradeBelt>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Legs:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeLegsCharges] * <StarRewards.UpgradeLegs>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_19: {}
+      ReachFloor_21: {}
+      ReachFloor_22: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * (1 - <StarBuffs.RankDiscount>/100)}"
+        22: "{4558 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        2:
+          Charges: "{2 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward> + ?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount] * <StarBuffs.ExtraChargeRewardOnly2>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward> + ?getBalance[StarBuffs,ExtraCardRewardOnly2Amount] * <StarBuffs.ExtraCardRewardOnly2>}"
+        4:
+          Charges: "{2 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+        Default:
+          Charges: "{1 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+
+  GammaProtocol:
+    Zone: 2
+    Coolness: 7
+    FloorNumber: 19
+    ItemImage: box2_level3
+    Description: "^StarterPacks.GammaProtocol.Description^"
+    ItemPresets:
+      1: GammaProtocolHead
+      2: GammaProtocolTorso
+      3: GammaProtocolHands
+      4: GammaProtocolBelt
+      5: GammaProtocolLegs
+    Head:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeHeadCharges] * <StarRewards.UpgradeHead>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Torso:
+      Charges: "{3 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Hands:
+      Charges: "{1 + ?getBalance[StarBuffs,UpgradeHandsCharges] * <StarRewards.UpgradeHands_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Belt:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeBeltCharges] * <StarRewards.UpgradeBelt>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Legs:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeLegsCharges] * <StarRewards.UpgradeLegs_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_21: {}
+      ReachFloor_23: {}
+      ReachFloor_25: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * (1 - <StarBuffs.RankDiscount>/100)}"
+        22: "{4558 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        2:
+          Charges: "{4 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward> + ?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount] * <StarBuffs.ExtraChargeRewardOnly2>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward> + ?getBalance[StarBuffs,ExtraCardRewardOnly2Amount] * <StarBuffs.ExtraCardRewardOnly2>}"
+        3:
+          Charges: "{3 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+        4:
+          Charges: "{3 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+        Default:
+          Charges: "{2 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+
+  OmegaProtocol:
+    Zone: 2
+    Coolness: 8
+    FloorNumber: 24
+    ItemImage: box2_level4
+    Description: "^StarterPacks.OmegaProtocol.Description^"
+    ItemPresets:
+      1: OmegaProtocolHead
+      2: OmegaProtocolTorso
+      3: OmegaProtocolHands
+      4: OmegaProtocolBelt
+      5: OmegaProtocolLegs
+    Head:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeHeadCharges] * <StarRewards.UpgradeHead>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Torso:
+      Charges: "{3 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Hands:
+      Charges: "{1 + ?getBalance[StarBuffs,UpgradeHandsCharges] * <StarRewards.UpgradeHands_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Belt:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeBeltCharges] * <StarRewards.UpgradeBelt_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Legs:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeLegsCharges] * <StarRewards.UpgradeLegs_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_26: {}
+      ReachFloor_28: {}
+      ReachFloor_29: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * (1 - <StarBuffs.RankDiscount>/100)}"
+        22: "{4558 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        2:
+          Charges: "{5 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward> + ?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount] * <StarBuffs.ExtraChargeRewardOnly2>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward> + ?getBalance[StarBuffs,ExtraCardRewardOnly2Amount] * <StarBuffs.ExtraCardRewardOnly2>}"
+        3:
+          Charges: "{4 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+        4:
+          Charges: "{4 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+        Default:
+          Charges: "{3 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+  LastProtocol:
+    Zone: 2
+    Coolness: 9
+    FloorNumber: 30
+    ItemImage: box2_level5
+    Description: "^StarterPacks.LastProtocol.Description^"
+    ItemPresets:
+      1: LastProtocolHead
+      2: LastProtocolTorso
+      3: LastProtocolHands
+      4: LastProtocolBelt
+      5: LastProtocolLegs
+    Head:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeHeadCharges] * <StarRewards.UpgradeHead_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Torso:
+      Charges: "{3 + ?getBalance[StarBuffs,UpgradeTorsoCharges] * <StarRewards.UpgradeTorso_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Hands:
+      Charges: "{1 + ?getBalance[StarBuffs,UpgradeHandsCharges] * <StarRewards.UpgradeHands_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Belt:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeBeltCharges] * <StarRewards.UpgradeBelt_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    Legs:
+      Charges: "{2 + ?getBalance[StarBuffs,UpgradeLegsCharges] * <StarRewards.UpgradeLegs_z2>}"
+      MaxSockets: "{3 + <StarRewards.AddSockets>}"
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_31: {}
+      ReachFloor_33: {}
+      ReachFloor_35: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * (1 - <StarBuffs.RankDiscount>/100)}"
+        22: "{4558 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        2:
+          Charges: "{5 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward> + ?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount] * <StarBuffs.ExtraChargeRewardOnly2>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward> + ?getBalance[StarBuffs,ExtraCardRewardOnly2Amount] * <StarBuffs.ExtraCardRewardOnly2>}"
+        3:
+          Charges: "{4 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>  + ?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount] * <StarBuffs.ExtraChargeAndCardRewardOnly4>}"
+        4:
+          Charges: "{4 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+        Default:
+          Charges: "{3 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+
+  NewProtocol:
+    Zone: 3
+    Coolness: 1
+    FloorNumber: 20
+    ItemImage: box_level0
+    Description: "^StarterPacks.BasicProtocol.Description^"
+    ItemPresets:
+      1: 
+    ResearchRequirements:
+      NoRequirements: {}
+      ReachFloor_3: {}
+    Ranks:
+      Points:
+        1: "{45 * (1 - <StarBuffs.RankDiscount>/100)}"
+        2: "{112 * (1 - <StarBuffs.RankDiscount>/100)}"
+        3: "{281 * 1.1 * (1 - <StarBuffs.RankDiscount>/100)}"
+        4: "{474 * 1.2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        5: "{703 * 1.3 * (1 - <StarBuffs.RankDiscount>/100)}"
+        6: "{954 * 1.4 * (1 - <StarBuffs.RankDiscount>/100)}"
+        7: "{1218 * 1.6 * (1 - <StarBuffs.RankDiscount>/100)}"
+        8: "{1488 * 1.8 * (1 - <StarBuffs.RankDiscount>/100)}"
+        9: "{1757 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        10: "{2023 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        11: "{2283 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        12: "{2535 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        13: "{2779 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        14: "{3013 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        15: "{3237 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        16: "{3452 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        17: "{3658 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        18: "{3855 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        19: "{4043 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        20: "{4222 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        21: "{4394 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+        Default: "{4558 * 2 * (1 - <StarBuffs.RankDiscount>/100)}"
+      Rewards:
+        Default:
+          Charges: "{1 + ?getBalance[StarBuffs,ExtraChargeRewardAmount] * <StarBuffs.ExtraChargeReward>}"
+          Cards: "{2 + ?getBalance[StarBuffs,ExtraCardRewardAmount] * <StarBuffs.ExtraCardReward>}"
+
+Requirements:
+  NoRequirements:
+    {
+      Counter: NoRequirements,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.NoRequirements^",
+    }
+  ReachFloor_1:
+    {
+      Counter: StartedFloor_1,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_1^",
+    }
+  ReachFloor_2:
+    {
+      Counter: StartedFloor_2,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_2^",
+    }
+  ReachFloor_3:
+    {
+      Counter: StartedFloor_3,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_3^",
+    }
+  ReachFloor_4:
+    {
+      Counter: StartedFloor_4,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_4^",
+    }
+  ReachFloor_5:
+    {
+      Counter: StartedFloor_5,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_5^",
+    }
+  ReachFloor_6:
+    {
+      Counter: StartedFloor_6,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_6^",
+    }
+  ReachFloor_7:
+    {
+      Counter: StartedFloor_7,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_7^",
+    }
+  ReachFloor_8:
+    {
+      Counter: StartedFloor_8,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_8^",
+    }
+  ReachFloor_9:
+    {
+      Counter: StartedFloor_9,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_9^",
+    }
+  ReachFloor_10:
+    {
+      Counter: StartedFloor_10,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_10^",
+    }
+  ReachFloor_11:
+    {
+      Counter: StartedFloor_11,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_11^",
+    }
+  ReachFloor_12:
+    {
+      Counter: StartedFloor_12,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_12^",
+    }
+  ReachFloor_13:
+    {
+      Counter: StartedFloor_13,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_13^",
+    }
+  ReachFloor_14:
+    {
+      Counter: StartedFloor_14,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_14^",
+    }
+  ReachFloor_15:
+    {
+      Counter: StartedFloor_15,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_15^",
+    }
+  ReachFloor_16:
+    {
+      Counter: StartedFloor_16,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_16^",
+    }
+  ReachFloor_17:
+    {
+      Counter: StartedFloor_17,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_17^",
+    }
+  ReachFloor_18:
+    {
+      Counter: StartedFloor_18,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_18^",
+    }
+  ReachFloor_19:
+    {
+      Counter: StartedFloor_19,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_19^",
+    }
+  ReachFloor_20:
+    {
+      Counter: StartedFloor_20,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_20^",
+    }
+  ReachFloor_21:
+    {
+      Counter: StartedFloor_21,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_21^",
+    }
+  ReachFloor_22:
+    {
+      Counter: StartedFloor_22,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_22^",
+    }
+  ReachFloor_23:
+    {
+      Counter: StartedFloor_23,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_23^",
+    }
+  ReachFloor_24:
+    {
+      Counter: StartedFloor_24,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_24^",
+    }
+  ReachFloor_25:
+    {
+      Counter: StartedFloor_25,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_25^",
+    }
+  ReachFloor_26:
+    {
+      Counter: StartedFloor_26,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_26^",
+    }
+  ReachFloor_27:
+    {
+      Counter: StartedFloor_27,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_27^",
+    }
+  ReachFloor_28:
+    {
+      Counter: StartedFloor_28,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_28^",
+    }
+  ReachFloor_29:
+    {
+      Counter: StartedFloor_29,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_29^",
+    }
+  ReachFloor_30:
+    {
+      Counter: StartedFloor_30,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_30^",
+    }
+  ReachFloor_31:
+    {
+      Counter: StartedFloor_31,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_31^",
+    }
+  ReachFloor_32:
+    {
+      Counter: StartedFloor_32,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_32^",
+    }
+  ReachFloor_33:
+    {
+      Counter: StartedFloor_33,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_33^",
+    }
+  ReachFloor_34:
+    {
+      Counter: StartedFloor_34,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_34^",
+    }
+  ReachFloor_35:
+    {
+      Counter: StartedFloor_35,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_35^",
+    }
+  ReachFloor_36:
+    {
+      Counter: StartedFloor_36,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_36^",
+    }
+  ReachFloor_37:
+    {
+      Counter: StartedFloor_37,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_37^",
+    }
+  ReachFloor_38:
+    {
+      Counter: StartedFloor_38,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_38^",
+    }
+  ReachFloor_39:
+    {
+      Counter: StartedFloor_39,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_39^",
+    }
+  ReachFloor_40:
+    {
+      Counter: StartedFloor_40,
+      Value: 1,
+      Text: "^StarterPacks.ResearchRequirements.ReachFloor_40^",
+    }
+
+Quests:
+  InspectGear:
+    RewardCard: BonusTokens_1_Torso
+  InsertUpgrade:
+    TokensAmount: 1000
+  Accessibility:
+    ChipsAmount: 10
+  DecryptionTest:
+    ChipsAmount: 15
+  ThirdProtocol:
+    RankNeeded: 5
+  FourthProtocol:
+    ObtainCardsCount: 15
+    NotifyProgress:
+      0: 0
+      Default: 1
+  Bruteforce:
+    LocksCountOnFloor: 10
+    NotifyProgress:
+      0: 0
+      Default: 1
+  Bruteforce1:
+    LocksCountOnFloor: 10
+    NotifyProgress:
+      0: 0
+      Default: 1
+  Bruteforce2:
+    ChipReward: 20
+    LocksCountOnFloor: 10
+    NotifyProgress:
+      0: 0
+      Default: 1
+  Bruteforce3:
+    LocksCountOnFloor: 10
+    NotifyProgress:
+      0: 0
+      Default: 1
+  TheContact:
+    StartCondition: 4
+    TargetFloor: 6
+  SecureConnection:
+    ButtonsCount: 18
+    ButtonsCountForRankCondition: 8
+    RequiredRank: 4
+  ServiceEntrance:
+    KeysToGenerate: 1
+    MinimumKeyFloor: 16
+    EscapeRoomFloorMin: 18
+    EscapeRoomFloorMax: 18
+  TreasureHunt:
+    ObtainCardsCount: 8
+    Rarity: 2
+    NotifyProgress:
+      0: 0
+      Default: 1
+  RaresCollector:
+    ObtainCardsCount: 2
+    Rarity: 3
+    NotifyProgress:
+      0: 0
+      Default: 1
+  SwarmEncounter:
+    Floor: 18
+  PowerFailures:
+    Floor: 17
+  MaintenanceOperations:
+    MemoryUnits: 10
+  MemoryInstall:
+    Floor: 18
+    MaxFails: 5
+  ServerError:
+    MinFloor: "?getBalance[StarterPacks,GammaProtocol,FloorNumber]"
+    MaxFloor: "{?getBalance[StarterPacks,GammaProtocol,FloorNumber] + 2}"
+    MinServersPerFloor: 2
+    MaxServersPerFloor: 3
+    RunsCountOnMaxFloor: 2
+  FileKeys:
+    Floors: { 1: 22, 2: 23, 3: 24, 4: 25 }
+  Reactor:
+    Floor: "{?getBalance[StarterPacks,OmegaProtocol,FloorNumber] + 1}"
+  PowerNodes:
+    MinFloor: "?getBalance[StarterPacks,OmegaProtocol,FloorNumber]"
+    MaxFloor: "{?getBalance[StarterPacks,OmegaProtocol,FloorNumber] + 2}"
+  FindFuze:
+    Floor: "{?getBalance[StarterPacks,OmegaProtocol,FloorNumber] + 3}"
+  InsertFuze:
+    Floor: "{?getBalance[StarterPacks,OmegaProtocol,FloorNumber] + 4}"
+  ReadjustScanner:
+    DevicesCount: 3
+    Floor: "{?getBalance[StarterPacks,OmegaProtocol,FloorNumber] + 5}"
+  ScannerProcedures:
+    Floor: "{?getBalance[StarterPacks,OmegaProtocol,FloorNumber] + 6}"
+  FindCapsules:
+    MaxPerFloor: 2
+    CapsulesCount: 5
+    MinFloor: "{?getBalance[StarterPacks,LastProtocol,FloorNumber] + 1}"
+    MaxFloor: "{?getBalance[StarterPacks,LastProtocol,FloorNumber] + 3}"
+
+Stunts:
+  ColorByRarity:
+    Default: "#5DB2FFFF"
+    1: "#5DB2FFFF"
+    2: "#DA6C0EFF"
+    3: "#E6252CFF"
+  BaseItemAttributes:
+    ST_EffectImage: research_credits_icon
+    ST_ImageColor: blue
+  StuntGroups:
+    RocketVault: { Group: Group1-1 }
+    MonkeyVault: { Group: Group1-1 }
+    DashVault: { Group: Group1-1 }
+    ReverseVault: { Group: Group1-1 }
+    ThiefVault: { Group: Group1-1 }
+    JumpObstacle: { Group: Group1-1 }
+    SplitOne: { Group: Group1-1 }
+    ObstacleFrontflip: { Group: Group1-1 }
+    RollForward: { Group: Group1-2 }
+    BarrelVault: { Group: Group1-2 }
+    FlyingArrow: { Group: Group1-2 }
+    JumpSpinVault: { Group: Group1-2 }
+    VertVault: { Group: Group1-2 }
+    SpinVault: { Group: Group1-2 }
+    SpinningVault: { Group: Group1-3 }
+    RailFlipVault: { Group: Group1-3 }
+    SpinBicycle: { Group: Group1-3 }
+    DoubleSpinVault: { Group: Group1-4 }
+    KingKongToBend: { Group: Group1-4 }
+    LongJumpToBarrel: { Group: Group1-4 }
+    WebsterWithSalto: { Group: Group1-4 }
+    MonkeyToBackflip: { Group: Group1-4 }
+    RollToStraightLegsFlip: { Group: Group1-5 }
+    ScrewDriver: { Group: Group1-5 }
+    AboveCar: { Group: Group1-6 }
+    GateVault: { Group: Group1-6 }
+    WallSpeedVault: { Group: Group1-6 }
+    DoubleJumpRoll: { Group: Group1-7 }
+    DoubleKong: { Group: Group1-7 }
+    DashToFrontflip: { Group: Group1-8 }
+    Sidebomb: { Group: Group1-8 }
+    WallBackRoll: { Group: Group1-9 }
+    KingKongJumpoff: { Group: Group1-9 }
+    Webster: { Group: Group2-1 }
+    SideFlip: { Group: Group2-1 }
+    Swallow: { Group: Group2-1 }
+    CheatGainer: { Group: Group2-1 }
+    BarJump: { Group: Group2-2 }
+    BarJumpSaltoless: { Group: Group2-2 }
+    SlowSpin: { Group: Group2-2 }
+    CoolSwing: { Group: Group2-3 }
+    TripleSwing: { Group: Group2-3 }
+    BackFlip: { Group: Group3-1 }
+    FrontFlipTwoLegs: { Group: Group3-1 }
+    DoubleSpinToRoll: { Group: Group3-2 }
+    DiveRoll: { Group: Group3-2 }
+    AirSpin: { Group: Group3-3 }
+    AirBomb: { Group: Group3-3 }
+    JumpWheel: { Group: Group3-3 }
+    HandspringToRoll: { Group: Group3-3 }
+    JumpTumble: { Group: Group3-4 }
+    FrontflipLegsUp: { Group: Group3-4 }
+    DiveDown: { Group: Group3-5 }
+    JumpDownRoll: { Group: Group3-5 }
+    TripleHit: { Group: Group4 }
+    HandSpring: { Group: Group4 }
+    TripleTrickToSwallow: { Group: Group4 }
+    DoubleBack: { Group: Group4 }
+    WallHop: { Group: Group5 }
+    WallHop360: { Group: Group5 }
+    TurnVault: { Group: Group7 }
+    BoomBoomSh: { Group: Group8 }
+    LongCircle: { Group: Group9 }
+    WallCling: { Group: Group10 }
+    Spin: { Group: Group11 }
+    Underbar: { Group: Group6 }
+    MonkeyToBomb: { Group: Group12 }
+    Default: { Group: GroupNone }
+  Groups:
+    Group1-1:
+      Blocked: 0
+      Stunts:
+        {
+          RocketVault_1: {},
+          RocketVault_2: {},
+          RocketVault_3: {},
+          MonkeyVault_1: {},
+          MonkeyVault_2: {},
+          MonkeyVault_3: {},
+          DashVault_1: {},
+          DashVault_2: {},
+          DashVault_3: {},
+          ReverseVault_1: {},
+          ReverseVault_2: {},
+          ReverseVault_3: {},
+          ThiefVault_1: {},
+          ThiefVault_2: {},
+          ThiefVault_3: {},
+          JumpObstacle_1: {},
+          JumpObstacle_2: {},
+          JumpObstacle_3: {},
+          SplitOne_1: {},
+          SplitOne_2: {},
+          SplitOne_3: {},
+          ObstacleFrontflip_1: {},
+          ObstacleFrontflip_2: {},
+          ObstacleFrontflip_3: {},
+        }
+    Group1-2:
+      Blocked: 0
+      Stunts:
+        {
+          RollForward_1: {},
+          RollForward_2: {},
+          RollForward_3: {},
+          BarrelVault_1: {},
+          BarrelVault_2: {},
+          BarrelVault_3: {},
+          FlyingArrow_1: {},
+          FlyingArrow_2: {},
+          FlyingArrow_3: {},
+          JumpSpinVault_1: {},
+          JumpSpinVault_2: {},
+          JumpSpinVault_3: {},
+          VertVault_1: {},
+          VertVault_2: {},
+          VertVault_3: {},
+          SpinVault_1: {},
+          SpinVault_2: {},
+          SpinVault_3: {},
+        }
+    Group1-3:
+      Blocked: 0
+      Stunts:
+        {
+          SpinningVault_1: {},
+          SpinningVault_2: {},
+          SpinningVault_3: {},
+          RailFlipVault_1: {},
+          RailFlipVault_2: {},
+          RailFlipVault_3: {},
+          SpinBicycle_1: {},
+          SpinBicycle_2: {},
+          SpinBicycle_3: {},
+        }
+    Group1-4:
+      Blocked: 0
+      Stunts:
+        {
+          DoubleSpinVault_1: {},
+          DoubleSpinVault_2: {},
+          DoubleSpinVault_3: {},
+          KingKongToBend_1: {},
+          KingKongToBend_2: {},
+          KingKongToBend_3: {},
+          LongJumpToBarrel_1: {},
+          LongJumpToBarrel_2: {},
+          LongJumpToBarrel_3: {},
+          WebsterWithSalto_1: {},
+          WebsterWithSalto_2: {},
+          WebsterWithSalto_3: {},
+          MonkeyToBackflip_1: {},
+          MonkeyToBackflip_2: {},
+          MonkeyToBackflip_3: {},
+        }
+    Group1-5:
+      Blocked: 0
+      Stunts:
+        {
+          RollToStraightLegsFlip_1: {},
+          RollToStraightLegsFlip_2: {},
+          RollToStraightLegsFlip_3: {},
+          ScrewDriver_1: {},
+          ScrewDriver_2: {},
+          ScrewDriver_3: {},
+        }
+    Group1-6:
+      Blocked: 0
+      Stunts:
+        {
+          AboveCar_1: {},
+          AboveCar_2: {},
+          AboveCar_3: {},
+          GateVault_1: {},
+          GateVault_2: {},
+          GateVault_3: {},
+          WallSpeedVault_1: {},
+          WallSpeedVault_2: {},
+          WallSpeedVault_3: {},
+        }
+    Group1-7:
+      Blocked: 0
+      Stunts:
+        {
+          DoubleJumpRoll_1: {},
+          DoubleJumpRoll_2: {},
+          DoubleJumpRoll_3: {},
+          DoubleKong_1: {},
+          DoubleKong_2: {},
+          DoubleKong_3: {},
+        }
+    Group1-8:
+      Blocked: 0
+      Stunts:
+        {
+          DashToFrontflip_1: {},
+          DashToFrontflip_2: {},
+          DashToFrontflip_3: {},
+          Sidebomb_1: {},
+          Sidebomb_2: {},
+          Sidebomb_3: {},
+        }
+    Group1-9:
+      Blocked: 0
+      Stunts:
+        {
+          WallBackRoll_1: {},
+          WallBackRoll_2: {},
+          WallBackRoll_3: {},
+          KingKongJumpoff_1: {},
+          KingKongJumpoff_2: {},
+          KingKongJumpoff_3: {},
+        }
+    Group2-1:
+      Blocked: 0
+      Stunts:
+        {
+          Webster_1: {},
+          Webster_2: {},
+          Webster_3: {},
+          SideFlip_1: {},
+          SideFlip_2: {},
+          SideFlip_3: {},
+          Swallow_1: {},
+          Swallow_2: {},
+          Swallow_3: {},
+          CheatGainer_1: {},
+          CheatGainer_2: {},
+          CheatGainer_3: {},
+        }
+    Group2-2:
+      Blocked: 0
+      Stunts:
+        {
+          BarJump_1: {},
+          BarJump_2: {},
+          BarJump_3: {},
+          BarJumpSaltoless_1: {},
+          BarJumpSaltoless_2: {},
+          BarJumpSaltoless_3: {},
+          SlowSpin_1: {},
+          SlowSpin_2: {},
+          SlowSpin_3: {},
+        }
+    Group2-3:
+      Blocked: 0
+      Stunts:
+        {
+          CoolSwing_1: {},
+          CoolSwing_2: {},
+          CoolSwing_3: {},
+          TripleSwing_1: {},
+          TripleSwing_2: {},
+          TripleSwing_3: {},
+        }
+    Group3-1:
+      Blocked: 0
+      Stunts:
+        {
+          BackFlip_1: {},
+          BackFlip_2: {},
+          BackFlip_3: {},
+          FrontFlipTwoLegs_1: {},
+          FrontFlipTwoLegs_2: {},
+          FrontFlipTwoLegs_3: {},
+        }
+    Group3-2:
+      Blocked: 0
+      Stunts:
+        {
+          DoubleSpinToRoll_1: {},
+          DoubleSpinToRoll_2: {},
+          DoubleSpinToRoll_3: {},
+          DiveRoll_1: {},
+          DiveRoll_2: {},
+          DiveRoll_3: {},
+        }
+    Group3-3:
+      Blocked: 0
+      Stunts:
+        {
+          AirSpin_1: {},
+          AirSpin_2: {},
+          AirSpin_3: {},
+          AirBomb_1: {},
+          AirBomb_2: {},
+          AirBomb_3: {},
+          JumpWheel_1: {},
+          JumpWheel_2: {},
+          JumpWheel_3: {},
+          HandspringToRoll_1: {},
+          HandspringToRoll_2: {},
+          HandspringToRoll_3: {},
+        }
+    Group3-4:
+      Blocked: 0
+      Stunts:
+        {
+          JumpTumble_1: {},
+          JumpTumble_2: {},
+          JumpTumble_3: {},
+          FrontflipLegsUp_1: {},
+          FrontflipLegsUp_2: {},
+          FrontflipLegsUp_3: {},
+        }
+    Group3-5:
+      Blocked: 0
+      Stunts:
+        {
+          DiveDown_1: {},
+          DiveDown_2: {},
+          DiveDown_3: {},
+          JumpDownRoll_1: {},
+          JumpDownRoll_2: {},
+          JumpDownRoll_3: {},
+        }
+    Group4:
+      Blocked: 0
+      Stunts:
+        {
+          TripleHit_1: {},
+          TripleHit_2: {},
+          TripleHit_3: {},
+          HandSpring_1: {},
+          HandSpring_2: {},
+          HandSpring_3: {},
+          TripleTrickToSwallow_1: {},
+          TripleTrickToSwallow_2: {},
+          TripleTrickToSwallow_3: {},
+          DoubleBack_1: {},
+          DoubleBack_2: {},
+          DoubleBack_3: {},
+        }
+    Group5:
+      Blocked: 0
+      Stunts:
+        {
+          WallHop_1: {},
+          WallHop_2: {},
+          WallHop_3: {},
+          WallHop360_1: {},
+          WallHop360_2: {},
+          WallHop360_3: {},
+        }
+    Group6:
+      Blocked: 0
+      Stunts: { Underbar_1: {}, Underbar_2: {}, Underbar_3: {} }
+    Group7:
+      Blocked: 0
+      Stunts: { TurnVault_1: {}, TurnVault_2: {}, TurnVault_3: {} }
+    Group8:
+      Blocked: 0
+      Stunts: { BoomBoomSh_1: {}, BoomBoomSh_2: {}, BoomBoomSh_3: {} }
+    Group9:
+      Blocked: 0
+      Stunts: { LongCircle_1: {}, LongCircle_2: {}, LongCircle_3: {} }
+    Group10:
+      Blocked: 0
+      Stunts: { WallCling_1: {}, WallCling_2: {}, WallCling_3: {} }
+    Group11:
+      Blocked: 0
+      Stunts: { Spin_1: {}, Spin_2: {}, Spin_3: {} }
+    Group12:
+      Blocked: 0
+      Stunts: { MonkeyToBomb_1: {}, MonkeyToBomb_2: {}, MonkeyToBomb_3: {} }
+
+    GroupNone:
+      Blocked: 0
+      Stunts: {}
+    Default:
+      Blocked: 1
+      Stunts: {}
+
+Reroll:
+  Price: 2
+  FreeRerolls: 1
+  BonusChipsForReroll: "{?getBalance[Reroll, Price]+3}"
+
+Cards:
+  SingleEffectLifetime: 20
+  BoostedWeightMultiplier: 10
+  BoostTime: 3600 #в секундах
+  BoostPrice:
+    1: 5
+    2: 10
+    3: 20
+    4: 30
+    Default: 40
+  Slots:
+    Default: Torso
+    EMP: Legs
+    Teleportarium: Head
+    Magnetizer: Torso
+SaveMe:
+  Attempt:
+    1: { Price: 5 }
+    2: { Price: 10 }
+    3: { Price: 15 }
+    4: { Price: 20 }
+    Default: { Price: 50 }
+  Limit: 3
+
+Coupons:
+  CardsBoost:
+    Weight: 1
+    Rarity: 1
+    DefaultItemImage: "boost_coupons.coupon_cards_boost_blue"
+    ButtonText: "^Coupons.CardsBoost.UseCoupon^"
+    ButtonIcon: "coupons.cards_boost"
+    ButtonIconColor: "paleblue"
+    VisualName: "^Coupons.CardsBoost.VisualName^"
+    Info: "^Coupons.CardsBoost.Info^"
+  Saveme:
+    Weight: 1
+    Rarity: 2
+    DefaultItemImage: "boost_coupons.coupon_save_me_orange"
+    ButtonText: "^Coupons.Saveme.UseCoupon^"
+    ButtonIcon: "coupons.save_me"
+    ButtonIconColor: "paleorange"
+    VisualName: "^Coupons.Saveme.VisualName^"
+    Info: "^Coupons.Saveme.Info^"
+  EnergyRecharge:
+    Weight: 1
+    Rarity: 1
+    DefaultItemImage: "boost_coupons.coupon_starterpack_recharge_blue"
+    ButtonText: "^Coupons.EnergyRecharge.UseCoupon^"
+    ButtonIcon: "coupons.starterpack_recharge"
+    ButtonIconColor: "paleblue"
+    VisualName: "^Coupons.EnergyRecharge.VisualName^"
+    Info: "^Coupons.EnergyRecharge.Info^"
+  Reroll:
+    Weight: 1
+    Rarity: 1
+    DefaultItemImage: "boost_coupons.coupon_reroll_blue"
+    ButtonText: "^Coupons.Reroll.UseCoupon^"
+    ButtonIcon: "coupons.reroll"
+    ButtonIconColor: "paleblue"
+    VisualName: "^Coupons.Reroll.VisualName^"
+    Info: "^Coupons.Reroll.Info^"
+
+Boosterpacks:
+  CardsAmount: ?ListRandom[1:100, 2:50, 3:25, 4:10, 5:5]
+
+Currencies:
+  Money1:
+    DefaultItemImage: "common.money1_icon"
+    Color: "blue"
+    Rarity: "0"
+  Money2:
+    DefaultItemImage: "common.money2_icon"
+    Color: "orange"
+    Rarity: "1"
+  Money3:
+    DefaultItemImage: "common.money3_icon"
+    Color: "chip_red"
+    Rarity: "3"
+
+Slots:
+  Head:
+    ArchiveTitle: "^GUI.Labels.Archive.HeadUpgrades^"
+    Image: head_empty
+    IconImage: cards.icon_helmet
+  Torso:
+    ArchiveTitle: "^GUI.Labels.Archive.TorsoUpgrades^"
+    Image: torso_empty
+    IconImage: cards.icon_torso
+  Hands:
+    ArchiveTitle: "^GUI.Labels.Archive.TorsoUpgrades^"
+    Image: hands_empty
+    IconImage: cards.icon_hand
+  Legs:
+    ArchiveTitle: "^GUI.Labels.Archive.LegsUpgrades^"
+    Image: legs_empty
+    IconImage: cards.icon_boots
+  Belt:
+    ArchiveTitle: "^GUI.Labels.Archive.BeltUpgrades^"
+    Image: belt_empty
+    IconImage: cards.icon_belt
+  Stunts:
+    ArchiveTitle: "^GUI.Labels.Archive.StuntsUpgrades^"
+    Image: category_stunt
+    IconImage: cards.passive_rich_stunt
+  Notes:
+    ArchiveTitle: "^GUI.Labels.Archive.Notes^"
+    Image: card_items.notes
+    IconImage: card_items.notes
+  StoryItems:
+    ArchiveTitle: "^GUI.Labels.Archive.StoryUpgrades^"
+    Image: card_items.icon_quest_items
+    IconImage: card_items.icon_quest_items
+
+Events:
+  PaymentPromo:
+    EventDuration: 86400
+    EffectDuration: 604800
+    RequiredRunCount: 1
+  PaymentPromo2:
+    EventDuration: 1800
+    BoosterpackAmount: 1
+    CouponsAmount: 10
+    Enable: 1
+  Notifications:
+    DayForQuestNotification: 3
+    DayForLoginNotification: 5
+
+Ads:
+  VideoReward: 2
+
+PassiveSpace:
+  StuntReward_1_Head: {}
+  StuntReward_2_Head: {}
+  StuntReward_3_Head: {}
+  StuntReward_1_Torso: {}
+  StuntReward_2_Torso: {}
+  StuntReward_3_Torso: {}
+  StuntReward_1_Legs: {}
+  StuntReward_2_Legs: {}
+  StuntReward_3_Legs: {}
+  StuntReward_1_Hands: {}
+  StuntReward_2_Hands: {}
+  StuntReward_3_Hands: {}
+  StuntReward_1_Belt: {}
+  StuntReward_2_Belt: {}
+  StuntReward_3_Belt: {}
+  StuntMultiReward_1_Head: {}
+  StuntMultiReward_2_Head: {}
+  StuntMultiReward_3_Head: {}
+  StuntMultiReward_1_Torso: {}
+  StuntMultiReward_2_Torso: {}
+  StuntMultiReward_3_Torso: {}
+  StuntMultiReward_1_Legs: {}
+  StuntMultiReward_2_Legs: {}
+  StuntMultiReward_3_Legs: {}
+  StuntMultiReward_1_Hands: {}
+  StuntMultiReward_2_Hands: {}
+  StuntMultiReward_3_Hands: {}
+  StuntMultiReward_1_Belt: {}
+  StuntMultiReward_2_Belt: {}
+  StuntMultiReward_3_Belt: {}
+  RestoreCharges_1_Head: {}
+  RestoreCharges_2_Head: {}
+  RestoreCharges_3_Head: {}
+  RestoreCharges_1_Torso: {}
+  RestoreCharges_2_Torso: {}
+  RestoreCharges_3_Torso: {}
+  RestoreCharges_1_Legs: {}
+  RestoreCharges_2_Legs: {}
+  RestoreCharges_3_Legs: {}
+  RestoreCharges_1_Hands: {}
+  RestoreCharges_2_Hands: {}
+  RestoreCharges_3_Hands: {}
+  RestoreCharges_1_Belt: {}
+  RestoreCharges_2_Belt: {}
+  RestoreCharges_3_Belt: {}
+  EndFloorRecoverCharges_1_Head: {}
+  EndFloorRecoverCharges_2_Head: {}
+  EndFloorRecoverCharges_3_Head: {}
+  EndFloorRecoverCharges_1_Torso: {}
+  EndFloorRecoverCharges_2_Torso: {}
+  EndFloorRecoverCharges_3_Torso: {}
+  EndFloorRecoverCharges_1_Legs: {}
+  EndFloorRecoverCharges_2_Legs: {}
+  EndFloorRecoverCharges_3_Legs: {}
+  EndFloorRecoverCharges_1_Hands: {}
+  EndFloorRecoverCharges_2_Hands: {}
+  EndFloorRecoverCharges_3_Hands: {}
+  EndFloorRecoverCharges_1_Belt: {}
+  EndFloorRecoverCharges_2_Belt: {}
+  EndFloorRecoverCharges_3_Belt: {}
+  SuperCredits_1_Head: {}
+  SuperCredits_2_Head: {}
+  SuperCredits_3_Head: {}
+  SuperCredits_1_Torso: {}
+  SuperCredits_2_Torso: {}
+  SuperCredits_3_Torso: {}
+  SuperCredits_1_Legs: {}
+  SuperCredits_2_Legs: {}
+  SuperCredits_3_Legs: {}
+  SuperCredits_1_Hands: {}
+  SuperCredits_2_Hands: {}
+  SuperCredits_3_Hands: {}
+  SuperCredits_1_Belt: {}
+  SuperCredits_2_Belt: {}
+  SuperCredits_3_Belt: {}
+  KeyDouble_1_Head: {}
+  KeyDouble_2_Head: {}
+  KeyDouble_3_Head: {}
+  KeyDouble_1_Torso: {}
+  KeyDouble_2_Torso: {}
+  KeyDouble_3_Torso: {}
+  KeyDouble_1_Legs: {}
+  KeyDouble_2_Legs: {}
+  KeyDouble_3_Legs: {}
+  KeyDouble_1_Hands: {}
+  KeyDouble_2_Hands: {}
+  KeyDouble_3_Hands: {}
+  KeyDouble_1_Belt: {}
+  KeyDouble_2_Belt: {}
+  KeyDouble_3_Belt: {}
+  CouponSaveMePassive_1_Head: {}
+  CouponSaveMePassive_2_Head: {}
+  CouponSaveMePassive_3_Head: {}
+  CouponSaveMePassive_1_Torso: {}
+  CouponSaveMePassive_2_Torso: {}
+  CouponSaveMePassive_3_Torso: {}
+  CouponSaveMePassive_1_Legs: {}
+  CouponSaveMePassive_2_Legs: {}
+  CouponSaveMePassive_3_Legs: {}
+  CouponSaveMePassive_1_Hands: {}
+  CouponSaveMePassive_2_Hands: {}
+  CouponSaveMePassive_3_Hands: {}
+  CouponSaveMePassive_1_Belt: {}
+  CouponSaveMePassive_2_Belt: {}
+  CouponSaveMePassive_3_Belt: {}
+  CouponCardBoostPassive_1_Head: {}
+  CouponCardBoostPassive_2_Head: {}
+  CouponCardBoostPassive_3_Head: {}
+  CouponCardBoostPassive_1_Torso: {}
+  CouponCardBoostPassive_2_Torso: {}
+  CouponCardBoostPassive_3_Torso: {}
+  CouponCardBoostPassive_1_Legs: {}
+  CouponCardBoostPassive_2_Legs: {}
+  CouponCardBoostPassive_3_Legs: {}
+  CouponCardBoostPassive_1_Hands: {}
+  CouponCardBoostPassive_2_Hands: {}
+  CouponCardBoostPassive_3_Hands: {}
+  CouponCardBoostPassive_1_Belt: {}
+  CouponCardBoostPassive_2_Belt: {}
+  CouponCardBoostPassive_3_Belt: {}
+  CouponEnergyRechargePassive_1_Head: {}
+  CouponEnergyRechargePassive_2_Head: {}
+  CouponEnergyRechargePassive_3_Head: {}
+  CouponEnergyRechargePassive_1_Torso: {}
+  CouponEnergyRechargePassive_2_Torso: {}
+  CouponEnergyRechargePassive_3_Torso: {}
+  CouponEnergyRechargePassive_1_Legs: {}
+  CouponEnergyRechargePassive_2_Legs: {}
+  CouponEnergyRechargePassive_3_Legs: {}
+  CouponEnergyRechargePassive_1_Hands: {}
+  CouponEnergyRechargePassive_2_Hands: {}
+  CouponEnergyRechargePassive_3_Hands: {}
+  CouponEnergyRechargePassive_1_Belt: {}
+  CouponEnergyRechargePassive_2_Belt: {}
+  CouponEnergyRechargePassive_3_Belt: {}
+  CouponRerollPassive_1_Head: {}
+  CouponRerollPassive_2_Head: {}
+  CouponRerollPassive_3_Head: {}
+  CouponRerollPassive_1_Torso: {}
+  CouponRerollPassive_2_Torso: {}
+  CouponRerollPassive_3_Torso: {}
+  CouponRerollPassive_1_Legs: {}
+  CouponRerollPassive_2_Legs: {}
+  CouponRerollPassive_3_Legs: {}
+  CouponRerollPassive_1_Hands: {}
+  CouponRerollPassive_2_Hands: {}
+  CouponRerollPassive_3_Hands: {}
+  CouponRerollPassive_1_Belt: {}
+  CouponRerollPassive_2_Belt: {}
+  CouponRerollPassive_3_Belt: {}
+  EndFloorPoints_1_Head: {}
+  EndFloorPoints_2_Head: {}
+  EndFloorPoints_3_Head: {}
+  EndFloorPoints_1_Torso: {}
+  EndFloorPoints_2_Torso: {}
+  EndFloorPoints_3_Torso: {}
+  EndFloorPoints_1_Legs: {}
+  EndFloorPoints_2_Legs: {}
+  EndFloorPoints_3_Legs: {}
+  EndFloorPoints_1_Hands: {}
+  EndFloorPoints_2_Hands: {}
+  EndFloorPoints_3_Hands: {}
+  EndFloorPoints_1_Belt: {}
+  EndFloorPoints_2_Belt: {}
+  EndFloorPoints_3_Belt: {}
+  EndFloorChargePoints_1_Head: {}
+  EndFloorChargePoints_2_Head: {}
+  EndFloorChargePoints_3_Head: {}
+  EndFloorChargePoints_1_Torso: {}
+  EndFloorChargePoints_2_Torso: {}
+  EndFloorChargePoints_3_Torso: {}
+  EndFloorChargePoints_1_Legs: {}
+  EndFloorChargePoints_2_Legs: {}
+  EndFloorChargePoints_3_Legs: {}
+  EndFloorChargePoints_1_Hands: {}
+  EndFloorChargePoints_2_Hands: {}
+  EndFloorChargePoints_3_Hands: {}
+  EndFloorChargePoints_1_Belt: {}
+  EndFloorChargePoints_2_Belt: {}
+  EndFloorChargePoints_3_Belt: {}
+  EndFloorPointsFactor_1_Head: {}
+  EndFloorPointsFactor_2_Head: {}
+  EndFloorPointsFactor_3_Head: {}
+  EndFloorPointsFactor_1_Torso: {}
+  EndFloorPointsFactor_2_Torso: {}
+  EndFloorPointsFactor_3_Torso: {}
+  EndFloorPointsFactor_1_Legs: {}
+  EndFloorPointsFactor_2_Legs: {}
+  EndFloorPointsFactor_3_Legs: {}
+  EndFloorPointsFactor_1_Hands: {}
+  EndFloorPointsFactor_2_Hands: {}
+  EndFloorPointsFactor_3_Hands: {}
+  EndFloorPointsFactor_1_Belt: {}
+  EndFloorPointsFactor_2_Belt: {}
+  EndFloorPointsFactor_3_Belt: {}
+  BonusTokens_1_Head: {}
+  BonusTokens_2_Head: {}
+  BonusTokens_3_Head: {}
+  BonusTokens_1_Torso: {}
+  BonusTokens_2_Torso: {}
+  BonusTokens_3_Torso: {}
+  BonusTokens_1_Legs: {}
+  BonusTokens_2_Legs: {}
+  BonusTokens_3_Legs: {}
+  BonusTokens_1_Hands: {}
+  BonusTokens_2_Hands: {}
+  BonusTokens_3_Hands: {}
+  BonusTokens_1_Belt: {}
+  BonusTokens_2_Belt: {}
+  BonusTokens_3_Belt: {}
+  BonusTokensFromTraps_1_Head: {}
+  BonusTokensFromTraps_2_Head: {}
+  BonusTokensFromTraps_3_Head: {}
+  BonusTokensFromTraps_1_Torso: {}
+  BonusTokensFromTraps_2_Torso: {}
+  BonusTokensFromTraps_3_Torso: {}
+  BonusTokensFromTraps_1_Legs: {}
+  BonusTokensFromTraps_2_Legs: {}
+  BonusTokensFromTraps_3_Legs: {}
+  BonusTokensFromTraps_1_Hands: {}
+  BonusTokensFromTraps_2_Hands: {}
+  BonusTokensFromTraps_3_Hands: {}
+  BonusTokensFromTraps_1_Belt: {}
+  BonusTokensFromTraps_2_Belt: {}
+  BonusTokensFromTraps_3_Belt: {}
+  BonusTokensFromTokens_1_Head: {}
+  BonusTokensFromTokens_2_Head: {}
+  BonusTokensFromTokens_3_Head: {}
+  BonusTokensFromTokens_1_Torso: {}
+  BonusTokensFromTokens_2_Torso: {}
+  BonusTokensFromTokens_3_Torso: {}
+  BonusTokensFromTokens_1_Legs: {}
+  BonusTokensFromTokens_2_Legs: {}
+  BonusTokensFromTokens_3_Legs: {}
+  BonusTokensFromTokens_1_Hands: {}
+  BonusTokensFromTokens_2_Hands: {}
+  BonusTokensFromTokens_3_Hands: {}
+  BonusTokensFromTokens_1_Belt: {}
+  BonusTokensFromTokens_2_Belt: {}
+  BonusTokensFromTokens_3_Belt: {}
+  TokenFactorTimerAfterCharge_1_Head: {}
+  TokenFactorTimerAfterCharge_2_Head: {}
+  TokenFactorTimerAfterCharge_3_Head: {}
+  TokenFactorTimerAfterCharge_1_Torso: {}
+  TokenFactorTimerAfterCharge_2_Torso: {}
+  TokenFactorTimerAfterCharge_3_Torso: {}
+  TokenFactorTimerAfterCharge_1_Legs: {}
+  TokenFactorTimerAfterCharge_2_Legs: {}
+  TokenFactorTimerAfterCharge_3_Legs: {}
+  TokenFactorTimerAfterCharge_1_Hands: {}
+  TokenFactorTimerAfterCharge_2_Hands: {}
+  TokenFactorTimerAfterCharge_3_Hands: {}
+  TokenFactorTimerAfterCharge_1_Belt: {}
+  TokenFactorTimerAfterCharge_2_Belt: {}
+  TokenFactorTimerAfterCharge_3_Belt: {}
+  BonusTokensFromTricks_1_Head: {}
+  BonusTokensFromTricks_2_Head: {}
+  BonusTokensFromTricks_3_Head: {}
+  BonusTokensFromTricks_1_Torso: {}
+  BonusTokensFromTricks_2_Torso: {}
+  BonusTokensFromTricks_3_Torso: {}
+  BonusTokensFromTricks_1_Legs: {}
+  BonusTokensFromTricks_2_Legs: {}
+  BonusTokensFromTricks_3_Legs: {}
+  BonusTokensFromTricks_1_Hands: {}
+  BonusTokensFromTricks_2_Hands: {}
+  BonusTokensFromTricks_3_Hands: {}
+  BonusTokensFromTricks_1_Belt: {}
+  BonusTokensFromTricks_2_Belt: {}
+  BonusTokensFromTricks_3_Belt: {}
+  EndFloorPointsFromContextAnim_1_Head: {}
+  EndFloorPointsFromContextAnim_2_Head: {}
+  EndFloorPointsFromContextAnim_3_Head: {}
+  EndFloorPointsFromContextAnim_1_Torso: {}
+  EndFloorPointsFromContextAnim_2_Torso: {}
+  EndFloorPointsFromContextAnim_3_Torso: {}
+  EndFloorPointsFromContextAnim_1_Legs: {}
+  EndFloorPointsFromContextAnim_2_Legs: {}
+  EndFloorPointsFromContextAnim_3_Legs: {}
+  EndFloorPointsFromContextAnim_1_Hands: {}
+  EndFloorPointsFromContextAnim_2_Hands: {}
+  EndFloorPointsFromContextAnim_3_Hands: {}
+  EndFloorPointsFromContextAnim_1_Belt: {}
+  EndFloorPointsFromContextAnim_2_Belt: {}
+  EndFloorPointsFromContextAnim_3_Belt: {}
+  EndFloorChargePointsFactor_1_Head: {}
+  EndFloorChargePointsFactor_2_Head: {}
+  EndFloorChargePointsFactor_3_Head: {}
+  EndFloorChargePointsFactor_1_Torso: {}
+  EndFloorChargePointsFactor_2_Torso: {}
+  EndFloorChargePointsFactor_3_Torso: {}
+  EndFloorChargePointsFactor_1_Legs: {}
+  EndFloorChargePointsFactor_2_Legs: {}
+  EndFloorChargePointsFactor_3_Legs: {}
+  EndFloorChargePointsFactor_1_Hands: {}
+  EndFloorChargePointsFactor_2_Hands: {}
+  EndFloorChargePointsFactor_3_Hands: {}
+  EndFloorChargePointsFactor_1_Belt: {}
+  EndFloorChargePointsFactor_2_Belt: {}
+  EndFloorChargePointsFactor_3_Belt: {}
+  TokensMultiplier_1_Head: {}
+  TokensMultiplier_2_Head: {}
+  TokensMultiplier_3_Head: {}
+  TokensMultiplier_1_Torso: {}
+  TokensMultiplier_2_Torso: {}
+  TokensMultiplier_3_Torso: {}
+  TokensMultiplier_1_Legs: {}
+  TokensMultiplier_2_Legs: {}
+  TokensMultiplier_3_Legs: {}
+  TokensMultiplier_1_Hands: {}
+  TokensMultiplier_2_Hands: {}
+  TokensMultiplier_3_Hands: {}
+  TokensMultiplier_1_Belt: {}
+  TokensMultiplier_2_Belt: {}
+  TokensMultiplier_3_Belt: {}
+  EndFloorPointsFactorFromContextAnim_1_Head: {}
+  EndFloorPointsFactorFromContextAnim_2_Head: {}
+  EndFloorPointsFactorFromContextAnim_3_Head: {}
+  EndFloorPointsFactorFromContextAnim_1_Torso: {}
+  EndFloorPointsFactorFromContextAnim_2_Torso: {}
+  EndFloorPointsFactorFromContextAnim_3_Torso: {}
+  EndFloorPointsFactorFromContextAnim_1_Legs: {}
+  EndFloorPointsFactorFromContextAnim_2_Legs: {}
+  EndFloorPointsFactorFromContextAnim_3_Legs: {}
+  EndFloorPointsFactorFromContextAnim_1_Hands: {}
+  EndFloorPointsFactorFromContextAnim_2_Hands: {}
+  EndFloorPointsFactorFromContextAnim_3_Hands: {}
+  EndFloorPointsFactorFromContextAnim_1_Belt: {}
+  EndFloorPointsFactorFromContextAnim_2_Belt: {}
+  EndFloorPointsFactorFromContextAnim_3_Belt: {}
+  PassedLevelsBonusTokens_1_Head: {}
+  PassedLevelsBonusTokens_2_Head: {}
+  PassedLevelsBonusTokens_3_Head: {}
+  PassedLevelsBonusTokens_1_Torso: {}
+  PassedLevelsBonusTokens_2_Torso: {}
+  PassedLevelsBonusTokens_3_Torso: {}
+  PassedLevelsBonusTokens_1_Legs: {}
+  PassedLevelsBonusTokens_2_Legs: {}
+  PassedLevelsBonusTokens_3_Legs: {}
+  PassedLevelsBonusTokens_1_Hands: {}
+  PassedLevelsBonusTokens_2_Hands: {}
+  PassedLevelsBonusTokens_3_Hands: {}
+  PassedLevelsBonusTokens_1_Belt: {}
+  PassedLevelsBonusTokens_2_Belt: {}
+  PassedLevelsBonusTokens_3_Belt: {}
+  Magnetizer_3_Torso: {}
+  EMP_3_Legs: {}
+  Teleportarium_3_Head: {}
+  DarknessAdditionalCharges_1_Head: {}
+  DarknessAdditionalCharges_2_Head: {}
+  DarknessAdditionalCharges_3_Head: {}
+  DarknessAdditionalCharges_1_Torso: {}
+  DarknessAdditionalCharges_2_Torso: {}
+  DarknessAdditionalCharges_3_Torso: {}
+  DarknessAdditionalCharges_1_Legs: {}
+  DarknessAdditionalCharges_2_Legs: {}
+  DarknessAdditionalCharges_3_Legs: {}
+  DarknessAdditionalCharges_1_Hands: {}
+  DarknessAdditionalCharges_2_Hands: {}
+  DarknessAdditionalCharges_3_Hands: {}
+  DarknessAdditionalCharges_1_Belt: {}
+  DarknessAdditionalCharges_2_Belt: {}
+  DarknessAdditionalCharges_3_Belt: {}
+  SwarmSpawnDestroyer_1_Head: {}
+  SwarmSpawnDestroyer_2_Head: {}
+  SwarmSpawnDestroyer_3_Head: {}
+  SwarmSpawnDestroyer_1_Torso: {}
+  SwarmSpawnDestroyer_2_Torso: {}
+  SwarmSpawnDestroyer_3_Torso: {}
+  SwarmSpawnDestroyer_1_Legs: {}
+  SwarmSpawnDestroyer_2_Legs: {}
+  SwarmSpawnDestroyer_3_Legs: {}
+  SwarmSpawnDestroyer_1_Hands: {}
+  SwarmSpawnDestroyer_2_Hands: {}
+  SwarmSpawnDestroyer_3_Hands: {}
+  SwarmSpawnDestroyer_1_Belt: {}
+  SwarmSpawnDestroyer_2_Belt: {}
+  SwarmSpawnDestroyer_3_Belt: {}
+  SwarmTokensFactor_1_Head: {}
+  SwarmTokensFactor_2_Head: {}
+  SwarmTokensFactor_3_Head: {}
+  SwarmTokensFactor_1_Torso: {}
+  SwarmTokensFactor_2_Torso: {}
+  SwarmTokensFactor_3_Torso: {}
+  SwarmTokensFactor_1_Legs: {}
+  SwarmTokensFactor_2_Legs: {}
+  SwarmTokensFactor_3_Legs: {}
+  SwarmTokensFactor_1_Hands: {}
+  SwarmTokensFactor_2_Hands: {}
+  SwarmTokensFactor_3_Hands: {}
+  SwarmTokensFactor_1_Belt: {}
+  SwarmTokensFactor_2_Belt: {}
+  SwarmTokensFactor_3_Belt: {}
+  SwarmPointsFactor_1_Head: {}
+  SwarmPointsFactor_2_Head: {}
+  SwarmPointsFactor_3_Head: {}
+  SwarmPointsFactor_1_Torso: {}
+  SwarmPointsFactor_2_Torso: {}
+  SwarmPointsFactor_3_Torso: {}
+  SwarmPointsFactor_1_Legs: {}
+  SwarmPointsFactor_2_Legs: {}
+  SwarmPointsFactor_3_Legs: {}
+  SwarmPointsFactor_1_Hands: {}
+  SwarmPointsFactor_2_Hands: {}
+  SwarmPointsFactor_3_Hands: {}
+  SwarmPointsFactor_1_Belt: {}
+  SwarmPointsFactor_2_Belt: {}
+  SwarmPointsFactor_3_Belt: {}
+  SwarmBlindnessByDarkness_1_Torso: {}
+  SwarmBlindnessByDarkness_2_Torso: {}
+  SwarmBlindnessByDarkness_3_Torso: {}
+  SwarmDestroyByRedCoin_1_Hands: {}
+  SwarmDestroyByRedCoin_2_Hands: {}
+  SwarmDestroyByRedCoin_3_Hands: {}
+  DarknessRadius_1_Head: {}
+  DarknessRadius_2_Head: {}
+  DarknessRadius_3_Head: {}
+  DarknessTime_1_Belt: {}
+  DarknessTime_2_Belt: {}
+  DarknessTime_3_Belt: {}
+CardLevels:
+  MaxLevel: 5
+  MaxCards: 26
+  DeltaByLevels:
+    1: 2
+    2: 3
+    3: 5
+    4: 7
+    5: 9
+
+GadgetChargerWeights:
+  GadgetHead:
+    0: 100
+    1: 10
+    2: 4
+    Default: 2
+  GadgetHands:
+    0: 20
+    1: 2
+    Default: 1
+  GadgetTorso:
+    0: 120
+    1: 12
+    2: 4
+    Default: 2
+  GadgetLegs:
+    0: 100
+    1: 10
+    2: 4
+    Default: 2
+  GadgetBelt:
+    0: 100
+    1: 10
+    2: 4
+    Default: 2
+
+Tips:
+  Count: 10
+  TipsInPaidVersion:
+    1: 1
+    2: 1
+    3: 0
+    4: 1
+    5: 1
+    6: 1
+    7: 1
+    8: 1
+    9: 1
+    10: 1
+    11: 1
+    Default: 1
+
+# количество доступных кард по куллнесу протокола
+ProtocolCards:
+  1: 25
+  2: 80
+  3: 225
+  4: 354
+  5: 417
+  6: 417
+  7: 456
+  8: 474
+  9: 474
+Terminal:
+  Slots:
+    1: { RarityWeightModifier: { 1: 1, 2: 0, 3: 0 } }
+    2: { RarityWeightModifier: { 1: 0.5, 2: 1, 3: 0 } }
+    3: { RarityWeightModifier: { 1: 0, 2: 2, 3: 1 } }
+    4: { RarityWeightModifier: { 1: 0, 2: 0, 3: 3 } }
+
+Energy:
+  MaxLevel: "{5 + ?getCounter[Bonuses, ExtraEnergy]}"
+  RechargeTime: 1800
+  FullRechargePrice: 10
+
+NoQuestProgressDialog:
+  RunCount: 7
+
+CardsCategories:
+  Red:
+    Text: "^GUI.Labels.Archive.RedUpgrades^"
+    TextTricks: "^GUI.Labels.Archive.RedTricks^"
+    Color: "#C11527"
+    MoreToUnlockColor: "#E6252C"
+  Yellow:
+    Text: "^GUI.Labels.Archive.YellowUpgrades^"
+    TextTricks: "^GUI.Labels.Archive.YellowTricks^"
+    Color: "#DA6C0E"
+    MoreToUnlockColor: "#ED9B15"
+  Blue:
+    Text: "^GUI.Labels.Archive.BlueUpgrades^"
+    TextTricks: "^GUI.Labels.Archive.BlueTricks^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+  Shifts:
+    Text: "^Notes.CategoryNames.Shifts^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+  Cloning:
+    Text: "^Notes.CategoryNames.Cloning^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+  News:
+    Text: "^Notes.CategoryNames.News^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+  Fredricson:
+    Text: "^Notes.CategoryNames.Fredricson^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+  Diary:
+    Text: "^Notes.CategoryNames.Diary^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+  Default:
+    Color: "#FFFFFF"
+    MoreToUnlockColor: "#FFFFFF"
+  SwarmSpec:
+    Text: "^Notes.CategoryNames.SwarmSpec^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+  HumanNRobots:
+    Text: "^Notes.CategoryNames.HumanNRobots^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+  StoryItems:
+    Text: "^GUI.Labels.Archive.StoryUpgrades^"
+    Color: "#5EA4BB"
+    MoreToUnlockColor: "#ABD8EB"
+# Тут добавляем категории лорных карточек для итерирования в архиве, например
+# DeathNotes: 3 - добавит 3 карточки DeathNotes_1, DeathNotes_2, DeathNotes_3 (внимание, данные карточек должны быть в cards.yaml)
+Notes:
+  SwarmSpec:
+    Count: 4
+    Weight: 0
+    SetupMin: 0
+  HumanNRobots:
+    Count: 8
+    Weight: 1000
+    SetupMin: 0
+  Shifts:
+    Count: 8
+    Weight: 0
+    SetupMin: 0
+  Cloning:
+    Count: 8
+    Weight: 0
+    SetupMin: 0
+  News:
+    Count: 16
+    Weight: 0
+    SetupMin: 0
+  Fredricson:
+    Count: 8
+    Weight: 0
+    SetupMin: 0
+  Diary:
+    Count: 8
+    Weight: 0
+    SetupMin: 0
+  # SpecificationName:
+  # SetupMin: 2
+  # SetupMax: 2
+  # Slot: 4
+  # SpecifiedCard: 1
+  # Card: EMP_3_Legs
+  EMP:
+    SetupMin: 2
+    SetupMax: 2
+    Slot: 4
+    SpecifiedCard: 1
+    Card: EMP_3_Legs
+    Default: 0
+  Teleportarium:
+    SetupMin: 3
+    SetupMax: 3
+    Slot: 4
+    SpecifiedCard: 1
+    Card: Teleportarium_3_Head
+    Default: 0
+
+SpecificTerminalSlots:
+  # SpecificationName:
+  # SetupMin: 2
+  # SetupMax: 2
+  # Slot: 4
+  # SpecifiedCard: 1
+  # Card: EMP_3_Legs
+  EMP:
+    SetupMin: 2
+    SetupMax: 2
+    Slot: 4
+    SpecifiedCard: 1
+    Card: EMP_3_Legs
+    Default: 0
+  Teleportarium:
+    SetupMin: 3
+    SetupMax: 3
+    Slot: 4
+    SpecifiedCard: 1
+    Card: Teleportarium_3_Head
+    Default: 0
+
+SpecificUpgradesGeneration: # specified endfloor upgrades generation
+  # SpecificationName:
+  # CardName: ExampleCard_1_Ribcage
+  # DecrementByRun: 1
+  # DecrementAfterGeneration: 1
+  # Overweighted: 1
+  # Guaranteed: 1
+  CouponRerollPassive_AfterBoosterpack:
+    CardName: CouponRerollPassive_1_Torso
+    RunCount: 2
+    DecrementByRun: 1
+    Overweighted: 1
+    Default: 0
+  Magnetizer_AfterBoosterpack:
+    CardName: Magnetizer_3_Torso
+    DecrementAfterGeneration: 1
+    Guaranteed: 1
+    Default: 0
+CustomBoosterpacks: #specified boosterpack generation
+  # Example:
+  # 1: {SpecifiedCard: 1, Card: CardName_1, Default: 0}
+  # 2: {SpecifiedCoupon: 1, Coupon: CouponName, Default: 0}
+  # 3: {Blueless: 1, Couponless: 1, Cardless: 1, Default: 0}
+  FirstForced:
+    1: { SpecifiedCard: 1, Card: BonusTokensFromTraps_1_Torso, Default: 0 }
+    Default: { Blueless: 1, Couponless: 1, Default: 0 }
+  SecondForced:
+    1: { SpecifiedCard: 1, Card: Magnetizer_3_Torso, Default: 0 }
+    Default: { Default: 0 }
+  FirstAfterKeysIntro:
+    1: { SpecifiedCard: 1, Card: StuntReward_1_Legs, Default: 0 }
+    2: { SpecifiedCard: 1, Card: StuntMultiReward_2_Legs, Default: 0 }
+    3: { SpecifiedCard: 1, Card: CouponRerollPassive_1_Torso, Default: 0 }
+  LastAfterKeysIntro:
+    Default: { Blueless: 1, Couponless: 1, Default: 0 }
+Missions:
+  MinAvailableMissions: 4
+  AddWeightForUsefulCards: 100
+  RaritiesByDifficulty:
+    1: { Blue: 2, Yellow: 2, Red: 0 }
+    2: { Blue: 1, Yellow: 2, Red: 1 }
+    3: { Blue: 0, Yellow: 2, Red: 2 }
+  MissionList:
+    ContexPointsFactor:
+      Default:
+        CounterName: "ContexPointsFactor"
+        Flags: { Default: 0, CoolnessMin: 2 }
+        Type: { ContexAnimType: 0 }
+        Cards: { EndFloorPointsFactorFromContextAnim_1_Torso: 0 }
+      1: { Objective: 80 }
+      2: { Objective: 120 }
+      3: { Flags: { Reject: 1 } }
+    ContexPointsFactor1:
+      Default:
+        CounterName: "ContexPointsFactor"
+        Flags: { Default: 0, CoolnessMin: 2 }
+        Type: { ContexAnimType: 0 }
+        Cards: { EndFloorPointsFactorFromContextAnim_3_Torso: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Flags: { Reject: 1 } }
+      3: { Objective: 180 }
+    ContexPoints:
+      Default:
+        CounterName: "ContexPoints"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ContexAnimType: 0 }
+        Cards: { EndFloorPointsFromContextAnim_1_Torso: 0 }
+      1: { Objective: 40 }
+      2: { Flags: { Reject: 1 } }
+      3: { Flags: { Reject: 1 } }
+    ContexPoints1:
+      Default:
+        CounterName: "ContexPoints"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ContexAnimType: 0 }
+        Cards: { EndFloorPointsFromContextAnim_2_Torso: 2 }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 72 }
+      3: { Flags: { Reject: 1 } }
+    ContexPoints2:
+      Default:
+        CounterName: "ContexPoints"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ContexAnimType: 0 }
+        Cards: { EndFloorPointsFromContextAnim_3_Torso: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Flags: { Reject: 1 } }
+      3: { Objective: 120 }
+    ContexCombo:
+      Default:
+        CounterName: "ContexCombo"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ContexAnimType: 0 }
+        Cards:
+          {
+            EndFloorPointsFromContextAnim_1_Torso: 0,
+            EndFloorPointsFactorFromContextAnim_1_Torso: 0,
+          }
+      1: { Objective: 65 }
+      2: { Flags: { Reject: 1 } }
+      3: { Flags: { Reject: 1 } }
+    ContexCombo2:
+      Default:
+        CounterName: "ContexCombo"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ContexAnimType: 0 }
+        Cards:
+          {
+            EndFloorPointsFromContextAnim_2_Torso: 2,
+            EndFloorPointsFactorFromContextAnim_2_Torso: 2,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 100 }
+      3: { Flags: { Reject: 1 } }
+    ContexCombo3:
+      Default:
+        CounterName: "ContexCombo"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ContexAnimType: 0 }
+        Cards:
+          {
+            EndFloorPointsFromContextAnim_3_Torso: 3,
+            EndFloorPointsFactorFromContextAnim_3_Torso: 3,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Flags: { Reject: 1 } }
+      3: { Objective: 150 }
+    Money: #TokensCount
+      Default:
+        CounterName: "Money"
+        Flags: { Default: 0, CoolnessMin: 1 }
+        Type: { TokensType: 0 }
+        Cards: { BonusTokens_1_Torso: 0 }
+      1:
+        {
+          Objective: "{?getBalance[Floor,Coins,<ST_Default.ST_Floor>] * (?getBalance[Floor,CoinEV,Default] + 6) * 0.75}",
+        }
+      2: { Flags: { Reject: 1 } }
+      3: { Flags: { Reject: 1 } }
+    Money1: #TokensCount
+      Default:
+        CounterName: "Money"
+        Flags: { Default: 0, CoolnessMin: 1 }
+        Type: { TokensType: 0 }
+        Cards: { BonusTokens_1_Torso: 0, TokensMultiplier_1_Torso: 0 }
+      1: { Flags: { Reject: 1 } }
+      2:
+        {
+          Objective: "{?getBalance[Floor,Coins,<ST_Default.ST_Floor>] * (?getBalance[Floor,CoinEV,Default] + 6) * 1.5 * 0.8}",
+        }
+      3: { Flags: { Reject: 1 } }
+    Money2: #TokensCount
+      Default:
+        CounterName: "Money"
+        Flags: { Default: 0, CoolnessMin: 1 }
+        Type: { TokensType: 0 }
+        Cards: { BonusTokens_3_Torso: 3, TokensMultiplier_3_Torso: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Flags: { Reject: 1 } }
+      3:
+        {
+          Objective: "{?getBalance[Floor,Coins,<ST_Default.ST_Floor>] * (?getBalance[Floor,CoinEV,Default] + 10) * 2  * 0.8}",
+        }
+    MaxMoney: #MaxTokensFromCoin
+      Default:
+        CounterName: "MaxMoney"
+        Flags: { Default: 0 }
+        Type: { TokensType: 0 }
+        Cards: { BonusTokens_1_Torso: 0, TokensMultiplier_1_Torso: 0 }
+      1:
+        {
+          Objective: "{((?getBalance[Floor,CoinEV,Default] + 1) * 1.15 + 7) * 2.25}",
+        }
+      2: { Flags: { Reject: 1 } }
+      3: { Flags: { Reject: 1 } }
+    MaxMoney1: #MaxTokensFromCoin
+      Default:
+        CounterName: "MaxMoney"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { TokensType: 0 }
+        Cards:
+          {
+            BonusTokensFromTraps_1_Torso: 0,
+            TokenFactorTimerAfterCharge_1_Torso: 0,
+          }
+      1: { Flags: { Reject: 1 } }
+      2:
+        {
+          Objective: "{((?getBalance[Floor,CoinEV,Default] + 1) * 1.15 + 40) * 3}",
+        }
+      3: { Flags: { Reject: 1 } }
+    MaxMoney2: #MaxTokensFromCoin
+      Default:
+        CounterName: "MaxMoney"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { TokensType: 0 }
+        Cards:
+          {
+            BonusTokens_3_Torso: 3,
+            BonusTokensFromTraps_1_Torso: 0,
+            TokenFactorTimerAfterCharge_1_Torso: 0,
+            TokensMultiplier_3_Torso: 3,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Flags: { Reject: 1 } }
+      3:
+        {
+          Objective: "{((?getBalance[Floor,CoinEV,Default] + 1) * 1.15 + 40 + 11) * 4.25}",
+        }
+    RedCoinsCount:
+      Default:
+        CounterName: "RedCoinsCount"
+        Flags: { CustomConditions: 1, Default: 0 }
+        Type: { CoinsType: 0 }
+        Cards: { Magnetizer_3_Torso: 3 }
+      1: { Objective: -2 }
+      2: { Objective: -1 }
+      3:
+        {
+          Objective: 0,
+          Flags: { SpecificDescription: 1 },
+          Description: "^Missions.RedCoinsCountZeroObj.Description^",
+        }
+    Points: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMax: 1 }
+        Type: { PointsType: 0 }
+        Cards: { StuntReward_1_Torso: 0 }
+      1:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(30+20)}",
+        }
+      2: { Flags: { Reject: 1 } }
+      3: { Flags: { Reject: 1 } }
+    Points1: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMax: 1 }
+        Type: { PointsType: 0 }
+        Cards: { StuntReward_2_Torso: 2 }
+      1: { Flags: { Reject: 1 } }
+      2:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(50+20)}",
+        }
+      3: { Flags: { Reject: 1 } }
+    Points2: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMax: 1 }
+        Type: { PointsType: 0 }
+        Cards: { StuntReward_3_Torso: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Flags: { Reject: 1 } }
+      3:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(75+20)}",
+        }
+    Points3: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMin: 2, CoolnessMax: 3 }
+        Type: { PointsType: 0 }
+        Cards:
+          {
+            StuntReward_1_Torso: 0,
+            StuntMultiReward_1_Torso: 0,
+            EndFloorPoints_1_Torso: 0,
+          }
+      1:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(30+20)*1.8 + 60}",
+        }
+      2: { Flags: { Reject: 1 } }
+      3: { Flags: { Reject: 1 } }
+    Points4: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMin: 2, CoolnessMax: 3 }
+        Type: { PointsType: 0 }
+        Cards:
+          {
+            StuntReward_2_Torso: 2,
+            StuntMultiReward_2_Torso: 2,
+            EndFloorPoints_2_Torso: 2,
+          }
+      1: { Flags: { Reject: 1 } }
+      2:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(50+20)*2.4 + 70}",
+        }
+      3: { Flags: { Reject: 1 } }
+    Points5: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMin: 2, CoolnessMax: 3 }
+        Type: { PointsType: 0 }
+        Cards:
+          {
+            StuntReward_3_Torso: 3,
+            StuntMultiReward_3_Torso: 3,
+            EndFloorPoints_3_Torso: 3,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Flags: { Reject: 1 } }
+      3:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(75+20)*3 + 80}",
+        }
+    Points6: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMin: 4 }
+        Type: { PointsType: 0 }
+        Cards:
+          {
+            StuntReward_1_Torso: 0,
+            StuntMultiReward_1_Torso: 0,
+            EndFloorPoints_1_Torso: 0,
+            EndFloorPointsFactor_1_Torso: 0,
+          }
+      1:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(30+20)*1.8 + 60 * 2}",
+        }
+      2: { Flags: { Reject: 1 } }
+      3: { Flags: { Reject: 1 } }
+    Points7: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMin: 4 }
+        Type: { PointsType: 0 }
+        Cards:
+          {
+            StuntReward_2_Torso: 2,
+            StuntMultiReward_2_Torso: 2,
+            EndFloorPoints_2_Torso: 2,
+            EndFloorPointsFactor_2_Torso: 2,
+          }
+      1: { Flags: { Reject: 1 } }
+      2:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(50+20)*2.4 + 70 * 2.25}",
+        }
+      3: { Flags: { Reject: 1 } }
+    Points8: #PointsCount
+      Default:
+        CounterName: "Points"
+        Flags: { Default: 0, CoolnessMin: 4 }
+        Type: { PointsType: 0 }
+        Cards:
+          {
+            StuntReward_3_Torso: 3,
+            StuntMultiReward_3_Torso: 3,
+            EndFloorPoints_3_Torso: 3,
+            EndFloorPointsFactor_3_Torso: 3,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Flags: { Reject: 1 } }
+      3:
+        {
+          Objective: "{?getBalance[Floor,Points,<ST_Floor>] + ?getBalance[Floor,Stunts,<ST_Floor>,Min]*(75+20)*3 + 80*2.5}",
+        }
+    StuntsCount:
+      Default:
+        CounterName: "StuntsCount"
+        Flags: { Default: 0 }
+        Type: {}
+        Cards: {}
+      1: { Objective: -1 }
+      2:
+        {
+          Objective: 0,
+          Flags: { SpecificDescription: 1 },
+          Description: "^Missions.StuntsCountZeroObj.Description^",
+        }
+      3: { Flags: { Reject: 1 } }
+    MaxPoints: #MaxPointsFromStunt
+      Default:
+        CounterName: "MaxPoints"
+        Flags: { Default: 0 }
+        Type: { PointsType: 0 }
+        Cards: { StuntReward_1_Torso: 0 }
+      1: { Objective: 50 }
+      2: { Objective: 70 }
+      3: { Objective: 90 }
+    MaxPoints1: #MaxPointsFromStunt
+      Default:
+        CounterName: "MaxPoints"
+        Flags: { Default: 0 }
+        Type: { PointsType: 0 }
+        Cards: { StuntReward_2_Torso: 2 }
+      1: { Objective: 70 }
+      2: { Objective: 90 }
+      3: { Objective: 110 }
+    MaxPoints2: #MaxPointsFromStunt
+      Default:
+        CounterName: "MaxPoints"
+        Flags: { Default: 0 }
+        Type: { PointsType: 0 }
+        Cards: { StuntReward_3_Torso: 3 }
+      1: { Objective: 95 }
+      2: { Objective: 115 }
+      3: { Objective: 135 }
+    MaxPoints3: #MaxPointsFromStunt
+      Default:
+        CounterName: "MaxPoints"
+        Flags: { Default: 0, CoolnessMin: 4 }
+        Type: { PointsType: 0 }
+        Cards: { StuntReward_1_Torso: 0, StuntMultiReward_1_Torso: 0 }
+      1: { Objective: 280 }
+      2: { Objective: 360 }
+      3: { Objective: 440 }
+    EMP:
+      Default:
+        CounterName: "EMP"
+        Flags: { Default: 0, CoolnessMin: 2 }
+        Type: { ActivesType: 0 }
+        Cards: { EMP_3_Legs: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 1 }
+      3: { Objective: 2 }
+    Magnet:
+      Default:
+        CounterName: "Magnet"
+        Flags: { Default: 0 }
+        Type: { ActivesType: 0, CoinsType: 0 }
+        Cards: { Magnetizer_3_Torso: 3 }
+      1: { Flags: { Reject: 1 } }
+      2:
+        {
+          Objective: 0,
+          Flags: { SpecificDescription: 1 },
+          Description: "^Missions.MagnetZeroObj.Description^",
+        }
+      3: { Flags: { Reject: 1 } }
+    Teleport:
+      Default:
+        CounterName: "Teleport"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ActivesType: 0 }
+        Cards: { Teleportarium_3_Head: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 1 }
+      3: { Objective: 2, Flags: { MinFloor: 11 } }
+    EMPMagnet:
+      Default:
+        CounterName: "EMPMagnet"
+        Flags: { Default: 0, CoolnessMin: 2 }
+        Type: { ActivesType: 0 }
+        Cards: { EMP_3_Legs: 3, Magnetizer_3_Torso: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 3 }
+      3: { Objective: 7, Flags: { MinFloor: 11 } }
+    EMPMagnetTokens:
+      Default:
+        CounterName: "EMPMagnetTokens"
+        Flags: { Default: 0, CoolnessMin: 2 }
+        Type: { ActivesType: 0 }
+        Cards:
+          {
+            EMP_3_Legs: 3,
+            Magnetizer_3_Torso: 3,
+            BonusTokens_1_Torso: 0,
+            TokensMultiplier_1_Torso: 0,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 30 }
+      3: { Objective: 70, Flags: { MinFloor: 11 } }
+    EMPTeleport:
+      Default:
+        CounterName: "EMPTeleport"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ActivesType: 0 }
+        Cards: { EMP_3_Legs: 3, Teleportarium_3_Head: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 1 }
+      3: { Objective: 2, Flags: { MinFloor: 11 } }
+    MagnetTeleport:
+      Default:
+        CounterName: "MagnetTeleport"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ActivesType: 0 }
+        Cards: { Magnetizer_3_Torso: 3, Teleportarium_3_Head: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 3 }
+      3: { Objective: 7, Flags: { MinFloor: 11 } }
+    MagnetTeleportTokens:
+      Default:
+        CounterName: "MagnetTeleportTokens"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ActivesType: 0 }
+        Cards:
+          {
+            Magnetizer_3_Torso: 3,
+            Teleportarium_3_Head: 3,
+            BonusTokens_1_Torso: 0,
+            TokensMultiplier_1_Torso: 0,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 30 }
+      3: { Objective: 70, Flags: { MinFloor: 11 } }
+    TeleportEMPMagnet:
+      Default:
+        CounterName: "TeleportEMPMagnet"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ActivesType: 0 }
+        Cards: { Magnetizer_3_Torso: 3, EMP_3_Legs: 3, Teleportarium_3_Head: 3 }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 7 }
+      3: { Objective: 15, Flags: { MinFloor: 13 } }
+    TeleportEMPMagnetTokens:
+      Default:
+        CounterName: "TeleportEMPMagnetTokens"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { ActivesType: 0 }
+        Cards:
+          {
+            Magnetizer_3_Torso: 3,
+            EMP_3_Legs: 3,
+            Teleportarium_3_Head: 3,
+            BonusTokens_1_Torso: 0,
+            TokensMultiplier_1_Torso: 0,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 70 }
+      3: { Objective: 150, Flags: { MinFloor: 13 } }
+    ItemDrop:
+      Default:
+        CounterName: "ItemDrop"
+        Flags: { Default: 0 }
+        Type: { ActivesType: 0 }
+        Cards:
+          {
+            SuperCredits_1_Torso: 0,
+            CouponRerollPassive_1_Torso: 0,
+            CouponCardBoostPassive_1_Head: 0,
+            CouponEnergyRechargePassive_1_Torso: 0,
+            CouponSaveMePassive_1_Torso: 0,
+          }
+      1: { Flags: { Reject: 1 } }
+      2: { Objective: 1, Flags: { CoolnessMin: 3 } }
+      3: { Objective: 3, Flags: { CoolnessMin: 4 } }
+    AfterTrapCoins:
+      Default:
+        CounterName: "AfterTrapCoins"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { TokensType: 0 }
+        Cards:
+          {
+            BonusTokensFromTraps_1_Torso: 0,
+            TokenFactorTimerAfterCharge_1_Torso: 0,
+          }
+      1: { Objective: 3, Flags: { CoolnessMin: 1 } }
+      2: { Objective: 5 }
+      3: { Objective: 10 }
+    AfterTrapTokens:
+      Default:
+        CounterName: "AfterTrapTokens"
+        Flags: { Default: 0, CoolnessMin: 3 }
+        Type: { TokensType: 0 }
+        Cards:
+          {
+            BonusTokensFromTraps_1_Torso: 0,
+            TokenFactorTimerAfterCharge_1_Torso: 0,
+          }
+      1: { Objective: 300, Flags: { CoolnessMin: 1 } }
+      2: { Objective: 750 }
+      3: { Objective: 1500 }
+  StarRankCapacity:
+    1: 1
+    2: 1
+    3: 1
+  PointsRewardPart:
+    1: 4
+    2: 2
+    3: 1
+
+StarBuffs:
+  UpgradeHeadCharges: 1
+  UpgradeTorsoCharges: 2
+  UpgradeHandsCharges: 1
+  UpgradeBeltCharges: 1
+  UpgradeLegsCharges: 1
+  ExtraCardRewardAmount: 1
+  ExtraChargeRewardAmount: 1
+  RankDiscount: 10
+  ExtraFloorKeysAmount: 1
+  TokensReward: 500
+  ChipsReward: 5
+  AddTokens: 5
+  ExtraChargeRewardOnly2Amount: 1
+  ExtraChargeRewardOnly2Rank: 2
+  ExtraCardRewardOnly2Amount: 1
+  ExtraCardRewardOnly2Rank: 2
+  ExtraChargeAndCardRewardOnly4Amount: 1
+  ExtraChargeAndCardRewardOnly4Rank: 4
+SpecialNotes:
+  # ID: NoteName
+  1: SwarmSpec_1
+Gadgets:
+  Zone1:
+    0:
+      Model:
+        Head: "white_helmet"
+        Torso: "white_armor"
+      Image:
+        Head: "run.head_basic"
+        Torso: "run.torso_basic"
+        Hands: "run.hands_basic"
+        Belt: "run.belt_basic"
+        Legs: "run.legs_basic"
+    1:
+      Model:
+        Head: "black_helmet"
+        Torso: "black_armor"
+      Image:
+        Head: "run.head_black"
+        Torso: "run.torso_black"
+        Hands: "run.hands_black"
+        Belt: "run.belt_black"
+        Legs: "run.legs_black"
+  Zone2:
+    0:
+      Model:
+        Head: "white_helmet"
+        Torso: "white_armor"
+      Image:
+        Head: "run.head_green"
+        Torso: "run.torso_green"
+        Hands: "run.hands_green"
+        Belt: "run.belt_green"
+        Legs: "run.legs_green"
+    1:
+      Model:
+        Head: "black_helmet"
+        Torso: "black_armor"
+      Image:
+        Head: "run.head_blue"
+        Torso: "run.torso_blue"
+        Hands: "run.hands_blue"
+        Belt: "run.belt_blue"
+        Legs: "run.legs_blue"
+Url:
+  BannerSF2:
+    Android: "https://play.google.com/store/apps/details?id=com.nekki.shadowfight"
+    iOS: "itms-apps://itunes.apple.com/app/id696565994"
+    Default: "https://itunes.apple.com/app/shadow-fight-2/id696565994"
+  BannerSF3:
+    Default: "https://www.youtube.com/watch?v=bV90ZStmRNc"
+  FAQ:
+    Android: "https://nekki.helpshift.com/a/vector-2/?p=android"
+    iOS: "https://nekki.helpshift.com/a/vector-2/?p=ios"
+    Default: "https://nekki.helpshift.com/a/vector-2/?p=ios"
+  OST:
+    Android: "https://play.google.com/store/music/album/Lind_Erebros_Vector_2_Original_Game_Soundtrack?id=B4ooyaizgxhmykovzwitbfn3y7u"
+    iOS: "https://itunes.apple.com/album/id1242915523"
+    Default: "https://play.google.com/store/music/album/Lind_Erebros_Vector_2_Original_Game_Soundtrack?id=B4ooyaizgxhmykovzwitbfn3y7u"
+  Support:
+    Android: "https://nekki.helpshift.com/a/vector-2/?contact=1"
+    iOS: "https://nekki.helpshift.com/a/vector-2/?contact=1"
+    Default: "https://nekki.helpshift.com/a/vector-2/?contact=1"

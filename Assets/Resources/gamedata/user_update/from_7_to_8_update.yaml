@@ -1,0 +1,11 @@
+UserVersion: 8
+CountersUpdater_post_offer_supercards:
+  NoShuffle: 1
+  BoxContent:
+    WipeTrash:
+      CounterActions:
+        OnEnter:
+        - {Namespace: WeightForSupercards, Type: Clear}
+        - {Namespace: BoosterpackedCards, Type: Clear}
+        - {Namespace: ActiveSupercards, Type: Clear}
+        - {Namespace: offer_random_supercards, Type: Clear}

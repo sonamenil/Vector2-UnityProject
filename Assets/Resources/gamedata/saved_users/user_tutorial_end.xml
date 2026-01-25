@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<User Name="Player" ID="-1" InstallID="494163227" Version="15">
+  <Build Version="1.0.9" GamedataVersion="0" />
+  <Settings>
+    <Audio MuteMusic="1" MuteSound="1" VolumeSound="1" VolumeMusic="0.15" />
+    <Localization CurrentLanguage="Russian" />
+    <Other UseLowResGraphics="1" SubtitlesOn="1" GameCenterOn="1" />
+  </Settings>
+  <UserCounters>
+    <Namespace Name="ST_ProgressMarkers">
+      <Counter Name="RaresAllowed" Value="1" />
+      <Counter Name="ShowActivesTutorial" Value="1" />
+      <Counter Name="ST_ShowNoQuestProgressDialog" Value="1" />
+    </Namespace>
+    <Namespace Name="ST_Statistics">
+      <Counter Name="ST_run_counter" Value="7" />
+      <Counter Name="TutorialEndRun" Value="4" />
+      <Counter Name="BestRank" Value="2" />
+      <Counter Name="CardsCount" Value="16" />
+    </Namespace>
+    <Namespace Name="ST_Events" ForceSave="1">
+      <Counter Name="PaymentPromo" Value="1" />
+    </Namespace>
+    <Namespace Name="ST_Achievements" ForceSave="1">
+      <Counter Name="Effective" Value="14" />
+      <Counter Name="Mid-range_equipment" Value="6" />
+      <Counter Name="The_best_kind_of_stuff" Value="3" />
+      <Counter Name="Science_101" Value="1" />
+      <Counter Name="Guinea_Pig" Value="3" />
+    </Namespace>
+    <Namespace Name="ST_Default">
+      <Counter Name="ST_SaveMeAttempt" Value="1" />
+      <Counter Name="StartFloor" Value="3" />
+      <Counter Name="StarterPackCoolness" Value="2" />
+      <Counter Name="YellowKeysToGenerate" Value="1" />
+      <Counter Name="Rank" Value="2" />
+      <Counter Name="DeathOnFloor" Value="4" />
+      <Counter Name="Difficulty3rdFloor" Value="3" />
+    </Namespace>
+    <Namespace Name="Requirements">
+      <Counter Name="StartedFloor_3" Value="1" />
+      <Counter Name="NoRequirements" Value="1" />
+      <Counter Name="StartedFloor_4" Value="1" />
+    </Namespace>
+    <Namespace Name="GUI">
+      <Counter Name="StuntsExecutable" Value="7" />
+    </Namespace>
+    <Namespace Name="ST_Quests">
+      <Counter Name="InspectGear" Value="-1" />
+      <Counter Name="InsertUpgrade" Value="-1" />
+      <Counter Name="UpgradeEffect" Value="-1" />
+      <Counter Name="StandardProtocolQuest" Value="-1" />
+      <Counter Name="ThirdProtocol" Value="1" />
+      <Counter Name="KeysIntro" Value="-1" />
+    </Namespace>
+    <Namespace Name="ST_NewQuest">
+      <Counter Name="ThirdProtocol" Value="1" />
+    </Namespace>
+    <Namespace Name="BoosterpackItemGeneration">
+      <Counter Name="GenerateRandomCard" Value="1" />
+      <Counter Name="CreateCard" Value="1" />
+    </Namespace>
+    <Namespace Name="UnlockProduct">
+      <Counter Name="Promo1" Value="1" />
+    </Namespace>
+    <Namespace Name="Generator">
+      <Counter Name="BlueLockMinCounter" Value="-1" />
+      <Counter Name="BlueLockMaxCounter" Value="-1" />
+    </Namespace>
+    <Namespace Name="InsertedCards">
+      <Counter Name="StuntMultiReward_2_Legs" Value="1" />
+      <Counter Name="StuntReward_1_Legs" Value="1" />
+    </Namespace>
+    <Namespace Name="SpecificUpgradesGeneration">
+      <Counter Name="CouponRerollPassive_AfterBoosterpack" Value="1" />
+    </Namespace>
+  </UserCounters>
+  <UserProperties>
+    <ItemNameIterator Value="59" />
+    <States Run="1" />
+    <Energy Level="5" SpendTime="-1" />
+    <Zones Current="Zone1" Zone1="1" Zone2="0" />
+  </UserProperties>
+  <Items>
+    <Stash>
+      <Item Name="Notes" VisualName="^Gadgets.SlotsVisualNames.Notes^" />
+      <Item Name="StoryItems" VisualName="^Gadgets.SlotsVisualNames.Notes^" />
+      <Item Name="Stunts" VisualName="^Gadgets.SlotsVisualNames.Stunts^">
+        <Group Name="ReverseVault_1" Count="1" />
+        <Group Name="JumpObstacle_1" IsNew="1" Count="1" />
+        <Group Name="DashVault_3" IsNew="1" Level="0" Count="1" />
+      </Item>
+      <Item Name="Legs" VisualName="^Gadgets.SlotsVisualNames.Legs">
+        <Group Name="StuntReward_1_Legs" IsNew="1" Level="0" Count="1" />
+        <Group Name="StuntMultiReward_2_Legs" IsNew="1" Level="0" Count="1" />
+        <Group Name="BonusTokensFromTraps_2_Legs" IsNew="1" Level="0" Count="1" />
+        <Group Name="SuperCredits_2_Legs" IsNew="1" Count="1" />
+      </Item>
+      <Item Name="Torso" VisualName="^Gadgets.SlotsVisualNames.Torso^">
+        <Group Name="BonusTokens_1_Torso" IsNew="0" Count="2" IsLevelUp="0" Level="1" />
+        <Group Name="BonusTokensFromTraps_1_Torso" IsNew="0" Level="2" Count="5" IsLevelUp="0" />
+        <Group Name="BonusTokens_2_Torso" IsNew="0" Level="1" Count="3" IsLevelUp="0" />
+        <Group Name="BonusTokensFromTraps_3_Torso" IsNew="0" Level="0" Count="1" />
+        <Group Name="TokensMultiplier_1_Torso" IsNew="0" Level="0" Count="1" />
+        <Group Name="StuntReward_1_Torso" IsNew="0" Count="1" />
+        <Group Name="CouponRerollPassive_1_Torso" IsNew="1" Level="0" Count="1" />
+        <Group Name="Magnetizer_3_Torso" IsNew="1" Level="0" Count="1" />
+        <Group Name="SuperCredits_1_Torso" IsNew="1" Count="1" />
+      </Item>
+      <Item Name="Hands" VisualName="^Gadgets.SlotsVisualNames.Hands^" />
+      <Item Name="Head" VisualName="^Gadgets.SlotsVisualNames.Head^" />
+      <Item Name="Belt" VisualName="^Gadgets.SlotsVisualNames.Belt^" />
+      <Item Name="Coupons" VisualName="Coupons">
+        <Group Name="CardsBoost" Quantity="0" />
+        <Group Name="Reroll" Quantity="0" />
+        <Group Name="Saveme" Quantity="0" />
+        <Group Name="EnergyRecharge" Quantity="0" />
+      </Item>
+      <Item Name="Money" VisualName="Money">
+        <Group Name="Countable" Quantity="334" />
+        <Group Name="Currency" Type="Money" />
+      </Item>
+      <Item Name="Points" VisualName="Points">
+        <Group Name="Countable" Quantity="70" />
+        <Group Name="Currency" Type="Points" />
+      </Item>
+      <Item Name="MoneyPremium" VisualName="MoneyPremium" ForceSave="1">
+        <Group Name="Countable" Quantity="25" />
+        <Group Name="Currency" Type="MoneyPremium" />
+      </Item>
+      <Item Name="AdvancedProtocol" VisualName="^StarterPacks.AdvancedProtocol.PackName^" ItemType="StarterPack">
+        <Group Name="BlockedStarterPack" Text="^Quests.TheContact.BlockedStarterPack^" />
+      </Item>
+      <Item Name="Boosterpacks" VisualName="Boosterpacks" ForceSave="1" />
+      <Item Name="Timers" VisualName="Timers" ForceSave="1">
+        <Group Name="PaymentPromoTimer" Time="214837027" Preset="PromoExpired" />
+      </Item>
+      <Item Name="BasicProtocol" VisualName="^StarterPacks.BasicProtocol.PackName^" ItemType="StarterPack" />
+      <Item Name="Terminal_StandardProtocol" VisualName="">
+        <Group Name="1" Lock="0" Text="^StarterPacks.ResearchRequirements.NoRequirements^" Type="Card" Card="SuperCredits_1_Torso" Price="300" IsExpired="1" />
+        <Group Name="2" Lock="0" Text="^StarterPacks.ResearchRequirements.ReachFloor_4^" Type="Card" Card="SuperCredits_2_Legs" Price="900" IsExpired="1" />
+        <Group Name="3" Lock="1" Text="^StarterPacks.ResearchRequirements.ReachFloor_6^" Type="Card" Card="StuntReward_3_Legs" Price="1300" IsExpired="0" />
+        <Group Name="4" Lock="1" Text="^StarterPacks.ResearchRequirements.ReachFloor_7^" Type="Card" Card="EMP_3_Legs" Price="3000" IsExpired="0" />
+      </Item>
+    </Stash>
+    <Equipped>
+      <Item Name="StandardProtocol" VisualName="^StarterPacks.StandardProtocol.PackName^" ItemType="StarterPack" />
+    </Equipped>
+  </Items>
+</User>

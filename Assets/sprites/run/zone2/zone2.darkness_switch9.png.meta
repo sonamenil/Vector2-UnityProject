@@ -1,0 +1,1391 @@
+fileFormatVersion: 2
+guid: 9c6585cbac1a992459ca2933bb6f24a6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2532197510372982554
+    second: zone2.darkness_switch9_0
+  - first:
+      213: -5953088135756117141
+    second: zone2.darkness_switch9_1
+  - first:
+      213: 4953554427814919218
+    second: zone2.darkness_switch9_2
+  - first:
+      213: 8843918606919279433
+    second: zone2.darkness_switch9_3
+  - first:
+      213: -2981167551152833220
+    second: zone2.darkness_switch9_4
+  - first:
+      213: -4495081392876200264
+    second: zone2.darkness_switch9_5
+  - first:
+      213: -7598316213346716348
+    second: zone2.darkness_switch9_6
+  - first:
+      213: 7566602095827624911
+    second: zone2.darkness_switch9_7
+  - first:
+      213: -5943391696717403074
+    second: zone2.darkness_switch9_8
+  - first:
+      213: -8437128355627504271
+    second: zone2.darkness_switch9_9
+  - first:
+      213: 4539795119177782999
+    second: zone2.darkness_switch9_10
+  - first:
+      213: 4574392447086121758
+    second: zone2.darkness_switch9_11
+  - first:
+      213: -4113722030265418698
+    second: zone2.darkness_switch9_12
+  - first:
+      213: -204946698167194034
+    second: zone2.darkness_switch9_13
+  - first:
+      213: 8277035510319404311
+    second: zone2.darkness_switch9_14
+  - first:
+      213: -6917232302253033577
+    second: zone2.darkness_switch9_15
+  - first:
+      213: 6221225573074753601
+    second: zone2.darkness_switch9_16
+  - first:
+      213: -5317163703068579217
+    second: zone2.darkness_switch9_17
+  - first:
+      213: -160906317307628188
+    second: zone2.darkness_switch9_18
+  - first:
+      213: 383109195288800057
+    second: zone2.darkness_switch9_19
+  - first:
+      213: -6481570763555969424
+    second: zone2.darkness_switch9_20
+  - first:
+      213: 5273273863721766434
+    second: zone2.darkness_switch9_21
+  - first:
+      213: 1618156876340648017
+    second: zone2.darkness_switch9_22
+  - first:
+      213: -6812417884532504591
+    second: zone2.darkness_switch9_23
+  - first:
+      213: 4407149288012742831
+    second: zone2.darkness_switch9_24
+  - first:
+      213: -752640854767803821
+    second: zone2.darkness_switch9_25
+  - first:
+      213: -6319178389727796466
+    second: zone2.darkness_switch9_26
+  - first:
+      213: -5183883251563662485
+    second: zone2.darkness_switch9_27
+  - first:
+      213: -473171336948233393
+    second: zone2.darkness_switch9_28
+  - first:
+      213: 1730745665395570139
+    second: zone2.darkness_switch9_29
+  - first:
+      213: 6470385426650175316
+    second: zone2.darkness_switch9_30
+  - first:
+      213: 686601122892461295
+    second: zone2.darkness_switch9_31
+  - first:
+      213: 5305503578045991471
+    second: zone2.darkness_switch9_32
+  - first:
+      213: 7655108628469703424
+    second: zone2.darkness_switch9_33
+  - first:
+      213: 6599789422532093792
+    second: zone2.darkness_switch9_34
+  - first:
+      213: -7298681402256110912
+    second: zone2.darkness_switch9_35
+  - first:
+      213: -3386653142376673934
+    second: zone2.darkness_switch9_36
+  - first:
+      213: -4510337194321556261
+    second: zone2.darkness_switch9_37
+  - first:
+      213: 2361437984484134443
+    second: zone2.darkness_switch9_38
+  - first:
+      213: 594827073291360729
+    second: zone2.darkness_switch9_39
+  - first:
+      213: 6399489346763064606
+    second: zone2.darkness_switch9_40
+  - first:
+      213: -614812787233489634
+    second: zone2.darkness_switch9_41
+  - first:
+      213: 139749458794184443
+    second: zone2.darkness_switch9_42
+  - first:
+      213: 6724831940295382343
+    second: zone2.darkness_switch9_43
+  - first:
+      213: 2207262388728433853
+    second: zone2.darkness_switch9_44
+  - first:
+      213: 9048208072346137502
+    second: zone2.darkness_switch9_45
+  - first:
+      213: 8581616149723415456
+    second: zone2.darkness_switch9_46
+  - first:
+      213: -4065105637862835724
+    second: zone2.darkness_switch9_47
+  - first:
+      213: 1500411328945205372
+    second: zone2.darkness_switch9_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0071dc7c3dbdcd0800000000000000
+      internalID: -2532197510372982554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b0aaf91e1626da0800000000000000
+      internalID: -5953088135756117141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_2
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23cb87dc18f8eb440800000000000000
+      internalID: 4953554427814919218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_3
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94324ebad19ebba70800000000000000
+      internalID: 8843918606919279433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_4
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d3d9938e3c0a6d0800000000000000
+      internalID: -2981167551152833220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_5
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be55250a434e91c0800000000000000
+      internalID: -4495081392876200264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 445b06c59ab5d8690800000000000000
+      internalID: -7598316213346716348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_7
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3288e3488f10960800000000000000
+      internalID: 7566602095827624911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_8
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c2724cdb4d48da0800000000000000
+      internalID: -5943391696717403074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_9
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 102
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d627e567c49ea80800000000000000
+      internalID: -8437128355627504271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_10
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6d4a7ab97900f30800000000000000
+      internalID: 4539795119177782999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_11
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 102
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e135cc7c1b18b7f30800000000000000
+      internalID: 4574392447086121758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_12
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 102
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63cb451eb9f19e6c0800000000000000
+      internalID: -4113722030265418698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_13
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 94
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4eead95012e72df0800000000000000
+      internalID: -204946698167194034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 214
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 715d1e961ffedd270800000000000000
+      internalID: 8277035510319404311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_15
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 86
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797b953cedd0100a0800000000000000
+      internalID: -6917232302253033577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_16
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 86
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14852be72bb365650800000000000000
+      internalID: 6221225573074753601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_17
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 86
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a2ff998c3a536b0800000000000000
+      internalID: -5317163703068579217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_18
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 86
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46533c29e8854cdf0800000000000000
+      internalID: -160906317307628188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_19
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 86
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93bef5788c3115500800000000000000
+      internalID: 383109195288800057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_20
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 86
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07660bb3bb5dc06a0800000000000000
+      internalID: -6481570763555969424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_21
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 86
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ecc7ad3ae6e2940800000000000000
+      internalID: 5273273863721766434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_22
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 89
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158d32d0b19d47610800000000000000
+      internalID: 1618156876340648017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_23
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 54
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f70cea170e6571a0800000000000000
+      internalID: -6812417884532504591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_24
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 62
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa08d186de6592d30800000000000000
+      internalID: 4407149288012742831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 57
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3526e1851251e85f0800000000000000
+      internalID: -752640854767803821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_26
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 46
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0323f72cb4cd48a0800000000000000
+      internalID: -6319178389727796466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_27
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 49
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b637379e5a52f08b0800000000000000
+      internalID: -5183883251563662485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_28
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 38
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bcd4f0d25fe69f0800000000000000
+      internalID: -473171336948233393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_29
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 38
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd533764308d40810800000000000000
+      internalID: 1730745665395570139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_30
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 41
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4571953934d6bc950800000000000000
+      internalID: 6470385426650175316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_31
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 30
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4b360651c478900800000000000000
+      internalID: 686601122892461295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_32
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 22
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2acefbf46fe0a940800000000000000
+      internalID: 5305503578045991471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_33
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 30
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003e6f43db86c3a60800000000000000
+      internalID: 7655108628469703424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_34
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 22
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 067e76a3389279b50800000000000000
+      internalID: 6599789422532093792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_35
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 26
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca46c94fefd5ba90800000000000000
+      internalID: -7298681402256110912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_36
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 30
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d8d2709e03001d0800000000000000
+      internalID: -3386653142376673934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_37
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 22
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc4b33f7301861c0800000000000000
+      internalID: -4510337194321556261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_38
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 14
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e8a40e55385c020800000000000000
+      internalID: 2361437984484134443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_39
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 14
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d911565210414800800000000000000
+      internalID: 594827073291360729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_40
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 14
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1585b9a7ad8fc850800000000000000
+      internalID: 6399489346763064606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_41
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 0
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d7495070fb777f0800000000000000
+      internalID: -614812787233489634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 22
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfefaf0746d70f100800000000000000
+      internalID: 139749458794184443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_43
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 6
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745d18f1507635d50800000000000000
+      internalID: 6724831940295382343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_44
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc0d3ea275c1ae10800000000000000
+      internalID: 2207262388728433853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_45
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 6
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9373066d41b19d70800000000000000
+      internalID: 9048208072346137502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_46
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3050bbb66081770800000000000000
+      internalID: 8581616149723415456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_47
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 6
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f97fb0d5f7d597c0800000000000000
+      internalID: -4065105637862835724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zone2.darkness_switch9_48
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7030c6772882d410800000000000000
+      internalID: 1500411328945205372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      zone2.darkness_switch9_0: -2532197510372982554
+      zone2.darkness_switch9_1: -5953088135756117141
+      zone2.darkness_switch9_10: 4539795119177782999
+      zone2.darkness_switch9_11: 4574392447086121758
+      zone2.darkness_switch9_12: -4113722030265418698
+      zone2.darkness_switch9_13: -204946698167194034
+      zone2.darkness_switch9_14: 8277035510319404311
+      zone2.darkness_switch9_15: -6917232302253033577
+      zone2.darkness_switch9_16: 6221225573074753601
+      zone2.darkness_switch9_17: -5317163703068579217
+      zone2.darkness_switch9_18: -160906317307628188
+      zone2.darkness_switch9_19: 383109195288800057
+      zone2.darkness_switch9_2: 4953554427814919218
+      zone2.darkness_switch9_20: -6481570763555969424
+      zone2.darkness_switch9_21: 5273273863721766434
+      zone2.darkness_switch9_22: 1618156876340648017
+      zone2.darkness_switch9_23: -6812417884532504591
+      zone2.darkness_switch9_24: 4407149288012742831
+      zone2.darkness_switch9_25: -752640854767803821
+      zone2.darkness_switch9_26: -6319178389727796466
+      zone2.darkness_switch9_27: -5183883251563662485
+      zone2.darkness_switch9_28: -473171336948233393
+      zone2.darkness_switch9_29: 1730745665395570139
+      zone2.darkness_switch9_3: 8843918606919279433
+      zone2.darkness_switch9_30: 6470385426650175316
+      zone2.darkness_switch9_31: 686601122892461295
+      zone2.darkness_switch9_32: 5305503578045991471
+      zone2.darkness_switch9_33: 7655108628469703424
+      zone2.darkness_switch9_34: 6599789422532093792
+      zone2.darkness_switch9_35: -7298681402256110912
+      zone2.darkness_switch9_36: -3386653142376673934
+      zone2.darkness_switch9_37: -4510337194321556261
+      zone2.darkness_switch9_38: 2361437984484134443
+      zone2.darkness_switch9_39: 594827073291360729
+      zone2.darkness_switch9_4: -2981167551152833220
+      zone2.darkness_switch9_40: 6399489346763064606
+      zone2.darkness_switch9_41: -614812787233489634
+      zone2.darkness_switch9_42: 139749458794184443
+      zone2.darkness_switch9_43: 6724831940295382343
+      zone2.darkness_switch9_44: 2207262388728433853
+      zone2.darkness_switch9_45: 9048208072346137502
+      zone2.darkness_switch9_46: 8581616149723415456
+      zone2.darkness_switch9_47: -4065105637862835724
+      zone2.darkness_switch9_48: 1500411328945205372
+      zone2.darkness_switch9_5: -4495081392876200264
+      zone2.darkness_switch9_6: -7598316213346716348
+      zone2.darkness_switch9_7: 7566602095827624911
+      zone2.darkness_switch9_8: -5943391696717403074
+      zone2.darkness_switch9_9: -8437128355627504271
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

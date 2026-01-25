@@ -1,0 +1,91 @@
+MoneyReward:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  BoxContent:
+    Money:
+      GroupContent:
+        Countable: {Quantity: '{?getBalance[StarBuffs,TokensReward]+?getItemAttribute[Money, Countable, Quantity]}' }
+        Currency: {Type: Money}
+        ST_ItemMainData: {ST_ItemName: "Money", ST_VisualItemName: Money, ST_ItemType: ''}
+
+MoneyPremiumReward:
+  Target: {Type: NewItem, Destination: Stash}
+  ItemsCount: 1
+  NoShuffle: 1
+  Set: 1
+  BoxContent:
+    IfExist:
+      Conditions:
+      - {ConditionType: GroupExists, Item: "MoneyPremium"}
+      GroupContent:
+        Countable: {Quantity: '{?getBalance[StarBuffs,ChipsReward]+?getItemAttribute[MoneyPremium, Countable, Quantity]}' }
+        Currency: {Type: MoneyPremium}
+        ST_ItemMainData: {ST_ItemName: "MoneyPremium", ST_VisualItemName: MoneyPremium, ST_ItemType: ''}
+        ST_ForceSave: {Value: 1}
+    NotExist:
+      GroupContent:
+        Countable: {Quantity: '10'}
+        Currency: {Type: MoneyPremium}
+        ST_ItemMainData: {ST_ItemName: "MoneyPremium", ST_VisualItemName: MoneyPremium, ST_ItemType: ''}
+        ST_ForceSave: {Value: 1}
+
+UpgradeHead:
+  CounterActions: {OnEnter: [{Name: UpgradeHead, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeTorso:
+  CounterActions: {OnEnter: [{Name: UpgradeTorso, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeHands:
+  CounterActions: {OnEnter: [{Name: UpgradeHands, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeBelt:
+  CounterActions: {OnEnter: [{Name: UpgradeBelt, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeLegs:
+  CounterActions: {OnEnter: [{Name: UpgradeLegs, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeHead_z2:
+  CounterActions: {OnEnter: [{Name: UpgradeHead_z2, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeTorso_z2:
+  CounterActions: {OnEnter: [{Name: UpgradeTorso_z2, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeHands_z2:
+  CounterActions: {OnEnter: [{Name: UpgradeHands_z2, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeBelt_z2:
+  CounterActions: {OnEnter: [{Name: UpgradeBelt_z2, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+UpgradeLegs_z2:
+  CounterActions: {OnEnter: [{Name: UpgradeLegs_z2, Namespace: StarRewards, Type: Assign, Value: 1}]}
+  
+RankDiscount:
+  CounterActions: {OnEnter: [{Name: RankDiscount, Namespace: StarBuffs, Type: Assign, Value: '?getBalance[StarBuffs,RankDiscount]'}]}  
+
+RandomStartUpgrade:
+  CounterActions: {OnEnter: [{Name: RandomStartUpgrade, Namespace: StarBuffs, Type: Assign, Value: 1}]}
+  
+ExtraCardReward:
+  CounterActions: {OnEnter: [{Name: ExtraCardReward, Namespace: StarBuffs, Type: Assign, Value: 1}]}
+  
+ExtraCardRewardOnly2:
+  CounterActions: {OnEnter: [{Name: ExtraCardRewardOnly2, Namespace: StarBuffs, Type: Assign, Value: 1}]}
+  
+ExtraChargeAndCardRewardOnly4:
+  CounterActions: {OnEnter: [{Name: ExtraChargeAndCardRewardOnly4, Namespace: StarBuffs, Type: Assign, Value: 1}]}
+  
+ExtraChargeReward:
+  CounterActions: {OnEnter: [{Name: ExtraChargeReward, Namespace: StarBuffs, Type: Assign, Value: 1}]}
+  
+ExtraChargeRewardOnly2:
+  CounterActions: {OnEnter: [{Name: ExtraChargeRewardOnly2, Namespace: StarBuffs, Type: Assign, Value: 1}]}
+  
+ExtraFloorKeys:
+  CounterActions: {OnEnter: [{Name: ExtraFloorKeys, Namespace: StarBuffs, Type: Assign, Value: 1}]}
+  
+AddTokens:
+  CounterActions: {OnEnter: [{Name: AddTokens, Namespace: StarBuffs, Type: Assign, Value: '?getBalance[StarBuffs,AddTokens]'}]}
+  
+AddSockets:
+  CounterActions: {OnEnter: [{Name: AddTokens, Namespace: StarBuffs, Type: Assign, Value: '1'}]}

@@ -1,0 +1,1962 @@
+Coupons:
+  CardsBoost:
+    UseCoupon: "^Coupons.UseCouponBase^"
+  EnergyRecharge:
+    UseCoupon: "^Coupons.UseCouponBase^"
+  Reroll:
+    UseCoupon: "^Coupons.UseCouponBase^"
+  Saveme:
+    UseCoupon: "^Coupons.UseCouponBase^"
+GUI:
+  Labels:
+    DialogWindow:
+      Text:
+        BoostQuestion: "{?getBalance[Cards,BoostTime]/60}"
+        BundleRequest: "?getString[TotalContentLength],^GUI.Labels.DialogWindow.Text.InternetCharged^"
+        BundleRequestRequired: "?getString[TotalContentLength],^GUI.Labels.DialogWindow.Text.InternetCharged^"
+        InitialBundleRequest: "^GUI.Labels.DialogWindow.Text.InternetCharged^"
+        SaveMe: "<ST_Statistics.ST_run_counter>"
+      Title:
+        BundleDownload: "?getString[TotalContentLength]"
+    SaleWindow2:
+      Description: "{?getBalance[Events,PaymentPromo2,EventDuration]/60}"
+Gadgets:
+  BonusTokensFromTokens_1_Belt:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_1_Belt,Vars,BonusTokens]"
+  BonusTokensFromTokens_1_Hands:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_1_Hands,Vars,BonusTokens]"
+  BonusTokensFromTokens_1_Head:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_1_Head,Vars,BonusTokens]"
+  BonusTokensFromTokens_1_Legs:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_1_Legs,Vars,BonusTokens]"
+  BonusTokensFromTokens_1_Torso:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_1_Torso,Vars,BonusTokens]"
+  BonusTokensFromTokens_2_Belt:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_2_Belt,Vars,BonusTokens]"
+  BonusTokensFromTokens_2_Hands:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_2_Hands,Vars,BonusTokens]"
+  BonusTokensFromTokens_2_Head:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_2_Head,Vars,BonusTokens]"
+  BonusTokensFromTokens_2_Legs:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_2_Legs,Vars,BonusTokens]"
+  BonusTokensFromTokens_2_Torso:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_2_Torso,Vars,BonusTokens]"
+  BonusTokensFromTokens_3_Belt:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_3_Belt,Vars,BonusTokens]"
+  BonusTokensFromTokens_3_Hands:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_3_Hands,Vars,BonusTokens]"
+  BonusTokensFromTokens_3_Head:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_3_Head,Vars,BonusTokens]"
+  BonusTokensFromTokens_3_Legs:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_3_Legs,Vars,BonusTokens]"
+  BonusTokensFromTokens_3_Torso:
+    Text: "^Gadgets.BonusTokensFromTokens.Text^,?getCardInfo[BonusTokensFromTokens_3_Torso,Vars,BonusTokens]"
+  BonusTokensFromTraps_1_Belt:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_1_Belt,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_1_Belt,Vars,BonusTokens]"
+  BonusTokensFromTraps_1_Hands:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_1_Hands,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_1_Hands,Vars,BonusTokens]"
+  BonusTokensFromTraps_1_Head:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_1_Head,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_1_Head,Vars,BonusTokens]"
+  BonusTokensFromTraps_1_Legs:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_1_Legs,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_1_Legs,Vars,BonusTokens]"
+  BonusTokensFromTraps_1_Torso:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_1_Torso,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_1_Torso,Vars,BonusTokens]"
+  BonusTokensFromTraps_2_Belt:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_2_Belt,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_2_Belt,Vars,BonusTokens]"
+  BonusTokensFromTraps_2_Hands:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_2_Hands,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_2_Hands,Vars,BonusTokens]"
+  BonusTokensFromTraps_2_Head:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_2_Head,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_2_Head,Vars,BonusTokens]"
+  BonusTokensFromTraps_2_Legs:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_2_Legs,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_2_Legs,Vars,BonusTokens]"
+  BonusTokensFromTraps_2_Torso:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_2_Torso,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_2_Torso,Vars,BonusTokens]"
+  BonusTokensFromTraps_3_Belt:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_3_Belt,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_3_Belt,Vars,BonusTokens]"
+  BonusTokensFromTraps_3_Hands:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_3_Hands,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_3_Hands,Vars,BonusTokens]"
+  BonusTokensFromTraps_3_Head:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_3_Head,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_3_Head,Vars,BonusTokens]"
+  BonusTokensFromTraps_3_Legs:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_3_Legs,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_3_Legs,Vars,BonusTokens]"
+  BonusTokensFromTraps_3_Torso:
+    Text: "^Gadgets.BonusTokensFromTraps.Text^,{?getCardInfo[BonusTokensFromTraps_3_Torso,Vars,Duration]/60},?getCardInfo[BonusTokensFromTraps_3_Torso,Vars,BonusTokens]"
+  BonusTokensFromTricks_1_Belt:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_1_Belt,Vars,BonusTokens]"
+  BonusTokensFromTricks_1_Hands:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_1_Hands,Vars,BonusTokens]"
+  BonusTokensFromTricks_1_Head:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_1_Head,Vars,BonusTokens]"
+  BonusTokensFromTricks_1_Legs:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_1_Legs,Vars,BonusTokens]"
+  BonusTokensFromTricks_1_Torso:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_1_Torso,Vars,BonusTokens]"
+  BonusTokensFromTricks_2_Belt:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_2_Belt,Vars,BonusTokens]"
+  BonusTokensFromTricks_2_Hands:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_2_Hands,Vars,BonusTokens]"
+  BonusTokensFromTricks_2_Head:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_2_Head,Vars,BonusTokens]"
+  BonusTokensFromTricks_2_Legs:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_2_Legs,Vars,BonusTokens]"
+  BonusTokensFromTricks_2_Torso:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_2_Torso,Vars,BonusTokens]"
+  BonusTokensFromTricks_3_Belt:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_3_Belt,Vars,BonusTokens]"
+  BonusTokensFromTricks_3_Hands:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_3_Hands,Vars,BonusTokens]"
+  BonusTokensFromTricks_3_Head:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_3_Head,Vars,BonusTokens]"
+  BonusTokensFromTricks_3_Legs:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_3_Legs,Vars,BonusTokens]"
+  BonusTokensFromTricks_3_Torso:
+    Text: "^Gadgets.BonusTokensFromTricks.Text^,?getCardInfo[BonusTokensFromTricks_3_Torso,Vars,BonusTokens]"
+  BonusTokens_1_Belt:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_1_Belt,Vars,BonusTokens]"
+  BonusTokens_1_Hands:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_1_Hands,Vars,BonusTokens]"
+  BonusTokens_1_Head:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_1_Head,Vars,BonusTokens]"
+  BonusTokens_1_Legs:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_1_Legs,Vars,BonusTokens]"
+  BonusTokens_1_Torso:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_1_Torso,Vars,BonusTokens]"
+  BonusTokens_2_Belt:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_2_Belt,Vars,BonusTokens]"
+  BonusTokens_2_Hands:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_2_Hands,Vars,BonusTokens]"
+  BonusTokens_2_Head:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_2_Head,Vars,BonusTokens]"
+  BonusTokens_2_Legs:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_2_Legs,Vars,BonusTokens]"
+  BonusTokens_2_Torso:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_2_Torso,Vars,BonusTokens]"
+  BonusTokens_3_Belt:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_3_Belt,Vars,BonusTokens]"
+  BonusTokens_3_Hands:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_3_Hands,Vars,BonusTokens]"
+  BonusTokens_3_Head:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_3_Head,Vars,BonusTokens]"
+  BonusTokens_3_Legs:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_3_Legs,Vars,BonusTokens]"
+  BonusTokens_3_Torso:
+    Text: "^Gadgets.BonusTokens.Text^,?getCardInfo[BonusTokens_3_Torso,Vars,BonusTokens]"
+  CouponCardBoostPassive_1_Belt:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_1_Belt,Vars,Chance],?getCardInfo[CouponCardBoostPassive_1_Belt,Vars,Number]"
+  CouponCardBoostPassive_1_Hands:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_1_Hands,Vars,Chance],?getCardInfo[CouponCardBoostPassive_1_Hands,Vars,Number]"
+  CouponCardBoostPassive_1_Head:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_1_Head,Vars,Chance],?getCardInfo[CouponCardBoostPassive_1_Head,Vars,Number]"
+  CouponCardBoostPassive_1_Legs:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_1_Legs,Vars,Chance],?getCardInfo[CouponCardBoostPassive_1_Legs,Vars,Number]"
+  CouponCardBoostPassive_1_Torso:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_1_Torso,Vars,Chance],?getCardInfo[CouponCardBoostPassive_1_Torso,Vars,Number]"
+  CouponCardBoostPassive_2_Belt:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_2_Belt,Vars,Chance],?getCardInfo[CouponCardBoostPassive_2_Belt,Vars,Number]"
+  CouponCardBoostPassive_2_Hands:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_2_Hands,Vars,Chance],?getCardInfo[CouponCardBoostPassive_2_Hands,Vars,Number]"
+  CouponCardBoostPassive_2_Head:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_2_Head,Vars,Chance],?getCardInfo[CouponCardBoostPassive_2_Head,Vars,Number]"
+  CouponCardBoostPassive_2_Legs:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_2_Legs,Vars,Chance],?getCardInfo[CouponCardBoostPassive_2_Legs,Vars,Number]"
+  CouponCardBoostPassive_2_Torso:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_2_Torso,Vars,Chance],?getCardInfo[CouponCardBoostPassive_2_Torso,Vars,Number]"
+  CouponCardBoostPassive_3_Belt:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_3_Belt,Vars,Chance],?getCardInfo[CouponCardBoostPassive_3_Belt,Vars,Number]"
+  CouponCardBoostPassive_3_Hands:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_3_Hands,Vars,Chance],?getCardInfo[CouponCardBoostPassive_3_Hands,Vars,Number]"
+  CouponCardBoostPassive_3_Head:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_3_Head,Vars,Chance],?getCardInfo[CouponCardBoostPassive_3_Head,Vars,Number]"
+  CouponCardBoostPassive_3_Legs:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_3_Legs,Vars,Chance],?getCardInfo[CouponCardBoostPassive_3_Legs,Vars,Number]"
+  CouponCardBoostPassive_3_Torso:
+    Text: "^Gadgets.CouponCardBoostPassive.Text^,?getCardInfo[CouponCardBoostPassive_3_Torso,Vars,Chance],?getCardInfo[CouponCardBoostPassive_3_Torso,Vars,Number]"
+  CouponEnergyRechargePassive_1_Belt:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_1_Belt,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_1_Belt,Vars,Number]"
+  CouponEnergyRechargePassive_1_Hands:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_1_Hands,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_1_Hands,Vars,Number]"
+  CouponEnergyRechargePassive_1_Head:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_1_Head,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_1_Head,Vars,Number]"
+  CouponEnergyRechargePassive_1_Legs:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_1_Legs,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_1_Legs,Vars,Number]"
+  CouponEnergyRechargePassive_1_Torso:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_1_Torso,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_1_Torso,Vars,Number]"
+  CouponEnergyRechargePassive_2_Belt:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_2_Belt,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_2_Belt,Vars,Number]"
+  CouponEnergyRechargePassive_2_Hands:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_2_Hands,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_2_Hands,Vars,Number]"
+  CouponEnergyRechargePassive_2_Head:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_2_Head,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_2_Head,Vars,Number]"
+  CouponEnergyRechargePassive_2_Legs:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_2_Legs,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_2_Legs,Vars,Number]"
+  CouponEnergyRechargePassive_2_Torso:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_2_Torso,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_2_Torso,Vars,Number]"
+  CouponEnergyRechargePassive_3_Belt:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_3_Belt,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_3_Belt,Vars,Number]"
+  CouponEnergyRechargePassive_3_Hands:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_3_Hands,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_3_Hands,Vars,Number]"
+  CouponEnergyRechargePassive_3_Head:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_3_Head,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_3_Head,Vars,Number]"
+  CouponEnergyRechargePassive_3_Legs:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_3_Legs,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_3_Legs,Vars,Number]"
+  CouponEnergyRechargePassive_3_Torso:
+    Text: "^Gadgets.CouponEnergyRechargePassive.Text^,?getCardInfo[CouponEnergyRechargePassive_3_Torso,Vars,Chance],?getCardInfo[CouponEnergyRechargePassive_3_Torso,Vars,Number]"
+  CouponRerollPassive_1_Belt:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_1_Belt,Vars,Chance],?getCardInfo[CouponRerollPassive_1_Belt,Vars,Number]"
+  CouponRerollPassive_1_Hands:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_1_Hands,Vars,Chance],?getCardInfo[CouponRerollPassive_1_Hands,Vars,Number]"
+  CouponRerollPassive_1_Head:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_1_Head,Vars,Chance],?getCardInfo[CouponRerollPassive_1_Head,Vars,Number]"
+  CouponRerollPassive_1_Legs:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_1_Legs,Vars,Chance],?getCardInfo[CouponRerollPassive_1_Legs,Vars,Number]"
+  CouponRerollPassive_1_Torso:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_1_Torso,Vars,Chance],?getCardInfo[CouponRerollPassive_1_Torso,Vars,Number]"
+  CouponRerollPassive_2_Belt:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_2_Belt,Vars,Chance],?getCardInfo[CouponRerollPassive_2_Belt,Vars,Number]"
+  CouponRerollPassive_2_Hands:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_2_Hands,Vars,Chance],?getCardInfo[CouponRerollPassive_2_Hands,Vars,Number]"
+  CouponRerollPassive_2_Head:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_2_Head,Vars,Chance],?getCardInfo[CouponRerollPassive_2_Head,Vars,Number]"
+  CouponRerollPassive_2_Legs:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_2_Legs,Vars,Chance],?getCardInfo[CouponRerollPassive_2_Legs,Vars,Number]"
+  CouponRerollPassive_2_Torso:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_2_Torso,Vars,Chance],?getCardInfo[CouponRerollPassive_2_Torso,Vars,Number]"
+  CouponRerollPassive_3_Belt:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_3_Belt,Vars,Chance],?getCardInfo[CouponRerollPassive_3_Belt,Vars,Number]"
+  CouponRerollPassive_3_Hands:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_3_Hands,Vars,Chance],?getCardInfo[CouponRerollPassive_3_Hands,Vars,Number]"
+  CouponRerollPassive_3_Head:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_3_Head,Vars,Chance],?getCardInfo[CouponRerollPassive_3_Head,Vars,Number]"
+  CouponRerollPassive_3_Legs:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_3_Legs,Vars,Chance],?getCardInfo[CouponRerollPassive_3_Legs,Vars,Number]"
+  CouponRerollPassive_3_Torso:
+    Text: "^Gadgets.CouponRerollPassive.Text^,?getCardInfo[CouponRerollPassive_3_Torso,Vars,Chance],?getCardInfo[CouponRerollPassive_3_Torso,Vars,Number]"
+  CouponSaveMePassive_1_Belt:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_1_Belt,Vars,Chance],?getCardInfo[CouponSaveMePassive_1_Belt,Vars,Number]"
+  CouponSaveMePassive_1_Hands:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_1_Hands,Vars,Chance],?getCardInfo[CouponSaveMePassive_1_Hands,Vars,Number]"
+  CouponSaveMePassive_1_Head:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_1_Head,Vars,Chance],?getCardInfo[CouponSaveMePassive_1_Head,Vars,Number]"
+  CouponSaveMePassive_1_Legs:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_1_Legs,Vars,Chance],?getCardInfo[CouponSaveMePassive_1_Legs,Vars,Number]"
+  CouponSaveMePassive_1_Torso:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_1_Torso,Vars,Chance],?getCardInfo[CouponSaveMePassive_1_Torso,Vars,Number]"
+  CouponSaveMePassive_2_Belt:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_2_Belt,Vars,Chance],?getCardInfo[CouponSaveMePassive_2_Belt,Vars,Number]"
+  CouponSaveMePassive_2_Hands:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_2_Hands,Vars,Chance],?getCardInfo[CouponSaveMePassive_2_Hands,Vars,Number]"
+  CouponSaveMePassive_2_Head:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_2_Head,Vars,Chance],?getCardInfo[CouponSaveMePassive_2_Head,Vars,Number]"
+  CouponSaveMePassive_2_Legs:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_2_Legs,Vars,Chance],?getCardInfo[CouponSaveMePassive_2_Legs,Vars,Number]"
+  CouponSaveMePassive_2_Torso:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_2_Torso,Vars,Chance],?getCardInfo[CouponSaveMePassive_2_Torso,Vars,Number]"
+  CouponSaveMePassive_3_Belt:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_3_Belt,Vars,Chance],?getCardInfo[CouponSaveMePassive_3_Belt,Vars,Number]"
+  CouponSaveMePassive_3_Hands:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_3_Hands,Vars,Chance],?getCardInfo[CouponSaveMePassive_3_Hands,Vars,Number]"
+  CouponSaveMePassive_3_Head:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_3_Head,Vars,Chance],?getCardInfo[CouponSaveMePassive_3_Head,Vars,Number]"
+  CouponSaveMePassive_3_Legs:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_3_Legs,Vars,Chance],?getCardInfo[CouponSaveMePassive_3_Legs,Vars,Number]"
+  CouponSaveMePassive_3_Torso:
+    Text: "^Gadgets.CouponSaveMePassive.Text^,?getCardInfo[CouponSaveMePassive_3_Torso,Vars,Chance],?getCardInfo[CouponSaveMePassive_3_Torso,Vars,Number]"
+  DarknessAdditionalCharges_1_Belt:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_1_Belt,Vars,Charges]"
+  DarknessAdditionalCharges_1_Hands:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_1_Hands,Vars,Charges]"
+  DarknessAdditionalCharges_1_Head:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_1_Head,Vars,Charges]"
+  DarknessAdditionalCharges_1_Legs:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_1_Legs,Vars,Charges]"
+  DarknessAdditionalCharges_1_Torso:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_1_Torso,Vars,Charges]"
+  DarknessAdditionalCharges_2_Belt:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_2_Belt,Vars,Charges]"
+  DarknessAdditionalCharges_2_Hands:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_2_Hands,Vars,Charges]"
+  DarknessAdditionalCharges_2_Head:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_2_Head,Vars,Charges]"
+  DarknessAdditionalCharges_2_Legs:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_2_Legs,Vars,Charges]"
+  DarknessAdditionalCharges_2_Torso:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_2_Torso,Vars,Charges]"
+  DarknessAdditionalCharges_3_Belt:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_3_Belt,Vars,Charges]"
+  DarknessAdditionalCharges_3_Hands:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_3_Hands,Vars,Charges]"
+  DarknessAdditionalCharges_3_Head:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_3_Head,Vars,Charges]"
+  DarknessAdditionalCharges_3_Legs:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_3_Legs,Vars,Charges]"
+  DarknessAdditionalCharges_3_Torso:
+    Text: "^Gadgets.DarknessAdditionalCharges.Text^,?getCardInfo[DarknessAdditionalCharges_3_Torso,Vars,Charges]"
+  EMP_3_Legs:
+    Text: "^Gadgets.EMP.Text^,{?getCardInfo[EMP_3_Legs,Vars,Cooldown]/60}"
+  EndFloorChargePointsFactor_1_Belt:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_1_Belt,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_1_Hands:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_1_Hands,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_1_Head:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_1_Head,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_1_Legs:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_1_Legs,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_1_Torso:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_1_Torso,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_2_Belt:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_2_Belt,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_2_Hands:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_2_Hands,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_2_Head:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_2_Head,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_2_Legs:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_2_Legs,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_2_Torso:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_2_Torso,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_3_Belt:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_3_Belt,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_3_Hands:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_3_Hands,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_3_Head:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_3_Head,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_3_Legs:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_3_Legs,Vars,AddPercentage]"
+  EndFloorChargePointsFactor_3_Torso:
+    Text: "^Gadgets.EndFloorChargePointsFactor.Text^,?getCardInfo[EndFloorChargePointsFactor_3_Torso,Vars,AddPercentage]"
+  EndFloorChargePoints_1_Belt:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_1_Belt,Vars,PointsForCharge]"
+  EndFloorChargePoints_1_Hands:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_1_Hands,Vars,PointsForCharge]"
+  EndFloorChargePoints_1_Head:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_1_Head,Vars,PointsForCharge]"
+  EndFloorChargePoints_1_Legs:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_1_Legs,Vars,PointsForCharge]"
+  EndFloorChargePoints_1_Torso:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_1_Torso,Vars,PointsForCharge]"
+  EndFloorChargePoints_2_Belt:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_2_Belt,Vars,PointsForCharge]"
+  EndFloorChargePoints_2_Hands:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_2_Hands,Vars,PointsForCharge]"
+  EndFloorChargePoints_2_Head:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_2_Head,Vars,PointsForCharge]"
+  EndFloorChargePoints_2_Legs:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_2_Legs,Vars,PointsForCharge]"
+  EndFloorChargePoints_2_Torso:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_2_Torso,Vars,PointsForCharge]"
+  EndFloorChargePoints_3_Belt:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_3_Belt,Vars,PointsForCharge]"
+  EndFloorChargePoints_3_Hands:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_3_Hands,Vars,PointsForCharge]"
+  EndFloorChargePoints_3_Head:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_3_Head,Vars,PointsForCharge]"
+  EndFloorChargePoints_3_Legs:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_3_Legs,Vars,PointsForCharge]"
+  EndFloorChargePoints_3_Torso:
+    Text: "^Gadgets.EndFloorChargePoints.Text^,?getCardInfo[EndFloorChargePoints_3_Torso,Vars,PointsForCharge]"
+  EndFloorPointsFactorFromContextAnim_1_Belt:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_1_Belt,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_1_Hands:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_1_Hands,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_1_Head:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_1_Head,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_1_Legs:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_1_Legs,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_1_Torso:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_1_Torso,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_2_Belt:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_2_Belt,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_2_Hands:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_2_Hands,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_2_Head:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_2_Head,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_2_Legs:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_2_Legs,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_2_Torso:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_2_Torso,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_3_Belt:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_3_Belt,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_3_Hands:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_3_Hands,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_3_Head:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_3_Head,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_3_Legs:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_3_Legs,Vars,AddPercentage]"
+  EndFloorPointsFactorFromContextAnim_3_Torso:
+    Text: "^Gadgets.EndFloorPointsFactorFromContextAnim.Text^,?getCardInfo[EndFloorPointsFactorFromContextAnim_3_Torso,Vars,AddPercentage]"
+  EndFloorPointsFactor_1_Belt:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_1_Belt,Vars,AddPercentage]"
+  EndFloorPointsFactor_1_Hands:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_1_Hands,Vars,AddPercentage]"
+  EndFloorPointsFactor_1_Head:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_1_Head,Vars,AddPercentage]"
+  EndFloorPointsFactor_1_Legs:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_1_Legs,Vars,AddPercentage]"
+  EndFloorPointsFactor_1_Torso:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_1_Torso,Vars,AddPercentage]"
+  EndFloorPointsFactor_2_Belt:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_2_Belt,Vars,AddPercentage]"
+  EndFloorPointsFactor_2_Hands:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_2_Hands,Vars,AddPercentage]"
+  EndFloorPointsFactor_2_Head:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_2_Head,Vars,AddPercentage]"
+  EndFloorPointsFactor_2_Legs:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_2_Legs,Vars,AddPercentage]"
+  EndFloorPointsFactor_2_Torso:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_2_Torso,Vars,AddPercentage]"
+  EndFloorPointsFactor_3_Belt:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_3_Belt,Vars,AddPercentage]"
+  EndFloorPointsFactor_3_Hands:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_3_Hands,Vars,AddPercentage]"
+  EndFloorPointsFactor_3_Head:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_3_Head,Vars,AddPercentage]"
+  EndFloorPointsFactor_3_Legs:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_3_Legs,Vars,AddPercentage]"
+  EndFloorPointsFactor_3_Torso:
+    Text: "^Gadgets.EndFloorPointsFactor.Text^,?getCardInfo[EndFloorPointsFactor_3_Torso,Vars,AddPercentage]"
+  EndFloorPointsFromContextAnim_1_Belt:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_1_Belt,Vars,Points]"
+  EndFloorPointsFromContextAnim_1_Hands:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_1_Hands,Vars,Points]"
+  EndFloorPointsFromContextAnim_1_Head:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_1_Head,Vars,Points]"
+  EndFloorPointsFromContextAnim_1_Legs:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_1_Legs,Vars,Points]"
+  EndFloorPointsFromContextAnim_1_Torso:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_1_Torso,Vars,Points]"
+  EndFloorPointsFromContextAnim_2_Belt:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_2_Belt,Vars,Points]"
+  EndFloorPointsFromContextAnim_2_Hands:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_2_Hands,Vars,Points]"
+  EndFloorPointsFromContextAnim_2_Head:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_2_Head,Vars,Points]"
+  EndFloorPointsFromContextAnim_2_Legs:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_2_Legs,Vars,Points]"
+  EndFloorPointsFromContextAnim_2_Torso:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_2_Torso,Vars,Points]"
+  EndFloorPointsFromContextAnim_3_Belt:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_3_Belt,Vars,Points]"
+  EndFloorPointsFromContextAnim_3_Hands:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_3_Hands,Vars,Points]"
+  EndFloorPointsFromContextAnim_3_Head:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_3_Head,Vars,Points]"
+  EndFloorPointsFromContextAnim_3_Legs:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_3_Legs,Vars,Points]"
+  EndFloorPointsFromContextAnim_3_Torso:
+    Text: "^Gadgets.EndFloorPointsFromContextAnim.Text^,?getCardInfo[EndFloorPointsFromContextAnim_3_Torso,Vars,Points]"
+  EndFloorPoints_1_Belt:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_1_Belt,Vars,Points]"
+  EndFloorPoints_1_Hands:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_1_Hands,Vars,Points]"
+  EndFloorPoints_1_Head:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_1_Head,Vars,Points]"
+  EndFloorPoints_1_Legs:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_1_Legs,Vars,Points]"
+  EndFloorPoints_1_Torso:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_1_Torso,Vars,Points]"
+  EndFloorPoints_2_Belt:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_2_Belt,Vars,Points]"
+  EndFloorPoints_2_Hands:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_2_Hands,Vars,Points]"
+  EndFloorPoints_2_Head:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_2_Head,Vars,Points]"
+  EndFloorPoints_2_Legs:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_2_Legs,Vars,Points]"
+  EndFloorPoints_2_Torso:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_2_Torso,Vars,Points]"
+  EndFloorPoints_3_Belt:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_3_Belt,Vars,Points]"
+  EndFloorPoints_3_Hands:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_3_Hands,Vars,Points]"
+  EndFloorPoints_3_Head:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_3_Head,Vars,Points]"
+  EndFloorPoints_3_Legs:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_3_Legs,Vars,Points]"
+  EndFloorPoints_3_Torso:
+    Text: "^Gadgets.EndFloorPoints.Text^,?getCardInfo[EndFloorPoints_3_Torso,Vars,Points]"
+  EndFloorRecoverCharges_1_Belt:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_1_Belt,Vars,Chance]"
+  EndFloorRecoverCharges_1_Hands:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_1_Hands,Vars,Chance]"
+  EndFloorRecoverCharges_1_Head:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_1_Head,Vars,Chance]"
+  EndFloorRecoverCharges_1_Legs:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_1_Legs,Vars,Chance]"
+  EndFloorRecoverCharges_1_Torso:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_1_Torso,Vars,Chance]"
+  EndFloorRecoverCharges_2_Belt:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_2_Belt,Vars,Chance]"
+  EndFloorRecoverCharges_2_Hands:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_2_Hands,Vars,Chance]"
+  EndFloorRecoverCharges_2_Head:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_2_Head,Vars,Chance]"
+  EndFloorRecoverCharges_2_Legs:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_2_Legs,Vars,Chance]"
+  EndFloorRecoverCharges_2_Torso:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_2_Torso,Vars,Chance]"
+  EndFloorRecoverCharges_3_Belt:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_3_Belt,Vars,Chance]"
+  EndFloorRecoverCharges_3_Hands:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_3_Hands,Vars,Chance]"
+  EndFloorRecoverCharges_3_Head:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_3_Head,Vars,Chance]"
+  EndFloorRecoverCharges_3_Legs:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_3_Legs,Vars,Chance]"
+  EndFloorRecoverCharges_3_Torso:
+    Text: "^Gadgets.EndFloorRecoverCharges.Text^,?getCardInfo[EndFloorRecoverCharges_3_Torso,Vars,Chance]"
+  KeyAdditional_1:
+    Text: "?getCardInfo[KeyAdditional_1_Torso,Vars, Chance]"
+  KeyAdditional_1_Belt:
+    Text: "?getCardInfo[KeyAdditional_1_Belt,Vars, Chance]"
+  KeyAdditional_1_Hands:
+    Text: "?getCardInfo[KeyAdditional_1_Hands,Vars, Chance]"
+  KeyAdditional_1_Head:
+    Text: "?getCardInfo[KeyAdditional_1_Head,Vars, Chance]"
+  KeyAdditional_1_Legs:
+    Text: "?getCardInfo[KeyAdditional_1_Legs,Vars, Chance]"
+  KeyAdditional_1_Torso:
+    Text: "?getCardInfo[KeyAdditional_1_Torso,Vars, Chance]"
+  KeyAdditional_2:
+    Text: "?getCardInfo[KeyAdditional_2_Torso,Vars, Chance]"
+  KeyAdditional_2_Belt:
+    Text: "?getCardInfo[KeyAdditional_2_Belt,Vars, Chance]"
+  KeyAdditional_2_Hands:
+    Text: "?getCardInfo[KeyAdditional_2_Hands,Vars, Chance]"
+  KeyAdditional_2_Head:
+    Text: "?getCardInfo[KeyAdditional_2_Head,Vars, Chance]"
+  KeyAdditional_2_Legs:
+    Text: "?getCardInfo[KeyAdditional_2_Legs,Vars, Chance]"
+  KeyAdditional_2_Torso:
+    Text: "?getCardInfo[KeyAdditional_2_Torso,Vars, Chance]"
+  KeyAdditional_3:
+    Text: "?getCardInfo[KeyAdditional_3_Torso,Vars, Chance]"
+  KeyAdditional_3_Belt:
+    Text: "?getCardInfo[KeyAdditional_3_Belt,Vars, Chance]"
+  KeyAdditional_3_Hands:
+    Text: "?getCardInfo[KeyAdditional_3_Hands,Vars, Chance]"
+  KeyAdditional_3_Head:
+    Text: "?getCardInfo[KeyAdditional_3_Head,Vars, Chance]"
+  KeyAdditional_3_Legs:
+    Text: "?getCardInfo[KeyAdditional_3_Legs,Vars, Chance]"
+  KeyAdditional_3_Torso:
+    Text: "?getCardInfo[KeyAdditional_3_Torso,Vars, Chance]"
+  KeyDouble_1:
+    Text: "?getCardInfo[KeyDouble_1_Torso,Vars, Chance]"
+  KeyDouble_1_Belt:
+    Text: "?getCardInfo[KeyDouble_1_Belt,Vars, Chance]"
+  KeyDouble_1_Hands:
+    Text: "?getCardInfo[KeyDouble_1_Hands,Vars, Chance]"
+  KeyDouble_1_Head:
+    Text: "?getCardInfo[KeyDouble_1_Head,Vars, Chance]"
+  KeyDouble_1_Legs:
+    Text: "?getCardInfo[KeyDouble_1_Legs,Vars, Chance]"
+  KeyDouble_1_Torso:
+    Text: "?getCardInfo[KeyDouble_1_Torso,Vars, Chance]"
+  KeyDouble_2:
+    Text: "?getCardInfo[KeyDouble_2_Torso,Vars, Chance]"
+  KeyDouble_2_Belt:
+    Text: "?getCardInfo[KeyDouble_2_Belt,Vars, Chance]"
+  KeyDouble_2_Hands:
+    Text: "?getCardInfo[KeyDouble_2_Hands,Vars, Chance]"
+  KeyDouble_2_Head:
+    Text: "?getCardInfo[KeyDouble_2_Head,Vars, Chance]"
+  KeyDouble_2_Legs:
+    Text: "?getCardInfo[KeyDouble_2_Legs,Vars, Chance]"
+  KeyDouble_2_Torso:
+    Text: "?getCardInfo[KeyDouble_2_Torso,Vars, Chance]"
+  KeyDouble_3:
+    Text: "?getCardInfo[KeyDouble_3_Torso,Vars, Chance]"
+  KeyDouble_3_Belt:
+    Text: "?getCardInfo[KeyDouble_3_Belt,Vars, Chance]"
+  KeyDouble_3_Hands:
+    Text: "?getCardInfo[KeyDouble_3_Hands,Vars, Chance]"
+  KeyDouble_3_Head:
+    Text: "?getCardInfo[KeyDouble_3_Head,Vars, Chance]"
+  KeyDouble_3_Legs:
+    Text: "?getCardInfo[KeyDouble_3_Legs,Vars, Chance]"
+  KeyDouble_3_Torso:
+    Text: "?getCardInfo[KeyDouble_3_Torso,Vars, Chance]"
+  Magnetizer_3_Torso:
+    Text: "^Gadgets.Magnetizer.Text^,{?getCardInfo[Magnetizer_3_Torso,Vars,Radius]/200}"
+  PassedLevelsBonusTokens_1_Belt:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_1_Belt,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_1_Belt,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_1_Belt,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_1_Hands:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_1_Hands,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_1_Hands,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_1_Hands,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_1_Head:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_1_Head,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_1_Head,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_1_Head,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_1_Legs:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_1_Legs,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_1_Legs,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_1_Legs,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_1_Torso:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_1_Torso,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_1_Torso,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_1_Torso,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_2_Belt:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_2_Belt,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_2_Belt,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_2_Belt,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_2_Hands:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_2_Hands,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_2_Hands,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_2_Hands,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_2_Head:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_2_Head,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_2_Head,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_2_Head,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_2_Legs:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_2_Legs,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_2_Legs,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_2_Legs,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_2_Torso:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_2_Torso,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_2_Torso,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_2_Torso,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_3_Belt:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_3_Belt,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_3_Belt,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_3_Belt,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_3_Hands:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_3_Hands,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_3_Hands,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_3_Hands,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_3_Head:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_3_Head,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_3_Head,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_3_Head,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_3_Legs:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_3_Legs,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_3_Legs,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_3_Legs,Vars,BonusTokensPerFloor]"
+  PassedLevelsBonusTokens_3_Torso:
+    Text: "^Gadgets.PassedLevelsBonusTokens.Text^,{?getCardInfo[PassedLevelsBonusTokens_3_Torso,Vars,BonusTokensBase]+?getCardInfo[PassedLevelsBonusTokens_3_Torso,Vars,BonusTokensPerFloor]},?getCardInfo[PassedLevelsBonusTokens_3_Torso,Vars,BonusTokensPerFloor]"
+  RestoreCharges_1:
+    Text: "?getCardInfo[RestoreCharges_1,Chance]"
+  RestoreCharges_1_Belt:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_1_Belt,Vars,Chance],?getCardInfo[RestoreCharges_1_Belt,Vars,Charges]"
+  RestoreCharges_1_Hands:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_1_Hands,Vars,Chance],?getCardInfo[RestoreCharges_1_Hands,Vars,Charges]"
+  RestoreCharges_1_Head:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_1_Head,Vars,Chance],?getCardInfo[RestoreCharges_1_Head,Vars,Charges]"
+  RestoreCharges_1_Legs:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_1_Legs,Vars,Chance],?getCardInfo[RestoreCharges_1_Legs,Vars,Charges]"
+  RestoreCharges_1_Torso:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_1_Torso,Vars,Chance],?getCardInfo[RestoreCharges_1_Torso,Vars,Charges]"
+  RestoreCharges_2:
+    Text: "?getCardInfo[RestoreCharges_2,Chance]"
+  RestoreCharges_2_Belt:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_2_Belt,Vars,Chance],?getCardInfo[RestoreCharges_2_Belt,Vars,Charges]"
+  RestoreCharges_2_Hands:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_2_Hands,Vars,Chance],?getCardInfo[RestoreCharges_2_Hands,Vars,Charges]"
+  RestoreCharges_2_Head:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_2_Head,Vars,Chance],?getCardInfo[RestoreCharges_2_Head,Vars,Charges]"
+  RestoreCharges_2_Legs:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_2_Legs,Vars,Chance],?getCardInfo[RestoreCharges_2_Legs,Vars,Charges]"
+  RestoreCharges_2_Torso:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_2_Torso,Vars,Chance],?getCardInfo[RestoreCharges_2_Torso,Vars,Charges]"
+  RestoreCharges_3:
+    Text: "?getCardInfo[RestoreCharges_3,Chance]"
+  RestoreCharges_3_Belt:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_3_Belt,Vars,Chance],?getCardInfo[RestoreCharges_3_Belt,Vars,Charges]"
+  RestoreCharges_3_Hands:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_3_Hands,Vars,Chance],?getCardInfo[RestoreCharges_3_Hands,Vars,Charges]"
+  RestoreCharges_3_Head:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_3_Head,Vars,Chance],?getCardInfo[RestoreCharges_3_Head,Vars,Charges]"
+  RestoreCharges_3_Legs:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_3_Legs,Vars,Chance],?getCardInfo[RestoreCharges_3_Legs,Vars,Charges]"
+  RestoreCharges_3_Torso:
+    Text: "^Gadgets.RestoreCharges.Text^,?getCardInfo[RestoreCharges_3_Torso,Vars,Chance],?getCardInfo[RestoreCharges_3_Torso,Vars,Charges]"
+  StuntMultiReward_1_Belt:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_1_Belt,Vars,Chance],?getCardInfo[StuntMultiReward_1_Belt,Vars,RewardFactor]"
+  StuntMultiReward_1_Hands:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_1_Hands,Vars,Chance],?getCardInfo[StuntMultiReward_1_Hands,Vars,RewardFactor]"
+  StuntMultiReward_1_Head:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_1_Head,Vars,Chance],?getCardInfo[StuntMultiReward_1_Head,Vars,RewardFactor]"
+  StuntMultiReward_1_Legs:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_1_Legs,Vars,Chance],?getCardInfo[StuntMultiReward_1_Legs,Vars,RewardFactor]"
+  StuntMultiReward_1_Torso:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_1_Torso,Vars,Chance],?getCardInfo[StuntMultiReward_1_Torso,Vars,RewardFactor]"
+  StuntMultiReward_2_Belt:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_2_Belt,Vars,Chance],?getCardInfo[StuntMultiReward_2_Belt,Vars,RewardFactor]"
+  StuntMultiReward_2_Hands:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_2_Hands,Vars,Chance],?getCardInfo[StuntMultiReward_2_Hands,Vars,RewardFactor]"
+  StuntMultiReward_2_Head:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_2_Head,Vars,Chance],?getCardInfo[StuntMultiReward_2_Head,Vars,RewardFactor]"
+  StuntMultiReward_2_Legs:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_2_Legs,Vars,Chance],?getCardInfo[StuntMultiReward_2_Legs,Vars,RewardFactor]"
+  StuntMultiReward_2_Torso:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_2_Torso,Vars,Chance],?getCardInfo[StuntMultiReward_2_Torso,Vars,RewardFactor]"
+  StuntMultiReward_3_Belt:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_3_Belt,Vars,Chance],?getCardInfo[StuntMultiReward_3_Belt,Vars,RewardFactor]"
+  StuntMultiReward_3_Hands:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_3_Hands,Vars,Chance],?getCardInfo[StuntMultiReward_3_Hands,Vars,RewardFactor]"
+  StuntMultiReward_3_Head:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_3_Head,Vars,Chance],?getCardInfo[StuntMultiReward_3_Head,Vars,RewardFactor]"
+  StuntMultiReward_3_Legs:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_3_Legs,Vars,Chance],?getCardInfo[StuntMultiReward_3_Legs,Vars,RewardFactor]"
+  StuntMultiReward_3_Torso:
+    Text: "^Gadgets.StuntMultiReward.Text^,?getCardInfo[StuntMultiReward_3_Torso,Vars,Chance],?getCardInfo[StuntMultiReward_3_Torso,Vars,RewardFactor]"
+  StuntReward_1_Belt:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_1_Belt,Vars,BonusPoints]"
+  StuntReward_1_Hands:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_1_Hands,Vars,BonusPoints]"
+  StuntReward_1_Head:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_1_Head,Vars,BonusPoints]"
+  StuntReward_1_Legs:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_1_Legs,Vars,BonusPoints]"
+  StuntReward_1_Torso:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_1_Torso,Vars,BonusPoints]"
+  StuntReward_2_Belt:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_2_Belt,Vars,BonusPoints]"
+  StuntReward_2_Hands:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_2_Hands,Vars,BonusPoints]"
+  StuntReward_2_Head:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_2_Head,Vars,BonusPoints]"
+  StuntReward_2_Legs:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_2_Legs,Vars,BonusPoints]"
+  StuntReward_2_Torso:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_2_Torso,Vars,BonusPoints]"
+  StuntReward_3_Belt:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_3_Belt,Vars,BonusPoints]"
+  StuntReward_3_Hands:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_3_Hands,Vars,BonusPoints]"
+  StuntReward_3_Head:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_3_Head,Vars,BonusPoints]"
+  StuntReward_3_Legs:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_3_Legs,Vars,BonusPoints]"
+  StuntReward_3_Torso:
+    Text: "^Gadgets.StuntReward.Text^,?getCardInfo[StuntReward_3_Torso,Vars,BonusPoints]"
+  SuperCredits_1_Belt:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_1_Belt,Vars,Chance],?getCardInfo[SuperCredits_1_Belt,Vars,Number],?getCardInfo[SuperCredits_1_Belt,Vars,Value]"
+  SuperCredits_1_Hands:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_1_Hands,Vars,Chance],?getCardInfo[SuperCredits_1_Hands,Vars,Number],?getCardInfo[SuperCredits_1_Hands,Vars,Value]"
+  SuperCredits_1_Head:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_1_Head,Vars,Chance],?getCardInfo[SuperCredits_1_Head,Vars,Number],?getCardInfo[SuperCredits_1_Head,Vars,Value]"
+  SuperCredits_1_Legs:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_1_Legs,Vars,Chance],?getCardInfo[SuperCredits_1_Legs,Vars,Number],?getCardInfo[SuperCredits_1_Legs,Vars,Value]"
+  SuperCredits_1_Torso:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_1_Torso,Vars,Chance],?getCardInfo[SuperCredits_1_Torso,Vars,Number],?getCardInfo[SuperCredits_1_Torso,Vars,Value]"
+  SuperCredits_2_Belt:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_2_Belt,Vars,Chance],?getCardInfo[SuperCredits_2_Belt,Vars,Number],?getCardInfo[SuperCredits_2_Belt,Vars,Value]"
+  SuperCredits_2_Hands:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_2_Hands,Vars,Chance],?getCardInfo[SuperCredits_2_Hands,Vars,Number],?getCardInfo[SuperCredits_2_Hands,Vars,Value]"
+  SuperCredits_2_Head:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_2_Head,Vars,Chance],?getCardInfo[SuperCredits_2_Head,Vars,Number],?getCardInfo[SuperCredits_2_Head,Vars,Value]"
+  SuperCredits_2_Legs:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_2_Legs,Vars,Chance],?getCardInfo[SuperCredits_2_Legs,Vars,Number],?getCardInfo[SuperCredits_2_Legs,Vars,Value]"
+  SuperCredits_2_Torso:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_2_Torso,Vars,Chance],?getCardInfo[SuperCredits_2_Torso,Vars,Number],?getCardInfo[SuperCredits_2_Torso,Vars,Value]"
+  SuperCredits_3_Belt:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_3_Belt,Vars,Chance],?getCardInfo[SuperCredits_3_Belt,Vars,Number],?getCardInfo[SuperCredits_3_Belt,Vars,Value]"
+  SuperCredits_3_Hands:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_3_Hands,Vars,Chance],?getCardInfo[SuperCredits_3_Hands,Vars,Number],?getCardInfo[SuperCredits_3_Hands,Vars,Value]"
+  SuperCredits_3_Head:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_3_Head,Vars,Chance],?getCardInfo[SuperCredits_3_Head,Vars,Number],?getCardInfo[SuperCredits_3_Head,Vars,Value]"
+  SuperCredits_3_Legs:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_3_Legs,Vars,Chance],?getCardInfo[SuperCredits_3_Legs,Vars,Number],?getCardInfo[SuperCredits_3_Legs,Vars,Value]"
+  SuperCredits_3_Torso:
+    Text: "^Gadgets.SuperCredits.Text^,?getCardInfo[SuperCredits_3_Torso,Vars,Chance],?getCardInfo[SuperCredits_3_Torso,Vars,Number],?getCardInfo[SuperCredits_3_Torso,Vars,Value]"
+  SwarmBlindnessByDarkness_1_Torso:
+    Text: "^Gadgets.SwarmBlindnessByDarkness.Text^,?getCardInfo[SwarmBlindnessByDarkness_1_Torso,Vars,Chance]"
+  SwarmBlindnessByDarkness_2_Torso:
+    Text: "^Gadgets.SwarmBlindnessByDarkness.Text^,?getCardInfo[SwarmBlindnessByDarkness_2_Torso,Vars,Chance]"
+  SwarmBlindnessByDarkness_3_Torso:
+    Text: "^Gadgets.SwarmBlindnessByDarkness.Text^,?getCardInfo[SwarmBlindnessByDarkness_3_Torso,Vars,Chance]"
+  SwarmDestroyByRedCoin_1_Belt:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_1_Belt,Vars,Chance]"
+  SwarmDestroyByRedCoin_1_Hands:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_1_Hands,Vars,Chance]"
+  SwarmDestroyByRedCoin_1_Head:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_1_Head,Vars,Chance]"
+  SwarmDestroyByRedCoin_1_Legs:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_1_Legs,Vars,Chance]"
+  SwarmDestroyByRedCoin_1_Torso:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_1_Torso,Vars,Chance]"
+  SwarmDestroyByRedCoin_2_Belt:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_2_Belt,Vars,Chance]"
+  SwarmDestroyByRedCoin_2_Hands:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_2_Hands,Vars,Chance]"
+  SwarmDestroyByRedCoin_2_Head:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_2_Head,Vars,Chance]"
+  SwarmDestroyByRedCoin_2_Legs:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_2_Legs,Vars,Chance]"
+  SwarmDestroyByRedCoin_2_Torso:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_2_Torso,Vars,Chance]"
+  SwarmDestroyByRedCoin_3_Belt:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_3_Belt,Vars,Chance]"
+  SwarmDestroyByRedCoin_3_Hands:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_3_Hands,Vars,Chance]"
+  SwarmDestroyByRedCoin_3_Head:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_3_Head,Vars,Chance]"
+  SwarmDestroyByRedCoin_3_Legs:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_3_Legs,Vars,Chance]"
+  SwarmDestroyByRedCoin_3_Torso:
+    Text: "^Gadgets.SwarmDestroyByRedCoin.Text^,?getCardInfo[SwarmDestroyByRedCoin_3_Torso,Vars,Chance]"
+  SwarmPointsFactor_1_Belt:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_1_Belt,Vars,BonusPoints]"
+  SwarmPointsFactor_1_Hands:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_1_Hands,Vars,BonusPoints]"
+  SwarmPointsFactor_1_Head:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_1_Head,Vars,BonusPoints]"
+  SwarmPointsFactor_1_Legs:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_1_Legs,Vars,BonusPoints]"
+  SwarmPointsFactor_1_Torso:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_1_Torso,Vars,BonusPoints]"
+  SwarmPointsFactor_2_Belt:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_2_Belt,Vars,BonusPoints]"
+  SwarmPointsFactor_2_Hands:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_2_Hands,Vars,BonusPoints]"
+  SwarmPointsFactor_2_Head:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_2_Head,Vars,BonusPoints]"
+  SwarmPointsFactor_2_Legs:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_2_Legs,Vars,BonusPoints]"
+  SwarmPointsFactor_2_Torso:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_2_Torso,Vars,BonusPoints]"
+  SwarmPointsFactor_3_Belt:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_3_Belt,Vars,BonusPoints]"
+  SwarmPointsFactor_3_Hands:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_3_Hands,Vars,BonusPoints]"
+  SwarmPointsFactor_3_Head:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_3_Head,Vars,BonusPoints]"
+  SwarmPointsFactor_3_Legs:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_3_Legs,Vars,BonusPoints]"
+  SwarmPointsFactor_3_Torso:
+    Text: "^Gadgets.SwarmPointsFactor.Text^,?getCardInfo[SwarmPointsFactor_3_Torso,Vars,BonusPoints]"
+  SwarmSpawnDestroyer_1_Belt:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_1_Belt,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_1_Belt,Vars,Count]"
+  SwarmSpawnDestroyer_1_Hands:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_1_Hands,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_1_Hands,Vars,Count]"
+  SwarmSpawnDestroyer_1_Head:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_1_Head,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_1_Head,Vars,Count]"
+  SwarmSpawnDestroyer_1_Legs:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_1_Legs,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_1_Legs,Vars,Count]"
+  SwarmSpawnDestroyer_1_Torso:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_1_Torso,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_1_Torso,Vars,Count]"
+  SwarmSpawnDestroyer_2_Belt:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_2_Belt,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_2_Belt,Vars,Count]"
+  SwarmSpawnDestroyer_2_Hands:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_2_Hands,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_2_Hands,Vars,Count]"
+  SwarmSpawnDestroyer_2_Head:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_2_Head,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_2_Head,Vars,Count]"
+  SwarmSpawnDestroyer_2_Legs:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_2_Legs,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_2_Legs,Vars,Count]"
+  SwarmSpawnDestroyer_2_Torso:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_2_Torso,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_2_Torso,Vars,Count]"
+  SwarmSpawnDestroyer_3_Belt:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_3_Belt,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_3_Belt,Vars,Count]"
+  SwarmSpawnDestroyer_3_Hands:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_3_Hands,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_3_Hands,Vars,Count]"
+  SwarmSpawnDestroyer_3_Head:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_3_Head,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_3_Head,Vars,Count]"
+  SwarmSpawnDestroyer_3_Legs:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_3_Legs,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_3_Legs,Vars,Count]"
+  SwarmSpawnDestroyer_3_Torso:
+    Text: "^Gadgets.SwarmSpawnDestroyer.Text^,?getCardInfo[SwarmSpawnDestroyer_3_Torso,Vars,Chance],?getCardInfo[SwarmSpawnDestroyer_3_Torso,Vars,Count]"
+  SwarmTokensFactor_1_Belt:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_1_Belt,Vars,BonusTokens]"
+  SwarmTokensFactor_1_Hands:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_1_Hands,Vars,BonusTokens]"
+  SwarmTokensFactor_1_Head:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_1_Head,Vars,BonusTokens]"
+  SwarmTokensFactor_1_Legs:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_1_Legs,Vars,BonusTokens]"
+  SwarmTokensFactor_1_Torso:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_1_Torso,Vars,BonusTokens]"
+  SwarmTokensFactor_2_Belt:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_2_Belt,Vars,BonusTokens]"
+  SwarmTokensFactor_2_Hands:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_2_Hands,Vars,BonusTokens]"
+  SwarmTokensFactor_2_Head:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_2_Head,Vars,BonusTokens]"
+  SwarmTokensFactor_2_Legs:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_2_Legs,Vars,BonusTokens]"
+  SwarmTokensFactor_2_Torso:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_2_Torso,Vars,BonusTokens]"
+  SwarmTokensFactor_3_Belt:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_3_Belt,Vars,BonusTokens]"
+  SwarmTokensFactor_3_Hands:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_3_Hands,Vars,BonusTokens]"
+  SwarmTokensFactor_3_Head:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_3_Head,Vars,BonusTokens]"
+  SwarmTokensFactor_3_Legs:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_3_Legs,Vars,BonusTokens]"
+  SwarmTokensFactor_3_Torso:
+    Text: "^Gadgets.SwarmTokensFactor.Text^,?getCardInfo[SwarmTokensFactor_3_Torso,Vars,BonusTokens]"
+  Teleportarium_3_Head:
+    Text: "^Gadgets.Teleportarium.Text^,{?getCardInfo[Teleportarium_3_Head,Vars,Cooldown]/60}"
+  TokenFactorTimerAfterCharge_1_Belt:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_1_Belt,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_1_Belt,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_1_Hands:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_1_Hands,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_1_Hands,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_1_Head:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_1_Head,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_1_Head,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_1_Legs:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_1_Legs,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_1_Legs,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_1_Torso:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_1_Torso,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_1_Torso,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_2_Belt:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_2_Belt,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_2_Belt,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_2_Hands:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_2_Hands,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_2_Hands,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_2_Head:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_2_Head,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_2_Head,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_2_Legs:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_2_Legs,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_2_Legs,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_2_Torso:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_2_Torso,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_2_Torso,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_3_Belt:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_3_Belt,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_3_Belt,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_3_Hands:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_3_Hands,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_3_Hands,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_3_Head:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_3_Head,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_3_Head,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_3_Legs:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_3_Legs,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_3_Legs,Vars,AddPercentage]"
+  TokenFactorTimerAfterCharge_3_Torso:
+    Text: "^Gadgets.TokenFactorTimerAfterCharge.Text^,{?getCardInfo[TokenFactorTimerAfterCharge_3_Torso,Vars,Duration]/60},?getCardInfo[TokenFactorTimerAfterCharge_3_Torso,Vars,AddPercentage]"
+  TokensMultiplier_1_Belt:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_1_Belt,Vars,Chance],?getCardInfo[TokensMultiplier_1_Belt,Vars,AddPercentage]"
+  TokensMultiplier_1_Hands:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_1_Hands,Vars,Chance],?getCardInfo[TokensMultiplier_1_Hands,Vars,AddPercentage]"
+  TokensMultiplier_1_Head:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_1_Head,Vars,Chance],?getCardInfo[TokensMultiplier_1_Head,Vars,AddPercentage]"
+  TokensMultiplier_1_Legs:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_1_Legs,Vars,Chance],?getCardInfo[TokensMultiplier_1_Legs,Vars,AddPercentage]"
+  TokensMultiplier_1_Torso:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_1_Torso,Vars,Chance],?getCardInfo[TokensMultiplier_1_Torso,Vars,AddPercentage]"
+  TokensMultiplier_2_Belt:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_2_Belt,Vars,Chance],?getCardInfo[TokensMultiplier_2_Belt,Vars,AddPercentage]"
+  TokensMultiplier_2_Hands:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_2_Hands,Vars,Chance],?getCardInfo[TokensMultiplier_2_Hands,Vars,AddPercentage]"
+  TokensMultiplier_2_Head:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_2_Head,Vars,Chance],?getCardInfo[TokensMultiplier_2_Head,Vars,AddPercentage]"
+  TokensMultiplier_2_Legs:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_2_Legs,Vars,Chance],?getCardInfo[TokensMultiplier_2_Legs,Vars,AddPercentage]"
+  TokensMultiplier_2_Torso:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_2_Torso,Vars,Chance],?getCardInfo[TokensMultiplier_2_Torso,Vars,AddPercentage]"
+  TokensMultiplier_3_Belt:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_3_Belt,Vars,Chance],?getCardInfo[TokensMultiplier_3_Belt,Vars,AddPercentage]"
+  TokensMultiplier_3_Hands:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_3_Hands,Vars,Chance],?getCardInfo[TokensMultiplier_3_Hands,Vars,AddPercentage]"
+  TokensMultiplier_3_Head:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_3_Head,Vars,Chance],?getCardInfo[TokensMultiplier_3_Head,Vars,AddPercentage]"
+  TokensMultiplier_3_Legs:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_3_Legs,Vars,Chance],?getCardInfo[TokensMultiplier_3_Legs,Vars,AddPercentage]"
+  TokensMultiplier_3_Torso:
+    Text: "^Gadgets.TokensMultiplier.Text^,?getCardInfo[TokensMultiplier_3_Torso,Vars,Chance],?getCardInfo[TokensMultiplier_3_Torso,Vars,AddPercentage]"
+Labels:
+  Details_z2:
+    HandsDescription: "^Labels.Details.HandsDescription^"
+Missions:
+  AfterTrapCoins:
+    Description: "?getCounter[MissionObjectives,AfterTrapCoins],^Gadgets.BonusTokensFromTraps_1.EffectVisualName^,^Gadgets.TokenFactorTimerAfterCharge_1.EffectVisualName^"
+  AfterTrapTokens:
+    Description: "?getCounter[MissionObjectives,AfterTrapTokens],^Gadgets.BonusTokensFromTraps_1.EffectVisualName^,^Gadgets.TokenFactorTimerAfterCharge_1.EffectVisualName^"
+  CoinsCount:
+    Description: "?getCounter[MissionObjectives,CoinsCount]"
+  ContexCombo:
+    Description: "?getCounter[MissionObjectives,ContexCombo],^Gadgets.EndFloorPointsFromContextAnim_1.EffectVisualName^,^Gadgets.EndFloorPointsFactorFromContextAnim_1.EffectVisualName^"
+  ContexCombo2:
+    Description: "^Missions.ContexCombo.Description^"
+  ContexCombo3:
+    Description: "^Missions.ContexCombo.Description^"
+  ContexPoints:
+    Description: "?getCounter[MissionObjectives,ContexPoints],^Gadgets.EndFloorPointsFromContextAnim_1.EffectVisualName^"
+  ContexPoints1:
+    Description: "^Missions.ContexPoints.Description^"
+  ContexPoints2:
+    Description: "^Missions.ContexPoints.Description^"
+  ContexPointsFactor:
+    Description: "?getCounter[MissionObjectives,ContexPointsFactor],^Gadgets.EndFloorPointsFactorFromContextAnim_1.EffectVisualName^"
+  ContexPointsFactor1:
+    Description: "^Missions.ContexPointsFactor.Description^"
+  EMP:
+    Description: "?getCounter[MissionObjectives,EMP]"
+  EMPMagnet:
+    Description: "?getCounter[MissionObjectives,EMPMagnet]"
+  EMPMagnetTokens:
+    Description: "?getCounter[MissionObjectives,EMPMagnetTokens]"
+  EMPTeleport:
+    Description: "?getCounter[MissionObjectives,EMPTeleport]"
+  ItemDrop:
+    Description: "?getCounter[MissionObjectives,ItemDrop]"
+  LocksHacked:
+    Description: "?getCounter[MissionObjectives,LocksHacked]"
+  Magnet:
+    Description: "{-?getCounter[MissionObjectives,Magnet]}"
+  MagnetTeleport:
+    Description: "?getCounter[MissionObjectives,MagnetTeleport]"
+  MagnetTeleportTokens:
+    Description: "?getCounter[MissionObjectives,MagnetTeleportTokens]"
+  MaxMoney:
+    Description: "?getCounter[MissionObjectives,MaxMoney]"
+  MaxMoney1:
+    Description: "^Missions.MaxMoney.Description^"
+  MaxMoney2:
+    Description: "^Missions.MaxMoney.Description^"
+  MaxPoints:
+    Description: "?getCounter[MissionObjectives,MaxPoints]"
+  MaxPoints1:
+    Description: "^Missions.MaxPoints.Description^"
+  MaxPoints2:
+    Description: "^Missions.MaxPoints.Description^"
+  MaxPoints3:
+    Description: "^Missions.MaxPoints.Description^"
+  Money:
+    Description: "?getCounter[MissionObjectives,Money]"
+  Money1:
+    Description: "^Missions.Money.Description^"
+  Money2:
+    Description: "^Missions.Money.Description^"
+  Points:
+    Description: "?getCounter[MissionObjectives,Points]"
+  Points1:
+    Description: "^Missions.Points.Description^"
+  Points2:
+    Description: "^Missions.Points.Description^"
+  Points3:
+    Description: "^Missions.Points.Description^"
+  Points4:
+    Description: "^Missions.Points.Description^"
+  Points5:
+    Description: "^Missions.Points.Description^"
+  Points6:
+    Description: "^Missions.Points.Description^"
+  Points7:
+    Description: "^Missions.Points.Description^"
+  Points8:
+    Description: "^Missions.Points.Description^"
+  RedCoinsCount:
+    Description: "{-?getCounter[MissionObjectives,RedCoinsCount]}"
+  StarRewards:
+    AddTokens:
+      Description: "?getBalance[StarBuffs,AddTokens]"
+    ExtraCardReward:
+      Description: "?getBalance[StarBuffs,ExtraCardRewardAmount]"
+    ExtraCardRewardOnly2:
+      Description: "?getBalance[StarBuffs,ExtraCardRewardOnly2Amount],?getBalance[StarBuffs,ExtraCardRewardOnly2Rank]"
+      Title: "^Missions.StarRewards.ExtraCardReward.Title^"
+    ExtraChargeAndCardRewardOnly4:
+      Description: "?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Amount],?getBalance[StarBuffs,ExtraChargeAndCardRewardOnly4Rank]"
+    ExtraChargeReward:
+      Description: "?getBalance[StarBuffs,ExtraChargeRewardAmount]"
+    ExtraChargeRewardOnly2:
+      Description: "?getBalance[StarBuffs,ExtraChargeRewardOnly2Amount],?getBalance[StarBuffs,ExtraChargeRewardOnly2Rank]"
+      Title: "^Missions.StarRewards.ExtraChargeReward.Title^"
+    MoneyPremiumReward:
+      Description: "?getBalance[StarBuffs,ChipsReward]"
+    MoneyReward:
+      Description: "?getBalance[StarBuffs,TokensReward]"
+    UpgradeBelt_z2:
+      Description: "^Missions.StarRewards.UpgradeBelt.Description^"
+      Title: "^Missions.StarRewards.UpgradeBelt.Title^"
+    UpgradeHands_z2:
+      Description: "^Missions.StarRewards.UpgradeHands.Description^"
+      Title: "^Missions.StarRewards.UpgradeHands.Title^"
+    UpgradeHead_z2:
+      Description: "^Missions.StarRewards.UpgradeHead.Description^"
+      Title: "^Missions.StarRewards.UpgradeHead.Title^"
+    UpgradeLegs_z2:
+      Description: "^Missions.StarRewards.UpgradeLegs.Description^"
+      Title: "^Missions.StarRewards.UpgradeLegs.Title^"
+    UpgradeTorso_z2:
+      Description: "^Missions.StarRewards.UpgradeTorso.Description^"
+      Title: "^Missions.StarRewards.UpgradeTorso.Title^"
+  StuntsCount:
+    Description: "{-?getCounter[MissionObjectives,StuntsCount]}"
+  Teleport:
+    Description: "?getCounter[MissionObjectives,Teleport]"
+  TeleportEMPMagnet:
+    Description: "?getCounter[MissionObjectives,TeleportEMPMagnet]"
+  TeleportEMPMagnetTokens:
+    Description: "?getCounter[MissionObjectives,TeleportEMPMagnetTokens]"
+Notes:
+  Cloning_1:
+    VisualName: "^Notes.CategoryNames.Cloning^"
+  Cloning_2:
+    VisualName: "^Notes.CategoryNames.Cloning^"
+  Cloning_3:
+    VisualName: "^Notes.CategoryNames.Cloning^"
+  Cloning_4:
+    VisualName: "^Notes.CategoryNames.Cloning^"
+  Cloning_5:
+    VisualName: "^Notes.CategoryNames.Cloning^"
+  Cloning_6:
+    VisualName: "^Notes.CategoryNames.Cloning^"
+  Cloning_7:
+    VisualName: "^Notes.CategoryNames.Cloning^"
+  Cloning_8:
+    VisualName: "^Notes.CategoryNames.Cloning^"
+  Diary_1:
+    VisualName: "^Notes.CategoryNames.Diary^"
+  Diary_2:
+    VisualName: "^Notes.CategoryNames.Diary^"
+  Diary_3:
+    VisualName: "^Notes.CategoryNames.Diary^"
+  Diary_4:
+    VisualName: "^Notes.CategoryNames.Diary^"
+  Diary_5:
+    VisualName: "^Notes.CategoryNames.Diary^"
+  Diary_6:
+    VisualName: "^Notes.CategoryNames.Diary^"
+  Diary_7:
+    VisualName: "^Notes.CategoryNames.Diary^"
+  Diary_8:
+    VisualName: "^Notes.CategoryNames.Diary^"
+  Fredricson_1:
+    VisualName: "^Notes.CategoryNames.Fredricson^"
+  Fredricson_2:
+    VisualName: "^Notes.CategoryNames.Fredricson^"
+  Fredricson_3:
+    VisualName: "^Notes.CategoryNames.Fredricson^"
+  Fredricson_4:
+    VisualName: "^Notes.CategoryNames.Fredricson^"
+  Fredricson_5:
+    VisualName: "^Notes.CategoryNames.Fredricson^"
+  Fredricson_6:
+    VisualName: "^Notes.CategoryNames.Fredricson^"
+  Fredricson_7:
+    VisualName: "^Notes.CategoryNames.Fredricson^"
+  Fredricson_8:
+    VisualName: "^Notes.CategoryNames.Fredricson^"
+  HumanNRobots_1:
+    VisualName: "^Notes.CategoryNames.HumanNRobots^"
+  HumanNRobots_2:
+    VisualName: "^Notes.CategoryNames.HumanNRobots^"
+  HumanNRobots_3:
+    VisualName: "^Notes.CategoryNames.HumanNRobots^"
+  HumanNRobots_4:
+    VisualName: "^Notes.CategoryNames.HumanNRobots^"
+  HumanNRobots_5:
+    VisualName: "^Notes.CategoryNames.HumanNRobots^"
+  HumanNRobots_6:
+    VisualName: "^Notes.CategoryNames.HumanNRobots^"
+  HumanNRobots_7:
+    VisualName: "^Notes.CategoryNames.HumanNRobots^"
+  HumanNRobots_8:
+    VisualName: "^Notes.CategoryNames.HumanNRobots^"
+  News_1:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_10:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_11:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_12:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_13:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_14:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_15:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_16:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_2:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_3:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_4:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_5:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_6:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_7:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_8:
+    VisualName: "^Notes.CategoryNames.News^"
+  News_9:
+    VisualName: "^Notes.CategoryNames.News^"
+  Shifts_1:
+    VisualName: "^Notes.CategoryNames.Shifts^"
+  Shifts_2:
+    VisualName: "^Notes.CategoryNames.Shifts^"
+  Shifts_3:
+    VisualName: "^Notes.CategoryNames.Shifts^"
+  Shifts_4:
+    VisualName: "^Notes.CategoryNames.Shifts^"
+  Shifts_5:
+    VisualName: "^Notes.CategoryNames.Shifts^"
+  Shifts_6:
+    VisualName: "^Notes.CategoryNames.Shifts^"
+  Shifts_7:
+    VisualName: "^Notes.CategoryNames.Shifts^"
+  Shifts_8:
+    VisualName: "^Notes.CategoryNames.Shifts^"
+  SwarmSpec_1:
+    VisualName: "^Notes.CategoryNames.SwarmSpec^"
+  SwarmSpec_2:
+    VisualName: "^Notes.CategoryNames.SwarmSpec^"
+  SwarmSpec_3:
+    VisualName: "^Notes.CategoryNames.SwarmSpec^"
+  SwarmSpec_4:
+    VisualName: "^Notes.CategoryNames.SwarmSpec^"
+Payment:
+  ExternalProducts:
+    Video:
+      Description: "?getBalance[Ads,VideoReward]"
+  Promo2:
+    Description: "?getBalance[Events,PaymentPromo2,CouponsAmount],?getBalance[Events,PaymentPromo2,BoosterpackAmount]"
+Quests:
+  Bruteforce:
+    BlockedStarterPack: "?getBalance[StarterPacks,ExperimentalProtocol,FloorNumber]"
+    Description: "?getBalance[Quests,Bruteforce,LocksCountOnFloor]"
+    Objective: "?getBalance[Quests,Bruteforce,LocksCountOnFloor]"
+    Progress: "?getBalance[Quests,Bruteforce,LocksCountOnFloor],?getCounter[ST_Statistics, Progress8Floor],?getCounter[ST_Statistics, Progress10Floor],?getCounter[ST_Statistics, Progress12Floor]"
+    ProgressNotificationFloor10Text: "{?getBalance[Quests,Bruteforce,LocksCountOnFloor] - ?getCounter[ST_Statistics, Progress10Floor]}"
+    ProgressNotificationFloor12Text: "{?getBalance[Quests,Bruteforce,LocksCountOnFloor] - ?getCounter[ST_Statistics, Progress12Floor]}"
+    ProgressNotificationFloor8Text: "{?getBalance[Quests,Bruteforce,LocksCountOnFloor] - ?getCounter[ST_Statistics, Progress8Floor]}"
+    ProgressNotificationLastLockText: "?getCounter[ST_Default, ST_Floor]"
+  Bruteforce1:
+    Description: "?getBalance[Quests,Bruteforce1,LocksCountOnFloor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,Bruteforce1,LocksCountOnFloor]"
+    Progress: "?getBalance[Quests,Bruteforce1,LocksCountOnFloor],?getCounter[ST_Statistics, Progress8Floor]"
+    ProgressNotificationText: "{?getBalance[Quests,Bruteforce1,LocksCountOnFloor] - ?getCounter[ST_Statistics, Progress8Floor]}"
+  Bruteforce2:
+    Description: "?getBalance[Quests,Bruteforce2,LocksCountOnFloor]"
+    Objective: "?getBalance[Quests,Bruteforce2,LocksCountOnFloor]"
+    Progress: "?getBalance[Quests,Bruteforce2,LocksCountOnFloor],?getCounter[ST_Statistics, Progress10Floor]"
+    ProgressNotificationText: "{?getBalance[Quests,Bruteforce2,LocksCountOnFloor] - ?getCounter[ST_Statistics, Progress10Floor]}"
+    RewardVisualName: "?getBalance[Quests,Bruteforce2,ChipReward]"
+  Bruteforce3:
+    Description: "?getBalance[Quests,Bruteforce3,LocksCountOnFloor]"
+    Objective: "?getBalance[Quests,Bruteforce3,LocksCountOnFloor]"
+    Progress: "?getBalance[Quests,Bruteforce3,LocksCountOnFloor],?getCounter[ST_Statistics, Progress12Floor]"
+    ProgressNotificationText: "{?getBalance[Quests,Bruteforce3,LocksCountOnFloor] - ?getCounter[ST_Statistics, Progress12Floor]}"
+  EnduranceTest:
+    BlockedStarterPack: "?getBalance[StarterPacks,StandardProtocol,FloorNumber]"
+  FileKeys:
+    BlockedStarterPack: "?getBalance[StarterPacks,OmegaProtocol,FloorNumber]"
+    Description: "?getBalance[Quests,FileKeys,Floors,1],?getBalance[Quests,FileKeys,Floors,2],?getBalance[Quests,FileKeys,Floors,3],?getBalance[Quests,FileKeys,Floors,4],?switch[?getCounter[ST_Quests,FileKeys],1:'^Quests.FileKeys.DescriptionProgress^','']"
+    DescriptionProgress: "?getCounter[FileKeys,KeysCollected]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog2:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog3:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog4:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getBalance[Quests,FileKeys,Floors,1],?getBalance[Quests,FileKeys,Floors,2],?getBalance[Quests,FileKeys,Floors,3],?getBalance[Quests,FileKeys,Floors,4]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,FileKeys,Floors,1],?getBalance[Quests,FileKeys,Floors,2],?getBalance[Quests,FileKeys,Floors,3],?getBalance[Quests,FileKeys,Floors,4]"
+    Progress: "?switch[?getCounter[ST_Quests,FileKeys], -1: 4, ?getCounter[FileKeys,KeysCollected]],4"
+    RewardVisualName: "^StarterPacks.OmegaProtocol.PackName^"
+    StartDialogTitle: "Quests.FileKeys.DescriptionProgress"
+  FindCapsules:
+    Description: "?getBalance[Quests,FindCapsules,MinFloor],?getBalance[Quests,FindCapsules,MaxFloor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "35"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,FindCapsules,MinFloor],?getBalance[Quests,FindCapsules,MaxFloor]"
+    Progress: "?switch[?getCounter[ST_Quests,FindCapsules], -1: ?getBalance[Quests,FindCapsules,CapsulesCount], ?getCounter[FindCapsules,CapsulesCount]],?getBalance[Quests,FindCapsules,CapsulesCount]"
+    RewardVisualName: "^GUI.Labels.Common.UpgradeKit^"
+  FindFuze:
+    Description: "?getBalance[Quests,FindFuze,Floor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getBalance[Quests,InsertFuze,Floor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,FindFuze,Floor]"
+    RewardVisualName: "^GUI.Labels.Common.UpgradeKit^"
+  InsertFuze:
+    Description: "?getBalance[Quests,InsertFuze,Floor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getBalance[Quests,ReadjustScanner,Floor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,InsertFuze,Floor]"
+    RewardVisualName: "^GUI.Labels.Common.UpgradeKit^"
+  InsertUpgrade:
+    RewardVisualName: "?getBalance[Quests,InsertUpgrade,TokensAmount]"
+  InspectGear:
+    RewardVisualName: "^Gadgets.BonusTokens_1.EffectVisualName^"
+  MaintenanceOperations:
+    Description: "?getBalance[Quests,MaintenanceOperations,MemoryUnits],?switch[?getCounter[ST_Quests,MaintenanceOperations],1:'^Quests.MaintenanceOperations.DescriptionProgress^','']"
+    DescriptionProgress: "?getCounter[MaintenanceOperations,MemoryUnitsCount],?getBalance[Quests,MaintenanceOperations,MemoryUnits]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog2:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog3:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog4:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "{?getCounter[ST_Statistics,ST_run_counter]+1}"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog5:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog6:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getBalance[Quests,MemoryInstall,Floor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,MaintenanceOperations,MemoryUnits]"
+    Progress: "?switch[?getCounter[ST_Quests,MaintenanceOperations], -1: ?getBalance[Quests,MaintenanceOperations,MemoryUnits], ?getCounter[MaintenanceOperations,MemoryUnitsCount]],?getBalance[Quests,MaintenanceOperations,MemoryUnits]"
+    RewardVisualName: "^GUI.Labels.Common.UpgradeKitTwo^"
+  MemoryInstall:
+    BlockedStarterPack: "?getBalance[StarterPacks,GammaProtocol,FloorNumber]"
+    Description: "?getBalance[Quests,MemoryInstall,Floor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog2:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,MemoryInstall,Floor]"
+    RewardVisualName: "^StarterPacks.GammaProtocol.PackName^"
+    RightOrder: "?getCounter[MemoryInstall,InstallProgress]"
+  PowerFailures:
+    BlockedStarterPack: "?getBalance[StarterPacks,AlphaProtocol,FloorNumber]"
+    Description: "?getBalance[Quests,PowerFailures,Floor]"
+    Objective: "?getBalance[Quests,PowerFailures,Floor]"
+    RewardVisualName: "^StarterPacks.AlphaProtocol.PackName^"
+  PowerNodes:
+    Description: "?getBalance[Quests,PowerNodes,MinFloor],{?getBalance[Quests,PowerNodes,MinFloor]+1},?getBalance[Quests,PowerNodes,MaxFloor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getBalance[Quests,FindFuze,Floor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,PowerNodes,MinFloor],{?getBalance[Quests,PowerNodes,MinFloor]+1},?getBalance[Quests,PowerNodes,MaxFloor]"
+    Progress: "?switch[?getCounter[ST_Quests,PowerNodes], -1: 3, ?getCounter[PowerNodes,NodesActivated]],3"
+    RewardVisualName: "^GUI.Labels.Common.UpgradeKit^"
+  RaresCollector:
+    Description: "?getBalance[Quests,RaresCollector,ObtainCardsCount]"
+    Objective: "?getBalance[Quests,RaresCollector,ObtainCardsCount]"
+    Progress: "?_min[?getCounter[ST_Statistics, ObtainedItemsCountRaresCollectorQuest],?getBalance[Quests,RaresCollector,ObtainCardsCount]],?getBalance[Quests,RaresCollector,ObtainCardsCount]"
+    ProgressNotificationText: "<ST_Statistics.ObtainedItemsCountRaresCollectorQuest>,?getBalance[Quests,RaresCollector,ObtainCardsCount]"
+  Reactor:
+    Description: "?getBalance[Quests,Reactor,Floor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog2:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog3:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog4:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "{?getCounter[ST_Statistics,ST_run_counter]+1},?getBalance[Quests,Reactor,Floor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog5:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog6:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog7:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog8:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getBalance[Quests,PowerNodes,MinFloor],{?getBalance[Quests,PowerNodes,MinFloor]+1},?getBalance[Quests,PowerNodes,MaxFloor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,Reactor,Floor]"
+    RewardVisualName: "^GUI.Labels.Common.UpgradeKit^"
+  ReadjustScanner:
+    Description: "?getBalance[Quests,ReadjustScanner,Floor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getBalance[Quests,ScannerProcedures,Floor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,ReadjustScanner,Floor]"
+    ProgressNotification: "?getCounter[ReadjustScanner,DevicesCount],?getBalance[Quests,ReadjustScanner,DevicesCount]"
+    RewardVisualName: "^GUI.Labels.Common.UpgradeKit^"
+  ScannerProcedures:
+    BlockedStarterPack: "?getBalance[StarterPacks,LastProtocol,FloorNumber]"
+    Description: "?getBalance[Quests,ScannerProcedures,Floor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getBalance[Quests,FindCapsules,MinFloor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,ScannerProcedures,Floor]"
+    RewardVisualName: "^StarterPacks.LastProtocol.PackName^"
+  SecureConnection:
+    Description: "?getBalance[Quests,SecureConnection,ButtonsCount],?switch[?getCounter[SecureConnection,NewQuestCondition],1:'^Quests.SecureConnection.DescriptionAfterDialog^','']"
+    DescriptionAfterDialog: "?getBalance[Quests,SecureConnection,RequiredRank]"
+    Dialog4:
+      Message: "?getBalance[Quests,ServiceEntrance,MinimumKeyFloor]"
+    Dialog5:
+      Message: "?getBalance[Quests,SecureConnection,RequiredRank]"
+    Objective: "?getBalance[Quests,SecureConnection,ButtonsCount]"
+    Progress: "?switch[<ST_Quests.SecureConnection>, -1:?getBalance[Quests,SecureConnection,ButtonsCount],<SecureConnection.Progress>],?getBalance[Quests,SecureConnection,ButtonsCount]"
+    ProgressNotificationText: "<SecureConnection.Progress>,?getBalance[Quests,SecureConnection,ButtonsCount]"
+  ServerError:
+    Description: "?getBalance[Quests,ServerError,MinFloor],?getBalance[Quests,ServerError,MaxFloor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog2:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog3:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog4:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog5:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "{?getCounter[ST_Statistics,ST_run_counter]+1},?getBalance[Quests,ServerError,MinFloor],?getBalance[Quests,ServerError,MaxFloor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,ServerError,MinFloor],?getBalance[Quests,ServerError,MaxFloor]"
+    RewardVisualName: "^GUI.Labels.Common.UpgradeKit^"
+  ServiceEntrance:
+    Dialog10:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "{?getCounter[ST_Statistics,ST_run_counter]+1},?getCounter[ST_Statistics, SubjectEscapedToZ2]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog6:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog7:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getCounter[ST_Statistics, SubjectEscapedToZ2]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog8:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog9:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "?getCounter[ST_Statistics, SubjectEscapedToZ2]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+  SwarmEncounter:
+    BlockedStarterPack: "?getBalance[StarterPacks,BetaProtocol,FloorNumber]"
+    Description: "?getBalance[Quests,SwarmEncounter,Floor]"
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog2:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog3:
+      Button: "^GUI.Buttons.Ok^"
+      Message: "{?getCounter[ST_Statistics,ST_run_counter]+1},?getBalance[Quests,SwarmEncounter,Floor]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Objective: "?getBalance[Quests,SwarmEncounter,Floor]"
+    RewardVisualName: "^StarterPacks.BetaProtocol.PackName^"
+  TheContact:
+    BlockedStarterPack: "?getBalance[StarterPacks,AdvancedProtocol,FloorNumber]"
+    Description: "?getBalance[Quests,ThirdProtocol,RankNeeded]"
+    Dialog3:
+      Message: "?getBalance[Quests,ThirdProtocol,RankNeeded]"
+    Objective: "?getBalance[Quests,ThirdProtocol,RankNeeded]"
+    Progress: "?getCounter[ST_Statistics, BestRank]"
+    ProgressNotificationText: "?getCounter[ST_Statistics, BestRank]"
+  TreasureHunt:
+    Description: "?getBalance[Quests,TreasureHunt,ObtainCardsCount]"
+    Objective: "?getBalance[Quests,TreasureHunt,ObtainCardsCount]"
+    Progress: "?_min[?getCounter[ST_Statistics, ObtainedItemsCountTreasureHuntQuest],?getBalance[Quests,TreasureHunt,ObtainCardsCount]],?getBalance[Quests,TreasureHunt,ObtainCardsCount]"
+    ProgressNotificationText: "<ST_Statistics.ObtainedItemsCountTreasureHuntQuest>,?getBalance[Quests,TreasureHunt,ObtainCardsCount]"
+SoundAnnounce:
+  SubjectActivated: "<ST_Statistics.ST_run_counter>"
+StarterPacks:
+  AdvancedProtocol:
+    Description: "?getBalance[StarterPacks,AdvancedProtocol,FloorNumber]"
+  AlphaProtocol:
+    Belt:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Belt.VisualName^"
+    Description: "?getBalance[StarterPacks,AlphaProtocol,FloorNumber]"
+    Hands:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Hands.VisualName^"
+    Head:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Head.VisualName^"
+    Legs:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Legs.VisualName^"
+    Torso:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Torso.VisualName^"
+  BasicProtocol:
+    Description: "?getBalance[StarterPacks,BasicProtocol,FloorNumber]"
+  BetaProtocol:
+    Belt:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Belt.VisualName^"
+    Description: "?getBalance[StarterPacks,BetaProtocol,FloorNumber]"
+    Hands:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Hands.VisualName^"
+    Head:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Head.VisualName^"
+    Legs:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Legs.VisualName^"
+    Torso:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Torso.VisualName^"
+  ExperimentalProtocol:
+    Description: "?getBalance[StarterPacks,ExperimentalProtocol,FloorNumber]"
+  GammaProtocol:
+    Belt:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Belt.VisualName^"
+    Description: "?getBalance[StarterPacks,GammaProtocol,FloorNumber]"
+    Hands:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Hands.VisualName^"
+    Head:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Head.VisualName^"
+    Legs:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Legs.VisualName^"
+    Torso:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Torso.VisualName^"
+  LastProtocol:
+    Belt:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Belt.VisualName^"
+    Description: "?getBalance[StarterPacks,LastProtocol,FloorNumber]"
+    Hands:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Hands.VisualName^"
+    Head:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Head.VisualName^"
+    Legs:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Legs.VisualName^"
+    Torso:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Torso.VisualName^"
+  OmegaProtocol:
+    Belt:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Belt.VisualName^"
+    Description: "?getBalance[StarterPacks,OmegaProtocol,FloorNumber]"
+    Hands:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Hands.VisualName^"
+    Head:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Head.VisualName^"
+    Legs:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Legs.VisualName^"
+    Torso:
+      VisualName: "^StarterPacks.ExperimentalProtocol.Torso.VisualName^"
+  StandardProtocol:
+    Description: "?getBalance[StarterPacks,StandardProtocol,FloorNumber]"
+Stunts:
+  StuntDetails:
+    AboveCar_1:
+      Text: "?getCardInfo[AboveCar_1,Vars,Points]"
+    AboveCar_2:
+      Text: "?getCardInfo[AboveCar_2,Vars,Points]"
+    AboveCar_3:
+      Text: "?getCardInfo[AboveCar_3,Vars,Points]"
+    AirBomb_1:
+      Text: "?getCardInfo[AirBomb_1,Vars,Points]"
+    AirBomb_2:
+      Text: "?getCardInfo[AirBomb_2,Vars,Points]"
+    AirBomb_3:
+      Text: "?getCardInfo[AirBomb_3,Vars,Points]"
+    AirSpin_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[AirSpin_1,Vars,Points]"
+    AirSpin_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[AirSpin_2,Vars,Points]"
+    AirSpin_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[AirSpin_3,Vars,Points]"
+    BackFlip_1:
+      Text: "?getCardInfo[BackFlip_1,Vars,Points]"
+    BackFlip_2:
+      Text: "?getCardInfo[BackFlip_2,Vars,Points]"
+    BackFlip_3:
+      Text: "?getCardInfo[BackFlip_3,Vars,Points]"
+    BarJumpSaltoless_1:
+      Text: "?getCardInfo[BarJumpSaltoless_1,Vars,Points]"
+    BarJumpSaltoless_2:
+      Text: "?getCardInfo[BarJumpSaltoless_2,Vars,Points]"
+    BarJumpSaltoless_3:
+      Text: "?getCardInfo[BarJumpSaltoless_3,Vars,Points]"
+    BarJump_1:
+      Text: "?getCardInfo[BarJump_1,Vars,Points]"
+    BarJump_2:
+      Text: "?getCardInfo[BarJump_2,Vars,Points]"
+    BarJump_3:
+      Text: "?getCardInfo[BarJump_3,Vars,Points]"
+    BarrelVault_1:
+      Text: "?getCardInfo[BarrelVault_1,Vars,Points]"
+    BarrelVault_2:
+      Text: "?getCardInfo[BarrelVault_2,Vars,Points]"
+    BarrelVault_3:
+      Text: "?getCardInfo[BarrelVault_3,Vars,Points]"
+    BoomBoomSh_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[BoomBoomSh_1,Vars,Points]"
+    BoomBoomSh_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[BoomBoomSh_2,Vars,Points]"
+    BoomBoomSh_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[BoomBoomSh_3,Vars,Points]"
+    Bullet_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Bullet_1,Vars,Points]"
+    Bullet_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Bullet_2,Vars,Points]"
+    Bullet_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Bullet_3,Vars,Points]"
+    CheatGainer_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[CheatGainer_1,Vars,Points]"
+    CheatGainer_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[CheatGainer_2,Vars,Points]"
+    CheatGainer_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[CheatGainer_3,Vars,Points]"
+    CoolSwing_1:
+      Text: "?getCardInfo[CoolSwing_1,Vars,Points]"
+    CoolSwing_2:
+      Text: "?getCardInfo[CoolSwing_2,Vars,Points]"
+    CoolSwing_3:
+      Text: "?getCardInfo[CoolSwing_3,Vars,Points]"
+    DashToFrontflip_1:
+      Text: "?getCardInfo[DashToFrontflip_1,Vars,Points]"
+    DashToFrontflip_2:
+      Text: "?getCardInfo[DashToFrontflip_2,Vars,Points]"
+    DashToFrontflip_3:
+      Text: "?getCardInfo[DashToFrontflip_3,Vars,Points]"
+    DashVault_1:
+      Text: "?getCardInfo[DashVault_1,Vars,Points]"
+    DashVault_2:
+      Text: "?getCardInfo[DashVault_2,Vars,Points]"
+    DashVault_3:
+      Text: "?getCardInfo[DashVault_3,Vars,Points]"
+    DiveDown_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DiveDown_1,Vars,Points]"
+    DiveDown_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DiveDown_2,Vars,Points]"
+    DiveDown_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DiveDown_3,Vars,Points]"
+    DiveRoll_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DiveRoll_1,Vars,Points]"
+    DiveRoll_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DiveRoll_2,Vars,Points]"
+    DiveRoll_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DiveRoll_3,Vars,Points]"
+    DoubleBack_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleBack_1,Vars,Points]"
+    DoubleBack_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleBack_2,Vars,Points]"
+    DoubleBack_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleBack_3,Vars,Points]"
+    DoubleJumpRoll_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleJumpRoll_1,Vars,Points]"
+    DoubleJumpRoll_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleJumpRoll_2,Vars,Points]"
+    DoubleJumpRoll_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleJumpRoll_3,Vars,Points]"
+    DoubleKong_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleKong_1,Vars,Points]"
+    DoubleKong_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleKong_2,Vars,Points]"
+    DoubleKong_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleKong_3,Vars,Points]"
+    DoubleSpinToRoll_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleSpinToRoll_1,Vars,Points]"
+    DoubleSpinToRoll_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleSpinToRoll_2,Vars,Points]"
+    DoubleSpinToRoll_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleSpinToRoll_3,Vars,Points]"
+    DoubleSpinVault_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleSpinVault_1,Vars,Points]"
+    DoubleSpinVault_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleSpinVault_2,Vars,Points]"
+    DoubleSpinVault_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[DoubleSpinVault_3,Vars,Points]"
+    FlippingSwing_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FlippingSwing_1,Vars,Points]"
+    FlippingSwing_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FlippingSwing_2,Vars,Points]"
+    FlippingSwing_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FlippingSwing_3,Vars,Points]"
+    FlyingArrow_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FlyingArrow_1,Vars,Points]"
+    FlyingArrow_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FlyingArrow_2,Vars,Points]"
+    FlyingArrow_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FlyingArrow_3,Vars,Points]"
+    FrontFlipTwoLegs_1:
+      Text: "?getCardInfo[FrontFlipTwoLegs_1,Vars,Points]"
+    FrontFlipTwoLegs_2:
+      Text: "?getCardInfo[FrontFlipTwoLegs_2,Vars,Points]"
+    FrontFlipTwoLegs_3:
+      Text: "?getCardInfo[FrontFlipTwoLegs_3,Vars,Points]"
+    FrontflipLegsUp_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FrontflipLegsUp_1,Vars,Points]"
+    FrontflipLegsUp_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FrontflipLegsUp_2,Vars,Points]"
+    FrontflipLegsUp_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[FrontflipLegsUp_3,Vars,Points]"
+    GateVault_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[GateVault_1,Vars,Points]"
+    GateVault_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[GateVault_2,Vars,Points]"
+    GateVault_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[GateVault_3,Vars,Points]"
+    HandSpring_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[HandSpring_1,Vars,Points]"
+    HandSpring_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[HandSpring_2,Vars,Points]"
+    HandSpring_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[HandSpring_3,Vars,Points]"
+    HandspringToRoll_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[HandspringToRoll_1,Vars,Points]"
+    HandspringToRoll_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[HandspringToRoll_2,Vars,Points]"
+    HandspringToRoll_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[HandspringToRoll_3,Vars,Points]"
+    JumpDownRoll_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[JumpDownRoll_1,Vars,Points]"
+    JumpDownRoll_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[JumpDownRoll_2,Vars,Points]"
+    JumpDownRoll_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[JumpDownRoll_3,Vars,Points]"
+    JumpObstacle_1:
+      Text: "?getCardInfo[JumpObstacle_1,Vars,Points]"
+    JumpObstacle_2:
+      Text: "?getCardInfo[JumpObstacle_2,Vars,Points]"
+    JumpObstacle_3:
+      Text: "?getCardInfo[JumpObstacle_3,Vars,Points]"
+    JumpSpinVault_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[JumpSpinVault_1,Vars,Points]"
+    JumpSpinVault_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[JumpSpinVault_2,Vars,Points]"
+    JumpSpinVault_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[JumpSpinVault_3,Vars,Points]"
+    JumpTumble_1:
+      Text: "?getCardInfo[JumpTumble_1,Vars,Points]"
+    JumpTumble_2:
+      Text: "?getCardInfo[JumpTumble_2,Vars,Points]"
+    JumpTumble_3:
+      Text: "?getCardInfo[JumpTumble_3,Vars,Points]"
+    JumpWheel_1:
+      Text: "?getCardInfo[JumpWheel_1,Vars,Points]"
+    JumpWheel_2:
+      Text: "?getCardInfo[JumpWheel_2,Vars,Points]"
+    JumpWheel_3:
+      Text: "?getCardInfo[JumpWheel_3,Vars,Points]"
+    KingKongJumpoff_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongJumpoff_1,Vars,Points]"
+    KingKongJumpoff_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongJumpoff_2,Vars,Points]"
+    KingKongJumpoff_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongJumpoff_3,Vars,Points]"
+    KingKongToBend_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongToBend_1,Vars,Points]"
+    KingKongToBend_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongToBend_2,Vars,Points]"
+    KingKongToBend_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongToBend_3,Vars,Points]"
+    KingKongToFlip_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongToFlip_1,Vars,Points]"
+    KingKongToFlip_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongToFlip_2,Vars,Points]"
+    KingKongToFlip_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[KingKongToFlip_3,Vars,Points]"
+    LongCircle_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[LongCircle_1,Vars,Points]"
+    LongCircle_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[LongCircle_2,Vars,Points]"
+    LongCircle_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[LongCircle_3,Vars,Points]"
+    LongJumpToBarrel_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[LongJumpToBarrel_1,Vars,Points]"
+    LongJumpToBarrel_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[LongJumpToBarrel_2,Vars,Points]"
+    LongJumpToBarrel_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[LongJumpToBarrel_3,Vars,Points]"
+    MonkeyToBackflip_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[MonkeyToBackflip_1,Vars,Points]"
+    MonkeyToBackflip_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[MonkeyToBackflip_2,Vars,Points]"
+    MonkeyToBackflip_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[MonkeyToBackflip_3,Vars,Points]"
+    MonkeyToBomb_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[MonkeyToBomb_1,Vars,Points]"
+    MonkeyToBomb_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[MonkeyToBomb_2,Vars,Points]"
+    MonkeyToBomb_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[MonkeyToBomb_3,Vars,Points]"
+    MonkeyVault_1:
+      Text: "?getCardInfo[MonkeyVault_1,Vars,Points]"
+    MonkeyVault_2:
+      Text: "?getCardInfo[MonkeyVault_2,Vars,Points]"
+    MonkeyVault_3:
+      Text: "?getCardInfo[MonkeyVault_3,Vars,Points]"
+    ObstacleFrontflip_1:
+      Text: "?getCardInfo[ObstacleFrontflip_1,Vars,Points]"
+    ObstacleFrontflip_2:
+      Text: "?getCardInfo[ObstacleFrontflip_2,Vars,Points]"
+    ObstacleFrontflip_3:
+      Text: "?getCardInfo[ObstacleFrontflip_3,Vars,Points]"
+    RailFlipVault_1:
+      Text: "?getCardInfo[RailFlipVault_1,Vars,Points]"
+    RailFlipVault_2:
+      Text: "?getCardInfo[RailFlipVault_2,Vars,Points]"
+    RailFlipVault_3:
+      Text: "?getCardInfo[RailFlipVault_3,Vars,Points]"
+    ReverseVault_1:
+      Text: "?getCardInfo[ReverseVault_1,Vars,Points]"
+    ReverseVault_2:
+      Text: "?getCardInfo[ReverseVault_2,Vars,Points]"
+    ReverseVault_3:
+      Text: "?getCardInfo[ReverseVault_3,Vars,Points]"
+    RocketVault_1:
+      Text: "?getCardInfo[RocketVault_1,Vars,Points]"
+    RocketVault_2:
+      Text: "?getCardInfo[RocketVault_2,Vars,Points]"
+    RocketVault_3:
+      Text: "?getCardInfo[RocketVault_3,Vars,Points]"
+    RollForward_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[RollForward_1,Vars,Points]"
+    RollForward_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[RollForward_2,Vars,Points]"
+    RollForward_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[RollForward_3,Vars,Points]"
+    RollToStraightLegsFlip_1:
+      Text: "?getCardInfo[RollToStraightLegsFlip_1,Vars,Points]"
+    RollToStraightLegsFlip_2:
+      Text: "?getCardInfo[RollToStraightLegsFlip_2,Vars,Points]"
+    RollToStraightLegsFlip_3:
+      Text: "?getCardInfo[RollToStraightLegsFlip_3,Vars,Points]"
+    ScrewDriver_1:
+      Text: "?getCardInfo[ScrewDriver_1,Vars,Points]"
+    ScrewDriver_2:
+      Text: "?getCardInfo[ScrewDriver_2,Vars,Points]"
+    ScrewDriver_3:
+      Text: "?getCardInfo[ScrewDriver_3,Vars,Points]"
+    SideFlip_1:
+      Text: "?getCardInfo[SideFlip_1,Vars,Points]"
+    SideFlip_2:
+      Text: "?getCardInfo[SideFlip_2,Vars,Points]"
+    SideFlip_3:
+      Text: "?getCardInfo[SideFlip_3,Vars,Points]"
+    Sidebomb_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Sidebomb_1,Vars,Points]"
+    Sidebomb_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Sidebomb_2,Vars,Points]"
+    Sidebomb_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Sidebomb_3,Vars,Points]"
+    SlowSpin_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[SlowSpin_1,Vars,Points]"
+    SlowSpin_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[SlowSpin_2,Vars,Points]"
+    SlowSpin_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[SlowSpin_3,Vars,Points]"
+    SpinBicycle_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[SpinBicycle_1,Vars,Points]"
+    SpinBicycle_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[SpinBicycle_2,Vars,Points]"
+    SpinBicycle_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[SpinBicycle_3,Vars,Points]"
+    SpinVault_1:
+      Text: "?getCardInfo[SpinVault_1,Vars,Points]"
+    SpinVault_2:
+      Text: "?getCardInfo[SpinVault_2,Vars,Points]"
+    SpinVault_3:
+      Text: "?getCardInfo[SpinVault_3,Vars,Points]"
+    Spin_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Spin_1,Vars,Points]"
+    Spin_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Spin_2,Vars,Points]"
+    Spin_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Spin_3,Vars,Points]"
+    SpinningVault_1:
+      Text: "?getCardInfo[SpinningVault_1,Vars,Points]"
+    SpinningVault_2:
+      Text: "?getCardInfo[SpinningVault_2,Vars,Points]"
+    SpinningVault_3:
+      Text: "?getCardInfo[SpinningVault_3,Vars,Points]"
+    SplitOne_1:
+      Text: "?getCardInfo[SplitOne_1,Vars,Points]"
+    SplitOne_2:
+      Text: "?getCardInfo[SplitOne_2,Vars,Points]"
+    SplitOne_3:
+      Text: "?getCardInfo[SplitOne_3,Vars,Points]"
+    Swallow400_1:
+      Text: "?getCardInfo[Swallow400_1,Vars,Points]"
+    Swallow400_2:
+      Text: "?getCardInfo[Swallow400_2,Vars,Points]"
+    Swallow400_3:
+      Text: "?getCardInfo[Swallow400_3,Vars,Points]"
+    Swallow_1:
+      Text: "?getCardInfo[Swallow_1,Vars,Points]"
+    Swallow_2:
+      Text: "?getCardInfo[Swallow_2,Vars,Points]"
+    Swallow_3:
+      Text: "?getCardInfo[Swallow_3,Vars,Points]"
+    Swing_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Swing_1,Vars,Points]"
+    Swing_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Swing_2,Vars,Points]"
+    Swing_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[Swing_3,Vars,Points]"
+    ThiefVault_1:
+      Text: "?getCardInfo[ThiefVault_1,Vars,Points]"
+    ThiefVault_2:
+      Text: "?getCardInfo[ThiefVault_2,Vars,Points]"
+    ThiefVault_3:
+      Text: "?getCardInfo[ThiefVault_3,Vars,Points]"
+    TripleHit_1:
+      Text: "?getCardInfo[TripleHit_1,Vars,Points]"
+    TripleHit_2:
+      Text: "?getCardInfo[TripleHit_2,Vars,Points]"
+    TripleHit_3:
+      Text: "?getCardInfo[TripleHit_3,Vars,Points]"
+    TripleSwing_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TripleSwing_1,Vars,Points]"
+    TripleSwing_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TripleSwing_2,Vars,Points]"
+    TripleSwing_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TripleSwing_3,Vars,Points]"
+    TripleTrickToSwallow_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TripleTrickToSwallow_1,Vars,Points]"
+    TripleTrickToSwallow_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TripleTrickToSwallow_2,Vars,Points]"
+    TripleTrickToSwallow_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TripleTrickToSwallow_3,Vars,Points]"
+    TurnVault_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TurnVault_1,Vars,Points]"
+    TurnVault_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TurnVault_2,Vars,Points]"
+    TurnVault_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[TurnVault_3,Vars,Points]"
+    Underbar_1:
+      Text: "?getCardInfo[Underbar_1,Vars,Points]"
+    Underbar_2:
+      Text: "?getCardInfo[Underbar_2,Vars,Points]"
+    Underbar_3:
+      Text: "?getCardInfo[Underbar_3,Vars,Points]"
+    VertVault_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[VertVault_1,Vars,Points]"
+    VertVault_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[VertVault_2,Vars,Points]"
+    VertVault_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[VertVault_3,Vars,Points]"
+    WallBackRoll_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallBackRoll_1,Vars,Points]"
+    WallBackRoll_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallBackRoll_2,Vars,Points]"
+    WallBackRoll_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallBackRoll_3,Vars,Points]"
+    WallCling_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallCling_1,Vars,Points]"
+    WallCling_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallCling_2,Vars,Points]"
+    WallCling_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallCling_3,Vars,Points]"
+    WallHop360_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallHop360_1,Vars,Points]"
+    WallHop360_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallHop360_2,Vars,Points]"
+    WallHop360_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallHop360_3,Vars,Points]"
+    WallHop_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallHop_1,Vars,Points]"
+    WallHop_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallHop_2,Vars,Points]"
+    WallHop_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallHop_3,Vars,Points]"
+    WallSpeedVault_1:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallSpeedVault_1,Vars,Points]"
+    WallSpeedVault_2:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallSpeedVault_2,Vars,Points]"
+    WallSpeedVault_3:
+      Text: "^Stunts.StuntDetails.Default.Text^,?getCardInfo[WallSpeedVault_3,Vars,Points]"
+    WebsterWithSalto_1:
+      Text: "?getCardInfo[WebsterWithSalto_1,Vars,Points]"
+    WebsterWithSalto_2:
+      Text: "?getCardInfo[WebsterWithSalto_2,Vars,Points]"
+    WebsterWithSalto_3:
+      Text: "?getCardInfo[WebsterWithSalto_3,Vars,Points]"
+    Webster_1:
+      Text: "?getCardInfo[Webster_1,Vars,Points]"
+    Webster_2:
+      Text: "?getCardInfo[Webster_2,Vars,Points]"
+    Webster_3:
+      Text: "?getCardInfo[Webster_3,Vars,Points]"
+Tutorial:
+  Missions:
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog2:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+  Reroll:
+    Dialog1:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog2:
+      Message: "?getBalance[Reroll, BonusChipsForReroll]"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"
+    Dialog3:
+      Button: "^GUI.Buttons.Ok^"
+      Title: "^GUI.Labels.DialogWindow.Title.Announcement^"

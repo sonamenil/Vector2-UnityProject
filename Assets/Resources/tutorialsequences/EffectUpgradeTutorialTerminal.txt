@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Steps>
+  <LockButton IsLock="1">
+    <Module Name="TopPanel">
+      <Button Name="DonateBtn" />
+      <Button Name="FreeBtn" />
+      <Button Name="Timer" />
+      <Button Name="Energy" />
+    </Module>
+    <Module Name="BottomPanel" LockAllButtons="1" />
+    <Module Name="TerminalPanel" LockAllButtons="1" />
+    <Dialog Name="OptionsDialog">
+      <Button Name="ButtonCredits"/>
+    </Dialog>
+  </LockButton>
+  <LockButton IsLock="0">
+    <Module Name="TerminalPanel">
+      <Button Name="BoostButton" />
+    </Module>
+  </LockButton>
+  <ClickButton Module="TerminalPanel" Button="BoostButton" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="-50" Y="80" Z="0" />
+      <DeltaMove X="0" Y="60" />
+      <Angle Value="180" />
+      <Delay Value="0.5" />
+    </Arrow>
+  </ClickButton>
+  <LockButton IsLock="1">
+    <Module Name="TerminalPanel">
+      <Button Name="BoostButton" />
+    </Module>
+  </LockButton>
+  <LockButton IsLock="0">
+    <Module Name="BottomPanel">
+      <Button Name="ContinueButton" />
+    </Module>
+  </LockButton>
+  <ChangeCounter Counter="UpgradeEffectTutor" Namespace="ST_Tutorial" Value="0" />
+  <ChangeCounter Counter="BoosterPackTutor" Namespace="ST_Tutorial" Value="1" />
+  <CheckQuests />
+  <ClickButton Module="BottomPanel" Button="ContinueButton" RemoveButtonActions="0" AllExceptButtonName="0">
+    <Arrow Prefab="UI/Prefabs/Common/TutorialArrow">
+      <Position X="-300" Y="100" Z="0" />
+      <DeltaMove X="0" Y="80" />
+      <Angle Value="180" />
+      <Delay Value="0" />
+    </Arrow>
+  </ClickButton>
+</Steps>

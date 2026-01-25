@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialog>
+  <Image Texture="goku.png">
+  	<Action Type="Url" Link="https://discord.gg/C3AB2rAH" />
+  </Image>
+  <Buttons>
+    <Button Text="Vectorier" Color="Green">
+      <Action Type="Url" Link="https://discord.gg/C3AB2rAH" />
+    </Button>
+    <Button Text="Close" Color="Red">
+      <Action Type="Close" />
+    </Button>
+  </Buttons>
+</Dialog>

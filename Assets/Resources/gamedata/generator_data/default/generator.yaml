@@ -1,0 +1,607 @@
+StartRoom:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Equal: 0}
+  Set: 1
+  NoShuffle: 1 
+  BoxContent:
+    StartRoomTutorial:
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_Tutorial, Equal: 1}
+      ConditionContent:
+      - {ConditionType: LabelRange, Name: CryoStartRoom, Min: 0, Max: 0}
+      - {ConditionType: LabelRange, Name: CryoTutorialStartRoom, Min: 1, Max: 1}
+      - {ConditionType: LabelRange, Name: StartRoom, Min: 1, Max: 1}
+      - {ConditionType: LabelRange, Name: Zone2StartRoom, Min: 0, Max: 0}
+    PlayCommandStartRoom:
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_PlayCommand, Min: 1}
+      ConditionContent:
+      - {ConditionType: LabelRange, Name: CryoStartRoom, Min: 0, Max: 0}
+      - {ConditionType: LabelRange, Name: CryoTutorialStartRoom, Min: 0, Max: 0}
+      - {ConditionType: LabelRange, Name: StartRoomShort, Min: 1, Max: 1}
+      - {ConditionType: LabelRange, Name: StartRoom, Min: 1, Max: 1}
+      - {ConditionType: LabelRange, Name: Zone2StartRoom, Min: 0, Max: 0}
+    StartRoomFloor1:
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_Floor, Max: 1}
+      ConditionContent:
+      - {ConditionType: LabelRange, Name: CryoStartRoom, Min: 1, Max: 1}
+      - {ConditionType: LabelRange, Name: CryoTutorialStartRoom, Min: 0, Max: 0}
+      - {ConditionType: LabelRange, Name: StartRoom, Min: 1, Max: 1}
+      - {ConditionType: LabelRange, Name: Zone2StartRoom, Min: 0, Max: 0}
+    StartRoomFloor2+:
+      ConditionContent:
+      - {ConditionType: LabelRange, Name: CryoStartRoom, Min: 0, Max: 0}
+      - {ConditionType: LabelRange, Name: CryoTutorialStartRoom, Min: 0, Max: 0}
+      - {ConditionType: LabelRange, Name: StartRoomShort, Min: 0, Max: 0}
+      - {ConditionType: LabelRange, Name: StartRoom, Min: 1, Max: 1}
+      - {ConditionType: LabelRange, Name: Zone2StartRoom, Min: 0, Max: 0}
+FinishRoom:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Equal: 1}
+  ConditionContent:
+  - {ConditionType: LabelRange, Name: FinishRoom, Min: 1, Max: 1}
+  - {ConditionType: LabelRange, Name: Not_Generated, Min: 0, Max: 0}
+MiddleRoom:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 1}
+  - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 2}
+  ConditionContent:
+  - {ConditionType: LabelRange, Name: StartRoom, Max: 0}
+  - {ConditionType: LabelRange, Name: FinishRoom, Max: 0}
+TutorialFirst:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 1}
+  - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 2}
+  - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Equal: 0}
+  - {ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_Tutorial, Equal: 1}
+  ConditionContent:
+  - {ConditionType: LabelRange, Name: TutorialBasic, Min: 1}       
+TutorialLaserAndMine:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Equal: 1}
+  - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 2}
+  - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Equal: 0}
+  - {ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Equal: 1}
+  ConditionContent:
+  - {ConditionType: LabelRange, Name: TutorialLaserRoom, Min: 1}
+MineQuest:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 1}
+  - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 2}
+  - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Equal: 0}
+  - {ConditionType: CounterRange, Name: UpgradeEffectTutor, Namespace: ST_Tutorial, Equal: 1}
+  Set: 1
+  NoShuffle: 1 
+  BoxContent:
+    EasyRooms:
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 3}
+      ConditionContent:
+      - {ConditionType: LabelRange, Name: RoomWithoutDeath, Min: 1}
+    MineTutorial: 
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Equal: 2}
+      ConditionContent:
+      - {ConditionType: LabelRange, Name: TutorialMineRoom, Min: 1}
+CommonRoom:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 1}
+  - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 2}
+  - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Equal: 0}
+  - {ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_Tutorial, Max: 0}
+  - {ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Max: 0}
+  - {ConditionType: CounterRange, Name: UpgradeEffectTutor, Namespace: ST_Tutorial, Equal: 1, Not: 1}
+  - ConditionType: Or
+    Content:
+      - {ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: 1, Not: 1}
+      - {ConditionType: CounterRange, Name: Floor3Reached, Namespace: ST_ProgressMarkers, Equal: 1}
+      - {ConditionType: CounterRange, Name: ST_Floor, Max: 2}
+  ConditionContent:
+  - {ConditionType: LabelRange, Name: TutorialRoom, Max: 0}
+  - {ConditionType: LabelRange, Name: TestRoom, Max: 0}
+  Set: 1
+  #Log: "Common Room"
+  BoxContent:
+    SetSafeRoom:
+      Weight: "<ST_Generator.MakeSafeRooms>"
+      Conditions:
+      - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 3}
+      ConditionContent: [{ConditionType: LabelRange, Name: RoomWithoutDeath, Min: 1}]
+      CounterActions: {OnEnter: [{Name: MakeSafeRooms, Namespace: ST_Generator, Type: IncrementBy, Value: -1}]}
+    StandardGeneration:
+      Weight: "{<ST_Generator.ST_RoomNumberReversed> - 1 - <ST_Generator.MakeSafeRooms>}"
+      BoxContent:
+        CommonRestrictions:
+          ConditionContent:     
+          - {ConditionType: LabelRange, Name: Not_Generated, Max: 0}
+          - {ConditionType: LabelRange, Name: RoomWithoutDeath, Max: 0}
+          - {ConditionType: LabelRange, Name: ColumnJump, Max: 0}
+          - {ConditionType: LabelRange, Name: room221, Max: '?switch[<ST_SelectedGeneratorLabels.room221>, 1: 0, 1]'}
+          - {ConditionType: LabelRange, Name: Possible_Instakill_ContextAnimation, Max: 0}
+        Floor4-:
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Max: 4}
+          ConditionContent:
+          - {ConditionType: LabelRange, Name: Trap_Ball, Max: 0}
+        Floor6-:
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Max: 6}
+          ConditionContent:
+          - {ConditionType: LabelRange, Name: NoBonus_ContextAnimation, Max: 0}
+        Floor8-:
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Max: 8}
+          ConditionContent:
+          - {ConditionType: LabelRange, Name: Instakill_RunFast, Max: 0}
+          - {ConditionType: LabelRange, Name: Instakill_ContextAnimation, Max: 0}
+        Z2Floor16-:
+          Conditions:
+          - ConditionType: Or
+            Content:
+            - {ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone1']}
+            - ConditionType: And
+              Content:
+              - {ConditionType: CounterRange, Name: ST_Floor, Max: 16}
+              - {ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone2']}
+          ConditionContent:
+          - {ConditionType: LabelRange, Name: Walljump, Max: 0}
+          - {ConditionType: LabelRange, Name: RunFast_Stop, Max: 0}
+          - {ConditionType: LabelRange, Name: RunFast_Slide, Max: 0}
+          - {ConditionType: LabelRange, Name: RunFast_NoJump, Max: 0}
+          - {ConditionType: LabelRange, Name: Possible_Instakill_ContextAnimation, Max: 0}
+        Z2Floor17+:
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Min: 17}
+          - {ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone2']}
+          ConditionContent:
+          - {ConditionType: LabelRange, Name: ObligatoryLaserOnly, Max: 0}
+        Z2Floor18-:
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Max: 18}
+          - {ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone2']}
+          ConditionContent:
+          - {ConditionType: LabelRange, Name: Fork_Hard_with_Beams, Max: 0}
+        Z2Floor23-:
+          Conditions:
+          - {ConditionType: CounterRange, Name: ST_Floor, Max: 23}
+          - {ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone2']}
+          ConditionContent:
+          - {ConditionType: LabelRange, Name: Swarm_Hard, Max: 0}
+        Z2Floor29-:
+          Conditions:
+          - ConditionType: Or
+            Content:
+            - {ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone1']}
+            - ConditionType: And
+              Content:
+              - {ConditionType: CounterRange, Name: ST_Floor, Max: 29}
+              - {ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone2']}
+          ConditionContent:
+          - {ConditionType: LabelRange, Name: Instakill_Hardcore, Max: 0}
+          - {ConditionType: LabelRange, Name: Instakill_Chasm, Max: 0}
+        SpecialPlaces:
+          BoxContent:
+            NotInteresting:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Interesting, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, InterestingPlaces]"}
+              ConditionContent:
+              - {ConditionType: LabelRange, Name: Interesting, Max: 0}
+            NotHardcore:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Hardcore, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, HardcorePlaces]"}
+              ConditionContent:
+              - {ConditionType: LabelRange, Name: Hardcore, Max: 0}
+            NotExciting:
+              Conditions:
+              - {ConditionType: CounterRange, Name: Exciting, Namespace: ST_SelectedGeneratorLabels, Min: "?getCounter[ST_Generator, ExcitingPlaces]"}
+              ConditionContent:
+              - {ConditionType: LabelRange, Name: Exciting, Max: 0}
+        EscapeRoomOpened:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            GenerateEscapeRoom:
+              Conditions:
+              - {ConditionType: CounterRange, Name: ST_Floor, Min: "?getBalance[Quests, ServiceEntrance, EscapeRoomFloorMin]", Max: "?getBalance[Quests, ServiceEntrance, EscapeRoomFloorMax]"}
+              - {ConditionType: CounterRange, Name: EscapeRoomGenerated, Namespace: ST_Generator, Max: 0}
+              - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 2}
+              BoxContent:
+                Blocked:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: ServiceEntrance, Namespace: ST_Quests, Equal: -1}
+                  ConditionContent:
+                  - {ConditionType: LabelRange, Name: EscapeRoom, Min: 0, Max: 1}
+                  - {ConditionType: LabelRange, Name: EscapeRoomOpened, Max: 0}
+                  CounterActions:
+                    OnEnter:
+                    - {Name: EscapeRoomGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}
+                    - {Name: EscapeRoomGenerated, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                    - {Name: LockIsYellow, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                  #Log: "Enter Escape Section Blocked"
+                
+                Opened:
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: ServiceEntrance, Namespace: ST_Quests, Equal: 1}
+                  ConditionContent:
+                  #- {ConditionType: LabelRange, Name: EscapeRoom, Equal: 1}
+                  - {ConditionType: LabelRange, Name: EscapeRoomOpened, Equal: 1}
+                  CounterActions:
+                    OnEnter:
+                    - {Name: EscapeRoomGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}
+                    - {Name: EscapeRoomGenerated, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                    - {Name: LockIsYellow, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                  #Log: "Enter Escape Section Opened"
+            NoEscapeRoom:
+              ConditionContent:
+              - {ConditionType: LabelRange, Name: EscapeRoom, Min: 0, Max: 0}
+        CutsceneSwarm:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            Cutscene:
+              Conditions:
+              - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 2}
+              - {ConditionType: CounterRange, Name: GenerateCutsceneSwarm, Namespace: SwarmEncounter, Min: 1}
+              - {ConditionType: CounterRange, Name: CutsceneSwarmGenerated, Namespace: ST_Generator, Max: 0}
+              ConditionContent: 
+              - {ConditionType: LabelRange, Name: CutsceneSwarm, Min: 1}
+              CounterActions: 
+                OnEnter: 
+                - {Name: CutsceneSwarmGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}
+                - {Name: ThisIsCutsceneSwarm, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+            Not: {ConditionContent: [{ConditionType: LabelRange, Name: CutsceneSwarm, Min: 0, Max: 0}]}
+        QuestMemoryUnits:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            BonusRoom:
+              Conditions:
+              - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 2}
+              - {ConditionType: CounterRange, Name: MaintenanceOperations, Namespace: ST_Quests, Equal: 1}
+              - {ConditionType: CounterRange, Name: MemoryUnitsCount, Namespace: MaintenanceOperations, Equal: 0}
+              - {ConditionType: CounterRange, Name: QuestMemoryUnitsRoomGenerated, Namespace: ST_Generator, Max: 0}
+              ConditionContent: 
+              - {ConditionType: LabelRange, Name: QuestMemoryUnits, Min: 1}
+              CounterActions: 
+                OnEnter: 
+                - {Name: QuestMemoryUnitsRoomGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}
+                - {Name: ThisIsQuestMemoryUnitsRoom, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+            Not: {ConditionContent: [{ConditionType: LabelRange, Name: QuestMemoryUnits, Min: 0, Max: 0}]}
+        QuestInstall:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            BonusRoom:
+              Conditions:
+              - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Equal: 2}
+              - {ConditionType: CounterRange, Name: MemoryInstall, Namespace: ST_Quests, Equal: 1}
+              - {ConditionType: CounterRange, Name: ST_Floor, Equal: '?getBalance[Quests,MemoryInstall,Floor]'}
+              - {ConditionType: CounterRange, Name: QuestInstallRoomGenerated, Namespace: ST_Generator, Max: 0}
+              ConditionContent: 
+              - {ConditionType: LabelRange, Name: QuestInstall, Min: 1}
+              CounterActions: 
+                OnEnter: 
+                - {Name: QuestInstallRoomGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}
+                - {Name: ThisIsQuestInstallRoom, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+            Not: {ConditionContent: [{ConditionType: LabelRange, Name: QuestInstall, Min: 0, Max: 0}]}
+        QuestReactor:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            SpecialRoom:
+              Conditions: [{ConditionType: CounterRange, Name: IsReactorFloor, Namespace: ST_Generator, Equal: 1}]
+              ConditionContent: [{ConditionType: LabelRange, Name: Reactor, Min: 1}]
+            Not: {ConditionContent: [{ConditionType: LabelRange, Name: Reactor, Min: 0, Max: 0}]}
+        QuestScanner:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            ScannerRoom:
+              Conditions:
+              - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Equal: 2}
+              - {ConditionType: CounterRange, Name: ScannerProcedures, Namespace: ST_Quests, Equal: 1}
+              - {ConditionType: CounterRange, Name: ST_Floor, Equal: '?getBalance[Quests,ScannerProcedures,Floor]'}
+              - {ConditionType: CounterRange, Name: QuestScanerRoomGenerated, Namespace: ST_Generator, Max: 0}
+              ConditionContent: 
+              - {ConditionType: LabelRange, Name: QuestScanner, Min: 1}
+              CounterActions: 
+                OnEnter: 
+                - {Name: QuestScanerRoomGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}
+                - {Name: ThisIsScanerRoom, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+            Not: {ConditionContent: [{ConditionType: LabelRange, Name: QuestScanner, Min: 0, Max: 0}]}
+        TutorialWalljump:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            SpecialRoom:
+              Conditions:
+              - {ConditionType: CounterRange, Name: ShowTutorialWalljump, Namespace: ST_ProgressMarkers, Equal: 1}
+              - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 3, Max: 3}
+              - {ConditionType: CounterRange, Name: TutorialWalljumpGenerated, Namespace: ST_Generator, Max: 0}
+              ConditionContent: [{ConditionType: LabelRange, Name: TutorialWalljump, Min: 1}]
+              CounterActions: 
+                OnEnter: 
+                - {Name: TutorialWalljumpGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}
+                - {Name: ThisIsTutorialWalljump, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+            Not: {ConditionContent: [{ConditionType: LabelRange, Name: TutorialWalljump, Min: 0, Max: 0}]}
+        Forks:
+          Set: 1
+          NoShuffle: 1
+          BoxContent:
+            TutorFork:
+              Conditions:
+              - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: 3}
+              - {ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: -1}
+              - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Min: 0}
+              - {ConditionType: CounterRange, Name: KeysIntroLockPassed, Namespace: KeysIntro, Max: 1}
+              - {ConditionType: CounterRange, Name: Progress, Namespace: KeysIntro, Max: 2}
+              - {ConditionType: CounterRange, Name: TutorForkGenerated, Namespace: ST_Generator, Max: 0}
+              - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 2, Max: 2}
+              CounterActions:
+                OnEnter:
+                - {Name: LocksBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+                - {Name: TutorForkGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}
+                - {Name: FirstForkPosition, Namespace: ST_Generator, Type: Assign, Value: "?max[?getCounter[ST_Generator, FirstForkPosition], ?getCounter[ST_Generator, ST_RoomNumberReversed]]"}
+              ConditionContent:
+              - {ConditionType: LabelRange, Name: LockTutorMarker, Min: 2, Max: 2}
+              #Log: "TUTOR FORK"
+            CommonFork:
+              Set: 1
+              BoxContent:
+                NoFork:
+                  Weight: "{<ST_Generator.ST_RoomNumberReversed> - 1 - <ST_Generator.ForkCounter>}"
+                  ConditionContent:
+                  - {ConditionType: LabelRange, Name: Fork, Max: 0}
+                Fork:
+                  Weight: "<ST_Generator.ForkCounter>"
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: EscapeRoomGenerated, Namespace: ST_CurrentRoom, Equal: 0}
+                  - {ConditionType: CounterRange, Name: ThisIsCutsceneSwarm, Namespace: ST_CurrentRoom, Equal: 0}
+                  - {ConditionType: CounterRange, Name: ThisIsQuestMemoryUnitsRoom, Namespace: ST_CurrentRoom, Equal: 0}
+                  - {ConditionType: CounterRange, Name: ThisIsScanerRoom, Namespace: ST_CurrentRoom, Equal: 0}
+                  - {ConditionType: CounterRange, Name: ThisIsQuestInstallRoom, Namespace: ST_CurrentRoom, Equal: 0}
+                  - {ConditionType: CounterRange, Name: ThisIsTutorialWalljump, Namespace: ST_CurrentRoom, Equal: 0}
+                  - ConditionType: Or
+                    Content:
+                    - {ConditionType: CounterRange, Name: KeysIntroLockPassed, Namespace: KeysIntro, Min: 2}
+                    - {ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: -1}
+                  ConditionContent:
+                  - {ConditionType: LabelRange, Name: Fork, Min: 1}
+                  - {ConditionType: LabelRange, Name: LockTutorMarker, Max: 0}
+                  CounterActions:
+                    OnEnter:
+                    - {Name: ForkCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                    - {Name: FirstForkPosition, Namespace: ST_Generator, Type: Assign, Value: "?max[?getCounter[ST_Generator, FirstForkPosition], ?getCounter[ST_Generator, ST_RoomNumberReversed]]"}
+                  #Log: '<ST_Generator.ST_RoomNumberReversed>'
+                  Set: 1
+                  NoShuffle: 1
+                  BoxContent:
+                    FirstQueue:
+                      Conditions:
+                      - ConditionType: Or
+                        Content:
+                          - {ConditionType: CounterRange, Name: BlueLockMinCounter, Namespace: ST_Generator, Min: 1}
+                          - {ConditionType: CounterRange, Name: YellowLockMinCounter, Namespace: ST_Generator, Min: 1}
+                          - {ConditionType: CounterRange, Name: RedLockMinCounter, Namespace: ST_Generator, Min: 1}
+                          - {ConditionType: CounterRange, Name: NoKeyEasyMinCounter, Namespace: ST_Generator, Min: 1}
+                          - {ConditionType: CounterRange, Name: NoKeyHardMinCounter, Namespace: ST_Generator, Min: 1}
+                      - ConditionType: Or
+                        Content:
+                        - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Equal: 1, Not: 1}
+                        - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: 3, Not: 1}
+                      Set: 1
+                      BoxContent:
+                        NoKeyEasy:
+                          Conditions:
+                          - {ConditionType: CounterRange, Name: NoKeyEasyMinCounter, Namespace: ST_Generator, Min: 1}
+                          ConditionContent:
+                          - {ConditionType: LabelRange, Name: Fork_Hard, Min: 0, Max: 0}
+                          CounterActions:
+                            OnEnter:
+                            - {Name: NoLock, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                            - {Name: NoKeyEasyMinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: NoKeyEasyMaxCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: LockBonusCount, Namespace: ST_CurrentRoom, Type: Assign, Value: "?getBalance[Floor, RewardsAfterLocks, <ST_Floor>, NoLock]"}
+                            
+                          #Log: "NoKeyEasy fork generated first queue"
+                        NoKeyHard:
+                          Conditions:
+                          - {ConditionType: CounterRange, Name: NoKeyHardMinCounter, Namespace: ST_Generator, Min: 1}
+                          ConditionContent:
+                          - {ConditionType: LabelRange, Name: Fork_Hard, Min: 1, Max: 1}
+                          CounterActions:
+                            OnEnter:
+                            - {Name: NoLock, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                            - {Name: NoKeyHardMinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: NoKeyHardMaxCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: ST_HardForks, Namespace: ST_Statistics_Per_Floor, Type: IncrementBy, Value: 1}
+                            - {Name: LockBonusCount, Namespace: ST_CurrentRoom, Type: Assign, Value: "?getBalance[Floor, RewardsAfterLocks, <ST_Floor>, NoLock]"}
+                          #Log: "NoKeyHard fork generated first queue"
+                        Blue:
+                          Conditions:
+                          - {ConditionType: CounterRange, Name: LocksBlock, Namespace: ST_ProgressMarkers, Equal: 0}
+                          - {ConditionType: CounterRange, Name: BlueLockMinCounter, Namespace: ST_Generator, Min: 1}
+                          CounterActions:
+                            OnEnter:
+                            - {Name: LockIsBlue, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                            - {Name: BlueLockMinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: BlueLockMaxCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: LockBonusCount, Namespace: ST_CurrentRoom, Type: Assign, Value: "?getBalance[Floor, RewardsAfterLocks, <ST_Floor>, Blue]"}
+                            - {Name: ST_HardForks, Namespace: ST_Statistics_Per_Floor, Type: IncrementBy, Value: 1}
+                          ConditionContent:
+                          - {ConditionType: CounterRange, Name: Fork_Hard, Min: 1}
+                          #Log: "blue fork generated first queue"
+                        None:
+                          Weight: 0
+                          ConditionContent:
+                          - {ConditionType: LabelRange, Name: Fork, Min: 0, Max: 0}
+                    SecondQueue:
+                      Set: 1
+                      BoxContent:
+                        NoKeyEasy:
+                          Conditions:
+                          - {ConditionType: CounterRange, Name: NoKeyEasyMaxCounter, Namespace: ST_Generator, Min: 1}
+                          - ConditionType: Or
+                            Content:
+                            - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Equal: 1, Not: 1}
+                            - {ConditionType: CounterRange, Name: ST_Floor, Namespace: ST_Default, Equal: 3, Not: 1}
+                          ConditionContent:
+                          - {ConditionType: CounterRange, Name: Fork_Hard, Min: 0, Max: 0}
+                          CounterActions:
+                            OnEnter:
+                            - {Name: NoLock, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                            - {Name: NoKeyEasyMinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: NoKeyEasyMaxCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: LockBonusCount, Namespace: ST_CurrentRoom, Type: Assign, Value: "?getBalance[Floor, RewardsAfterLocks, <ST_Floor>, NoLock]"}
+                          #Log: "NoKeyHard fork generated second queue"
+                        NoKeyHard:
+                          Conditions:
+                          - {ConditionType: CounterRange, Name: NoKeyHardMaxCounter, Namespace: ST_Generator, Min: 1}
+                          ConditionContent:
+                          - {ConditionType: CounterRange, Name: Fork_Hard, Min: 1, Max: 1}
+                          CounterActions:
+                            OnEnter:
+                            - {Name: NoLock, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                            - {Name: NoKeyHardMinCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: NoKeyHardMaxCounter, Namespace: ST_Generator, Type: IncrementBy, Value: -1}
+                            - {Name: LockBonusCount, Namespace: ST_CurrentRoom, Type: Assign, Value: "?getBalance[Floor, RewardsAfterLocks, <ST_Floor>, NoLock]"}
+                            - {Name: ST_HardForks, Namespace: ST_Statistics_Per_Floor, Type: IncrementBy, Value: 1}
+                          #Log: "NoKeyHard fork generated second queue"
+                        Blue:
+                          Conditions:
+                          - {ConditionType: CounterRange, Name: BlueLockMaxCounter, Namespace: ST_Generator, Min: 1}
+                          - {ConditionType: CounterRange, Name: LocksBlock, Namespace: ST_ProgressMarkers, Equal: 0}
+                          ConditionContent:
+                          - {ConditionType: CounterRange, Name: Fork_Hard, Min: 1, Max: 1}
+                          CounterActions:
+                            OnEnter:
+                            - {Name: LockIsBlue, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+                            - {Name: BlueLockMinCounter, Namespace: Generator, Type: IncrementBy, Value: -1}
+                            - {Name: BlueLockMaxCounter, Namespace: Generator, Type: IncrementBy, Value: -1}
+                            - {Name: LockBonusCount, Namespace: ST_CurrentRoom, Type: Assign, Value: "?getBalance[Floor, RewardsAfterLocks, <ST_Floor>, Blue]"}
+                            - {Name: ST_HardForks, Namespace: ST_Statistics_Per_Floor, Type: IncrementBy, Value: 1}
+                          #Log: "blue fork generated second queue"
+                        None:
+                          Weight: 0
+                          ConditionContent:
+                          - {ConditionType: LabelRange, Name: Fork, Min: 0, Max: 0}
+                          #Log: "no fork due to max limitations"
+                    
+        Balls:
+          Conditions: [{ConditionType: CounterRange, Name: BallGeneratorUnlimited, Namespace: ST_Generator, Max: 0}]
+          ConditionContent: [{ConditionType: LabelRange, Name: Trap_Ball, Max: "<ST_Generator.BallGeneratorMax>"}]
+        Servers:
+          Set: 1
+          BoxContent:
+            ServerQuest:
+              Conditions: 
+              - {ConditionType: CounterRange, Name: ServerError, Namespace: ST_Quests, Min: 1}
+              - {ConditionType: CounterRange, Name: ST_Floor, Min: '?getBalance[Quests,ServerError,MinFloor]', Max: '?getBalance[Quests,ServerError,MaxFloor]'}
+              Set: 1
+              BoxContent:
+                Indifferent:
+                  Weight: '{<ST_Generator.ST_RoomNumberReversed> - 1  - ?getBalance[Quests,ServerError,MinServersPerFloor] + <ST_SelectedGeneratorLabels.Server>}'
+                  Set: 1
+                  NoShuffle: 1
+                  BoxContent:
+                    NotAllowed:
+                      Conditions:
+                      - ConditionType: Or
+                        Content:
+                        - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Max: 1}
+                        - {ConditionType: CounterRange, Name: Server, Namespace: ST_SelectedGeneratorLabels, Equal: '?getBalance[Quests,ServerError,MaxServersPerFloor]'}
+                        - {ConditionType: CounterRange, Name: FinalServerGenerated, Namespace: ST_Generator, Min: 1}
+                      ConditionContent:
+                      - {ConditionType: LabelRange, Name: Server, Max: 0}
+                    Indifferent: {}
+                Required:
+                  Weight: '{?getBalance[Quests,ServerError,MaxServersPerFloor] - <ST_SelectedGeneratorLabels.Server>}'
+                  Conditions:
+                  - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 2}
+                  - {ConditionType: CounterRange, Name: FinalServerGenerated, Namespace: ST_Generator, Max: 0}
+                  ConditionContent: [{ConditionType: LabelRange, Name: Server, Min: 1}]
+                  Set: 1
+                  NoShuffle: 1
+                  BoxContent:
+                    Final:
+                      Conditions:
+                      - {ConditionType: CounterRange, Name: ST_Floor, Equal: '?getBalance[Quests,ServerError,MaxFloor]'}
+                      - {ConditionType: CounterRange, Name: GenerateFinalServer, Namespace: ST_Generator, Min: 1}
+                      CounterActions: {OnEnter: [{Name: FinalServerGenerated, Namespace: ST_Generator, Type: Assign, Value: 1}]}
+                    Not: {}
+            ReadjustScanner:
+              Conditions: 
+              - {ConditionType: CounterRange, Name: ReadjustScanner, Namespace: ST_Quests, Min: 1}
+              - {ConditionType: CounterRange, Name: ST_Floor, Equal: '?getBalance[Quests,ReadjustScanner,Floor]'}
+              - {ConditionType: CounterRange, Name: Server, Namespace: ST_SelectedGeneratorLabels, Max: '{?getBalance[Quests,ReadjustScanner,DevicesCount] - 1}'}
+              Set: 1
+              BoxContent:
+                Indifferent:
+                  Weight: '{<ST_Generator.ST_RoomNumberReversed> - 1 - ?getBalance[Quests,ReadjustScanner,DevicesCount] + <ST_SelectedGeneratorLabels.Server>}'
+                  Set: 1
+                  NoShuffle: 1
+                  BoxContent:
+                    NotAllowed:
+                      Conditions:
+                      - ConditionType: Or
+                        Content:
+                        - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Max: 1}
+                        - {ConditionType: CounterRange, Name: Server, Namespace: ST_SelectedGeneratorLabels, Equal: '?getBalance[Quests,ReadjustScanner,DevicesCount]'}
+                      ConditionContent: [{ConditionType: LabelRange, Name: Server, Max: 0}]
+                    Indifferent: {}
+                Required:
+                  Weight: '{?getBalance[Quests,ReadjustScanner,DevicesCount] - <ST_SelectedGeneratorLabels.Server>}'
+                  Conditions: [{ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 2}]
+                  ConditionContent: [{ConditionType: LabelRange, Name: Server, Min: 1}]
+            Not:
+              Weight: 0
+              ConditionContent: [{ConditionType: LabelRange, Name: Server, Max: 0}]
+ForksPlayCommand:
+  Conditions:
+  - {ConditionType: CounterRange, Name: ST_RoomNumber, Namespace: ST_Generator, Min: 1}
+  - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Min: 1}
+  - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 2}
+  Set: 1
+  BoxContent:
+    Blue:
+      CounterActions:
+        OnEnter:
+        - {Name: LockIsBlue, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+    Yellow:
+      CounterActions:
+        OnEnter:
+        - {Name: LockIsYellow, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+    Red:
+      CounterActions:
+        OnEnter:
+        - {Name: LockIsRed, Namespace: ST_CurrentRoom, Type: Assign, Value: 1}
+StuntLastRoom:
+  Conditions:
+  - ConditionType: Or
+    Content:
+    - {ConditionType: CounterRange, Name: Stunt, Namespace: ST_SelectedGeneratorLabels, Max: 0}
+    - ConditionType: And
+      Content:
+      - {ConditionType: CounterRange, Name: StuntZone2, Namespace: ST_SelectedGeneratorLabels, Max: 0}
+      - {ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone2']}
+  - {ConditionType: CounterRange, Name: ST_RoomNumberReversed, Namespace: ST_Generator, Min: 2, Max: 2}
+  - {ConditionType: CounterRange, Name: UpgradeEffectTutor, Namespace: ST_Tutorial, Equal: 1, Not: 1}
+  - {ConditionType: CounterRange, Name: ST_TutorialBasic, Namespace: ST_Tutorial, Max: 0}
+  - {ConditionType: CounterRange, Name: ST_TutorialLaserAndMine, Namespace: ST_Tutorial, Max: 0}
+  - {ConditionType: CounterRange, Name: ST_PlayCommand, Namespace: ST_Default, Equal: 0}
+  - {ConditionType: CounterRange, Name: IsReactorFloor, Namespace: ST_Generator, Equal: 0}
+  - {ConditionType: CounterRange, Name: QuestScanerRoomGenerated, Namespace: ST_Generator, Equal: 0}
+  - ConditionType: Or
+    Content:
+      - {ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: 1, Not: 1}
+      - {ConditionType: CounterRange, Name: Floor3Reached, Namespace: ST_ProgressMarkers, Equal: 1}
+  Set: 1
+  BoxContent:
+    Zone1:
+      Conditions: [{ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone1']}]
+      ConditionContent: [{ConditionType: LabelRange, Name: Stunt, Min: 1}]
+    Zone2:
+      Conditions: [{ConditionType: ValuesEqual, Values: ['?getUserProperties[Zones].Current', 'Zone2']}]
+      ConditionContent: [{ConditionType: LabelRange, Name: StuntZone2, Min: 1}]
+  

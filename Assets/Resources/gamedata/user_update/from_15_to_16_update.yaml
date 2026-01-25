@@ -1,0 +1,95 @@
+UserVersion: 16
+
+NewItems_POSTPONELESS_QUESTS_FIX:
+  AlphaProtocolBlocked:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: PowerFailures, Namespace: ST_Quests, Equal: 1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "AlphaProtocol", ST_VisualItemName: "^StarterPacks.AlphaProtocol.PackName^", ST_ItemType: "StarterPack"}
+      BlockedStarterPack: {Text: "^Quests.PowerFailures.BlockedStarterPack^"}
+  AlphaProtocolOpened:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: PowerFailures, Namespace: ST_Quests, Equal: -1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "AlphaProtocol", ST_VisualItemName: "^StarterPacks.AlphaProtocol.PackName^", ST_ItemType: "StarterPack"}
+      
+  BetaProtocolBlocked:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: SwarmEncounter, Namespace: ST_Quests, Equal: 1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "BetaProtocol", ST_VisualItemName: "^StarterPacks.BetaProtocol.PackName^", ST_ItemType: "StarterPack"}
+      BlockedStarterPack: {Text: "^Quests.SwarmEncounter.BlockedStarterPack^"}
+  BetaProtocolOpened:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: SwarmEncounter, Namespace: ST_Quests, Equal: -1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "BetaProtocol", ST_VisualItemName: "^StarterPacks.BetaProtocol.PackName^", ST_ItemType: "StarterPack"}
+
+  OmegaProtocolBlocked:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: FileKeys, Namespace: ST_Quests, Equal: 1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "OmegaProtocol", ST_VisualItemName: "^StarterPacks.OmegaProtocol.PackName^", ST_ItemType: "StarterPack"}
+      BlockedStarterPack: {Text: "^Quests.FileKeys.BlockedStarterPack^"}
+  OmegaProtocolOpened:
+    Target: {Type: NewItem, Destination: Stash}
+    Conditions: [{ConditionType: CounterRange, Name: FileKeys, Namespace: ST_Quests, Equal: -1}]
+    GroupContent:
+      ST_ItemMainData: {ST_ItemName: "OmegaProtocol", ST_VisualItemName: "^StarterPacks.OmegaProtocol.PackName^", ST_ItemType: "StarterPack"}
+      
+CountersUpdater_POSTPONELESS_QUESTS_FIX:
+  BoxContent:
+    StandardProtocolQuest:
+      Conditions: [{ConditionType: CounterRange, Name: StandardProtocolQuest, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: StandardProtocolQuest, Type: Assign, Value: 1}]}
+    ThirdProtocol:
+      Conditions: [{ConditionType: CounterRange, Name: ThirdProtocol, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: 
+        OnEnter: 
+        - {Name: ST_ShowNoQuestProgressDialog, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+        - {Name: ST_QuestProgressByRun, Namespace: ST_Default, Type: Assign, Value: 0}
+        - {Name: AdBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+        - {Name: ST_NewsBlock, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+        - {Name: TutorialInProgress, Namespace: ST_ProgressMarkers, Type: Assign, Value: 0}
+        - {Name: TutorialEndRun, Namespace: ST_Statistics, Type: Assign, Value: '<ST_Statistics.ST_run_counter>'}
+        - {Name: Started, Namespace: ThirdProtocol, Type: Assign, Value: 1}
+    KeysIntro:
+      Conditions: [{ConditionType: CounterRange, Name: KeysIntro, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: KeysIntro, Type: Assign, Value: 1}]}
+    Bruteforce1:
+      Conditions: [{ConditionType: CounterRange, Name: Bruteforce1, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: Bruteforce1, Type: Assign, Value: 1}]}
+    SecureConnection:
+      Conditions: [{ConditionType: CounterRange, Name: SecureConnection, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: SecureConnection, Type: Assign, Value: 1}]}
+    ServiceEntrance:
+      Conditions: [{ConditionType: CounterRange, Name: ServiceEntrance, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: ServiceEntrance, Type: Assign, Value: 1}]}
+    PowerFailures:
+      Conditions: [{ConditionType: CounterRange, Name: PowerFailures, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: PowerFailures, Type: Assign, Value: 1}]}
+    PowerFailuresWALLJUMP:
+      Conditions: 
+      - {ConditionType: CounterRange, Name: PowerFailures, Namespace: ST_Quests, Equal: 1}
+      - {ConditionType: CounterRange, Name: ShowTutorialWalljump, Namespace: ST_ProgressMarkers, Equal: 0}
+      CounterActions: {OnEnter: [{Name: ShowTutorialWalljump, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}]}
+    SwarmEncounter:
+      Conditions: [{ConditionType: CounterRange, Name: SwarmEncounter, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: SwarmEncounter, Type: Assign, Value: 1}]}
+    SwarmEncounterSWARM:
+      Conditions: 
+      - {ConditionType: CounterRange, Name: SwarmEncounter, Namespace: ST_Quests, Equal: 1}
+      - {ConditionType: CounterRange, Name: SwarmForbidden, Namespace: ST_ProgressMarkers, Equal: 0}
+      CounterActions: {OnEnter: [{Name: SwarmForbidden, Namespace: ST_ProgressMarkers, Type: Assign, Value: 1}]}
+    MaintenanceOperations:
+      Conditions: [{ConditionType: CounterRange, Name: MaintenanceOperations, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: MaintenanceOperations, Type: Assign, Value: 1}]}
+    ServerError:
+      Conditions: [{ConditionType: CounterRange, Name: ServerError, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: ServerError, Type: Assign, Value: 1}]}
+    FileKeys:
+      Conditions: [{ConditionType: CounterRange, Name: FileKeys, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: FileKeys, Type: Assign, Value: 1}]}
+    Reactor:
+      Conditions: [{ConditionType: CounterRange, Name: Reactor, Namespace: ST_Quests, Equal: 1}]
+      CounterActions: {OnEnter: [{Name: Started, Namespace: Reactor, Type: Assign, Value: 1}]}
