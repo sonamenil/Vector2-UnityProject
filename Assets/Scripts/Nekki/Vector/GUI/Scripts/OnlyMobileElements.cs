@@ -12,7 +12,7 @@ namespace Nekki.Vector.GUI.Scripts
 		{
 			foreach (GameObject element in Elements)
 			{
-				element.SetActive(!Settings.IsReleaseBuild && (DeviceInformation.IsAndroid || DeviceInformation.IsiOS));
+				element.SetActive(!Settings.IsReleaseBuild);
 			}
 		}
 	}
