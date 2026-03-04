@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Globalization;
+using System.Threading;
 using Nekki.Vector.Core;
 using Nekki.Vector.Core.AssetBundle;
 using Nekki.Vector.Core.Counter;
@@ -38,6 +40,12 @@ namespace Nekki.Vector.GUI.Scenes
 		{
 			base.Init();
 			_LoadingLabel.gameObject.SetActive(false);
+
+			CultureInfo invariant = CultureInfo.InvariantCulture;
+
+            Thread.CurrentThread.CurrentCulture = invariant;
+            Thread.CurrentThread.CurrentUICulture = invariant;
+
 			Application.runInBackground = Settings.PlayInBackground;
 			Preloader.Instance.Init();
 		}
